@@ -1,0 +1,238 @@
+.homePage {
+  font-family: sans-serif;
+  background: linear-gradient(
+    90deg,
+    rgba(38, 105, 37, 1) 0%,
+    rgba(0, 0, 0, 1) 19%,
+    rgba(0, 0, 0, 1) 81%,
+    rgba(38, 105, 37, 1) 100%
+  );
+  /* opacity: 0.1; */
+  box-shadow: 0px 4px 60px -1px rgba(0, 0, 0, 0.2),
+    inset 0px 4px 50px rgba(0, 0, 0, 0.25);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+.landingPage {
+  padding-top: 20px;
+  height: 97vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 0px auto;
+}
+.main_img:hover {
+  animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+.innovationIn {
+  color: #fff;
+  display: flex;
+}
+.Innovation {
+  display: flex;
+}
+
+.O {
+  width: 20vw;
+  border: 5px solid;
+  height: 8vh;
+  margin: 2%;
+  border-radius: 30%;
+}
+#agriculture {
+  color: #2de230;
+}
+#signUpButton {
+  background: linear-gradient(89.89deg, #003805 0.06%, #467814 102.53%);
+  border-radius: 13px;
+}
+#aboutUsButton {
+  background: linear-gradient(
+    113.23deg,
+    rgb(54 48 48 / 76%) 34.99%,
+    rgba(255, 255, 255, 0) 116.05%
+  );
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  box-shadow: 0px 4px 60px -1px rgba(0, 0, 0, 0.2),
+    inset 0px 4px 50px rgba(0, 0, 0, 0.25);
+  border-radius: 19px;
+}
+.scroll {
+  height: 3vh;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+#mobileScroll {
+  display: none;
+}
+/* expanded landing page */
+.main_container {
+  padding-top: 160px;
+  margin: 0px auto;
+  width: 60%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  /* height: 70vh; */
+}
+.containerDomain {
+  width: 25%;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.containerWorkshops {
+  width: 25%;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.learnMoreButton {
+  background: linear-gradient(
+    113.23deg,
+    rgba(255, 255, 255, 0.3) 34.99%,
+    rgba(255, 255, 255, 0) 116.05%
+  );
+  box-shadow: 0px 4px 60px -1px rgba(0, 0, 0, 0.2),
+    inset 0px 4px 50px rgba(0, 0, 0, 0.25);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  border-radius: 19px;
+  border-radius: 29px;
+}
+
+/* trailer */
+
+#trailer {
+  font-size: 72px;
+}
+.trailer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.trailerBox {
+  width: 60vw;
+  height: 60vh;
+  border: 6px solid #74eb76;
+  border-radius: 63px;
+  box-sizing: border-box;
+}
+/* sponsor */
+#sponsor{
+  font-size: 72px;
+}
+.sponsor{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.sponsorImages{
+  display: flex;
+  height: 40vh;
+  width: 100%;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.sponsor1{
+  width:20%;
+  height: 60%;
+}
+.sponsor2{
+  height: 70%;
+  width: 30%;
+}
+/* animations */
+@keyframes scale-up-center {
+  0% {
+    transform: scale(0.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* MEDIA QUERY */
+@media only screen and (max-width: 426px) {
+  .innovationIn {
+    flex-direction: column;
+  }
+  #inn {
+    padding-left: 5px;
+    font-size: 55px;
+  }
+  .O {
+    width: 20vw;
+    height: 4vh;
+  }
+  #vation {
+    font-size: 55px;
+  }
+  #in {
+    margin: 0px auto;
+  }
+  #agriculture {
+    font-size: 60px;
+    font-weight: 800;
+    margin-bottom: 10px;
+  }
+  .scroll {
+    display: none;
+  }
+  #mobileScroll {
+    display: block;
+    margin-right: 12%;
+    width: 100%;
+    display: flex;
+    font-weight: 600;
+    position: relative;
+    bottom: 35px;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .main_container {
+    padding-top: 90px;
+    flex-direction: column;
+  }
+  .containerDomain {
+    width: 90%;
+    margin-bottom: 70px;
+  }
+  .containerWorkshops {
+    width: 90%;
+  }
+  /* trailer */
+  #trailer{
+    font-size: 50px;
+  }
+  .trailerBox{
+    width: 80vw;
+  }
+  /* sponsor */
+  #sponsor{
+    font-size: 50px;
+  }
+  .sponsorImages{
+    height: 90vh;
+    flex-direction: column;
+  }
+  .sponsor1{
+    width: 50%;
+    height: 30%;
+    margin: 30px 0px;
+  }
+  .sponsor2{
+    width: 70%;
+    height: 40%;
+    margin: 30px 0px;
+  }
+}
+
