@@ -9,7 +9,7 @@ import Dots from "../../components/slider/Dots";
 const leng = SponsorImageSlider.length - 1;
 const HomeScreen = () => {
   const [activeIndex, setActiveIndex] = useState(1);
-  const [activeIndexPrev, setActiveIndexPrev] = useState(0);
+  const [activeIndexPrev, setActiveIndexPrev] = useState(leng);
   const [activeIndexNext, setActiveIndexNext] = useState(2);
   useEffect(() => {
     const interval = setInterval(() => {
@@ -19,16 +19,18 @@ const HomeScreen = () => {
     }, 3000);
     return () => clearInterval(interval);
   }, [activeIndex]);
-  const gotoServices = () =>
+
+
+  const gotoTop = () =>
   window.scrollTo({
-    top: 1050,
+    top: 0,
     behavior: 'smooth',
   });
   return (
     <div className="homePage">
       <div className="landingPageCover">
         <div className="landingPage">
-          <div>
+          <div className="logoContainer">
             <img src="/tf23.webp" alt="" className="main_img" />
           </div>
           <div className="innovationIn">
@@ -135,17 +137,13 @@ const HomeScreen = () => {
             <Arrows
               prevSlide={() => {
                 setActiveIndex( activeIndex < 1 ? leng : activeIndex - 1);
-                setActiveIndexPrev( activeIndexPrev < 1 ? leng : activeIndexPrev - 1);
-                setActiveIndexNext( activeIndexNext < 1 ? leng : activeIndexNext - 1)
+                setActiveIndexPrev((activeIndex===0)? leng : activeIndexPrev+1);
+                setActiveIndexNext((activeIndexNext===leng)?0: activeIndexNext+1)
               }}
               nextSlide={() =>{
-                setActiveIndexPrev(
-                  activeIndex
-                );
-                setActiveIndex(activeIndex === leng ? 0 : activeIndex + 1);
-                setActiveIndexNext(
-                  activeIndexNext===leng ? 0 : activeIndexNext+1
-                );
+                setActiveIndex( activeIndex < 1 ? leng : activeIndex - 1);
+                setActiveIndexPrev((activeIndex===0)? leng : activeIndexPrev+1);
+                setActiveIndexNext((activeIndexNext===leng)?0: activeIndexNext+1)
               }}
             />
             <Dots
@@ -164,7 +162,7 @@ const HomeScreen = () => {
         </div>
       </div>
       <div className="backToTop">
-        <button onClick={gotoServices}>Back To Top</button>
+        <button onClick={gotoTop}>Back To Top</button>
       </div>
     </div>
   );
