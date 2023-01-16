@@ -1,9 +1,29 @@
-import { Box, Button, Typography } from "@mui/material";
+import { Button } from "@mui/material";
 import React from "react";
 import "./HomeScreen.css";
-import SponsorImagesSlider from "../../components/slider/SponsorImagesSlider";
-import { sponserImages } from "../../assets/sponsorImages.js";
+import SponsorImageSlider from "../../components/slider/SponsorImageSlider.js";
+import SliderContent from "../../components/slider/SliderContent";
+import Arrows from "../../components/slider/Arrows";
+import { useState, useEffect } from "react";
+import Dots from "../../components/slider/Dots";
+const leng = SponsorImageSlider.length - 1;
 const HomeScreen = () => {
+  const [activeIndex, setActiveIndex] = useState(1);
+  const [activeIndexPrev, setActiveIndexPrev] = useState(0);
+  const [activeIndexNext, setActiveIndexNext] = useState(2);
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveIndex(activeIndex === leng ? 0 : activeIndex + 1);
+      setActiveIndexPrev(activeIndexPrev < 1 ? leng : activeIndexPrev - 1);
+      setActiveIndexNext(activeIndexNext === leng ? 0 : activeIndexPrev + 1);
+    }, 3000);
+    return () => clearInterval(interval);
+  }, [activeIndex]);
+  const gotoServices = () =>
+  window.scrollTo({
+    top: 1050,
+    behavior: 'smooth',
+  });
   return (
     <div className="homePage">
       <div className="landingPageCover">
@@ -46,11 +66,13 @@ const HomeScreen = () => {
         </div>
       </div>
       {/* expanded landing page */}
-      <Box className="main_container">
+      <div className="main_container">
         <div className="containerDomain">
           <img src="domain.webp" height={250} width={250} alt="" />
-          <h1 style={{ color: "#fff" }} className="containerHeading">Domains</h1>
-          <p className="containerText" style={{color:"#fff"}}>
+          <h1 style={{ color: "#fff" }} className="containerHeading">
+            Domains
+          </h1>
+          <p className="containerText" style={{ color: "#fff" }}>
             Massa vitae tortor condimentum lacinia quis vel eros donec ac odio
             tempor orci dapibus ultrices in iaculis nunc
           </p>
@@ -66,7 +88,7 @@ const HomeScreen = () => {
           <h1 style={{ color: "#fff" }} className="containerHeading">
             Workshops
           </h1>
-          <p className="containerText" style={{color:"#fff"}}>
+          <p className="containerText" style={{ color: "#fff" }}>
             Massa vitae tortor condimentum lacinia quis vel eros donec ac odio
             tempor orci dapibus ultrices in iaculis nunc
           </p>
@@ -77,7 +99,7 @@ const HomeScreen = () => {
             Learn More
           </Button>
         </div>
-      </Box>
+      </div>
       {/* trailer*/}
       <div style={{ marginTop: 14 }} className="trailer">
         <h1 id="trailer">TRAILER</h1>
@@ -93,13 +115,56 @@ const HomeScreen = () => {
         </div>
       </div>
       {/* sponsor */}
-      <div className="sponsor" style={{ marginTop: 6 }}>
-        <h1 id="sponsor" style={{color: "#74EB76" }}>
+      <div className="sponsor">
+        <h1 id="sponsor" style={{ color: "#74EB76" }}>
           <span style={{ color: "white" }}>OUR</span> SPONSORS
         </h1>
         <div className="sponsorImages">
-          <SponsorImagesSlider images={sponserImages} />
+          <div className="prevSlide">
+            <SliderContent
+              activeIndex={activeIndexPrev}
+              imageSlider={SponsorImageSlider}
+            />
+          </div>
+
+          <div className="mainSlide">
+            <SliderContent
+              activeIndex={activeIndex}
+              imageSlider={SponsorImageSlider}
+            />
+            <Arrows
+              prevSlide={() => {
+                setActiveIndex( activeIndex < 1 ? leng : activeIndex - 1);
+                setActiveIndexPrev( activeIndexPrev < 1 ? leng : activeIndexPrev - 1);
+                setActiveIndexNext( activeIndexNext < 1 ? leng : activeIndexNext - 1)
+              }}
+              nextSlide={() =>{
+                setActiveIndexPrev(
+                  activeIndex
+                );
+                setActiveIndex(activeIndex === leng ? 0 : activeIndex + 1);
+                setActiveIndexNext(
+                  activeIndexNext===leng ? 0 : activeIndexNext+1
+                );
+              }}
+            />
+            <Dots
+              activeIndex={activeIndex}
+              imageSlider={SponsorImageSlider}
+              onClick={(activeIndex) => setActiveIndex(activeIndex)}
+            />
+          </div>
+
+          <div className="nextSlide">
+            <SliderContent
+              activeIndex={activeIndexNext}
+              imageSlider={SponsorImageSlider}
+            />
+          </div>
         </div>
+      </div>
+      <div className="backToTop">
+        <button onClick={gotoServices}>Back To Top</button>
       </div>
     </div>
   );
