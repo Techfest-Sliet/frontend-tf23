@@ -7,6 +7,7 @@ function App() {
     <div className="App">
       <Routes>
         <Route path='/' element={<HomeScreen/>}/>
+        <Route path='/signIn' element={<Reset/>}/>
       </Routes>
     </div>
   );
