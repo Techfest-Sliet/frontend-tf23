@@ -1,7 +1,7 @@
 import "./resetPassword.css";
 import logo from "../../images/techFEST '23.webp";
 
-export default function resetPassword() {
+const resetPassword = () => {
   return (
     <>
       <div>
@@ -19,3 +19,5 @@ export default function resetPassword() {
     </>
   );
 }
+
+export default resetPassword;

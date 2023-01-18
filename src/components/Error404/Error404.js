@@ -1,7 +1,7 @@
 import "./Error404.css";
 import logo from "../../images/techFEST '23.webp";
 
-export default function error404() {
+const error404 = () => {
   return (
     <>
       <div>
@@ -19,3 +19,5 @@ export default function error404() {
     </>
   );
 }
+
+export default error404;
