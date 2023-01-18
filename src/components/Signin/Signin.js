@@ -1,7 +1,7 @@
 import "./Signin.css";
 import logo from "../../images/techFEST '23.webp";
 
-export default function signUp() {
+const signIn = () => {
   return (
     <div className="signin__content">
       <div className="signin__img-container">
@@ -48,3 +48,5 @@ export default function signUp() {
     </div>
   );
 }
+
+export default signIn;

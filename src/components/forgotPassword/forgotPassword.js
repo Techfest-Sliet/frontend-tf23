@@ -2,7 +2,7 @@ import "./forgotPassword.css";
 import logo from "../../images/techFEST '23.webp";
 import reset from "../../images/reset.png";
 
-export default function forgotPassword() {
+const forgotPassword = () => {
   return (
     <div className="forgotPassword">
       <div>
@@ -31,3 +31,5 @@ export default function forgotPassword() {
     </div>
   );
 }
+
+export default forgotPassword;
