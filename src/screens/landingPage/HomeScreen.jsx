@@ -5,19 +5,20 @@ import SponsorImageSlider from "../../components/slider/SponsorImageSlider.js";
 import SliderContent from "../../components/slider/SliderContent";
 import Arrows from "../../components/slider/Arrows";
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 const leng = SponsorImageSlider.length - 1;
 const HomeScreen = () => {
-  const [activeIndex, setActiveIndex] = useState(0);
-  const [activeIndexPrev, setActiveIndexPrev] = useState(leng);
-  const [activeIndexNext, setActiveIndexNext] = useState(1);
-  // useEffect(() => {
-  //   const interval = setInterval(() => {
-  //     setActiveIndex(activeIndex === leng ? 0 : activeIndex + 1);
-  //     setActiveIndexPrev(activeIndexPrev < 1 ? leng : activeIndexPrev + 1);
-  //     setActiveIndexNext(activeIndexNext === leng ? 0 : activeIndexPrev + 1);
-  //   }, 3000);
-  //   return () => clearInterval(interval);
-  // }, [activeIndex,activeIndexPrev,activeIndexNext]);
+  const [activeIndex, setActiveIndex] = useState(1);
+  const [activeIndexPrev, setActiveIndexPrev] = useState(0);
+  const [activeIndexNext, setActiveIndexNext] = useState(2);
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveIndex( (activeIndex===leng)? 0 : activeIndex + 1);
+      setActiveIndexPrev(activeIndex);
+      setActiveIndexNext((activeIndexNext===leng)?0: activeIndexNext+1)
+    }, 2000);
+    return () => clearInterval(interval);
+  }, [activeIndex,activeIndexPrev,activeIndexNext]);
 
 
   const gotoTop = () =>
@@ -67,7 +68,8 @@ const HomeScreen = () => {
         </div>
       </div>
       {/* expanded landing page */}
-      <div className="main_container">
+    <div className="extendedPage">
+    <div className="main_container">
         <div className="containerDomain">
           <img src="domain.webp" height={250} width={250} alt="" />
           <h1 style={{ color: "#fff" }} className="containerHeading">
@@ -136,15 +138,16 @@ const HomeScreen = () => {
             <Arrows
               prevSlide={() => {
                 setActiveIndex( activeIndex < 1 ? leng : activeIndex - 1);
-                setActiveIndexPrev((activeIndexPrev< 1)? leng : activeIndexPrev-1);
-                setActiveIndexNext((activeIndexNext < 1)? leng: activeIndexNext-1)
+                setActiveIndexNext( activeIndex)
+                setActiveIndexPrev((activeIndexPrev<1)?leng:  activeIndexPrev-1);
               }}
               nextSlide={() =>{
                 setActiveIndex( (activeIndex===leng)? 0 : activeIndex + 1);
-                setActiveIndexPrev((activeIndex===0)? leng : activeIndexPrev+1);
+                setActiveIndexPrev(activeIndex);
                 setActiveIndexNext((activeIndexNext===leng)?0: activeIndexNext+1)
               }}
             />
+           
           </div>
 
           <div className="nextSlide">
@@ -156,8 +159,13 @@ const HomeScreen = () => {
         </div>
       </div>
       <div className="backToTop">
-        <button onClick={gotoTop}>Back To Top</button>
+        <Link onClick={gotoTop} style={{textDecoration:"none"}}><h4>Back To Top</h4></Link>
       </div>
+    </div>
+
+
+
+
     </div>
   );
 };

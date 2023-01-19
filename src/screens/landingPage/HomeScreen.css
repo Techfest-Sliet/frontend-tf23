@@ -1,19 +1,13 @@
-
 .homePage {
   width: 100%;
   font-family: sans-serif;
-  background: rgb(5, 79, 17);
-  background: linear-gradient(
-    135deg,
-    rgba(5, 79, 17, 0.99) 9%,
-    rgba(0, 0, 0, 1) 50%,
-    rgba(5, 62, 15, 1) 93%
-  );
-  box-shadow: 0px 4px 60px -1px rgba(0, 0, 0, 0.2),
-    inset 0px 4px 50px rgba(0, 0, 0, 0.25);
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
-
+.landingPageCover{
+  height: calc(100vh - 4em);background: #32A554;
+  background: -webkit-radial-gradient(top, #32A554, #010101);
+  background: -moz-radial-gradient(top, #32A554, #010101);
+  background: radial-gradient(to bottom, #32A554, #010101);
+}
 .landingPage__animation {
   position: absolute;
   top: 0;
@@ -52,8 +46,6 @@
 .logoContainer{
   margin-top: 40px;
   position: relative;
-  transform-style: preserve-3d;
-  animation: rotate 15s linear infinite;
 }
 .main_img {
   width: 25vw;
@@ -71,13 +63,16 @@
 
 .O {
   width: 200px;
-  border: 10px solid rgb(255,255,255);
+  border: 10px solid #D9D9D9;
   border-bottom-left-radius:20px;
   border-bottom-right-radius: 20px;
   border-top-right-radius: 20px;
   border-top-left-radius: 20px;
   height: 44px;
   margin: 18px;
+}
+#vation{
+  color: linear-gradient(90deg, rgba(242,247,243,1) 0%, rgba(142,149,142,1) 100%);
 }
 #in {
   color: #fff;
@@ -116,6 +111,19 @@
 }
 
 /* expanded landing page */
+.extendedPage{
+  height: 100%;
+  background: rgb(5, 79, 17);
+  background: linear-gradient(
+    135deg,
+    rgba(5, 79, 17, 0.99) 9%,
+    rgba(0, 0, 0, 1) 50%,
+    rgba(5, 62, 15, 1) 93%
+  );
+  box-shadow: 0px 4px 60px -1px rgba(0, 0, 0, 0.2),
+    inset 0px 4px 50px rgba(0, 0, 0, 0.25);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
 .main_container {
   padding-top: 160px;
   margin: 0px auto;
@@ -176,6 +184,7 @@
   justify-content: center;
   align-items: center;
   text-align: center;
+  margin-bottom: 50px;
   flex-direction: column;
 }
 .trailerBox {
@@ -202,9 +211,9 @@
 .sponsor {
   width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
-  height: 100vh;
+  height: 75vh;
   flex-direction: column;
 }
 .sponsorImages {
@@ -227,10 +236,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 60vh;
+  height: 50vh;
   box-shadow: 30px #2de230;
   box-shadow: 40px 40px 15px 0px rgba(45, 226, 48, NaN);
-  width: 30vw;
+  width: 32vw;
   position: relative;
   overflow: hidden;
 }
@@ -244,10 +253,10 @@
   height: 25vh;
 }
 .backToTop {
-  background-color: transparent;
-  display: inline;
+  /* background-color: transparent; */
+  /* display: inline; */
+  width: 100%;
   float: right;
-  width: 10vw;
 }
 
 /* animations */
@@ -255,16 +264,11 @@
   0% {
     transform: scale(0.5);
   }
-  100% {
+  50% {
     transform: scale(1);
   }
-}
-@keyframes rotate {
-  0% {
-    transform:perspective(1000px) rotateY(0deg);
-  }
   100% {
-    transform: perspective(1000px) rotateY(360deg);
+    transform: scale(0.5);
   }
 }
 /* MEDIA QUERY */
@@ -323,13 +327,14 @@
   .sponsorImages {
     margin-top: 20px;
     height: 25vh;
+    margin-bottom: 30px;
   }
   .prevSlide {
     width: 20vw;
     height: 20vh;
   }
   .mainSlide {
-    height: 40vh;
+    height: 30vh;
     width: 30vw;
   }
   .nextSlide {
@@ -359,6 +364,14 @@
   }
   #agriculture {
     font-size: 85px;
+  }
+  .trailerBox {
+    width: 85vw;
+    height: 60vh;
+  }
+  .trailerVid {
+    width: 85vw;
+    height: 60vh;
   }
   .sponsor {
     height: 60vh;
@@ -441,7 +454,6 @@
   #trailer {
     font-size: 50px;
   }
-
   /* sponsor */
   .sponsor {
     height: 60vh;
