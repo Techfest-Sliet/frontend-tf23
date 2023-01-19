@@ -19,11 +19,7 @@ const HomeScreen = () => {
     return () => clearInterval(interval);
   }, [activeIndex, activeIndexPrev, activeIndexNext]);
 
-  const gotoTop = () =>
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
+
   return (
     <div className="homePage">
       <div className="FirstPage">
@@ -171,11 +167,6 @@ const HomeScreen = () => {
             />
             </div>
             
-          </div>
-          <div className="backToTop">
-            <h4 onClick={gotoTop} style={{ textDecoration: "none" }}>
-              Back To Top ^
-            </h4>
           </div>
         </div>
       </div>

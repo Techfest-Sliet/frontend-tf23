@@ -239,18 +239,6 @@
   width: 22vw;
   height: 25vh;
 }
-.backToTop {
-  width: 100%;
-  cursor: pointer;
-  color: #fff;
-  display: flex;
-  justify-content: right;
-  align-items: center;
-  float: right;
-  margin-right: 4%;
-  margin-bottom: 2%;
-}
-
 /* animations */
 @keyframes scale-up-center {
   0% {
@@ -366,7 +354,20 @@
     height: 60vh;
   }
   .sponsor {
-    height: 60vh;
+    height: 40vh;
+  }
+  .sponsorImages {
+    height: 35vh;
+  }
+  .prevSlide {
+    display: none;
+  }
+  .mainSlide {
+    height: 40vh;
+    width: 80vw;
+  }
+  .nextSlide {
+    display: none;
   }
 }
 
