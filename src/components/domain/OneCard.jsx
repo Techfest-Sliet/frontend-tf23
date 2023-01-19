@@ -1,24 +1,22 @@
-import React from 'react';
-import './OneCard.css';
-function OneCard({title,pic,des}) {
+import React from "react";
+import "./OneCard.css";
+function OneCard({ pic, des,title }) {
   return (
-    <div class="flex-item">
-   <div className="domainRing">
-   <div class="outerring ">
-        <div class="innerring ">
-           <div class="flip-card-back">
-               <p>{des}</p>
-             </div> 
+    <div className="domainRing">
+      <div className="outerRing ">
+        <div className="innerRing ">
+          <div className="flip-card-back">
+            <span className="span">{des}</span>
+          </div>
 
-           <div class="flip-card-front">
-               <img className='ringImage' src={pic} alt=""/>
-           <p>{title}</p>
-           </div>
+          <div className="flip-card-front">
+            <img className="ringImage" src={pic} alt=""/>
+            <p>{title}</p>
+          </div>
         </div>
-       </div>
-   </div>
-</div>
-  )
+      </div>
+    </div>
+  );
 }
 
-export default OneCard
+export default OneCard;

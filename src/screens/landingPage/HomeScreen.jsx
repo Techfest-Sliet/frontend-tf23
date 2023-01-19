@@ -5,20 +5,19 @@ import SponsorImageSlider from "../../components/slider/SponsorImageSlider.js";
 import SliderContent from "../../components/slider/SliderContent";
 import Arrows from "../../components/slider/Arrows";
 import { useState, useEffect } from "react";
-import Dots from "../../components/slider/Dots";
 const leng = SponsorImageSlider.length - 1;
 const HomeScreen = () => {
-  const [activeIndex, setActiveIndex] = useState(1);
+  const [activeIndex, setActiveIndex] = useState(0);
   const [activeIndexPrev, setActiveIndexPrev] = useState(leng);
-  const [activeIndexNext, setActiveIndexNext] = useState(2);
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setActiveIndex(activeIndex === leng ? 0 : activeIndex + 1);
-      setActiveIndexPrev(activeIndexPrev < 1 ? leng : activeIndexPrev - 1);
-      setActiveIndexNext(activeIndexNext === leng ? 0 : activeIndexPrev + 1);
-    }, 3000);
-    return () => clearInterval(interval);
-  }, [activeIndex]);
+  const [activeIndexNext, setActiveIndexNext] = useState(1);
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     setActiveIndex(activeIndex === leng ? 0 : activeIndex + 1);
+  //     setActiveIndexPrev(activeIndexPrev < 1 ? leng : activeIndexPrev + 1);
+  //     setActiveIndexNext(activeIndexNext === leng ? 0 : activeIndexPrev + 1);
+  //   }, 3000);
+  //   return () => clearInterval(interval);
+  // }, [activeIndex,activeIndexPrev,activeIndexNext]);
 
 
   const gotoTop = () =>
@@ -137,19 +136,14 @@ const HomeScreen = () => {
             <Arrows
               prevSlide={() => {
                 setActiveIndex( activeIndex < 1 ? leng : activeIndex - 1);
-                setActiveIndexPrev((activeIndex===0)? leng : activeIndexPrev+1);
-                setActiveIndexNext((activeIndexNext===leng)?0: activeIndexNext+1)
+                setActiveIndexPrev((activeIndexPrev< 1)? leng : activeIndexPrev-1);
+                setActiveIndexNext((activeIndexNext < 1)? leng: activeIndexNext-1)
               }}
               nextSlide={() =>{
-                setActiveIndex( activeIndex < 1 ? leng : activeIndex - 1);
+                setActiveIndex( (activeIndex===leng)? 0 : activeIndex + 1);
                 setActiveIndexPrev((activeIndex===0)? leng : activeIndexPrev+1);
                 setActiveIndexNext((activeIndexNext===leng)?0: activeIndexNext+1)
               }}
-            />
-            <Dots
-              activeIndex={activeIndex}
-              imageSlider={SponsorImageSlider}
-              onClick={(activeIndex) => setActiveIndex(activeIndex)}
             />
           </div>
 

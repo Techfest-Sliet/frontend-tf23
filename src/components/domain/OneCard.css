@@ -1,3 +1,4 @@
+
 .flex-container {
     display: flex;
     flex-wrap: wrap;
@@ -179,6 +180,7 @@
     visibility: hidden;
 }
 .all-dots {
+
     visibility: visible;
   }
   .domainheading {
@@ -186,5 +188,19 @@
   }
   .domainheading h2 {
     font-size: 55px;
+  }
+
+  }
+
+
+@keyframes domainAnimation {
+  0% {
+    transform: rotateY(0deg) scaleX(-1);
+  }
+  50% {
+    transform: rotateY(180deg) scaleX(-1);
+  }
+  100%{
+    transform: rotateY(0deg) scaleX(-1);
   }
 }
