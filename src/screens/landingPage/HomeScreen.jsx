@@ -5,7 +5,6 @@ import SponsorImageSlider from "../../components/slider/SponsorImageSlider.js";
 import SliderContent from "../../components/slider/SliderContent";
 import Arrows from "../../components/slider/Arrows";
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
 const leng = SponsorImageSlider.length - 1;
 const HomeScreen = () => {
   const [activeIndex, setActiveIndex] = useState(1);
@@ -157,9 +156,9 @@ const HomeScreen = () => {
             />
           </div>
         </div>
-      </div>
       <div className="backToTop">
-        <Link onClick={gotoTop} style={{textDecoration:"none"}}><h4>Back To Top</h4></Link>
+        <h4 onClick={gotoTop} style={{textDecoration:"none"}}>Back To Top ^</h4>
+      </div>
       </div>
     </div>
 

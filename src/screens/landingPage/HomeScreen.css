@@ -253,10 +253,15 @@
   height: 25vh;
 }
 .backToTop {
-  /* background-color: transparent; */
-  /* display: inline; */
   width: 100%;
+  cursor: pointer;
+  color: #fff;
+  display: flex;
+  justify-content: right;
+  align-items: center;
   float: right;
+ margin-right: 4%;
+ margin-bottom: 2%;
 }
 
 /* animations */
