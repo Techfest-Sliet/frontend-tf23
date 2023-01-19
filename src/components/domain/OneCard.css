@@ -21,7 +21,7 @@
     color: white;
     flex: 25% 1;
   }
-  .outerRing {
+  .outerring {
     margin: auto;
     background: linear-gradient( 360deg, #0b9e19 15.45%, rgba(5, 89, 13, 0.57) 48.72%, rgba(0, 30, 5, 0) 87.53% );
     border-radius: 50%;
@@ -63,6 +63,9 @@
     justify-content: center;
     align-items: center;
   }
+  .span{
+    font-size: 20px;
+  }
   .ringImage {
     height: 200px;
     background-color: transparent;
@@ -90,13 +93,13 @@
     background-image: url('../../assets/domain/Background.webp');
     background-repeat: no-repeat;
     background-size: cover;
-    height: 85vh;
+    height: 90vh;
     overflow: hidden;
     width: 100%;
   }
   .DomainScroll {
     height: 100%;
-    overflow-y: scroll;
+    /* overflow-y: scroll; */
     width: 100%;
     display: flex;
     justify-content: space-evenly;
@@ -106,7 +109,7 @@
   }
 
   .domainSlider {
-    top: 50px;
+    top: 40px;
     display: block;
     margin: 0px auto;
     width: 90%;
@@ -117,9 +120,9 @@
   }
   .domainheading {
     width: 30%;
-    margin: 40px auto 0 auto;
+    margin: 45px auto 0 auto;
     bottom: 20px;
-    height: 10%;
+    height: 15%;
     position: absolute;
     text-align: center;
   }
@@ -129,12 +132,12 @@
     font-size: 4.5vw;
     line-height: 15px;
     height: 20px;
-    margin-bottom: 30px;
     font-family: "Monument Extended", sans-serif;
   }
   .domainheading p {
+    margin-top: 30px;
     height: 40px;
-    line-height: 25px;
+    line-height: 20px;
     font-feature-settings: 'liga' off;
     color: white;
   }
@@ -146,9 +149,8 @@
     visibility: hidden;
   }
 .outerring:hover {
-    transform: rotateY(180deg);
+    transform: rotateY(180deg) scaleX(-1);
     position: static;
-    
     /* backface-visibility: hidden; */
     text-align: center;
     transition: 2s;
@@ -163,10 +165,22 @@
     opacity: 1; /* specify the final state */
     
   }
-  @media only screen and (max-width: 1000px){
+  @media only screen and (max-width: 1100px){
     .domainheading {
         width: 40%;
       }
+      .domainScreen {
+        height: 67vh;
+      }
+      .domainheading {
+        width: 50%;
+        margin-top: 15px;
+      }
+      
+  .domainSlider {
+    height: 50%;
+  }
+
   }
   @media only screen and (max-width: 790px){
   .domainSlider {
@@ -174,7 +188,7 @@
     width: 95%;
   }
   .domainScreen {
-    height: 65vh;
+    height: 75vh;
   }
   .arrows {
     visibility: hidden;
@@ -184,7 +198,8 @@
     visibility: visible;
   }
   .domainheading {
-    width: 60%;
+    width: 65%;
+    margin-bottom: 30px;
   }
   .domainheading h2 {
     font-size: 55px;
@@ -192,7 +207,17 @@
 
   }
 
-
+  @media only screen and (max-width: 500px){
+    .domainScreen {
+      height: 95vh;
+    }
+    .domainheading {
+      width: 70%;
+      margin-bottom: 60px;
+    }
+    
+  
+    }
 @keyframes domainAnimation {
   0% {
     transform: rotateY(0deg) scaleX(-1);
