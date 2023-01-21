@@ -13,17 +13,35 @@
 }
 .slide-image{
     margin: auto;
-    height:40%;
+    height:100%;
     width: 100%;
+    border-radius: 20px;
     /* object-fit:cover; */
 }
 
 .prev, .next{
     cursor: pointer;
     z-index: 100;
+    user-select: none;
     position: absolute;
     top: 50%;
     width: auto;
+    height: auto;
+    padding: 1rem;
+    margin-top:-3rem;
+    font-size: 30px;
+    color: azure;
+    font-weight: bold;
+    border-radius: 0px 5px 5px 0px;
+}
+.prevHome, .nextHome{
+    cursor: pointer;
+    z-index: 100;
+    user-select: none;
+    /* position: absolute; */
+    top: 100%;
+    width: auto;
+    height: auto;
     padding: 1rem;
     margin-top:-3rem;
     font-size: 30px;
@@ -36,6 +54,11 @@
     background-color:transparent ;
     transition: all 0.5s ease-in;
 }
+.prevHome:hover, .nextHome:hover{
+    color: #74eb76;
+    background-color:transparent ;
+    transition: all 0.5s ease-in;
+}
 .next{
     right: 0;
     border-radius: 5px 0px 0px 5px;
@@ -43,10 +66,9 @@
 
 .all-dots{
     width: 100%;
-    height: 100%;
     position: absolute;
     display: flex;
-    top:85%;
+    top:90%;
     justify-content: center;
     z-index: 200;
 }
@@ -62,3 +84,7 @@
 .active-dot, .dot:hover{
     background-color: rgba(255,255,255, 0.5);
 }
+
+
+
+
