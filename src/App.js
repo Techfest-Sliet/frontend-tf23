@@ -1,6 +1,7 @@
 
 import ContactUs from "./components/contactUs";
 import React from 'react';
+import Error404 from "./components/Error404/Error404";
 import Reset from './components/Signin/Signin'
 import './index.css';
 import { Route, Routes } from 'react-router';
@@ -13,7 +14,7 @@ function App() {
       <Routes>
         <Route path='/domain' element={<DomainScreen/>}/>
         {/* <Route path='/signIn' element={<Reset/>}/> */}
-
+	<Route path="*" element={<Error404/>}/>
         <Route path='/contactUs' element={<ContactUs/>}/>
         <Route path='/' element={<HomeScreen/>}/>
         <Route path='/signIn' element={<Reset/>}/>
