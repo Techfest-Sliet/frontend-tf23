@@ -1,7 +1,6 @@
 
 import ContactUs from "./components/contactUs";
 import React from 'react';
-import HomeScreen from './screens/landingPage/HomeScreen';
 import Reset from './components/Signin/Signin'
 import './index.css';
 import { Route, Routes } from 'react-router';
