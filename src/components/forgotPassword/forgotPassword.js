@@ -4,7 +4,7 @@ import reset from "../../images/reset.png";
 
 const forgotPassword = () => {
   return (
-    <div className="forgotPassword">
+    <div className="forgotPassword forgotPassword__body">
       <div>
         <img src={logo} alt="techFestSLIET'23 logo"  className="forgotPassword__bg"/>
       </div>

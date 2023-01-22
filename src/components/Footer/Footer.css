@@ -6,6 +6,7 @@
 }
 
 .footer-items{
+    z-index:100;
     position: fixed;
     left: 0;
     bottom: 0;
@@ -23,6 +24,7 @@
 
 }
 
+/*
 Button{
     height: 2.7em;
     width: 2.7em;
@@ -33,4 +35,4 @@ Button{
 Button:hover{
     border:2px solid yellow;
     border-radius: 50%;
-}
+}*/

@@ -6,7 +6,7 @@
   font-family: "Open Sans", sans-serif;
 }
 
-body {
+.signin__body {
   color: white;
   background: rgb(5, 79, 17);
   background: linear-gradient(
@@ -37,7 +37,7 @@ a {
 }
 
 .signin__logo {
-  max-width: 22em;
+  max-width: 10em;
   filter: drop-shadow(-10.264px 77.5499px 144.836px #000);
   animation: fadeIn 5s infinite;
   -webkit-animation: fadeIn 5s infinite;
@@ -80,9 +80,8 @@ a {
   width: 40%;
 }
 
-img {
-  max-height: 100%;
-  max-width: 100%;
+.signin__img {
+  max-width: 40%;
 }
 
 .signin__page > h1 {
@@ -92,12 +91,12 @@ img {
   font-weight: 700;
 }
 
-label {
+.signin__label {
   display: inline-block;
   margin-bottom: 0.2em;
 }
 
-input {
+.signin__input {
   margin-bottom: 0.8em;
   border: 0;
   outline: 0;
@@ -123,7 +122,7 @@ input[type="password"] {
   color: #fff;
 }
 
-input::placeholder {
+.singin__input::placeholder {
   color: #d9d9d9;
 }
 
@@ -154,7 +153,7 @@ input::placeholder {
 }
 
 @media (max-width: 1089px) {
-  body {
+  .sigin__body {
     font-size: 13.6px;
   }
   .signin__button > button {
@@ -164,7 +163,7 @@ input::placeholder {
 }
 
 @media (max-width: 924px) {
-  body {
+  .signin__body {
     font-size: 13px;
   }
 
@@ -181,13 +180,13 @@ input::placeholder {
 }
 
 @media (max-width: 885px) {
-  body {
+  .signin__body {
     font-size: 11px;
   }
 }
 
 @media (max-width: 750px){
-  body {
+  .signin__body {
     font-size: 9px;
   }
   .signin__input input[type="text"],
@@ -197,7 +196,7 @@ input::placeholder {
 }
 
 @media (max-width: 614px) {
-  body {
+  .signin__body {
     font-size: 10px;
   }
 
@@ -221,22 +220,22 @@ input::placeholder {
 }
 
 @media (max-width:552px) {
-  body {
+  .signin__body {
     font-size: 13px;
   }
 }
 @media (max-width:425px) {
-  body {
+  .signin__body {
     font-size: 12px;
   }
 }
 @media (max-width:375px) {
-  body {
+  .signin__body {
     font-size: 11px;
   }
 }
 @media (max-width:320px) {
-  body {
+  .signin__body {
     font-size: 11px;
   }
 }

@@ -3,7 +3,7 @@ import logo from "../../images/techFEST '23.webp";
 
 const error404 = () => {
   return (
-    <>
+    <div  className="error404__body">
       <div>
         <img src={logo} alt="techFestSLIET'23 logo"  className="error404__bg"/>
       </div>
@@ -16,7 +16,7 @@ const error404 = () => {
         </div>
         <button className="error404__button">Home</button>
       </div>
-    </>
+    </div>
   );
 }
 

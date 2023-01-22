@@ -1,15 +1,16 @@
-import React from 'react'
-import "./Navbar.css"
+import React from 'react';
+import "./Navbar.css";
 import logo from './logo.png';
+import {Link} from 'react-router-dom';
 
 export const Navbar = () => {
   return (
         <navbar>
         <header className="header">
             <div className="logo">
-                <a href="#">
+                <Link to="/">
                     <img src = {logo} alt = "No Internet"/>
-                </a>
+                </Link>
             </div>
 
             <div className="navigation">
@@ -18,21 +19,20 @@ export const Navbar = () => {
                 <div className="hamburger"></div>
 
                 <ul className="navbar-items">
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Workshops</a></li>
+                    <li><Link to="/aboutUs">About Us</Link></li>
+                    <li><Link to="/workshops">Workshops</Link></li>
                     <li className="domains">
-                        <a href="#">Domains &#32;<i className="arrow down"></i></a>
+                        <Link to="/domains">Domains &#32;<i className="arrow down"></i></Link>
                         {/*-- DROPDOWN MENU */}
                         <ul className="dropdown">
-                            <li><a href="/">Karyarachna</a></li>
-                            <li><a href="/">Plexus</a></li>
-                            <li><a href="/">Chemfor</a></li>
-                            <li><a href="/">Electrica</a></li>
-                            <li><a href="/">Domain 5</a></li>
+                            <li><Link href="/">Karyarachna</Link></li>
+                            <li><Link to="/">Plexus</Link></li>
+                            <li><Link to="/">Chemfor</Link></li>
+                            <li><Link to="/">Electrica</Link></li>
+                            <li><Link to="/">Domain 5</Link></li>
                         </ul>
                     </li>
-                    <li><a href="#">CA Program</a></li>
-                    <a href="#" className='signInButton'>Sign In</a>
+                    <Link to="/signIn" className='signInButton'>Sign In</Link>
                 </ul>
             </div>
             

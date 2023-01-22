@@ -3,7 +3,7 @@ import logo from "../../images/techFEST '23.webp";
 
 const resetPassword = () => {
   return (
-    <>
+    <div className="resetPassword__body">
       <div>
         <img src={logo} alt="techFestSLIET'23 logo" className="resetPassword__bg"/>
       </div>
@@ -16,7 +16,7 @@ const resetPassword = () => {
         </div>
         <button className="resetPassword__button">Reset</button>
       </div>
-    </>
+    </div>
   );
 }
 
