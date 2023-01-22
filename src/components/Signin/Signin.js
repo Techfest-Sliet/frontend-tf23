@@ -38,7 +38,7 @@ const signIn = () => {
           />
           <br />
           <div className="signin__button">
-            <button className="signin__button" type="submit">Sign In</button>
+            <Link to="/signin"><button className="signin__button" type="submit">Sign In</button></Link>
             <Link to="/auth/forgotPassword">Forgot Password?</Link>
           </div>
         </div>

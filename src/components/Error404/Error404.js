@@ -1,4 +1,5 @@
 import "./Error404.css";
+import {Link} from 'react-router-dom';
 import logo from "../../images/techFEST '23.webp";
 
 const error404 = () => {
@@ -14,7 +15,7 @@ const error404 = () => {
           <br />
           Sorry, we can't find the page you are looking for.
         </div>
-        <button className="error404__button">Home</button>
+        <Link to="/"><button className="error404__button">Home</button></Link>
       </div>
     </div>
   );
