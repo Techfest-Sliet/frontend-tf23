@@ -1,25 +1,20 @@
 import React from 'react';
 import './Loading.css';
 import techFestLogo from "./techFEST '23.webp";
+import logo from "./SLIET's techFEST '23.webp";
 
 const Loading = () => {
     return (
         <>
             <div className='loading_bg'>
                 <div className='techFest'>
-                    <i>
-                        <h1> techFEST <span style={{ color: "rgb(125, 198, 16)" }}>'23 </span></h1>
-                        <p>SLIET Longowal's Annual Technical Fest</p>
-                    </i>
+                    <img src={logo} className="cmingSoon_logo" alt=".."/>
                 </div>
 
                 <div className='loadingContainer'>
                     <img src={techFestLogo} className='techFestLogo' alt=".." />
                     <div className='techFest2'>
-                        <i>
-                            <h1> techFEST <span style={{ color: "rgb(125, 198, 16)" }}>'23 </span></h1>
-                            <p>SLIET Longowal's Annual Technical Fest</p>
-                        </i>
+                        <img src={logo} className="cmingSoon_logo2" alt=".."/>
                     </div>
 
                     <h1>COMING THIS <span style={{ color: "rgb(30, 190, 30)" }}>MARCH</span></h1>
