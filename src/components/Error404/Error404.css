@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+  text-align: center;
+}
+
+.error404__body {
+  color: white;
+  background: rgb(5, 79, 17);
+/*  Created with https://www.css-gradient.com */
+background: #082D0B;
+background: -webkit-radial-gradient(center, #082D0B, #010101);
+background: -moz-radial-gradient(center, #082D0B, #010101);
+background: radial-gradient(ellipse at center, #082D0B, #010101);
+  height: 100vh;
+  width: 100vw;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.error404__bg {
+    position: absolute;
+    opacity: 0.07;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 45vw;
+    z-index: -1;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+.error404__title {
+    font-size: 3em;
+}
+
+.error404__text {
+  margin: 0 0 1em 0;
+}
+
+.error404__text > span {
+    font-size: 1.7em;
+}
+
+.error404__button {
+  padding: 0.5em 2em;
+  border-radius: 7px;
+  background: linear-gradient(to right, green, rgb(17, 39, 7));
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  margin-top: 1em;
+} 
+
+@media (max-width: 700px) {
+  .error404__bg {
+    width: 60vw;
+  }
+}
+
+@media (max-width: 450px) {
+  .error404__bg {
+    width: 70vw;
+  }
+}
