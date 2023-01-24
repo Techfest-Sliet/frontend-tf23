@@ -1,5 +1,9 @@
+
+import Loading from "./components/loading/Loading";
+
 import { Navbar } from './components/Navbar/Navbar';
 import Footer from './components/Footer/Footer';
+
 
 import ContactUs from "./components/contactUs";
 import React from 'react';
@@ -31,6 +35,7 @@ function App() {
         <Route path='/resetPassword' element={<Reset/>}/>
         <Route path='/loading' element={<Loading/>}/>
         <Route path='/forgotPassword' element={<ForgotPassword/>}/>
+        <Route path="/loading" element={<ForgotPassword/>}/>
       </Routes>
     </div>
   </>
