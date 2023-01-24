@@ -222,6 +222,9 @@ navbar{
 .domains {
     position: relative;
 }
+.aboutUs {
+    position: relative;
+}
 
 .dropdown {
     background-color: #11220D;
@@ -246,6 +249,10 @@ navbar{
 }
 
 .domains:hover .dropdown {
+    display: block;
+}
+
+.aboutUs:hover .dropdown {
     display: block;
 }
 

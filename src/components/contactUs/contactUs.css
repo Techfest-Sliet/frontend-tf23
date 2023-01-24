@@ -7,7 +7,7 @@
 }
 
 .background-of-contactUsPage {
-    background-image: url(background.gif);
+    background-image: url(../background.gif);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;

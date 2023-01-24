@@ -1,5 +1,4 @@
 import { Button } from "@mui/material";
-import {Link} from 'react-router-dom';
 import React from "react";
 import "./HomeScreen.css";
 import SponsorImageSlider from "../../components/slider/SponsorImageSlider.js";
@@ -56,20 +55,16 @@ const HomeScreen = () => {
             className="landingButtons"
             style={{ marginTop: 10, color: "white", marginBottom: 1 }}
           >
-            <Link to="/signin">
-	      <Button variant="contained" id="signUpButton" sx={{ mr: 2, mt: 3 }}>
+            <Button variant="contained" id="signUpButton" sx={{ mr: 2, mt: 3 }}>
               Sign Up Now
-              </Button>
-	    </Link>
-            <Link to="/aboutUs">
+            </Button>
             <Button
-              variant="aboutUs"
+              variant="contained"
               id="aboutUsButton"
               sx={{ mr: 2, mt: 3 }}
             >
               About Us
             </Button>
-	    </Link>
           </div>
         </div>
       </div>
@@ -86,14 +81,12 @@ const HomeScreen = () => {
               Massa vitae tortor condimentum lacinia quis vel eros donec ac odio
               tempor orci dapibus ultrices in iaculis nunc
             </p>
-	    <Link to="/domains">
             <Button
               sx={{ color: "#fff", mt: 3, borderRadius: 6, width: 150, mb: 5 }}
               className="learnMoreButton"
             >
               Learn More
             </Button>
-	    </Link>
           </div>
           <div className="containerWorkshops">
             <img src="/workshop.webp" height={250} width={250} alt="" />
@@ -104,14 +97,12 @@ const HomeScreen = () => {
               Massa vitae tortor condimentum lacinia quis vel eros donec ac odio
               tempor orci dapibus ultrices in iaculis nunc
             </p>
-	    <Link to="workshop">
             <Button
               sx={{ color: "#fff", mt: 3, borderRadius: 6, width: 150, mb: 5 }}
               className="learnMoreButton"
             >
               Learn More
             </Button>
-	    </Link>
           </div>
         </div>
         {/* trailer*/}

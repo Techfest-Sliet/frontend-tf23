@@ -1,9 +1,8 @@
 import React, { useState } from 'react'
-import './contactUs.css';
+import './faq.css';
 import { FaAngleDown, FaAngleUp } from "react-icons/fa";
-import dummy from './dummy.jpg'
-import contactUsImage from './contact_us_img.webp'
-// import bakgrndImg from './background.gif';
+import dummy from '../dummy.jpg'
+import contactUsImage from '../contact_us_img.webp'
 
 const ContactUs = () => {
 

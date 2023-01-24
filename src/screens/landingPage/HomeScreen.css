@@ -13,10 +13,9 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
   opacity: 0.07;
+  width: 100%;
 }
-
 .landingPage {
   width: 80%;
   height: calc(100vh - 4em);
@@ -36,7 +35,6 @@
 .main_img {
   width: 25vw;
   filter: drop-shadow(-9px 68px 127px #000000);
-  box-shadow: 0px 4px 60px -1px rgba(0, 0, 0, 0.2);
 }
 
 .innovationIn {
@@ -254,8 +252,15 @@
 /* MEDIA QUERY */
 @media only screen and (max-width: 1100px) {
   .main_img {
-    width: 35vw;
-    height: 45vh;
+    width: 40vw;
+    height: 40vh;
+  }
+  .landingPageCover__animation {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
   }
   .innovation {
     font-size: 38px;
@@ -265,7 +270,7 @@
     margin-top: 16px;
   }
   #in {
-    padding-top: 3.9vh;
+    padding-top: 3vh;
   }
   #agriculture {
     font-size: 120px;
@@ -301,6 +306,13 @@
   #agriculture {
     font-size: 100px;
   }
+  .landingPageCover__animation {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100vw;
+  }
   .containerText {
     font-size: 15px;
   }
@@ -331,6 +343,9 @@
     width: 50vw;
     height: 36vh;
   }
+  .landingPageCover__animation {
+    display: none;
+  }
   .innovation {
     font-size: 30px;
   }
@@ -338,6 +353,7 @@
     height: 25px;
     width: 150px;
     margin-top: 13px;
+    color: rgb(221, 221, 221);
   }
   #in {
     padding-top: 2.1vh;
@@ -354,7 +370,7 @@
     height: 60vh;
   }
   .sponsor {
-    height: 40vh;
+    height: 60vh;
   }
   .sponsorImages {
     height: 35vh;
@@ -375,6 +391,9 @@
   .main_img {
     width: 55vw;
     height: 38vh;
+  }
+  .landingPageCover__animation {
+    display: none;
   }
   .innovation {
     font-size: 23px;
@@ -419,20 +438,30 @@
     width: 70vw;
     height: 30vh;
   }
-  .innovationIn {
-    flex-direction: column;
-  }
+  /* .landingPageCover__animation {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 660px;
+    width: 425px;
+
+  } */
+
   .innovation {
     font-size: 20px;
   }
   .O {
     height: 15px;
     width: 90px;
-    margin-top: 10px;
+    margin-top: 8px;
+    color: #d5d5d5;
+    margin-left: 4px;
+    margin-right: 4px;
   }
 
   #in {
-    margin: 0px auto;
+    font-size: 26px;
+    padding-top: 1.5vh;
   }
   #agriculture {
     font-size: 48px;
@@ -467,5 +496,309 @@
   }
   .nextSlide {
     display: none;
+  }
+}
+@media only screen and (max-width: 425px) {
+  .landingPage {
+    /* width: 80%; */
+    height: 80vh;
+  }
+  /* .landingPageCover__animation {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 660px;
+    width: 420px;
+    opacity: 0.07;
+  } */
+
+  .main_img {
+    width: 70vw;
+    height: 30vh;
+  }
+
+  .innovation {
+    font-size: 16px;
+  }
+  .O {
+    height: 12px;
+    width: 80px;
+    border: 6px solid;
+    margin-top: 4px;
+    color: #d5d5d5;
+    padding-left: 1px;
+    padding-right: 1px;
+    margin-left: 4px;
+    margin-right: 4px;
+  }
+
+  #in {
+    font-size: 19px;
+    padding-top: 1.3vh;
+  }
+  #agriculture {
+    font-size: 40px;
+    font-weight: 800;
+    margin-bottom: 10px;
+  }
+  .landingText {
+    font-size: 14px;
+    text-align: justify;
+    line-height: 1;
+  }
+  #signUpButton {
+    /* padding-left: 50px; */
+    margin-left: 70px;
+    margin-top: 10px;
+  }
+  #aboutUsButton {
+    margin-left: 80px;
+    border-radius: 9px;
+    margin-top: 14px;
+  }
+  .main_container {
+    padding-top: 10px;
+  }
+  /* trailer */
+  #trailer {
+    font-size: 50px;
+  }
+  .trailerBox {
+    height: 35vh;
+    border-radius: 25px;
+  }
+  .trailerVid {
+    height: 35vh;
+    border-radius: 24px;
+  }
+  /* sponsor */
+  .sponsor {
+    height: 60vh;
+  }
+  #sponsor {
+    margin-top: 0px;
+    font-size: 40px;
+  }
+  .sponsorImages {
+    height: 30vh;
+  }
+  .prevSlide {
+    display: none;
+  }
+  .mainSlide {
+    height: 40vh;
+    width: 80vw;
+  }
+  .nextSlide {
+    display: none;
+  }
+}
+@media only screen and (max-width: 375px) {
+  .landingPage {
+    width: 80%;
+    /* height: 80vh ; */
+  }
+  /* .landingPageCover__animation {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 660px;
+    width: 370px;
+    opacity: 0.07;
+  }
+   */
+  .main_img {
+    width: 70vw;
+    height: 30vh;
+  }
+
+  .innovation {
+    font-size: 16px;
+  }
+  .O {
+    height: 12px;
+    width: 80px;
+    border: 6px solid;
+    margin-top: 4px;
+    color: #d5d5d5;
+    padding-left: 1px;
+    padding-right: 1px;
+    margin-left: 4px;
+    margin-right: 4px;
+  }
+
+  #in {
+    font-size: 19px;
+    padding-top: 1.3vh;
+  }
+  #agriculture {
+    font-size: 40px;
+    font-weight: 800;
+    margin-bottom: 10px;
+  }
+  .landingText {
+    font-size: 14px;
+    text-align: justify;
+    line-height: 1;
+  }
+  #signUpButton {
+    /* padding-left: 50px; */
+    margin-left: 70px;
+    margin-top: 10px;
+  }
+  #aboutUsButton {
+    margin-left: 80px;
+    border-radius: 9px;
+    margin-top: 14px;
+  }
+  .main_container {
+    padding-top: 10px;
+  }
+  /* trailer */
+  #trailer {
+    font-size: 50px;
+  }
+  .trailerBox {
+    height: 35vh;
+    border-radius: 25px;
+  }
+  .trailerVid {
+    height: 35vh;
+    border-radius: 24px;
+  }
+  /* sponsor */
+  .sponsor {
+    height: 60vh;
+  }
+  #sponsor {
+    margin-top: 0px;
+    font-size: 40px;
+  }
+  .sponsorImages {
+    height: 30vh;
+  }
+  .prevSlide {
+    display: none;
+  }
+  .mainSlide {
+    height: 40vh;
+    width: 80vw;
+  }
+  .nextSlide {
+    display: none;
+  }
+}
+@media only screen and (max-width: 320px) {
+  .landingPage {
+    width: 80%;
+    /* height: 80vh ; */
+  }
+  .main_img {
+    width: 40vw;
+    height: 20vh;
+  }
+
+  .innovation {
+    font-size: 16px;
+  }
+  .O {
+    height: 12px;
+    width: 80px;
+    border: 6px solid;
+    margin-top: 4px;
+    color: #d5d5d5;
+    padding-left: 1px;
+    padding-right: 1px;
+    margin-left: 4px;
+    margin-right: 4px;
+  }
+
+  #in {
+    font-size: 19px;
+    padding-top: 1.3vh;
+  }
+  #agriculture {
+    font-size: 40px;
+    font-weight: 800;
+    margin-bottom: 10px;
+  }
+  .landingText {
+    font-size: 14px;
+    text-align: justify;
+    line-height: 1;
+  }
+  #signUpButton {
+    margin-left: 70px;
+    margin-top: 10px;
+  }
+  #aboutUsButton {
+    margin-left: 80px;
+    border-radius: 9px;
+    margin-top: 14px;
+  }
+  .main_container {
+    padding-top: 10px;
+  }
+  /* trailer */
+  #trailer {
+    font-size: 50px;
+  }
+  .trailerBox {
+    height: 30vh;
+    border-radius: 25px;
+  }
+  .trailerVid {
+    height: 30vh;
+    border-radius: 24px;
+  }
+  /* sponsor */
+  .sponsor {
+    height: 60vh;
+  }
+  #sponsor {
+    margin-top: 0px;
+    font-size: 40px;
+  }
+  .sponsorImages {
+    height: 30vh;
+  }
+  .prevSlide {
+    display: none;
+  }
+  .mainSlide {
+    height: 40vh;
+    width: 80vw;
+  }
+  .nextSlide {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 281px) {
+  .innovation {
+    font-size: 12px;
+  }
+  .O {
+    height: 7px;
+    width: 50px;
+    border: 6px solid;
+    margin-top: 4px;
+    color: #d5d5d5;
+    padding-left: 1px;
+    padding-right: 1px;
+    margin-left: 4px;
+    margin-right: 4px;
+  }
+  #agriculture {
+    font-size: 30px;
+  }
+  #signUpButton {
+    margin-left: 40px;
+    margin-top: 10px;
+  }
+  #aboutUsButton {
+    margin-left: 50px;
+    border-radius: 9px;
+    margin-top: 14px;
   }
 }

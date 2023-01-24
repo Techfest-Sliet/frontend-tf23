@@ -1,7 +1,8 @@
 import { Navbar } from './components/Navbar/Navbar';
 import Footer from './components/Footer/Footer';
 
-import ContactUs from "./components/contactUs";
+import ContactUs from "./components/contactUs/contactUs.js";
+import Faq from "./components/faq/faq.js";
 import React from 'react';
 import Error404 from "./components/Error404/Error404";
 import SignIn from './components/Signin/Signin';
@@ -25,6 +26,7 @@ function App() {
         {/* <Route path='/signIn' element={<Reset/>}/> */}
 	<Route path="*" element={<Error404/>}/>
         <Route path='/contactUs' element={<ContactUs/>}/>
+        <Route path='/faq' element={<Faq/>}/>
         <Route path='/workshops' element={<Workshop/>}/>
         <Route path='/' element={<HomeScreen/>}/>
         <Route path='/signIn' element={<SignIn/>}/>
