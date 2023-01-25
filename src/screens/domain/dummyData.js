@@ -1,4 +1,4 @@
-import Robozar from "../../assets/domain/robozar.webp";
+import Robozar from "../../assets/domain/Robozar.webp";
 import Chemfor from "../../assets/domain/chemfor.webp";
 import Electrica from "../../assets/domain/electrica.webp";
 import Genesis from "../../assets/domain/genesis.webp";
