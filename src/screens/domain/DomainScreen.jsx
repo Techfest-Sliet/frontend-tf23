@@ -36,7 +36,7 @@ function DomainScreen() {
       </div>
       <div class="domainheading">
         <h2>DOMAINS</h2>
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, fghjukitoyujhgfdertygrhft fdgthdyufgb</p>
+        <p>Unleash your skills and test yourselves on National Battlegrounds with 8 Domains</p>
       </div>
       </div>
     </div>

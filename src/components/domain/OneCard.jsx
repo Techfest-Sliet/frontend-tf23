@@ -1,6 +1,6 @@
 import React from "react";
 import "./OneCard.css";
-function OneCard({ pic, des,title}) {
+function OneCard({ pic, des, title}) {
   return (
     <div className="domainRing">
       <div className="outerring ">

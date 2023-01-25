@@ -18,9 +18,7 @@ const data = [
   {
     pic: Chemfor,
     des:"A platform to attempt and make the best use of your knowledge in the food and chemical industry.",
-    title:"Chemfor",
-    link: "/events/chemfor"
-
+    title:"Chemfor"
   },
   {
     pic: Electrica,
