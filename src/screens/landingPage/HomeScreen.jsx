@@ -5,6 +5,7 @@ import SponsorImageSlider from "../../components/slider/SponsorImageSlider.js";
 import SliderContent from "../../components/slider/SliderContent";
 import {ArrowPrev, ArrowNext} from "../../components/slider/ArrowHome";
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 const leng = SponsorImageSlider.length - 1;
 const HomeScreen = () => {
   const [activeIndex, setActiveIndex] = useState(1);
@@ -85,7 +86,7 @@ const HomeScreen = () => {
               sx={{ color: "#fff", mt: 3, borderRadius: 6, width: 150, mb: 5 }}
               className="learnMoreButton"
             >
-              Learn More
+              <Link to="/domains">Learn More</Link>
             </Button>
           </div>
           <div className="containerWorkshops">
@@ -101,7 +102,7 @@ const HomeScreen = () => {
               sx={{ color: "#fff", mt: 3, borderRadius: 6, width: 150, mb: 5 }}
               className="learnMoreButton"
             >
-              Learn More
+              <Link to="/underConstruction">Learn More</Link>
             </Button>
           </div>
         </div>

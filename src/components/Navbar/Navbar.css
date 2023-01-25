@@ -46,6 +46,9 @@ navbar{
     z-index: 1;
     transition: 0.5s;
 }
+.dropdown > li:first-child {
+    margin: 1.5em 0 0;
+}
 
 .navbar-items li{
     list-style-type: none;

@@ -20,26 +20,25 @@ export const Navbar = () => {
 
                 <ul className="navbar-items">
                     <li><Link to="/">Home</Link></li>
-                    {/* <li><Link to="/workshops">Workshops</Link></li> */}
+                    <li><Link to="/underConstruction">Workshops</Link></li>
                     <li className='aboutUs'>
-                        <Link to="/domains">About Us &#32;<i className="arrow down"></i></Link>
+                        <Link to="/domains" className='dropdown__animation'>About <i className="arrow down">&#32;</i></Link>
                         <ul className='dropdown'>
-                            <li><Link to="/faq">FAQs</Link></li>
-                            <li><Link to="/contactUs">Contact Us</Link></li>
+                            <li><Link to="/faq">Help!</Link></li>
                         </ul>
                     </li>
                     <li className="domains">
-                        <Link to="/domains">Domains &#32;<i className="arrow down"></i></Link>
+                        <Link to="/domains" className='dropdown__animation'>Domains<i className="arrow down">&#32;</i></Link>
                         {/*-- DROPDOWN MENU */}
                         <ul className="dropdown">
-                            <li><Link to="/">Chemfor</Link></li>
-                            <li><Link to="/">Electrica</Link></li>
-                            <li><Link to="/">Genesis</Link></li>
-                            <li><Link href="/">Karyarachna</Link></li>
-                            <li><Link href="/">Kermis</Link></li>
-                            <li><Link href="/">Mechanica</Link></li>
-                            <li><Link to="/">Plexus</Link></li>
-                            <li><Link to="/">Robozar</Link></li>
+                            <li><Link to="/events/chemfor">Chemfor</Link></li>
+                            <li><Link to="/events/electrica">Electrica</Link></li>
+                            <li><Link to="/events/genesis">Genesis</Link></li>
+                            <li><Link to="/events/karyarachna">Karyarachna</Link></li>
+                            <li><Link to="/events/kermis">Kermis</Link></li>
+                            <li><Link to="/events/mechanica">Mechanica</Link></li>
+                            <li><Link to="/events/plexus">Plexus</Link></li>
+                            <li><Link to="/events/robozar">Robozar</Link></li>
                         </ul>
                     </li>
                     {/* <Link to="/signIn" className='signInButton'>Sign In</Link> */}
