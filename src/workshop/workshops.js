@@ -34,21 +34,21 @@ const workshops = () => {
               <h2>{item.nameOfWorkshop}</h2>
               <p>{item.desc}
               </p>
-              <button id='registerNow'> {item.register} </button>
+              {/* <button id='registerNow'> {item.register} </button>
               <button id='viewSchedule'> {item.schedule} </button>
               <h2 style={{ marginTop: "6px" }}>Prizes Worth <br></br> {item.prizeMoney} </h2>
               <p style={{ fontSize: "14px" }}>
                 <FaRegCalendar /> Register Before {item.dateBefore}<br></br>
                 <FaRegClock /> 11:59 P.M.
-              </p>
+              </p> */}
             </div>
-
+{/* 
             <div className='RightOfBox'>
               <div className='objOfBox'>
                 <div style={{ marginRight: "10px", textAlign: "center" }}> {item.nameOfEventCoordinator} <br></br> {item.phoneNo} </div>
                 <div style={{ marginLeft: "10px", textAlign: "center" }}> {item.nameOfEventCoordinator2} <br></br> {item.phoneNo2} </div>
               </div>
-            </div>
+            </div> */}
 
           </div>
 

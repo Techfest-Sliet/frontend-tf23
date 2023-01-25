@@ -2,7 +2,6 @@ import './index.css';
 import React from 'react';
 import { Route, Routes } from 'react-router';
 import { Navbar } from './components/Navbar/Navbar';
-import Event from './components/Events/events';
 import Footer from './components/Footer/Footer';
 import ContactUs from "./components/contactUs/contactUs.js";
 import Chemfor from "./components/Events/Chemfor/Chemfor.js";
@@ -16,7 +15,8 @@ import Robozar from "./components/Events/Robozar/Robozar.js";
 import Faq from './components/faq/faq.js';
 import Error404 from "./components/Error404/Error404";
 import SignIn from './components/Signin/Signin';
-import DomainScreen from './screens/domain/DomainScreen';
+import DomainScreen from './screens/domain/Domain.jsx';
+import OneDomain from './components/domain/OneDomain.jsx';
 import HomeScreen from './screens/landingPage/HomeScreen';
 import Workshop from './workshop/workshops';
 import Reset from './components/resetPassword/resetPassword';
@@ -45,6 +45,7 @@ function App() {
         <Route path='/workshops' element={<Workshop/>}/>
         <Route path='/underConstruction' element={<UnderConstruction/>}/>
         <Route path='/' element={<HomeScreen/>}/>
+        <Route path='/domain/:title' element={<OneDomain/>}/>
         <Route path='/signIn' element={<SignIn/>}/>
         <Route path='/resetPassword' element={<Reset/>}/>
         <Route path='/loading' element={<Loading/>}/>

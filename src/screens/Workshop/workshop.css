@@ -123,9 +123,6 @@
     width: 45%;
     float: left;
     color: white; 
-    /* display: flex;
-    flex-direction: column; */
-    /* justify-content: left; */
 }
 
 .LeftOfBox h2{
@@ -139,12 +136,10 @@
     /* height: 43vh; */
     color: white;
     /* position: absolute; */
-    /* display: flex;
-    justify-content: left; */
 }
 
 .objOfBox {
-    /* position: absolute; */
+    position: absolute;
     bottom: 50px;
     display: flex;
     align-items: center;
