@@ -23,11 +23,13 @@ import Reset from './components/resetPassword/resetPassword';
 import Loading from './components/loading/Loading';
 import UnderConstruction from './components/Construction/underConstruction.js';
 import ForgotPassword from './components/forgotPassword/forgotPassword';
+import Register from './components/register/Register';
 function App() {
   return (
   <>
     <div className="App">
       <Navbar/>
+      <Register/>
       <Footer/>
       <Routes>
         <Route path='/domains' element={<DomainScreen/>}/>
