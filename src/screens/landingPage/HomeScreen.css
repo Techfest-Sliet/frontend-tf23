@@ -4,7 +4,7 @@
 }
 
 .FirstPage {
-  height: 100vh;
+  height: 110vh;
   background: radial-gradient(ellipse at top, #126419, #000),
     radial-gradient(ellipse at bottom, #000000, rgb(0, 0, 0));
     padding-bottom: 1em;
@@ -34,6 +34,7 @@
   position: relative;
 }
 .main_img {
+  margin-top: 100px;
   width: 25vw;
   filter: drop-shadow(-9px 68px 127px #000000);
 }
@@ -66,7 +67,7 @@
 }
 #in {
   color: #fff;
-  padding-top: 6vh;
+  padding-top: 7vh;
   margin-left: 5px;
   font-size: 40px;
 }
