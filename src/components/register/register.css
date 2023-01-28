@@ -100,10 +100,6 @@
     }
 }
 
-.flicker {
-    /* animation: shine 2s forwards, blink 3s 2s infinite; */
-}
-
 .fast-flicker {
     /* animation: shine 2s forwards, blink 10s 1s infinite; */
     text-decoration-line: underline;
