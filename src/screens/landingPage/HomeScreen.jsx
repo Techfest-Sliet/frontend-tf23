@@ -117,7 +117,7 @@ const HomeScreen = () => {
         {/* sponsor */}
         <div className="sponsor">
           <h1 id="sponsor" style={{ color: "#74EB76" }}>
-            <span style={{ color: "white" }}>OUR</span> SPONSORS
+           OUR <span style={{ color: "white" }}>PAST</span> SPONSORS
           </h1>
           <div className="sponsorImages">
           

@@ -1,7 +1,7 @@
-.date {
-    width: 200px;
-    height: 50px;
 
+.date {
+    width: 300px;
+    height: 50px;
     border-top-left-radius: 30px;
     border-bottom-left-radius: 30px;
     position: fixed;
@@ -12,12 +12,54 @@
     text-align: center;
     align-items: center;
     font-family: "heading font";
+    background-color: #133c15;
     padding: 5px;
     border: 2px solid rgb(129, 127, 127);
-    /* animation: animatedgradient 3s ease alternate infinite; */
+    animation: animatedgradient 3s ease alternate infinite;
     right: -.2rem;
 }
+.date_icon p {
+    margin-bottom: -.3rem;
+}
+.date_icon a{
+    text-decoration: none;
+}
+/* @font-face {
+    font-family: Clip;
+    src: url("https://acupoftee.github.io/fonts/Clip.ttf");
+  } */
 
+.span {
+    background: none;
+}
+
+.sign {
+    letter-spacing: 3px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -.6rem;
+    width: 200px;
+    transform: translate(-70%, -50%);
+    letter-spacing: 2;
+    left: 55%;
+    top: 69%;
+    font-family: "Clip";
+    text-transform: uppercase;
+    font-size: 1em;
+    color: white;
+   
+    /* animation: shine 2s forwards, flicker 3s infinite; */
+}
+
+.fast-flicker {
+    /* animation: shine 2s forwards, blink 10s 1s infinite; */
+    /* text-decoration-line: underline; */
+    font-style: italic;
+    color:#ffffff;
+    font-size: small;
+}
 @keyframes animatedgradient {
     0% {
         border-color: rgb(0, 255, 110);
@@ -32,48 +74,15 @@
     }
 
     75% {
-        border-color: rgb(0, 255, 183);
+        border-color: rgb(33, 176, 55);
     }
 
     100% {
-        border-color: rgb(0, 255, 247);
+        border-color: rgb(31, 72, 16);
     }
 }
 
 
-.date_icon p {
-    margin-bottom: -.3rem;
-}
-
-/* @font-face {
-    font-family: Clip;
-    src: url("https://acupoftee.github.io/fonts/Clip.ttf");
-  } */
-
-.span {
-    background: none;
-}
-
-.sign {
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: -.6rem;
-    width: 120px;
-    transform: translate(-70%, -50%);
-    letter-spacing: 2;
-    left: 48%;
-    top: 69%;
-    font-family: "Clip";
-    text-transform: uppercase;
-    font-size: 1em;
-    color: #c20fb3;
-    text-shadow: 0 0 0.6rem #20d6c4, 0 0 1.5rem #39fbeb,
-        -0.2rem 0.1rem 1rem #65ff9d, 0.2rem 0.1rem 1rem #65ff9d,
-        0 -0.5rem 2rem #48ff24, 0 0.5rem 3rem #5bff24;
-    /* animation: shine 2s forwards, flicker 3s infinite; */
-}
 
 @keyframes blink {
 
@@ -100,12 +109,6 @@
     }
 }
 
-.fast-flicker {
-    /* animation: shine 2s forwards, blink 10s 1s infinite; */
-    text-decoration-line: underline;
-    color:#ffffff;
-    font-size: small;
-}
 
 @keyframes shine {
     0% {
@@ -246,23 +249,24 @@
         opacity: 1;
     }
 }
-
-@media screen and (max-width:500px) {
+@media screen and (max-width:1100px) {
     .span {
-        font-size: 12px !important;
+        font-size: 13px;
     }
 
-   
-
     .date {
-        width: 170px;
-        right: -5rem;
+        width: 250px;
+        right: -3rem;
         border-top-left-radius: 500px;
         border-bottom-left-radius: 500px;
     }
+    .sign {
+        width: 170px;
+    }
+
 }
 
-@media screen and (max-width:770px) {
+/* @media screen and (max-width:770px) {
     .span {
         font-size: 16px;
     }
@@ -274,14 +278,17 @@
         border-bottom-left-radius: 500px;
     }
 
-}
+} */
 
 @media screen and (max-width:500px) {
-    .date {
-        display: none !important;
+    
+        .span {
+        font-size: 12px !important;
     }
-
-    .sign {
-        display: none !important;
+    .date {
+        width: 230px;
+        right: -3rem;
+        border-top-left-radius: 500px;
+        border-bottom-left-radius: 500px;
     }
 }

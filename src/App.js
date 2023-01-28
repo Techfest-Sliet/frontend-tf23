@@ -1,6 +1,6 @@
 import './index.css';
 import React from 'react';
-import { Route, Routes } from 'react-router';
+import { Route, Routes, useLocation } from 'react-router';
 import { Navbar } from './components/Navbar/Navbar';
 import Footer from './components/Footer/Footer';
 import ContactUs from "./components/contactUs/contactUs.js";
@@ -23,8 +23,9 @@ import Reset from './components/resetPassword/resetPassword';
 import Loading from './components/loading/Loading';
 import UnderConstruction from './components/Construction/underConstruction.js';
 import ForgotPassword from './components/forgotPassword/forgotPassword';
-import Register from './components/register/Register';
+import Register from './components/Register/Register';
 function App() {
+  
   return (
   <>
     <div className="App">

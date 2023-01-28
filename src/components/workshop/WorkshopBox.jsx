@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaRegCalendar, FaRegClock } from "react-icons/fa";
+// import { FaRegCalendar, FaRegClock } from "react-icons/fa";
 import '../../workshop/workshop.css'
 
 function WorkshopBox({props,index}) {
