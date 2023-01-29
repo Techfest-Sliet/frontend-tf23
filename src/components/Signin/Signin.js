@@ -1,11 +1,13 @@
 import "./Signin.css";
 import logo from "../../images/techFEST '23.webp";
+import {Link} from 'react-router-dom';
 
 const signIn = () => {
   return (
+	  <div className="signin__body">
     <div className="signin__content">
       <div className="signin__img-container">
-        <img src={logo} alt="techFest'23" className="signin__logo" />
+        <img src={logo} alt="techFest'23" className="signin__logo signin__img" />
       </div>
       <div className="signin__page">
         <h1>Welcome back!</h1>
@@ -16,6 +18,7 @@ const signIn = () => {
           </label>
           <br />
           <input
+	    className="signin__label"
             type="text"
             id="name"
             name="email"
@@ -27,6 +30,7 @@ const signIn = () => {
           </label>
           <br />
           <input
+            className="signin__label"
             type="password"
             id="password"
             name="password"
@@ -34,18 +38,19 @@ const signIn = () => {
           />
           <br />
           <div className="signin__button">
-            <button type="submit">Sign In</button>
-            <a href="/auth/forgotPassword">Forgot Password?</a>
+            <Link to="/signin"><button className="signin__button" type="submit">Sign In</button></Link>
+            <Link to="/auth/forgotPassword">Forgot Password?</Link>
           </div>
         </div>
         <p>
           Don't have an account? 
-          <a href="/auth/Signup" className="signup__link">
+          <Link to="/auth/Signup" className="signup__link">
             Sign Up
-          </a>
+          </Link>
         </p>
       </div>
     </div>
+	  </div>
   );
 }
 

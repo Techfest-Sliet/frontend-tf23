@@ -1,10 +1,10 @@
 import React from "react";
 import "./OneCard.css";
-function OneCard({ pic, des,title }) {
+function OneCard({ pic, des,title}) {
   return (
     <div className="domainRing">
       <div className="outerring ">
-        <div className="innerRing ">
+        <div className="innerRing">
           <div className="flip-card-back">
             <span className="span">{des}</span>
           </div>

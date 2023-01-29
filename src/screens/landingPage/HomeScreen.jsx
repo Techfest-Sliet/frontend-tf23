@@ -5,6 +5,7 @@ import SponsorImageSlider from "../../components/slider/SponsorImageSlider.js";
 import SliderContent from "../../components/slider/SliderContent";
 import {ArrowPrev, ArrowNext} from "../../components/slider/ArrowHome";
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 const leng = SponsorImageSlider.length - 1;
 const HomeScreen = () => {
   const [activeIndex, setActiveIndex] = useState(1);
@@ -44,12 +45,7 @@ const HomeScreen = () => {
           </div>
           <h2 id="agriculture">AGRICULTURE</h2>
           <p className="landingText">
-            Massa vitae tortor condimentum lacinia quis vel eros donec ac odio
-            tempor orci dapibus ultrices in iaculis nunc sed augue lacus viverra
-            vitae congue eu consequat ac felis donec et odio pellentesque diam
-            volutpat commodo sed egestas egestas fringilla phasellus faucibus
-            scelerisque eleifend donec pretium vulputate sapien nec sagittis
-            aliquam
+          techFEST'23 is on the mission to revolutionize Agro-Technology. Explore with us how new advancements in technologies ranging from robotics and drones to computer vision software transform traditional methods of agriculture. With the young innovative minds competing to bring a change and supporting the backbone of our nation.
           </p>
           <div
             className="landingButtons"
@@ -78,14 +74,13 @@ const HomeScreen = () => {
               Domains
             </h1>
             <p className="containerText" style={{ color: "#fff" }}>
-              Massa vitae tortor condimentum lacinia quis vel eros donec ac odio
-              tempor orci dapibus ultrices in iaculis nunc
+            Unleash your skills and test yourselves on National Battlegrounds with 8 Domains
             </p>
             <Button
               sx={{ color: "#fff", mt: 3, borderRadius: 6, width: 150, mb: 5 }}
               className="learnMoreButton"
             >
-              Learn More
+              <Link to="/domains">Learn More</Link>
             </Button>
           </div>
           <div className="containerWorkshops">
@@ -94,14 +89,13 @@ const HomeScreen = () => {
               Workshops
             </h1>
             <p className="containerText" style={{ color: "#fff" }}>
-              Massa vitae tortor condimentum lacinia quis vel eros donec ac odio
-              tempor orci dapibus ultrices in iaculis nunc
+            In Workshops learning is something to be enjoyed, not endured.
             </p>
             <Button
               sx={{ color: "#fff", mt: 3, borderRadius: 6, width: 150, mb: 5 }}
               className="learnMoreButton"
             >
-              Learn More
+              <Link to="/underConstruction">Learn More</Link>
             </Button>
           </div>
         </div>

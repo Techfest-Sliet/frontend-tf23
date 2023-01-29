@@ -7,6 +7,7 @@
 
 navbar{
     position: sticky;
+    z-index:100;
     top: 0px;
 }
 
@@ -17,7 +18,8 @@ navbar{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: #000;
+    background: rgb(30,125,37);
+    background: radial-gradient(circle, rgba(30,125,37,1) 0%, rgba(0,60,12,1) 48%);
     padding: 0 25px;
     transform: 0.3s;
 }
@@ -45,6 +47,10 @@ navbar{
     z-index: 1;
     transition: 0.5s;
 }
+.dropdown > li:first-child {
+    margin: 1.5em 0 0;
+}
+
 
 .navbar-items li{
     list-style-type: none;
@@ -190,6 +196,7 @@ navbar{
     .navbar-items li a{
         padding: 25px;
         font-size: 15px;
+        text-align: left;
     }
 
     .signInButton{
@@ -198,6 +205,14 @@ navbar{
 
     .dropdown{
         width: 100%;
+    }
+
+    .aboutUs:hover{
+        height: 100px;
+    }
+
+    .dropdown li a{
+        text-align: left;
     }
 }
 
@@ -222,6 +237,11 @@ navbar{
     position: relative;
 }
 
+.aboutUs {
+    position: relative;
+}
+
+
 .dropdown {
     background-color: #11220D;
     margin-top: 0em;
@@ -245,6 +265,11 @@ navbar{
 }
 
 .domains:hover .dropdown {
+    display: block;
+}
+
+
+.aboutUs:hover .dropdown {
     display: block;
 }
 

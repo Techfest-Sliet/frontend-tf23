@@ -8,20 +8,22 @@
   text-align: center;
 }
 
-body {
+.error404__body {
   color: white;
   background: rgb(5, 79, 17);
-/* Created with https://www.css-gradient.com */
+/*  Created with https://www.css-gradient.com */
 background: #082D0B;
 background: -webkit-radial-gradient(center, #082D0B, #010101);
 background: -moz-radial-gradient(center, #082D0B, #010101);
 background: radial-gradient(ellipse at center, #082D0B, #010101);
   height: 100vh;
+  width: 100vw;
   background-repeat: no-repeat;
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 .error404__bg {
     position: absolute;
     opacity: 0.07;

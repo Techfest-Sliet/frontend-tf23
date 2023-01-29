@@ -2,3 +2,19 @@
   margin:0;
   padding:0;
 }
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-thumb {
+  background: #10620c;
+  border-radius: 25px;
+  transition: all 0.15s ease-in-out;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(157, 157, 154, 1);
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
