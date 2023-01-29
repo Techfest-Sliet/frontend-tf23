@@ -2,9 +2,8 @@ import './index.css';
 import React from 'react';
 import { Route, Routes } from 'react-router';
 import { Navbar } from './components/Navbar/Navbar';
-import Event from './components/Events/events';
 import Footer from './components/Footer/Footer';
-import ContactUs from "./components/contactUs/contactUs.js";
+import SignUp from './components/Signup/Signup';
 import Chemfor from "./components/Events/Chemfor/Chemfor.js";
 import Electrica from "./components/Events/Electrica/Electrica.js";
 import Genesis from "./components/Events/Genesis/Genesis.js";
@@ -32,7 +31,6 @@ function App() {
       <Routes>
         <Route path='/domains' element={<DomainScreen/>}/>
 	<Route path="*" element={<Error404/>}/>
-        <Route path='/contactUs' element={<ContactUs/>}/>
         <Route path='/faq' element={<Faq/>}/>
         <Route path='/events/chemfor' element={<Chemfor/>}/>
         <Route path='/events/electrica' element={<Electrica/>}/>
@@ -46,10 +44,10 @@ function App() {
         <Route path='/underConstruction' element={<UnderConstruction/>}/>
         <Route path='/' element={<HomeScreen/>}/>
         <Route path='/signIn' element={<SignIn/>}/>
+        <Route path='/signUp' element={<SignUp/>}/>
         <Route path='/resetPassword' element={<Reset/>}/>
         <Route path='/loading' element={<Loading/>}/>
         <Route path='/forgotPassword' element={<ForgotPassword/>}/>
-        {/* <Route path='/events' element={<Event/>}/> */}
       </Routes>
     </div>
   </>

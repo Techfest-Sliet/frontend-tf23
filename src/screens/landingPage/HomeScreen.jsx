@@ -57,7 +57,7 @@ const HomeScreen = () => {
             style={{ marginTop: 10, color: "white", marginBottom: 1 }}
           >
             <Button variant="contained" id="signUpButton" sx={{ mr: 2, mt: 3 }}>
-              Sign Up Now
+              <Link to={"/signUp"}>Sign Up</Link>
             </Button>
             <Button
               variant="contained"
