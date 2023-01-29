@@ -3,6 +3,7 @@ import "./Navbar.css";
 import logo from './logo-tp.png';
 import {Link} from 'react-router-dom';
 
+
 export const Navbar = () => {
   return (
         <navbar>
@@ -11,6 +12,7 @@ export const Navbar = () => {
                 <Link to="/">
                     <img src = {logo} alt = "No Internet"/>
                 </Link>
+
             </div>
 
             <div className="navigation">
@@ -52,4 +54,3 @@ export const Navbar = () => {
         
   )
 }
-

@@ -51,6 +51,7 @@ navbar{
     margin: 1.5em 0 0;
 }
 
+
 .navbar-items li{
     list-style-type: none;
 }
@@ -235,9 +236,11 @@ navbar{
 .domains {
     position: relative;
 }
+
 .aboutUs {
     position: relative;
 }
+
 
 .dropdown {
     background-color: #11220D;
@@ -265,6 +268,7 @@ navbar{
     display: block;
 }
 
+
 .aboutUs:hover .dropdown {
     display: block;
 }
@@ -275,4 +279,3 @@ navbar{
     text-align: center;
     /* font-size: 20px; */
 }
-

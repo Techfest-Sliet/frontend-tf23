@@ -53,7 +53,6 @@ function App() {
       </Routes>
     </div>
   </>
-
   );
 }
 
