@@ -9,12 +9,12 @@
     padding-bottom: 30px;
     font-size: 50px;
     text-align: center;
-    width: auto;
+    width: 90vw;
     align-items: center;
     justify-content: center;
   }
   .domainRing {
-    justify-content: flex-end;
+    /* justify-content: flex-end; */
     margin-top: 25px;
     margin-bottom: 25px;
     width: auto;
@@ -54,7 +54,7 @@
     word-break: break-word;
     text-align: center;
   }
-  .innerRing .flip-card-front {
+  .innerRing >.flip-card-front {
     height: 100%;
     width: 100%;
     position: relative;
