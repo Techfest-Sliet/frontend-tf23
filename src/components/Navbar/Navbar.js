@@ -20,7 +20,7 @@ export const Navbar = () => {
 
                 <ul className="navbar-items">
                     <li><Link to="/">Home</Link></li>
-                    <li><Link to="/underConstruction">Workshops</Link></li>
+                    <li><Link to="/workshops">Workshops</Link></li>
                     <li className='aboutUs'>
                         <Link to="/domains" className='dropdown__animation'>About <i className="arrow down">&#32;</i></Link>
                         <ul className='dropdown'>

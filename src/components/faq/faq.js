@@ -115,7 +115,7 @@ const data = [
     {
         id: 2,
         question: "When is techFEST'23?",
-        answer: "The techfest is scheduled to be held on 17th-18th March."
+        answer: "The techfest is scheduled to be held on end of March."
     },
     {
         id: 3,

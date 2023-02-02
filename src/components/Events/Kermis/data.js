@@ -1,38 +1,69 @@
 export const datasOfEvent = [
     {
-        nameOfEvent: "Name of the event",
-        desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,",
+        nameOfEvent: "COD Mobile",
+        desc: "Shoot yourself up for a fascinating gameplay. Call yourself off for our event COD Mobile and win amazing cash prizes.",
         register: (<span><a href='https://www.google.com/' style={{ textDecoration: "none", color: "white" }}>Register Now</a></span>),
         schedule: (<span><a href='https://www.google.com/' style={{ textDecoration: "none", color: "white" }}>Problem Statement</a></span>),
-        prizeMoney: "₹ 50,000",
+        prizeMoney: "₹ 5,000",
         dateBefore: "11/03",
-        nameOfEventCoordinator: "Event Coordinator",
-        phoneNo: (<span><a href="tel:1234567890" style={{ textDecoration: "none", color: "white" }}> 1234567890 </a></span>),
-        nameOfEventCoordinator2: "Event Coordinator",
-        phoneNo2: (<span><a href="tel:1234567890" style={{ textDecoration: "none", color: "white" }}> 1234567890 </a></span>)
+        coor: [
+            {
+                img: require('../../dummy.jpg'),
+                nameOfEventCoordinator: "Subham Kumar",
+                phoneNo: (<span><a href="tel:7209161853" style={{ textDecoration: "none", color: "white" }}> 7209161853 </a></span>),
+                mail: (<span><a href='mailto:2040007@sliet.ac.in' style={{ textDecoration: "none", color: "white" }}> 2040007@sliet.ac.in
+                </a></span>)
+            }
+        ]
     },
     {
-        nameOfEvent: "Name of the event2",
-        desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. kuch vi Ipsum has been the industry's standard dummy text ever since the 1500s,",
+        nameOfEvent: "Valorant Campus Stars",
+        desc: "Analyze your swift and tactical abilities and see where you stand in par of opponents. Come up valiant and participate in our event Valorant to avail worthy cash prizes.",
         register: (<span><a href='https://www.wikipedia.com/' style={{ textDecoration: "none", color: "white" }}>Register Now</a></span>),
         schedule: (<span><a href='https://www.google.com/' style={{ textDecoration: "none", color: "white" }}>Problem Statement</a></span>),
-        prizeMoney: "₹ 40,000",
+        prizeMoney: "₹ 4,000",
         dateBefore: "15/03",
-        nameOfEventCoordinator: "Event Coordinator1",
-        phoneNo: (<span><a href="tel:1234567890" style={{ textDecoration: "none", color: "white" }}> 1234567890 </a></span>),
-        nameOfEventCoordinator2: "Event Coordinator2",
-        phoneNo2: (<span><a href="tel:1234567890" style={{ textDecoration: "none", color: "white" }}> 1234567890 </a></span>)
+        coor: [
+            {
+                img: require('../../dummy.jpg'),
+                nameOfEventCoordinator: "Girish Verma",
+                phoneNo: (<span><a href="tel:9971032958" style={{ textDecoration: "none", color: "white" }}> 9971032958 </a></span>),
+                mail: (<span><a href='mailto:2130757@sliet.ac.in' style={{ textDecoration: "none", color: "white" }}> 2130757@sliet.ac.in
+                </a></span>)
+            }
+        ]
     },
     {
-        nameOfEvent: "Name of the event3",
-        desc: "Lorem Ipsum is fghfdfgfg dummy text of the printing and typesetting industry. kuch vi Ipsum has been the industry's standard dummy text ever since the 1500s,",
+        nameOfEvent: "Satranj ka Shahenshah",
+        desc: "Amidst the black and white squares, get yourself some colourful fun by participating in our event Satranj ke Shershah and avail worthy prizes.",
         register: (<span><a href='https://www.google.com/' style={{ textDecoration: "none", color: "white" }}>Register Now</a></span>),
         schedule: (<span><a href='https://www.google.com/' style={{ textDecoration: "none", color: "white" }}>Problem Statement</a></span>),
-        prizeMoney: "₹ 80,000",
+        prizeMoney: "₹ 8,000",
         dateBefore: "1/03",
-        nameOfEventCoordinator: "Event Coordinator1",
-        phoneNo: (<span><a href="tel:1234567890" style={{ textDecoration: "none", color: "white" }}> 1234567890 </a></span>),
-        nameOfEventCoordinator2: "Event Coordinator2",
-        phoneNo2: (<span><a href="tel:1234567890" style={{ textDecoration: "none", color: "white" }}> 1234567890 </a></span>)
+        coor: [
+            {
+                img: require('../../dummy.jpg'),
+                nameOfEventCoordinator: "Aditya Mall",
+                phoneNo: (<span><a href="tel:8840961497" style={{ textDecoration: "none", color: "white" }}> 8840961497 </a></span>),
+                mail: (<span><a href='mailto:2130725@sliet.ac.in' style={{ textDecoration: "none", color: "white" }}> 2130725@sliet.ac.in
+                </a></span>)
+            }
+        ]
+    }
+]
+
+export const datasOfEventCoordinator = [
+    {
+        photoOfFaculty: require('../../dummy.jpg'),
+        nameOfFaculty: "Name of Faculty",
+        facultyAdvisor: "Faculty Advisor",
+        domainCoordinator: [
+            {
+                photoOfdomainCoordinator: require('../../dummy.jpg'),
+                nameOfDomainCoordinator: "Aditya Mall",
+                phoneNoOfDomainCoordinator: (<span><a href="tel:8840961497" style={{ textDecoration: "none", color: "white" }}> 8840961497 </a></span>),
+                mailOfDomainCoordinator: (<span><a href='mailto: 2130725@sliet.ac.in' > 2130725@sliet.ac.in</a></span>)
+            }
+        ]
     }
 ]

@@ -1,38 +1,75 @@
 export const datasOfEvent = [
     {
-        nameOfEvent: "Name of the event",
+        nameOfEvent: "Hydraload",
         desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,",
         register: (<span><a href='https://www.google.com/' style={{ textDecoration: "none", color: "white" }}>Register Now</a></span>),
         schedule: (<span><a href='https://www.google.com/' style={{ textDecoration: "none", color: "white" }}>Problem Statement</a></span>),
-        prizeMoney: "₹ 50,000",
+        prizeMoney: "₹ 5,000",
         dateBefore: "11/03",
-        nameOfEventCoordinator: "Event Coordinator",
-        phoneNo: (<span><a href="tel:1234567890" style={{ textDecoration: "none", color: "white" }}> 1234567890 </a></span>),
-        nameOfEventCoordinator2: "Event Coordinator",
-        phoneNo2: (<span><a href="tel:1234567890" style={{ textDecoration: "none", color: "white" }}> 1234567890 </a></span>)
+        coor: [{
+        img: require('../../dummy.jpg'),
+        nameOfEventCoordinator: "Kishan Kashyap",
+        phoneNo: (<span><a href="tel:9473064576" style={{ textDecoration: "none", color: "white" }}> 9473064576 </a></span>),
+        mail: (<span><a href='mailto:kishan551kashyap@gmail.com' style={{ textDecoration: "none", color: "white" }}> kishan551kashyap@gmail.com
+        </a></span>)}]
     },
     {
-        nameOfEvent: "Name of the event2",
+        nameOfEvent: "Trussload",
         desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. kuch vi Ipsum has been the industry's standard dummy text ever since the 1500s,",
         register: (<span><a href='https://www.wikipedia.com/' style={{ textDecoration: "none", color: "white" }}>Register Now</a></span>),
         schedule: (<span><a href='https://www.google.com/' style={{ textDecoration: "none", color: "white" }}>Problem Statement</a></span>),
-        prizeMoney: "₹ 40,000",
+        prizeMoney: "₹ 4,000",
         dateBefore: "15/03",
-        nameOfEventCoordinator: "Event Coordinator1",
-        phoneNo: (<span><a href="tel:1234567890" style={{ textDecoration: "none", color: "white" }}> 1234567890 </a></span>),
-        nameOfEventCoordinator2: "Event Coordinator2",
-        phoneNo2: (<span><a href="tel:1234567890" style={{ textDecoration: "none", color: "white" }}> 1234567890 </a></span>)
+        coor: [{
+        img: require('../../dummy.jpg'),
+        nameOfEventCoordinator: "Utkarsh Kumar Mishra",
+        phoneNo: (<span><a href="tel:9315533675" style={{ textDecoration: "none", color: "white" }}> 9315533675 </a></span>),
+        mail: (<span><a href='mailto:2236024@sliet.ac.in' style={{ textDecoration: "none", color: "white" }}> 2236024@sliet.ac.in
+        </a></span>)}]
     },
     {
-        nameOfEvent: "Name of the event3",
+        nameOfEvent: "Fabriquer",
         desc: "Lorem Ipsum is fghfdfgfg dummy text of the printing and typesetting industry. kuch vi Ipsum has been the industry's standard dummy text ever since the 1500s,",
         register: (<span><a href='https://www.google.com/' style={{ textDecoration: "none", color: "white" }}>Register Now</a></span>),
         schedule: (<span><a href='https://www.google.com/' style={{ textDecoration: "none", color: "white" }}>Problem Statement</a></span>),
-        prizeMoney: "₹ 80,000",
+        prizeMoney: "₹ 8,000",
         dateBefore: "1/03",
-        nameOfEventCoordinator: "Event Coordinator1",
-        phoneNo: (<span><a href="tel:1234567890" style={{ textDecoration: "none", color: "white" }}> 1234567890 </a></span>),
-        nameOfEventCoordinator2: "Event Coordinator2",
-        phoneNo2: (<span><a href="tel:1234567890" style={{ textDecoration: "none", color: "white" }}> 1234567890 </a></span>)
+        coor: [{
+        img: require('../../dummy.jpg'),
+        nameOfEventCoordinator: "Sazid Ahmad",
+        phoneNo: (<span><a href="tel:7979766525" style={{ textDecoration: "none", color: "white" }}> 7979766525 </a></span>),
+        mail: (<span><a href='mailto:sazidahmadsliet@gmail.com' style={{ textDecoration: "none", color: "white" }}> sazidahmadsliet@gmail.com
+        </a></span>)}]
+    },
+    {
+        nameOfEvent: "Designare",
+        desc: "Lorem Ipsum is fghfdfgfg dummy text of the printing and typesetting industry. kuch vi Ipsum has been the industry's standard dummy text ever since the 1500s,",
+        register: (<span><a href='https://www.google.com/' style={{ textDecoration: "none", color: "white" }}>Register Now</a></span>),
+        schedule: (<span><a href='https://www.google.com/' style={{ textDecoration: "none", color: "white" }}>Problem Statement</a></span>),
+        prizeMoney: "₹ 8,000",
+        dateBefore: "1/03",
+        coor: [{
+        img: require('../../dummy.jpg'),
+        nameOfEventCoordinator: "Ram kumar",
+        phoneNo: (<span><a href="tel:6203884073 " style={{ textDecoration: "none", color: "white" }}> 6203884073  </a></span>),
+        mail: (<span><a href='mailto:2040367@sliet.ac.in' style={{ textDecoration: "none", color: "white" }}> 2040367@sliet.ac.in
+        </a></span>)}]
+    }
+]
+
+
+export const datasOfEventCoordinator = [
+    {
+        photoOfFaculty: require('../../dummy.jpg'),
+        nameOfFaculty: "Name of Faculty",
+        facultyAdvisor: "Faculty Advisor",
+        domainCoordinator: [
+            {
+                photoOfdomainCoordinator: require('../../dummy.jpg'),
+                nameOfDomainCoordinator: "Shahab Mahfooz",
+                phoneNoOfDomainCoordinator: (<span><a href="tel:9536043431" style={{ textDecoration: "none", color: "white" }}> 9536043431 </a></span>),
+                mailOfDomainCoordinator: (<span><a href='mailto: 2130311@sliet.ac.in' > 2130311@sliet.ac.in</a></span>)
+            }
+        ]
     }
 ]

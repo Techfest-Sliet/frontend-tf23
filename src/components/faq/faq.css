@@ -1,6 +1,6 @@
 .wholePage {
     position: relative;
-    width: 100vw;
+    width: 100%;
     margin: 0;
     padding: 0;
     height: auto;
@@ -151,7 +151,7 @@
 .imgDiv {
     background-image: linear-gradient(to top right, rgb(0, 72, 0), rgb(0, 20, 0), black);
     height: auto;
-    width: 100vw;
+    width: 100%;
 }
 
 .contactUsImg {

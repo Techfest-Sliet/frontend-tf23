@@ -21,7 +21,7 @@
 
 .eventContainer {
     height: 90vh;
-    width: 100vw;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -43,7 +43,7 @@
 
 .techFestTCont {
     position: absolute;
-    margin-top: 13vw;
+    margin-top: 11vw;
 }
 
 .techFestT {
@@ -57,7 +57,7 @@
     font-size: 10vw;
     font-weight: bolder;
     margin-bottom: 0px;
-    letter-spacing: -6px;
+    letter-spacing: -4px;
 }
 
 .whiteLine {
@@ -77,6 +77,7 @@
     color: white;
     border: 1px solid grey;
     font-size: large;
+    margin-bottom: 5px;
     cursor: pointer;
     z-index: 1;
 }
@@ -88,17 +89,22 @@
     text-align: center;
 }
 
+.events {
+    width: 100%;
+    background: linear-gradient(to left, rgb(0, 45, 0), rgb(0, 20, 0), black);
+}
+
 .evnts {
     color: white;
     font-size: 4vw;
-    position: absolute;
-    margin: 0 8vw;
+    text-align: left;
+    margin-left: 10vw;
 }
 
 .eventsBackgroundBottom {
     background: linear-gradient(to left, rgb(0, 45, 0), rgb(0, 20, 0), black);
     height: auto;
-    width: 100vw;
+    width: 100%;
     display: flex;
     /* align-items: center; */
     justify-content: center;
@@ -113,7 +119,7 @@
     background-color: rgb(0, 35, 0);
     /* background-color: rgb(53, 67, 48); */
     /* opacity: 0.5; */
-    padding: 35px;
+    padding: 40px;
     position: relative;
     /* margin: 20px; */
 }
@@ -124,14 +130,23 @@
     color: white;
 }
 
-.LeftOfBox h2 {
-    margin: 0px;
+.evntDesc {
+    display: flex;
+    /* justify-content: center; 
+    align-items: flex-start; */
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.LeftOfBox h1{
+    margin-bottom: 10px !important;
 }
 
 .RightOfBox {
     width: 40%;
     float: right;
     bottom: 0px;
+    display: flex;
     /* height: 43vh; */
     color: white;
     /* position: absolute; */
@@ -146,13 +161,20 @@
     /* flex-direction: row; */
 }
 
+.boxImg {
+    height: 40%;
+    width: 40%;
+    border-radius: 50%;
+}
+
 #registerNow {
     padding: 8px 20px;
     background: linear-gradient(to right, rgb(47, 226, 47), rgb(8, 81, 8));
     border-radius: 10px;
     color: white;
-    margin: 0 20px 10px 0;
+    margin: 15px 20px 7px 0 !important;
     float: left;
+    text-align: left;
     cursor: pointer;
     border: 1px solid rgb(47, 226, 47);
 }
@@ -162,7 +184,8 @@
     background: linear-gradient(to right, rgb(90, 86, 86), rgb(30, 27, 27));
     border-radius: 10px;
     color: white;
-    margin: 0 25px 10px 0;
+    float: left;
+    margin: 15px 25px 7px 0;
     cursor: pointer;
     border: 1px solid rgb(90, 86, 86);
 }
@@ -170,7 +193,7 @@
 .bg_bottom {
     background: linear-gradient(rgb(0, 35, 0), rgb(0, 15, 0), black);
     height: auto;
-    width: 100vw;
+    width: 100%;
 }
 
 .fac_Container {
@@ -187,11 +210,20 @@
     border-radius: 50%;
 }
 
+.dummyImg2 {
+    margin: 3vw 0 0 0;
+    height: 40%;
+    width: 40%;
+    border-radius: 50%;
+}
+
 .dmnCordintor {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 30vw;
+    flex-direction: column;
+    width: 50vw !important;
+    height: auto;
     flex-direction: row;
     color: white;
     margin: 3vw 0 6vw 0;
@@ -217,14 +249,21 @@
     }
 
     .evnts {
-        margin: 2vw 8vw;
+        font-size: 7vw;
+    }
+    .boxImg {
+        width: 70%;
     }
     .dummyImg {
         height: 20%;
         width: 20%;
     }
+    .dummyImg2 {
+        height: 44%;
+        width: 44%;
+    }
     .dmnCordintor {
-        width: 70vw;
+        width: 70vw !important;
     }
 }
 
@@ -271,8 +310,12 @@
         width: 25%;
         margin: 4vh 0 1vh 0;
     }
+    .dummyImg2 {
+        height: 50%;
+        width: 50%;
+    }
     .dmnCordintor {
-        width: 80vw;
+        width: 75vw !important;
     }
 }
 
@@ -300,19 +343,14 @@
         width: 60vw;
     }
 
-    .evnts {
-        font-size: 7vw;
-        margin: 0 8vw;
-    }
-
     #exploreEvents {
         font-size: medium;
     }
 
     .eventBox {
         margin: 2rem 1rem 3rem 1rem;
-        padding: 25px 25px 50px 25px;
-        width: 80%;
+        padding: 25px 25px 25vw 25px !important;
+        width: 85%;
         height: auto;
     }
 
@@ -321,18 +359,26 @@
         float: none;
     }
 
+    .evntDesc p {
+        font-size: 14px;
+    }
+
     .LeftOfBox {
         width: 100%;
         float: none;
     }
 
     .objOfBox {
-        font-size: 2.5vw;
+        font-size: 2.6vw !important;
         bottom: auto;
         text-align: center;
     }
+    .boxImg {
+        height: 30%;
+        width: 30%;
+    }
     .dmnCordintor {
-        width: 95vw;
+        width: 85vw !important;
         margin: 3vh 0 7vh 0;
     }
 }
@@ -340,6 +386,7 @@
 @media screen and (max-width: 550px) {
     .insideCntiner p {
         width: 75vw;
+        font-size: 12px !important;
     }
 
     #exploreEvents {
@@ -357,7 +404,16 @@
     .eventContainer {
         height: 45vh;
     }
+    .objOfBox {
+        font-size: 2.7vw !important;
+    }
 
+}
+
+@media screen and (max-width: 456px) {
+    #viewSchedule {
+        margin-top: 8px;
+    }
 }
 
 @media screen and (max-width: 386px) {
@@ -368,6 +424,6 @@
     }
 
     #registerNow {
-        margin: 0 25px 12px 0;
+        margin: 7px 25px 0 0;
     }
 }
