@@ -18,7 +18,9 @@ const Mechanica = () => {
                         <h1> MECHANICA </h1>
                         <span className='whiteLine'></span>
                         <button id='exploreEvents'>Explore Events</button>
-                        <p>This domain welcomes all mechanical engineers to challenge their skills in CAD/CAM designing, details about fabrication, knowledge about trusses and fluid mechanics.</p>
+                        <p>From a system's design to its operations, Mechanica domain covers it all.
+                            Make yourself a part of domain Mechanica and witness captivating glimpses of mechanical engineering in battle.
+                        </p>
 
                     </div>
                 </div>

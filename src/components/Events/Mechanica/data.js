@@ -1,10 +1,10 @@
 export const datasOfEvent = [
     {
         nameOfEvent: "Hydraload",
-        desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,",
+        desc: "Issue with mass manufacturing operations or steering of cars? Well, A Hydraulic Arm can resolve this. This task requires you to design a Hydraulic Arm capable of performing various operations. Participate in our event and win handsome cash prizes.",
         register: (<span><a href='https://www.google.com/' style={{ textDecoration: "none", color: "white" }}>Register Now</a></span>),
         schedule: (<span><a href='https://www.google.com/' style={{ textDecoration: "none", color: "white" }}>Problem Statement</a></span>),
-        prizeMoney: "₹ 5,000",
+        prizeMoney: "₹ 14,000",
         dateBefore: "11/03",
         coor: [{
         img: require('../../dummy.jpg'),
@@ -15,10 +15,10 @@ export const datasOfEvent = [
     },
     {
         nameOfEvent: "Trussload",
-        desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. kuch vi Ipsum has been the industry's standard dummy text ever since the 1500s,",
+        desc: "Less Input, More output is what defines Smart Work. Isn't it? Then why not design a bridge that follows the same principle. Participate in our event to avail worth cash prizes.",
         register: (<span><a href='https://www.wikipedia.com/' style={{ textDecoration: "none", color: "white" }}>Register Now</a></span>),
         schedule: (<span><a href='https://www.google.com/' style={{ textDecoration: "none", color: "white" }}>Problem Statement</a></span>),
-        prizeMoney: "₹ 4,000",
+        prizeMoney: "₹ 14,000",
         dateBefore: "15/03",
         coor: [{
         img: require('../../dummy.jpg'),
@@ -29,7 +29,7 @@ export const datasOfEvent = [
     },
     {
         nameOfEvent: "Fabriquer",
-        desc: "Lorem Ipsum is fghfdfgfg dummy text of the printing and typesetting industry. kuch vi Ipsum has been the industry's standard dummy text ever since the 1500s,",
+        desc: "The best way to test your knowledge is to implement it practically. Drill through your brains and weld your knowledge. This event demands from you to fabricate a machine making use of your workshop knowledge. Participate in our event and win worth cash prizes.",
         register: (<span><a href='https://www.google.com/' style={{ textDecoration: "none", color: "white" }}>Register Now</a></span>),
         schedule: (<span><a href='https://www.google.com/' style={{ textDecoration: "none", color: "white" }}>Problem Statement</a></span>),
         prizeMoney: "₹ 8,000",
@@ -43,10 +43,10 @@ export const datasOfEvent = [
     },
     {
         nameOfEvent: "Designare",
-        desc: "Lorem Ipsum is fghfdfgfg dummy text of the printing and typesetting industry. kuch vi Ipsum has been the industry's standard dummy text ever since the 1500s,",
+        desc: "A picture is worth a thousand words. And so does the design. A efficient design of any system requires analytical thinking and a CAD provides a wholesome idea of it. Participate in our event Designare and win worth cash prizes.",
         register: (<span><a href='https://www.google.com/' style={{ textDecoration: "none", color: "white" }}>Register Now</a></span>),
         schedule: (<span><a href='https://www.google.com/' style={{ textDecoration: "none", color: "white" }}>Problem Statement</a></span>),
-        prizeMoney: "₹ 8,000",
+        prizeMoney: "₹ 9,000",
         dateBefore: "1/03",
         coor: [{
         img: require('../../dummy.jpg'),

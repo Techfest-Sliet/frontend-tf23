@@ -4,7 +4,7 @@ export const datasOfEvent = [
         desc: "Shoot yourself up for a fascinating gameplay. Call yourself off for our event COD Mobile and win amazing cash prizes.",
         register: (<span><a href='https://www.google.com/' style={{ textDecoration: "none", color: "white" }}>Register Now</a></span>),
         schedule: (<span><a href='https://www.google.com/' style={{ textDecoration: "none", color: "white" }}>Problem Statement</a></span>),
-        prizeMoney: "₹ 5,000",
+        prizeMoney: "₹ 10,000",
         dateBefore: "11/03",
         coor: [
             {
@@ -21,7 +21,7 @@ export const datasOfEvent = [
         desc: "Analyze your swift and tactical abilities and see where you stand in par of opponents. Come up valiant and participate in our event Valorant to avail worthy cash prizes.",
         register: (<span><a href='https://www.wikipedia.com/' style={{ textDecoration: "none", color: "white" }}>Register Now</a></span>),
         schedule: (<span><a href='https://www.google.com/' style={{ textDecoration: "none", color: "white" }}>Problem Statement</a></span>),
-        prizeMoney: "₹ 4,000",
+        prizeMoney: "₹ 8,000",
         dateBefore: "15/03",
         coor: [
             {

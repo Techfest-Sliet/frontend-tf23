@@ -4,7 +4,7 @@ export const datasOfEvent = [
         desc: "A system sensing and responding to stimuli around it just as a human body does. Isn't it fascinating. Here's the opportunity to pitch your brain to design a sensor system. Participate in our event and win worth cash prizes.",
         register: (<span><a href='https://www.google.com/' style={{ textDecoration: "none", color: "white" }}>Register Now</a></span>),
         schedule: (<span><a href='https://www.google.com/' style={{ textDecoration: "none", color: "white" }}>Problem Statement</a></span>),
-        prizeMoney: "₹ 5,000",
+        prizeMoney: "₹ 15,000",
         dateBefore: "11/03",
         coor: [
             {
@@ -21,7 +21,7 @@ export const datasOfEvent = [
         desc: "What's better than finding a substitute that makes the work more efficient. This task requires you to design a assisted circuit with sensors for the task specified. Imagine with your Arduino knowledge and participate in our event to avail worthy cash prizes.",
         register: (<span><a href='https://www.wikipedia.com/' style={{ textDecoration: "none", color: "white" }}>Register Now</a></span>),
         schedule: (<span><a href='https://www.google.com/' style={{ textDecoration: "none", color: "white" }}>Problem Statement</a></span>),
-        prizeMoney: "₹ 4,000",
+        prizeMoney: "₹ 14,000",
         dateBefore: "15/03",
         coor: [
             {
@@ -37,7 +37,7 @@ export const datasOfEvent = [
         desc: "Solar Energy, though renewable, do need maintenance in its devices to remain conventional. This event demands to present your idea of automated cleaner for solar panel in the form of models. Participate in our event and get awarded with handsome cash prizes.",
         register: (<span><a href='https://www.google.com/' style={{ textDecoration: "none", color: "white" }}>Register Now</a></span>),
         schedule: (<span><a href='https://www.google.com/' style={{ textDecoration: "none", color: "white" }}>Problem Statement</a></span>),
-        prizeMoney: "₹ 5,000",
+        prizeMoney: "₹ 15,000",
         dateBefore: "1/03",
         coor: [
             {
@@ -54,7 +54,7 @@ export const datasOfEvent = [
         desc: "Give someone a vision and light up their whole world. Taking in consideration number of people who lose their sight, this event seeks ideas from the participants to design. Ultrasonic Blind Walking Stick. Participate in this event and avail handsome cash prizes.",
         register: (<span><a href='https://www.google.com/' style={{ textDecoration: "none", color: "white" }}>Register Now</a></span>),
         schedule: (<span><a href='https://www.google.com/' style={{ textDecoration: "none", color: "white" }}>Problem Statement</a></span>),
-        prizeMoney: "₹ 6,000",
+        prizeMoney: "₹ 10,000",
         dateBefore: "1/03",
         coor: [
             {

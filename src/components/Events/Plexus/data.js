@@ -4,7 +4,7 @@ export const datasOfEvent = [
         desc: "It's time to get dynamic with your Data Science knowledge. Use your programming knowledge and combine it with statistical knowledge to get insights from data. Participate in our event Data Dynamic and win worth cash prizes.",
         register: (<span><a href='https://www.wikipedia.com/' style={{ textDecoration: "none", color: "white" }}>Register Now</a></span>),
         schedule: (<span><a href='https://www.google.com/' style={{ textDecoration: "none", color: "white" }}>Problem Statement</a></span>),
-        prizeMoney: "₹ 4,000",
+        prizeMoney: "₹ 12,000",
         dateBefore: "15/03",
         coor: [
             {
@@ -27,11 +27,11 @@ export const datasOfEvent = [
         desc: "Though Cheetah is the fastest, horse runs no slow. Here's to the event creating a healthy competition between best brains yet differing in speed.Set your mettle high and participate in our event to win handsome cash prizes",
         register: (<span><a href='https://www.wikipedia.com/' style={{ textDecoration: "none", color: "white" }}>Register Now</a></span>),
         schedule: (<span><a href='https://www.google.com/' style={{ textDecoration: "none", color: "white" }}>Problem Statement</a></span>),
-        prizeMoney: "₹ 4,000",
+        prizeMoney: "₹ 9,000",
         dateBefore: "15/03",
         coor: [{
             img: require('../../dummy.jpg'),
-            nameOfEventCoordinator: "prakash kumar",
+            nameOfEventCoordinator: "Prakash kumar",
             phoneNo: (<span><a href="tel:7462041822" style={{ textDecoration: "none", color: "white" }}> 7462041822 </a></span>),
             mail: (<span><a href='mailto:2130483@sliet.ac.in' style={{ textDecoration: "none", color: "white" }}> 2130483@sliet.ac.in
             </a></span>)
@@ -49,7 +49,7 @@ export const datasOfEvent = [
         desc: "Finding difficulty in accessing the information of your school's site? Present your own interface by creating a website all from scratch. Participate in our event Pixel Wizard and win worth cash prizes.",
         register: (<span><a href='https://www.wikipedia.com/' style={{ textDecoration: "none", color: "white" }}>Register Now</a></span>),
         schedule: (<span><a href='https://www.google.com/' style={{ textDecoration: "none", color: "white" }}>Problem Statement</a></span>),
-        prizeMoney: "₹ 4,000",
+        prizeMoney: "₹ 14,000",
         dateBefore: "15/03",
         coor: [{
             img: require('../../dummy.jpg'),
@@ -70,7 +70,7 @@ export const datasOfEvent = [
         desc: "Heard Competitive Programmers cracking Top-notch Companies. Here's the secret. They've been analyzing themselves thoroughly.Participate in our event Codesprint and push yourself to get ahead in your programming skills.",
         register: (<span><a href='https://www.wikipedia.com/' style={{ textDecoration: "none", color: "white" }}>Register Now</a></span>),
         schedule: (<span><a href='https://www.google.com/' style={{ textDecoration: "none", color: "white" }}>Problem Statement</a></span>),
-        prizeMoney: "₹ 4,000",
+        prizeMoney: "₹ 12,000",
         dateBefore: "15/03",
         coor: [{
             img: require('../../dummy.jpg'),
