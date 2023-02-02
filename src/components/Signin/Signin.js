@@ -12,32 +12,52 @@ const Signin = () => {
   const [password, setPassword] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [errorsMade, setErrorsMade] = useState();
+  const [fieldErr, setFieldErr] = useState(null);
+  const [mailErr, setMailErr] = useState(null);
+  const [passwordErr, setPasswordErr] = useState(null);
   const navigate = useNavigate();
 
   const PostData = async (e) => {
     e.preventDefault();
+    if (
+      email.trim().length === 0 ||
+      password.trim().length === 0
+    ) {
+      setFieldErr("Field should not be empty");
+      return;
+    }
+    if (!email.trim().includes("@")) {
+      setMailErr("Invalid mail!");
+      return;
+    }
     // console.log(user);
     const user = {
       email: email,
       password: password,
     };
     setIsLoading(true);
-    console.log(user);
+    // console.log(user);
     await axios
     .post(`${localUrl}/auth/signIn`, user)
     .then((result) => {
+      const res = (result);
       setIsLoading(false);
-      if ( result.status !== 200 ||
-        (result.status !== 201 && result.data.isError) ) {
-          setErrorsMade({
-            title: result.data.title,
-            message: result.data.message,
-          });
-          setTimeout(() => {
-            navigate("/signIn");
-          }, 3000);
-          return;
-        }
+      alert(JSON.stringify(res))
+      if( res.status === 204) {
+        setMailErr(res.data.message);
+        setTimeout(() => {
+          navigate("/signUp");
+        }, 3000);
+      } else if ( res.status === 208) {
+        setPasswordErr(res.data.message);
+        return;
+      } else if( res.status ===200 ) {
+        setTimeout(() => {
+          navigate('/');
+        }, 3000)
+      } else {
+        setErrorsMade(res.data.message);
+      }
       })
       .catch((err) => {
         setIsLoading(false);
@@ -49,6 +69,7 @@ const Signin = () => {
 
   return (
     <>
+    {errorsMade && <p style={{ color: "red" }}>{errorsMade}</p>}
       <div className={styles.signin__content}>
         <div>
           <img src={logo} alt="techFest'23" className={styles.signin__logo} />
@@ -62,7 +83,12 @@ const Signin = () => {
           >
             <h1 className={styles.signin__title}>Welcome Back!</h1>
             <p className={styles.signin__text}>Sign in to continue</p>
+            {fieldErr && <p style={{ color: "red" }}>
+              {fieldErr}
+            </p>}
+              {password && <p style={{ color: "red" }}>{passwordErr}</p>}
             <label htmlFor="email" className={styles.signin__label}>
+            {mailErr && <p style={{ color: "red" }}>{mailErr}</p>}
               E-mail
             </label>
             <input
@@ -85,17 +111,19 @@ const Signin = () => {
               type="password"
               required
             />
-
+            <div className={styles.signin__div}>
             <button className={styles.signin__button} value="signIn" type="button" onClick={PostData} disabled={isLoading}>
               Sign In
             </button>
+            <Link to="/forgotPassword">Forgot Password?</Link>
+            </div>
             {/* </div> */}
           </form>
           <p className={styles.signin__text}>
-            Already have an account?{" "}
+            Don't have an account?
             <Link to={"/signUp"}>
               <span className={styles.signin__link}>
-                Sign Up
+                 Sign Up
               </span>
             </Link>
           </p>

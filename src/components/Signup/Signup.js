@@ -1,9 +1,8 @@
 import { useState } from "react";
-import styles from './Signup.module.css'
+import styles from "./Signup.module.css";
 import axios from "axios";
 import logo from "../../images/techFEST '23.webp";
 import { localUrl } from "../../API/api";
-import ErrorModel from "../UI/ErrorModel/ErrorModel";
 import { Link, useNavigate } from "react-router-dom";
 // import vectorLogo from "../../images/Vector-Logo.png";
 
@@ -12,11 +11,14 @@ const Signup = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [cPassword, setCPassword] = useState("");
-  const [phone, setPhone] = useState("");
-  const [course, setCourse] = useState("0");
+  // const [phone, setPhone] = useState("");
+  // const [course, setCourse] = useState("0");
   const [confirm_err, setConfirmErr] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
-  const [errorsMade, setErrorsMade] = useState();
+  const [errorsMade, setErrorsMade] = useState(null);
+  const [fieldErr, setFieldErr] = useState(null);
+  const [mailErr, setMailErr] = useState(null);
+  const [passwordErr, setPasswordErr] = useState(null);
   const navigate = useNavigate();
 
   const handleConfirm = (value) => {
@@ -29,40 +31,28 @@ const Signup = () => {
     }
     return false;
   };
+
   const PostData = async (e) => {
     e.preventDefault();
-    // console.log(user);
     if (
       email.trim().length === 0 ||
       password.trim().length === 0 ||
       name.trim().length === 0
     ) {
-      setErrorsMade({
-        title: "Error",
-        message: "Field should not be empty",
-      });
+      setFieldErr("Field should not be empty");
       return;
     }
     if (!email.trim().includes("@")) {
-      setErrorsMade({
-        title: "Error",
-        message: "Invalid mail!",
-      });
+      setMailErr("Invalid mail!");
       return;
     }
 
-    if (name.trim().length <= 3) {
-      setErrorsMade({
-        title: "Error",
-        message: "Name should be 5 character long!",
-      });
-      return;
-    }
+    // if (name.trim().length <= 3) {
+    //   setErrors("Name should be 5 character long!");
+    //   return;
+    // }
     if (password.length < 5) {
-      setErrorsMade({
-        title: "Error",
-        message: "Password should be more than five character long",
-      });
+      setPasswordErr("Atleast five characteres!");
       return;
     }
 
@@ -70,48 +60,52 @@ const Signup = () => {
       name: name,
       email: email,
       password: password,
-      phone: Number(phone),
-      course: course,
+      // phone: Number(phone),
+      // course: course,
     };
     setIsLoading(true);
     console.log(isLoading);
     console.log(user);
     await axios
-    .post(`${localUrl}/auth/signUp`, user)
-    .then((result) => {
-      setIsLoading(false);
-      if ( result.status !== 200 ||
-        (result.status !== 201 && result.data.isError) ) {
-          setErrorsMade({
-            title: result.data.title,
-            message: result.data.message,
-          });
+      .post(`${localUrl}/auth/signUp`, user)
+      .then((result) => {
+        const res = result;
+        setIsLoading(false);
+        if (res.status === 200) {
+          alert(
+            "User Registered, Please check your inbox/spam for verification!"
+          );
           setTimeout(() => {
             navigate("/signIn");
           }, 3000);
-          return;
-        }
+        } else if (res.status === 400 || res.status === 208) {
+          setErrorsMade(res.data.message);
+          setTimeout(() => {
+            navigate("/signUp");
+          }, 3000);
+        } 
+        
       })
       .catch((err) => {
         setIsLoading(false);
-        console.log(isLoading);
-        throw new Error(err.data.message);
+        console.log(err);
+        return;
       });
   };
 
-  const onErrorsMadeHandle = () => {
-    setErrorsMade(null);
-  };
+  // const onErrorsMadeHandle = () => {
+  //   setErrorsMade(null);
+  // };
 
   return (
     <>
-      {errorsMade && (
+      {/* {errorsMade && (
         <ErrorModel
           title={errorsMade.title}
           message={errorsMade.message}
           onErrorsClick={onErrorsMadeHandle}
         />
-      )}
+      )} */}
 
       <div className={styles.signup__content}>
         <div>
@@ -125,6 +119,9 @@ const Signup = () => {
             action=""
           >
             <h1 className={styles.signup__title}>Welcome!</h1>
+            <p style={{ color: "red" }}>
+              {fieldErr}
+            </p>
             <label htmlFor="name" className={styles.signup__label}>
               Name
             </label>
@@ -141,6 +138,8 @@ const Signup = () => {
             <label htmlFor="email" className={styles.signup__label}>
               E-mail
             </label>
+            <p style={{ color: "red" }}>{errorsMade}</p>
+            <p style={{ color: "red" }}>{mailErr}</p>
             <input
               type="email"
               id="email"
@@ -153,6 +152,7 @@ const Signup = () => {
             <label htmlFor="password" className={styles.signup__label}>
               Password
             </label>
+            <p style={{ color: "red" } }>{passwordErr}</p>
             <input
               placeholder="Enter your Password"
               value={password}
@@ -160,10 +160,10 @@ const Signup = () => {
               type="password"
               required
             />
-
             <label htmlFor="cpassword" className={styles.signup__label}>
               Confirm Password
             </label>
+            <p style={{ color: "red" }}>{confirm_err}</p>
             <input
               value={cPassword}
               placeholder="Please Confirm your password"
@@ -171,9 +171,14 @@ const Signup = () => {
               onChange={(e) => handleConfirm(e.target.value)}
               type="password"
             />
-            <p style={{ color: "red" }}>{confirm_err}</p>
-            
-            <button className={styles.signup__button} value="signUp" type="button" onClick={PostData} disabled={isLoading}>
+
+            <button
+              className={styles.signup__button}
+              value="signUp"
+              type="button"
+              onClick={PostData}
+              disabled={isLoading}
+            >
               Sign Up
             </button>
             {/* </div> */}
@@ -181,9 +186,7 @@ const Signup = () => {
           <p className={styles.signup__text}>
             Already have an account?{" "}
             <Link to={"/signIn"}>
-              <span className={styles.signin__link}>
-                Sign In
-              </span>
+              <span className={styles.signin__link}>Sign In</span>
             </Link>
           </p>
         </div>
@@ -192,7 +195,6 @@ const Signup = () => {
   );
 };
 export default Signup;
-
 
 // <label htmlFor="phoneNumber" className={styles.signup__label}>
 //               Phone
