@@ -5,10 +5,10 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Open Sans", sans-serif;
-  text-align: center;
 }
 
 .error404__body {
+  text-align: center;
   color: white;
   background: rgb(5, 79, 17);
 /*  Created with https://www.css-gradient.com */

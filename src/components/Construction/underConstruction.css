@@ -5,11 +5,11 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Open Sans", sans-serif;
-  text-align: center;
 }
 
 .underConstruction {
   color: white;
+  text-align: center;
   background: #082d0b;
   background: -webkit-radial-gradient(center, #082d0b, #010101);
   background: -moz-radial-gradient(center, #082d0b, #010101);
