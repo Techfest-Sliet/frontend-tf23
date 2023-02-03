@@ -2,8 +2,8 @@ export const datasOfEvent = [
     {
         nameOfEvent: "Drone +",
         desc: "Something that was used as far back as 1800s, the bot technology that finds its usage everywhere from defence to agriculture, from healthcare to surveillance. Here's to the amazing chance to bring out the Abraham Karem in you and design a drone.",
-        register: (<span><a target="_blank" href='https://www.google.com/' style={{ textDecoration: "none", color: "white" }}>Register Now</a></span>),
-        schedule: (<span><a target="_blank" href='...' style={{ textDecoration: "none", color: "white" }}>Problem Statement</a></span>),
+        register: (<span><a rel='noopener noreferrer' href='https://www.google.com/' style={{ textDecoration: "none", color: "white" }}>Register Now</a></span>),
+        schedule: (<span><a rel='noopener noreferrer' href='...' style={{ textDecoration: "none", color: "white" }}>Problem Statement</a></span>),
         prizeMoney: "₹ 30,000",
         dateBefore: "11/03",
         coor: [{
@@ -16,8 +16,8 @@ export const datasOfEvent = [
     {
         nameOfEvent: "Margdarshak",
         desc: "Suprised by how the seller packed it all way too fast? Well, he might have had a Line following robot. LFR, a robotic technology comprising of a bot following an arena. And what's even a thrill, you can design it too. Participate in our event Margdarshak and win worth cash prizes.",
-        register: (<span><a target="_blank" href='https://www.wikipedia.com/' style={{ textDecoration: "none", color: "white" }}>Register Now</a></span>),
-        schedule: (<span><a target="_blank" href='....' style={{ textDecoration: "none", color: "white" }}>Problem Statement</a></span>),
+        register: (<span><a rel='noopener noreferrer' href='https://www.wikipedia.com/' style={{ textDecoration: "none", color: "white" }}>Register Now</a></span>),
+        schedule: (<span><a rel='noopener noreferrer' href='....' style={{ textDecoration: "none", color: "white" }}>Problem Statement</a></span>),
         prizeMoney: "₹ 21,000",
         dateBefore: "15/03",
         coor: [{
@@ -30,8 +30,8 @@ export const datasOfEvent = [
     {
         nameOfEvent: "Reconnaissance",
         desc: "Birds can't swim and fishes can't fly, isn't it? There's nothing to worry about this for there's a robotic technology that covers it all. Yes, you got it right. Hovercraft, the amphibious bot. Participate in our event, design a hovercraft and avail worth cash prizes.",
-        register: (<span><a target="_blank" href='https://www.google.com/' style={{ textDecoration: "none", color: "white" }}>Register Now</a></span>),
-        schedule: (<span><a target="_blank" href='....' style={{ textDecoration: "none", color: "white" }}>Problem Statement</a></span>),
+        register: (<span><a rel='noopener noreferrer' href='https://www.google.com/' style={{ textDecoration: "none", color: "white" }}>Register Now</a></span>),
+        schedule: (<span><a rel='noopener noreferrer' href='....' style={{ textDecoration: "none", color: "white" }}>Problem Statement</a></span>),
         prizeMoney: "₹ 33,000",
         dateBefore: "1/03",
         coor: [{
@@ -44,8 +44,8 @@ export const datasOfEvent = [
     {
         nameOfEvent: "Robowar",
         desc: "Here's to the event that's second to none- ROBOWAR. The combat robotics technology that will make you familiar to the core of robotics, that will make you learn exclusively for it's not only about you, but the opponents' team as well. Participate in our event Robowar and win worth cash prizes.",
-        register: (<span><a target="_blank" href='https://www.google.com/' style={{ textDecoration: "none", color: "white" }}>Register Now</a></span>),
-        schedule: (<span><a target="_blank" href='....' style={{ textDecoration: "none", color: "white" }}>Problem Statement</a></span>),
+        register: (<span><a rel='noopener noreferrer' href='https://www.google.com/' style={{ textDecoration: "none", color: "white" }}>Register Now</a></span>),
+        schedule: (<span><a rel='noopener noreferrer' href='....' style={{ textDecoration: "none", color: "white" }}>Problem Statement</a></span>),
         prizeMoney: "₹ 45,000",
         dateBefore: "1/03",
         coor: [{
@@ -58,8 +58,8 @@ export const datasOfEvent = [
     {
         nameOfEvent: "Jarvis Cup",
         desc: "Goals in the field and bots in mind, An event of robosoccer for football rewind. Test your analytical and technical knowledge and examine your responses in pop up situations. Participate in our event to win worth cash prizes.",
-        register: (<span><a href='https://www.wikipedia.com/' style={{ textDecoration: "none", color: "white" }}>Register Now</a></span>),
-        schedule: (<span><a href='https://www.google.com/' style={{ textDecoration: "none", color: "white" }}>Problem Statement</a></span>),
+        register: (<span><a rel='noopener noreferrer' href='https://www.wikipedia.com/' style={{ textDecoration: "none", color: "white" }}>Register Now</a></span>),
+        schedule: (<span><a rel='noopener noreferrer' href='https://www.google.com/' style={{ textDecoration: "none", color: "white" }}>Problem Statement</a></span>),
         prizeMoney: "₹ 16,000",
         dateBefore: "15/03",
         coor: [{

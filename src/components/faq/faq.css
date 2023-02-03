@@ -112,6 +112,19 @@
     display: flex;
 }
 
+.first_Image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 30px 5px 30px 5px;
+    color: white;
+}
+
+.first_Image p{
+    text-align: center;
+}
+
 .faqs_domain_coordinator {
     display: flex;
     align-items: center;
@@ -173,10 +186,16 @@
     .faqs_domain_coordinator {
         margin: 10px;
     }
+    .first_Image {
+        margin: 10px 0 10px 5px;
+    }
     .dummy_img {
         height: 85px;
     }
     .faqs_domain_coordinator p{
+        font-size: 15px;
+    }
+    .first_Image p{
         font-size: 15px;
     }
     .faqs_number{
@@ -202,8 +221,11 @@
     .faqs_domain_coordinator {
         margin-bottom: 20px;
     }
+    .first_Image{
+        margin-bottom: 20px;
+    }
     .responsive_div {
-        display: block;
+        display: flex;
         padding-bottom: 10px;
     }
     .contactUsImg {

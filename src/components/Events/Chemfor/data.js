@@ -2,8 +2,8 @@ export const datasOfEvent = [
     {
         nameOfEvent: "Chem-O-Rover",
         desc: "Nature is not a place to visit. It is home.-Gary Snyder. When preserving nature turns to be our foremost duty, begin it from something included in your own daily life. Design a Car that works on eco-friendly chemicals as fuels. Participate in our event and win handsome cash prizes.",
-        register: (<span><a href='https://www.google.com/' style={{ textDecoration: "none", color: "white" }}>Register Now</a></span>),
-        schedule: (<span><a href='https://www.google.com/' style={{ textDecoration: "none", color: "white" }}>Problem Statement</a></span>),
+        register: (<span><a rel='noopener noreferrer' href='https://www.google.com/' style={{ textDecoration: "none", color: "white" }}>Register Now</a></span>),
+        schedule: (<span><a rel='noopener noreferrer' href='https://www.google.com/' style={{ textDecoration: "none", color: "white" }}>Problem Statement</a></span>),
         prizeMoney: "₹ 10,000",
         dateBefore: "11/03",
         coor: [
@@ -24,8 +24,8 @@ export const datasOfEvent = [
     {
         nameOfEvent: "Chem-E-Storm",
         desc: "The best way to innovation is designing projects using residues- Best out of Waste. Use your chemical technology knowledge and catalyze the agricultural activities. Participate in our event and win worth cash prizes.",
-        register: (<span><a href='https://www.wikipedia.com/' style={{ textDecoration: "none", color: "white" }}>Register Now</a></span>),
-        schedule: (<span><a href='https://www.google.com/' style={{ textDecoration: "none", color: "white" }}>Problem Statement</a></span>),
+        register: (<span><a rel='noopener noreferrer' href='https://www.wikipedia.com/' style={{ textDecoration: "none", color: "white" }}>Register Now</a></span>),
+        schedule: (<span><a rel='noopener noreferrer' href='https://www.google.com/' style={{ textDecoration: "none", color: "white" }}>Problem Statement</a></span>),
         prizeMoney: "₹ 8,000",
         dateBefore: "15/03",
         coor: [{
@@ -46,8 +46,8 @@ export const datasOfEvent = [
     {
         nameOfEvent: "ChemFo-Mystery",
         desc: "From learning about preservatives in your high schools to learning about food processing methods in engineering, you've added a lot in your knowledge.",
-        register: (<span><a href='https://www.wikipedia.com/' style={{ textDecoration: "none", color: "white" }}>Register Now</a></span>),
-        schedule: (<span><a href='https://www.google.com/' style={{ textDecoration: "none", color: "white" }}>Problem Statement</a></span>),
+        register: (<span><a rel='noopener noreferrer' href='https://www.wikipedia.com/' style={{ textDecoration: "none", color: "white" }}>Register Now</a></span>),
+        schedule: (<span><a rel='noopener noreferrer' href='https://www.google.com/' style={{ textDecoration: "none", color: "white" }}>Problem Statement</a></span>),
         prizeMoney: "₹ 8,000",
         dateBefore: "15/03",
         coor: [{
@@ -68,8 +68,8 @@ export const datasOfEvent = [
     {
         nameOfEvent: "Chem-Food-a-thon",
         desc: "When Technology covers in it all, the AI-ML for accessing all information, the bots for traverse and transport, then why not use it for spark in agriculture. Bring it in to the event your revolutionary ideas and win worth cash prizes.",
-        register: (<span><a href='https://www.wikipedia.com/' style={{ textDecoration: "none", color: "white" }}>Register Now</a></span>),
-        schedule: (<span><a href='https://www.google.com/' style={{ textDecoration: "none", color: "white" }}>Problem Statement</a></span>),
+        register: (<span><a rel='noopener noreferrer' href='https://www.wikipedia.com/' style={{ textDecoration: "none", color: "white" }}>Register Now</a></span>),
+        schedule: (<span><a rel='noopener noreferrer' href='https://www.google.com/' style={{ textDecoration: "none", color: "white" }}>Problem Statement</a></span>),
         prizeMoney: "₹ 8,000",
         dateBefore: "15/03",
         coor: [
@@ -92,8 +92,8 @@ export const datasOfEvent = [
     {
         nameOfEvent: "Technomind",
         desc: "All day hectic and running life is what everybody's experiencing today. Isn't it? Design a machine that can ease up a basic yet important daily process-Cooking. Do brainstorming, participate in our event and win worthy cash prizes.",
-        register: (<span><a href='https://www.wikipedia.com/' style={{ textDecoration: "none", color: "white" }}>Register Now</a></span>),
-        schedule: (<span><a href='https://www.google.com/' style={{ textDecoration: "none", color: "white" }}>Problem Statement</a></span>),
+        register: (<span><a rel='noopener noreferrer's href='https://www.wikipedia.com/' style={{ textDecoration: "none", color: "white" }}>Register Now</a></span>),
+        schedule: (<span><a rel='noopener noreferrer's href='https://www.google.com/' style={{ textDecoration: "none", color: "white" }}>Problem Statement</a></span>),
         prizeMoney: "₹ 14,000",
         dateBefore: "15/03",
         coor: [{
@@ -114,8 +114,8 @@ export const datasOfEvent = [
     {
         nameOfEvent: "Innovative Product Development",
         desc: "An event for budding Master Food Technologists here! Unmask the food technologist in you and bring to the table your product. Your brand in the event and the worthy cash prizes awaiting you.",
-        register: (<span><a href='https://www.wikipedia.com/' style={{ textDecoration: "none", color: "white" }}>Register Now</a></span>),
-        schedule: (<span><a href='https://www.google.com/' style={{ textDecoration: "none", color: "white" }}>Problem Statement</a></span>),
+        register: (<span><a rel='noopener noreferrer's href='https://www.wikipedia.com/' style={{ textDecoration: "none", color: "white" }}>Register Now</a></span>),
+        schedule: (<span><a rel='noopener noreferrer's href='https://www.google.com/' style={{ textDecoration: "none", color: "white" }}>Problem Statement</a></span>),
         prizeMoney: "₹ 15,000",
         dateBefore: "15/03",
         coor: [{

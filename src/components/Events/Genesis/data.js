@@ -2,8 +2,8 @@ export const datasOfEvent = [
     {
         nameOfEvent: "Adhyayan",
         desc: "No problem can be solved without knowing it's root cause. This event requires the participants to do case-study, think of problems related to Innovation in agriculture and come up with upheavals. Boost your Adhyayan by participating in Adhyayan and win handsome cash prizes.",
-        register: (<span><a href='https://www.google.com/' style={{ textDecoration: "none", color: "white" }}>Register Now</a></span>),
-        schedule: (<span><a href='https://www.google.com/' style={{ textDecoration: "none", color: "white" }}>Problem Statement</a></span>),
+        register: (<span><a rel='noopener noreferrer' href='https://www.google.com/' style={{ textDecoration: "none", color: "white" }}>Register Now</a></span>),
+        schedule: (<span><a rel='noopener noreferrer' href='https://www.google.com/' style={{ textDecoration: "none", color: "white" }}>Problem Statement</a></span>),
         prizeMoney: "₹ 8,000",
         dateBefore: "11/03",
         coor: [{
@@ -17,8 +17,8 @@ export const datasOfEvent = [
     {
         nameOfEvent: "Shuruaat",
         desc: "As butterfly come out of cocoons, as Entrepreneurs in Shuruat! This events demands from the participants to present their innovations and business models pertaining to theme Innovation in Agriculture.Register yourself for the event and do a perfect Shuruat.",
-        register: (<span><a href='https://www.wikipedia.com/' style={{ textDecoration: "none", color: "white" }}>Register Now</a></span>),
-        schedule: (<span><a href='https://www.google.com/' style={{ textDecoration: "none", color: "white" }}>Problem Statement</a></span>),
+        register: (<span><a rel='noopener noreferrer' href='https://www.wikipedia.com/' style={{ textDecoration: "none", color: "white" }}>Register Now</a></span>),
+        schedule: (<span><a rel='noopener noreferrer' href='https://www.google.com/' style={{ textDecoration: "none", color: "white" }}>Problem Statement</a></span>),
         prizeMoney: "₹ 15,000",
         dateBefore: "15/03",
         coor: [{
@@ -31,8 +31,8 @@ export const datasOfEvent = [
     {
         nameOfEvent: "Udyam",
         desc: "How do entrepreneurs stand successful? Well, they practice on their skills of wide and critical thinking. Participate in our event and analyze where you stand in world of management and entrepreneurship.",
-        register: (<span><a href='https://www.google.com/' style={{ textDecoration: "none", color: "white" }}>Register Now</a></span>),
-        schedule: (<span><a href='https://www.google.com/' style={{ textDecoration: "none", color: "white" }}>Problem Statement</a></span>),
+        register: (<span><a rel='noopener noreferrer' href='https://www.google.com/' style={{ textDecoration: "none", color: "white" }}>Register Now</a></span>),
+        schedule: (<span><a rel='noopener noreferrer' href='https://www.google.com/' style={{ textDecoration: "none", color: "white" }}>Problem Statement</a></span>),
         prizeMoney: "₹ 8,000",
         dateBefore: "1/03",
         coor: [{

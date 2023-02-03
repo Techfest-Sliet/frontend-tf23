@@ -54,42 +54,44 @@ const ContactUs = () => {
                             <div className='faqs_coordinators'>
 
                                 <div className='responsive_div'>
-                                    <div className='faqs_domain_coordinator'>
+                                    {/* <div style={{display: "flex"}}> */}
+                                    <div className='first_Image'>
                                         <img src={dummy} className="dummy_img" alt='...' />
-                                        <p>Domain Coordinator </p>
-                                        <a className='faqs_number' href="tel:1234567890">
-                                            1234567890
+                                        <p>Sudhanshu Kumar </p>
+                                        <a className='faqs_number' href="tel:7488078452">
+                                            7488078452
                                         </a>
                                     </div>
                                     <div className='faqs_domain_coordinator'>
                                         <img src={dummy} className="dummy_img" alt='...' />
-                                        <p>Domain Coordinator</p>
-                                        <a className='faqs_number' href="tel:1234567890">
-                                            1234567890
+                                        <p>Prasant Shahi</p>
+                                        <a className='faqs_number' href="tel:8877515552">
+                                            8877515552
                                         </a>
                                     </div>
-                                </div>
+                                    {/* </div> */}
 
-                                <div className='responsive_div'>
+                                    {/* <div className='responsive_div'> */}
                                     <div className='faqs_domain_coordinator'>
+                                        <img src={dummy} className="dummy_img" alt='...' />
+                                        <p>Aniket Mihir </p>
+                                        <a className='faqs_number' href="tel:8873013224">
+                                            8873013224
+                                        </a>
+                                    </div>
+                                    {/* <div className='faqs_domain_coordinator'>
                                         <img src={dummy} className="dummy_img" alt='...' />
                                         <p>Domain Coordinator </p>
                                         <a className='faqs_number' href="tel:1234567890">
-                                            1234567890
+                                        1234567890
                                         </a>
-                                    </div>
-                                    <div className='faqs_domain_coordinator'>
-                                        <img src={dummy} className="dummy_img" alt='...' />
-                                        <p>Domain Coordinator </p>
-                                        <a className='faqs_number' href="tel:1234567890">
-                                            1234567890
-                                        </a>
-                                    </div>
+                                    </div> */}
+                                    {/* </div> */}
                                 </div>
                             </div>
 
 
-                            <p className='faqs_support'>or write us at  <a href="/contactUs" style={{ textDecoration: "none", color: "DodgerBlue" }}>support@techfestsliet.com</a></p>
+                            <p className='faqs_support'>or write us at  <a href='mailto:web.techfest@sliet.ac.in' style={{ textDecoration: "none", color: "DodgerBlue" }}>web.techfest@sliet.ac.in</a></p>
                             <p className='faqs_footer'> Stay Updated Here !</p>
 
                         </div>
@@ -110,7 +112,7 @@ const data = [
     {
         id: 1,
         question: "How to register on the website?",
-        answer: (<span>You can enter your details and sign up at <a href=' https://www.techfestsliet.com/signup' style={{ textDecoration: "none", color: "DodgerBlue" }}> https://www.techfestsliet.com/signup</a></span>)
+        answer: (<span>You can enter your details and sign up at <a href='/signup' style={{ textDecoration: "none", color: "DodgerBlue" }}> https://www.techfestsliet.org/signup</a></span>)
     },
     {
         id: 2,
