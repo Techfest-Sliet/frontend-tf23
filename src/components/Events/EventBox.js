@@ -33,13 +33,13 @@ function EventBox({ props, index }) {
                         
                         {
                             (coor_len === 1) ? (props?.coor)?.map((cor) => {
-                                return <div><img src={cor.img} className='boxImgSingle' alt='.' />
+                                return <div className='workshop__image'><img src={cor.img} className='boxImgSingle' alt='.' />
                                     <div style={{ marginRight: "10px", textAlign: "center" }}> <span> {cor.nameOfEventCoordinator} </span><br></br> <span> {cor.phoneNo} </span><br></br> <span> {cor.mail} </span></div>
                                 </div>
                             }
                             ) :
                                 (props?.coor)?.map((cor) => {
-                                    return <div><img src={cor.img} className='boxImgDouble' alt='.' />
+                                    return <div className='workshop__image'><img src={cor.img} className='boxImgDouble' alt='.' />
                                         <div style={{ marginRight: "10px", textAlign: "center" }}> <span> {cor.nameOfEventCoordinator} </span><br></br> <span> {cor.phoneNo} </span><br></br> <span> {cor.mail} </span></div>
                                     </div>
                                 })

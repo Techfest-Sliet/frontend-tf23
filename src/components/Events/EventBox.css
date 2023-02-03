@@ -52,6 +52,17 @@
     border-radius: 50%;
 }
 
+.workshop__image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.workshop__image > img {
+    margin-bottom: 1em;
+}
+
 .registerNowEvent {
     padding: 8px 20px;
     background: linear-gradient(to right, rgb(47, 226, 47), rgb(8, 81, 8));

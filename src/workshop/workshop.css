@@ -1,7 +1,7 @@
 .wrkshopsBackgroundTop {
     background-color: rgb(0, 20, 0);
     height: auto;
-    width: 100vw;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -92,7 +92,7 @@
 .wrkshopsBackgroundBottom {
     background: linear-gradient( to left, rgb(0, 45, 0), rgb(0, 20, 0), black);
     height: auto;
-    width: 100vw;
+    width: 100%;
     display: flex;
     /* align-items: center; */
     justify-content: center;
@@ -107,7 +107,7 @@
     background-color: rgb(0, 35, 0);
     /* background-color: rgb(53, 67, 48); */
     /* opacity: 0.5; */
-    padding: 35px;
+    padding: 40px;
     position: relative;
     /* margin: 20px; */
 }
@@ -118,14 +118,23 @@
     color: white; 
 }
 
+.evntDesc {
+    display: flex;
+    /* justify-content: center; 
+    align-items: flex-start; */
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
 .LeftOfBox h2{
-    margin: 0px;
+    margin-bottom: 10px;
 }
 
 .RightOfBox {
     width: 40%;
     float: right;
     bottom: 0px;
+    display: flex;
     /* height: 43vh; */
     color: white;
     /* position: absolute; */
@@ -140,12 +149,18 @@
     /* flex-direction: row; */
 }
 
+.boxImg {
+    height: 40%;
+    width: 40%;
+    border-radius: 50%;
+}
+
 #registerNow {
     padding: 8px 20px;
     background: linear-gradient(to right, rgb(47, 226, 47), rgb(8, 81, 8));
     border-radius: 10px;
     color: white;
-    margin: 0 20px 10px 0;
+    margin: 15px 20px 7px 0;
     float: left;
     cursor: pointer;
     border: 1px solid rgb(47, 226, 47);
@@ -156,11 +171,17 @@
     background: linear-gradient(to right, rgb(90, 86, 86), rgb(30, 27, 27));
     border-radius: 10px;
     color: white;
-    margin: 0 25px 10px 0;
+    margin: 15px 25px 7px 0;
+    float: left;
     cursor: pointer;
     border: 1px solid rgb(90, 86, 86);
 }
 
+@media screen and (max-width: 1055px){
+    .boxImg {
+        width: 70%;
+    }
+}
 
 @media screen and (max-width: 777px){
     .outer_circle{
@@ -202,7 +223,7 @@
         height: 73%;
     }
     .explore_wrkshop{
-        top: 10vh;
+        top: 11vh;
     }
     .explore_wrkshop h2{
         font-size: 7vw;
@@ -213,8 +234,8 @@
     }
     .workshopBox {
         margin: 2rem 1rem 3rem 1rem;
-        padding: 25px 25px 50px 25px;
-        width: 80%;
+        padding: 25px 25px 27vw 25px;
+        width: 85%;
         height: auto;
     }
     .RightOfBox{
@@ -226,9 +247,25 @@
         float: none;
     }
     .objOfBox {
-        font-size: 2.5vw;
+        font-size: 2.8vw;
         bottom: auto;
         text-align: center;
+    }
+    .boxImg {
+        height: 30%;
+        width: 30%;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .objOfBox {
+        font-size: 3vw !important;
+    }
+}
+
+@media screen and (max-width: 456px) {
+    #viewSchedule {
+        margin-top: 8px;
     }
 }
 
@@ -241,6 +278,6 @@
         /* top: 3vh; */
     }
     #registerNow{
-        margin: 0 25px 12px 0;
+        margin: 7px 25px 0 0;
     }
 }

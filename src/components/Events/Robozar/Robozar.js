@@ -1,11 +1,11 @@
 import React from 'react';
 import './Robozar.css';
-import { FaRegCalendar, FaRegClock } from "react-icons/fa";
-import { datasOfEvent } from "./data";
+import EventBox from "../EventBox";
+import EventBottom from '../EventBottom';
+import { datasOfEvent, datasOfEventCoordinator } from "./data";
 import TechFestT from "../techFEST23kaT.webp";
-import dummyImg from "../../dummy.jpg";
 
-const events = () => {
+const Robozar = () => {
     return (
         <>
             <div className='background-of-EventsPage'>
@@ -17,62 +17,36 @@ const events = () => {
                         <h1> ROBOZAR </h1>
                         <span className='whiteLine'></span>
                         <button id='exploreEvents'>Explore Events</button>
-                        <p>Ignite your passion in automation for agriculture.</p>
+                        <p>Ever captivated by versatile activities carried out by bots nowadays?
+                            Ever witnessed how robots today perform it all innovating our agriculture?
+                            Here's to the exciting opportunities to showcase your skills, design a robot, enhance your skills and win worth cash prizes,All at the same place!
+                        </p>
 
                     </div>
                 </div>
+            </div>
+            <div className='events'>
                 <h1 className='evnts'>EVENTS</h1>
             </div>
 
             {/* EVENTS */}
             {datasOfEvent.map((item, index) => (
 
-                <div className='eventsBackgroundBottom'key={index}>
-
-                    <div className='eventBox'>
-
-                        <div className='LeftOfBox'>
-                            <h2>{item.nameOfEvent}</h2>
-                            <p>{item.desc}
-                            </p>
-                            <button id='registerNow'> {item.register} </button>
-                            <button id='viewSchedule'> {item.schedule} </button>
-                            <h2 style={{ marginTop: "6px" }}>Prizes Worth <br></br> {item.prizeMoney} </h2>
-                            <p style={{ fontSize: "14px" }}>
-                                <FaRegCalendar /> Register Before {item.dateBefore}<br></br>
-                                <FaRegClock /> 11:59 P.M.
-                            </p>
-                        </div>
-
-                        <div className='RightOfBox'>
-                            <div className='objOfBox'>
-                                <div style={{ marginRight: "10px", textAlign: "center" }}> {item.nameOfEventCoordinator} <br></br> {item.phoneNo} </div>
-                                <div style={{ marginLeft: "10px", textAlign: "center" }}> {item.nameOfEventCoordinator2} <br></br> {item.phoneNo2} </div>
-                            </div>
-                        </div>
-
-                    </div>
-
+                <div className='eventsBackgroundBottom' key={index}>
+                    <EventBox props={item} index={index} />
                 </div>
             ))}
 
+
+
             {/* Faculty Advisor */}
-            <div className='bg_bottom'>
-                <div className='fac_Container'>
-                    <div style={{ textAlign: "center", color: "white" }}>
-                        <img src={dummyImg} className='dummyImg' alt=".." />
-                    </div>
-                    <div style={{ color: "white", textAlign: "center" }}>
-                        <b>Name of Faculty</b><br></br> Faculty Advisor
-                    </div>
-                    <div className='dmnCordintor'>
-                        <div style={{ textAlign: "center", margin: "20px" }}><b> Domain Coordinator </b><br></br> <a href="tel:1234567890" style={{ textDecoration: "none", color: "white" }}> 1234567890 </a> </div>
-                        <div style={{ textAlign: "center", margin: "20px" }}> <b> Domain Coordinator </b> <br></br> <a href="tel:1234567890" style={{ textDecoration: "none", color: "white" }}> 1234567890 </a> </div>
-                    </div>
-                </div>
-            </div>
+
+            {datasOfEventCoordinator.map((item) => (
+                <EventBottom props={item} />
+
+            ))}
         </>
     )
 }
 
-export default events;
+export default Robozar;
