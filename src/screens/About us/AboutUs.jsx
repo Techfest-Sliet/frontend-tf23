@@ -12,18 +12,18 @@ function AboutUs() {
         <img src="/about-us/6417740-1@2x.png"  width={"100%"}
               height={"100%"} alt="" />
       </div>
-      <div className="container__About__Us__Upperpart">
-        <div className="About__Us__part1">
-          <div className="About__Us__part1__techfest__logo">
+      <div className="container_AboutUs_Upperpart">
+        <div className="About_Us_part1">
+          <div className="About_Uspart1techfest_logo">
             <img src="/tf23.webp" alt="" />
           </div>
-          <div className="About__Us__part1__SLIET__logo">
+          <div className="About_Uspart1SLIET_logo">
             <img src="/about-us/white-sliet-1@2x.png" alt="" />
           </div>
         </div>
-        <div className="About__Us__part2">
+        <div className="About_Us_part2">
           {/* <LazyLoadImage src={props.data.head_tf[0].imageSrc} alt="" /> */}
-          <div className="About__Us__part2__text  ">
+          <div className="About_Uspart2_text  ">
             <p>
               techFEST is a platform where engineers, innovators, changemakers,
               entrepreneurs and tech enthusiasts collaborate to create solutions
@@ -38,7 +38,7 @@ function AboutUs() {
       >
         <img src="/about-us/stats-sec.svg" alt="" height={"1%"} />
       </div>
-      {/* **** */}
+      {/* ** */}
 
       <div className="About">
         <div className="AboutSliet">
@@ -96,12 +96,35 @@ function AboutUs() {
         </div>
       </div>
 
+{/* media query aboutinfo */}
+<div className="AboutInfo1">
+          <div className="Participants1">
+            <img src="/about-us/Group 881.svg" height={"50px"} alt="" />
+            <h1>30 +</h1>
+            <h4>Institutes Participate every year</h4>
+          </div>
+
+          <div className="Participants1">
+            <img src="/about-us/Group 878.svg" height={"50px"} alt="" />
+            <h1>10K +</h1>
+            <h4>Footfall during techFEST 21</h4>
+          </div>
+
+          <div className="Participants1 last1">
+            <img src="/about-us/Group 879.svg" height={"50px"} alt="" />
+            <h1>5L +</h1>
+            <h4>Worth of Goodies and Prize Money</h4>
+          </div>
+        </div>
+
+
       {/* various techfests */}
       <div className="VariousTechfest">
         {/* //eslint-disable-next-line */}
          
         <LiImage img={"/about-us/group-7671.svg"} heading={"techFEST’23"} tagline={'Innovation in Agriculture'}
          detail={'With 40+ Events and an aim to take up the Ultimate Leap in Technology for Agriculture, this year.'}/>
+         
 {/* //eslint-disable-next-line */}
         <RiImage img={"/about-us/Group 767.png"} heading={"techFEST’22"} tagline={'The Ultimate Leap to Agri-Tech'}
          detail={'With 40+ Events and an aim to take up the Ultimate Leap in Technology for Agriculture, this year.'}/>
@@ -121,14 +144,14 @@ function AboutUs() {
 
       {/* gallery */}
       <div className="sponsor">
-        <h1 id="sponsor" style={{ color: "#74EB76" }}>
+        <h1 id="sponsor" style={{ color: "#74EB76"}}>
           GALLERY
         </h1>
         <SliderDiv arr={gallery} />
       </div>
 
       {/* previos sponsr */}
-      <div className="sponsor">
+      <div className="sponsor" style={{marginTop:"3rem",width:"100%"}}>
         <h1 id="sponsor" style={{ color: "#74EB76" }}>
           OUR<span style={{ color: "white" }}> PAST</span> SPONSORS
         </h1>

@@ -13,6 +13,9 @@ function Ri_image(props) {
         <div className="Ri_image_ContainerImg">
             <img src={props?.img}  alt="" />
         </div>
+        <div className="tfDivider">
+          <img src="/about-us/stats-sec.svg" alt="" />
+         </div>
     </div>
   )
 }
