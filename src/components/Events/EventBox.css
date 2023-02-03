@@ -1,0 +1,165 @@
+.eventBox {
+    margin: 2rem 1rem 7rem 1rem;
+    height: auto;
+    width: 80vw;
+    border: 1px solid rgb(35, 185, 35);
+    border-radius: 10px;
+    background-color: rgb(0, 35, 0);
+    padding: 40px;
+    position: relative;
+}
+
+.LeftOfEventBox {
+    width: 45%;
+    float: left;
+    color: white;
+}
+
+.evntDesc {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.LeftOfEventBox h1 {
+    margin-bottom: 10px;
+}
+
+.RightOfEventBox {
+    width: 40%;
+    float: right;
+    bottom: 0px;
+    color: white;
+}
+
+.objOfEventBox {
+    position: absolute;
+    bottom: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.boxImgSingle {
+    height: 20%;
+    width: 20%;
+    border-radius: 50%;
+}
+
+.boxImgDouble {
+    height: 40%;
+    width: 40%;
+    border-radius: 50%;
+}
+
+.registerNowEvent {
+    padding: 8px 20px;
+    background: linear-gradient(to right, rgb(47, 226, 47), rgb(8, 81, 8));
+    border-radius: 10px;
+    color: white;
+    margin: 15px 20px 7px 0;
+    float: left;
+    text-align: left;
+    cursor: pointer;
+    border: 1px solid rgb(47, 226, 47);
+}
+
+.xyz {
+    width: 100%;
+    height: 60%;
+}
+
+.problemStat {
+    padding: 8px 23px;
+    background: linear-gradient(to right, rgb(90, 86, 86), rgb(30, 27, 27));
+    border-radius: 10px;
+    color: white;
+    margin: 15px 25px 7px 0;
+    float: left;
+    cursor: pointer;
+    border: 1px solid rgb(90, 86, 86);
+}
+
+@media screen and (max-width: 1055px) {
+    .eventBox{
+        width: 85vw !important;
+    }
+    .boxImgSingle {
+        width: 35%;
+    }
+    .boxImgDouble {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 888px) {
+    .LeftOfBox {
+        width: 50%;
+    }
+
+    .RightOfEventBox {
+        width: 45%;
+        float: left;
+    }
+
+    .objOfEventBox {
+        font-size: 2vw;
+    }
+    .boxImgSingle {
+        width: 35%;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .eventBox {
+        margin: 2rem 1rem 2vh 1rem;
+        padding: 25px 25px 32vw 25px !important;
+        width: 85%;
+        height: auto;
+    }
+    .RightOfEventBox {
+        width: 100%;
+        float: none;
+    }
+
+    .evntDesc p {
+        font-size: 14px;
+    }
+
+    .LeftOfEventBox {
+        width: 100%;
+        float: none;
+    }
+
+    .objOfEventBox {
+        font-size: 2.6vw;
+        text-align: center;
+        bottom: 10px;
+    }
+    .boxImgSingle {
+        height: 15%;
+        width: 20%;
+    }
+    .boxImgDouble {
+        height: 30%;
+        width: 35%;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .objOfEventBox {
+        font-size: 2.7vw;
+    }
+}
+
+@media screen and (max-width: 456px) {
+    .problemStat {
+        margin-top: 8px;
+    }
+}
+
+@media screen and (max-width: 386px) {
+    .registerNowEvent {
+        margin: 7px 25px 0 0;
+    }
+}
