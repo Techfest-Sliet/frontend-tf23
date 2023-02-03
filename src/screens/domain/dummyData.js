@@ -6,9 +6,9 @@ import Karyaranchna from "../../assets/domain/karyarachna.png";
 import Kermis from "../../assets/domain/kermis.webp";
 import Mechanica from "../../assets/domain/mechanica.webp";
 import Plexus from "../../assets/domain/plexus.png";
-import frame1 from '../../assets/domain/Frame 2.webp';
-import frame2 from '../../assets/domain/Frame 3.webp';
-import frame3 from '../../assets/domain/Frame 4.webp';
+import frame1 from '../../assets/domain/Frame 2.png';
+import frame2 from '../../assets/domain/Frame 3.png';
+import frame3 from '../../assets/domain/Frame 4.png';
 export const domainSlider =[
   {pic:frame1},
   {pic:frame2},
