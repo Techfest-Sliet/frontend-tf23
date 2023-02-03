@@ -1,8 +1,8 @@
-import Robozar from "../../assets/domain/Robozar.webp";
+import Robozar from "../../assets/domain/Robozar.png";
 import Chemfor from "../../assets/domain/chemfor.webp";
 import Electrica from "../../assets/domain/electrica.webp";
 import Genesis from "../../assets/domain/genesis.webp";
-import Karyaranchna from "../../assets/domain/karyarachna.webp";
+import Karyaranchna from "../../assets/domain/karyarachna.png";
 import Kermis from "../../assets/domain/kermis.webp";
 import Mechanica from "../../assets/domain/mechanica.webp";
 import Plexus from "../../assets/domain/plexus.png";
@@ -18,9 +18,7 @@ const data = [
   {
     pic: Chemfor,
     des:"A platform to attempt and make the best use of your knowledge in the food and chemical industry.",
-    title:"Chemfor",
-    link: "/events/chemfor"
-
+    title:"Chemfor"
   },
   {
     pic: Electrica,
