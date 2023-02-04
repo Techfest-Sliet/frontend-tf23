@@ -3,7 +3,6 @@ import styles from './Signin.module.css'
 import axios from "axios";
 import logo from "../../images/techFEST '23.webp";
 import { localUrl } from "../../API/api";
-import ErrorModel from "../UI/ErrorModel/ErrorModel";
 import { Link, useNavigate } from "react-router-dom";
 // import vectorLogo from "../../images/Vector-Logo.png";
 
@@ -24,10 +23,16 @@ const Signin = () => {
       password.trim().length === 0
     ) {
       setFieldErr("Field should not be empty");
+      setTimeout(() => {
+        setFieldErr(null);
+      },3000);
       return;
     }
     if (!email.trim().includes("@")) {
       setMailErr("Invalid mail!");
+      setTimeout(() => {
+        setMailErr(null);
+      },3000);
       return;
     }
     // console.log(user);
@@ -42,7 +47,6 @@ const Signin = () => {
     .then((result) => {
       const res = (result);
       setIsLoading(false);
-      alert(JSON.stringify(res))
       if( res.status === 204) {
         setMailErr(res.data.message);
         setTimeout(() => {
@@ -50,11 +54,14 @@ const Signin = () => {
         }, 3000);
       } else if ( res.status === 208) {
         setPasswordErr(res.data.message);
+        setTimeout(() => {
+          setPasswordErr(null);
+        }, 3000);
         return;
       } else if( res.status ===200 ) {
         setTimeout(() => {
           navigate('/');
-        }, 3000)
+        }, 1000)
       } else {
         setErrorsMade(res.data.message);
       }

@@ -40,10 +40,16 @@ const Signup = () => {
       name.trim().length === 0
     ) {
       setFieldErr("Field should not be empty");
+      setTimeout(() => {
+        setFieldErr(null);
+      },3000);
       return;
     }
     if (!email.trim().includes("@")) {
       setMailErr("Invalid mail!");
+      setTimeout(() => {
+        setMailErr(null);
+      },3000);
       return;
     }
 
@@ -53,6 +59,9 @@ const Signup = () => {
     // }
     if (password.length < 5) {
       setPasswordErr("Atleast five characteres!");
+      setTimeout(() => {
+        setPasswordErr(null);
+      },3000);
       return;
     }
 
@@ -80,8 +89,12 @@ const Signup = () => {
           }, 3000);
         } else if (res.status === 400 || res.status === 208) {
           setErrorsMade(res.data.message);
+
           setTimeout(() => {
             navigate("/signUp");
+            setTimeout(() => {
+              setErrorsMade(null);
+            },3000);
           }, 3000);
         } 
         
@@ -166,7 +179,7 @@ const Signup = () => {
             <p style={{ color: "red" }}>{confirm_err}</p>
             <input
               value={cPassword}
-              placeholder="Please Confirm your password"
+              placeholder="Confirm your password"
               variant="standard"
               onChange={(e) => handleConfirm(e.target.value)}
               type="password"

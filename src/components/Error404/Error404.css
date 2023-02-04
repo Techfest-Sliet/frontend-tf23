@@ -16,7 +16,7 @@ background: #082D0B;
 background: -webkit-radial-gradient(center, #082D0B, #010101);
 background: -moz-radial-gradient(center, #082D0B, #010101);
 background: radial-gradient(ellipse at center, #082D0B, #010101);
-  height: 100vh;
+  height: calc(100vh - 4em);
   width: 100vw;
   background-repeat: no-repeat;
   display: flex;
@@ -56,7 +56,8 @@ background: radial-gradient(ellipse at center, #082D0B, #010101);
   color: #fff;
   cursor: pointer;
   margin-top: 1em;
-} 
+  font-size: 1.2em;
+}
 
 @media (max-width: 700px) {
   .error404__bg {

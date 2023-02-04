@@ -29,7 +29,7 @@ navbar{
 
 .logo a img{
     display: block;
-    width: 100%;
+    width: 15rem;
 }
 
 .navigation{
@@ -202,6 +202,9 @@ navbar{
 
     .dropdown{
         width: 100%;
+    }
+    .logo a img{
+        width: 10rem;
     }
 }
 

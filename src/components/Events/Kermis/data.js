@@ -1,9 +1,11 @@
+import {Link} from 'react-router-dom';
+
 export const datasOfEvent = [
     {
         nameOfEvent: "COD Mobile",
         desc: "Shoot yourself up for a fascinating gameplay. Call yourself off for our event COD Mobile and win amazing cash prizes.",
-        register: (<span><a rel='noopener noreferrer' href='https://www.google.com/' style={{ textDecoration: "none", color: "white" }}>Register Now</a></span>),
-        schedule: (<span><a rel='noopener noreferrer' href='https://www.google.com/' style={{ textDecoration: "none", color: "white" }}>Problem Statement</a></span>),
+        register: (<span><Link to={"/underConstruction"} rel='noopener noreferrer' href='https://www.google.com/' style={{ textDecoration: "none", color: "white" }}>Register Now</Link></span>),
+        schedule: (<span><Link to={"/underConstruction"} rel='noopener noreferrer' href='https://www.google.com/' style={{ textDecoration: "none", color: "white" }}>Problem Statement</Link></span>),
         prizeMoney: "₹ 10,000",
         dateBefore: "11/03",
         coor: [
@@ -19,8 +21,8 @@ export const datasOfEvent = [
     {
         nameOfEvent: "Valorant Campus Stars",
         desc: "Analyze your swift and tactical abilities and see where you stand in par of opponents. Come up valiant and participate in our event Valorant to avail worthy cash prizes.",
-        register: (<span><a rel='noopener noreferrer' href='https://www.wikipedia.com/' style={{ textDecoration: "none", color: "white" }}>Register Now</a></span>),
-        schedule: (<span><a rel='noopener noreferrer' href='https://www.google.com/' style={{ textDecoration: "none", color: "white" }}>Problem Statement</a></span>),
+        register: (<span><Link to={"/underConstruction"} rel='noopener noreferrer' href='https://www.wikipedia.com/' style={{ textDecoration: "none", color: "white" }}>Register Now</Link></span>),
+        schedule: (<span><Link to={"/underConstruction"} rel='noopener noreferrer' href='https://www.google.com/' style={{ textDecoration: "none", color: "white" }}>Problem Statement</Link></span>),
         prizeMoney: "₹ 8,000",
         dateBefore: "15/03",
         coor: [
@@ -36,8 +38,8 @@ export const datasOfEvent = [
     {
         nameOfEvent: "Satranj ka Shahenshah",
         desc: "Amidst the black and white squares, get yourself some colourful fun by participating in our event Satranj ke Shershah and avail worthy prizes.",
-        register: (<span><a rel='noopener noreferrer' href='https://www.google.com/' style={{ textDecoration: "none", color: "white" }}>Register Now</a></span>),
-        schedule: (<span><a rel='noopener noreferrer' href='https://www.google.com/' style={{ textDecoration: "none", color: "white" }}>Problem Statement</a></span>),
+        register: (<span><Link to={"/underConstruction"} rel='noopener noreferrer' href='https://www.google.com/' style={{ textDecoration: "none", color: "white" }}>Register Now</Link></span>),
+        schedule: (<span><Link to={"/underConstruction"} rel='noopener noreferrer' href='https://www.google.com/' style={{ textDecoration: "none", color: "white" }}>Problem Statement</Link></span>),
         prizeMoney: "₹ 8,000",
         dateBefore: "1/03",
         coor: [

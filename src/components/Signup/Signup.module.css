@@ -1,10 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Open Sans", sans-serif;
-}
+
 
 ::-webkit-scrollbar {
   width: 5px;
@@ -320,6 +315,27 @@ input::placeholder {
     padding: 0.4em 1.6em;
     margin-right: 9px;
   }
+  .signup__title{
+    font-size: 2rem;
+  }
+  .signup__label{
+    font-size: 1.3em;
+  }
+  .signup__button{
+    width: 40%;
+  }
+  .signup__logo{
+    max-width: 25em;
+  }
+  .signup__page{
+    width: 45%;
+  }
+  .signup__inputFields > input {
+  width: 80%;
+}
+  .signup__inputFields input::placeholder {
+    font: 13px;
+}
 }
 
 @media (max-width: 924px) {
@@ -354,26 +370,19 @@ input::placeholder {
     width: 60%;
   } */
 }
-
-@media (max-width: 614px) {
-  body {
-    font-size: 10px;
+@media (max-width: 600px) {
+  .signup__content {
+    height: 100%;
+    padding-top: 10%;
+    padding-bottom: 15%;
+    flex-direction: column;
   }
-
-  .signup__logo {
-    opacity: 0.3;
-    display: none;
-  }
-  .signup__page {
-    width: 100%;
-    position: absolute;
-    left: 0;
-    right: 0;
-    margin: auto;
-    top: 50%;
-    transform: translate(0, -50%);
+  .signup__page{
+    margin-top: 10%;
+    width: 80%;
   }
 }
+
 
 @media (max-width: 552px) {
   body {
@@ -393,5 +402,11 @@ input::placeholder {
 @media (max-width: 320px) {
   body {
     font-size: 11px;
+  }
+  .signup__inputFields > input::placeholder {
+    font-size: 1rem;
+  }
+  .signup__label {
+    font-size: 1rem;
   }
 }

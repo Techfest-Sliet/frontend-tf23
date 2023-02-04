@@ -17,7 +17,7 @@ const forgotPassword = () => {
         <h1 className="underConstruction__title">Under Construction !</h1>
         <p className="underConstruction__para">Please come back later</p>
 
-        <Link to="/" className="underConstruction__home">
+        <Link to="/" className="underConstruction__btn">
           Home
         </Link>
       </div>

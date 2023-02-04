@@ -1,12 +1,10 @@
 import React from 'react';
 import './Chemfor.css';
-// import { FaRegCalendar, FaRegClock } from "react-icons/fa";
 import EventBox from "../EventBox";
 import EventBottom from '../EventBottom';
 import { datasOfEvent } from "./data";
 import { datasOfEventCoordinator } from "./data"
 import TechFestT from "../techFEST23kaT.webp";
-// import dummyImg from "../../dummy.jpg";
 
 const Chemfor = () => {
     return (
@@ -28,21 +26,12 @@ const Chemfor = () => {
             <div className='events'>
                 <h1 className='evnts'>EVENTS</h1>
             </div>
-
-
-
-            {/* EVENTS */}
             {datasOfEvent.map((item, index) => (
 
                 <div className='eventsBackgroundBottom' key={index}>
                     <EventBox props={item} index={index} />
                 </div>
             ))}
-
-
-
-            {/* Faculty Advisor */}
-
             {datasOfEventCoordinator.map((item) => (
                 <EventBottom props={item} />
 

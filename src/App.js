@@ -15,7 +15,7 @@ import Robozar from "./components/Events/Robozar/Robozar.js";
 import Faq from "./components/faq/faq.js";
 import Error404 from "./components/Error404/Error404";
 import SignIn from "./components/Signin/Signin";
-import DomainScreen from "./screens/domain/DomainScreen";
+import DomainScreen from "./screens/domain/Domain.jsx";
 import HomeScreen from "./screens/landingPage/HomeScreen";
 import Workshop from "./workshop/workshops";
 import Reset from "./components/resetPassword/resetPassword";
@@ -23,6 +23,7 @@ import Loading from "./components/loading/Loading";
 import UnderConstruction from "./components/Construction/underConstruction.js";
 import ForgotPassword from "./components/forgotPassword/forgotPassword";
 import Aboutus from '../src/screens/About us/AboutUs.jsx';
+import Popup from './components/Popup/Popup.js';
 function App() {
   return (
     <>
@@ -50,6 +51,7 @@ function App() {
           <Route path="/loading" element={<Loading />} />
           <Route path="/forgotPassword" element={<ForgotPassword />} />
           <Route path="/aboutUs" element={<Aboutus/>} />
+          <Route path="/popup" element={<Popup/>} />
         </Routes>
       </div>
     </>

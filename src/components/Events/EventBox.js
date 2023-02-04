@@ -18,7 +18,7 @@ function EventBox({ props, index }) {
                             <button className='registerNowEvent'> {props?.register} </button>
                             <button className='problemStat'> {props?.schedule} </button>
                         </div>
-                        <div style={{ float: "left" }}>
+                        <div  style={{ float: "left", marginBottom: "1e" }}>
                             <h2 style={{ marginTop: "6px", textAlign: "left" }}>Prizes Worth <br></br> {props?.prizeMoney} </h2>
                             <p style={{ fontSize: "14px", textAlign: "left" }}>
                                 <FaRegCalendar /> Register Before {props?.dateBefore}<br></br>
