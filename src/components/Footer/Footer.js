@@ -17,9 +17,7 @@ const Footer = () => {
         <a target="_blank" href='https://www.instagram.com/techfestsliet_/'>
           <Button variant="rounded"><InstagramIcon style={{ color: "white" }}/></Button>
         </a>
-        <a target="_blank" href='https://twitter.com/techfestsliet'>
-          <Button variant="rounded"><TwitterIcon style={{ color: "white" }}/></Button>
-        </a>
+
         <a target="_blank" href='https://www.linkedin.com/company/techfest-sliet/'>
           <Button variant="rounded"><LinkedInIcon style={{ color: "white" }}/></Button>
         </a>
