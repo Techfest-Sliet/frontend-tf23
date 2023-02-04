@@ -9,6 +9,17 @@
     position: relative;
 }
 
+.eventBoxSingle {
+    margin: 2rem 1rem 7rem 1rem;
+    height: auto;
+    width: 80vw;
+    border: 1px solid rgb(35, 185, 35);
+    border-radius: 10px;
+    background-color: rgb(0, 35, 0);
+    padding: 40px;
+    position: relative;
+}
+
 .LeftOfEventBox {
     width: 45%;
     float: left;
@@ -40,6 +51,12 @@
     justify-content: center;
 }
 
+.boxImage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .boxImgSingle {
     height: 20%;
     width: 20%;
@@ -52,17 +69,6 @@
     border-radius: 50%;
 }
 
-.workshop__image {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-.workshop__image > img {
-    margin-bottom: 1em;
-}
-
 .registerNowEvent {
     padding: 8px 20px;
     background: linear-gradient(to right, rgb(47, 226, 47), rgb(8, 81, 8));
@@ -73,11 +79,6 @@
     text-align: left;
     cursor: pointer;
     border: 1px solid rgb(47, 226, 47);
-}
-
-.xyz {
-    width: 100%;
-    height: 60%;
 }
 
 .problemStat {
@@ -95,8 +96,11 @@
     .eventBox{
         width: 85vw !important;
     }
+    .eventBoxSingle {
+        width: 85vw;
+    }
     .boxImgSingle {
-        width: 35%;
+        width: 30%;
     }
     .boxImgDouble {
         width: 50%;
@@ -116,15 +120,18 @@
     .objOfEventBox {
         font-size: 2vw;
     }
-    .boxImgSingle {
-        width: 35%;
-    }
 }
 
 @media screen and (max-width: 650px) {
     .eventBox {
         margin: 2rem 1rem 2vh 1rem;
-        padding: 25px 25px 32vw 25px !important;
+        padding: 25px 25px 45vw 25px;
+        width: 85%;
+        height: auto;
+    }
+    .eventBoxSingle {
+        margin: 2rem 1rem 2vh 1rem;
+        padding: 25px 25px 23vw 25px;
         width: 85%;
         height: auto;
     }
@@ -146,26 +153,57 @@
         font-size: 2.6vw;
         text-align: center;
         bottom: 10px;
+        flex-direction: column;
+    }
+    .boxImage {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        margin: 3vw;
     }
     .boxImgSingle {
         height: 15%;
         width: 20%;
+        margin-left: -5vw;
     }
     .boxImgDouble {
-        height: 30%;
-        width: 35%;
+        height: 20%;
+        margin-left: -5vw;
+        width: 20%;
     }
 }
 
 @media screen and (max-width: 550px) {
+    .eventBox {
+        padding: 25px 25px 48vw 25px;
+    }
+    .eventBoxSingle {
+        padding: 25px 25px 29vw 25px;
+    }
     .objOfEventBox {
         font-size: 2.7vw;
+    }
+    .boxImgSingle {
+        width: 25%;
+    }
+    .boxImgDouble {
+        width: 22%;
     }
 }
 
 @media screen and (max-width: 456px) {
+    .eventBox {
+        padding: 25px 25px 50vw 25px;
+    }
     .problemStat {
         margin-top: 8px;
+    }
+    .boxImgSingle {
+        width: 27%;
+    }
+    .boxImgDouble {
+        width: 25%;
     }
 }
 

@@ -35,7 +35,7 @@
 .dmnCordintor {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-direction: column;
     width: 50vw !important;
     height: auto;
@@ -55,7 +55,7 @@
     }
     .dummyImgDouble {
         height: 40%;
-        width: 40%;
+        width: 45%;
     }
     .dmnCordintor {
         width: 70vw !important;
@@ -84,6 +84,6 @@
 @media screen and (max-width: 650px) {
     .dmnCordintor {
         width: 85vw !important;
-        margin: 3vh 0 7vh 0;
+        margin: 3vh 0 7vh 0 !important;
     }
 }

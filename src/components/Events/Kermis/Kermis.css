@@ -132,6 +132,7 @@
     .evnts {
         font-size: 7vw;
     }
+    
 }
 
 
@@ -160,6 +161,8 @@
     .insideCntiner p {
         width: 40vw;
     }
+
+    
 }
 
 @media screen and (max-width: 650px) {
@@ -189,6 +192,7 @@
     #exploreEvents {
         font-size: medium;
     }
+    
 }
 
 @media screen and (max-width: 550px) {
@@ -212,6 +216,7 @@
     .eventContainer {
         height: 45vh;
     }
+
 }
 
 @media screen and (max-width: 386px) {
@@ -220,4 +225,5 @@
         text-align: center;
         margin: 0 7px 0 7px;
     }
+
 }
