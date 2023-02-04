@@ -38,7 +38,7 @@ const events = () => {
                             <button id='registerNow'> {item.register} </button>
                             <button id='viewSchedule'> {item.schedule} </button>
                             <h2 style={{ marginTop: "6px" }}>Prizes Worth <br></br> {item.prizeMoney} </h2>
-                            <p style={{ fontSize: "14px" }}>
+                            <p style={{ fontSize: "14px"}}>
                                 <FaRegCalendar /> Register Before {item.dateBefore}<br></br>
                                 <FaRegClock /> 11:59 P.M.
                             </p>

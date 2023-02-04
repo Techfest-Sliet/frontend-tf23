@@ -20,7 +20,7 @@ function EventBox({ props, index }) {
                         </div>
                         <div  style={{ float: "left", marginBottom: "1e" }}>
                             <h2 style={{ marginTop: "6px", textAlign: "left" }}>Prizes Worth <br></br> {props?.prizeMoney} </h2>
-                            <p style={{ fontSize: "14px", textAlign: "left" }}>
+                            <p style={{ fontSize: "14px", textAlign: "left", marginBottom: '1rem' }}>
                                 <FaRegCalendar /> Register Before {props?.dateBefore}<br></br>
                                 <FaRegClock /> 11:59 P.M.
                             </p>
