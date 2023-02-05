@@ -10,7 +10,7 @@ export const datasOfEvent = [
         dateBefore: "15/03",
         coor: [{
             img: require('../../dummy.jpg'),
-            nameOfEventCoordinator: "Shubham Singh",
+            nameOfEventCoordinator: "Shubham Kumar Singh",
             phoneNo: (<span><a href="tel:9506846608" style={{ textDecoration: "none", color: "white" }}> 9506846608 </a></span>),
             mail: (<span><a href='mailto:2140103@sliet.ac.in' style={{ textDecoration: "none", color: "white" }}> 2140103@sliet.ac.in
             </a></span>)
@@ -47,7 +47,7 @@ export const datasOfEvent = [
             }]
     },
     {
-        nameOfEvent: "Techn IQ",
+        nameOfEvent: "Tech-n-IQ",
         desc: "Though Cheetah is the fastest, horse runs no slow. Here's to the event creating a healthy competition between best brains yet differing in speed.Set your mettle high and participate in our event to win handsome cash prizes",
         register: (<span><Link to={"/underConstruction"} rel='noopener noreferrer' href='https://www.wikipedia.com/' style={{ textDecoration: "none", color: "white" }}>Register Now</Link></span>),
         schedule: (<span><Link to={"/underConstruction"} rel='noopener noreferrer' href='https://www.google.com/' style={{ textDecoration: "none", color: "white" }}>Problem Statement</Link></span>),

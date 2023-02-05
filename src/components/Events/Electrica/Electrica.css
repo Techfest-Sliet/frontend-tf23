@@ -132,6 +132,7 @@
     .evnts {
         font-size: 7vw;
     }
+    
 }
 
 
@@ -160,6 +161,8 @@
     .insideCntiner p {
         width: 40vw;
     }
+
+    
 }
 
 @media screen and (max-width: 650px) {
@@ -189,6 +192,31 @@
     #exploreEvents {
         font-size: medium;
     }
+    
+}
+
+@media screen and (max-width: 550px) {
+    .insideCntiner p {
+        width: 75vw;
+        font-size: 12px !important;
+    }
+
+    #exploreEvents {
+        padding: 7px 15px;
+    }
+
+    .evnts {
+        font-size: 8vw;
+    }
+
+    .background-of-EventsPage {
+        height: 50vh;
+    }
+
+    .eventContainer {
+        height: 45vh;
+    }
+
 }
 
 @media screen and (max-width: 386px) {
@@ -197,4 +225,5 @@
         text-align: center;
         margin: 0 7px 0 7px;
     }
+
 }

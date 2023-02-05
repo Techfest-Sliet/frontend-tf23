@@ -57,7 +57,7 @@ const navigate = useNavigate();
       <div className="extendedPage">
         <div className="main_container">
           <div className="containerDomain">
-            <img src="domain.webp" height={250} width={250} alt="" />
+            <img src="domain.svg" height={250} width={250} alt="" />
             <h1 style={{ color: "#fff" }} className="containerHeading">
               Domains
             </h1>

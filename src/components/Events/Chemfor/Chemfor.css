@@ -110,45 +110,6 @@
     justify-content: center;
 }
 
-.bg_bottom {
-    background: linear-gradient(rgb(0, 35, 0), rgb(0, 15, 0), black);
-    height: auto;
-    width: 100%;
-}
-
-.fac_Container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-.dummyImg {
-    margin: 5vw 0 1vw 0;
-    height: 15%;
-    width: 15%;
-    border-radius: 50%;
-}
-
-.dummyImg2 {
-    margin: 0 0 0 0 !important;
-    height: 40%;
-    width: 40%;
-    border-radius: 50%;
-}
-
-.dmnCordintor {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-direction: column;
-    width: 50vw !important;
-    height: auto;
-    flex-direction: row;
-    color: white;
-    margin: 3vw 0 6vw 0;
-}
-
 @media screen and (max-width: 1055px) {
     .techFestTCont {
         margin-top: 9vw;

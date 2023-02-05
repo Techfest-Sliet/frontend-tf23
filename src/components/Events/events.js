@@ -21,6 +21,8 @@ const events = () => {
 
                     </div>
                 </div>
+            </div>
+            <div className='events'>
                 <h1 className='evnts'>EVENTS</h1>
             </div>
 
@@ -46,8 +48,13 @@ const events = () => {
 
                         <div className='RightOfBox'>
                             <div className='objOfBox'>
-                                <div style={{ marginRight: "10px", textAlign: "center" }}> {item.nameOfEventCoordinator} <br></br> {item.phoneNo} </div>
-                                <div style={{ marginLeft: "10px", textAlign: "center" }}> {item.nameOfEventCoordinator2} <br></br> {item.phoneNo2} </div>
+                                <div ><img src={item.img1} className='boxImg' alt='.' />
+                                    <div style={{ marginRight: "10px", textAlign: "center" }}> <span> {item.nameOfEventCoordinator} </span><br></br> <span> {item.phoneNo} </span></div>
+                                </div>
+
+                                <div><img src={item.img1} className='boxImg' alt='.' />
+                                    <div style={{ marginLeft: "10px", textAlign: "center" }}> <span> {item.nameOfEventCoordinator2} </span><br></br> <span>{item.phoneNo2} </span></div>
+                                </div>
                             </div>
                         </div>
 
@@ -66,8 +73,16 @@ const events = () => {
                         <b>Name of Faculty</b><br></br> Faculty Advisor
                     </div>
                     <div className='dmnCordintor'>
-                        <div style={{ textAlign: "center", margin: "20px" }}><b> Domain Coordinator </b><br></br> <a href="tel:1234567890" style={{ textDecoration: "none", color: "white" }}> 1234567890 </a> </div>
-                        <div style={{ textAlign: "center", margin: "20px" }}> <b> Domain Coordinator </b> <br></br> <a href="tel:1234567890" style={{ textDecoration: "none", color: "white" }}> 1234567890 </a> </div>
+                        <div style={{ textAlign: "center", color: "white" }}>
+                            <img src={dummyImg} className='dummyImg2' alt=".." />
+
+                            <div style={{ textAlign: "center", margin: "7px" }}><b> Domain Coordinator </b><br></br> <a href="tel:1234567890" style={{ textDecoration: "none", color: "white" }}> 1234567890 </a> </div>
+                        </div>
+
+                        <div style={{ textAlign: "center", color: "white" }}>
+                            <img src={dummyImg} className='dummyImg2' alt=".." />
+                            <div style={{ textAlign: "center", margin: "7px" }}> <b> Domain Coordinator </b> <br></br> <a href="tel:1234567890" style={{ textDecoration: "none", color: "white" }}> 1234567890 </a> </div>
+                        </div>
                     </div>
                 </div>
             </div>
