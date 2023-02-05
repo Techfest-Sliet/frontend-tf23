@@ -39,15 +39,15 @@ const navigate = useNavigate();
             className="landingButtons"
             style={{ marginTop: 10, color: "white", marginBottom: 1 }}
           >
-            <Button variant="contained" id="signUpButton" sx={{ mr: 2, mt: 3 }}>
-              <Link to="/signUp">Sign Up Now</Link>
+            <Button variant="contained" id="signUpButton" sx={{ mr: 2, mt: 3 }} disabled>
+              <Link to="/underConstruction">Sign Up Now</Link>
             </Button>
             <Button
               variant="contained"
               id="aboutUsButton"
               sx={{ mr: 2, mt: 3 }}
             >
-              About Us
+              <Link to={"/aboutUs"}>About Us</Link>
             </Button>
           </div>
         </div>
@@ -67,7 +67,7 @@ const navigate = useNavigate();
             <Button
               sx={{ color: "#fff", mt: 3, borderRadius: 6, width: 150, mb: 5 }}
               className="learnMoreButton"
-              onClick={()=>navigate('/domain')}
+              onClick={()=>navigate('/domains')}
             >
               Learn More
             </Button>
@@ -83,7 +83,7 @@ const navigate = useNavigate();
             <Button
               sx={{ color: "#fff", mt: 3, borderRadius: 6, width: 150, mb: 5 }}
               className="learnMoreButton"
-              onClick={()=>navigate('/workshop')}
+              onClick={()=>navigate('/underConstruction')}
             >
                Learn More
             </Button>
@@ -107,7 +107,7 @@ const navigate = useNavigate();
         {/* sponsor */}
         <div className="sponsor">
           <h1 id="sponsor" style={{ color: "#74EB76" }}>
-            <span style={{ color: "white" }}>OUR</span> SPONSORS
+            OUR <span style={{ color: "white" }}>PAST</span> SPONSORS
           </h1>
          <SliderDiv arr={SponsorImageSlider}/>
         </div>

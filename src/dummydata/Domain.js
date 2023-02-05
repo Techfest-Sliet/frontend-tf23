@@ -34,7 +34,7 @@ const data = [
   },
   {
     pic: Karyaranchna,
-    title:"Karyaranchna",
+    title:"Karyarachna",
     des:"This amazing exhibit is an opportunity to showcase everything from models of aircraft to exquisite art.",
 
   },

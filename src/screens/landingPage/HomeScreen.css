@@ -4,7 +4,7 @@
 }
 
 .FirstPage {
-  height: 110vh;
+  height: 115vh;
   background: radial-gradient(ellipse at top, #126419, #000),
     radial-gradient(ellipse at bottom, #000000, rgb(0, 0, 0));
     padding-bottom: 1em;
