@@ -23,8 +23,17 @@ export const Navbar = () => {
                     <li><Link to="/underConstruction">Workshops</Link></li>
                     <li><Link to="/aboutUs">About Us</Link></li>
                     <li><Link to="/faq">FAQ</Link></li>
+                    <li className='aboutUs'>
+                        <Link to="/aboutUs" className='dropdown__animation'>About <i className="arrow down">&#32;</i></Link>
+                        <ul className='dropdown'>
+                            <li><Link to="/faq">FAQ</Link></li>
+                            <li><Link to="/aboutUs">About Us</Link></li>
+                        </ul>
+                    </li>
+                    <li><Link to="/faq">FAQ</Link></li>
                     <li className="domains">
                         <Link to="/domains" className='dropdown__animation'>Domains<i className="arrow down">&#32;</i></Link>
+                        {/*-- DROPDOWN MENU */}
                         <ul className="dropdown">
                             <li><Link to="/events/plexus">Plexus</Link></li>
                             <li><Link to="/events/chemfor">Chemfor</Link></li>
