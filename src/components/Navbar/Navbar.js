@@ -9,7 +9,7 @@ export const Navbar = () => {
         <header className="header">
             <div className="logo">
                 <Link to="/">
-                    <img src = {logo} alt = "No Internet"/>
+                    <img src = {logo} alt = "techFEST'23"/>
                 </Link>
             </div>
 
@@ -21,6 +21,8 @@ export const Navbar = () => {
                 <ul className="navbar-items">
                     <li><Link to="/">Home</Link></li>
                     <li><Link to="/underConstruction">Workshops</Link></li>
+                    <li><Link to="/aboutUs">About Us</Link></li>
+                    <li><Link to="/faq">FAQ</Link></li>
                     <li className='aboutUs'>
                         <Link to="/aboutUs" className='dropdown__animation'>About <i className="arrow down">&#32;</i></Link>
                         <ul className='dropdown'>
@@ -28,21 +30,22 @@ export const Navbar = () => {
                             <li><Link to="/aboutUs">About Us</Link></li>
                         </ul>
                     </li>
+                    <li><Link to="/faq">FAQ</Link></li>
                     <li className="domains">
                         <Link to="/domains" className='dropdown__animation'>Domains<i className="arrow down">&#32;</i></Link>
                         {/*-- DROPDOWN MENU */}
                         <ul className="dropdown">
+                            <li><Link to="/events/plexus">Plexus</Link></li>
                             <li><Link to="/events/chemfor">Chemfor</Link></li>
                             <li><Link to="/events/electrica">Electrica</Link></li>
                             <li><Link to="/events/genesis">Genesis</Link></li>
                             <li><Link to="/events/karyarachna">Karyarachna</Link></li>
                             <li><Link to="/events/kermis">Kermis</Link></li>
                             <li><Link to="/events/mechanica">Mechanica</Link></li>
-                            <li><Link to="/events/plexus">Plexus</Link></li>
                             <li><Link to="/events/robozar">Robozar</Link></li>
                         </ul>
                     </li>
-                    <Link to="/signIn" className='signInButton'>Sign In</Link>
+                    {/* <Link to="/signIn" className='signInButton'>Sign In</Link> */}
                 </ul>
             </div>
             

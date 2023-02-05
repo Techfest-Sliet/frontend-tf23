@@ -1,11 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Open Sans", sans-serif;
-}
+
 
 .underConstruction {
   color: white;
@@ -58,7 +53,7 @@
 }
 
 
-.underConstruction__home {
+.underConstruction__btn {
   padding: 0.5em 2em;
   border-radius: 7px;
   background: linear-gradient(to right, green, rgb(17, 39, 7));

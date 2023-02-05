@@ -23,6 +23,8 @@ import Loading from "./components/loading/Loading";
 import UnderConstruction from "./components/Construction/underConstruction.js";
 import ForgotPassword from "./components/forgotPassword/forgotPassword";
 import Aboutus from '../src/screens/About us/AboutUs.jsx';
+import Popup from './components/Popup/Popup.js';
+import Events from './components/domain/OneCard.jsx';
 function App() {
   return (
     <>
@@ -36,7 +38,7 @@ function App() {
           <Route path="/events/chemfor" element={<Chemfor />} />
           <Route path="/events/electrica" element={<Electrica />} />
           <Route path="/events/genesis" element={<Genesis />} />
-          <Route path="/events/karyarachna" element={<Karyarachna />} />
+          <Route path="/events/Karyarachna" element={<Karyarachna />} />
           <Route path="/events/kermis" element={<Kermis />} />
           <Route path="/events/mechanica" element={<Mechanica />} />
           <Route path="/events/plexus" element={<Plexus />} />
@@ -50,6 +52,8 @@ function App() {
           <Route path="/loading" element={<Loading />} />
           <Route path="/forgotPassword" element={<ForgotPassword />} />
           <Route path="/aboutUs" element={<Aboutus/>} />
+          <Route path="/popup" element={<Popup/>} />
+          <Route path="/events/:title" element={<Events/>} />
         </Routes>
       </div>
     </>

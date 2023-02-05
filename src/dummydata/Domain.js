@@ -1,14 +1,14 @@
-import Robozar from "../../assets/domain/Robozar.png";
-import Chemfor from "../../assets/domain/chemfor.webp";
-import Electrica from "../../assets/domain/electrica.webp";
-import Genesis from "../../assets/domain/genesis.webp";
-import Karyaranchna from "../../assets/domain/karyarachna.png";
-import Kermis from "../../assets/domain/kermis.webp";
-import Mechanica from "../../assets/domain/mechanica.webp";
-import Plexus from "../../assets/domain/plexus.png";
-import frame1 from '../../assets/domain/Frame 2.png';
-import frame2 from '../../assets/domain/Frame 3.png';
-import frame3 from '../../assets/domain/Frame 4.png';
+import Robozar from "../assets/domain/Robozar.webp";
+import Chemfor from "../assets/domain/chemfor.webp";
+import Electrica from "../assets/domain/electrica.webp";
+import Genesis from "../assets/domain/genesis.webp";
+import Karyaranchna from "../assets/domain/karyarachna.webp";
+import Kermis from "../assets/domain/kermis.webp";
+import Mechanica from "../assets/domain/mechanica.webp";
+import Plexus from "../assets/domain/plexus.png";
+import frame1 from '../assets/domain/Frame 2.png';
+import frame2 from '../assets/domain/Frame 3.png';
+import frame3 from '../assets/domain/Frame 4.png';
 export const domainSlider =[
   {pic:frame1},
   {pic:frame2},

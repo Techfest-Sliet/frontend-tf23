@@ -18,39 +18,38 @@
     rgba(0, 0, 0, 1) 50%,
     rgba(5, 62, 15, 1) 93%
   ); 
-  
 }
-.About__Us__part1 {
+.About_Us_part1 {
   padding-top: 8rem;
   display: flex;
   flex-direction: row;
   justify-content: center;
 }
-.About__Us__part1__techfest__logo {
+.About_Uspart1techfest_logo {
   display: flex;
   flex-grow: 0.1;
   border-right: 2px solid #fff;
 }
-.About__Us__part1__techfest__logo img {
+.About_Uspart1techfest_logo img {
   height: 250px;
   width: 300px;
 }
-.About__Us__part1__SLIET__logo img {
+.About_Uspart1SLIET_logo img {
   height: 260px;
   width: 270px;
 }
-.About__Us__part1__SLIET__logo {
+.About_Uspart1SLIET_logo {
   display: flex;
   justify-content: center;
   flex-grow: 0.1;
 }
-.About__Us__part2 {
+.About_Us_part2 {
   justify-content: center;
   margin-top: 5rem;
   flex-direction: column;
   text-align: center;
 }
-.About__Us__part2__text {
+.About_Uspart2_text {
   font-size: 1.3rem;
   color: #fff;
   padding-top: 1rem;
@@ -149,7 +148,9 @@
   font-weight: 400;
   text-align: center;
 }
-
+.AboutInfo1{
+  display: none;
+}
 .VariousTechfest{
   width: 100%;
   margin-top: 10rem;
@@ -157,6 +158,9 @@
 .last{
   border-bottom: none !important;
   margin-bottom: 50px;
+}
+.tfDivider{
+  display: none;
 }
 @media screen and (max-width: 1100px) {
   .About{
@@ -198,7 +202,7 @@
 
 
 @media only screen and (max-width: 790px) {
-  .About__Us__part2__text {
+  .About_Uspart2_text {
     width: 35rem;
   }
   .About{
@@ -222,21 +226,21 @@
 
 
 @media screen and (max-width: 769px) {
-  .About__Us__part2__text {
+  .About_Uspart2_text {
     width: 40rem;
   }
-  .About__Us__part1__techfest__logo img {
+  .About_Uspart1techfest_logo img {
     height: 200px;
     width: 250px;
   }
-  .About__Us__part1__SLIET__logo img {
+  .About_Uspart1SLIET_logo img {
     height: 210px;
     width: 220px;
   }
 }
 
 @media only screen and (max-width: 690px) {
-  .About__Us__part2__text {
+  .About_Uspart2_text {
     width: 35rem;
   }
   .About{
@@ -260,17 +264,62 @@
 }
 
 
-@media only screen and (max-width: 570px) {
-  .About__Us__part1__techfest__logo img {
+@media only screen and (max-width: 575px) {
+  .About_Uspart1techfest_logo img {
     height: 170px;
     width: 220px;
   }
-  .About__Us__part1__SLIET__logo img {
+  .About_Uspart1SLIET_logo img {
     height: 180px;
     width: 190px;
   }
-  .About__Us__part2__text {
+  .About_Uspart2_text {
     width: 25rem;
+  }
+  .tfDivider{
+    width: 100%;
+    position: absolute;
+    display: block;
+    bottom: 0;
+  }
+  .tfDivider img{
+    margin: 0 auto;
+    width: 90%;
+  }
+  .About{
+    width: 100%;
+  }
+  .AboutSliet{
+    margin: 0 auto;
+    width: 90%;
+  }
+  .AboutInfo{
+    display: none;
+  }
+  .AboutInfo1{
+    margin: 0 auto;
+    display: flex;
+    width: 90%;
+    justify-content: center;
+    align-items: center;
+    color:#fff
+  }
+  .Participants1{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-right: 2px solid #74EB76;
+  }
+  .Participants1 h4{
+    font-size: 0.8rem;
+    width: 70%;
+    text-align: center;
+    font-weight: 600;
+  }
+  .last1{
+    border-right: none;
   }
 }
 
@@ -302,17 +351,17 @@
   }
 }
 @media only screen and (max-width: 426px) {
-  .About__Us__part1__techfest__logo img {
+  .About_Uspart1techfest_logo img {
     height: 130px;
     width: 170px;
     margin-right: 20px;
   }
-  .About__Us__part1__SLIET__logo img {
+  .About_Uspart1SLIET_logo img {
     height: 140px;
     width: 150px;
     margin-left: 20px;
   }
-  .About__Us__part2__text {
+  .About_Uspart2_text {
     width: 20rem;
   }
   
@@ -335,16 +384,17 @@
     width: 20%;
     height: auto;
   }
+  
 }
 
 @media only screen and (max-width: 376px) {
-  .About__Us__part1__techfest__logo img {
+  .About_Uspart1techfest_logo img {
     margin-right: 0px;
   }
-  .About__Us__part1__SLIET__logo img {
+  .About_Uspart1SLIET_logo img {
     margin-left: 0px;
   }
-  .About__Us__part2__text {
+  .About_Uspart2_text {
     width: 17rem;
   }
   .About{
@@ -371,15 +421,15 @@
 }
 
 @media only screen and (max-width: 281px) {
-  .About__Us__part1__techfest__logo img {
+  .About_Uspart1techfest_logo img {
     height: 90px;
     width: 140px;
   }
-  .About__Us__part1__SLIET__logo img {
+  .About_Uspart1SLIET_logo img {
     height: 100px;
     width: 110px;
   }
-  .About__Us__part2__text {
+  .About_Uspart2_text {
     width: 15rem;
   }
   .About{

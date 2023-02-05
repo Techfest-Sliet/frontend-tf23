@@ -3,7 +3,7 @@ import { useNavigate } from "react-router";
 function OneCard({ pic, des,title }) {
   const navigate = useNavigate();
   return (
-    <div className="domainRing" onClick={()=>navigate(`/underConstruction`)}>
+    <div className="domainRing" onClick={()=>navigate(`/events/${title}`)}>
       <div className="outerring ">
         <div className="innerRing ">
           <div className="flip-card-back">

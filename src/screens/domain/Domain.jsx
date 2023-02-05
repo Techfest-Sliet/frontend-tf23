@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import OneCard from "../../components/domain/OneCard.jsx";
-import data, { domainSlider } from "../../dummy data/Domain.js";
+import data, { domainSlider } from "./dummyData.js";
 import SliderContent from "../../components/slider/SliderContent";
 import Arrows from "../../components/slider/Arrows.js";
 import Dots from "../../components/slider/Dots.js";

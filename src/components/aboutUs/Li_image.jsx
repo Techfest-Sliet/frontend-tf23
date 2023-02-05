@@ -12,8 +12,11 @@ function Li_image(props) {
             <h4 className='tagline'><i>{props?.tagline}</i></h4>
             <p className='Li_imageDetail'>{props?.detail}</p>
            </div>
-        </div>
     </div>
+        <div className="tfDivider">
+          <img src="/about-us/stats-sec.svg" alt="" />
+         </div>
+        </div>
   )
 }
 

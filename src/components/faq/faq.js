@@ -56,16 +56,16 @@ const ContactUs = () => {
                                 <div className='responsive_div'>
                                     <div className='faqs_domain_coordinator'>
                                         <img src={dummy} className="dummy_img" alt='...' />
-                                        <p>Sudhanshu Kumar</p>
+                                        <p>Sudhanshu Kumar </p>=
                                         <a className='faqs_number' href="tel:7488078452">
                                             7488078452
                                         </a>
                                     </div>
                                     <div className='faqs_domain_coordinator'>
                                         <img src={dummy} className="dummy_img" alt='...' />
-                                        <p>Prasant Kumar</p>
+                                        <p>Prasant Shahi</p>
                                         <a className='faqs_number' href="tel:8877515552">
-                                            8877515552
+                                        8877515552
                                         </a>
                                     </div>
                                 </div>
@@ -73,18 +73,18 @@ const ContactUs = () => {
                                 <div className='responsive_div'>
                                     <div className='faqs_domain_coordinator'>
                                         <img src={dummy} className="dummy_img" alt='...' />
-                                        <p>Aniket Mihir</p>
+                                        <p>Aniket Mihir </p>
                                         <a className='faqs_number' href="tel:8873013224">
-                                            8873013224
+                                        8873013224
                                         </a>
                                     </div>
-                                    <div className='faqs_domain_coordinator'>
+                                    {/* <div className='faqs_domain_coordinator'>
                                         <img src={dummy} className="dummy_img" alt='...' />
                                         <p>Lavanya</p>
                                         <a className='faqs_number' href="tel:9878990772">
                                         9878990772
                                         </a>
-                                    </div>
+                                    </div> */}
                                 </div>
                             </div>
 
