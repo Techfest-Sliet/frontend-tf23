@@ -110,7 +110,7 @@ const data = [
     {
         id: 1,
         question: "How to register on the website?",
-        answer: (<span>You can enter your details and sign up at <a href=' https://www.techfestsliet.com/signup' style={{ textDecoration: "none", color: "DodgerBlue" }}> https://www.techfestsliet.com/signup</a></span>)
+        answer: (<span>You can enter your details and sign up at <a href='https://www.techfestsliet.org/' style={{ textDecoration: "none", color: "DodgerBlue" }}> https://www.techfestsliet.com/signup</a></span>)
     },
     {
         id: 2,
