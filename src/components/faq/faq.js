@@ -56,7 +56,7 @@ const ContactUs = () => {
                                 <div className='responsive_div'>
                                     <div className='faqs_domain_coordinator'>
                                         <img src={dummy} className="dummy_img" alt='...' />
-                                        <p>Sudhanshu Kumar </p>=
+                                        <p>Sudhanshu Kumar </p>
                                         <a className='faqs_number' href="tel:7488078452">
                                             7488078452
                                         </a>
@@ -110,7 +110,7 @@ const data = [
     {
         id: 1,
         question: "How to register on the website?",
-        answer: (<span>You can enter your details and sign up at <a href=' https://www.techfestsliet.com/signup' style={{ textDecoration: "none", color: "DodgerBlue" }}> https://www.techfestsliet.com/signup</a></span>)
+        answer: (<span>You can enter your details and sign up at <a href='https://www.techfestsliet.org/' style={{ textDecoration: "none", color: "DodgerBlue" }}> https://www.techfestsliet.org/</a></span>)
     },
     {
         id: 2,
