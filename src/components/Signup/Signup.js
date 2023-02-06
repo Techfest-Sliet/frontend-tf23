@@ -4,7 +4,7 @@ import axios from "axios";
 import logo from "../../images/techFEST '23.webp";
 import { localUrl } from "../../API/api";
 import { Link, useNavigate } from "react-router-dom";
-// import vectorLogo from "../../images/Vector-Logo.png";
+// import vectorLogo from "Vector-Logo.png";
 
 const Signup = () => {
   const [name, setName] = useState("");
@@ -76,7 +76,7 @@ const Signup = () => {
     console.log(isLoading);
     console.log(user);
     await axios
-      .post(`${localUrl}/auth/signUp`, user)
+      .post(`${localUrl}/auth/signUp`,user)
       .then((result) => {
         const res = result;
         setIsLoading(false);
