@@ -2,7 +2,7 @@ import { useState } from "react";
 import styles from './Signin.module.css'
 import axios from "axios";
 import logo from "../../images/techFEST '23.webp";
-import { localUrl } from "../../API/api";
+import { localUrl, localUrlIns } from "../../API/api";
 import { Link, useNavigate } from "react-router-dom";
 // import vectorLogo from "../../images/Vector-Logo.png";
 

@@ -132,6 +132,7 @@ select option:hover {
   width: 35%;
   padding: 1em;
   overflow: overlay;
+  border-radius: 1rem;
   box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.47);
   -webkit-animation: bounce-in-top 1.1s both;
 	        animation: bounce-in-top 1.1s both;
@@ -398,15 +399,18 @@ input::placeholder {
   body {
     font-size: 11px;
   }
+  .signup__inputFields > input::placeholder {
+    font-size: 0.8rem;
+  }
+  .signup__inputFields > input {
+    font-size: 0.8rem;
+  }
+  .signup__label {
+    font-size: 1rem;
+  }
 }
 @media (max-width: 320px) {
   body {
     font-size: 11px;
-  }
-  .signup__inputFields > input::placeholder {
-    font-size: 1rem;
-  }
-  .signup__label {
-    font-size: 1rem;
   }
 }

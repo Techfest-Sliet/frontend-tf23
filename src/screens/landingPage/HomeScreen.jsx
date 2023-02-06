@@ -95,7 +95,7 @@ const navigate = useNavigate();
           <div className="trailerBox" style={{ marginTop: 4 }}>
             <iframe
               className="trailerVid"
-              src="https://www.youtube.com/embed/Nt58vSQqBU8"
+              src="https://www.youtube.com/embed/fHY-RI6Y5sg"
               title="YouTube video player"
               frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
