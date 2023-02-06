@@ -111,6 +111,7 @@ const data = [
         id: 1,
         question: "How to register on the website?",
         answer: (<span>You can enter your details and sign up at <a href='https://www.techfestsliet.org/' style={{ textDecoration: "none", color: "DodgerBlue" }}> https://www.techfestsliet.org/</a></span>)
+
     },
     {
         id: 2,
