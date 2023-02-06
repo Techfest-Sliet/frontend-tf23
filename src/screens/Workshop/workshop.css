@@ -99,6 +99,7 @@
   );
     height: auto;
     width: 100%;
+    flex-direction: column;
     display: flex;
     /* align-items: center; */
     justify-content: center;
@@ -122,48 +123,28 @@
     width: 45%;
     float: left;
     color: white; 
-    /* display: flex;
-    flex-direction: column; */
-    /* justify-content: left; */
-}
-
-.evntDesc {
-    display: flex;
-    /* justify-content: center; 
-    align-items: flex-start; */
-    flex-direction: column;
-    margin-bottom: 10px;
 }
 
 .LeftOfBox h2{
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 
 .RightOfBox {
     width: 40%;
     float: right;
-    bottom: 0px;
-    display: flex;
+    bottom: 0;
     /* height: 43vh; */
     color: white;
     /* position: absolute; */
-    /* display: flex;
-    justify-content: left; */
 }
 
 .objOfBox {
-    /* position: absolute; */
+    position: absolute;
     bottom: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
     /* flex-direction: row; */
-}
-
-.boxImg {
-    height: 40%;
-    width: 40%;
-    border-radius: 50%;
 }
 
 #registerNow {
@@ -184,15 +165,8 @@
     border-radius: 10px;
     color: white;
     margin: 15px 25px 7px 0;
-    float: left;
     cursor: pointer;
     border: 1px solid rgb(90, 86, 86);
-}
-
-@media screen and (max-width: 1055px){
-    .boxImg {
-        width: 70%;
-    }
 }
 
 @media screen and (max-width: 777px){
@@ -235,7 +209,7 @@
         height: 73%;
     }
     .explore_wrkshop{
-        top: 11vh;
+        top: 12vh;
     }
     .explore_wrkshop h2{
         font-size: 7vw;
@@ -246,8 +220,8 @@
     }
     .workshopBox {
         margin: 2rem 1rem 3rem 1rem;
-        padding: 25px 25px 27vw 25px;
-        width: 85%;
+        padding: 25px 25px 70px 25px;
+        width: 80%;
         height: auto;
     }
     .RightOfBox{
@@ -259,25 +233,9 @@
         float: none;
     }
     .objOfBox {
-        font-size: 2.8vw;
+        font-size: 2.5vw;
         bottom: auto;
         text-align: center;
-    }
-    .boxImg {
-        height: 30%;
-        width: 30%;
-    }
-}
-
-@media screen and (max-width: 550px) {
-    .objOfBox {
-        font-size: 3vw !important;
-    }
-}
-
-@media screen and (max-width: 456px) {
-    #viewSchedule {
-        margin-top: 8px;
     }
 }
 

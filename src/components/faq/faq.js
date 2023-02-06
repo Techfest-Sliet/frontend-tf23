@@ -56,7 +56,7 @@ const ContactUs = () => {
                                 <div className='responsive_div'>
                                     <div className='faqs_domain_coordinator'>
                                         <img src={dummy} className="dummy_img" alt='...' />
-                                        <p>Sudhanshu Kumar </p>
+                                        <p>Sudhanshu Kumar </p>=
                                         <a className='faqs_number' href="tel:7488078452">
                                             7488078452
                                         </a>
@@ -80,9 +80,9 @@ const ContactUs = () => {
                                     </div>
                                     {/* <div className='faqs_domain_coordinator'>
                                         <img src={dummy} className="dummy_img" alt='...' />
-                                        <p>Domain Coordinator </p>
-                                        <a className='faqs_number' href="tel:1234567890">
-                                            1234567890
+                                        <p>Lavanya</p>
+                                        <a className='faqs_number' href="tel:9878990772">
+                                        9878990772
                                         </a>
                                     </div> */}
                                 </div>
