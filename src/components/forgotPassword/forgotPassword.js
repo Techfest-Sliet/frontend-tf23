@@ -1,4 +1,5 @@
 import "./forgotPassword.css";
+import logo from "../../images/techFEST '23.webp";
 import reset from "../../images/reset.png";
 import { useState } from "react";
 import axios from "axios";
@@ -43,45 +44,44 @@ const ForgotPassword = () => {
         setSuccess(res.data.message);
         setTimeout(() => {
           setSuccess(null);
-        }, 5000)
+        }, 3000)
       }
-    })
+    });
   };
 
   return (
     <div className="forgotPassword forgotPassword__body">
-      <div>
+      {/* <div>
         <img
-          src="/tf23.webp"
+          src={logo}
           alt="techFestSLIET'23 logo"
           className="forgotPassword__bg"
         />
-      </div>
+      </div> */}
       <div className="forgotPassword__content">
         <img
           src={reset}
           alt="reset png"
           className="forgotPassword__reset-img"
-          />
+        />
         <h1 className="forgotPassword__title">
-          {success ? "Check your inbox!" : "Forgot Password?"}
+          {success ? "Check your inbox" : "Forgot Password?"}
           </h1>
         <p className="forgotPassword__text">
-        {success ? success : "No worries ! it happens, enter your E-mail and we’ll send you a reset link."}
+          {success ? "Reset link has been sent to your mail! Kindly check your inbox/spam" : " No worries ! it happens, enter your E-mail and we’ll send you a reset link."}
         </p>
         {fieldErr && <p className="forgotPassword__error">{fieldErr}</p>}
         {err && <p className="forgotPassword__error">{err}</p>}
-        <form method="post" action="" className="forgotPassword__inputFields">
+        <form method="post" className="forgotPassword__inputFields">
           <input
             placeholder="Enter your mail!"
             className="forgotPassword__input"
             type="email"
             id="email"
             name="email"
-            value={email}
             onChange={(e) => setEmail(e.target.value)}
             required
-          />
+          ></input>
           {mailErr && <p className="forgotPassword__error">{mailErr}</p>}
           <button type="button" onClick={PostData} value="forgotPassword"  className="forgotPassword__button">
             Send Request

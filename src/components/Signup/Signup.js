@@ -11,7 +11,7 @@ const Signup = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [cPassword, setCPassword] = useState("");
-  // const [phone, setPhone] = useState("");
+  const [phone, setPhone] = useState("");
   // const [course, setCourse] = useState("0");
   const [confirm_err, setConfirmErr] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
@@ -19,6 +19,10 @@ const Signup = () => {
   const [fieldErr, setFieldErr] = useState(null);
   const [mailErr, setMailErr] = useState(null);
   const [passwordErr, setPasswordErr] = useState(null);
+  const [phoneErr, setPhoneErr] = useState(null);
+  const [divOne, setDivOne] = useState(true);
+  const [divTwo, setDivTwo] = useState(false);
+
   const navigate = useNavigate();
 
   const handleConfirm = (value) => {
@@ -32,24 +36,23 @@ const Signup = () => {
     return false;
   };
 
-  const PostData = async (e) => {
-    e.preventDefault();
+  const showDivTwo = () => {
     if (
       email.trim().length === 0 ||
       password.trim().length === 0 ||
-      name.trim().length === 0
+      name.trim().length === 0 || cPassword.trim().length === 0
     ) {
       setFieldErr("Field should not be empty");
       setTimeout(() => {
         setFieldErr(null);
-      },3000);
+      }, 3000);
       return;
     }
     if (!email.trim().includes("@")) {
       setMailErr("Invalid mail!");
       setTimeout(() => {
         setMailErr(null);
-      },3000);
+      }, 3000);
       return;
     }
 
@@ -61,7 +64,56 @@ const Signup = () => {
       setPasswordErr("Atleast five characteres!");
       setTimeout(() => {
         setPasswordErr(null);
-      },3000);
+      }, 3000);
+      return;
+    } else {
+      setDivOne(false);
+      setDivTwo(true);
+    }
+  };
+  const showDivOne = () => {
+    setDivOne(true);
+    setDivTwo(false);
+  };
+
+  const PostData = async (e) => {
+    e.preventDefault();
+    if (
+      email.trim().length === 0 ||
+      password.trim().length === 0 ||
+      name.trim().length === 0 || cPassword.trim().length === 0 ||
+      phone.trim().length === 0
+    ) {
+      setFieldErr("Field should not be empty");
+      setTimeout(() => {
+        setFieldErr(null);
+      }, 3000);
+      return;
+    }
+    if (!email.trim().includes("@")) {
+      setMailErr("Invalid mail!");
+      setTimeout(() => {
+        setMailErr(null);
+      }, 3000);
+      return;
+    }
+
+    // if (name.trim().length <= 3) {
+    //   setErrors("Name should be 5 character long!");
+    //   return;
+    // }
+    if (password.length < 5) {
+      setPasswordErr("Atleast five characteres!");
+      setTimeout(() => {
+        setPasswordErr(null);
+      }, 3000);
+      return;
+    }
+    if (phone.length < 10) {
+      setPhoneErr("Invalid phone number!");
+      setTimeout(() => {
+        setPhoneErr(null);
+      }, 3000);
       return;
     }
 
@@ -69,14 +121,14 @@ const Signup = () => {
       name: name,
       email: email,
       password: password,
-      // phone: Number(phone),
+      phone: Number(phone),
       // course: course,
     };
     setIsLoading(true);
     console.log(isLoading);
     console.log(user);
     await axios
-      .post(`${localUrl}/auth/signUp`,user)
+      .post(`${localUrl}/auth/signUp`, user)
       .then((result) => {
         const res = result;
         setIsLoading(false);
@@ -89,15 +141,13 @@ const Signup = () => {
           }, 3000);
         } else if (res.status === 400 || res.status === 208) {
           setErrorsMade(res.data.message);
-
           setTimeout(() => {
-            navigate("/signUp");
-            setTimeout(() => {
-              setErrorsMade(null);
-            },3000);
+            if(res.data.message.includes('email')){
+              navigate("/signIn");
+            }
+            setErrorsMade(null);
           }, 3000);
-        } 
-        
+        }
       })
       .catch((err) => {
         setIsLoading(false);
@@ -124,85 +174,115 @@ const Signup = () => {
         <div>
           <img src={logo} alt="techFest'23" className={styles.signup__logo} />
         </div>
-        <div className={styles.signup__page}>
-          <form
-            method="post"
-            onSubmit="return myFormValidation()"
-            className={styles.signup__inputFields}
-            action=""
-          >
-            <h1 className={styles.signup__title}>Welcome!</h1>
-            <p style={{ color: "red" }}>
-              {fieldErr}
-            </p>
-            <label htmlFor="name" className={styles.signup__label}>
-              Name
-            </label>
-            <input
-              type="text"
-              id="name"
-              name="name"
-              placeholder="Enter your name"
-              value={name}
-              onChange={(e) => setName(e.target.value)}
-              required
-              autoFocus
-            />
-            <label htmlFor="email" className={styles.signup__label}>
-              E-mail
-            </label>
-            <p style={{ color: "red" }}>{errorsMade}</p>
-            <p style={{ color: "red" }}>{mailErr}</p>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              placeholder="Enter your email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              required
-            />
-            <label htmlFor="password" className={styles.signup__label}>
-              Password
-            </label>
-            <p style={{ color: "red" } }>{passwordErr}</p>
-            <input
-              placeholder="Enter your Password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              type="password"
-              required
-            />
-            <label htmlFor="cpassword" className={styles.signup__label}>
-              Confirm Password
-            </label>
-            <p style={{ color: "red" }}>{confirm_err}</p>
-            <input
-              value={cPassword}
-              placeholder="Confirm your password"
-              variant="standard"
-              onChange={(e) => handleConfirm(e.target.value)}
-              type="password"
-            />
 
-            <button
-              className={styles.signup__button}
-              value="signUp"
-              type="button"
-              onClick={PostData}
-              disabled={isLoading}
-            >
-              Sign Up
-            </button>
-            {/* </div> */}
-          </form>
-          <p className={styles.signup__text}>
-            Already have an account?{" "}
-            <Link to={"/signIn"}>
-              <span className={styles.signin__link}>Sign In</span>
-            </Link>
-          </p>
-        </div>
+        <form method="post" className={styles.signup__inputFields} action="">
+          {divTwo && (
+            <div className={styles.signup__page2}>
+              {errorsMade && <p style={{ color: "red" }}>{errorsMade}</p>}
+              <h1 className={styles.signup__title}>
+                Hi {name.slice(0, name.lastIndexOf(" "))}!
+              </h1>
+              {{ fieldErr } && <p style={{ color: "red" }}>{fieldErr}</p>}
+              <label htmlFor="phoneNumber" className={styles.signup__label}>
+                Phone
+              </label>
+              {phoneErr && <p style={{ color: "red" }}>{phoneErr}</p>}
+              <input
+                type="number"
+                id="phone"
+                name="phone"
+                placeholder="Enter your phone number"
+                value={phone}
+                onChange={(e) => setPhone(e.target.value)}
+                required
+              />
+              <button
+                className={styles.signup__button}
+                value="signUp"
+                type="button"
+                onClick={PostData}
+                disabled={isLoading}
+              >
+                Sign Up
+              </button>
+              <p className={styles.signup__text}>
+                Alter previous data?
+                <span className={styles.signin__link} onClick={showDivOne}>
+                  Back
+                </span>
+              </p>
+            </div>
+          )}
+
+          {divOne && (
+            <div className={styles.signup__page1}>
+              <h1 className={styles.signup__title}>Welcome!</h1>
+              {{ fieldErr } && <p style={{ color: "red" }}>{fieldErr}</p>}
+              <label htmlFor="name" className={styles.signup__label}>
+                Name
+              </label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Enter your name"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                required
+              />
+              <label htmlFor="email" className={styles.signup__label}>
+                E-mail
+              </label>
+              {mailErr && <p style={{ color: "red" }}>{mailErr}</p>}
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Enter your email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required
+              />
+              <label htmlFor="password" className={styles.signup__label}>
+                Password
+              </label>
+              {{ passwordErr } && <p style={{ color: "red" }}>{passwordErr}</p>}
+              <input
+                placeholder="Enter your Password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                type="password"
+                required
+              />
+              <label htmlFor="cpassword" className={styles.signup__label}>
+                Confirm Password
+              </label>
+              {{ confirm_err } && <p style={{ color: "red" }}>{confirm_err}</p>}
+              <input
+                value={cPassword}
+                placeholder="Confirm your password"
+                variant="standard"
+                onChange={(e) => handleConfirm(e.target.value)}
+                type="password"
+              />
+              <button
+                className={styles.signup__button}
+                value="next"
+                type="button"
+                onClick={showDivTwo}
+                disabled={isLoading}
+              >
+                Next
+              </button>
+              <p className={styles.signup__text}>
+                Already have an account?{" "}
+                <Link to={"/signIn"}>
+                  <span className={styles.signin__link}>Sign In</span>
+                </Link>
+              </p>
+            </div>
+          )}
+        </form>
       </div>
     </>
   );
