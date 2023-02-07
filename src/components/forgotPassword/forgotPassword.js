@@ -1,5 +1,4 @@
 import "./forgotPassword.css";
-import logo from "../../images/techFEST '23.webp";
 import reset from "../../images/reset.png";
 import { useState } from "react";
 import axios from "axios";
@@ -44,16 +43,16 @@ const ForgotPassword = () => {
         setSuccess(res.data.message);
         setTimeout(() => {
           setSuccess(null);
-        }, 3000)
+        }, 5000)
       }
-    });
+    })
   };
 
   return (
     <div className="forgotPassword forgotPassword__body">
       <div>
         <img
-          src={logo}
+          src="/tf23.webp"
           alt="techFestSLIET'23 logo"
           className="forgotPassword__bg"
         />
@@ -63,11 +62,12 @@ const ForgotPassword = () => {
           src={reset}
           alt="reset png"
           className="forgotPassword__reset-img"
-        />
-        <h1 className="forgotPassword__title">Forgot Password?</h1>
+          />
+        <h1 className="forgotPassword__title">
+          {success ? "Check your inbox!" : "Forgot Password?"}
+          </h1>
         <p className="forgotPassword__text">
-          No worries ! it happens, enter your E-mail and we’ll send you a reset
-          link.
+        {success ? success : "No worries ! it happens, enter your E-mail and we’ll send you a reset link."}
         </p>
         {fieldErr && <p className="forgotPassword__error">{fieldErr}</p>}
         {err && <p className="forgotPassword__error">{err}</p>}
@@ -78,9 +78,10 @@ const ForgotPassword = () => {
             type="email"
             id="email"
             name="email"
+            value={email}
             onChange={(e) => setEmail(e.target.value)}
             required
-          ></input>
+          />
           {mailErr && <p className="forgotPassword__error">{mailErr}</p>}
           <button type="button" onClick={PostData} value="forgotPassword"  className="forgotPassword__button">
             Send Request
