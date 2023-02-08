@@ -122,7 +122,7 @@ function AboutUs() {
       <div className="VariousTechfest">
         {/* //eslint-disable-next-line */}
          
-        <LiImage img={"/about-us/group-7671.svg"} heading={"techFEST’23"} tagline={'Innovation in Agriculture'}
+        <LiImage img={"/about-us/Group 767.webp"} heading={"techFEST’23"} tagline={'Innovation in Agriculture'}
          detail={'With 40+ Events and an aim to take up the Ultimate Leap in Technology for Agriculture, this year.'}/>
          
 {/* //eslint-disable-next-line */}
@@ -132,7 +132,7 @@ function AboutUs() {
 {/* //eslint-disable-next-line */}
          
          <LiImage img={"/about-us/Group 768.png"} heading={"techFEST’21"} tagline={'Revitalizing India'}
-         detail={'With 30+ Universities Accross the Nation we ensured that together we come up with technologies Revitalising India.'}/>
+         detail={'With 30+ Universities Across the Nation we ensured that together we come up with technologies Revitalising India.'}/>
          {/* //eslint-disable-next-line */}
          <RiImage img={"/about-us/Group 769.png"} heading={"techFEST’20"} tagline={'Pedalling towards Cosmic Yantra'}
          detail={'It instigated the innovation in space and we expanded our wings to more 30 universities all over the country.'}/>

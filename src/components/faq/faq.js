@@ -89,7 +89,7 @@ const ContactUs = () => {
                             </div>
 
 
-                            <p className='faqs_support'>or write us at  <a href="/contactUs" style={{ textDecoration: "none", color: "DodgerBlue" }}>support@techfestsliet.com</a></p>
+                            <p className='faqs_support'>or write us at  <a href="mailto:web.techfest@sliet.ac.in" style={{ textDecoration: "none", color: "DodgerBlue" }}>web.techfest@sliet.ac.in</a></p>
                             <p className='faqs_footer'> Stay Updated Here !</p>
 
                         </div>
@@ -116,7 +116,7 @@ const data = [
     {
         id: 2,
         question: "When is techFEST'23?",
-        answer: "The techfest is scheduled to be held on 17th-18th March."
+        answer: "The techfest is scheduled to be held on 24th-25th March."
     },
     {
         id: 3,
