@@ -411,10 +411,18 @@ input::placeholder {
   .signin__label {
     font-size: 1rem;
   }
+  .signin__inputFields > input {
+    font-size: 1rem;
+    width: 75%;
+  }
 }
-@media (max-width: 425px) {
+@media (max-width: 445px) {
   body {
     font-size: 12px;
+  }
+  .signin__inputFields > input {
+    font-size: 0.8rem;
+    width: 80%;
   }
 }
 @media (max-width: 375px) {
@@ -422,12 +430,13 @@ input::placeholder {
     font-size: 11px;
   }
 }
-@media (max-width: 320px) {
+@media (max-width: 337px) {
   body {
     font-size: 11px;
   }
   .signin__inputFields > input {
-    font-size: 1rem;
+    font-size: 0.8rem;
+    width: 90%;
   }
   .signin__label {
     font-size: 1rem;

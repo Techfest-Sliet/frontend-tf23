@@ -19,44 +19,46 @@ const Signin = () => {
   const navigate = useNavigate();
 
   const userLoginHandle = async (authData) => {
-    const result = await axios({
-      method: "post",
-      data: authData,
-      url: `${localUrl}/auth/signIn`,
-    });
-    alert(JSON.stringify(result));
-    const res = result;
-    alert(res)
-    if (res.status === 204) {
-      setMailErr(res.data.message);
-      setTimeout(() => {
-        navigate("/signUp");
-      }, 3000);
-    } else if (res.status === 208) {
-      setPasswordErr(res.data.message);
-      setTimeout(() => {
-        setPasswordErr(null);
-      }, 3000);
-      return;
-    }
-    if (res.status === 200) {
-      alert(res.data.userRole);
-      const userData = {
-        token: res.data.token,
-        userId: res.data.userId,
-        userRole: res.data.userRole,
-      };
-      authContext.login(userData);
-      if (res.data.userRole === 2) {
-        navigate("/aboutUs");
-      } 
-      if (res.data.userRole === 1) {
-        localStorage.setItem("userRole", res.data.userRole);
-        navigate("/");
-      }
-    } else {
-      setErrorsMade(res.data.message);
-    }
+    await axios
+      .post(`${localUrl}/auth/signIn`, authData)
+      .then((result) => {
+        const res = result;
+        if (res.status === 204) {
+          alert(res.data.message);
+          setMailErr(res.data.message);
+          setTimeout(() => {
+            setPasswordErr(null);
+            navigate("/signUp");
+          }, 3000);
+        } else if (res.status === 208) {
+          setPasswordErr(res.data.message);
+          setTimeout(() => {
+            setPasswordErr(null);
+          }, 3000);
+          return;
+        }
+        if (res.status === 200) {
+          const userData = {
+            token: res.data.token,
+            userId: res.data.userId,
+            userRole: res.data.userRole,
+          };
+          authContext.login(userData);
+          if (res.data.userRole === 2) {
+            navigate("/aboutUs");
+          }
+          if (res.data.userRole === 1) {
+            alert(res.data.userRole);
+            navigate("/");
+          }
+        } else {
+          setErrorsMade(res.data.message);
+        }
+      })
+      .catch((err) => {
+        console.log(err);
+        return;
+      });
   };
 
   const PostData = async (e) => {
@@ -75,24 +77,23 @@ const Signin = () => {
       }, 3000);
       return;
     }
-    // console.log(user);
     const user = {
       email: email,
       password: password,
     };
     setIsLoading(true);
-    // console.log(user);
     userLoginHandle(user);
   };
 
   return (
     <>
-      {errorsMade && <p style={{ color: "red" }}>{errorsMade}</p>}
       <div className={styles.signin__content}>
         <div>
           <img src={logo} alt="techFest'23" className={styles.signin__logo} />
         </div>
         <div className={styles.signin__page}>
+          {errorsMade && <p style={{ color: "red" }}>{errorsMade}</p>}
+          {/* {mailErr && <p style={{ color: "red" }}>{mailErr}</p>} */}
           <form
             method="post"
             onSubmit="return myFormValidation()"
@@ -115,7 +116,6 @@ const Signin = () => {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
-              autoFocus
             />
             <label htmlFor="password" className={styles.signin__label}>
               Password

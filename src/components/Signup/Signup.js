@@ -22,6 +22,7 @@ const Signup = () => {
   const [phoneErr, setPhoneErr] = useState(null);
   const [divOne, setDivOne] = useState(true);
   const [divTwo, setDivTwo] = useState(false);
+  let stringArray = name.split(/(\s+)/);
 
   const navigate = useNavigate();
 
@@ -180,7 +181,7 @@ const Signup = () => {
             <div className={styles.signup__page2}>
               {errorsMade && <p style={{ color: "red" }}>{errorsMade}</p>}
               <h1 className={styles.signup__title}>
-                Hi {name.slice(0, name.lastIndexOf(" "))}!
+                Hi {stringArray[0]}!
               </h1>
               {{ fieldErr } && <p style={{ color: "red" }}>{fieldErr}</p>}
               <label htmlFor="phoneNumber" className={styles.signup__label}>
