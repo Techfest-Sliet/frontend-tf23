@@ -5,7 +5,7 @@ export const datasOfEvent = [
         nameOfEvent: "AGRO-Dhara",
         desc: "A system sensing and responding to stimuli around it just as a human body does. Isn't it fascinating. Here's the opportunity to pitch your brain to design a sensor system. Participate in our event and win worth cash prizes.",
         register: (<span><Link to={"/underConstruction"} rel='noopener noreferrer' href='https://www.google.com/' style={{ textDecoration: "none", color: "white" }}>Register Now</Link></span>),
-        schedule: (<span><Link to={"/underConstruction"} rel='noopener noreferrer' href='https://www.google.com/' style={{ textDecoration: "none", color: "white" }}>Problem Statement</Link></span>),
+        schedule: (<span><a rel='noopener noreferrer' href='https://drive.google.com/file/d/1wJu4BCTeEHJQhnnjQNB20RghJEuNiJ74/view?usp=share_link' style={{ textDecoration: "none", color: "white" }}>Problem Statement</a></span>),
         prizeMoney: "₹ 15,000",
         dateBefore: "11/03",
         coor: [
@@ -22,7 +22,7 @@ export const datasOfEvent = [
         nameOfEvent: "Arduino Imagino",
         desc: "What's better than finding a substitute that makes the work more efficient. This task requires you to design a assisted circuit with sensors for the task specified. Imagine with your Arduino knowledge and participate in our event to avail worthy cash prizes.",
         register: (<span><Link to={"/underConstruction"} rel='noopener noreferrer' href='https://www.wikipedia.com/' style={{ textDecoration: "none", color: "white" }}>Register Now</Link></span>),
-        schedule: (<span><Link to={"/underConstruction"} rel='noopener noreferrer' href='https://www.google.com/' style={{ textDecoration: "none", color: "white" }}>Problem Statement</Link></span>),
+        schedule: (<span><a rel='noopener noreferrer' href='https://drive.google.com/file/d/1i-7cemF6lYrV2w9aIuAcWeC7wA6RyNeV/view?usp=share_link' style={{ textDecoration: "none", color: "white" }}>Problem Statement</a></span>),
         prizeMoney: "₹ 14,000",
         dateBefore: "15/03",
         coor: [
@@ -38,7 +38,7 @@ export const datasOfEvent = [
         nameOfEvent: "Clean the Sun",
         desc: "Solar Energy, though renewable, do need maintenance in its devices to remain conventional. This event demands to present your idea of automated cleaner for solar panel in the form of models. Participate in our event and get awarded with handsome cash prizes.",
         register: (<span><Link to={"/underConstruction"} rel='noopener noreferrer' href='https://www.google.com/' style={{ textDecoration: "none", color: "white" }}>Register Now</Link></span>),
-        schedule: (<span><Link to={"/underConstruction"} rel='noopener noreferrer' href='https://www.google.com/' style={{ textDecoration: "none", color: "white" }}>Problem Statement</Link></span>),
+        schedule: (<span><a rel='noopener noreferrer' href='https://drive.google.com/file/d/1LXPX9ybiJ-wmh9rGFQ68vSIOK8wsoQWX/view?usp=share_link' style={{ textDecoration: "none", color: "white" }}>Problem Statement</a></span>),
         prizeMoney: "₹ 15,000",
         dateBefore: "1/03",
         coor: [
@@ -55,7 +55,7 @@ export const datasOfEvent = [
         nameOfEvent: "Electromate",
         desc: "Give someone a vision and light up their whole world. Taking in consideration number of people who lose their sight, this event seeks ideas from the participants to design. Ultrasonic Blind Walking Stick. Participate in this event and avail handsome cash prizes.",
         register: (<span><Link to={"/underConstruction"} rel='noopener noreferrer'  style={{ textDecoration: "none", color: "white" }}>Register Now</Link></span>),
-        schedule: (<span><Link to={"/underConstruction"} rel='noopener noreferrer'  style={{ textDecoration: "none", color: "white" }}>Problem Statement</Link></span>),
+        schedule: (<span><a  rel='noopener noreferrer' href='https://drive.google.com/file/d/1i776Q3-AIRwPHACIUsczy6U9_bu-lpGp/view?usp=share_link' style={{ textDecoration: "none", color: "white" }}>Problem Statement</a></span>),
         prizeMoney: "₹ 10,000",
         dateBefore: "1/03",
         coor: [
@@ -72,7 +72,7 @@ export const datasOfEvent = [
         nameOfEvent: "Navrithi",
         desc: "Seeking a way to reach out to help to the farmers around you? Well, here's the right platform. ",
         register: (<span><Link to={"/underConstruction"} rel='noopener noreferrer' href='https://www.google.com/' style={{ textDecoration: "none", color: "white" }}>Register Now</Link></span>),
-        schedule: (<span><Link to={"/underConstruction"} rel='noopener noreferrer' href='https://www.google.com/' style={{ textDecoration: "none", color: "white" }}>Problem Statement</Link></span>),
+        schedule: (<span><a  rel='noopener noreferrer' href='https://drive.google.com/file/d/11Av0YfXNjT_--TqwWEnyo4xfsvuXtjXk/view?usp=share_link' style={{ textDecoration: "none", color: "white" }}>Problem Statement</a></span>),
         prizeMoney: "₹ 7,000",
         dateBefore: "1/03",
         coor: [

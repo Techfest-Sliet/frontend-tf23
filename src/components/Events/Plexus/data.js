@@ -5,7 +5,7 @@ export const datasOfEvent = [
         nameOfEvent: "Code Sprint",
         desc: "Heard Competitive Programmers cracking Top-notch Companies. Here's the secret. They've been analyzing themselves thoroughly.Participate in our event Codesprint and push yourself to get ahead in your programming skills.",
         register: (<span><Link to={"/underConstruction"} rel='noopener noreferrer' href='https://www.wikipedia.com/' style={{ textDecoration: "none", color: "white" }}>Register Now</Link></span>),
-        schedule: (<span><Link to={"/underConstruction"} rel='noopener noreferrer' href='https://www.google.com/' style={{ textDecoration: "none", color: "white" }}>Problem Statement</Link></span>),
+        schedule: (<span><a rel='noopener noreferrer' href='https://drive.google.com/file/d/1_B2_ivxzfKa-p--xK3EN9y6e0GIUjyV3/view?usp=share_link' style={{ textDecoration: "none", color: "white" }}>Problem Statement</a></span>),
         prizeMoney: "₹ 12,000",
         dateBefore: "15/03",
         coor: [{
@@ -27,7 +27,7 @@ export const datasOfEvent = [
         nameOfEvent: "Data dynamics",
         desc: "It's time to get dynamic with your Data Science knowledge. Use your programming knowledge and combine it with statistical knowledge to get insights from data. Participate in our event Data Dynamic and win worth cash prizes.",
         register: (<span><Link to={"/underConstruction"} rel='noopener noreferrer' href='https://www.wikipedia.com/' style={{ textDecoration: "none", color: "white" }}>Register Now</Link></span>),
-        schedule: (<span><Link to={"/underConstruction"} rel='noopener noreferrer' href='https://www.google.com/' style={{ textDecoration: "none", color: "white" }}>Problem Statement</Link></span>),
+        schedule: (<span><a rel='noopener noreferrer' href='https://drive.google.com/file/d/15xSbDOWM_0wyfwyw1Fup4D36vfj6XAtP/view?usp=share_link' style={{ textDecoration: "none", color: "white" }}>Problem Statement</a></span>),
         prizeMoney: "₹ 12,000",
         dateBefore: "15/03",
         coor: [
@@ -50,7 +50,7 @@ export const datasOfEvent = [
         nameOfEvent: "Tech-n-IQ",
         desc: "Though Cheetah is the fastest, horse runs no slow. Here's to the event creating a healthy competition between best brains yet differing in speed.Set your mettle high and participate in our event to win handsome cash prizes",
         register: (<span><Link to={"/underConstruction"} rel='noopener noreferrer' href='https://www.wikipedia.com/' style={{ textDecoration: "none", color: "white" }}>Register Now</Link></span>),
-        schedule: (<span><Link to={"/underConstruction"} rel='noopener noreferrer' href='https://www.google.com/' style={{ textDecoration: "none", color: "white" }}>Problem Statement</Link></span>),
+        schedule: (<span><a rel='noopener noreferrer' href='https://drive.google.com/file/d/1pMTzeWZhvCkfqH4WIfg4eqyDIP5xLhSl/view?usp=share_link' style={{ textDecoration: "none", color: "white" }}>Problem Statement</a></span>),
         prizeMoney: "₹ 9,000",
         dateBefore: "15/03",
         coor: [{
@@ -72,7 +72,7 @@ export const datasOfEvent = [
         nameOfEvent: "Pixel Wizard",
         desc: "Finding difficulty in accessing the information of your school's site? Present your own interface by creating a website all from scratch. Participate in our event Pixel Wizard and win worth cash prizes.",
         register: (<span><Link to={"/underConstruction"} rel='noopener noreferrer' href='https://www.wikipedia.com/' style={{ textDecoration: "none", color: "white" }}>Register Now</Link></span>),
-        schedule: (<span><Link to={"/underConstruction"} rel='noopener noreferrer' href='https://www.google.com/' style={{ textDecoration: "none", color: "white" }}>Problem Statement</Link></span>),
+        schedule: (<span><a rel='noopener noreferrer' href='https://drive.google.com/file/d/1n1VbD1yICWe8Z6eTgDjfAQqEPi48oix1/view?usp=sharing' style={{ textDecoration: "none", color: "white" }}>Problem Statement</a></span>),
         prizeMoney: "₹ 14,000",
         dateBefore: "15/03",
         coor: [{

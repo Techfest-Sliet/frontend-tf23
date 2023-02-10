@@ -1,11 +1,32 @@
-import React from 'react';
+import React,{useState} from 'react';
 import './EventBox.css';
 import { FaRegCalendar, FaRegClock } from "react-icons/fa";
+import ErrorModel from '../ErrorPopup/ErrorModel';
+import { Schedule } from '@mui/icons-material';
+
 
 function EventBox({ props, index }) {
+const[errorMade,setErrorMade] = useState();
+const onErrorMadeHandle = () => {
+setErrorMade(null);
+}
     const coor_len = (props?.coor).length;
+    const onErrorHappen = () => {
+        setErrorMade({title:"Register Now",message:"Coming Soon"})
+    }
+    const onErrorHappen1 = () => {
+        setErrorMade({title:"Problem Statement",message:"Coming Soon"})
+    } 
+
     return (
         <>
+        {errorMade && 
+  <ErrorModel 
+  title={errorMade.title}
+  message={errorMade.message}
+  onErrorClick={onErrorMadeHandle}
+  />
+  }
             {
                 (coor_len === 1) ? (
                     <div className='eventBoxSingle' key={index}>
@@ -15,8 +36,8 @@ function EventBox({ props, index }) {
                                 <h1 style={{ textAlign: "left" }}>{props?.nameOfEvent}</h1>
                                 <p style={{ textAlign: "left" }}>{props?.desc}</p>
                                 <div style={{ float: "left" }}>
-                                    <button className='registerNowEvent'> {props?.register} </button>
-                                    <button className='problemStat'> {props?.schedule} </button>
+                                    <button className='registerNowEvent' onClick={onErrorHappen}> Register Now </button>
+                                    <button className='problemStat' > {props?.schedule} </button>
                                 </div>
                                 <div style={{ float: "left" }}>
                                     <h2 style={{ marginTop: "6px", textAlign: "left" }}>Prizes Worth <br></br> {props?.prizeMoney} </h2>
@@ -59,7 +80,7 @@ function EventBox({ props, index }) {
                                 <h1 style={{ textAlign: "left" }}>{props?.nameOfEvent}</h1>
                                 <p style={{ textAlign: "left" }}>{props?.desc}</p>
                                 <div style={{ float: "left" }}>
-                                    <button className='registerNowEvent'> {props?.register} </button>
+                                    <button className='registerNowEvent' onClick={onErrorHappen}> Register Now </button>
                                     <button className='problemStat'> {props?.schedule} </button>
                                 </div>
                                 <div style={{ float: "left" }}>

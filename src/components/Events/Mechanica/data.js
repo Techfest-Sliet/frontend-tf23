@@ -5,7 +5,7 @@ export const datasOfEvent = [
         nameOfEvent: "Hydraload",
         desc: "Issue with mass manufacturing operations or steering of cars? Well, A Hydraulic Arm can resolve this. This task requires you to design a Hydraulic Arm capable of performing various operations. Participate in our event and win handsome cash prizes.",
         register: (<span><Link to={"/underConstruction"} rel='noopener noreferrer' href='https://www.google.com/' style={{ textDecoration: "none", color: "white" }}>Register Now</Link></span>),
-        schedule: (<span><Link to={"/underConstruction"} rel='noopener noreferrer' href='https://www.google.com/' style={{ textDecoration: "none", color: "white" }}>Problem Statement</Link></span>),
+        schedule: (<span><a rel='noopener noreferrer' href='https://www.google.com/' style={{ textDecoration: "none", color: "white" }}>Problem </a></span>),
         prizeMoney: "₹ 14,000",
         dateBefore: "11/03",
         coor: [{
@@ -19,7 +19,7 @@ export const datasOfEvent = [
         nameOfEvent: "Trussload",
         desc: "Less Input, More output is what defines Smart Work. Isn't it? Then why not design a bridge that follows the same principle. Participate in our event to avail worth cash prizes.",
         register: (<span><Link to={"/underConstruction"} rel='noopener noreferrer' href='https://www.wikipedia.com/' style={{ textDecoration: "none", color: "white" }}>Register Now</Link></span>),
-        schedule: (<span><Link to={"/underConstruction"} rel='noopener noreferrer' href='https://www.google.com/' style={{ textDecoration: "none", color: "white" }}>Problem Statement</Link></span>),
+        schedule: (<span><a rel='noopener noreferrer' href='https://drive.google.com/file/d/1XoAEhkNAr5ZfANSlbJj-rGf5tCcHQWxK/view?usp=sharing' style={{ textDecoration: "none", color: "white" }}>Problem Statement</a></span>),
         prizeMoney: "₹ 14,000",
         dateBefore: "15/03",
         coor: [{
@@ -33,7 +33,7 @@ export const datasOfEvent = [
         nameOfEvent: "Fabriquer",
         desc: "The best way to test your knowledge is to implement it practically. Drill through your brains and weld your knowledge. This event demands from you to fabricate a machine making use of your workshop knowledge. Participate in our event and win worth cash prizes.",
         register: (<span><Link to={"/underConstruction"} rel='noopener noreferrer' href='https://www.google.com/' style={{ textDecoration: "none", color: "white" }}>Register Now</Link></span>),
-        schedule: (<span><Link to={"/underConstruction"} rel='noopener noreferrer' href='https://www.google.com/' style={{ textDecoration: "none", color: "white" }}>Problem Statement</Link></span>),
+        schedule: (<span><a  rel='noopener noreferrer' href='https://drive.google.com/file/d/1E9BgX9IdhxCHiDvBfXUjQ9__5v1hq9a6/view?usp=sharing' style={{ textDecoration: "none", color: "white" }}>Problem Statement</a></span>),
         prizeMoney: "₹ 8,000",
         dateBefore: "1/03",
         coor: [{
@@ -47,7 +47,7 @@ export const datasOfEvent = [
         nameOfEvent: "Designare",
         desc: "A picture is worth a thousand words. And so does the design. A efficient design of any system requires analytical thinking and a CAD provides a wholesome idea of it. Participate in our event Designare and win worth cash prizes.",
         register: (<span><Link to={"/underConstruction"} rel='noopener noreferrer' href='https://www.google.com/' style={{ textDecoration: "none", color: "white" }}>Register Now</Link></span>),
-        schedule: (<span><Link to={"/underConstruction"} rel='noopener noreferrer' href='https://www.google.com/' style={{ textDecoration: "none", color: "white" }}>Problem Statement</Link></span>),
+        schedule: (<span><a rel='noopener noreferrer' href='https://drive.google.com/file/d/1I11xKR8hZ_TtgRxdjRyjoWrtcwLksM0j/view?usp=sharing' style={{ textDecoration: "none", color: "white" }}>Problem Statement</a></span>),
         prizeMoney: "₹ 9,000",
         dateBefore: "1/03",
         coor: [{
