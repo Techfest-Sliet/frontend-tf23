@@ -5,7 +5,6 @@ import logo from "../../images/techFEST '23.webp";
 import { localUrl } from "../../API/api";
 import { Link, useNavigate } from "react-router-dom";
 import AuthContext from "../../auth/authContext";
-// import vectorLogo from "../../images/Vector-Logo.png";
 
 const Signin = () => {
   const authContext = useContext(AuthContext);
@@ -24,10 +23,8 @@ const Signin = () => {
       .then((result) => {
         const res = result;
         if (res.status === 204) {
-          alert(res.data.message);
-          setMailErr(res.data.message);
           setTimeout(() => {
-            setPasswordErr(null);
+            setMailErr(null);
             navigate("/signUp");
           }, 3000);
         } else if (res.status === 208) {
@@ -44,13 +41,7 @@ const Signin = () => {
             userRole: res.data.userRole,
           };
           authContext.login(userData);
-          if (res.data.userRole === 2) {
-            navigate("/aboutUs");
-          }
-          if (res.data.userRole === 1) {
-            alert(res.data.userRole);
-            navigate("/");
-          }
+          navigate('/userDashboard');
         } else {
           setErrorsMade(res.data.message);
         }
@@ -93,7 +84,6 @@ const Signin = () => {
         </div>
         <div className={styles.signin__page}>
           {errorsMade && <p style={{ color: "red" }}>{errorsMade}</p>}
-          {/* {mailErr && <p style={{ color: "red" }}>{mailErr}</p>} */}
           <form
             method="post"
             onSubmit="return myFormValidation()"
@@ -137,7 +127,7 @@ const Signin = () => {
               >
                 Sign In
               </button>
-              <Link to="/forgotPassword">Forgot Password?</Link>
+              <Link to="/verify">Verify email!</Link>
             </div>
             {/* </div> */}
           </form>

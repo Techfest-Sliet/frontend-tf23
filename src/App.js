@@ -1,5 +1,5 @@
 import "./index.css";
-import React from "react";
+import React, {useContext, useState} from "react";
 import { Route, Routes } from "react-router";
 import { Navbar } from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
@@ -23,13 +23,29 @@ import Loading from "./components/loading/Loading";
 import UnderConstruction from "./components/Construction/underConstruction.js";
 import ForgotPassword from "./components/forgotPassword/forgotPassword";
 import Aboutus from '../src/screens/About us/AboutUs.jsx';
+import UserDashboard from './components/userDashboard/userDash.jsx';
+import AuthContext from './auth/authContext';
+import Verify from './components/verify/verify';
 import Popup from './components/Popup/Popup.js';
 import Events from './components/domain/OneCard.jsx';
+import ErrorModel from './components/ErrorPopup/ErrorModel';
 function App() {
+  const authContext = useContext(AuthContext);
+  const {isUserLoggedIn, setUserLoggedIn} = authContext;
+  const [errorMade, setErrorMade] = useState();
+  const onErrorMadeHandle = () => {
+    setErrorMade(null);
+  }
+  const logOutHandler = () => {
+    setUserLoggedIn(false);
+    localStorage.removeItem("token");
+    localStorage.removeItem("userId");
+    localStorage.removeItem("expirationDate");
+  };
   return (
     <>
       <div className="App">
-        <Navbar />
+        <Navbar isAuth={isUserLoggedIn} onLogout={logOutHandler}/>
         <Footer />
         <Routes>
           <Route path="/domains" element={<DomainScreen />} />
@@ -53,9 +69,18 @@ function App() {
           <Route path="/forgotPassword" element={<ForgotPassword />} />
           <Route path="/aboutUs" element={<Aboutus/>} />
           <Route path="/popup" element={<Popup/>} />
+          <Route path="/verify" element={<Verify/>} />
           <Route path="/events/:title" element={<Events/>} />
+           {authContext.isUserLoggedIn && <Route path="/userDashboard" element={<UserDashboard/>} />}
         </Routes>
       </div>
+      {errorMade && 
+        <ErrorModel 
+          title={errorMade.title}
+          message={errorMade.message}
+          onErrorClick={onErrorMadeHandle}
+        />
+      }
     </>
   );
 }

@@ -133,7 +133,12 @@ navbar{
     padding-left: 0.7em;
     text-align: center;
     justify-content: center;
-    background-image: linear-gradient(to right, rgb(9, 64, 0), rgb(13, 220, 9));
+    /* background-image: linear-gradient(to right, rgb(9, 64, 0), rgb(13, 220, 9)); */
+    background: linear-gradient(89.89deg, #003805 0.06%, #467814 102.53%);
+    border-radius: 13px;
+}
+.signInButton:hover {
+    background-color: black;
 }
 
 .hamburger, .toggle-menu{

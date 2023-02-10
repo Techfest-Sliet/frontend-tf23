@@ -76,6 +76,19 @@ a {
   font-size: 1.6em;
   margin-bottom: 0.4em;
 }
+.signup__select {
+  background-color: transparent;
+  color: #fff;
+  border: 0;
+  outline: 0;
+  width: 70%;
+  border-bottom: 1.5px solid #fff;
+  margin-bottom: 1.5em;
+  width: 70%;
+  font-size: 1.2rem;
+  display: flex;
+  flex-direction: column;
+}
 
 select option {
   background-color: #054611;
@@ -259,18 +272,6 @@ select option:hover {
   font-weight: bold;
   margin-left: 0.1em;
   cursor: pointer;
-}
-
-.signup__select {
-  background-color: transparent;
-  color: #fff;
-  padding: 0.3em;
-  border: 0;
-  outline: 0;
-  font-size: 1em;
-  width: 50%;
-  border-bottom: 1.5px solid #fff;
-  margin: 0;
 }
 
 .signup__button {

@@ -39,7 +39,6 @@ export const AuthContextProvider = props => {
     }
 
     const loginHandler = user => {
-        console.log(user);
         localStorage.setItem('jwtToken', user.token);
         localStorage.setItem('userId', user.userId);
         localStorage.setItem('userRole', user.userRole);
