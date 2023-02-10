@@ -5,7 +5,7 @@ export const datasOfEvent = [
         nameOfEvent: "COD Mobile",
         desc: "Shoot yourself up for a fascinating gameplay. Call yourself off for our event COD Mobile and win amazing cash prizes.",
         register: (<span><Link to={"/underConstruction"} rel='noopener noreferrer' href='https://www.google.com/' style={{ textDecoration: "none", color: "white" }}>Register Now</Link></span>),
-        schedule: (<span><a rel='noopener noreferrer' href='https://drive.google.com/file/d/1C3u7EwjQVfLrTbgG_2-BE-IRfXD8Gi9F/view?usp=sharing' style={{ textDecoration: "none", color: "white" }}>Problem Statement</a></span>),
+        schedule: (<span><a rel='noopener noreferrer' target='_blank' href='https://drive.google.com/file/d/1C3u7EwjQVfLrTbgG_2-BE-IRfXD8Gi9F/view?usp=sharing' style={{ textDecoration: "none", color: "white" }}>Problem Statement</a></span>),
         prizeMoney: "₹ 10,000",
         dateBefore: "11/03",
         coor: [
@@ -22,7 +22,7 @@ export const datasOfEvent = [
         nameOfEvent: "Valorant Campus Stars",
         desc: "Analyze your swift and tactical abilities and see where you stand in par of opponents. Come up valiant and participate in our event Valorant to avail worthy cash prizes.",
         register: (<span><Link to={"/underConstruction"} rel='noopener noreferrer' href='https://www.wikipedia.com/' style={{ textDecoration: "none", color: "white" }}>Register Now</Link></span>),
-        schedule: (<span><a rel='noopener noreferrer' href='https://drive.google.com/file/d/1e5DKLu-jo-6J1NyREJgCj-RnuW65sdpX/view?usp=share_link' style={{ textDecoration: "none", color: "white" }}>Problem Statement</a></span>),
+        schedule: (<span><a rel='noopener noreferrer' target='_blank' href='https://drive.google.com/file/d/1e5DKLu-jo-6J1NyREJgCj-RnuW65sdpX/view?usp=share_link' style={{ textDecoration: "none", color: "white" }}>Problem Statement</a></span>),
         prizeMoney: "₹ 8,000",
         dateBefore: "15/03",
         coor: [
@@ -36,10 +36,10 @@ export const datasOfEvent = [
         ]
     },
     {
-        nameOfEvent: "Satranj ka Shahenshah",
+        nameOfEvent: "Satranj",
         desc: "Amidst the black and white squares, get yourself some colourful fun by participating in our event Satranj ke Shershah and avail worthy prizes.",
         register: (<span><Link to={"/underConstruction"} rel='noopener noreferrer' href='https://www.google.com/' style={{ textDecoration: "none", color: "white" }}>Register Now</Link></span>),
-        schedule: (<span><Link to={"/underConstruction"} rel='noopener noreferrer' href='https://www.google.com/' style={{ textDecoration: "none", color: "white" }}>Problem Statement</Link></span>),
+        schedule: (<span><Link to={"/underConstruction"} rel='noopener noreferrer' target='_blank' href='https://www.google.com/' style={{ textDecoration: "none", color: "white" }}>Problem Statement</Link></span>),
         prizeMoney: "₹ 8,000",
         dateBefore: "1/03",
         coor: [

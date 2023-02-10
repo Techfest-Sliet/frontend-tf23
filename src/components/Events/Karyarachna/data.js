@@ -5,7 +5,7 @@ export const datasOfEvent = [
         nameOfEvent: "Hackathon",
         desc: "Let yourself dive in the world of Programming and seize the opportunity to win handsome cash prizes.",
         register: (<span><Link to={"/underConstruction"} rel='noopener noreferrer' href='https://www.google.com/' style={{ textDecoration: "none", color: "white" }}>Register Now</Link></span>),
-        schedule: (<span><a rel='noopener noreferrer' href='https://drive.google.com/file/d/1BuWJZYlFQ6V6oiH2Vv4LcXTkzA7R0Bjl/view?usp=share_link' style={{ textDecoration: "none", color: "white" }}>Problem Statement</a></span>),
+        schedule: (<span><a rel='noopener noreferrer' target='_blank' href='https://drive.google.com/file/d/1BuWJZYlFQ6V6oiH2Vv4LcXTkzA7R0Bjl/view?usp=share_link' style={{ textDecoration: "none", color: "white" }}>Problem Statement</a></span>),
         prizeMoney: "₹ 20,000",
         dateBefore: "11/03",
         coor: [
@@ -22,7 +22,7 @@ export const datasOfEvent = [
         nameOfEvent: "Kritrim",
         desc: "Having ideas for betterment in agriculture? Here's an opportunity for you. Present your innovations through working/non-working models and grab the chance to win fancy prizes.",
         register: (<span><Link to={"/underConstruction"} rel='noopener noreferrer' href='https://www.wikipedia.com/' style={{ textDecoration: "none", color: "white" }}>Register Now</Link></span>),
-        schedule: (<span><a rel='noopener noreferrer' href='https://drive.google.com/file/d/1BuWJZYlFQ6V6oiH2Vv4LcXTkzA7R0Bjl/view?usp=share_link' style={{ textDecoration: "none", color: "white" }}>Problem </a></span>),
+        schedule: (<span><a rel='noopener noreferrer' target='_blank' href='https://drive.google.com/file/d/1B8s2AdjVFEGn17lbR6GHHzkqZXSP-CGK/view?usp=share_link' style={{ textDecoration: "none", color: "white" }}>Problem Statement</a></span>),
         prizeMoney: "₹ 40,000",
         dateBefore: "15/03",
         coor: [
@@ -46,7 +46,7 @@ export const datasOfEvent = [
         nameOfEvent: "Cod2tech",
         desc: "Pull out the tech savvy in you and present your revolutionary ideas. Participate in our event and win worth cash prizes",
         register: (<span><Link to={"/underConstruction"} rel='noopener noreferrer' href='https://www.google.com/' style={{ textDecoration: "none", color: "white" }}>Register Now</Link></span>),
-        schedule: (<span><a  rel='noopener noreferrer' href='https://drive.google.com/file/d/1X9BppwFp-Ja6GqVK9Pdfzq4netUMA3OG/view?usp=sharing' style={{ textDecoration: "none", color: "white" }}>Problem Statement</a></span>),
+        schedule: (<span><a  rel='noopener noreferrer' target='_blank' href='https://drive.google.com/file/d/1X9BppwFp-Ja6GqVK9Pdfzq4netUMA3OG/view?usp=sharing' style={{ textDecoration: "none", color: "white" }}>Problem Statement</a></span>),
         prizeMoney: "₹ 15,000",
         dateBefore: "11/03",
         coor: [
