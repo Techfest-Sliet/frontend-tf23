@@ -4,6 +4,7 @@ import logo from './logo.png';
 import {Link, useNavigate} from 'react-router-dom';
 import AuthContext from '../../auth/authContext';
 
+
 export const Navbar = (props) => {
     const navigate = useNavigate();
     const authContext = useContext(AuthContext);
@@ -36,7 +37,7 @@ export const Navbar = (props) => {
                     <li><Link to="/underConstruction" onClick={unCheck}>Workshops</Link></li>
                     <li><Link to="/aboutUs" onClick={unCheck}>About Us</Link></li>
                     <li><Link to="/faq" onClick={unCheck}>FAQ</Link></li>
-                    {authContext.isUserLoggedIn && <li><Link to="/userDashboard">Dashboard</Link></li>}
+                    {/* {authContext.isUserLoggedIn && <li><Link to="/userDashboard">Dashboard</Link></li>} */}
                     <li className="domains">
                         <Link to="/domains" className='dropdown__animation' onClick={unCheck}>Domains<i className="arrow down">&#32;</i></Link>
                         {/*-- DROPDOWN MENU */}
