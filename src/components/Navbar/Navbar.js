@@ -11,6 +11,12 @@ export const Navbar = (props) => {
         authContext.logout();
         navigate('/');
     }
+    function unCheck() {
+        let x = document.getElementsByClassName("checkbox");
+        for(let i=0; i<=x.length; i++) {
+           x[i].checked = false;
+         }   
+      }
   return (
         <navbar>
         <header className="header">
@@ -26,29 +32,29 @@ export const Navbar = (props) => {
                 <div className="hamburger"></div>
 
                 <ul className="navbar-items">
-                    <li><Link to="/">Home</Link></li>
-                    <li><Link to="/underConstruction">Workshops</Link></li>
-                    <li><Link to="/aboutUs">About Us</Link></li>
-                    <li><Link to="/faq">FAQ</Link></li>
+                    <li><Link to="/" onClick={unCheck}>Home</Link></li>
+                    <li><Link to="/underConstruction" onClick={unCheck}>Workshops</Link></li>
+                    <li><Link to="/aboutUs" onClick={unCheck}>About Us</Link></li>
+                    <li><Link to="/faq" onClick={unCheck}>FAQ</Link></li>
                     {authContext.isUserLoggedIn && <li><Link to="/userDashboard">Dashboard</Link></li>}
                     <li className="domains">
-                        <Link to="/domains" className='dropdown__animation'>Domains<i className="arrow down">&#32;</i></Link>
+                        <Link to="/domains" className='dropdown__animation' onClick={unCheck}>Domains<i className="arrow down">&#32;</i></Link>
                         {/*-- DROPDOWN MENU */}
                         <ul className="dropdown">
-                            <li><Link to="/events/plexus">Plexus</Link></li>
-                            <li><Link to="/events/chemfor">Chemfor</Link></li>
-                            <li><Link to="/events/electrica">Electrica</Link></li>
-                            <li><Link to="/events/genesis">Genesis</Link></li>
-                            <li><Link to="/events/karyarachna">Karyarachna</Link></li>
-                            <li><Link to="/events/kermis">Kermis</Link></li>
-                            <li><Link to="/events/mechanica">Mechanica</Link></li>
-                            <li><Link to="/events/robozar">Robozar</Link></li>
+                            <li><Link to="/events/plexus" onClick={unCheck}>Plexus</Link></li>
+                            <li><Link to="/events/chemfor" onClick={unCheck}>Chemfor</Link></li>
+                            <li><Link to="/events/electrica" onClick={unCheck}>Electrica</Link></li>
+                            <li><Link to="/events/genesis" onClick={unCheck}>Genesis</Link></li>
+                            <li><Link to="/events/karyarachna" onClick={unCheck}>Karyarachna</Link></li>
+                            <li><Link to="/events/kermis" onClick={unCheck}>Kermis</Link></li>
+                            <li><Link to="/events/mechanica" onClick={unCheck}>Mechanica</Link></li>
+                            <li><Link to="/events/robozar" onClick={unCheck}>Robozar</Link></li>
                         </ul>
                     </li>
-                    {!authContext.isUserLoggedIn && (<Link to='/signIn' className='signInButton'>Sign In</Link>)}
+                    {/* {!authContext.isUserLoggedIn && (<Link to='/signIn' className='signInButton'>Sign In</Link>)}
                     {authContext.isUserLoggedIn && (
                         <Link to='/' className='signInButton' onClick={logOutHandler}>Logout</Link>
-                    )}
+                    )} */}
                     
                     
                 </ul>
