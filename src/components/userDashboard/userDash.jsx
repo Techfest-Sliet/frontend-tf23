@@ -1,22 +1,16 @@
 import React, { useState, useContext, useEffect } from "react";
 import axios from "axios";
-import { localUrl } from "../../API/api";
+import { baseUrl } from "../../API/api";
 import AuthContext from "../../auth/authContext";
 import "./userDash.css";
 
 function User_dasbord() {
   const authContext = useContext(AuthContext);
   const [user, setUser] = useState(null);
-  // const [dob, setDob] = useState();
-  // const [collegeName, setCollegeName] = useState();
-  // const [course, setCourse] = useState();
-  const [branch, setBranch] = useState();
-  const [phone, setPhone] = useState();
-  const [email, setEmail] = useState();
 
   useEffect(() => {
     axios
-      .get(`${localUrl}/user/getUserById`, {
+      .get(`${baseUrl}/user/getUserById`, {
         headers: {
           Authorization: "Bearer " + authContext.token,
         },
@@ -81,7 +75,7 @@ function User_dasbord() {
               <tr className="TableRow"></tr>
               <tr className="TableRow ">
                 <td>Year Of Study</td>
-                <td className="TableRow__res">{user && user.yrsOfStudy}</td>
+                <td className="TableRow__res"></td>
               </tr>
               <tr className="TableRow  ">
                 <td>Date of Birth</td>
@@ -115,7 +109,7 @@ function User_dasbord() {
             </table>
           </div>
         </div>
-        <div className="flex_topbox">
+        {/* <div className="flex_topbox">
           <div className="card-bodytop">
             <h3 className="card-title text-light text-center">
               <img
@@ -407,8 +401,8 @@ function User_dasbord() {
                 </table>
               </div>
             </div>
-          </div>
-        </div>
+          </div> */}
+        {/* </div> */}
       </div>
     </div>
   );

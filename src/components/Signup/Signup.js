@@ -2,7 +2,7 @@ import { useState } from "react";
 import styles from "./Signup.module.css";
 import axios from "axios";
 import logo from "../../images/techFEST '23.webp";
-import { localUrl } from "../../API/api";
+import { baseUrl } from "../../API/api";
 import { Link, useNavigate } from "react-router-dom";
 import ErrorModel from "../../components/ErrorPopup/ErrorModel";
 
@@ -143,7 +143,7 @@ const Signup = () => {
     setIsLoading(true);
     console.log(isLoading);
     await axios
-      .post(`${localUrl}/auth/signUp`, user)
+      .post(`${baseUrl}/auth/signUp`, user)
       .then((result) => {
         const res = result;
         setIsLoading(false);
@@ -205,6 +205,7 @@ const Signup = () => {
                 value={phone}
                 onChange={(e) => setPhone(e.target.value)}
                 required
+                autoComplete="off"
               />
               {branchErr && <p style={{ color: "red" }}>{branchErr}</p>}
               <select
@@ -304,6 +305,7 @@ const Signup = () => {
                 value={collegeName}
                 onChange={(e) => setCollegeName(e.target.value)}
                 required
+                autoComplete='off'
               /> 
               <label htmlFor="dob" className={styles.signup__label}>
                 Date of Birth
@@ -316,6 +318,7 @@ const Signup = () => {
                 value={dob}
                 onChange={(e) => setDob(e.target.value)}
                 required
+                autoComplete='off'
               />
 
               <button
@@ -351,6 +354,7 @@ const Signup = () => {
                 value={name}
                 onChange={(e) => setName(e.target.value)}
                 required
+                autoComplete='off'
               />
               <label htmlFor="email" className={styles.signup__label}>
                 E-mail
@@ -364,6 +368,7 @@ const Signup = () => {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 required
+                autoComplete='off'
               />
               <label htmlFor="password" className={styles.signup__label}>
                 Password
@@ -375,6 +380,7 @@ const Signup = () => {
                 onChange={(e) => setPassword(e.target.value)}
                 type="password"
                 required
+                autoComplete='off'
               />
               <label htmlFor="cpassword" className={styles.signup__label}>
                 Confirm Password
@@ -386,6 +392,7 @@ const Signup = () => {
                 variant="standard"
                 onChange={(e) => handleConfirm(e.target.value)}
                 type="password"
+                autoComplete='off'
               />
               <button
                 className={styles.signup__button}

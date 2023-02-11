@@ -3,7 +3,7 @@ import logo from "../../images/techFEST '23.webp";
 import reset from "../../images/reset.png";
 import { useState } from "react";
 import axios from "axios";
-import { localUrl } from "../../API/api";
+import { baseUrl } from "../../API/api";
 
 const ForgotPassword = () => {
   const [email, setEmail] = useState("");
@@ -32,7 +32,7 @@ const ForgotPassword = () => {
     const user = {
       email: email,
     };
-    await axios.post(`${localUrl}/auth/forgotPassword`, user).then((result) => {
+    await axios.post(`${baseUrl}/auth/forgotPassword`, user).then((result) => {
       const res = (result);
       if (res.status === 208) {
         setErr(res.data.message);

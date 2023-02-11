@@ -1,10 +1,10 @@
 import "./verify.css";
-import logo from "../../images/techFEST '23.webp";
+// import logo from "../../images/techFEST '23.webp";
 import reset from "../../images/reset.png";
 import { useState } from "react";
 import {useNavigate} from 'react-router-dom';
 import axios from "axios";
-import { localUrl } from "../../API/api";
+import { baseUrl } from "../../API/api";
 
 const Verify = () => {
   const [email, setEmail] = useState("");
@@ -34,7 +34,7 @@ const Verify = () => {
     const user = {
       email: email,
     };
-    await axios.post(`${localUrl}/auth/verify`, user).then((result) => {
+    await axios.post(`${baseUrl}/auth/verify`, user).then((result) => {
       const res = (result);
       if (res.status === 208) {
         setErr(res.data.message);

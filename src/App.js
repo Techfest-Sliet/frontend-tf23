@@ -1,5 +1,6 @@
 import "./index.css";
 import React, {useContext, useState} from "react";
+import {useLocation} from 'react-router-dom';
 import { Route, Routes } from "react-router";
 import { Navbar } from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
@@ -33,6 +34,7 @@ function App() {
   const authContext = useContext(AuthContext);
   const {isUserLoggedIn, setUserLoggedIn} = authContext;
   const [errorMade, setErrorMade] = useState();
+  let location = useLocation();
   const onErrorMadeHandle = () => {
     setErrorMade(null);
   }
@@ -45,8 +47,8 @@ function App() {
   return (
     <>
       <div className="App">
-        <Navbar isAuth={isUserLoggedIn} onLogout={logOutHandler}/>
-        <Footer />
+        {location.pathname !== '/signUp' && location.pathname!== '/signIn' && location.pathname!== '/userDashboard' && <Navbar isAuth={isUserLoggedIn} onLogout={logOutHandler}/>}
+        {location.pathname !== '/signUp' && location.pathname!== '/signIn' && location.pathname!== '/userDashboard' && <Footer />}
         <Routes>
           <Route path="/domains" element={<DomainScreen />} />
           <Route path="*" element={<Error404 />} />

@@ -2,7 +2,7 @@ import { useState, useContext } from "react";
 import styles from "./Signin.module.css";
 import axios from "axios";
 import logo from "../../images/techFEST '23.webp";
-import { localUrl } from "../../API/api";
+import { baseUrl } from "../../API/api";
 import { Link, useNavigate } from "react-router-dom";
 import AuthContext from "../../auth/authContext";
 
@@ -19,7 +19,7 @@ const Signin = () => {
 
   const userLoginHandle = async (authData) => {
     await axios
-      .post(`${localUrl}/auth/signIn`, authData)
+      .post(`${baseUrl}/auth/signIn`, authData)
       .then((result) => {
         const res = result;
         if (res.status === 204) {
