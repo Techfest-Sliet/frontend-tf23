@@ -1,11 +1,11 @@
 import React from 'react';
-import CardUi from '../Card/CardUi';
+import CardUi from './CardUi';
 import classes from './ErrorModel.module.css';
-import ButtonUi from '../button/ButtonUi';
+import ButtonUi from './ButtonUi';
 import ReactDOM from 'react-dom';
 
 const BackdropBg = props => {
-  return <div className={classes.backdrop} onClick={props.onErrosClick} />;
+  return <div className={classes.backdrop} onClick={props.onErrorClick} />;
 };
 
 const ModalOverlay = props => {
@@ -14,9 +14,9 @@ const ModalOverlay = props => {
       <header className={classes.header}>
         <h2>{props.title}</h2>
       </header>
-      <div  style={{ color:'black'}} className={classes.content}>{props.message}</div>
+      <div  style={{ color:'green',fontSize:'2em'}} className={classes.content}>{props.message}</div>
       <footer className={classes.actions}>
-        <ButtonUi onBtnClick={props.onErrosClick}>OK</ButtonUi>
+        <ButtonUi onBtnClick={props.onErrorClick}>CLOSE</ButtonUi>
       </footer>
     </CardUi>
   );
@@ -25,15 +25,16 @@ const ModalOverlay = props => {
 const ErrorModel = props => {
   return (
     <>
+    
       {ReactDOM.createPortal(
-        <BackdropBg onErrosClick={props.onErrosClick} />,
+        <BackdropBg onErrorClick={props.onErrorClick} />,
         document.getElementById('backdropbg-root')
       )}
       {ReactDOM.createPortal(
         <ModalOverlay
           title={props.title}
           message={props.message}
-          onErrosClick={props.onErrosClick}
+          onErrorClick={props.onErrorClick}
         />,
         document.getElementById('error-model-root')
       )}

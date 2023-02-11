@@ -1,14 +1,16 @@
 import { Button } from "@mui/material";
-import React from "react";
+import React, {useContext} from "react";
 import {Link} from 'react-router-dom';
 import "./HomeScreen.css";
 import { useNavigate } from "react-router-dom";
 import SponsorImageSlider from "../../components/slider/SponsorImageSlider.js";
 import SliderDiv from "../../components/slider/SliderDiv";
+import AuthContext from "../../auth/authContext";
 
 const HomePage = () => {
   
 const navigate = useNavigate();
+const authContext = useContext(AuthContext);
   return (
     <div className="homePage">
       <div className="FirstPage">
@@ -39,8 +41,8 @@ const navigate = useNavigate();
             className="landingButtons"
             style={{ marginTop: 10, color: "white", marginBottom: 1 }}
           >
-            <Button variant="contained" id="signUpButton" sx={{ mr: 2, mt: 3 }} disabled>
-              <Link to="/underConstruction">Sign Up Now</Link>
+            <Button disabled variant="contained" id="signUpButton" sx={{ mr: 2, mt: 3 }}>
+              <Link to={authContext.isUserLoggedIn ? '/userDashboard' : '/signUp'}>{authContext.isUserLoggedIn ? 'User Dashboard' : 'Sign up Now'}</Link>
             </Button>
             <Button
               variant="contained"

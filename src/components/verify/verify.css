@@ -7,7 +7,7 @@
   font-family: "Open Sans", sans-serif;
 }
 
-.forgotPassword__body {
+.verify__body {
   text-align: center;
   color: white;
   background: #082d0b;
@@ -21,7 +21,7 @@
   align-items: center;
 }
 
-.forgotPassword__input {
+.verify__input {
   margin-bottom: 0.8em;
   border: 0;
   outline: 0;
@@ -29,7 +29,7 @@
   border-bottom: 1.5px solid #fff;
 }
 
-.forgotPassword__bg {
+.verify__bg {
   position: absolute;
   opacity: 0.1;
   left: 0;
@@ -40,11 +40,11 @@
   top: 50%;
   transform: translate(0, -50%);
 }
-.forgotPassword__error {
+.verify__error {
   color: red;
 }
 
-.forgotPassword__content {
+.verify__content {
   width: 90vw;
   height: 80vh;
   flex-direction: column;
@@ -52,26 +52,26 @@
   align-items: center;
   justify-content: center;
 }
-/* .forgotPassword__content > input{
+/* .verify__content > input{
   text-align: center;
 } */
 
-.forgotPassword__reset-img {
+.verify__reset-img {
   width: 70px;
 }
 
-.forgotPassword__text {
+.verify__text {
   font-size: 1.3em;
   margin: 0 0 2.5em 0;
 }
-/* .forgotPassword__content > input {
+/* .verify__content > input {
   width: 30%;
   font-size: 1em;
   padding: 0.3em;
   color: #fff;
 } */
 
-.forgotPassword__button {
+.verify__button {
   padding: 0.5em 2em;
   z-index: 1;
   border-radius: 7px;
@@ -82,16 +82,16 @@
   margin-top: 1em;
   transition: transform ease-in 0.1s, box-shadow ease-in 0.2s;
 }
-.forgotPassword__button:active {
+.verify__button:active {
   transform: scale(0.9);
 }
-.forgotPassword__inputFields {
+.verify__inputFields {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 70vw;
 }
-.forgotPassword__inputFields > input {
+.verify__inputFields > input {
   width: 30%;
   font-size: 1em;
   padding: 0.3em;
@@ -107,19 +107,19 @@ input::placeholder {
 
 
 @media (max-width: 700px) {
-  .forgotPassword__bg {
+  .verify__bg {
     width: 50vw;
   }
-  .forgotPassword__inputFields > input{
+  .verify__inputFields > input{
     width:60%;
   }
 }
 
 @media (max-width: 450px) {
-  .forgotPassword__bg {
+  .verify__bg {
     width: 70vw;
   }
-  .forgotPassword__inputFields > input {
+  .verify__inputFields > input {
     width: 80%;
   }
 }

@@ -1,9 +1,17 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import "./Navbar.css";
 import logo from './logo.png';
-import {Link} from 'react-router-dom';
+import {Link, useNavigate} from 'react-router-dom';
+import AuthContext from '../../auth/authContext';
 
-export const Navbar = () => {
+
+export const Navbar = (props) => {
+    const navigate = useNavigate();
+    const authContext = useContext(AuthContext);
+    const logOutHandler = async () => {
+        authContext.logout();
+        navigate('/');
+    }
     function unCheck() {
         let x = document.getElementsByClassName("checkbox");
         for(let i=0; i<=x.length; i++) {
@@ -29,6 +37,7 @@ export const Navbar = () => {
                     <li><Link to="/underConstruction" onClick={unCheck}>Workshops</Link></li>
                     <li><Link to="/aboutUs" onClick={unCheck}>About Us</Link></li>
                     <li><Link to="/faq" onClick={unCheck}>FAQ</Link></li>
+                    {/* {authContext.isUserLoggedIn && <li><Link to="/userDashboard">Dashboard</Link></li>} */}
                     <li className="domains">
                         <Link to="/domains" className='dropdown__animation' onClick={unCheck}>Domains<i className="arrow down">&#32;</i></Link>
                         {/*-- DROPDOWN MENU */}
@@ -43,7 +52,12 @@ export const Navbar = () => {
                             <li><Link to="/events/robozar" onClick={unCheck}>Robozar</Link></li>
                         </ul>
                     </li>
-                    {/* <Link to="/signIn" className='signInButton'>Sign In</Link> */}
+                    {/* {!authContext.isUserLoggedIn && (<Link to='/signIn' className='signInButton'>Sign In</Link>)}
+                    {authContext.isUserLoggedIn && (
+                        <Link to='/' className='signInButton' onClick={logOutHandler}>Logout</Link>
+                    )} */}
+                    
+                    
                 </ul>
             </div>
             
