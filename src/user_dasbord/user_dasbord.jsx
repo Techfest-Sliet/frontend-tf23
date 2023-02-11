@@ -9,7 +9,7 @@ function user_dasbord() {
           <h2>Namaste! username</h2>
           <p className="blockquote-footer">Your Unique tF ID is 0000</p>
         </div>
-        <div className="flex_topbox">
+        {/* <div className="flex_topbox">
           <div className="card-bodytop">
             <h3 className="card-title text-light text-center">
               <img
@@ -119,7 +119,7 @@ function user_dasbord() {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
 
         <div className="card-bodymid">
           <div className="dashboard_profile_container">
@@ -184,7 +184,7 @@ function user_dasbord() {
           </div>
         </div>
         <div>
-          <div className="flex_bottombox">
+          {/* <div className="flex_bottombox">
             <div className="card-bodybottom">
               <h3 className="CertificatesRewards">Certificates & Rewards</h3>
 
@@ -714,7 +714,7 @@ function user_dasbord() {
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>
