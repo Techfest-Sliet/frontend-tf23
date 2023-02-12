@@ -106,6 +106,7 @@ const Signin = () => {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
+              autoComplete='off'
             />
             <label htmlFor="password" className={styles.signin__label}>
               Password
@@ -116,6 +117,7 @@ const Signin = () => {
               onChange={(e) => setPassword(e.target.value)}
               type="password"
               required
+              autoComplete='off'
             />
             <div className={styles.signin__div}>
               <button

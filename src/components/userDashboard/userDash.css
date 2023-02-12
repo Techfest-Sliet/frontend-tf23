@@ -43,13 +43,15 @@
     background: radial-gradient(72% 16% at 50% 107%, #01590F -0.99%, #01590F -1.98%, rgb(0 0 0 / 0%) 100%), radial-gradient(72% 16% at 50% -4%, #01590F -0.99%, #01590F -0.98%, rgb(0 0 0 / 0%) 100%), radial-gradient(37% 45% at 116% 52%, #01590F -0.99%, #01590F -1.98%, rgb(0 0 0 / 0%) 100%), radial-gradient(41% 45% at -16% 47%, #01590F -0.99%, #01590F -0.98%, rgb(0 0 0) 100%);
     background-repeat: no-repeat !important;
     /* height: auto; */
-    width: 100vw;
+    width: 100%;
     font-style: normal;
+    overflow: scroll;
 }
 
 table.profiletable {
     width: 74vw;
     padding-bottom: 20px;
+    word-break: break-all;
 }
 
 .bottomboxcollaps {
@@ -72,7 +74,6 @@ table.profiletable {
 .userdashbord_body {
     margin: 100px 6px 100px 10px;
 }
-
 b {
     font-size: 25px;
     /* text-align: left; */
@@ -83,6 +84,7 @@ b {
 p.blockquote-footer {
     font-size: 23px;
     /* margin: -9px 0px 0px; */
+    text-align: center;
 }
 
 h3.personal {
@@ -131,7 +133,7 @@ p.blockquote-footer {
 
 
 .userdashbord_body h2 {
-    font-size: 56px;
+    font-size: 30px;
     letter-spacing: -1px;
 }
 
@@ -594,7 +596,7 @@ p.blockquote-footer {
 
 
     tr.TableRow {
-        font-size: 14px;
+        font-size: 12px;
     }
 
     td {
@@ -604,11 +606,15 @@ p.blockquote-footer {
 
     .userdashbord_body {
         margin: 43px 10px 48px 10px;
+        text-align: center;
+    }
+    .userdashbord_body h2, .userdashbord_body p {
+        text-align: center;
+        font-size: 1rem;
     }
 
     .Dashboard__body {
         width: 100vw;
-
     }
 
     .card-bodytop {
