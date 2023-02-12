@@ -19,13 +19,13 @@ const Signin = () => {
 
   const userLoginHandle = async (authData) => {
     await axios
-      .post(`${baseUrl}/auth/signIn`, authData)
+      .post(`${baseUrl}/auth/sign-in`, authData)
       .then((result) => {
         const res = result;
         if (res.status === 204) {
           setTimeout(() => {
             setMailErr(null);
-            navigate("/signUp");
+            navigate("/sign-up");
           }, 3000);
         } else if (res.status === 208) {
           setPasswordErr(res.data.message);
@@ -41,7 +41,7 @@ const Signin = () => {
             userRole: res.data.userRole,
           };
           authContext.login(userData);
-          navigate('/userDashboard');
+          navigate('/user-dashboard');
         } else {
           setErrorsMade(res.data.message);
         }

@@ -143,7 +143,7 @@ const Signup = () => {
     setIsLoading(true);
     console.log(isLoading);
     await axios
-      .post(`${baseUrl}/auth/signUp`, user)
+      .post(`${baseUrl}/auth/sign-up`, user)
       .then((result) => {
         const res = result;
         setIsLoading(false);
@@ -153,13 +153,13 @@ const Signup = () => {
             message: "Kindly check your inbox/spam for verification mail!",
           });
           setTimeout(() => {
-            navigate("/signIn");
+            navigate("/sign-in");
           }, 3000);
         } else if (res.status === 400 || res.status === 208) {
           setErrorsMade(res.data.message);
           setTimeout(() => {
             if (res.data.message.includes("email")) {
-              navigate("/signIn");
+              navigate("/sign-in");
             }
             setErrorsMade(null);
           }, 3000);
@@ -210,6 +210,7 @@ const Signup = () => {
               {branchErr && <p style={{ color: "red" }}>{branchErr}</p>}
               <select
                 className={styles.signup__select}
+                sx={{height:"10px"}}
                 onChange={(e) => setBranch(e.target.value)}
                 id="branch"
                 name="branch"
@@ -311,7 +312,7 @@ const Signup = () => {
                 Date of Birth
               </label>
               <input
-                type="text"
+                type="date"
                 id="dob"
                 name="dob"
                 placeholder="dd-mm-yyyy"
@@ -405,7 +406,7 @@ const Signup = () => {
               </button>
               <p className={styles.signup__text}>
                 Already have an account?{" "}
-                <Link to={"/signIn"}>
+                <Link to={"/sign-in"}>
                   <span className={styles.signin__link}>Sign In</span>
                 </Link>
               </p>

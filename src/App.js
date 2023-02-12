@@ -65,19 +65,19 @@ function App() {
           <Route path="/events/plexus" element={<Plexus />} />
           <Route path="/events/robozar" element={<Robozar />} />
           <Route path="/workshops" element={<Workshop />} />
-          <Route path="/underConstruction" element={<UnderConstruction />} />
+          <Route path="/under-construction" element={<UnderConstruction />} />
           <Route path="/" element={<HomeScreen />} />
-          <Route path="/signIn" element={<SignIn />} />
-          <Route path="/signUp" element={<SignUp />} />
-          <Route path="/resetPassword" element={<Reset />} />
+          <Route path="/sign-in" element={<SignIn />} />
+          <Route path="/sign-up" element={<SignUp />} />
+          <Route path="/reset-password" element={<Reset />} />
           <Route path="/loading" element={<Loading />} />
-          <Route path="/forgotPassword" element={<ForgotPassword />} />
-          <Route path="/ourTeam" element={<OurTeam />} />
-          <Route path="/aboutUs" element={<Aboutus/>} />
+          <Route path="/forgot-password" element={<ForgotPassword />} />
+          <Route path="/our-team" element={<OurTeam />} />
+          <Route path="/about" element={<Aboutus/>} />
           <Route path="/popup" element={<Popup/>} />
           <Route path="/verify" element={<Verify/>} />
           <Route path="/events/:title" element={<Events/>} />
-           {authContext.isUserLoggedIn && <Route path="/userDashboard" element={<UserDashboard/>} />}
+           {authContext.isUserLoggedIn && <Route path="/user-dashboard" element={<UserDashboard/>} />}
         </Routes>
       </div>
       {errorMade && 
