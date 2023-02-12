@@ -41,7 +41,7 @@ const authContext = useContext(AuthContext);
             className="landingButtons"
             style={{ marginTop: 10, color: "white", marginBottom: 1 }}
           >
-            <Button disabled variant="contained" id="signUpButton" sx={{ mr: 2, mt: 3 }}>
+            <Button variant="contained" id="signUpButton" sx={{ mr: 2, mt: 3 }}>
               <Link to={authContext.isUserLoggedIn ? '/user-dashboard' : '/sign-up'}>{authContext.isUserLoggedIn ? 'User Dashboard' : 'Sign up Now'}</Link>
             </Button>
             <Button
