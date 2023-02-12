@@ -49,7 +49,7 @@ function App() {
   return (
     <>
       <div className="App">
-        {location.pathname !== '/sign-up' && location.pathname!== '/sign-in' && location.pathname!== '/user-dashboard' && <Navbar isAuth={isUserLoggedIn} onLogout={logOutHandler}/>}
+        {location.pathname !== '/sign-up' && location.pathname!== '/sign-in' && <Navbar isAuth={isUserLoggedIn} onLogout={logOutHandler}/>}
         {location.pathname !== '/sign-up' && location.pathname!== '/sign-in' && location.pathname!== '/user-dashboard' && <Footer />}
         <Routes>
           <Route path="/domains" element={<DomainScreen />} />
