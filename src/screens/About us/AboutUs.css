@@ -388,26 +388,42 @@
 }
 
 @media only screen and (max-width: 376px) {
+  .About_Us_part1{
+    justify-content: center;
+    align-items: center;
+    padding-top: 4rem;
+    flex-direction: column;
+  }
+  .About_Uspart1techfest_logo{
+    border-right: none;
+    margin-bottom: 5%;
+  }
   .About_Uspart1techfest_logo img {
-    margin-right: 0px;
+    height: auto;
+    width: 270px;
+    margin-right: 0;
   }
   .About_Uspart1SLIET_logo img {
-    margin-left: 0px;
+    margin-left: 0;
+    height: auto;
+    width: 250px;
   }
   .About_Uspart2_text {
     width: 17rem;
   }
   .About{
-    height: 150vh;
-  }
+    margin-top: 0%;
+  } 
   .AboutSliet{
     border-radius: 20px;
+    margin-left: 2%;
   }
   .AboutSlietHeading h1{
     font-size:40px;
   }
   .AboutSlietText{
-    font-size: 15px;
+    line-height: 15px;
+    font-size: 13px;
   }
   .AboutInfo{
     border-top-left-radius: 40px;

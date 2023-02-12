@@ -9,7 +9,7 @@ function AboutUs() {
   return (
     <div className="AboutUs">
       <div className="AboutUsBg">
-        <img src="/about-us/6417740-1@2x.png"  width={"100%"}
+        <img src="/about-us/main.webp"  width={"100%"}
               height={"100%"} alt="" />
       </div>
       <div className="container_AboutUs_Upperpart">
@@ -144,15 +144,15 @@ function AboutUs() {
 
       {/* gallery */}
       <div className="sponsor">
-        <h1 id="sponsor" style={{ color: "#74EB76"}}>
+        <h1 id="sponsor" style={{ color: "#74EB76",marginBottom:"3rem"}}>
           GALLERY
         </h1>
         <SliderDiv arr={gallery} />
       </div>
 
       {/* previos sponsr */}
-      <div className="sponsor" style={{marginTop:"3rem",width:"100%"}}>
-        <h1 id="sponsor" style={{ color: "#74EB76" }}>
+      <div className="sponsor" style={{width:"100%"}}>
+        <h1 id="sponsor" style={{ color: "#74EB76" ,marginBottom:"3rem"}}>
           OUR<span style={{ color: "white" }}> PAST</span> SPONSORS
         </h1>
         <SliderDiv arr={SponsorImageSlider} />

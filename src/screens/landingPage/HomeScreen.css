@@ -199,6 +199,7 @@
 .sponsor {
   width: 100%;
   display: flex;
+  padding-bottom: 10%;
   justify-content: space-around;
   align-items: center;
   height: 75vh;
@@ -462,6 +463,8 @@
     font-size: 16px;
   }
   .sponsor {
+    margin-top: 3rem;
+    padding-bottom:20%;
     height: 60vh;
   }
 }
@@ -772,6 +775,7 @@
   } */
   /* sponsor */
   .sponsor {
+    padding-bottom: 30%;
     height: 60vh;
   }
   #sponsor {
