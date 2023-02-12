@@ -746,7 +746,7 @@ const  User_dasbord = () => {
             </div>
           </div> */}
           <button className="btn__home">
-            <Link to="/home">Home</Link>
+            <Link to="/">Home</Link>
           </button>
         </div>
       </div>
