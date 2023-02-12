@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-export const baseUrl = 'https://191.96.57.27:4000';
+export const baseUrl = 'https://api.techfestsliet.com';
 //export const baseUrl = 'http://localhost:4000';
 
 export const localUrlIns = axios.create({
