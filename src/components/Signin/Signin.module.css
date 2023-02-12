@@ -19,7 +19,6 @@
 a {
   text-decoration: none;
   color: #fff;
-  /* font-size: 1.3rem; */
 }
 
 .signin__content {
@@ -83,7 +82,6 @@ select option:hover {
   -moz-animation: fadeIn 5s infinite;
   -o-animation: fadeIn 5s infinite;
   -ms-animation: fadeIn 5s infinite;
-  /* aspect-ratio: ; */
 }
 @keyframes fadeIn {
   0% {
@@ -265,18 +263,7 @@ select option:hover {
   font-weight: bold;
   margin-left: 0.5em;
 }
-/* 
-img {
-  max-height: 100%;
-  max-width: 100%;
-} */
 
-/* .signin__page > h1 {
-  font-size: 3.5em;
-  display: inline-block;
-  margin: 0;
-  font-weight: 700;
-} */
 
 .signin__select {
   background-color: transparent;
@@ -289,10 +276,6 @@ img {
   border-bottom: 1.5px solid #fff;
   margin: 0;
 }
-/* 
-input::placeholder {
-  color: #d9d9d9;
-} */
 
 .signin__button {
   margin: 0.7em 0;
@@ -334,10 +317,6 @@ input::placeholder {
     font-size: 1rem;
   }
 
-  /* .signin__input input[type="text"],
-  input[type="password"] {
-    width: 50%;
-  } */
 
   .signin__button {
     padding: 0.2em 1em;

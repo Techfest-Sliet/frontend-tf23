@@ -49,8 +49,10 @@ function App() {
   return (
     <>
       <div className="App">
-        {location.pathname !== '/signUp' && location.pathname!== '/signIn' && location.pathname!== '/userDashboard' && <Navbar isAuth={isUserLoggedIn} onLogout={logOutHandler}/>}
-        {location.pathname !== '/signUp' && location.pathname!== '/signIn' && location.pathname!== '/userDashboard' && <Footer />}
+        {/* {location.pathname !== '/signUp' && location.pathname!== '/signIn' && location.pathname!== '/userDashboard' && <Navbar isAuth={isUserLoggedIn} onLogout={logOutHandler}/>}
+        {location.pathname !== '/signUp' && location.pathname!== '/signIn' && location.pathname!== '/userDashboard' && <Footer />} */}
+        <Navbar isAuth={isUserLoggedIn} onLogout={logOutHandler}/>
+        <Footer />
         <Routes>
           <Route path="/domains" element={<DomainScreen />} />
           <Route path="*" element={<Error404 />} />
@@ -67,8 +69,8 @@ function App() {
           <Route path="/workshops" element={<Workshop />} />
           <Route path="/under-construction" element={<UnderConstruction />} />
           <Route path="/" element={<HomeScreen />} />
-          <Route path="/sign-in" element={<SignIn />} />
-          <Route path="/sign-up" element={<SignUp />} />
+          {!authContext.isUserLoggedIn && <Route path="/sign-in" element={<SignIn />} />}
+          {!authContext.isUserLoggedIn && <Route path="/sign-up" element={<SignUp />} />}
           <Route path="/reset-password" element={<Reset />} />
           <Route path="/loading" element={<Loading />} />
           <Route path="/forgot-password" element={<ForgotPassword />} />

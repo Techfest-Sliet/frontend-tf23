@@ -209,13 +209,13 @@
 bottom: 100%;
 }
 
-p {
+/* p {
   display: block;
   margin-block-start: -1em;
   margin-block-end: 0em;
   margin-inline-start: -1px;
   margin-inline-end: -2px;
-}
+} */
 
 li p img{
   
