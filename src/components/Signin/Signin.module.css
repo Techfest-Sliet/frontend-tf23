@@ -23,7 +23,7 @@ a {
 
 .signin__content {
   position: relative;
-  width: auto;
+  width: 100vw;
   height: 100vh;
   display: flex;
   align-items: center;

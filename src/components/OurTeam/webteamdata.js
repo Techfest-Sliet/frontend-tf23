@@ -65,7 +65,7 @@ const WebDetails = [
     {
       id: 9,
       name:"Versha",
-      image:process.env.PUBLIC_URL + "",
+      image:process.env.PUBLIC_URL + "core-team-images/17.jpg",
       position:"React Js",
       linkedin:""
     }

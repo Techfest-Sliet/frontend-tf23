@@ -49,10 +49,8 @@ function App() {
   return (
     <>
       <div className="App">
-        {/* {location.pathname !== '/signUp' && location.pathname!== '/signIn' && location.pathname!== '/userDashboard' && <Navbar isAuth={isUserLoggedIn} onLogout={logOutHandler}/>}
-        {location.pathname !== '/signUp' && location.pathname!== '/signIn' && location.pathname!== '/userDashboard' && <Footer />} */}
-        <Navbar isAuth={isUserLoggedIn} onLogout={logOutHandler}/>
-        <Footer />
+        {location.pathname !== '/sign-up' && location.pathname!== '/sign-in' && location.pathname!== '/user-dashboard' && <Navbar isAuth={isUserLoggedIn} onLogout={logOutHandler}/>}
+        {location.pathname !== '/sign-up' && location.pathname!== '/sign-in' && location.pathname!== '/user-dashboard' && <Footer />}
         <Routes>
           <Route path="/domains" element={<DomainScreen />} />
           <Route path="*" element={<Error404 />} />

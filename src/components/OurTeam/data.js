@@ -3,10 +3,10 @@ const Details = [
       id: 1,
       name:"Aniket Mihir",
       image:process.env.PUBLIC_URL + "core-team-images/1.jpg",
-      position:"Core Membe",
+      position:"Core Member",
       linkedin:"https://www.linkedin.com/in/aniketmihir"
     },
-    ,
+  
     {
       id: 2,
       name:"Kumari Pallavi",

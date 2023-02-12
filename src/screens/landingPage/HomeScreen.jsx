@@ -42,14 +42,14 @@ const authContext = useContext(AuthContext);
             style={{ marginTop: 10, color: "white", marginBottom: 1 }}
           >
             <Button disabled variant="contained" id="signUpButton" sx={{ mr: 2, mt: 3 }}>
-              <Link to={authContext.isUserLoggedIn ? '/userDashboard' : '/signUp'}>{authContext.isUserLoggedIn ? 'User Dashboard' : 'Sign up Now'}</Link>
+              <Link to={authContext.isUserLoggedIn ? '/user-dashboard' : '/sign-up'}>{authContext.isUserLoggedIn ? 'User Dashboard' : 'Sign up Now'}</Link>
             </Button>
             <Button
               variant="contained"
               id="aboutUsButton"
               sx={{ mr: 2, mt: 3 }}
             >
-              <Link to={"/aboutUs"}>About Us</Link>
+              <Link to={"/about-us"}>About Us</Link>
             </Button>
           </div>
         </div>
@@ -85,7 +85,7 @@ const authContext = useContext(AuthContext);
             <Button
               sx={{ color: "#fff", mt: 3, borderRadius: 6, width: 150, mb: 5 }}
               className="learnMoreButton"
-              onClick={()=>navigate('/underConstruction')}
+              onClick={()=>navigate('/under-construction')}
             >
                Learn More
             </Button>

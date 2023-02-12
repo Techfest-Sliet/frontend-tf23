@@ -77,8 +77,8 @@ const Signin = () => {
   };
 
   return (
-    <>
-      <div className={styles.signin__content}>
+    
+      <div className={styles.signin__content} style={{height: "100vh"}}>
         <div>
           <img src={logo} alt="techFest'23" className={styles.signin__logo} />
         </div>
@@ -139,7 +139,7 @@ const Signin = () => {
           </p>
         </div>
       </div>
-    </>
+    
   );
 };
 export default Signin;
