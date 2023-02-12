@@ -4,7 +4,7 @@ import { baseUrl } from "../../API/api";
 import AuthContext from "../../auth/authContext";
 import "./userDash.css";
 
-function User_dasbord() {
+const  User_dasbord = () => {
   const authContext = useContext(AuthContext);
   const [user, setUser] = useState(null);
 

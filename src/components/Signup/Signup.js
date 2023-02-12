@@ -311,10 +311,10 @@ const Signup = () => {
                 Date of Birth
               </label>
               <input
-                type="date"
+                type="text"
                 id="dob"
                 name="dob"
-                placeholder="Enter your date of birth"
+                placeholder="dd-mm-yyyy"
                 value={dob}
                 onChange={(e) => setDob(e.target.value)}
                 required
