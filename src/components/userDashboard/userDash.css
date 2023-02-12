@@ -70,6 +70,22 @@ table.profiletable {
 .dashboard_profile_container {
     padding: 41px;
 }
+.btn__home {
+    background: #01590F;
+    border-radius: 10px;
+    width: 100px;
+    height: 40px;
+    font-size: 20px;
+    color: #FFFFFF;
+    border: none;
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    font-family: 'Product Sans';
+}
 
 .userdashbord_body {
     margin: 100px 6px 100px 10px;

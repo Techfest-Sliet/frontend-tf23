@@ -3,6 +3,7 @@ import axios from "axios";
 import { baseUrl } from "../../API/api";
 import AuthContext from "../../auth/authContext";
 import "./userDash.css";
+import { Link } from "react-router-dom";
 
 const  User_dasbord = () => {
   const authContext = useContext(AuthContext);
@@ -37,8 +38,8 @@ const  User_dasbord = () => {
       });
   }, [authContext, authContext.login]);
   return (
-    <div className="Dashboard__body">
-      <div className="row_justify-content-around">
+    <div className="Dashboard__body" style={{height: "100vh"}}>
+      <div className="row_justify-content-around" style={{height:"100vh"}}>
         <div className="userdashbord_body">
           <h2>Namaste! {user && user.name}</h2>
           <p className="blockquote-footer">Your Unique tF ID is {user && user.userId}</p>
@@ -744,6 +745,9 @@ const  User_dasbord = () => {
               </div>
             </div>
           </div> */}
+          <button className="btn__home">
+            <Link to="/home">Home</Link>
+          </button>
         </div>
       </div>
     </div>
