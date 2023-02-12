@@ -25,6 +25,7 @@ import UnderConstruction from "./components/Construction/underConstruction.js";
 import ForgotPassword from "./components/forgotPassword/forgotPassword";
 import Aboutus from '../src/screens/About us/AboutUs.jsx';
 import UserDashboard from './components/userDashboard/userDash.jsx';
+import OurTeam from './components/OurTeam/team.jsx';
 import AuthContext from './auth/authContext';
 import Verify from './components/verify/verify';
 import Popup from './components/Popup/Popup.js';
@@ -71,6 +72,7 @@ function App() {
           <Route path="/resetPassword" element={<Reset />} />
           <Route path="/loading" element={<Loading />} />
           <Route path="/forgotPassword" element={<ForgotPassword />} />
+          <Route path="/ourTeam" element={<OurTeam />} />
           <Route path="/aboutUs" element={<Aboutus/>} />
           <Route path="/popup" element={<Popup/>} />
           <Route path="/verify" element={<Verify/>} />
