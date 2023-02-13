@@ -26,7 +26,7 @@ export const datasOfEvent = [
     },
     {
         nameOfEvent: "Chem-E-Storm",
-        desc: "The best way to innovation is designing projects using residues- Best out of Waste. Use your chemical technology knowledge and catalyze the agricultural activities. Participate in our event and win worth cash prizes.",
+        desc: "The best way to innovation is designing projects using residues- Best out of Waste. Use your chemical technology knowledge and catalyze the agricultural activities. Participate in our event and win worthy cash prizes.",
         register: (<span><Link to={"/underConstruction"} rel='noopener noreferrer' href='https://www.wikipedia.com/' style={{ textDecoration: "none", color: "white" }}>Register Now</Link></span>),
         schedule: (<span><a  rel='noopener noreferrer' target='_blank' href='https://drive.google.com/file/d/1HWJ-2kvqGYgwnxt4K4ukXvJafv_7mb1r/view?usp=sharing' style={{ textDecoration: "none", color: "white" }}>Problem Statement</a></span>),
         prizeMoney: "₹ 8,000",
@@ -70,7 +70,7 @@ export const datasOfEvent = [
     },
     {
         nameOfEvent: "Chem-Food-a-thon",
-        desc: "When Technology covers in it all, the AI-ML for accessing all information, the bots for traverse and transport, then why not use it for spark in agriculture. Bring it in to the event your revolutionary ideas and win worth cash prizes.",
+        desc: "When Technology covers in it all, the AI-ML for accessing all information, the bots for traverse and transport, then why not use it for spark in agriculture. Bring it in to the event your revolutionary ideas and win worthy cash prizes.",
         register: (<span><Link to={"/underConstruction"} rel='noopener noreferrer' href='https://www.wikipedia.com/' style={{ textDecoration: "none", color: "white" }}>Register Now</Link></span>),
         schedule: (<span><a rel='noopener noreferrer' target='_blank' href='https://drive.google.com/file/d/1jgkkm9NGlSnMgv-m8BANytuuwxGmm24k/view?usp=sharing' style={{ textDecoration: "none", color: "white" }}>Problem Statement</a></span>),
         prizeMoney: "₹ 8,000",

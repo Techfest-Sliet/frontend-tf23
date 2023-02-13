@@ -1,9 +1,16 @@
 const WebDetails = [
     {
+      id: 0,
+      name: "Anubhav raj",
+      image: process.env.PUBLIC_URL + "core-team-images/0.jpeg",
+      position: "Web Head",
+      linkedin: "https://www.linkedin.com/in/anubhavrajput01",
+    },
+    {
       id: 1,
       name:"Vanshika",
       image:process.env.PUBLIC_URL + "core-team-images/9.jpg",
-      position:"Mern Stack",
+      position:"MERN",
       linkedin:"http://www.linkedin.com/in/vanshika-bansal-367136222"
     }
     ,
@@ -11,7 +18,7 @@ const WebDetails = [
       id: 2,
       name:"Shivam Kashyap",
       image:process.env.PUBLIC_URL + "core-team-images/10.jpg",
-      position:"React Js",
+      position:"Frontend",
       linkedin:"https://www.linkedin.com/in/shivam-kashyap-262a5b226/"
     }
     
@@ -20,7 +27,7 @@ const WebDetails = [
       id: 3,
       name:"Suhani",
       image:process.env.PUBLIC_URL + "core-team-images/11.jpg",
-      position:"React Js",
+      position:"Frontend",
       linkedin:"https://www.linkedin.com/in/suhani-kapasiya-5248441aa/"
     }
     ,
@@ -29,14 +36,14 @@ const WebDetails = [
       id: 4,
       name:"Shubham",
       image:process.env.PUBLIC_URL + "core-team-images/12.jpg",
-      position:"MERN Stack",
+      position:"MERN",
       linkedin:"http://www.linkedin.com/in/theAlpha06"
     },
     {
       id: 5,
       name:"Ashish",
       image:process.env.PUBLIC_URL + "core-team-images/16.jpeg",
-      position:"React Js",
+      position:"Frontend",
       linkedin:"https://www.linkedin.com/in/ak-ashish/"
     }
     ,
@@ -59,15 +66,15 @@ const WebDetails = [
       id: 8,
       name:"Shubham Jha",
       image:process.env.PUBLIC_URL + "core-team-images/15.jpg",
-      position:"React Js",
+      position:"Frontend",
       linkedin:"https://www.linkedin.com/in/shubham-jha-7246431a6"
     },
     {
       id: 9,
-      name:"Versha",
+      name:"Varsha",
       image:process.env.PUBLIC_URL + "core-team-images/17.jpg",
-      position:"React Js",
-      linkedin:""
+      position:"Frontend",
+      linkedin:"https://www.linkedin.com/in/varsha-kumari-038ba1248"
     }
 
   ];

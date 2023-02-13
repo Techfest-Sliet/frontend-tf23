@@ -44,7 +44,7 @@ export const datasOfEvent = [
     },
     {
         nameOfEvent: "Cod2tech",
-        desc: "Pull out the tech savvy in you and present your revolutionary ideas. Participate in our event and win worth cash prizes",
+        desc: "Pull out the tech savvy in you and present your revolutionary ideas. Participate in our event and win worthy cash prizes",
         register: (<span><Link to={"/underConstruction"} rel='noopener noreferrer' href='https://www.google.com/' style={{ textDecoration: "none", color: "white" }}>Register Now</Link></span>),
         schedule: (<span><a  rel='noopener noreferrer' target='_blank' href='https://drive.google.com/file/d/1X9BppwFp-Ja6GqVK9Pdfzq4netUMA3OG/view?usp=sharing' style={{ textDecoration: "none", color: "white" }}>Problem Statement</a></span>),
         prizeMoney: "₹ 15,000",

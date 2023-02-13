@@ -49,7 +49,7 @@ const authContext = useContext(AuthContext);
               id="aboutUsButton"
               sx={{ mr: 2, mt: 3 }}
             >
-              <Link to={"/about-us"}>About Us</Link>
+              <Link to={"/about"}>About Us</Link>
             </Button>
           </div>
         </div>

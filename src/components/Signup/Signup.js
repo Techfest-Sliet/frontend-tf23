@@ -93,7 +93,8 @@ const Signup = () => {
       password.trim().length === 0 ||
       name.trim().length === 0 ||
       cPassword.trim().length === 0 ||
-      phone.trim().length === 0
+      phone.trim().length === 0 || 
+      collegeName.trim().length === 0 
     ) {
       setFieldErr("Field should not be empty");
       setTimeout(() => {

@@ -63,8 +63,7 @@ function AboutUs() {
               Longowal. <br /> <br /> The institute strives to impart quality
               knowledge and technical skills by creating a healthy competitive
               environment that encourages innovation and critical thinking among
-              students. At the academic level the institute offers various
-              academic courses of Undergraduate and PostGraduate programmes.
+              students. At the academic level the institute offers various Undergraduate and PostGraduate programmes.
               Apart from academics, SLIET is home to various co-curricular
               activities and communities such as National Cadet Corps - SLIET,
               Endeavour, Mavericks, SSDC, Juggernauts, Green rangers, Institute
@@ -76,21 +75,21 @@ function AboutUs() {
         <div className="AboutInfo">
           <div className="Participants">
             <img src="/about-us/Group 881.svg" height={"50px"} alt="" />
-            <h1>30 +</h1>
+            <h1>35+</h1>
             <h4>Institutes Participate every year</h4>
             <img src="/about-us/stats-sec.svg" width={'80%'} height={'4px'} alt="" />
           </div>
 
           <div className="Participants">
             <img src="/about-us/Group 878.svg" height={"50px"} alt="" />
-            <h1>10K +</h1>
+            <h1>10K+</h1>
             <h4>Footfall during techFEST 21</h4>
             <img src="/about-us/stats-sec.svg" width={'80%'} height={'4px'} alt="" />
           </div>
 
           <div className="Participants last">
             <img src="/about-us/Group 879.svg" height={"50px"} alt="" />
-            <h1>5L +</h1>
+            <h1>5L+</h1>
             <h4>Worth of Goodies and Prize Money</h4>
           </div>
         </div>

@@ -17,7 +17,7 @@ export const datasOfEvent = [
     },
     {
         nameOfEvent: "Margdarshak",
-        desc: "Suprised by how the seller packed it all way too fast? Well, he might have had a Line following robot. LFR, a robotic technology comprising of a bot following an arena. And what's even a thrill, you can design it too. Participate in our event Margdarshak and win worth cash prizes.",
+        desc: "Suprised by how the seller packed it all way too fast? Well, he might have had a Line following robot. LFR, a robotic technology comprising of a bot following an arena. And what's even a thrill, you can design it too. Participate in our event Margdarshak and win worthy cash prizes.",
         register: (<span><Link to={"/underConstruction"} rel='noopener noreferrer' href='https://www.wikipedia.com/' style={{ textDecoration: "none", color: "white" }}>Register Now</Link></span>),
         schedule: (<span><a rel='noopener noreferrer' target='_blank' href='https://drive.google.com/file/d/1rs2b20oihSlnnOADkzqmLtBtXqEvFRg6/view?usp=sharing' style={{ textDecoration: "none", color: "white" }}>Problem Statement</a></span>),
         prizeMoney: "₹ 21,000",
@@ -31,7 +31,7 @@ export const datasOfEvent = [
     },
     {
         nameOfEvent: "Reconnaissance",
-        desc: "Birds can't swim and fishes can't fly, isn't it? There's nothing to worry about this for there's a robotic technology that covers it all. Yes, you got it right. Hovercraft, the amphibious bot. Participate in our event, design a hovercraft and avail worth cash prizes.",
+        desc: "Birds can't swim and fishes can't fly, isn't it? There's nothing to worry about this for there's a robotic technology that covers it all. Yes, you got it right. Hovercraft, the amphibious bot. Participate in our event, design a hovercraft and avail worthy cash prizes.",
         register: (<span><Link to={"/underConstruction"} rel='noopener noreferrer' href='https://www.google.com/' style={{ textDecoration: "none", color: "white" }}>Register Now</Link></span>),
         schedule: (<span><a rel='noopener noreferrer' target='_blank' href='https://drive.google.com/file/d/1HutIAQ539N62NMNNKZLH3_LDGNZWPWHN/view?usp=sharing' style={{ textDecoration: "none", color: "white" }}>Problem Statement</a></span>),
         prizeMoney: "₹ 33,000",
@@ -45,7 +45,7 @@ export const datasOfEvent = [
     },
     {
         nameOfEvent: "Robowar",
-        desc: "Here's to the event that's second to none- ROBOWAR. The combat robotics technology that will make you familiar to the core of robotics, that will make you learn exclusively for it's not only about you, but the opponents' team as well. Participate in our event Robowar and win worth cash prizes.",
+        desc: "Here's to the event that's second to none- ROBOWAR. The combat robotics technology that will make you familiar to the core of robotics, that will make you learn exclusively for it's not only about you, but the opponents' team as well. Participate in our event Robowar and win worthy cash prizes.",
         register: (<span><Link to={"/underConstruction"} rel='noopener noreferrer' href='https://www.google.com/' style={{ textDecoration: "none", color: "white" }}>Register Now</Link></span>),
         schedule: (<span><a rel='noopener noreferrer' target='_blank' href='https://drive.google.com/file/d/1XVTypT-bK0DZkH9LADu38mclg0u0gidy/view?usp=sharing' style={{ textDecoration: "none", color: "white" }}>Problem Statement</a></span>),
         prizeMoney: "₹ 45,000",
@@ -59,7 +59,7 @@ export const datasOfEvent = [
     },
     {
         nameOfEvent: "Jarvis Cup",
-        desc: "Goals in the field and bots in mind, An event of robosoccer for football rewind. Test your analytical and technical knowledge and examine your responses in pop up situations. Participate in our event to win worth cash prizes.",
+        desc: "Goals in the field and bots in mind, An event of robosoccer for football rewind. Test your analytical and technical knowledge and examine your responses in pop up situations. Participate in our event to win worthy cash prizes.",
         register: (<span><Link to={"/underConstruction"} rel='noopener noreferrer' href='https://www.wikipedia.com/' style={{ textDecoration: "none", color: "white" }}>Register Now</Link></span>),
         schedule: (<span><a rel='noopener noreferrer' target='_blank' href='https://drive.google.com/file/d/1LbBzbZilt3oRFeDSmpUfthOikGWviV1_/view?usp=drivesdka' style={{ textDecoration: "none", color: "white" }}>Problem Statement</a></span>),
         prizeMoney: "₹ 16,000",

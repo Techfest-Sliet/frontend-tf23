@@ -21,7 +21,7 @@ const Details = [
       name:"Lavanya Mishra",
       image:process.env.PUBLIC_URL + "core-team-images/3.jpg",
       position:"Core Member",
-      linkedin:"https://www.google.co.in/"
+      linkedin:"https://www.linkedin.com/in/lavanya-mishra-909a89184"
     }
     ,
     
@@ -30,13 +30,13 @@ const Details = [
       name:"Md. Shoaib Akhtar",
       image:process.env.PUBLIC_URL + "core-team-images/8.jpg",
       position:"Core Member",
-      linkedin:"https://www.google.co.in/"
+      linkedin:"https://www.linkedin.com/in/shoaibisa/"
     }
     
     ,
     {
       id: 5,
-      name:"Prashant Sahi",
+      name:"Prashant Shahi",
       image:process.env.PUBLIC_URL + "core-team-images/7.jpg",
       position:"Core Member",
       linkedin:"https://www.linkedin.com/in/prashant-shahi-651a251b9"

@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom';
 export const datasOfEvent = [
     {
         nameOfEvent: "AGRO-Dhara",
-        desc: "A system sensing and responding to stimuli around it just as a human body does. Isn't it fascinating. Here's the opportunity to pitch your brain to design a sensor system. Participate in our event and win worth cash prizes.",
+        desc: "A system sensing and responding to stimuli around it just as a human body does. Isn't it fascinating. Here's the opportunity to pitch your brain to design a sensor system. Participate in our event and win worthy cash prizes.",
         register: (<span><Link to={"/underConstruction"} rel='noopener noreferrer' href='https://www.google.com/' style={{ textDecoration: "none", color: "white" }}>Register Now</Link></span>),
         schedule: (<span><a rel='noopener noreferrer' target='_blank' href='https://drive.google.com/file/d/1wJu4BCTeEHJQhnnjQNB20RghJEuNiJ74/view?usp=share_link' style={{ textDecoration: "none", color: "white" }}>Problem Statement</a></span>),
         prizeMoney: "₹ 15,000",
