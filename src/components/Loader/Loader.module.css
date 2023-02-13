@@ -1,0 +1,23 @@
+.center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: calc(100vh - 4em);
+	/*center box
+	width: 300px;
+	height: 300px;
+	border: solid 1px #aaa; */
+}
+body {
+	background-color: #202628;
+}
+.loader polygon {
+	stroke-dasharray: 17;
+	animation: anm-tr-3-move 2.5s cubic-bezier(0.35, 0.04, 0.63, 0.95) infinite;
+}
+@keyframes anm-tr-3-move {
+	to {
+		stroke-dashoffset: 136;
+	}
+}

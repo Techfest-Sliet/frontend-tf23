@@ -32,6 +32,7 @@ import Popup from './components/Popup/Popup.js';
 import Events from './components/domain/OneCard.jsx';
 import ErrorModel from './components/ErrorPopup/ErrorModel';
 import Visitor from './components/visitors/visitors.js';
+import Loader from './components/Loader/Loader.js';
 function App() {
   const authContext = useContext(AuthContext);
   const {isUserLoggedIn, setUserLoggedIn} = authContext;
@@ -52,6 +53,7 @@ function App() {
         {location.pathname !== '/sign-up' && location.pathname!== '/sign-in' && <Navbar isAuth={isUserLoggedIn} onLogout={logOutHandler}/>}
         {location.pathname !== '/sign-up' && location.pathname!== '/sign-in' && location.pathname!== '/user-dashboard' && <Footer />}
         <Routes>
+          <Route path="/loading" element={<Loader />} />
           <Route path="/domains" element={<DomainScreen />} />
           <Route path="*" element={<Error404 />} />
           <Route path="/visitors" element={<Visitor />} />
