@@ -2,16 +2,14 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	width: 100%;
-	height: calc(100vh - 4em);
+	width: 100vw;
+	height: 100vh;
 	/*center box
 	width: 300px;
 	height: 300px;
 	border: solid 1px #aaa; */
 }
-body {
-	background-color: #202628;
-}
+
 .loader polygon {
 	stroke-dasharray: 17;
 	animation: anm-tr-3-move 2.5s cubic-bezier(0.35, 0.04, 0.63, 0.95) infinite;

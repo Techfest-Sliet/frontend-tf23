@@ -1,5 +1,4 @@
 import "./forgotPassword.css";
-import logo from "../../images/techFEST '23.webp";
 import reset from "../../images/reset.png";
 import { useState } from "react";
 import axios from "axios";

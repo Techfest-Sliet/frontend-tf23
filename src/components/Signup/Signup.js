@@ -5,6 +5,7 @@ import logo from "../../images/techFEST '23.webp";
 import { baseUrl } from "../../API/api";
 import { Link, useNavigate } from "react-router-dom";
 import ErrorModel from "../../components/ErrorPopup/ErrorModel";
+import Loader from '../../components/Loader/Loader.js';
 
 const Signup = () => {
   const [name, setName] = useState("");
@@ -94,7 +95,8 @@ const Signup = () => {
       name.trim().length === 0 ||
       cPassword.trim().length === 0 ||
       phone.trim().length === 0 || 
-      collegeName.trim().length === 0 
+      collegeName.trim().length === 0 || 
+      branch.valueOf === 0
     ) {
       setFieldErr("Field should not be empty");
       setTimeout(() => {
@@ -175,6 +177,7 @@ const Signup = () => {
 
   return (
     <>
+      {/* {isLoading && <Loader/>} */}
       {errorMade && (
         <ErrorModel
           title={errorMade.title}
