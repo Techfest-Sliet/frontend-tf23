@@ -79,9 +79,6 @@ const Signup = () => {
       setDivTwo(true);
     }
   };
-  // if(email.split('@')[1] === 'sliet.ac.in') {
-  //   setCollegeName('Sant Longowal Institute of Engineering and Technology');
-  // }
   const showDivOne = () => {
     setDivOne(true);
     setDivTwo(false);
@@ -111,7 +108,7 @@ const Signup = () => {
       }, 3000);
       return;
     }
-    if (branch === 0) {
+    if (branch.valueOf === 0) {
       setBranchErr("Please choose your branch");
       setTimeout(() => {
         setBranchErr(null);
@@ -144,7 +141,6 @@ const Signup = () => {
       dob: dob
     };
     setIsLoading(true);
-    console.log(isLoading);
     await axios
       .post(`${baseUrl}/auth/sign-up`, user)
       .then((result) => {
@@ -177,7 +173,7 @@ const Signup = () => {
 
   return (
     <>
-      {/* {isLoading && <Loader/>} */}
+      {isLoading && <Loader/>}
       {errorMade && (
         <ErrorModel
           title={errorMade.title}

@@ -20,7 +20,6 @@ import DomainScreen from "./screens/domain/Domain.jsx";
 import HomeScreen from "./screens/landingPage/HomeScreen";
 import Workshop from "./workshop/workshops";
 import Reset from "./components/resetPassword/resetPassword";
-import Loading from "./components/loading/Loading";
 import UnderConstruction from "./components/Construction/underConstruction.js";
 import ForgotPassword from "./components/forgotPassword/forgotPassword";
 import Aboutus from '../src/screens/About us/AboutUs.jsx';
@@ -32,7 +31,6 @@ import Popup from './components/Popup/Popup.js';
 import Events from './components/domain/OneCard.jsx';
 import ErrorModel from './components/ErrorPopup/ErrorModel';
 import Visitor from './components/visitors/visitors.js';
-import Loader from './components/Loader/Loader.js';
 function App() {
   const authContext = useContext(AuthContext);
   const {isUserLoggedIn, setUserLoggedIn} = authContext;
@@ -53,7 +51,6 @@ function App() {
         {location.pathname !== '/sign-up' && location.pathname!== '/sign-in' && <Navbar isAuth={isUserLoggedIn} onLogout={logOutHandler}/>}
         {location.pathname !== '/sign-up' && location.pathname!== '/sign-in' && location.pathname!== '/user-dashboard' && <Footer />}
         <Routes>
-          <Route path="/loading" element={<Loader />} />
           <Route path="/domains" element={<DomainScreen />} />
           <Route path="*" element={<Error404 />} />
           <Route path="/visitors" element={<Visitor />} />
@@ -72,7 +69,6 @@ function App() {
           {!authContext.isUserLoggedIn && <Route path="/sign-in" element={<SignIn />} />}
           {!authContext.isUserLoggedIn && <Route path="/sign-up" element={<SignUp />} />}
           <Route path="/reset-password" element={<Reset />} />
-          <Route path="/loading" element={<Loading />} />
           <Route path="/forgot-password" element={<ForgotPassword />} />
           <Route path="/our-team" element={<OurTeam />} />
           <Route path="/about" element={<Aboutus/>} />
