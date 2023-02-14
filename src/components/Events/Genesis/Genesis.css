@@ -51,13 +51,10 @@
     height: auto;
 }
 
-.insideCntiner h1 {
+img.event_Genesis {
     z-index: 1;
-    color: rgb(0, 252, 0);
-    font-size: 10vw;
-    font-weight: bolder;
-    margin-bottom: 0px;
-    letter-spacing: -4px;
+    width: 58vw;
+    margin-left: 50px;
 }
 
 .whiteLine {
@@ -120,9 +117,6 @@
         height: auto;
     }
 
-    .insideCntiner h1 {
-        letter-spacing: 0;
-    }
 
     .whiteLine {
         width: 20vw;
@@ -132,13 +126,17 @@
     .evnts {
         font-size: 7vw;
     }
-    
+
 }
 
 
 @media screen and (max-width: 777px) {
     .background-of-EventsPage {
         height: 65vh;
+    }
+
+    img.event_Genesis {
+        width: 75vw;
     }
 
     .eventContainer {
@@ -154,15 +152,11 @@
         height: auto;
     }
 
-    .insideCntiner h1 {
-        letter-spacing: 0;
-    }
-
     .insideCntiner p {
         width: 40vw;
     }
 
-    
+
 }
 
 @media screen and (max-width: 650px) {
@@ -170,15 +164,15 @@
         margin-top: 0;
     }
 
+    img.event_Genesis {
+        width: 75vw;
+    }
+
     .techFestT {
         width: 90vw;
         height: auto;
     }
 
-    .insideCntiner h1 {
-        font-size: 15vw;
-        /* margin-top: 2vw; */
-    }
 
     .whiteLine {
         width: 25vw;
@@ -192,10 +186,15 @@
     #exploreEvents {
         font-size: medium;
     }
-    
+
 }
 
 @media screen and (max-width: 550px) {
+    img.event_Genesis {
+        margin-left: 30px;
+        width: 90vw;
+    }
+
     .insideCntiner p {
         width: 75vw;
         font-size: 12px !important;
