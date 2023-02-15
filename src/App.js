@@ -1,5 +1,5 @@
 import "./index.css";
-import React, { useContext, useState, useEffect } from "react";
+import React, { useContext, useState } from "react";
 import { useLocation } from "react-router-dom";
 import { Route, Routes } from "react-router";
 import { Navbar } from "./components/Navbar/Navbar";

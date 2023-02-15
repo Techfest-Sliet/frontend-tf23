@@ -6,7 +6,10 @@
 }
 
 .FirstPage {
-  height: 115vh;
+  /* height: 115vh; */
+  height: auto;
+ /* background: radial-gradient(ellipse at top, #126419, #000),
+    radial-gradient(ellipse at bottom, #000000, rgb(0, 0, 0)); */
   padding: 1em 0;
 }
 
@@ -16,12 +19,12 @@
   left: 0;
   opacity: 0.17;
   width: 100%;
-  height: 100%;
+  height: auto;
 }
 
 .landingPage {
   width: 80%;
-  height: calc(100vh - 4em);
+  height: auto;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -31,12 +34,12 @@
 }
 
 .logoContainer {
-  margin-top: 100px;
+  /* margin-top: 100px; */
   position: relative;
 }
 
 .main_img {
-  margin-top: 100px;
+  /* margin-top: 100px; */
   width: 25vw;
   filter: drop-shadow(-9px 68px 127px #000000);
 }
@@ -110,6 +113,58 @@
   border-radius: 19px;
 }
 
+/* Sub Theme Container */
+.subthemeCont {
+  width: 65vw;
+  text-align: center;
+  margin: 3vw;
+}
+
+.subthemeCont h1{
+  margin: 2vw 0 6vw 0;
+}
+
+.subthemeBox {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.hexagonImg {
+  top: -6vw;
+  left: 0vw;
+  position: relative;
+  height: auto;
+  width: 20%;
+}
+
+.hexagonImgBottom1 {
+  bottom: -6vw;
+  right: -1vw;
+  position: relative;
+  height: auto;
+  width: 20%;
+}
+
+.hexagonImgBottom {
+  bottom: -6vw;
+  left: 0vw;
+  position: relative;
+  height: auto;
+  width: 20%;
+}
+
+/* expanded landing page */
+/* .extendedPage {
+  height: 100%;
+  background: rgb(5, 79, 17);
+  background: linear-gradient(
+    135deg,
+    rgba(5, 79, 17, 0.99) 9%,
+    rgba(0, 0, 0, 1) 50%,
+    rgba(5, 62, 15, 1) 93%
+  ); */
+/* } */
 .main_container {
   padding-top: 160px;
   margin: 0px auto;
@@ -269,20 +324,20 @@
 /* MEDIA QUERY */
 @media only screen and (max-width: 1441px) {
   .main_img {
-    margin-top: 100px;
+    /* margin-top: 100px; */
     width: 27vw;
   }
 
   .landingPageCover__animation {
     position: absolute;
-    top: 200px;
+    top: 60px;
     left: 0;
     width: 100vw;
-    height: 100vh;
+    /* height: 120vh; */
   }
 
   .FirstPage {
-    height: 130vh;
+    height: auto;
   }
 
   .innovation {
@@ -298,6 +353,12 @@
   }
 }
 
+@media only screen and (max-width: 1301px) {
+  .subthemeCont{
+    width: 85vw;
+  }
+}
+
 @media only screen and (max-width: 1100px) {
   .main_img {
     width: 30vw;
@@ -305,15 +366,15 @@
   }
 
   .FirstPage {
-    height: 130vh;
+    height: auto;
   }
 
   .landingPageCover__animation {
     position: absolute;
-    top: 100px;
+    top: 50px;
     left: 0;
     width: 100vw;
-    height: 100vh;
+    /* height: 130vh; */
   }
 
   .innovation {
@@ -327,7 +388,9 @@
   #agriculture {
     font-size: 120px;
   }
-
+  .subthemeCont {
+    width: 87vw;
+  }
   .landingText {
     font-size: 16px;
   }
@@ -485,7 +548,23 @@
   .landingText {
     font-size: 14px;
   }
-
+  .subthemeCont {
+    width: 95vw;
+  }
+  .hexagonImg {
+    top: -14vw;
+    width: 20%;
+  }
+  
+  .hexagonImgBottom1 {
+    bottom: -14vw;
+    width: 20%;
+  }
+  
+  .hexagonImgBottom {
+    bottom: -14vw;
+    width: 20%;
+  }
   .main_container {
     width: 80%;
     flex-direction: column;
@@ -542,6 +621,33 @@
   .landingText {
     font-size: 12px;
   }
+  .FirstPage{
+    height: 170vh;
+  }
+  .subthemeBox {
+    display: flex;
+    flex-direction: column;
+  }
+  .subthemeCont h1{
+    margin: 4vh 0 1vh 0;
+  }
+  .hexagonImg {
+    top: 0;
+    left: -35vw;
+    width: 35%;
+  }
+  
+  .hexagonImgBottom1 {
+    bottom: -4vw;
+    left: 35vw;
+    width: 35%;
+  }
+  
+  .hexagonImgBottom {
+    bottom: 0;
+    left: 35vw;
+    width: 35%;
+  }
 
   /* trailer */
   #trailer {
@@ -577,10 +683,18 @@
 }
 
 @media only screen and (max-width: 425px) {
-  .landingPage {
-    /* width: 80%; */
+  /* .landingPage {
+    /* width: 80%; 
     height: 80vh;
-  }
+  } */
+  /* .landingPageCover__animation {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 660px;
+    width: 420px;
+    opacity: 0.07;
+  } */
 
   .main_img {
     width: 70vw;
@@ -675,6 +789,9 @@
 }
 
 @media only screen and (max-width: 375px) {
+  .FirstPage{
+    height: 150vh;
+  }
   .landingPage {
     width: 80%;
   }
@@ -715,6 +832,7 @@
     font-size: 14px;
     line-height: 1;
   }
+  
 
   .main_container {
     padding-top: 10px;
@@ -765,7 +883,7 @@
 
 @media only screen and (max-width: 321px) {
   .FirstPage {
-    height: 110vh;
+    height: 130vh;
   }
 
   .landingPage {
