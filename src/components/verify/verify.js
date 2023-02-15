@@ -77,7 +77,7 @@ const Verify = () => {
           className="verify__reset-img"
         />
         <h1 className="verify__title">
-            {success ? "Verification link sent to your mail" : "Token Expired?"}
+            {success ? "Verification link sent to your mail" : "Mail not Verified?"}
           </h1>
         <p className="verify__text">
             {success ? "Verification link sent to your mail" : "No worries ! it happens, enter your E-mail and we’ll send you a verification link."}

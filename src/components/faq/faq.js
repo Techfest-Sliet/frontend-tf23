@@ -63,7 +63,7 @@ const ContactUs = () => {
                                     </div>
                                     <div className='faqs_domain_coordinator'>
                                         <img src={dummy} className="dummy_img" alt='...' />
-                                        <p>Prasant Shahi</p>
+                                        <p>Prashant Shahi</p>
                                         <a className='faqs_number' href="tel:8877515552">
                                         8877515552
                                         </a>

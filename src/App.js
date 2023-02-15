@@ -1,9 +1,10 @@
 import "./index.css";
-import React, {useContext, useState} from "react";
-import {useLocation} from 'react-router-dom';
+import React, { useContext, useState, useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import { Route, Routes } from "react-router";
 import { Navbar } from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
+import axios from "axios";
 import SignUp from "./components/Signup/Signup";
 import Chemfor from "./components/Events/Chemfor/Chemfor.js";
 import Electrica from "./components/Events/Electrica/Electrica.js";
@@ -22,38 +23,72 @@ import Workshop from "./workshop/workshops";
 import Reset from "./components/resetPassword/resetPassword";
 import UnderConstruction from "./components/Construction/underConstruction.js";
 import ForgotPassword from "./components/forgotPassword/forgotPassword";
-import Aboutus from '../src/screens/About us/AboutUs.jsx';
-import UserDashboard from './components/userDashboard/userDash.jsx';
-import OurTeam from './components/OurTeam/team.jsx';
-import AuthContext from './auth/authContext';
-import Verify from './components/verify/verify';
-import Popup from './components/Popup/Popup.js';
-import Events from './components/domain/OneCard.jsx';
-import ErrorModel from './components/ErrorPopup/ErrorModel';
-import Visitor from './components/visitors/visitors.js';
+import Aboutus from "../src/screens/About us/AboutUs.jsx";
+import UserDashboard from "./components/userDashboard/userDash.jsx";
+import OurTeam from "./components/OurTeam/team.jsx";
+import AuthContext from "./auth/authContext";
+import Verify from "./components/verify/verify";
+import Popup from "./components/Popup/Popup.js";
+import Events from "./components/domain/OneCard.jsx";
+import ErrorModel from "./components/ErrorPopup/ErrorModel";
+// import Visitor from "./components/visitors/visitors.js";
 function App() {
   const authContext = useContext(AuthContext);
-  const {isUserLoggedIn, setUserLoggedIn} = authContext;
+  const { isUserLoggedIn, setUserLoggedIn } = authContext;
   const [errorMade, setErrorMade] = useState();
   let location = useLocation();
   const onErrorMadeHandle = () => {
     setErrorMade(null);
-  }
+  };
   const logOutHandler = () => {
     setUserLoggedIn(false);
     localStorage.removeItem("token");
     localStorage.removeItem("userId");
     localStorage.removeItem("expirationDate");
   };
+
+
+  // No of unique visitors implementation
+  const [visitors, setVisitors] = useState(0);
+
+  window.onload = () => {
+      const getToken = localStorage.getItem("uniqueVisitor");
+      const token = {
+        token: getToken,
+      };
+      axios
+        .post("http://localhost:4000/visitors/count", token)
+        .then((res) => {
+          if (res.status === 200) {
+            setVisitors(res.data.count);
+            localStorage.setItem("uniqueVisitor", res.data.token);
+            return;
+          } else if (res.status === 208) {
+            setVisitors(res.data.count);
+          } else {
+            console.log(res);
+            return;
+          }
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+      console.log(visitors);
+  };
   return (
     <>
       <div className="App">
-        {location.pathname !== '/sign-up' && location.pathname!== '/sign-in' && <Navbar isAuth={isUserLoggedIn} onLogout={logOutHandler}/>}
-        {location.pathname !== '/sign-up' && location.pathname!== '/sign-in' && location.pathname!== '/user-dashboard' && <Footer />}
+        {location.pathname !== "/sign-up" &&
+          location.pathname !== "/sign-in" && (
+            <Navbar isAuth={isUserLoggedIn} onLogout={logOutHandler} />
+          )}
+        {location.pathname !== "/sign-up" &&
+          location.pathname !== "/sign-in" &&
+          location.pathname !== "/user-dashboard" && <Footer />}
         <Routes>
           <Route path="/domains" element={<DomainScreen />} />
           <Route path="*" element={<Error404 />} />
-          <Route path="/visitors" element={<Visitor />} />
+          {/* <Route path="/visitors" element={<Visitor />} /> */}
           <Route path="/faq" element={<Faq />} />
           <Route path="/events/chemfor" element={<Chemfor />} />
           <Route path="/events/electrica" element={<Electrica />} />
@@ -66,25 +101,31 @@ function App() {
           <Route path="/workshops" element={<Workshop />} />
           <Route path="/under-construction" element={<UnderConstruction />} />
           <Route path="/" element={<HomeScreen />} />
-          {!authContext.isUserLoggedIn && <Route path="/sign-in" element={<SignIn />} />}
-          {!authContext.isUserLoggedIn && <Route path="/sign-up" element={<SignUp />} />}
+          {!authContext.isUserLoggedIn && (
+            <Route path="/sign-in" element={<SignIn />} />
+          )}
+          {!authContext.isUserLoggedIn && (
+            <Route path="/sign-up" element={<SignUp />} />
+          )}
           <Route path="/reset-password" element={<Reset />} />
           <Route path="/forgot-password" element={<ForgotPassword />} />
           <Route path="/our-team" element={<OurTeam />} />
-          <Route path="/about" element={<Aboutus/>} />
-          <Route path="/popup" element={<Popup/>} />
-          <Route path="/verify" element={<Verify/>} />
-          <Route path="/events/:title" element={<Events/>} />
-           {authContext.isUserLoggedIn && <Route path="/user-dashboard" element={<UserDashboard/>} />}
+          <Route path="/about" element={<Aboutus />} />
+          <Route path="/popup" element={<Popup />} />
+          <Route path="/verify" element={<Verify />} />
+          <Route path="/events/:title" element={<Events />} />
+          {authContext.isUserLoggedIn && (
+            <Route path="/user-dashboard" element={<UserDashboard />} />
+          )}
         </Routes>
       </div>
-      {errorMade && 
-        <ErrorModel 
+      {errorMade && (
+        <ErrorModel
           title={errorMade.title}
           message={errorMade.message}
           onErrorClick={onErrorMadeHandle}
         />
-      }
+      )}
     </>
   );
 }
