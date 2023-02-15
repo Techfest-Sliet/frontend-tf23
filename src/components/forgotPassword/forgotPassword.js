@@ -34,7 +34,7 @@ const ForgotPassword = () => {
       email: email,
     };
     setIsLoading(true);
-    await axios.post(`${baseUrl}/auth/forgotPassword`, user).then((result) => {
+    await axios.post(`${baseUrl}/auth/forgot-password`, user).then((result) => {
       const res = (result);
       setIsLoading(false);
       if (res.status === 208) {
