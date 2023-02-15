@@ -50,13 +50,7 @@ const HomePage = () => {
             <Button variant="contained" id="signUpButton" sx={{ mr: 2, mt: 3 }}>
               <Link to={authContext.isUserLoggedIn ? '/user-dashboard' : '/sign-up'}>{authContext.isUserLoggedIn ? 'User Dashboard' : 'Sign up Now'}</Link>
             </Button>
-            <Button
-              variant="contained"
-              id="aboutUsButton"
-              sx={{ mr: 2, mt: 3 }}
-            >
-              <Link to={"/about"}>About Us</Link>
-            </Button>
+            
           </div>
           <div className="subthemeCont">
             <h1>
