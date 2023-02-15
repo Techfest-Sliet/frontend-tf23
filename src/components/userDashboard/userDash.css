@@ -39,7 +39,7 @@ table.profiletable {
     text-align: center;
 }
 
-b {
+.contactInfo {
     font-size: 25px;
     /* margin-top: 47px; */
     padding: 0px;
@@ -96,7 +96,7 @@ p.blockquote-footer {
 }
 
 
-user__header {
+.user__header {
     font-size: 56px;
     letter-spacing: -1px;
 }
@@ -288,7 +288,7 @@ user__header {
         margin-bottom: 40px;
     }
 
-    b {
+    .contactInfo {
         font-size: 24px;
         margin-top: 47px;
         padding: 0px;

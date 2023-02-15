@@ -50,6 +50,7 @@ navbar{
 }
 
 .navbar-items li a{
+    font-family: "productSans";
     color: white;
     text-decoration: none;
     display: block;

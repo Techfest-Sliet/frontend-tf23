@@ -33,7 +33,13 @@
 }
 
 .LeftOfEventBox h1 {
+    font-family: "productSans";
     margin-bottom: 10px;
+}
+
+.evntDesc h2{
+    font-family: "productSansBold";
+    margin: 6px 0;
 }
 
 .RightOfEventBox {
@@ -70,6 +76,10 @@
 }
 .event__coordinator {
     text-align: center;
+}
+
+.event__coordinator span{
+    font-family: "productSansBold";
 }
 
 .registerNowEvent {

@@ -64,6 +64,7 @@
     position: absolute;
   }
   .span{
+    font-family: 'productSans';
     font-size: 20px;
   }
   .ringImage {
@@ -126,6 +127,8 @@
     text-align: center;
   }
   .domainheading h2 {
+    margin-top: 1vh;
+    font-family: "monumentExtended";
     color: #74eb76;
     font-weight: 400;
     font-size: 4.5vw;

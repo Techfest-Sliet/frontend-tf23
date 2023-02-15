@@ -10,8 +10,8 @@ const EventBottom = ({ props }) => {
                     <div style={{ textAlign: "center", color: "white" }}>
                         <img src={props.photoOfFaculty} className='dummyImg' alt=".." />
                     </div>
-                    <div style={{ color: "white", textAlign: "center" }}>
-                        <b>{props.nameOfFaculty}</b><br></br> {props.facultyAdvisor} <br />
+                    <div style={{ color: "white", textAlign: "center", fontFamily: "productSans" }}>
+                        <span className='txtbold'>{props.nameOfFaculty}</span><br></br> {props.facultyAdvisor} <br />
                     </div>
 
 
@@ -23,7 +23,7 @@ const EventBottom = ({ props }) => {
                                         <img src={cord.photoOfdomainCoordinator} className='dummyImgSingle' alt=".." />
 
                                         <div style={{ textAlign: "center", margin: "7px" }}>
-                                            <b> {cord.nameOfDomainCoordinator} </b><br></br>
+                                            <span className='txtbold'> {cord.nameOfDomainCoordinator} </span><br></br>
                                             {cord.phoneNoOfDomainCoordinator} <br />
                                             {cord.mailOfDomainCoordinator}
                                         </div>
@@ -34,7 +34,7 @@ const EventBottom = ({ props }) => {
                                         <img src={cord.photoOfdomainCoordinator} className='dummyImgDouble' alt=".." />
 
                                         <div style={{ textAlign: "center", margin: "7px" }}>
-                                            <b> {cord.nameOfDomainCoordinator} </b><br></br>
+                                        <span className='txtbold'> {cord.nameOfDomainCoordinator} </span><br></br>
                                             {cord.phoneNoOfDomainCoordinator} <br />
                                             {cord.mailOfDomainCoordinator}
                                         </div>

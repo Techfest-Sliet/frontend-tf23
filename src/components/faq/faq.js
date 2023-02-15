@@ -22,7 +22,7 @@ const ContactUs = () => {
                 <div className='background-of-contactUsPage'>
 
                     <div style={{ position: "relative" }}>
-                        <h1 className='faqs'>Frequently Asked Questions </h1>
+                        <h1 style={{ fontFamily: "productSansBold" }} className='faqs'>Frequently Asked Questions </h1>
                     </div>
 
 
@@ -49,7 +49,7 @@ const ContactUs = () => {
 
                     <div className='faqs_container'>
                         <div>
-                            <h1 className='Dial_In'>Don't Think Twice, Simply Dial In </h1>
+                            <h1 style={{ fontFamily: "productSansBold" }} className='Dial_In'>Don't Think Twice, Simply Dial In </h1>
 
                             <div className='faqs_coordinators'>
 
@@ -63,7 +63,7 @@ const ContactUs = () => {
                                     </div>
                                     <div className='faqs_domain_coordinator'>
                                         <img src={dummy} className="dummy_img" alt='...' />
-                                        <p>Prasant Shahi</p>
+                                        <p>Prashant Shahi</p>
                                         <a className='faqs_number' href="tel:8877515552">
                                         8877515552
                                         </a>

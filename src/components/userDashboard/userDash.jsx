@@ -87,7 +87,7 @@ function User_dasbord() {
 
               <tr className="TableRow">
                 <td className="" colspan="2">
-                  <b>Contact Information</b>
+                  <b className="contactInfo">Contact Information</b>
                 </td>
               </tr>
               <tr className="TableRow">

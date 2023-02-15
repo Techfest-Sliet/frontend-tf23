@@ -44,6 +44,10 @@
     margin: 3vw 0 6vw 0;
 }
 
+.txtbold {
+    font-family: "productSansBold";
+}
+
 @media screen and (max-width: 1055px) {
     .dummyImg {
         height: 20%;
@@ -82,7 +86,11 @@
 }
 
 @media screen and (max-width: 650px) {
+    .fac_Container {
+        font-size: 14px;
+    }
     .dmnCordintor {
+        /* font-size: 14px; */
         width: 85vw !important;
         margin: 3vh 0 7vh 0 !important;
     }

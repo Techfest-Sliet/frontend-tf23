@@ -68,8 +68,13 @@ const HomePage = () => {
             </Button>
           </div>
           <div className="subthemeCont">
-            <h1>
-              <span style={{ color: " rgb(22, 188, 22)" }}>Sub-Theme</span>
+            <h1
+              style={{
+                color: " rgb(22, 188, 22)",
+                fontFamily: "monumentExtended",
+              }}
+            >
+              Sub-Theme
             </h1>
             <div className="subthemeBox">
               <img src={hexagonImg} className="hexagonImgBottom1" alt=".." />
@@ -140,7 +145,11 @@ const HomePage = () => {
         {/* sponsor */}
         <div className="sponsor">
           <h1 id="sponsor" style={{ color: "#74EB76" }}>
-            OUR <span style={{ color: "white" }}>PAST</span> SPONSORS
+            OUR{" "}
+            <span style={{ color: "white", fontFamily: "monumentExtended" }}>
+              PAST
+            </span>{" "}
+            SPONSORS
           </h1>
           <SliderDiv arr={SponsorImageSlider} />
         </div>

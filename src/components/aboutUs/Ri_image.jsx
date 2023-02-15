@@ -5,9 +5,9 @@ function Ri_image(props) {
     <div className='Ri_image_Container'>
         <div className="Ri_ImageTexT">
            <div className="Ri_textWrap">
-           <h1 className='Ri_imageHeading'>{props.heading}</h1>
-            <h4 className='tagline'><i>{props?.tagline}</i></h4>
-            <p className='Ri_imageDetail'>{props?.detail}</p>
+           <h1 style={{ fontFamily: "monumentExtended" }} className='Ri_imageHeading'>{props.heading}</h1>
+            <h4 style={{ fontFamily: "productSansBold" }} className='Ri_tagline'><i>{props?.tagline}</i></h4>
+            <p style={{ fontFamily: "productSans" }} className='Ri_imageDetail'>{props?.detail}</p>
            </div>
         </div>
         <div className="Ri_image_ContainerImg">
