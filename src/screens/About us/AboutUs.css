@@ -19,6 +19,11 @@
     rgba(5, 62, 15, 1) 93%
   ); 
 }
+
+.container_AboutUs_Upperpart {
+  position: relative;
+  z-index: 1;
+}
 .About_Us_part1 {
   padding-top: 8rem;
   display: flex;
