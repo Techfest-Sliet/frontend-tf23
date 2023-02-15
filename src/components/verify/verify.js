@@ -1,21 +1,25 @@
 import "./verify.css";
 // import logo from "../../images/techFEST '23.webp";
+import React from 'react';
 import reset from "../../images/reset.png";
 import { useState } from "react";
 import {useNavigate} from 'react-router-dom';
 import axios from "axios";
 import { baseUrl } from "../../API/api";
+import Loader from '../Loader/Loader.js';
 
 const Verify = () => {
   const [email, setEmail] = useState("");
   const [fieldErr, setFieldErr] = useState(null);
   const [mailErr, setMailErr] = useState(null);
   const [err, setErr] = useState(null);
-  const [success, setSuccess] = useState(null)
+  const [success, setSuccess] = useState(null);
+  const [isLoading, setIsLoading] = useState(false);
+  const navigate = useNavigate();
 
   const PostData = async (e) => {
+    console.log("entered");
     e.preventDefault();
-    const navigate = useNavigate();
     if (email.trim().length === 0) {
       setFieldErr("Field should not be empty");
       setTimeout(() => {
@@ -34,7 +38,9 @@ const Verify = () => {
     const user = {
       email: email,
     };
+    setIsLoading(true);
     await axios.post(`${baseUrl}/auth/verify`, user).then((result) => {
+      setIsLoading(false);
       const res = (result);
       if (res.status === 208) {
         setErr(res.data.message);
@@ -46,13 +52,16 @@ const Verify = () => {
         setSuccess(res.data.message);
         setTimeout(() => {
           setSuccess(null);
-          navigate('/signIn')
+          navigate('/sign-in')
         }, 3000)
       }
     });
   };
+  console.log("email",email);
 
   return (
+    <>
+    {isLoading && <Loader />}
     <div className="verify verify__body">
       {/* <div>
         <img
@@ -76,7 +85,8 @@ const Verify = () => {
         </p>
         {fieldErr && <p className="verify__error">{fieldErr}</p>}
         {err && <p className="verify__error">{err}</p>}
-        <form method="post" className="verify__inputFields">
+        <form method="post" 
+         className="verify__inputFields">
           <input
             placeholder="Enter your mail!"
             className="verify__input"
@@ -93,6 +103,7 @@ const Verify = () => {
         </form>
       </div>
     </div>
+    </>
   );
 };
 

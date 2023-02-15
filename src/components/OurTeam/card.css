@@ -104,12 +104,12 @@
 .card__collection .cards--two:hover li {
   transform: translateY(0);
 }
-.card__collection .cards--two:hover .cards--two__tri {
+/* .card__collection .cards--two:hover .cards--two__tri {
   right: -40%;
 }
 .card__collection .cards--two:hover .cards--two__tri:before {
   right: -312px;
-}
+} */
 .card__collection .cards--two img {
   transition: all 0.2s ease;
 }
