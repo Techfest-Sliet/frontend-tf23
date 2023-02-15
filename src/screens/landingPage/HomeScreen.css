@@ -36,6 +36,8 @@
 .logoContainer {
   /* margin-top: 100px; */
   position: relative;
+  display: flex;
+  justify-content: center;
 }
 
 .main_img {
