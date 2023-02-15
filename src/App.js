@@ -32,7 +32,7 @@ import Events from './components/domain/OneCard.jsx';
 import ErrorModel from './components/ErrorPopup/ErrorModel';
 import Visitor from './components/visitors/visitors.js';
 import Feedback from "./components/Feedback/feedback";
-
+import Confirmedmail from "./components/cofirmedmail/confirmedmail";
 function App() {
   const authContext = useContext(AuthContext);
   const {isUserLoggedIn, setUserLoggedIn} = authContext;
@@ -78,7 +78,9 @@ function App() {
           <Route path="/verify" element={<Verify/>} />
           <Route path="/events/:title" element={<Events/>} />
            {authContext.isUserLoggedIn && <Route path="/user-dashboard" element={<UserDashboard/>} />}
+
            <Route path="/feedback" element={<Feedback/>}/>
+           <Route path="/confirmedmail" element={< confirmedmail/>}/>
         </Routes>
       </div>
       {errorMade && 
