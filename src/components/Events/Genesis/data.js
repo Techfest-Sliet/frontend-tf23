@@ -20,7 +20,7 @@ export const datasOfEvent = [
         nameOfEvent: "Shuruaat",
         desc: "As butterfly come out of cocoons, as Entrepreneurs in Shuruat! This events demands from the participants to present their innovations and business models pertaining to theme Innovation in Agriculture.Register yourself for the event and do a perfect Shuruat.",
         register: (<span><Link to={"/underConstruction"} rel='noopener noreferrer' style={{ textDecoration: "none", color: "white" }}>Register Now</Link></span>),
-        schedule: (<span><a rel='noopener noreferrer' target='_blank' href='https://drive.google.com/file/d/1lVN7TgRpiMYs8ZBSNdCZNqT9vXXWwZoR/view?usp=share_link' style={{ textDecoration: "none", color: "white" }}>Problem Statement</a></span>),
+        schedule: (<span><a rel='noopener noreferrer' target='_blank' href='https://drive.google.com/file/d/1t2YjsGJCfLb7ayiNE1DDNCPaWNuSBW8Y/view?usp=share_link' style={{ textDecoration: "none", color: "white" }}>Problem Statement</a></span>),
         prizeMoney: "₹ 15,000",
         dateBefore: "15/03",
         coor: [{

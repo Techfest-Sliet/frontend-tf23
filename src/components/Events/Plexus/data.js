@@ -72,7 +72,7 @@ export const datasOfEvent = [
         nameOfEvent: "Pixel Wizard",
         desc: "Finding difficulty in accessing the information of your school's site? Present your own interface by creating a website all from scratch. Participate in our event Pixel Wizard and win worthy cash prizes.",
         register: (<span><Link to={"/underConstruction"} rel='noopener noreferrer' href='https://www.wikipedia.com/' style={{ textDecoration: "none", color: "white" }}>Register Now</Link></span>),
-        schedule: (<span><a rel='noopener noreferrer' target='_blank' href='https://drive.google.com/file/d/1n1VbD1yICWe8Z6eTgDjfAQqEPi48oix1/view?usp=sharing' style={{ textDecoration: "none", color: "white" }}>Problem Statement</a></span>),
+        schedule: (<span><a rel='noopener noreferrer' target='_blank' href='https://drive.google.com/file/d/1aQMvlwIrgeRVPD5hUNA0J6V7NRlylW0F/view?usp=share_link' style={{ textDecoration: "none", color: "white" }}>Problem Statement</a></span>),
         prizeMoney: "₹ 14,000",
         dateBefore: "15/03",
         coor: [{
