@@ -55,7 +55,13 @@ export const datasOfEvent = [
         nameOfEventCoordinator: "Ram kumar",
         phoneNo: (<span><a href="tel:6203884073 " style={{ textDecoration: "none", color: "white" }}> 6203884073  </a></span>),
         mail: (<span><a href='mailto:2040367@sliet.ac.in' style={{ textDecoration: "none", color: "white" }}> 2040367@sliet.ac.in
-        </a></span>)}]
+        </a></span>)},
+        {
+            img: require('../../dummy.jpg'),
+            nameOfEventCoordinator: "Kishan Raj",
+            phoneNo: (<span><a href="tel:9608970491 " style={{ textDecoration: "none", color: "white" }}> 9608970491  </a></span>),
+            mail: (<span><a href='mailto:2236096@sliet.ac.in' style={{ textDecoration: "none", color: "white" }}> 2236096@sliet.ac.in
+            </a></span>)}]
     }
 ]
 
