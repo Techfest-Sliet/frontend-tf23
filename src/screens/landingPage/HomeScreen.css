@@ -728,10 +728,11 @@
 
   .landingText {
     font-size: 14px;
-    text-align: center;
+    line-height: 1.3;
+    text-align: justify;
+    width: 100%;
     font-weight: 0;
-    line-height: 1;
-    line-height: 18px;
+    
   }
 
   #signUpButton {
@@ -830,7 +831,9 @@
 
   .landingText {
     font-size: 14px;
-    line-height: 1;
+    line-height: 1.3;
+    text-align: justify;
+    width: 100%;
   }
   
 
