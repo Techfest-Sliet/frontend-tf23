@@ -80,7 +80,7 @@ function App() {
            {authContext.isUserLoggedIn && <Route path="/user-dashboard" element={<UserDashboard/>} />}
 
            <Route path="/feedback" element={<Feedback/>}/>
-           <Route path="/confirmedmail" element={< confirmedmail/>}/>
+           <Route path="/confirmedmail" element={<Confirmedmail/>}/>
         </Routes>
       </div>
       {errorMade && 

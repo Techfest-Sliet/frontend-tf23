@@ -66,6 +66,17 @@
   .span{
     font-size: 20px;
   }
+
+  .domainexplore {
+    color: white;
+    border-color: black;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid  #0b9e19;
+    cursor: pointer;
+    /* background: linear-gradient( 360deg, #0b9e19 10.45%, rgba(5, 89, 13, 0.57) 48.72%, rgba(0, 30, 5, 0) 87.53% ); */
+    
+  }
   .ringImage {
     height: 200px;
     background-color: transparent;
@@ -94,7 +105,7 @@
     background-size: cover;
     height: 90vh;
     overflow: hidden;
-    width: 100%;
+    width: auto;
   }
   .DomainScroll {
     height: 100%;
@@ -226,6 +237,19 @@
     
   
     }
+
+    @media only screen and (max-width: 350px){
+      .domainScreen {
+        height: 95vh;
+        align-items: center;
+      }
+      .domainheading {
+        width: 70%;
+        margin-bottom: 60px;
+      }
+      
+    
+      }
 @keyframes domainAnimation {
   0% {
     transform: rotateY(0deg) scaleX(-1);

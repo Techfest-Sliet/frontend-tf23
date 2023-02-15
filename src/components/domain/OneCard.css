@@ -64,7 +64,8 @@
   align-items: center;
 }
 .span{
-  font-size: 20px;
+  font-size: 1000px;
+  color: goldenrod;
 }
 .ringImage {
   height: 200px;
@@ -164,6 +165,12 @@
   opacity: 1; /* specify the final state */
   
 }
+
+.domainexplore{
+color: black;
+font-style: italic;
+}
+
 @media only screen and (max-width: 1100px){
   .domainheading {
       width: 40%;
