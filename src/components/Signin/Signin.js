@@ -34,6 +34,7 @@ const Signin = () => {
           setPasswordErr(res.data.message);
           setTimeout(() => {
             setPasswordErr(null);
+            navigate('/sign-up')
           }, 3000);
           return;
         } else if (res.status === 206) {
