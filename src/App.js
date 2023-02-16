@@ -57,7 +57,7 @@ function App() {
         token: getToken,
       };
       axios
-        .post("http://localhost:4000/visitors/count", token)
+        .post("https://www.techfestsliet.org/api/visitors/count", token)
         .then((res) => {
           if (res.status === 200) {
             setVisitors(res.data.count);

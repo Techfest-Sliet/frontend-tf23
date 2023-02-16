@@ -201,7 +201,7 @@ const Signup = () => {
                 type="number"
                 id="phone"
                 name="phone"
-                placeholder="Enter your phone number"
+                placeholder="Enter your whatsapp number"
                 value={phone}
                 onChange={(e) => setPhone(e.target.value)}
                 required

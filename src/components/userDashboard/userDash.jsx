@@ -206,10 +206,10 @@ const  User_dasbord = () => {
                 <td className="">E-mail </td>
                 <td className="TableRow__res">{user && user.email}</td>
               </tr>
-              <tr className="TableRow">
+              {/* <tr className="TableRow">
                 <td>Phone Number</td>
                 <td className="TableRow__res">{user && user.phone}</td>
-              </tr>
+              </tr> */}
               <tr className="TableRow">
                 <td>Whatsapp Number</td>
                 <td className="TableRow__res">{user && user.phone}</td>
