@@ -55,7 +55,7 @@ const HomePage = () => {
               </Link>
             </Button>
           </div>
-          <div className="subthemeCont">
+          {/* <div className="subthemeCont">
             <h1
               style={{
                 color: " rgb(22, 188, 22)",
@@ -73,7 +73,7 @@ const HomePage = () => {
               <SubthemeBox index={2} />
               <img src={hexagonImg} className="hexagonImg" alt=".." />
             </div>
-          </div>
+          </div> */}
         </div>
         <div></div>
       </div>
