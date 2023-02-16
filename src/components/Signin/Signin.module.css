@@ -43,6 +43,7 @@ a {
 }
 
 .signin__inputFields > input {
+  font-family: "productSans";
   margin-bottom: 1.5em;
   width: 70%;
   height: 1.3em;
@@ -55,6 +56,7 @@ a {
 }
 
 .signin__label {
+  font-family: "productSans";
   font-size: 1.5rem;
   margin-bottom: 0.4em;
 }
@@ -251,7 +253,8 @@ select option:hover {
 }
 
 .signin__title {
-  font-size: 3rem;
+  font-size: 2.5rem;
+  margin-bottom: 1vw;
 }
 
 .signin__text {
@@ -263,7 +266,6 @@ select option:hover {
   font-weight: bold;
   margin-left: 0.5em;
 }
-
 
 .signin__select {
   background-color: transparent;
@@ -316,7 +318,6 @@ select option:hover {
   .signin__inputFields > input::placeholder {
     font-size: 1rem;
   }
-
 
   .signin__button {
     padding: 0.2em 1em;
@@ -383,7 +384,7 @@ select option:hover {
     width: 85%;
     margin: 0 auto;
   }
-  .signin__page{
+  .signin__page {
     margin-top: 2%;
     width: 80%;
   }

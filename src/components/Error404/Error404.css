@@ -33,10 +33,12 @@
 }
 
 .error404__text {
+  font-family: "productSans";
   margin: 0 0 1em 0;
 }
 
 .error404__text > span {
+  font-family: "productSans";
   font-size: 1.7em;
 }
 

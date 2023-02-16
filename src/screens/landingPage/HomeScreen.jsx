@@ -48,13 +48,21 @@ const HomePage = () => {
             style={{ marginTop: 10, color: "white", marginBottom: 1 }}
           >
             <Button variant="contained" id="signUpButton" sx={{ mr: 2, mt: 3 }}>
-              <Link to={authContext.isUserLoggedIn ? '/user-dashboard' : '/sign-up'}>{authContext.isUserLoggedIn ? 'User Dashboard' : 'Sign up Now'}</Link>
+              <Link
+                to={authContext.isUserLoggedIn ? "/user-dashboard" : "/sign-up"}
+              >
+                {authContext.isUserLoggedIn ? "User Dashboard" : "Sign up Now"}
+              </Link>
             </Button>
-            
           </div>
-          {/* <div className="subthemeCont">
-            <h1>
-              <span style={{ color: " rgb(22, 188, 22)" }}>Sub-Theme</span>
+          <div className="subthemeCont">
+            <h1
+              style={{
+                color: " rgb(22, 188, 22)",
+                fontFamily: "monumentExtended",
+              }}
+            >
+              Sub-Theme
             </h1>
             <div className="subthemeBox">
               <img src={hexagonImg} className="hexagonImgBottom1" alt=".." />
@@ -65,7 +73,7 @@ const HomePage = () => {
               <SubthemeBox index={2} />
               <img src={hexagonImg} className="hexagonImg" alt=".." />
             </div>
-          </div> */}
+          </div>
         </div>
         <div></div>
       </div>
@@ -101,7 +109,7 @@ const HomePage = () => {
             <Button
               sx={{ color: "#fff", mt: 3, borderRadius: 6, width: 150, mb: 5 }}
               className="learnMoreButton"
-              onClick={()=>navigate('/under-construction')}
+              onClick={() => navigate("/under-construction")}
             >
               Learn More
             </Button>
@@ -125,7 +133,7 @@ const HomePage = () => {
         {/* sponsor */}
         <div className="sponsor">
           <h1 id="sponsor" style={{ color: "#74EB76" }}>
-            OUR <span style={{ color: "white" }}>PAST</span> SPONSORS
+            <span style={{ color: "white", fontFamily: "monumentExtended"  }}>PAST</span> SPONSORS
           </h1>
           <SliderDiv arr={SponsorImageSlider} />
         </div>

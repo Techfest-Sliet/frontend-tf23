@@ -26,9 +26,15 @@
 
 @media only screen and (max-width: 1100px) {
   .SubThemeBox {
-    margin: 2vh -10vh;
-    width: 20vw;
+    margin: 3vh -11vh;
+    width: 30vw;
     height: 15vw;
+  }
+}
+
+@media only screen and (max-width: 770px) {
+  .SubThemeBox {
+    margin: 3vh -9vh;
   }
 }
 
@@ -49,21 +55,18 @@
 
 @media only screen and (max-width: 426px) {
   .SubThemeBox {
-    margin: -5vh;
+    margin: -6vh;
   }
 }
 
 @media only screen and (max-width: 376px) {
   .SubThemeBox {
-    margin: -4vh;
+    margin: -5vh;
   }
 }
 
 @media only screen and (max-width: 322px) {
   .SubThemeBox {
-    margin: -3vh;
+    margin: -4vh;
   }
 }
-
-
-

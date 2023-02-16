@@ -71,6 +71,7 @@
 }
 
 .explore_wrkshop h2 {
+    font-family: 'monumentExtended';
     color: white;
     font-size: 6vh; /*40px */
     letter-spacing: 2px;
@@ -100,7 +101,8 @@
     height: auto;
     width: 100%;
     display: flex;
-    /* align-items: center; */
+    align-items: center;
+    flex-direction: column;
     justify-content: center;
 }
 

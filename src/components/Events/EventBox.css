@@ -33,7 +33,13 @@
 }
 
 .LeftOfEventBox h1 {
+    font-family: "productSansBold";
     margin-bottom: 10px;
+}
+
+.evntDesc h2{
+    font-family: "productSansBold";
+    margin: 6px 0;
 }
 
 .RightOfEventBox {
@@ -70,6 +76,10 @@
 }
 .event__coordinator {
     text-align: center;
+}
+
+.event__coordinator span{
+    font-family: "productSansBold";
 }
 
 .registerNowEvent {
@@ -110,9 +120,19 @@
     }
 }
 
+@media screen and (max-width: 935px) {
+    .problemStat{
+        margin: 5px 25px 7px 0;
+    }
+}
+
 @media screen and (max-width: 888px) {
     .LeftOfBox {
         width: 50%;
+    }
+
+    .problemStat{
+        margin: 5px 25px 7px 0;
     }
 
     .RightOfEventBox {
@@ -122,6 +142,12 @@
 
     .objOfEventBox {
         font-size: 2vw;
+    }
+    .boxImgSingle {
+        width: 25%;
+    }
+    .boxImgDouble {
+        width: 45%;
     }
 }
 
@@ -157,6 +183,9 @@
         text-align: center;
         bottom: 10px;
         flex-direction: column;
+    }
+    .problemStat{
+        margin: 15px 25px 7px 0;
     }
     .boxImage {
         display: flex;
@@ -210,6 +239,12 @@
     }
     .boxImgDouble {
         width: 25%;
+    }
+}
+
+@media screen and (max-width: 445px) {
+    .problemStat{
+        margin: 5px 25px 7px 0;
     }
 }
 

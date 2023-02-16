@@ -1,14 +1,36 @@
 .homePage {
-
   width: 100%;
   font-family: sans-serif;
-  background: radial-gradient(72% 16% at 50% 107%, #01590F -0.99%, #01590F -1.98%, rgb(0 0 0 / 0%) 100%), radial-gradient(72% 16% at 50% -4%, #01590F -0.99%, #01590F -0.98%, rgb(0 0 0 / 0%) 100%), radial-gradient(37% 45% at 116% 52%, #01590F -0.99%, #01590F -1.98%, rgb(0 0 0 / 0%) 100%), radial-gradient(41% 45% at -16% 47%, #01590F -0.99%, #01590F -0.98%, rgb(0 0 0) 100%);
+  background: radial-gradient(
+      72% 16% at 50% 107%,
+      #01590f -0.99%,
+      #01590f -1.98%,
+      rgb(0 0 0 / 0%) 100%
+    ),
+    radial-gradient(
+      72% 16% at 50% -4%,
+      #01590f -0.99%,
+      #01590f -0.98%,
+      rgb(0 0 0 / 0%) 100%
+    ),
+    radial-gradient(
+      37% 45% at 116% 52%,
+      #01590f -0.99%,
+      #01590f -1.98%,
+      rgb(0 0 0 / 0%) 100%
+    ),
+    radial-gradient(
+      41% 45% at -16% 47%,
+      #01590f -0.99%,
+      #01590f -0.98%,
+      rgb(0 0 0) 100%
+    );
 }
 
 .FirstPage {
   /* height: 115vh; */
   height: auto;
- /* background: radial-gradient(ellipse at top, #126419, #000),
+  /* background: radial-gradient(ellipse at top, #126419, #000),
     radial-gradient(ellipse at bottom, #000000, rgb(0, 0, 0)); */
   padding: 1em 0;
 }
@@ -48,6 +70,7 @@
 
 .innovationIn {
   display: flex;
+  font-family: monumentExtended;
 }
 
 .innovation {
@@ -60,7 +83,12 @@
   align-items: center;
 }
 
+#inn {
+  font-family: monumentExtended;
+}
+
 .O {
+  font-family: monumentExtended;
   width: 271px;
   border: 10px solid #d9d9d9;
   border-bottom-left-radius: 23px;
@@ -72,10 +100,12 @@
 }
 
 #vation {
+  font-family: monumentExtended;
   color: linear-gradient(to right, #d5d5d5, #9692a5);
 }
 
 #in {
+  font-family: monumentExtended;
   color: #fff;
   padding-top: 7vh;
   margin-left: 5px;
@@ -83,7 +113,8 @@
 }
 
 #agriculture {
-  font-size: 120px;
+  font-family: monumentExtended;
+  font-size: 100px;
   color: #2de230;
 }
 
@@ -103,12 +134,16 @@
 #signUpButton {
   background: linear-gradient(89.89deg, #003805 0.06%, #467814 102.53%);
   border-radius: 13px;
+  font-family: "productSans";
 }
 
 #aboutUsButton {
-  background: linear-gradient(113.23deg,
-      rgb(54 48 48 / 76%) 34.99%,
-      rgba(255, 255, 255, 0) 116.05%);
+  font-family: "productSans";
+  background: linear-gradient(
+    113.23deg,
+    rgb(54 48 48 / 76%) 34.99%,
+    rgba(255, 255, 255, 0) 116.05%
+  );
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
   box-shadow: 0px 4px 60px -1px rgba(0, 0, 0, 0.2),
     inset 0px 4px 50px rgba(0, 0, 0, 0.25);
@@ -122,7 +157,7 @@
   margin: 3vw;
 }
 
-.subthemeCont h1{
+.subthemeCont h1 {
   margin: 2vw 0 6vw 0;
 }
 
@@ -195,20 +230,25 @@
 }
 
 .containerHeading {
+  font-family: monumentExtended;
   font-size: 45px;
   margin: 10px 0px;
 }
 
 .containerText {
+  font-family: "productSans";
   font-size: 18px;
   font-weight: lighter;
   line-height: 1.5;
 }
 
 .learnMoreButton {
-  background: linear-gradient(113.23deg,
-      rgba(255, 255, 255, 0.3) 34.99%,
-      rgba(255, 255, 255, 0) 116.05%);
+  font-family: "productSansBold";
+  background: linear-gradient(
+    113.23deg,
+    rgba(255, 255, 255, 0.3) 34.99%,
+    rgba(255, 255, 255, 0) 116.05%
+  );
   box-shadow: 0px 4px 60px -1px rgba(0, 0, 0, 0.2),
     inset 0px 4px 50px rgba(0, 0, 0, 0.25);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
@@ -219,6 +259,7 @@
 /* trailer */
 
 #trailer {
+  font-family: monumentExtended;
   font-size: 72px;
   color: #74eb76;
   margin: 30px 0px;
@@ -253,9 +294,11 @@
 
 /* sponsor */
 #sponsor {
+  font-family: monumentExtended;
   text-align: center;
   margin-top: 30px;
   font-size: 72px;
+  z-index: 1;
 }
 
 .sponsor {
@@ -343,20 +386,20 @@
   }
 
   .innovation {
-    font-size: 38px;
+    font-size: 35px;
   }
 
   #in {
-    padding-top: 6vh;
+    padding-top: 4vh;
   }
 
   #agriculture {
-    font-size: 120px;
+    font-size: 100px;
   }
 }
 
 @media only screen and (max-width: 1301px) {
-  .subthemeCont{
+  .subthemeCont {
     width: 85vw;
   }
 }
@@ -380,19 +423,34 @@
   }
 
   .innovation {
-    font-size: 38px;
+    font-size: 35px;
   }
 
   #in {
-    padding-top: 6vh;
+    padding-top: 3vh;
   }
 
   #agriculture {
-    font-size: 120px;
+    font-size: 100px;
   }
   .subthemeCont {
     width: 87vw;
   }
+  .hexagonImg {
+    top: -7vw;
+    left: 0vw;
+  }
+
+  .hexagonImgBottom1 {
+    bottom: -7vw;
+    right: 0vw;
+  }
+
+  .hexagonImgBottom {
+    bottom: -7vw;
+    left: 0vw;
+  }
+
   .landingText {
     font-size: 16px;
   }
@@ -403,7 +461,7 @@
 
   #sponsor {
     margin-top: 30px;
-    font-size: 60px;
+    font-size: 50px;
   }
 
   .sponsorImages {
@@ -483,22 +541,26 @@
 
   .O {
     width: 150px;
-    margin-top: 13px;
+    /* margin-top: 13px; */
     color: rgb(221, 221, 221);
   }
 
   #in {
     font-size: 25px;
-    padding-top: 6vh;
+    padding-top: 5vh;
   }
 
   #agriculture {
-    font-size: 85px;
+    font-size: 75px;
   }
 
   .trailerBox {
     width: 85vw;
     height: 60vh;
+  }
+
+  .containerHeading {
+    font-size: 35px;
   }
 
   .sponsor {
@@ -529,22 +591,22 @@
     width: 55vw;
   }
   .innovation {
-    font-size: 23px;
+    font-size: 20px;
   }
 
   .O {
     border: 8px solid;
     width: 130px;
-    margin-top: 10px;
+    /* margin-top: 10px; */
   }
 
   #in {
     font-size: 22px;
-    padding-top: 4vh;
+    padding-top: 2vh;
   }
 
   #agriculture {
-    font-size: 70px;
+    font-size: 50px;
   }
 
   .landingText {
@@ -557,12 +619,12 @@
     top: -14vw;
     width: 20%;
   }
-  
+
   .hexagonImgBottom1 {
     bottom: -14vw;
     width: 20%;
   }
-  
+
   .hexagonImgBottom {
     bottom: -14vw;
     width: 20%;
@@ -598,12 +660,12 @@
   }
 
   .innovation {
-    font-size: 20px;
+    font-size: 15px;
   }
 
   .O {
     width: 90px;
-    margin-top: 8px;
+    /* margin-top: 8px; */
     color: #d5d5d5;
     margin-left: 4px;
     margin-right: 4px;
@@ -611,11 +673,11 @@
 
   #in {
     font-size: 20px;
-    padding-top: 3vh;
+    padding-top: 1vh;
   }
 
   #agriculture {
-    font-size: 48px;
+    font-size: 45px;
     font-weight: 800;
     margin-bottom: 10px;
   }
@@ -623,14 +685,14 @@
   .landingText {
     font-size: 12px;
   }
-  .FirstPage{
-    height: 170vh;
+  .FirstPage {
+    height: 170%;
   }
   .subthemeBox {
     display: flex;
     flex-direction: column;
   }
-  .subthemeCont h1{
+  .subthemeCont h1 {
     margin: 4vh 0 1vh 0;
   }
   .hexagonImg {
@@ -638,13 +700,13 @@
     left: -35vw;
     width: 35%;
   }
-  
+
   .hexagonImgBottom1 {
     bottom: -4vw;
     left: 35vw;
     width: 35%;
   }
-  
+
   .hexagonImgBottom {
     bottom: 0;
     left: 35vw;
@@ -703,7 +765,7 @@
   }
 
   .innovation {
-    font-size: 16px;
+    font-size: 1rem;
   }
 
   .O {
@@ -723,7 +785,7 @@
   }
 
   #agriculture {
-    font-size: 40px;
+    font-size: 2.5rem;
     font-weight: 800;
     margin-bottom: 10px;
   }
@@ -734,7 +796,6 @@
     text-align: justify;
     width: 100%;
     font-weight: 0;
-    
   }
 
   #signUpButton {
@@ -792,13 +853,12 @@
 }
 
 @media only screen and (max-width: 375px) {
-  .FirstPage{
-    height: 150vh;
+  .FirstPage {
+    height: 150%;
   }
   .landingPage {
     width: 80%;
   }
-
 
   .main_img {
     width: 70vw;
@@ -806,7 +866,7 @@
   }
 
   .innovation {
-    font-size: 16px;
+    font-size: 0.8rem;
   }
 
   .O {
@@ -826,7 +886,7 @@
   }
 
   #agriculture {
-    font-size: 40px;
+    font-size: 2.2rem;
     font-weight: 800;
     margin-bottom: 10px;
   }
@@ -837,7 +897,6 @@
     text-align: justify;
     width: 100%;
   }
-  
 
   .main_container {
     padding-top: 10px;
@@ -860,7 +919,7 @@
   } */
   /* sponsor */
   .sponsor {
-    height: 60vh;
+    height: auto;
   }
 
   #sponsor {
@@ -888,7 +947,7 @@
 
 @media only screen and (max-width: 321px) {
   .FirstPage {
-    height: 130vh;
+    height: 130%;
   }
 
   .landingPage {
@@ -901,7 +960,7 @@
   }
 
   .innovation {
-    font-size: 16px;
+    font-size: 13px;
   }
 
   .O {
@@ -918,11 +977,11 @@
 
   #in {
     font-size: 19px;
-    padding-top: 2vh;
+    padding-top: 1vh;
   }
 
   #agriculture {
-    font-size: 40px;
+    font-size: 2rem;
     font-weight: 800;
     margin-bottom: 10px;
   }
@@ -956,7 +1015,7 @@
   /* sponsor */
   .sponsor {
     padding-bottom: 30%;
-    height: 60vh;
+    height: auto;
   }
 
   #sponsor {
@@ -984,7 +1043,7 @@
 
 @media only screen and (max-width: 281px) {
   .innovation {
-    font-size: 12px;
+    font-size: 10px;
   }
 
   .O {
@@ -1000,6 +1059,6 @@
   }
 
   #agriculture {
-    font-size: 30px;
+    font-size: 20px;
   }
 }

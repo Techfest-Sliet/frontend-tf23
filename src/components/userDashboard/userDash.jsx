@@ -41,7 +41,7 @@ const  User_dasbord = () => {
     <div className="Dashboard__body" style={{height: "100vh"}}>
       <div className="row_justify-content-around" style={{height:"100vh"}}>
         <div className="userdashbord_body">
-          <h2>Namaste! {user && user.name}</h2>
+          <h2 className="user__header">Namaste! {user && user.name}</h2>
           <p className="blockquote-footer">Your Unique tF ID is {user && user.userId}</p>
         </div>
         {/* <div className="flex_topbox">
@@ -199,7 +199,7 @@ const  User_dasbord = () => {
 
               <tr className="TableRow">
                 <td className="" colspan="2">
-                  <b>Contact Information</b>
+                  <b className="contactInfo">Contact Information</b>
                 </td>
               </tr>
               <tr className="TableRow">
