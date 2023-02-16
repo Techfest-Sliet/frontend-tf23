@@ -12,8 +12,8 @@ navbar{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: rgb(30,125,37);
-    background: radial-gradient(circle, rgba(30,125,37,1) 0%, rgba(0,60,12,1) 48%);
+    background: rgb(0,90,5);
+    background: linear-gradient(90deg, rgba(0,90,5,1) 16%, rgba(28,25,25,1) 45%);
     padding: 0 25px;
     transform: 0.3s;
 }
@@ -193,13 +193,15 @@ navbar{
         justify-content: center;
         align-items: center;
     }
-    .navbar-items li a{
+    .navbar-items li Link{
         padding: 25px;
-        font-size: 15px;
+        font-size: 2em;
     }
 
     .signInButton{
         width: 100%;
+        font-size: 2em;
+        padding: 0.5em;
     }
 
     .dropdown{
@@ -209,6 +211,13 @@ navbar{
     }
     .logo a img{
         width: 10rem;
+    }
+
+    .aboutUs:hover{
+        margin-bottom: 7em;
+    }
+    .domains:hover{
+        margin-bottom: 28.5em;
     }
 }
 
