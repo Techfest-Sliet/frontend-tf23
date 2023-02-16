@@ -5,6 +5,10 @@
     position: relative;
   } */
 
+  .feedbackdiv{
+    position: relative;
+  }
+
   .container {
     display: flex;
     justify-content: center;
@@ -26,37 +30,42 @@
   }
   
   .gradientimageright {
-    position: relative;
-    top: 0rem;
-    right: -29%;
-    width: 82%;
-    height: 100%;
-    background-image: url(./feedback-page-images/tfgradient.webp);
-    background-repeat: no-repeat;
-    background-size: cover;
-    z-index: 1;
+  position: relative;
+  top: 0rem;
+  max-width: 100%;
+  height: 100%;
+  background-image: url(./feedback-page-images/tfgradient.webp);
+  background-repeat: no-repeat;
+  z-index: 1;
+  max-height: 100vh; 
+  background-position: 296% -50%; 
   }
   
   .gradientimageleft {
     position: relative;
     top: 0rem;
-    left: -28.7%;
-    width: 82%;
+    max-width: 100%;
     height: 100%;
     background-image: url(./feedback-page-images/tfgradient.webp);
     background-repeat: no-repeat;
-    background-size: cover;
     z-index: 1;
+    max-height: 100vh; 
+    background-position: -205% -50%; 
   }
   
-  /* .techfestimg {
+  .techfestimg {
+    position: relative;
+    top: 0rem;
+    max-width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
     z-index: 1;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 10%;
-    height: 50%;
+    width: auto;
+    /* width: 1000px; */
+    justify-content: center; /* horizontally center */
+  align-items: center; /* vertically center */
+    max-height: 100vh; 
+    background-position: 0% 0%; 
     background-image: url(./feedback-page-images/techFEST.webp);
-  } */
+  }
   
