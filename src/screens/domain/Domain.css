@@ -101,11 +101,12 @@
   }
   .domainScreen {
     background-image: url('../../assets/domain/Background.webp');
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 90vh;
-    overflow: hidden;
-    width: auto;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  overflow: hidden;
+  width: auto;
   }
   .DomainScroll {
     height: 100%;

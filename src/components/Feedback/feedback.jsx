@@ -1,11 +1,16 @@
 import React from 'react'
+import './feedback.css'
 
-const feedback = () => {
+const Feedback = () => {
   return (
-    <div>
-      
+    <div className='container'>
+      <div className='feedbackdiv'>
+        <div className='gradientimageright'></div>
+        <div className='gradientimageleft'></div>
+        <div className='techfestimg' ></div>
+      </div>
     </div>
   )
 }
 
-export default feedback
+export default Feedback
