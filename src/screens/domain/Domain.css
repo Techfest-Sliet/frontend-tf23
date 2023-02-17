@@ -180,6 +180,8 @@
     transition: 0.6s;
     visibility: hidden;
   }
+
+  
   .innerRing:hover .flip-card-back {
     transition: opacity 6s; /* specify the property you want to animate */
     opacity: 1; /* specify the final state */
