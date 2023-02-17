@@ -72,6 +72,11 @@ export const Navbar = (props) => {
               {/*-- DROPDOWN MENU */}
               <ul className="dropdown">
                 <li>
+                  <Link to="/events/Aarambh" onClick={unCheck}>
+                    Aarambh
+                  </Link>
+                </li>
+                <li>
                   <Link to="/events/plexus" onClick={unCheck}>
                     Plexus
                   </Link>
