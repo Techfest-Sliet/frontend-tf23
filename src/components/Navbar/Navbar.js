@@ -64,7 +64,7 @@ export const Navbar = (props) => {
             )}
             <li className="domains">
               <Link 
-                to="/about-us"
+                to="/about"
                 className="dropdown__animation"
                 onClick={unCheck}
               >
