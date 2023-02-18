@@ -6,14 +6,15 @@ export const datasOfEvent = [
     desc: "   “Codingस्पर्धा - Code and Conquer” is a hackathon organised by InternWell Club in collaboration with SLIET Software Development Club (SSDC) and TechFEST'23 for the students of Diploma, Undergraduate to Postgraduate level of Sant Longowal Institute of Engineering and Technology in the field of computer science on the college premise. This hackathon will provide an excellent opportunity for students to showcase their skills and compete with their peers in a friendly and supportive environment. It helps to build a sense of community among the students and foster their professional development.",
     register: (
       <span>
-        <Link
+        <a
         //   to={"/underConstruction"}
+          target={"_blank"}
           rel="noopener noreferrer"
           href="https://linktr.ee/internwellclubsliet"
           style={{ textDecoration: "none", color: "white" }}
         >
           Register Now
-        </Link>
+        </a>
       </span>
     ),
     schedule: (

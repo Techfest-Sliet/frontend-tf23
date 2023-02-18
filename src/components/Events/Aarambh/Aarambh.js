@@ -1,6 +1,6 @@
 import React from "react";
 import "./Aarambh.css";
-import EventBox from "../EventBox";
+import EventBoxAarambh from "../EventBoxAarambh";
 import EventBottom from "../EventBottom";
 import { datasOfEvent } from "./data";
 import { datasOfEventCoordinator } from "./data";
@@ -37,7 +37,7 @@ const Aarambh = () => {
       </div>
       {datasOfEvent.map((item, index) => (
         <div className="eventsBackgroundBottom" key={index}>
-          <EventBox props={item} index={index} />
+          <EventBoxAarambh props={item} index={index} />
         </div>
       ))}
       {/* {datasOfEventCoordinator.map((item) => (
