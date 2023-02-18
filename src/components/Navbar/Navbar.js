@@ -72,7 +72,7 @@ export const Navbar = (props) => {
               </Link>
               <ul className="dropdown">
                 <li>
-                  <Link to='/about-us' onClick={unCheck}>
+                  <Link to='/about' onClick={unCheck}>
                     About Us
                   </Link>
                 </li>
