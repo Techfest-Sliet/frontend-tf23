@@ -52,7 +52,7 @@ function AboutUs() {
           </div>
           <div className="AboutSlietHeading">
             <h1>
-              About <span style={{ color: "#74eb76" }}>SLIET</span>
+              About <span style={{ color: "#74eb76", fontFamily: "monumentExtended" }}>SLIET</span>
             </h1>
           </div>
           <div className="AboutSlietHeadingBottom"></div>
@@ -76,21 +76,21 @@ function AboutUs() {
           <div className="Participants">
             <img src="/about-us/Group 881.svg" height={"50px"} alt="" />
             <h1>35+</h1>
-            <h4>Institutes Participate every year</h4>
+            <h4 style={{ fontFamily: "productSans" }}>Institutes Participate every year</h4>
             <img src="/about-us/stats-sec.svg" width={'80%'} height={'4px'} alt="" />
           </div>
 
           <div className="Participants">
             <img src="/about-us/Group 878.svg" height={"50px"} alt="" />
             <h1>10K+</h1>
-            <h4>Footfall during techFEST 21</h4>
+            <h4 style={{ fontFamily: "productSans" }}>Footfall during techFEST 21</h4>
             <img src="/about-us/stats-sec.svg" width={'80%'} height={'4px'} alt="" />
           </div>
 
           <div className="Participants last">
             <img src="/about-us/Group 879.svg" height={"50px"} alt="" />
             <h1>5L+</h1>
-            <h4>Worth of Goodies and Prize Money</h4>
+            <h4 style={{ fontFamily: "productSans" }}>Worth of Goodies and Prize Money</h4>
           </div>
         </div>
       </div>
@@ -100,19 +100,19 @@ function AboutUs() {
           <div className="Participants1">
             <img src="/about-us/Group 881.svg" height={"50px"} alt="" />
             <h1>30 +</h1>
-            <h4>Institutes Participate every year</h4>
+            <h4 style={{ fontFamily: "productSans" }}>Institutes Participate every year</h4>
           </div>
 
           <div className="Participants1">
             <img src="/about-us/Group 878.svg" height={"50px"} alt="" />
             <h1>10K +</h1>
-            <h4>Footfall during techFEST 21</h4>
+            <h4 style={{ fontFamily: "productSans" }}>Footfall during techFEST 21</h4>
           </div>
 
           <div className="Participants1 last1">
             <img src="/about-us/Group 879.svg" height={"50px"} alt="" />
             <h1>5L +</h1>
-            <h4>Worth of Goodies and Prize Money</h4>
+            <h4 style={{ fontFamily: "productSans" }}>Worth of Goodies and Prize Money</h4>
           </div>
         </div>
 
@@ -152,7 +152,7 @@ function AboutUs() {
       {/* previos sponsr */}
       <div className="sponsor" style={{width:"100%"}}>
         <h1 id="sponsor" style={{ color: "#74EB76" ,marginBottom:"3rem"}}>
-          OUR<span style={{ color: "white" }}> PAST</span> SPONSORS
+        <span style={{ color: "white", fontFamily: "monumentExtended" }}> PAST</span> SPONSORS
         </h1>
         <SliderDiv arr={SponsorImageSlider} />
       </div>

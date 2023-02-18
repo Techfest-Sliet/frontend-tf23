@@ -8,7 +8,7 @@ function  team() {
   return (
     <div className="card__collection  clear-fix ">
     
-           <p className='team-names'>Core Team</p>
+           <h1 className='team-names'>Core Team</h1>
         {Details.map(detail => (
           <Card
           image={detail.image}
@@ -18,7 +18,7 @@ function  team() {
           />
         ))}
 
-        <p className='team-names'>Web Development Team</p>
+        <h1 className='team-names'>Web Development Team</h1>
 
         {WebDetails.map(WebDetail => (
           <Card

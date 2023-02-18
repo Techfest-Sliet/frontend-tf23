@@ -9,7 +9,7 @@ function Li_image(props) {
         <div className="Li_ImageTexT">
            <div className="Li_textWrap">
            <h1 className='Li_imageHeading'>{props.heading}</h1>
-            <h4 className='tagline'><i>{props?.tagline}</i></h4>
+            <h4 className='Li_tagline'><i>{props?.tagline}</i></h4>
             <p className='Li_imageDetail'>{props?.detail}</p>
            </div>
     </div>

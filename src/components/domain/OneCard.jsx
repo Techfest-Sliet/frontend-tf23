@@ -7,7 +7,7 @@ function OneCard({ pic, des,title }) {
       <div className="outerring ">
         <div className="innerRing ">
           <div className="flip-card-back">
-            <span className="span">{des}</span>
+            <span className="domainexplore span">Explore</span>
           </div>
           <div className="flip-card-front">
             <img className="ringImage" src={pic} alt=""/>

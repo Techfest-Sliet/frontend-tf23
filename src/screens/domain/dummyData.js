@@ -2,7 +2,7 @@ import Robozar from "../../assets/domain/Robozar.png";
 import Aarambh from "../../assets/domain/Untitled.png";
 import Chemfor from "../../assets/domain/chemfor.webp";
 import Electrica from "../../assets/domain/electrica.webp";
-import Genesis from "../../assets/domain/genesis.webp";
+import Genesis from "../../assets/domain/genesistp.webp";
 import Karyaranchna from "../../assets/domain/karyarachna.png";
 import Kermis from "../../assets/domain/kermis.webp";
 import Mechanica from "../../assets/domain/mechanica.webp";

@@ -19,12 +19,19 @@
   width: 100%;
   height: 100%;
   background: rgb(0, 0, 0);
+
   /* background: linear-gradient(
     135deg,
     rgba(5, 79, 17, 0.99) 9%,
     rgba(0, 0, 0, 1) 50%,
     rgba(5, 62, 15, 1) 93%
   );  */
+}
+
+.container_AboutUs_Upperpart {
+  position: relative;
+  z-index: 1;
+
 }
 
 .About_Us_part1 {
@@ -109,14 +116,15 @@
 }
 
 .AboutSlietHeading {
+  position: relative;
   padding: 4px;
 }
 
 .AboutSlietHeading h1 {
   font-size: 40px;
-  font-family: "Monument Extended";
+  font-family: "MonumentExtended";
   font-weight: 700;
-  font-size: 72px;
+  font-size: 60px;
 }
 
 .AboutSlietHeadingBottom {
@@ -125,6 +133,7 @@
 }
 
 .AboutSlietText {
+  position: relative;
   padding-top: 34px;
   font-size: 22px;
   width: 80%;
@@ -325,8 +334,8 @@
   .About_Uspart2_text {
     width: 25rem;
   }
-
-  .tfDivider {
+  .tfDivider{
+    text-align: center;
     width: 100%;
     position: absolute;
     display: block;
@@ -350,8 +359,9 @@
   .AboutInfo {
     display: none;
   }
-
-  .AboutInfo1 {
+  .AboutInfo1{
+    position: relative;
+    z-index: 1;
     margin: 0 auto;
     display: flex;
     width: 90%;
@@ -440,9 +450,9 @@
   .AboutSliet {
     border-radius: 20px;
   }
-
-  .AboutSlietHeading h1 {
-    font-size: 40px;
+  .AboutSlietHeading h1{
+    margin-top: 1vh;
+    font-size:35px;
   }
 
   .AboutSlietText {
@@ -495,7 +505,6 @@
     border-radius: 20px;
     margin-left: 2%;
   }
-
   .AboutSlietHeading h1 {
     font-size: 40px;
   }
@@ -514,6 +523,13 @@
 
   .VariousTechfest {
     margin-top: 5rem;
+  }
+}
+
+@media only screen and (max-width: 325px) {
+  .AboutSlietHeading h1{
+    font-size:28px;
+    margin-top: 2vh;
   }
 }
 
@@ -543,6 +559,7 @@
 
   .AboutSlietHeading h1 {
     font-size: 40px;
+
   }
 
   .AboutSlietText {

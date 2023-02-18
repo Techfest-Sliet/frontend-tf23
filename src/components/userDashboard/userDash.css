@@ -90,7 +90,8 @@ table.profiletable {
 .userdashbord_body {
     margin: 100px 6px 100px 10px;
 }
-b {
+
+.contactInfo {
     font-size: 25px;
     /* text-align: left; */
     /* margin-top: 47px; */
@@ -415,7 +416,7 @@ p.blockquote-footer {
         margin-bottom: 40px;
     }
 
-    b {
+    .contactInfo {
         font-size: 24px;
         margin-top: 47px;
         padding: 0px;
@@ -445,7 +446,7 @@ p.blockquote-footer {
 }
 
 @media(max-width:820px) {
-    h2 {
+    .user__header {
         font-size: 44px;
         letter-spacing: -1px;
     }
@@ -535,7 +536,7 @@ p.blockquote-footer {
         font-size: 24px;
     }
 
-    b {
+    .contactInfo {
         font-size: 20px;
         margin-top: 47px;
         padding: 0px;
@@ -646,7 +647,7 @@ p.blockquote-footer {
         font-size: 14px;
     }
 
-    h2 {
+    .user__header {
         margin-bottom: 14px;
     }
 
@@ -684,7 +685,7 @@ p.blockquote-footer {
         font-size: 27px;
     }
 
-    b {
+    .contactInfo {
         font-size: 18px;
         margin-top: 47px;
         padding: 0px;

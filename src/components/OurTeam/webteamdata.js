@@ -34,7 +34,7 @@ const WebDetails = [
     
     {
       id: 4,
-      name:"Shubham",
+      name:"Shubham Singh",
       image:process.env.PUBLIC_URL + "core-team-images/12.jpg",
       position:"MERN",
       linkedin:"http://www.linkedin.com/in/theAlpha06"
@@ -42,7 +42,7 @@ const WebDetails = [
     {
       id: 5,
       name:"Ashish",
-      image:process.env.PUBLIC_URL + "core-team-images/16.jpeg",
+      image:process.env.PUBLIC_URL + "core-team-images/16.jpg",
       position:"Frontend",
       linkedin:"https://www.linkedin.com/in/ak-ashish/"
     }

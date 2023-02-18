@@ -5,6 +5,7 @@ import logo from "../../images/techFEST '23.webp";
 import { baseUrl } from "../../API/api";
 import { Link, useNavigate } from "react-router-dom";
 import ErrorModel from "../../components/ErrorPopup/ErrorModel";
+import Loader from '../../components/Loader/Loader.js';
 
 const Signup = () => {
   const [name, setName] = useState("");
@@ -78,9 +79,6 @@ const Signup = () => {
       setDivTwo(true);
     }
   };
-  // if(email.split('@')[1] === 'sliet.ac.in') {
-  //   setCollegeName('Sant Longowal Institute of Engineering and Technology');
-  // }
   const showDivOne = () => {
     setDivOne(true);
     setDivTwo(false);
@@ -94,7 +92,8 @@ const Signup = () => {
       name.trim().length === 0 ||
       cPassword.trim().length === 0 ||
       phone.trim().length === 0 || 
-      collegeName.trim().length === 0 
+      collegeName.trim().length === 0 || 
+      branch.valueOf === 0
     ) {
       setFieldErr("Field should not be empty");
       setTimeout(() => {
@@ -109,7 +108,7 @@ const Signup = () => {
       }, 3000);
       return;
     }
-    if (branch === 0) {
+    if (branch.valueOf === 0) {
       setBranchErr("Please choose your branch");
       setTimeout(() => {
         setBranchErr(null);
@@ -142,7 +141,6 @@ const Signup = () => {
       dob: dob
     };
     setIsLoading(true);
-    console.log(isLoading);
     await axios
       .post(`${baseUrl}/auth/sign-up`, user)
       .then((result) => {
@@ -175,6 +173,7 @@ const Signup = () => {
 
   return (
     <>
+      {isLoading && <Loader/>}
       {errorMade && (
         <ErrorModel
           title={errorMade.title}
@@ -202,7 +201,7 @@ const Signup = () => {
                 type="number"
                 id="phone"
                 name="phone"
-                placeholder="Enter your phone number"
+                placeholder="Enter your whatsapp number"
                 value={phone}
                 onChange={(e) => setPhone(e.target.value)}
                 required
@@ -259,6 +258,9 @@ const Signup = () => {
                 </option>
                 <option value="Environmental Engineering">
                   Environmental Engineering
+                </option>
+                <option value="Food Engineering and Technology">
+                  Food Engineering and Technology
                 </option>
                 <option value="Industrial Engineering">
                   Industrial Engineering

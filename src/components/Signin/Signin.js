@@ -5,6 +5,7 @@ import logo from "../../images/techFEST '23.webp";
 import { baseUrl } from "../../API/api";
 import { Link, useNavigate } from "react-router-dom";
 import AuthContext from "../../auth/authContext";
+import Loader from '../Loader/Loader.js';
 
 const Signin = () => {
   const authContext = useContext(AuthContext);
@@ -18,9 +19,11 @@ const Signin = () => {
   const navigate = useNavigate();
 
   const userLoginHandle = async (authData) => {
+    setIsLoading(true);
     await axios
       .post(`${baseUrl}/auth/sign-in`, authData)
       .then((result) => {
+        setIsLoading(false)
         const res = result;
         if (res.status === 204) {
           setTimeout(() => {
@@ -31,6 +34,14 @@ const Signin = () => {
           setPasswordErr(res.data.message);
           setTimeout(() => {
             setPasswordErr(null);
+            navigate('/sign-up')
+          }, 3000);
+          return;
+        } else if (res.status === 206) {
+          setPasswordErr(res.data.message);
+          setTimeout(() => {
+            setPasswordErr(null);
+            navigate('/verify')
           }, 3000);
           return;
         }
@@ -77,7 +88,8 @@ const Signin = () => {
   };
 
   return (
-    
+    <>
+      {isLoading && <Loader />}
       <div className={styles.signin__content} style={{height: "100vh"}}>
         <div>
           <img src={logo} alt="techFest'23" className={styles.signin__logo} />
@@ -129,7 +141,7 @@ const Signin = () => {
               >
                 Sign In
               </button>
-              <Link to="/verify">Verify email!</Link>
+              <Link to="/forgot-password">Forgot Password?</Link>
             </div>
             {/* </div> */}
           </form>
@@ -141,7 +153,7 @@ const Signin = () => {
           </p>
         </div>
       </div>
-    
+      </>
   );
 };
 export default Signin;

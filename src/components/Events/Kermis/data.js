@@ -4,51 +4,51 @@ export const datasOfEvent = [
     {
         nameOfEvent: "COD Mobile",
         desc: "Shoot yourself up for a fascinating gameplay. Call yourself off for our event COD Mobile and win amazing cash prizes.",
-        register: (<span><Link to={"/underConstruction"} rel='noopener noreferrer' href='https://www.google.com/' style={{ textDecoration: "none", color: "white" }}>Register Now</Link></span>),
-        schedule: (<span><a rel='noopener noreferrer' target='_blank' href='https://drive.google.com/file/d/1C3u7EwjQVfLrTbgG_2-BE-IRfXD8Gi9F/view?usp=sharing' style={{ textDecoration: "none", color: "white" }}>Problem Statement</a></span>),
+        register: (<Link to={"/underConstruction"} rel='noopener noreferrer' href='https://www.google.com/' style={{ textDecoration: "none", color: "white", fontFamily: "productSans" }}>Register Now</Link>),
+        schedule: (<a rel='noopener noreferrer' target='_blank' href='https://drive.google.com/file/d/1C3u7EwjQVfLrTbgG_2-BE-IRfXD8Gi9F/view?usp=sharing' style={{ textDecoration: "none", color: "white", fontFamily: "productSans" }}>Problem Statement</a>),
         prizeMoney: "₹ 10,000",
         dateBefore: "11/03",
         coor: [
             {
                 img: require('../../dummy.jpg'),
                 nameOfEventCoordinator: "Subham Kumar",
-                phoneNo: (<span><a href="tel:7209161853" style={{ textDecoration: "none", color: "white" }}> 7209161853 </a></span>),
-                mail: (<span><a href='mailto:2040007@sliet.ac.in' style={{ textDecoration: "none", color: "white" }}> 2040007@sliet.ac.in
-                </a></span>)
+                phoneNo: (<a href="tel:7209161853" style={{ textDecoration: "none", color: "white", fontFamily: "productSans" }}> 7209161853 </a>),
+                mail: (<a href='mailto:2040007@sliet.ac.in' style={{ textDecoration: "none", color: "white" , fontFamily: "productSans"}}> 2040007@sliet.ac.in
+                </a>)
             }
         ]
     },
     {
         nameOfEvent: "Valorant Campus Stars",
         desc: "Analyze your swift and tactical abilities and see where you stand in par of opponents. Come up valiant and participate in our event Valorant to avail worthy cash prizes.",
-        register: (<span><Link to={"/underConstruction"} rel='noopener noreferrer' href='https://www.wikipedia.com/' style={{ textDecoration: "none", color: "white" }}>Register Now</Link></span>),
-        schedule: (<span><a rel='noopener noreferrer' target='_blank' href='https://drive.google.com/file/d/1e5DKLu-jo-6J1NyREJgCj-RnuW65sdpX/view?usp=share_link' style={{ textDecoration: "none", color: "white" }}>Problem Statement</a></span>),
+        register: (<Link to={"/underConstruction"} rel='noopener noreferrer' href='https://www.wikipedia.com/' style={{ textDecoration: "none", color: "white", fontFamily: "productSans" }}>Register Now</Link>),
+        schedule: (<a rel='noopener noreferrer' target='_blank' href='https://drive.google.com/file/d/1e5DKLu-jo-6J1NyREJgCj-RnuW65sdpX/view?usp=share_link' style={{ textDecoration: "none", color: "white", fontFamily: "productSans" }}>Problem Statement</a>),
         prizeMoney: "₹ 8,000",
         dateBefore: "15/03",
         coor: [
             {
                 img: require('../../dummy.jpg'),
                 nameOfEventCoordinator: "Girish Verma",
-                phoneNo: (<span><a href="tel:9971032958" style={{ textDecoration: "none", color: "white" }}> 9971032958 </a></span>),
-                mail: (<span><a href='mailto:2130757@sliet.ac.in' style={{ textDecoration: "none", color: "white" }}> 2130757@sliet.ac.in
-                </a></span>)
+                phoneNo: (<a href="tel:9971032958" style={{ textDecoration: "none", color: "white", fontFamily: "productSans" }}> 9971032958 </a>),
+                mail: (<a href='mailto:2130757@sliet.ac.in' style={{ textDecoration: "none", color: "white", fontFamily: "productSans" }}> 2130757@sliet.ac.in
+                </a>)
             }
         ]
     },
     {
         nameOfEvent: "Satranj",
         desc: "Amidst the black and white squares, get yourself some colourful fun by participating in our event Satranj ke Shershah and avail worthy prizes.",
-        register: (<span><Link to={"/underConstruction"} rel='noopener noreferrer' href='https://www.google.com/' style={{ textDecoration: "none", color: "white" }}>Register Now</Link></span>),
-        schedule: (<span><Link to={"/underConstruction"} rel='noopener noreferrer' target='_blank' href='https://www.google.com/' style={{ textDecoration: "none", color: "white" }}>Problem Statement</Link></span>),
+        register: (<Link to={"/underConstruction"} rel='noopener noreferrer' href='https://www.google.com/' style={{ textDecoration: "none", color: "white", fontFamily: "productSans" }}>Register Now</Link>),
+        schedule: (<Link to={"/underConstruction"} rel='noopener noreferrer' target='_blank' href='https://www.google.com/' style={{ textDecoration: "none", color: "white", fontFamily: "productSans" }}>Problem Statement</Link>),
         prizeMoney: "₹ 8,000",
         dateBefore: "1/03",
         coor: [
             {
                 img: require('../../dummy.jpg'),
                 nameOfEventCoordinator: "Aditya Mall",
-                phoneNo: (<span><a href="tel:8840961497" style={{ textDecoration: "none", color: "white" }}> 8840961497 </a></span>),
-                mail: (<span><a href='mailto:2130725@sliet.ac.in' style={{ textDecoration: "none", color: "white" }}> 2130725@sliet.ac.in
-                </a></span>)
+                phoneNo: (<a href="tel:8840961497" style={{ textDecoration: "none", color: "white", fontFamily: "productSans" }}> 8840961497 </a>),
+                mail: (<a href='mailto:2130725@sliet.ac.in' style={{ textDecoration: "none", color: "white", fontFamily: "productSans" }}> 2130725@sliet.ac.in
+                </a>)
             }
         ]
     }
@@ -63,8 +63,8 @@ export const datasOfEventCoordinator = [
             {
                 photoOfdomainCoordinator: require('../../dummy.jpg'),
                 nameOfDomainCoordinator: "Aditya Mall",
-                phoneNoOfDomainCoordinator: (<span><a href="tel:8840961497" style={{ textDecoration: "none", color: "white" }}> 8840961497 </a></span>),
-                mailOfDomainCoordinator: (<span><a href='mailto: 2130725@sliet.ac.in' > 2130725@sliet.ac.in</a></span>)
+                phoneNoOfDomainCoordinator: (<a href="tel:8840961497" style={{ textDecoration: "none", color: "white", fontFamily: "productSans" }}> 8840961497 </a>),
+                mailOfDomainCoordinator: (<a href='mailto: 2130725@sliet.ac.in' style={{fontFamily: "productSans"}} > 2130725@sliet.ac.in</a>)
             }
         ]
     }

@@ -1,16 +1,17 @@
 import "./forgotPassword.css";
-import logo from "../../images/techFEST '23.webp";
 import reset from "../../images/reset.png";
 import { useState } from "react";
 import axios from "axios";
 import { baseUrl } from "../../API/api";
+import Loader from '../Loader/Loader.js';
 
 const ForgotPassword = () => {
   const [email, setEmail] = useState("");
   const [fieldErr, setFieldErr] = useState(null);
   const [mailErr, setMailErr] = useState(null);
   const [err, setErr] = useState(null);
-  const [success, setSuccess] = useState(null)
+  const [success, setSuccess] = useState(null);
+  const [isLoading, setIsLoading] = useState(false);
 
   const PostData = async (e) => {
     e.preventDefault();
@@ -32,8 +33,10 @@ const ForgotPassword = () => {
     const user = {
       email: email,
     };
-    await axios.post(`${baseUrl}/auth/forgotPassword`, user).then((result) => {
+    setIsLoading(true);
+    await axios.post(`${baseUrl}/auth/forgot-password`, user).then((result) => {
       const res = (result);
+      setIsLoading(false);
       if (res.status === 208) {
         setErr(res.data.message);
         setTimeout(() => {
@@ -50,6 +53,8 @@ const ForgotPassword = () => {
   };
 
   return (
+    <>
+    {isLoading && <Loader />}
     <div className="forgotPassword forgotPassword__body">
       {/* <div>
         <img
@@ -72,7 +77,7 @@ const ForgotPassword = () => {
         </p>
         {fieldErr && <p className="forgotPassword__error">{fieldErr}</p>}
         {err && <p className="forgotPassword__error">{err}</p>}
-        <form method="post" className="forgotPassword__inputFields">
+        {!success && <form method="post" className="forgotPassword__inputFields">
           <input
             placeholder="Enter your mail!"
             className="forgotPassword__input"
@@ -86,9 +91,10 @@ const ForgotPassword = () => {
           <button type="button" onClick={PostData} value="forgotPassword"  className="forgotPassword__button">
             Send Request
           </button>
-        </form>
+        </form>}
       </div>
     </div>
+    </>
   );
 };
 

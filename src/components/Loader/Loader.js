@@ -4,12 +4,12 @@ const Loader = () => {
   return (
     <div class={styles.center}>
       <div class={styles.loader}>
-        <svg id="triangle" width="70px" height="70px" viewbox="-3 -4 39 39">
+        <svg id="triangle" width="60px" height="60px" viewbox="-3 -4 39 39">
           <polygon
             fill="currentcolor"
             stroke="rgb(30, 255, 0)"
-            stroke-width="2"
-            points="16,0 32,32 0,32"
+            stroke-width="3"
+            points="60,0 0,0 30,60"
           ></polygon>
         </svg>
       </div>
