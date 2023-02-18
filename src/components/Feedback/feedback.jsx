@@ -15,7 +15,7 @@ const Feedback = () => {
       <br></br>
       <input placeholder='Enter Your Phone Number'  className='feedbackinput3'></input>
       <br></br>
-      <textarea className='feedbacktextarea' rows="10" cols="65">Submit your feedback.</textarea>
+      <textarea placeholder='Submit your feedback.' className='feedbacktextarea' rows="10" cols="65"></textarea>
       <br></br>
       <div className='feedbacksubmitbtn'>Submit</div>
     </form>

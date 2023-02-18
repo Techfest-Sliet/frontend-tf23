@@ -146,13 +146,60 @@
     height: 1.5rem;
   }
 
-  @media (max-width: 767px) {
+  @media (min-width: 465px) and (max-width: 800px) {
     .feedbacktfimage{
       background-size: 100%;
     }
 
+    .feedbacktextarea{
+      top: -3rem;
+      height: 12rem;
+    width: 27rem;
+    }
+
+    .feedbacksubmitbtn{
+      top: -4rem;
+      right:18rem;
+    }
+
+    .feedbackinput1{
+      top: -4rem;
+    left: 8rem;
+    }
+
     .feedbackinput2{
-      top:-6rem;
+      top: -1rem;
+      left: -6rem;
+    }
+
+    .feedbackinput3{
+      top: -5rem;
+      left: 1rem;
+    }
+
+  }
+
+  @media (max-width: 464px) {
+
+    .container{
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+    }
+
+    .feedbacktfimage{
+      background-size: 100%;
+      
+    }
+
+    .feedbackinput2{
+      top:-5rem;
+      left: -1rem;
+    }
+
+    .feedbackinput1{
+      top:-1rem;
       left: -1rem;
     }
 
@@ -162,8 +209,9 @@
     }
 
     .feedbacktextarea{
+      margin: 0 1rem;
       top: -8rem;
-      width: 22rem;
+      width: 20rem;
     }
 
     .feedbacksubmitbtn{
