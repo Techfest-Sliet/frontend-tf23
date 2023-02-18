@@ -49,11 +49,11 @@ export const datasOfEvent = [
         mail: (
           <span>
             <a
-              href="mailto:*****@sliet.ac.in"
+              href="mailto:internwellclub@gmail.com"
               style={{ textDecoration: "none", color: "white" }}
             >
               {" "}
-              *****@sliet.ac.in
+              internwellclub@gmail.com
             </a>
           </span>
         ),
