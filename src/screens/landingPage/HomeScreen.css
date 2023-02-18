@@ -434,7 +434,7 @@
     font-size: 100px;
   }
   .subthemeCont {
-    width: 87vw;
+    width: 95vw;
   }
   .hexagonImg {
     top: -7vw;
@@ -612,9 +612,9 @@
   .landingText {
     font-size: 14px;
   }
-  .subthemeCont {
+  /* .subthemeCont {
     width: 95vw;
-  }
+  } */
   .hexagonImg {
     top: -14vw;
     width: 20%;
