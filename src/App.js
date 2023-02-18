@@ -6,6 +6,7 @@ import { Navbar } from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
 import axios from "axios";
 import SignUp from "./components/Signup/Signup";
+import Aarambh from "./components/Events/Aarambh/Aarambh.js";
 import Chemfor from "./components/Events/Chemfor/Chemfor.js";
 import Electrica from "./components/Events/Electrica/Electrica.js";
 import Genesis from "./components/Events/Genesis/Genesis.js";
@@ -93,6 +94,7 @@ function App() {
           <Route path="*" element={<Error404 />} />
           {/* <Route path="/visitors" element={<Visitor />} /> */}
           <Route path="/faq" element={<Faq />} />
+          <Route path="/events/Aarambh" element={<Aarambh />} />
           <Route path="/events/chemfor" element={<Chemfor />} />
           <Route path="/events/electrica" element={<Electrica />} />
           <Route path="/events/genesis" element={<Genesis />} />
