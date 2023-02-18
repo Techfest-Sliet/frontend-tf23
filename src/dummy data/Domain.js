@@ -17,7 +17,7 @@ export const domainSlider =[
 const data = [
   {
     pic: Chemfor,
-    des:"A platform to attempt and make the best use of your knowledge in the food and chemical industry.",
+    des:".",
     title:"Chemfor"
   },
   {

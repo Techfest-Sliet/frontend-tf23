@@ -23,15 +23,18 @@ import Workshop from "./workshop/workshops";
 import Reset from "./components/resetPassword/resetPassword";
 import UnderConstruction from "./components/Construction/underConstruction.js";
 import ForgotPassword from "./components/forgotPassword/forgotPassword";
-import Aboutus from "../src/screens/About us/AboutUs.jsx";
-import UserDashboard from "./components/userDashboard/userDash.jsx";
-import OurTeam from "./components/OurTeam/team.jsx";
-import AuthContext from "./auth/authContext";
-import Verify from "./components/verify/verify";
-import Popup from "./components/Popup/Popup.js";
-import Events from "./components/domain/OneCard.jsx";
-import ErrorModel from "./components/ErrorPopup/ErrorModel";
-// import Visitor from "./components/visitors/visitors.js";
+import Aboutus from '../src/screens/About us/AboutUs.jsx';
+import UserDashboard from './components/userDashboard/userDash.jsx';
+import OurTeam from './components/OurTeam/team.jsx';
+import AuthContext from './auth/authContext';
+import Verify from './components/verify/verify';
+import Popup from './components/Popup/Popup.js';
+import Events from './components/domain/OneCard.jsx';
+import ErrorModel from './components/ErrorPopup/ErrorModel';
+import Visitor from './components/visitors/visitors.js';
+import Feedback from "./components/Feedback/feedback";
+// import Confirmedmail from "./components/cofirmedmail/confirmedmail";
+
 function App() {
   const authContext = useContext(AuthContext);
   const { isUserLoggedIn, setUserLoggedIn } = authContext;
@@ -110,13 +113,15 @@ function App() {
           <Route path="/reset-password" element={<Reset />} />
           <Route path="/forgot-password" element={<ForgotPassword />} />
           <Route path="/our-team" element={<OurTeam />} />
-          <Route path="/about" element={<Aboutus />} />
-          <Route path="/popup" element={<Popup />} />
-          <Route path="/verify" element={<Verify />} />
-          <Route path="/events/:title" element={<Events />} />
-          {authContext.isUserLoggedIn && (
-            <Route path="/user-dashboard" element={<UserDashboard />} />
-          )}
+          <Route path="/about" element={<Aboutus/>} />
+          <Route path="/popup" element={<Popup/>} />
+          <Route path="/verify" element={<Verify/>} />
+          <Route path="/events/:title" element={<Events/>} />
+           {authContext.isUserLoggedIn && <Route path="/user-dashboard" element={<UserDashboard/>} />}
+
+           <Route path="/feedback" element={<Feedback/>}/>
+           {/* <Route path="/confirmedmail" element={<Confirmedmail/>}/> */}
+
         </Routes>
       </div>
       {errorMade && (

@@ -29,11 +29,11 @@ function Domain() {
             setActiveIndex(activeIndex === leng ? 0 : activeIndex + 1);
           }}
         />
-        <Dots
+        {/* <Dots
           activeIndex={activeIndex}
           imageSlider={domainSlider}
           onClick={(activeIndex) => setActiveIndex(activeIndex)}
-        />
+        /> */}
       </div>
       <div class="domainheading">
         <h2>DOMAINS</h2>
