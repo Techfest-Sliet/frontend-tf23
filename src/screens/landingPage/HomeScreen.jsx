@@ -1,16 +1,17 @@
 import { Button } from "@mui/material";
-import React, {useContext} from "react";
-import {Link} from 'react-router-dom';
+import React, { useContext } from "react";
+import { Link } from "react-router-dom";
 import "./HomeScreen.css";
 import { useNavigate } from "react-router-dom";
 import SponsorImageSlider from "../../components/slider/SponsorImageSlider.js";
 import SliderDiv from "../../components/slider/SliderDiv";
 import AuthContext from "../../auth/authContext";
+import SubthemeBox from "./SubthemeBox";
+import hexagonImg from "./hexagon.png";
 
 const HomePage = () => {
-  
-const navigate = useNavigate();
-const authContext = useContext(AuthContext);
+  const navigate = useNavigate();
+  const authContext = useContext(AuthContext);
   return (
     <div className="homePage">
       <div className="FirstPage">
@@ -35,24 +36,46 @@ const authContext = useContext(AuthContext);
           </div>
           <h2 id="agriculture">AGRICULTURE</h2>
           <p className="landingText">
-          techFEST'23 is on the mission to revolutionize Agro-Technology. Explore with us how new advancements in technologies ranging from robotics and drones to computer vision software transform traditional methods of agriculture. With the young innovative minds competing to bring a change and supporting the backbone of our nation.
+            techFEST'23 is on the mission to revolutionize Agro-Technology.
+            Explore with us how new advancements in technologies ranging from
+            robotics and drones to computer vision software transform
+            traditional methods of agriculture. With the young innovative minds
+            competing to bring a change and supporting the backbone of our
+            nation.
           </p>
           <div
             className="landingButtons"
             style={{ marginTop: 10, color: "white", marginBottom: 1 }}
           >
             <Button variant="contained" id="signUpButton" sx={{ mr: 2, mt: 3 }}>
-              <Link to={authContext.isUserLoggedIn ? '/user-dashboard' : '/sign-up'}>{authContext.isUserLoggedIn ? 'User Dashboard' : 'Sign up Now'}</Link>
-            </Button>
-            <Button
-              variant="contained"
-              id="aboutUsButton"
-              sx={{ mr: 2, mt: 3 }}
-            >
-              <Link to={"/about"}>About Us</Link>
+              <Link
+                to={authContext.isUserLoggedIn ? "/user-dashboard" : "/sign-up"}
+              >
+                {authContext.isUserLoggedIn ? "User Dashboard" : "Sign up Now"}
+              </Link>
             </Button>
           </div>
+          {/* <div className="subthemeCont">
+            <h1
+              style={{
+                color: " rgb(22, 188, 22)",
+                fontFamily: "monumentExtended",
+              }}
+            >
+              Sub-Theme
+            </h1>
+            <div className="subthemeBox">
+              <img src={hexagonImg} className="hexagonImgBottom1" alt=".." />
+              <SubthemeBox index={0} />
+              <img src={hexagonImg} className="hexagonImg" alt=".." />
+              <SubthemeBox index={1} />
+              <img src={hexagonImg} className="hexagonImgBottom" alt=".." />
+              <SubthemeBox index={2} />
+              <img src={hexagonImg} className="hexagonImg" alt=".." />
+            </div>
+          </div> */}
         </div>
+        <div></div>
       </div>
 
       {/* expanded landing page */}
@@ -64,12 +87,13 @@ const authContext = useContext(AuthContext);
               Domains
             </h1>
             <p className="containerText" style={{ color: "#fff" }}>
-            Unleash your skills and test yourselves on National Battlegrounds with 8 Domains
+              Unleash your skills and test yourselves on National Battlegrounds
+              with 8 Domains
             </p>
             <Button
               sx={{ color: "#fff", mt: 3, borderRadius: 6, width: 150, mb: 5 }}
               className="learnMoreButton"
-              onClick={()=>navigate('/domains')}
+              onClick={() => navigate("/domains")}
             >
               Learn More
             </Button>
@@ -80,14 +104,14 @@ const authContext = useContext(AuthContext);
               Workshops
             </h1>
             <p className="containerText" style={{ color: "#fff" }}>
-            In Workshops learning is something to be enjoyed, not endured.
+              In Workshops learning is something to be enjoyed, not endured.
             </p>
             <Button
               sx={{ color: "#fff", mt: 3, borderRadius: 6, width: 150, mb: 5 }}
               className="learnMoreButton"
-              onClick={()=>navigate('/under-construction')}
+              onClick={() => navigate("/under-construction")}
             >
-               Learn More
+              Learn More
             </Button>
           </div>
         </div>
@@ -109,9 +133,9 @@ const authContext = useContext(AuthContext);
         {/* sponsor */}
         <div className="sponsor">
           <h1 id="sponsor" style={{ color: "#74EB76" }}>
-            OUR <span style={{ color: "white" }}>PAST</span> SPONSORS
+            <span style={{ color: "white", fontFamily: "monumentExtended"  }}>PAST</span> SPONSORS
           </h1>
-         <SliderDiv arr={SponsorImageSlider}/>
+          <SliderDiv arr={SponsorImageSlider} />
         </div>
       </div>
     </div>

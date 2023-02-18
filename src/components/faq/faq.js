@@ -34,7 +34,7 @@ const ContactUs = () => {
                                     <div className='questionOfAccordion'>
                                         {/* What does TechFest23 has to offer you? */}
 
-                                        {item.question}
+                                        <p>{item.question}</p>
                                         {selected === item.id ? <FaAngleUp className="arrowDown" /> : <FaAngleDown className="arrowDown" />}
 
                                     </div>
@@ -63,7 +63,7 @@ const ContactUs = () => {
                                     </div>
                                     <div className='faqs_domain_coordinator'>
                                         <img src={dummy} className="dummy_img" alt='...' />
-                                        <p>Prasant Shahi</p>
+                                        <p>Prashant Shahi</p>
                                         <a className='faqs_number' href="tel:8877515552">
                                         8877515552
                                         </a>
@@ -89,7 +89,7 @@ const ContactUs = () => {
                             </div>
 
 
-                            <p className='faqs_support'>or write us at  <a href="mailto:web.techfest@sliet.ac.in" style={{ textDecoration: "none", color: "DodgerBlue" }}>web.techfest@sliet.ac.in</a></p>
+                            <p className='faqs_support'>or write us at  <a href="mailto:web.techfest@sliet.ac.in" style={{ textDecoration: "none", color: "DodgerBlue", fontFamily: "productSans" }}>web.techfest@sliet.ac.in</a></p>
                             <p className='faqs_footer'> Stay Updated Here !</p>
 
                         </div>
@@ -110,7 +110,7 @@ const data = [
     {
         id: 1,
         question: "How to register on the website?",
-        answer: (<span>You can enter your details and sign up at <a href='https://www.techfestsliet.org/' style={{ textDecoration: "none", color: "DodgerBlue" }}> https://www.techfestsliet.org/</a></span>)
+        answer: (<p>You can enter your details and sign up at <a href='https://www.techfestsliet.org/' style={{ textDecoration: "none", color: "DodgerBlue", fontFamily: "productSans" }}> https://www.techfestsliet.org/</a></p>)
 
     },
     {
@@ -121,7 +121,7 @@ const data = [
     {
         id: 3,
         question: "Do I need to pay any fee for registration?",
-        answer: (<span>There is no registration fee for candidates enrolled in SLIET. For participants from other institutes the registration fee is: <li>Rs 299 for online events</li> <li>Rs 599 for offline events</li> </span>)
+        answer: (<p>There is no registration fee for candidates enrolled in SLIET. For participants from other institutes the registration fee is: <li style={{fontFamily: "productSans"}}>Rs 299 for online events</li> <li style={{fontFamily: "productSans"}}>Rs 599 for offline events</li> </p>)
     },
     {
         id: 4,

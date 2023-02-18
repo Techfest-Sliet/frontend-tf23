@@ -34,6 +34,14 @@ const Signin = () => {
           setPasswordErr(res.data.message);
           setTimeout(() => {
             setPasswordErr(null);
+            navigate('/sign-up')
+          }, 3000);
+          return;
+        } else if (res.status === 206) {
+          setPasswordErr(res.data.message);
+          setTimeout(() => {
+            setPasswordErr(null);
+            navigate('/verify')
           }, 3000);
           return;
         }
@@ -133,7 +141,7 @@ const Signin = () => {
               >
                 Sign In
               </button>
-              <Link to="/verify">Verify email!</Link>
+              <Link to="/forgot-password">Forgot Password?</Link>
             </div>
             {/* </div> */}
           </form>

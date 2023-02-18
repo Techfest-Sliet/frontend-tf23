@@ -40,7 +40,7 @@ setErrorMade(null);
                                     <button className='problemStat' > {props?.schedule} </button>
                                 </div>
                                 <div style={{ float: "left" }}>
-                                    <h2 style={{ marginTop: "6px", textAlign: "left" }}>Prizes Worth <br></br> {props?.prizeMoney} </h2>
+                                    <h2 style={{textAlign: "left" }}>Prizes Worth <br></br> {props?.prizeMoney} </h2>
                                     <p style={{ fontSize: "14px", textAlign: "left" }}>
                                         <FaRegCalendar /> Register Before {props?.dateBefore}<br></br>
                                         <FaRegClock /> 11:59 P.M.

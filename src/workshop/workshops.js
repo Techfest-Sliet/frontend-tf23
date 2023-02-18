@@ -24,12 +24,11 @@ const workshops = () => {
 
 
       {/* Name of the Workshop */}
+      <div className='wrkshopsBackgroundBottoms'>
       {datasOfWorkshop.map((item, index) => (
-
-        <div className='wrkshopsBackgroundBottom' key={index}>
-          <EventBox props={item} index={index} />
-        </div>
+       <EventBox index={index} props={item}/>
       ))}
+      </div>
     </>
   )
 }
