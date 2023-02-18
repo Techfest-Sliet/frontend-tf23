@@ -8,7 +8,7 @@ function Card(props) {
   return (
   
    <div class="cards cards--two">
-       <img src={props.image} class="img-responsive" alt="" />
+       <img src={props.image} class="img-responsive" alt="" style={{width:"100%"}}/>
        <span class="cards--two__rect"></span>
        <span class="cards--two__tri"></span>
        <p>{props.name}</p>

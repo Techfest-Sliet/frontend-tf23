@@ -8,6 +8,13 @@ const WebDetails = [
     },
     {
       id: 1,
+      name: "Gaurav",
+      image: process.env.PUBLIC_URL + "core-team-images/18.png",
+      position: "Frontend Coordinator",
+      linkedin: "https://www.linkedin.com/in/gaurav-kumar-5b80ba202",
+    },
+    {
+      id: 2,
       name:"Vanshika",
       image:process.env.PUBLIC_URL + "core-team-images/9.jpg",
       position:"MERN",
@@ -15,7 +22,7 @@ const WebDetails = [
     }
     ,
     {
-      id: 2,
+      id: 3,
       name:"Shivam Kashyap",
       image:process.env.PUBLIC_URL + "core-team-images/10.jpg",
       position:"Frontend",
@@ -24,7 +31,7 @@ const WebDetails = [
     
     ,
     {
-      id: 3,
+      id: 4,
       name:"Suhani",
       image:process.env.PUBLIC_URL + "core-team-images/11.jpg",
       position:"Frontend",
@@ -33,14 +40,14 @@ const WebDetails = [
     ,
     
     {
-      id: 4,
+      id: 5,
       name:"Shubham Singh",
       image:process.env.PUBLIC_URL + "core-team-images/12.jpg",
       position:"MERN",
       linkedin:"http://www.linkedin.com/in/theAlpha06"
     },
     {
-      id: 5,
+      id: 6,
       name:"Ashish",
       image:process.env.PUBLIC_URL + "core-team-images/16.jpg",
       position:"Frontend",
@@ -48,14 +55,14 @@ const WebDetails = [
     }
     ,
     {
-      id: 6,
+      id: 7,
       name:"Chandra Prakash",
       image:process.env.PUBLIC_URL + "core-team-images/13.jpg",
       position:"Frontend",
       linkedin:"https://www.linkedin.com/in/chandra-prakash-yadav-b22783228"
     },
     {
-      id: 7,
+      id: 8,
       name:"Sandeep Kumar",
       image:process.env.PUBLIC_URL + "core-team-images/14.jpg",
       position:"Backend + Hosting",
@@ -63,14 +70,14 @@ const WebDetails = [
     }
     ,
     {
-      id: 8,
+      id: 9,
       name:"Shubham Jha",
       image:process.env.PUBLIC_URL + "core-team-images/15.jpg",
       position:"Frontend",
       linkedin:"https://www.linkedin.com/in/shubham-jha-7246431a6"
     },
     {
-      id: 9,
+      id: 10,
       name:"Varsha",
       image:process.env.PUBLIC_URL + "core-team-images/17.jpg",
       position:"Frontend",

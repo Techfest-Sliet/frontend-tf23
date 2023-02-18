@@ -34,15 +34,15 @@ export const datasOfEvent = [
     coor: [
       {
         img: require("../../dummy.jpg"),
-        nameOfEventCoordinator: "name",
+        nameOfEventCoordinator: "Siddharth",
         phoneNo: (
           <span>
             <a
-              href="tel:8******01"
+              href="tel:7007515466"
               style={{ textDecoration: "none", color: "white" }}
             >
               {" "}
-              8******01{" "}
+              7007515466{" "}
             </a>
           </span>
         ),

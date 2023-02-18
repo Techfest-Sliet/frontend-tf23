@@ -42,7 +42,7 @@ export const Navbar = (props) => {
               </Link>
             </li>
             <li>
-              <Link to="/about" onClick={unCheck}>
+              {/* <Link to="/about" onClick={unCheck}>
                 About Us
               </Link>
             </li>
@@ -55,12 +55,39 @@ export const Navbar = (props) => {
               <Link to="/our-team" onClick={unCheck}>
                 Our Team
               </Link>
-            </li>
+              */}
+            </li> 
             {authContext.isUserLoggedIn && (
               <li>
                 <Link to="/user-dashboard">Dashboard</Link>
               </li>
             )}
+            <li className="domains">
+              <Link 
+                to="/about-us"
+                className="dropdown__animation"
+                onClick={unCheck}
+              >
+                About Us<i className="arrow down">&#32;</i>
+              </Link>
+              <ul className="dropdown">
+                <li>
+                  <Link to='/about-us' onClick={unCheck}>
+                    About Us
+                  </Link>
+                </li>
+                <li>
+                  <Link to='/faq' onClick={unCheck}>
+                    FAQ
+                  </Link>
+                </li>
+                <li>
+                  <Link to='/our-team' onClick={unCheck}>
+                    Our Team
+                  </Link>
+                </li>
+              </ul>
+            </li>
             <li className="domains">
               <Link
                 to="/domains"
