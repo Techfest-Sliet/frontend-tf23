@@ -192,7 +192,7 @@ const  User_dasbord = () => {
               <tr className="TableRow  ">
                 <td>Date of Birth</td>
 
-                <td className="TableRow__res">{user && user.dob}</td>
+                <td className="TableRow__res">{user && user.dob.slice(0, 10)}</td>
               </tr>
 
               {/* <!-------------------Contact Information-------------> */}
