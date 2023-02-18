@@ -46,6 +46,7 @@
     width: 100%;
     font-style: normal;
     overflow: scroll;
+    height: 100vh;
 }
 
 table.profiletable {

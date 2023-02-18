@@ -38,7 +38,7 @@ const  User_dasbord = () => {
       });
   }, [authContext, authContext.login]);
   return (
-    <div className="Dashboard__body" style={{height: "100vh"}}>
+    <div className="Dashboard__body">
       <div className="row_justify-content-around" style={{height:"100vh"}}>
         <div className="userdashbord_body">
           <h2 className="user__header">Namaste! {user && user.name}</h2>
@@ -745,9 +745,6 @@ const  User_dasbord = () => {
               </div>
             </div>
           </div> */}
-          <button className="btn__home">
-            <Link to="/">Home</Link>
-          </button>
         </div>
       </div>
     </div>
