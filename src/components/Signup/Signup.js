@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useCallback } from "react";
 import styles from "./Signup.module.css";
 import axios from "axios";
 import logo from "../../images/techFEST '23.webp";
@@ -6,8 +6,11 @@ import { baseUrl } from "../../API/api";
 import { Link, useNavigate } from "react-router-dom";
 import ErrorModel from "../../components/ErrorPopup/ErrorModel";
 import Loader from '../../components/Loader/Loader.js';
+import {useGoogleReCaptcha} from 'react-google-recaptcha-v3';
 
 const Signup = () => {
+
+  const { executeRecaptcha } = useGoogleReCaptcha();
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -84,7 +87,14 @@ const Signup = () => {
     setDivTwo(false);
   };
 
-  const PostData = async (e) => {
+  const PostData = useCallback(async (e) => {
+  
+    if (!executeRecaptcha) {
+      console.log('Execute recaptcha not yet available');
+      return;
+    }
+
+    const token = await executeRecaptcha('yourAction');
     e.preventDefault();
     if (
       email.trim().length === 0 ||
@@ -138,7 +148,8 @@ const Signup = () => {
       // referral: referral,
       branch: branch,
       collegeName: collegeName,
-      dob: dob
+      dob: dob,
+      reCaptchaToken: token
     };
     setIsLoading(true);
     await axios
@@ -169,7 +180,7 @@ const Signup = () => {
         console.log(err);
         return;
       });
-  };
+  }, [executeRecaptcha]);
 
   return (
     <>

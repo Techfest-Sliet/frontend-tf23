@@ -1,4 +1,5 @@
 import "./index.css";
+import { GoogleReCaptchaProvider } from 'react-google-recaptcha-v3';
 import React, { useContext, useState } from "react";
 import { useLocation } from "react-router-dom";
 import { Route, Routes } from "react-router";
@@ -81,6 +82,13 @@ function App() {
   };
   return (
     <>
+  <GoogleReCaptchaProvider
+    reCaptchaKey="6Ldug5YkAAAAAI6e4FMGtjuymWLsLXq3vQ7-HBJ4"
+    useEnterprise="true"
+    scriptProps={{
+      async: true, // optional, default to false,
+    }}
+  >
       <div className="App">
         {location.pathname !== "/sign-up" &&
           location.pathname !== "/sign-in" && (
@@ -133,6 +141,7 @@ function App() {
           onErrorClick={onErrorMadeHandle}
         />
       )}
+	  </GoogleReCaptchaProvider>
     </>
   );
 }
