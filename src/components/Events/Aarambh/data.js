@@ -30,7 +30,7 @@ export const datasOfEvent = [
       </span>
     ),
     prizeMoney: "₹ 5,000",
-    dateBefore: "comming soon",
+    dateBefore: "25/02",
     coor: [
       {
         img: require("../../dummy.jpg"),
@@ -49,11 +49,11 @@ export const datasOfEvent = [
         mail: (
           <span>
             <a
-              href="mailto:internwellclub@gmail.com"
+              href="mailto:2040202@sliet.ac.in"
               style={{ textDecoration: "none", color: "white" }}
             >
               {" "}
-              internwellclub@gmail.com
+              2040202@sliet.ac.in
             </a>
           </span>
         ),
