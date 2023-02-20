@@ -9,12 +9,7 @@ function AboutUs() {
   return (
     <div className="AboutUs">
       <div className="AboutUsBg">
-        <img
-          src="/about-us/6417740-1@2x.png"
-          width={"100%"}
-          height={"100%"}
-          alt=""
-        />
+        <img src="/about-us/main.webp" width={"100%"} height={"100%"} alt="" />
       </div>
       <div className="container_AboutUs_Upperpart">
         <div className="About_Us_part1">
@@ -55,7 +50,7 @@ function AboutUs() {
             />
           </div>
           <div className="AboutSlietHeading">
-            <h1 style={{ fontFamily: "monumentExtended" }}>
+            <h1>
               About{" "}
               <span
                 style={{ color: "#74eb76", fontFamily: "monumentExtended" }}
@@ -73,11 +68,11 @@ function AboutUs() {
               knowledge and technical skills by creating a healthy competitive
               environment that encourages innovation and critical thinking among
               students. At the academic level the institute offers various
-              academic courses of Undergraduate and PostGraduate programmes.
-              Apart from academics, SLIET is home to various co-curricular
-              activities and communities such as National Cadet Corps - SLIET,
-              Endeavour, Mavericks, SSDC, Juggernauts, Green rangers, Institute
-              Innovation cell, SRAS, National Service Scheme, etc.
+              Undergraduate and PostGraduate programmes. Apart from academics,
+              SLIET is home to various co-curricular activities and communities
+              such as National Cadet Corps - SLIET, Endeavour, Mavericks, SSDC,
+              Juggernauts, Green rangers, Institute Innovation cell, SRAS,
+              National Service Scheme, etc.
             </p>
           </div>
         </div>
@@ -85,7 +80,7 @@ function AboutUs() {
         <div className="AboutInfo">
           <div className="Participants">
             <img src="/about-us/Group 881.svg" height={"50px"} alt="" />
-            <h1 style={{ fontFamily: "monumentExtended" }}>30 +</h1>
+            <h1>35+</h1>
             <h4 style={{ fontFamily: "productSans" }}>
               Institutes Participate every year
             </h4>
@@ -99,7 +94,7 @@ function AboutUs() {
 
           <div className="Participants">
             <img src="/about-us/Group 878.svg" height={"50px"} alt="" />
-            <h1 style={{ fontFamily: "monumentExtended" }}>10K +</h1>
+            <h1>10K+</h1>
             <h4 style={{ fontFamily: "productSans" }}>
               Footfall during techFEST 21
             </h4>
@@ -113,7 +108,7 @@ function AboutUs() {
 
           <div className="Participants last">
             <img src="/about-us/Group 879.svg" height={"50px"} alt="" />
-            <h1 style={{ fontFamily: "monumentExtended" }}>5L +</h1>
+            <h1>5L+</h1>
             <h4 style={{ fontFamily: "productSans" }}>
               Worth of Goodies and Prize Money
             </h4>
@@ -125,20 +120,26 @@ function AboutUs() {
       <div className="AboutInfo1">
         <div className="Participants1">
           <img src="/about-us/Group 881.svg" height={"50px"} alt="" />
-          <h1 style={{ fontFamily: "monumentExtended" }}>30 +</h1>
-          <h4 style={{ fontFamily: "productSans" }}>Institutes Participate every year</h4>
+          <h1>30 +</h1>
+          <h4 style={{ fontFamily: "productSans" }}>
+            Institutes Participate every year
+          </h4>
         </div>
 
         <div className="Participants1">
           <img src="/about-us/Group 878.svg" height={"50px"} alt="" />
-          <h1 style={{ fontFamily: "monumentExtended" }}>10K +</h1>
-          <h4 style={{ fontFamily: "productSans" }}>Footfall during techFEST 21</h4>
+          <h1>10K +</h1>
+          <h4 style={{ fontFamily: "productSans" }}>
+            Footfall during techFEST 21
+          </h4>
         </div>
 
         <div className="Participants1 last1">
           <img src="/about-us/Group 879.svg" height={"50px"} alt="" />
-          <h1 style={{ fontFamily: "monumentExtended" }}>5L +</h1>
-          <h4 style={{ fontFamily: "productSans" }}>Worth of Goodies and Prize Money</h4>
+          <h1>5L +</h1>
+          <h4 style={{ fontFamily: "productSans" }}>
+            Worth of Goodies and Prize Money
+          </h4>
         </div>
       </div>
 
@@ -198,16 +199,20 @@ function AboutUs() {
 
       {/* gallery */}
       <div className="sponsor">
-        <h1 id="sponsor" style={{ color: "#74EB76", fontFamily: "monumentExtended" }}>
+        <h1 id="sponsor" style={{ color: "#74EB76", marginBottom: "3rem" }}>
           GALLERY
         </h1>
         <SliderDiv arr={gallery} />
       </div>
 
       {/* previos sponsr */}
-      <div className="sponsor" style={{ marginTop: "3rem", width: "100%" }}>
-        <h1 id="sponsor" style={{ color: "#74EB76", fontFamily: "monumentExtended"  }}>
-          OUR<span style={{ color: "white", fontFamily: "monumentExtended" }}> PAST</span> SPONSORS
+      <div className="sponsor" style={{ width: "100%" }}>
+        <h1 id="sponsor" style={{ color: "#74EB76", marginBottom: "3rem" }}>
+          <span style={{ color: "white", fontFamily: "monumentExtended" }}>
+            {" "}
+            PAST
+          </span>{" "}
+          SPONSORS
         </h1>
         <SliderDiv arr={SponsorImageSlider} />
       </div>

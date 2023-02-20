@@ -54,6 +54,7 @@ a {
 }
 
 .signup__page1 > input, .signup__page2 > input {
+  font-family: "productSans";
   margin-bottom: 1.5em;
   width: 70%;
   border: 0;
@@ -73,6 +74,7 @@ a {
 }
 
 .signup__label {
+  font-family: "productSans";
   font-size: 1.6em;
   margin-bottom: 0.4em;
 }
@@ -106,7 +108,6 @@ select option:hover {
   -moz-animation: fadeIn 5s infinite;
   -o-animation: fadeIn 5s infinite;
   -ms-animation: fadeIn 5s infinite;
-  /* aspect-ratio: ; */
 }
 @keyframes fadeIn {
   0% {
@@ -328,10 +329,6 @@ select option:hover {
     font-size: 13px;
   }
 
-  /* .signup__input input[type="text"],
-  input[type="password"] {
-    width: 50%;
-  } */
 
   .signup__button {
     padding: 0.2em 1em;
@@ -350,10 +347,6 @@ select option:hover {
   body {
     font-size: 9px;
   }
-  /* .signup__input input[type="text"],
-  input[type="password"] {
-    width: 60%;
-  } */
 }
 @media (max-width: 600px) {
   .signup__content {

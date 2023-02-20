@@ -1,12 +1,16 @@
-import { useState } from "react";
+import { useState, useCallback } from "react";
 import styles from "./Signup.module.css";
 import axios from "axios";
 import logo from "../../images/techFEST '23.webp";
 import { baseUrl } from "../../API/api";
 import { Link, useNavigate } from "react-router-dom";
 import ErrorModel from "../../components/ErrorPopup/ErrorModel";
+import Loader from '../../components/Loader/Loader.js';
+import {useGoogleReCaptcha} from 'react-google-recaptcha-v3';
 
 const Signup = () => {
+
+  const { executeRecaptcha } = useGoogleReCaptcha();
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -78,22 +82,28 @@ const Signup = () => {
       setDivTwo(true);
     }
   };
-  // if(email.split('@')[1] === 'sliet.ac.in') {
-  //   setCollegeName('Sant Longowal Institute of Engineering and Technology');
-  // }
   const showDivOne = () => {
     setDivOne(true);
     setDivTwo(false);
   };
 
-  const PostData = async (e) => {
+  const PostData = useCallback(async (e) => {
+  
+    if (!executeRecaptcha) {
+      console.log('Execute recaptcha not yet available');
+      return;
+    }
+
+    const token = await executeRecaptcha('yourAction');
     e.preventDefault();
     if (
       email.trim().length === 0 ||
       password.trim().length === 0 ||
       name.trim().length === 0 ||
       cPassword.trim().length === 0 ||
-      phone.trim().length === 0
+      phone.trim().length === 0 || 
+      collegeName.trim().length === 0 || 
+      branch.valueOf === 0
     ) {
       setFieldErr("Field should not be empty");
       setTimeout(() => {
@@ -108,7 +118,7 @@ const Signup = () => {
       }, 3000);
       return;
     }
-    if (branch === 0) {
+    if (branch.valueOf === 0) {
       setBranchErr("Please choose your branch");
       setTimeout(() => {
         setBranchErr(null);
@@ -138,12 +148,12 @@ const Signup = () => {
       // referral: referral,
       branch: branch,
       collegeName: collegeName,
-      dob: dob
+      dob: dob,
+      reCaptchaToken: token
     };
     setIsLoading(true);
-    console.log(isLoading);
     await axios
-      .post(`${baseUrl}/auth/signUp`, user)
+      .post(`${baseUrl}/auth/sign-up`, user)
       .then((result) => {
         const res = result;
         setIsLoading(false);
@@ -153,13 +163,13 @@ const Signup = () => {
             message: "Kindly check your inbox/spam for verification mail!",
           });
           setTimeout(() => {
-            navigate("/signIn");
+            navigate("/sign-in");
           }, 3000);
         } else if (res.status === 400 || res.status === 208) {
           setErrorsMade(res.data.message);
           setTimeout(() => {
             if (res.data.message.includes("email")) {
-              navigate("/signIn");
+              navigate("/sign-in");
             }
             setErrorsMade(null);
           }, 3000);
@@ -170,10 +180,11 @@ const Signup = () => {
         console.log(err);
         return;
       });
-  };
+  }, [executeRecaptcha]);
 
   return (
     <>
+      {isLoading && <Loader/>}
       {errorMade && (
         <ErrorModel
           title={errorMade.title}
@@ -201,7 +212,7 @@ const Signup = () => {
                 type="number"
                 id="phone"
                 name="phone"
-                placeholder="Enter your phone number"
+                placeholder="Enter your whatsapp number"
                 value={phone}
                 onChange={(e) => setPhone(e.target.value)}
                 required
@@ -210,6 +221,7 @@ const Signup = () => {
               {branchErr && <p style={{ color: "red" }}>{branchErr}</p>}
               <select
                 className={styles.signup__select}
+                sx={{height:"10px"}}
                 onChange={(e) => setBranch(e.target.value)}
                 id="branch"
                 name="branch"
@@ -257,6 +269,9 @@ const Signup = () => {
                 </option>
                 <option value="Environmental Engineering">
                   Environmental Engineering
+                </option>
+                <option value="Food Engineering and Technology">
+                  Food Engineering and Technology
                 </option>
                 <option value="Industrial Engineering">
                   Industrial Engineering
@@ -314,7 +329,7 @@ const Signup = () => {
                 type="date"
                 id="dob"
                 name="dob"
-                placeholder="Enter your date of birth"
+                placeholder="dd-mm-yyyy"
                 value={dob}
                 onChange={(e) => setDob(e.target.value)}
                 required
@@ -400,12 +415,13 @@ const Signup = () => {
                 type="button"
                 onClick={showDivTwo}
                 disabled={isLoading}
+                autoComplete='off'
               >
                 Next
               </button>
               <p className={styles.signup__text}>
                 Already have an account?{" "}
-                <Link to={"/signIn"}>
+                <Link to={"/sign-in"}>
                   <span className={styles.signin__link}>Sign In</span>
                 </Link>
               </p>

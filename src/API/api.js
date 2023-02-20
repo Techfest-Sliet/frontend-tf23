@@ -1,7 +1,7 @@
 import axios from 'axios';
 
-export const baseUrl = 'api.techfestsliet.org';
-// export const localUrl = 'http://localhost:4000';
+export const baseUrl = 'https://www.techfestsliet.org/api';
+//export const baseUrl = 'http://localhost:4000';
 
 export const localUrlIns = axios.create({
   baseURL: baseUrl,
@@ -10,6 +10,6 @@ export const localUrlIns = axios.create({
     'Content-Type': 'application/json',
     'Accept':'application/json',
     "Access-Control-Allow-Credentials": true,
-    "Access-Control-Allow-Origin": baseUrl,
+    "Access-Control-Allow-Origin": "*",
   },
 });

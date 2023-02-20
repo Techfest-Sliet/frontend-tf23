@@ -8,6 +8,11 @@
     width: 100%;
 }
 
+img.event_plexus {
+    z-index: 1;
+    width: 58vw;
+}
+
 .background-of-EventsPage::before {
     position: absolute;
     content: "";
@@ -49,15 +54,6 @@
 .techFestT {
     width: 50vw;
     height: auto;
-}
-
-.insideCntiner h1 {
-    font-family: "monumentExtended";
-    z-index: 1;
-    color: rgb(0, 252, 0);
-    font-size: 8vw;
-    font-weight: bolder;
-    margin-bottom: 0px;
 }
 
 .whiteLine {
@@ -120,10 +116,6 @@
         height: auto;
     }
 
-    .insideCntiner h1 {
-        letter-spacing: 0;
-    }
-
     .whiteLine {
         width: 20vw;
         margin: 0 0 2vh 0;
@@ -153,9 +145,7 @@
         height: auto;
     }
 
-    .insideCntiner h1 {
-        letter-spacing: 0;
-    }
+
 
     .insideCntiner p {
         width: 40vw;
@@ -167,14 +157,13 @@
         margin-top: 0;
     }
 
+    img.event_plexus {
+        width: 90vw;
+    }
+
     .techFestT {
         width: 90vw;
         height: auto;
-    }
-
-    .insideCntiner h1 {
-        font-size: 15vw;
-        /* margin-top: 2vw; */
     }
 
     .whiteLine {

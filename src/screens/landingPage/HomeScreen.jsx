@@ -47,24 +47,12 @@ const HomePage = () => {
             className="landingButtons"
             style={{ marginTop: 10, color: "white", marginBottom: 1 }}
           >
-            <Button
-              disabled
-              variant="contained"
-              id="signUpButton"
-              sx={{ mr: 2, mt: 3 }}
-            >
+            <Button variant="contained" id="signUpButton" sx={{ mr: 2, mt: 3 }}>
               <Link
-                to={authContext.isUserLoggedIn ? "/userDashboard" : "/signUp"}
+                to={authContext.isUserLoggedIn ? "/user-dashboard" : "/sign-up"}
               >
                 {authContext.isUserLoggedIn ? "User Dashboard" : "Sign up Now"}
               </Link>
-            </Button>
-            <Button
-              variant="contained"
-              id="aboutUsButton"
-              sx={{ mr: 2, mt: 3 }}
-            >
-              <Link to={"/aboutUs"}>About Us</Link>
             </Button>
           </div>
           <div className="subthemeCont">
@@ -121,7 +109,7 @@ const HomePage = () => {
             <Button
               sx={{ color: "#fff", mt: 3, borderRadius: 6, width: 150, mb: 5 }}
               className="learnMoreButton"
-              onClick={() => navigate("/underConstruction")}
+              onClick={() => navigate("/under-construction")}
             >
               Learn More
             </Button>
@@ -145,11 +133,7 @@ const HomePage = () => {
         {/* sponsor */}
         <div className="sponsor">
           <h1 id="sponsor" style={{ color: "#74EB76" }}>
-            OUR{" "}
-            <span style={{ color: "white", fontFamily: "monumentExtended" }}>
-              PAST
-            </span>{" "}
-            SPONSORS
+            <span style={{ color: "white", fontFamily: "monumentExtended"  }}>PAST</span> SPONSORS
           </h1>
           <SliderDiv arr={SponsorImageSlider} />
         </div>

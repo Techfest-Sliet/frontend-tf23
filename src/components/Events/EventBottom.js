@@ -10,8 +10,8 @@ const EventBottom = ({ props }) => {
                     <div style={{ textAlign: "center", color: "white" }}>
                         <img src={props.photoOfFaculty} className='dummyImg' alt=".." />
                     </div>
-                    <div style={{ color: "white", textAlign: "center", fontFamily: "productSans" }}>
-                        <span className='txtbold'>{props.nameOfFaculty}</span><br></br> {props.facultyAdvisor} <br />
+                    <div className='dtlsOfCoor'>
+                        <b>{props.nameOfFaculty}</b><br></br> {props.facultyAdvisor} <br />
                     </div>
 
 
@@ -22,8 +22,8 @@ const EventBottom = ({ props }) => {
                                     return <div style={{ textAlign: "center", color: "white" }}>
                                         <img src={cord.photoOfdomainCoordinator} className='dummyImgSingle' alt=".." />
 
-                                        <div style={{ textAlign: "center", margin: "7px" }}>
-                                            <span className='txtbold'> {cord.nameOfDomainCoordinator} </span><br></br>
+                                        <div className='dtlsOfCoor'>
+                                            <b> {cord.nameOfDomainCoordinator} </b><br></br>
                                             {cord.phoneNoOfDomainCoordinator} <br />
                                             {cord.mailOfDomainCoordinator}
                                         </div>
@@ -33,8 +33,8 @@ const EventBottom = ({ props }) => {
                                     return <div style={{ textAlign: "center", color: "white" }}>
                                         <img src={cord.photoOfdomainCoordinator} className='dummyImgDouble' alt=".." />
 
-                                        <div style={{ textAlign: "center", margin: "7px" }}>
-                                        <span className='txtbold'> {cord.nameOfDomainCoordinator} </span><br></br>
+                                        <div className='dtlsOfCoor'>
+                                            <b> {cord.nameOfDomainCoordinator} </b><br></br>
                                             {cord.phoneNoOfDomainCoordinator} <br />
                                             {cord.mailOfDomainCoordinator}
                                         </div>

@@ -57,7 +57,7 @@
   .Li_ImageTexT {
     width: 75%;
   }
-  .tagline {
+  .Li_tagline {
     font-size: 1rem;
   }
   .Li_imageHeading {
@@ -79,6 +79,7 @@
     width: 75%;
   }
   .Li_ImageTexT {
+    padding-left: 0;
     text-align: center;
     width: 80%;
   }
@@ -98,7 +99,7 @@
     width: 95%;
   }
   .Li_ImageTexT {
-    padding-left: 0px;
+    padding-left: 0%;
     width: 70%;
     padding-bottom: 20%;
   }
@@ -119,9 +120,6 @@
   .Li_textWrap {
     width: 100%;
   }
-}
-
-@media only screen and (max-width: 376px) {
   .Li_imageHeading {
     font-size: 27px;
   }

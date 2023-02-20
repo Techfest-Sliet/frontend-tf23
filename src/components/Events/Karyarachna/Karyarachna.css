@@ -51,13 +51,10 @@
     height: auto;
 }
 
-.insideCntinerKarya h1 {
-    font-family: "monumentExtended";
+img.event_karyarachna {
     z-index: 1;
-    color: rgb(0, 252, 0);
-    font-size: 7vw;
-    font-weight: bolder;
-    margin-bottom: 0px;
+    width: 69vw;
+    margin-left: 16px;
 }
 
 .whiteLine {
@@ -120,9 +117,7 @@
         height: auto;
     }
 
-    .insideCntinerKarya h1 {
-        letter-spacing: 0;
-    }
+
 
     .whiteLine {
         width: 20vw;
@@ -148,14 +143,15 @@
         margin-top: 7vw;
     }
 
+    img.event_karyarachna {
+        width: 60vw;
+    }
+
     .techFestT {
         width: 70vw;
         height: auto;
     }
 
-    .insideCntinerKarya h1 {
-        letter-spacing: 0;
-    }
 
     .insideCntinerKarya p {
         width: 40vw;
@@ -172,10 +168,11 @@
         height: auto;
     }
 
-    .insideCntinerKarya h1 {
-        font-size: 9vw;
-        /* margin-top: 2vw; */
+    img.event_karyarachna {
+
+        width: 90vw;
     }
+
 
     .whiteLine {
         width: 25vw;
@@ -216,8 +213,13 @@
 
 @media screen and (max-width: 386px) {
     .insideCntinerKarya p {
-        width: auto;
+        /* width: auto; */
         text-align: center;
         margin: 0 7px 0 7px;
+    }
+
+    img.event_karyarachna {
+
+        width: 90%;
     }
 }

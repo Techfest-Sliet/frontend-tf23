@@ -43,6 +43,7 @@
 }
 
 .faqs {
+  font-family: "productSansBold";
   text-align: center;
   color: white;
   margin: 0;
@@ -76,7 +77,6 @@
 
 .questionOfAccordion {
   color: white;
-  font-family: productSans;
   padding-bottom: 5px;
   /* position: absolute; */
 }
@@ -98,6 +98,7 @@
 }
 
 .Dial_In {
+  font-family: "productSansBold";
   text-align: center;
   color: white;
   margin: 5vh 0 4vh 0;
@@ -193,6 +194,8 @@
     font-size: 14px;
   }
   .contactUsImg {
+    /* height: 60vh; */
+    /* width: 50vh; */
     width: 100%;
     height: auto;
   }
@@ -228,8 +231,11 @@
     align-items: center;
     justify-content: center;
     padding-bottom: 10px;
+    padding-bottom: 10px;
   }
   .contactUsImg {
+    /* width: 45vh;
+        height: 50vh; */
     width: 100%;
     height: auto;
     padding-bottom: 7vw;

@@ -51,14 +51,11 @@
     height: auto;
 }
 
-.insideCntiner h1 {
-    font-family: "monumentExtended";
+img.event_chemfor {
     z-index: 1;
-    color: rgb(0, 252, 0);
-    font-size: 8vw;
-    font-weight: bolder;
-    margin-bottom: 0px;
+    width: 58vw;
 }
+
 
 .whiteLine {
     width: 17vw;
@@ -121,9 +118,7 @@
         height: auto;
     }
 
-    .insideCntiner h1 {
-        letter-spacing: 0;
-    }
+
 
     .whiteLine {
         width: 20vw;
@@ -133,7 +128,7 @@
     .evnts {
         font-size: 7vw;
     }
-    
+
 }
 
 
@@ -155,15 +150,15 @@
         height: auto;
     }
 
-    .insideCntiner h1 {
-        letter-spacing: 0;
+    img.event_chemfor {
+        width: 60vw;
     }
 
     .insideCntiner p {
         width: 40vw;
     }
 
-    
+
 }
 
 @media screen and (max-width: 650px) {
@@ -176,9 +171,8 @@
         height: auto;
     }
 
-    .insideCntiner h1 {
-        font-size: 15vw;
-        /* margin-top: 2vw; */
+    img.event_chemfor {
+        width: 80vw;
     }
 
     .whiteLine {
@@ -193,7 +187,7 @@
     #exploreEvents {
         font-size: medium;
     }
-    
+
 }
 
 @media screen and (max-width: 550px) {

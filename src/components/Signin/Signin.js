@@ -5,6 +5,7 @@ import logo from "../../images/techFEST '23.webp";
 import { baseUrl } from "../../API/api";
 import { Link, useNavigate } from "react-router-dom";
 import AuthContext from "../../auth/authContext";
+import Loader from '../Loader/Loader.js';
 
 const Signin = () => {
   const authContext = useContext(AuthContext);
@@ -18,19 +19,29 @@ const Signin = () => {
   const navigate = useNavigate();
 
   const userLoginHandle = async (authData) => {
+    setIsLoading(true);
     await axios
-      .post(`${baseUrl}/auth/signIn`, authData)
+      .post(`${baseUrl}/auth/sign-in`, authData)
       .then((result) => {
+        setIsLoading(false)
         const res = result;
         if (res.status === 204) {
           setTimeout(() => {
             setMailErr(null);
-            navigate("/signUp");
+            navigate("/sign-up");
           }, 3000);
         } else if (res.status === 208) {
           setPasswordErr(res.data.message);
           setTimeout(() => {
             setPasswordErr(null);
+            navigate('/sign-up')
+          }, 3000);
+          return;
+        } else if (res.status === 206) {
+          setPasswordErr(res.data.message);
+          setTimeout(() => {
+            setPasswordErr(null);
+            navigate('/verify')
           }, 3000);
           return;
         }
@@ -41,7 +52,7 @@ const Signin = () => {
             userRole: res.data.userRole,
           };
           authContext.login(userData);
-          navigate('/userDashboard');
+          navigate('/user-dashboard');
         } else {
           setErrorsMade(res.data.message);
         }
@@ -78,7 +89,8 @@ const Signin = () => {
 
   return (
     <>
-      <div className={styles.signin__content}>
+      {isLoading && <Loader />}
+      <div className={styles.signin__content} style={{height: "100vh"}}>
         <div>
           <img src={logo} alt="techFest'23" className={styles.signin__logo} />
         </div>
@@ -106,6 +118,7 @@ const Signin = () => {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
+              autoComplete='off'
             />
             <label htmlFor="password" className={styles.signin__label}>
               Password
@@ -116,6 +129,7 @@ const Signin = () => {
               onChange={(e) => setPassword(e.target.value)}
               type="password"
               required
+              autoComplete='off'
             />
             <div className={styles.signin__div}>
               <button
@@ -127,19 +141,19 @@ const Signin = () => {
               >
                 Sign In
               </button>
-              <Link to="/verify">Verify email!</Link>
+              <Link to="/forgot-password">Forgot Password?</Link>
             </div>
             {/* </div> */}
           </form>
           <p className={styles.signin__text}>
             Don't have an account?
-            <Link to={"/signUp"}>
+            <Link to={"/sign-up"}>
               <span className={styles.signin__link}>Sign Up</span>
             </Link>
           </p>
         </div>
       </div>
-    </>
+      </>
   );
 };
 export default Signin;

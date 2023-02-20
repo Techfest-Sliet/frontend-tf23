@@ -13,8 +13,8 @@ const forgotPassword = () => {
         />
       </div> */}
       <div className="underConstruction__content">
-        <p className="underConstruction__text">Sorry this page is</p>
-        <h1 className="underConstruction__title">Under Construction !</h1>
+        {/* <p className="underConstruction__text">Sorry this page is</p> */}
+        <h1 className="underConstruction__title">COMING SOON !</h1>
         <p className="underConstruction__para">Please come back later</p>
 
         <Link to="/" className="underConstruction__btn">

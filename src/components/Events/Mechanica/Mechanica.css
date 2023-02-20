@@ -51,13 +51,10 @@
     height: auto;
 }
 
-.insideCntiner h1 {
-    font-family: "monumentExtended";
+img.event_mechanica {
     z-index: 1;
-    color: rgb(0, 252, 0);
-    font-size: 8vw;
-    font-weight: bolder;
-    margin-bottom: 0px;
+    width: 58vw;
+    margin-left: 30px;
 }
 
 .whiteLine {
@@ -120,9 +117,7 @@
         height: auto;
     }
 
-    .insideCntiner h1 {
-        letter-spacing: 0;
-    }
+
 
     .whiteLine {
         width: 20vw;
@@ -132,7 +127,7 @@
     .evnts {
         font-size: 7vw;
     }
-    
+
 }
 
 
@@ -154,15 +149,13 @@
         height: auto;
     }
 
-    .insideCntiner h1 {
-        letter-spacing: 0;
-    }
+
 
     .insideCntiner p {
         width: 40vw;
     }
 
-    
+
 }
 
 @media screen and (max-width: 650px) {
@@ -175,10 +168,10 @@
         height: auto;
     }
 
-    .insideCntiner h1 {
-        font-size: 15vw;
-        /* margin-top: 2vw; */
+    img.event_mechanica {
+        width: 90vw;
     }
+
 
     .whiteLine {
         width: 25vw;
@@ -192,7 +185,7 @@
     #exploreEvents {
         font-size: medium;
     }
-    
+
 }
 
 @media screen and (max-width: 550px) {

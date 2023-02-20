@@ -8,18 +8,11 @@ function Li_image(props) {
       </div>
       <div className="Li_ImageTexT">
         <div className="Li_textWrap">
-          <h1
-            style={{ fontFamily: "monumentExtended" }}
-            className="Li_imageHeading"
-          >
-            {props.heading}
-          </h1>
-          <h4 style={{ fontFamily: "productSansBold" }} className="tagline">
+          <h1 className="Li_imageHeading">{props.heading}</h1>
+          <h4 className="Li_tagline">
             <i>{props?.tagline}</i>
           </h4>
-          <p style={{ fontFamily: "productSans" }} className="Li_imageDetail">
-            {props?.detail}
-          </p>
+          <p className="Li_imageDetail">{props?.detail}</p>
         </div>
       </div>
       <div className="tfDivider">

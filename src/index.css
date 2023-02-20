@@ -41,6 +41,14 @@ button{
   font-family: "productSansBold";
 }
 
+a{
+  font-family: "productSans";
+}
+
+h1{
+  font-family: "monumentExtended";
+}
+
 ::-webkit-scrollbar {
   width: 5px;
   height: 5px;

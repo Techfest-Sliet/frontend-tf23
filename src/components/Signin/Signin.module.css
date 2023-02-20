@@ -19,12 +19,11 @@
 a {
   text-decoration: none;
   color: #fff;
-  /* font-size: 1.3rem; */
 }
 
 .signin__content {
   position: relative;
-  width: auto;
+  width: 100vw;
   height: 100vh;
   display: flex;
   align-items: center;
@@ -44,6 +43,7 @@ a {
 }
 
 .signin__inputFields > input {
+  font-family: "productSans";
   margin-bottom: 1.5em;
   width: 70%;
   height: 1.3em;
@@ -56,6 +56,7 @@ a {
 }
 
 .signin__label {
+  font-family: "productSans";
   font-size: 1.5rem;
   margin-bottom: 0.4em;
 }
@@ -83,7 +84,6 @@ select option:hover {
   -moz-animation: fadeIn 5s infinite;
   -o-animation: fadeIn 5s infinite;
   -ms-animation: fadeIn 5s infinite;
-  /* aspect-ratio: ; */
 }
 @keyframes fadeIn {
   0% {
@@ -253,7 +253,8 @@ select option:hover {
 }
 
 .signin__title {
-  font-size: 3rem;
+  font-size: 2.5rem;
+  margin-bottom: 1vw;
 }
 
 .signin__text {
@@ -265,18 +266,6 @@ select option:hover {
   font-weight: bold;
   margin-left: 0.5em;
 }
-/* 
-img {
-  max-height: 100%;
-  max-width: 100%;
-} */
-
-/* .signin__page > h1 {
-  font-size: 3.5em;
-  display: inline-block;
-  margin: 0;
-  font-weight: 700;
-} */
 
 .signin__select {
   background-color: transparent;
@@ -289,10 +278,6 @@ img {
   border-bottom: 1.5px solid #fff;
   margin: 0;
 }
-/* 
-input::placeholder {
-  color: #d9d9d9;
-} */
 
 .signin__button {
   margin: 0.7em 0;
@@ -333,11 +318,6 @@ input::placeholder {
   .signin__inputFields > input::placeholder {
     font-size: 1rem;
   }
-
-  /* .signin__input input[type="text"],
-  input[type="password"] {
-    width: 50%;
-  } */
 
   .signin__button {
     padding: 0.2em 1em;
@@ -404,7 +384,7 @@ input::placeholder {
     width: 85%;
     margin: 0 auto;
   }
-  .signin__page{
+  .signin__page {
     margin-top: 2%;
     width: 80%;
   }
