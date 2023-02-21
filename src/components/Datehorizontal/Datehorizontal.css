@@ -20,6 +20,7 @@
 .Date_horizontal__text{
     animation: move 10s linear infinite;
     transform: translateX(100%);
+    font-size: 1rem;
     /* text-shadow: 0 0 0.6rem #20d6c4, 0 0 1.5rem #39fbeb,
       -0.2rem 0.1rem 1rem #65ff9d, 0.2rem 0.1rem 1rem #65ff9d,
       0 -0.5rem 2rem #48ff24, 0 0.5rem 3rem #5bff24; */
