@@ -318,7 +318,7 @@ const Signup = () => {
                 name="collegeName"
                 placeholder="Enter your college name"
                 value={collegeName}
-                onChange={(e) => setCollegeName(e.value)}
+                onChange={(e) => setCollegeName(e.target.value)}
                 required
                 autoComplete="off"
               />
