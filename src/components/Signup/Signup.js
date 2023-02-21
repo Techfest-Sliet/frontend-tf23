@@ -5,7 +5,8 @@ import logo from "../../images/techFEST '23.webp";
 import { baseUrl } from "../../API/api";
 import { Link, useNavigate } from "react-router-dom";
 import ErrorModel from "../../components/ErrorPopup/ErrorModel";
-import Loader from '../../components/Loader/Loader.js';
+import Loader from "../../components/Loader/Loader.js";
+import ReCAPTCHA from "react-google-recaptcha";
 
 const Signup = () => {
   const [name, setName] = useState("");
@@ -28,6 +29,7 @@ const Signup = () => {
   const [divOne, setDivOne] = useState(true);
   const [divTwo, setDivTwo] = useState(false);
   const [errorMade, setErrorMade] = useState();
+
 
   const onErrorMadeHandle = () => {
     setErrorMade(null);
@@ -91,8 +93,8 @@ const Signup = () => {
       password.trim().length === 0 ||
       name.trim().length === 0 ||
       cPassword.trim().length === 0 ||
-      phone.trim().length === 0 || 
-      collegeName.trim().length === 0 || 
+      phone.trim().length === 0 ||
+      collegeName.trim().length === 0 ||
       branch.valueOf === 0
     ) {
       setFieldErr("Field should not be empty");
@@ -138,7 +140,7 @@ const Signup = () => {
       // referral: referral,
       branch: branch,
       collegeName: collegeName,
-      dob: dob
+      dob: dob,
     };
     setIsLoading(true);
     await axios
@@ -173,7 +175,7 @@ const Signup = () => {
 
   return (
     <>
-      {isLoading && <Loader/>}
+      {isLoading && <Loader />}
       {errorMade && (
         <ErrorModel
           title={errorMade.title}
@@ -210,7 +212,7 @@ const Signup = () => {
               {branchErr && <p style={{ color: "red" }}>{branchErr}</p>}
               <select
                 className={styles.signup__select}
-                sx={{height:"10px"}}
+                sx={{ height: "10px" }}
                 onChange={(e) => setBranch(e.target.value)}
                 id="branch"
                 name="branch"
@@ -298,7 +300,7 @@ const Signup = () => {
                   Transportation Engineering
                 </option>
               </select>
-               <label htmlFor="collegeName" className={styles.signup__label}>
+              <label htmlFor="collegeName" className={styles.signup__label}>
                 College Name
               </label>
               <input
@@ -309,8 +311,8 @@ const Signup = () => {
                 value={collegeName}
                 onChange={(e) => setCollegeName(e.target.value)}
                 required
-                autoComplete='off'
-              /> 
+                autoComplete="off"
+              />
               <label htmlFor="dob" className={styles.signup__label}>
                 Date of Birth
               </label>
@@ -322,7 +324,7 @@ const Signup = () => {
                 value={dob}
                 onChange={(e) => setDob(e.target.value)}
                 required
-                autoComplete='off'
+                autoComplete="off"
               />
 
               <button
@@ -358,7 +360,7 @@ const Signup = () => {
                 value={name}
                 onChange={(e) => setName(e.target.value)}
                 required
-                autoComplete='off'
+                autoComplete="off"
               />
               <label htmlFor="email" className={styles.signup__label}>
                 E-mail
@@ -372,7 +374,7 @@ const Signup = () => {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 required
-                autoComplete='off'
+                autoComplete="off"
               />
               <label htmlFor="password" className={styles.signup__label}>
                 Password
@@ -384,7 +386,7 @@ const Signup = () => {
                 onChange={(e) => setPassword(e.target.value)}
                 type="password"
                 required
-                autoComplete='off'
+                autoComplete="off"
               />
               <label htmlFor="cpassword" className={styles.signup__label}>
                 Confirm Password
@@ -396,7 +398,7 @@ const Signup = () => {
                 variant="standard"
                 onChange={(e) => handleConfirm(e.target.value)}
                 type="password"
-                autoComplete='off'
+                autoComplete="off"
               />
               <button
                 className={styles.signup__button}
@@ -404,7 +406,7 @@ const Signup = () => {
                 type="button"
                 onClick={showDivTwo}
                 disabled={isLoading}
-                autoComplete='off'
+                autoComplete="off"
               >
                 Next
               </button>

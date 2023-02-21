@@ -79,7 +79,7 @@
   background: linear-gradient(to right, #ffffff, #b7b4b2, #ccd0d4, #4d4c47);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
-  background-clip: text;
+  background-clip: text; 
   align-items: center;
 }
 
