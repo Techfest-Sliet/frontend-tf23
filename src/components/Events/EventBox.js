@@ -1,4 +1,4 @@
-import React,{useState} from 'react';
+import React, { useState } from 'react';
 import './EventBox.css';
 import { FaRegCalendar, FaRegClock } from "react-icons/fa";
 import ErrorModel from '../ErrorPopup/ErrorModel';
@@ -6,27 +6,27 @@ import { Schedule } from '@mui/icons-material';
 
 
 function EventBox({ props, index }) {
-const[errorMade,setErrorMade] = useState();
-const onErrorMadeHandle = () => {
-setErrorMade(null);
-}
+    const [errorMade, setErrorMade] = useState();
+    const onErrorMadeHandle = () => {
+        setErrorMade(null);
+    }
     const coor_len = (props?.coor).length;
     const onErrorHappen = () => {
-        setErrorMade({title:"Register Now",message:"Coming Soon"})
+        setErrorMade({ title: "Register Now", message: "Coming Soon" })
     }
     const onErrorHappen1 = () => {
-        setErrorMade({title:"Problem Statement",message:"Coming Soon"})
-    } 
+        setErrorMade({ title: "Problem Statement", message: "Coming Soon" })
+    }
 
     return (
         <>
-        {errorMade && 
-  <ErrorModel 
-  title={errorMade.title}
-  message={errorMade.message}
-  onErrorClick={onErrorMadeHandle}
-  />
-  }
+            {errorMade &&
+                <ErrorModel
+                    title={errorMade.title}
+                    message={errorMade.message}
+                    onErrorClick={onErrorMadeHandle}
+                />
+            }
             {
                 (coor_len === 1) ? (
                     <div className='eventBoxSingle' key={index}>
@@ -78,7 +78,7 @@ setErrorMade(null);
                             <div className='evntDesc' style={{ float: "left" }}>
 
                                 <h1 style={{ textAlign: "left" }}>{props?.nameOfEvent}</h1>
-                                <p style={{ textAlign: "left" }}>{props?.desc}</p>
+                                <p style={{ textAlign: "justify" }}>{props?.desc}</p>
                                 <div style={{ float: "left" }}>
                                     <button className='registerNowEvent' onClick={onErrorHappen}> Register Now </button>
                                     <button className='problemStat'> {props?.schedule} </button>

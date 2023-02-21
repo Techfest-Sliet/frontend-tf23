@@ -38,9 +38,9 @@
 }
 
 @media screen and (max-width: 1100px) {
-    .Ri_image_Container{
-        height: 400px;
-    }
+  .Ri_image_Container {
+    height: 400px;
+  }
   .Ri_image_ContainerImg {
     width: 70%;
   }
@@ -52,7 +52,6 @@
     width: 90%;
   }
 }
-
 
 @media screen and (max-width: 769px) {
     .Ri_image_Container {
@@ -74,28 +73,28 @@
     }
 }
 
-@media screen and (max-width:575px) {
+@media screen and (max-width: 575px) {
   .Ri_image_Container {
     width: 80%;
     margin-top: 5rem;
     height: auto;
     flex-direction: column-reverse;
   }
-  .Ri_image_ContainerImg{
+  .Ri_image_ContainerImg {
     width: 75%;
   }
   .Ri_ImageTexT{
     padding-right: 0;
     text-align: center;
     width: 80%;
-}
-.Ri_textWrap {
+  }
+  .Ri_textWrap {
     width: 100%;
   }
   .Ri_imageHeading{
     font-size: 32px;
   }
-  .Ri_imageDetail{
+  .Ri_imageDetail {
     font-size: 20px;
   }
 }
@@ -113,17 +112,23 @@
 }
 
 @media only screen and (max-width: 376px) {
-    .Ri_image_Container{
-      margin-top: 3rem;
-    }
-    .Ri_image_ContainerImg{
-        width: 90%;
-    }
-    .Ri_ImageTexT{
-        text-align: center;
-        width: 80%;
-    }
-    .Ri_textWrap {
-        width: 100%;
-      }
+  .Ri_image_Container {
+    margin-top: 3rem;
+  }
+  .Ri_image_ContainerImg {
+    width: 90%;
+  }
+  .Ri_ImageTexT {
+    text-align: center;
+    width: 80%;
+  }
+  .Ri_textWrap {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 376px) {
+  .Ri_imageHeading {
+    font-size: 27px;
+  }
 }

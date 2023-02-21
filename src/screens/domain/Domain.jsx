@@ -36,7 +36,7 @@ function Domain() {
         /> */}
       </div>
       <div class="domainheading">
-        <h2>DOMAINS</h2>
+        <h2 style={{fontFamily: "monumentExtended"}}>DOMAINS</h2>
         <p>Unleash your skills and test yourselves on National Battlegrounds with 8 Domains</p>
       </div>
       </div>

@@ -102,20 +102,23 @@
 #vation {
   font-family: monumentExtended;
   color: linear-gradient(to right, #d5d5d5, #9692a5);
+  font-family: monumentExtended;
 }
 
 #in {
   font-family: monumentExtended;
   color: #fff;
-  padding-top: 7vh;
+  padding-top: 6vh;
   margin-left: 5px;
   font-size: 40px;
+  font-family: monumentExtended;
 }
 
 #agriculture {
   font-family: monumentExtended;
   font-size: 100px;
   color: #2de230;
+  font-family: monumentExtended;
 }
 
 .landingText {
@@ -240,6 +243,7 @@
   font-size: 18px;
   font-weight: lighter;
   line-height: 1.5;
+  font-family: productSans;
 }
 
 .learnMoreButton {
@@ -485,8 +489,14 @@
 }
 
 @media only screen and (max-width: 900px) {
+  .innovation {
+    font-size: 25px;
+  }
+  #in {
+    font-size: 2rem;
+  }
   #agriculture {
-    font-size: 100px;
+    font-size: 85px;
   }
 
   .landingPageCover__animation {
@@ -654,6 +664,12 @@
   }
 }
 
+@media only screen and (max-width: 650px) {
+  .logoContainer {
+    margin-top: 5vh;
+  }
+}
+
 @media only screen and (max-width: 500px) {
   .main_img {
     width: 70vw;
@@ -771,7 +787,7 @@
   .O {
     width: 80px;
     border: 6px solid;
-    margin-top: 4px;
+    /* margin-top: 4px; */
     color: #d5d5d5;
     padding-left: 1px;
     padding-right: 1px;
@@ -781,7 +797,7 @@
 
   #in {
     font-size: 19px;
-    padding-top: 1.3vh;
+    padding-top: 1.1vh;
   }
 
   #agriculture {
@@ -872,7 +888,7 @@
   .O {
     width: 80px;
     border: 6px solid;
-    margin-top: 4px;
+    /* margin-top: 4px; */
     color: #d5d5d5;
     padding-left: 1px;
     padding-right: 1px;
@@ -882,7 +898,7 @@
 
   #in {
     font-size: 19px;
-    padding-top: 1.3vh;
+    padding-top: 1vh;
   }
 
   #agriculture {
@@ -967,7 +983,7 @@
     /* height: 12px; */
     width: 80px;
     border: 6px solid;
-    margin-top: 4px;
+    /* margin-top: 4px; */
     color: #d5d5d5;
     padding-left: 1px;
     padding-right: 1px;
@@ -1050,7 +1066,7 @@
     /* height: 7px; */
     width: 50px;
     border: 6px solid;
-    margin-top: 4px;
+    /* margin-top: 4px; */
     color: #d5d5d5;
     padding-left: 1px;
     padding-right: 1px;

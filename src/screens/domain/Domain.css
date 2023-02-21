@@ -50,78 +50,84 @@
   justify-content: center;
 }
 .innerRing .flip-card-back {
-    height: 100%;
-    width: 75%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    word-break: break-word;
-    text-align: center;
-  }
-  .innerRing .flip-card-front {
-    height: 100%;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: absolute;
-  }
-  .span{
-    font-size: 20px;
-  }
+  height: 100%;
+  width: 75%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  word-break: break-word;
+  text-align: center;
+}
+.innerRing .flip-card-front {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+}
+.span {
+  font-family: "productSans";
+  font-size: 20px;
+}
 
-  .domainexplore {
-    color: white;
-    border-color: black;
-    padding: 10px;
-    border-radius: 10px;
-    border: 1px solid  #0b9e19;
-    cursor: pointer;
-    /* background: linear-gradient( 360deg, #0b9e19 10.45%, rgba(5, 89, 13, 0.57) 48.72%, rgba(0, 30, 5, 0) 87.53% ); */
-    
-  }
-  .ringImage {
-    height: 200px;
-    background-color: transparent;
-    position: absolute;
-    top:-1%;
-    z-index: 0;
-  }
-  .innerRing .flip-card-front p {
-    bottom: 10%;
-    font-size: 25px;
-    background-color: transparent;
-    font-weight: 600;
-    text-align: center;
-    position: absolute;
-  }
-  .domainPage {
-    height: 100%;
-    background: rgb(5, 79, 17);
-    background: linear-gradient( 135deg, rgba(5, 79, 17, 0.99) 9%, rgba(0, 0, 0, 1) 50%, rgba(5, 62, 15, 1) 93% );
-    box-shadow: 0px 4px 60px -1px rgba(0, 0, 0, 0.2), inset 0px 4px 50px rgba(0, 0, 0, 0.25);
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-  }
-  .domainScreen {
-    background-image: url('../../assets/domain/Background.webp');
+.domainexplore {
+  color: white;
+  border-color: black;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #0b9e19;
+  cursor: pointer;
+  /* background: linear-gradient( 360deg, #0b9e19 10.45%, rgba(5, 89, 13, 0.57) 48.72%, rgba(0, 30, 5, 0) 87.53% ); */
+}
+.ringImage {
+  height: 200px;
+  background-color: transparent;
+  position: absolute;
+  top: -1%;
+  z-index: 0;
+}
+.innerRing .flip-card-front p {
+  bottom: 10%;
+  font-size: 25px;
+  background-color: transparent;
+  font-weight: 600;
+  text-align: center;
+  position: absolute;
+}
+.domainPage {
+  height: 100%;
+  background: rgb(5, 79, 17);
+  background: linear-gradient(
+    135deg,
+    rgba(5, 79, 17, 0.99) 9%,
+    rgba(0, 0, 0, 1) 50%,
+    rgba(5, 62, 15, 1) 93%
+  );
+  box-shadow: 0px 4px 60px -1px rgba(0, 0, 0, 0.2),
+    inset 0px 4px 50px rgba(0, 0, 0, 0.25);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+.domainScreen {
+  background-image: url("../../assets/domain/Background.webp");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   height: 100vh;
   overflow: hidden;
   width: auto;
-  }
-  .DomainScroll {
-    height: 100%;
-    /* overflow-y: scroll; */
-    width: 100%;
-    display: flex;
-    justify-content: space-evenly;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-  }
+}
+.DomainScroll {
+  height: 100%;
+  /* overflow-y: scroll; */
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
 /* master
   height: 100%;
   width: 75%;
@@ -264,26 +270,22 @@
     margin-top: 15px;
   }
 
-
-  
   .innerRing:hover .flip-card-back {
     transition: opacity 6s; /* specify the property you want to animate */
     opacity: 1; /* specify the final state */
-    
   }
 }
-  @media only screen and (max-width: 1100px){
-    .domainheading {
-        width: 40%;
-      }
-      .domainScreen {
-        height: 67vh;
-      }
-      .domainheading {
-        width: 50%;
-        margin-top: 15px;
-      }
-      
+@media only screen and (max-width: 1100px) {
+  .domainheading {
+    width: 40%;
+  }
+  .domainScreen {
+    height: 67vh;
+  }
+  .domainheading {
+    width: 50%;
+    margin-top: 15px;
+  }
 
   .domainSlider {
     height: 50%;
@@ -317,11 +319,11 @@
     height: 95vh;
   }
   .domainheading {
-    /* width: 70%; */
+    width: 100%;
     margin-bottom: 60px;
     padding: 2vw;
   }
-  .domainheading p{
+  .domainheading p {
     font-size: 1rem;
   }
 }
@@ -335,31 +337,16 @@
   }
 }
 
-
-  @media only screen and (max-width: 500px){
-    .domainScreen {
-      height: 95vh;
-    }
-    .domainheading {
-      width: 70%;
-      margin-bottom: 60px;
-    }
-    
-  
-    }
-
-    @media only screen and (max-width: 350px){
-      .domainScreen {
-        height: 95vh;
-        align-items: center;
-      }
-      .domainheading {
-        width: 70%;
-        margin-bottom: 60px;
-      }
-      
-    
-      }
+@media only screen and (max-width: 350px) {
+  .domainScreen {
+    height: 95vh;
+    align-items: center;
+  }
+  .domainheading {
+    width: 100%;
+    margin-bottom: 60px;
+  }
+}
 @keyframes domainAnimation {
   0% {
     transform: rotateY(0deg) scaleX(-1);

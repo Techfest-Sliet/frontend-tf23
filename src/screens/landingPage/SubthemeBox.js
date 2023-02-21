@@ -10,7 +10,7 @@ const SubthemeBox = ({ index }) => {
             <div className='SubThemeBox'>
                 <div>
                     {un.map((items) => (
-                        <p>
+                        <p style={{fontFamily: "productSansBold"}}>
                             {items.desc}
                         </p>
                     ))}

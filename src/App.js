@@ -34,6 +34,9 @@ import Popup from './components/Popup/Popup.js';
 import Events from './components/domain/OneCard.jsx';
 import ErrorModel from './components/ErrorPopup/ErrorModel';
 import Feedback from "./components/Feedback/feedback";
+import Date from "./components/Date/Date"
+import Datehorizontal from "./components/Datehorizontal/Datehorizontal"
+
 
 function App() {
   const authContext = useContext(AuthContext);
@@ -55,91 +58,94 @@ function App() {
   const [visitors, setVisitors] = useState(0);
 
   window.onload = () => {
-      const getToken = localStorage.getItem("uniqueVisitor");
-      const token = {
-        token: getToken,
-      };
-      axios
-        .post("https://www.techfestsliet.org/api/visitors/count", token)
-        .then((res) => {
-          if (res.status === 200) {
-            setVisitors(res.data.count);
-            localStorage.setItem("uniqueVisitor", res.data.token);
-            return;
-          } else if (res.status === 208) {
-            setVisitors(res.data.count);
-          } else {
-            console.log(res);
-            return;
-          }
-        })
-        .catch((err) => {
-          console.log(err);
-        });
-      console.log(visitors);
+    const getToken = localStorage.getItem("uniqueVisitor");
+    const token = {
+      token: getToken,
+    };
+    axios
+      .post("https://www.techfestsliet.org/api/visitors/count", token)
+      .then((res) => {
+        if (res.status === 200) {
+          setVisitors(res.data.count);
+          localStorage.setItem("uniqueVisitor", res.data.token);
+          return;
+        } else if (res.status === 208) {
+          setVisitors(res.data.count);
+        } else {
+          console.log(res);
+          return;
+        }
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+    console.log(visitors);
   };
   return (
     <>
-  <GoogleReCaptchaProvider
-    reCaptchaKey="6Ldug5YkAAAAAI6e4FMGtjuymWLsLXq3vQ7-HBJ4"
-    useEnterprise="true"
-    scriptProps={{
-      async: true, // optional, default to false,
-    }}
-  >
-      <div className="App">
-        {location.pathname !== "/sign-up" &&
-          location.pathname !== "/sign-in" && (
-            <Navbar isAuth={isUserLoggedIn} onLogout={logOutHandler} />
-          )}
-        {location.pathname !== "/sign-up" &&
-          location.pathname !== "/sign-in" &&
-          location.pathname !== "/user-dashboard" && <Footer />}
-        <Routes>
-          <Route path="/domains" element={<DomainScreen />} />
-          <Route path="*" element={<Error404 />} />
-          {/* <Route path="/visitors" element={<Visitor />} /> */}
-          <Route path="/faq" element={<Faq />} />
-          <Route path="/events/Aarambh" element={<Aarambh />} />
-          <Route path="/events/chemfor" element={<Chemfor />} />
-          <Route path="/events/electrica" element={<Electrica />} />
-          <Route path="/events/genesis" element={<Genesis />} />
-          <Route path="/events/Karyarachna" element={<Karyarachna />} />
-          <Route path="/events/kermis" element={<Kermis />} />
-          <Route path="/events/mechanica" element={<Mechanica />} />
-          <Route path="/events/plexus" element={<Plexus />} />
-          <Route path="/events/robozar" element={<Robozar />} />
-          <Route path="/workshops" element={<Workshop />} />
-          <Route path="/under-construction" element={<UnderConstruction />} />
-          <Route path="/" element={<HomeScreen />} />
-          {!authContext.isUserLoggedIn && (
-            <Route path="/sign-in" element={<SignIn />} />
-          )}
-          {!authContext.isUserLoggedIn && (
-            <Route path="/sign-up" element={<SignUp />} />
-          )}
-          <Route path="/reset-password" element={<Reset />} />
-          <Route path="/forgot-password" element={<ForgotPassword />} />
-          <Route path="/our-team" element={<OurTeam />} />
-          <Route path="/about" element={<Aboutus/>} />
-          <Route path="/popup" element={<Popup/>} />
-          <Route path="/verify" element={<Verify/>} />
-          <Route path="/events/:title" element={<Events/>} />
-           {authContext.isUserLoggedIn && <Route path="/user-dashboard" element={<UserDashboard/>} />}
+      <GoogleReCaptchaProvider
+        reCaptchaKey="6Ldug5YkAAAAAI6e4FMGtjuymWLsLXq3vQ7-HBJ4"
+        useEnterprise="true"
+        scriptProps={{
+          async: true, // optional, default to false,
+        }}
+      >
+        <div className="App">
+          {location.pathname !== "/sign-up" &&
+            location.pathname !== "/sign-in" && (
+              <Navbar isAuth={isUserLoggedIn} onLogout={logOutHandler} />
+            )}
+          {location.pathname !== "/sign-up" &&
+            location.pathname !== "/sign-in" &&
+            location.pathname !== "/user-dashboard" && <Footer />}
 
-           <Route path="/feedback" element={<Feedback/>}/>
-           {/* <Route path="/confirmedmail" element={<Confirmedmail/>}/> */}
+          <Date />
+          <Datehorizontal />
+          <Routes>
+            <Route path="/domains" element={<DomainScreen />} />
+            <Route path="*" element={<Error404 />} />
+            {/* <Route path="/visitors" element={<Visitor />} /> */}
+            <Route path="/faq" element={<Faq />} />
+            <Route path="/events/Aarambh" element={<Aarambh />} />
+            <Route path="/events/chemfor" element={<Chemfor />} />
+            <Route path="/events/electrica" element={<Electrica />} />
+            <Route path="/events/genesis" element={<Genesis />} />
+            <Route path="/events/Karyarachna" element={<Karyarachna />} />
+            <Route path="/events/kermis" element={<Kermis />} />
+            <Route path="/events/mechanica" element={<Mechanica />} />
+            <Route path="/events/plexus" element={<Plexus />} />
+            <Route path="/events/robozar" element={<Robozar />} />
+            <Route path="/workshops" element={<Workshop />} />
+            <Route path="/under-construction" element={<UnderConstruction />} />
+            <Route path="/" element={<HomeScreen />} />
+            {!authContext.isUserLoggedIn && (
+              <Route path="/sign-in" element={<SignIn />} />
+            )}
+            {!authContext.isUserLoggedIn && (
+              <Route path="/sign-up" element={<SignUp />} />
+            )}
+            <Route path="/reset-password" element={<Reset />} />
+            <Route path="/forgot-password" element={<ForgotPassword />} />
+            <Route path="/our-team" element={<OurTeam />} />
+            <Route path="/about" element={<Aboutus />} />
+            <Route path="/popup" element={<Popup />} />
+            <Route path="/verify" element={<Verify />} />
+            <Route path="/events/:title" element={<Events />} />
+            {authContext.isUserLoggedIn && <Route path="/user-dashboard" element={<UserDashboard />} />}
 
-        </Routes>
-      </div>
-      {errorMade && (
-        <ErrorModel
-          title={errorMade.title}
-          message={errorMade.message}
-          onErrorClick={onErrorMadeHandle}
-        />
-      )}
-	  </GoogleReCaptchaProvider>
+            <Route path="/feedback" element={<Feedback />} />
+            {/* <Route path="/confirmedmail" element={<Confirmedmail/>}/> */}
+
+          </Routes>
+        </div>
+        {errorMade && (
+          <ErrorModel
+            title={errorMade.title}
+            message={errorMade.message}
+            onErrorClick={onErrorMadeHandle}
+          />
+        )}
+      </GoogleReCaptchaProvider>
     </>
   );
 }
