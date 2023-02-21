@@ -87,10 +87,11 @@ const Signup = () => {
     setDivTwo(false);
   };
 
-  const PostData = useCallback(async (e) => {
-  
+  const PostData = async (e) => {
+    console.log("col", collegeName);
+    
     if (!executeRecaptcha) {
-      console.log('Execute recaptcha not yet available');
+      // console.log('Execute recaptcha not yet available');
       return;
     }
 
@@ -109,7 +110,7 @@ const Signup = () => {
       setTimeout(() => {
         setFieldErr(null);
       }, 3000);
-    //  return;
+     return;
     }
     if (!email.trim().includes("@")) {
       setMailErr("Invalid mail!");
@@ -145,12 +146,12 @@ const Signup = () => {
       email: email,
       password: password,
       phone: Number(phone),
-      // referral: referral,
       branch: branch,
       collegeName: collegeName,
       dob: dob,
       reCaptchaToken: token
     };
+    console.log("efdgs",user);
     setIsLoading(true);
     await axios
       .post(`${baseUrl}/auth/sign-up`, user)
@@ -177,10 +178,10 @@ const Signup = () => {
       })
       .catch((err) => {
         setIsLoading(false);
-        console.log(err);
+        console.log(err.response.data);
         return;
       });
-  }, [executeRecaptcha]);
+  };
 
   return (
     <>
@@ -205,7 +206,7 @@ const Signup = () => {
               <h1 className={styles.signup__title}>Hi {stringArray[0]}!</h1>
               {{ fieldErr } && <p style={{ color: "red" }}>{fieldErr}</p>}
               <label htmlFor="phone" className={styles.signup__label}>
-                Phone
+                Whatsapp Number
               </label>
               {phoneErr && <p style={{ color: "red" }}>{phoneErr}</p>}
               <input
