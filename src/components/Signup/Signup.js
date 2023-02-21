@@ -1,19 +1,22 @@
-import { useState } from "react";
+import { useState, useCallback } from "react";
 import styles from "./Signup.module.css";
 import axios from "axios";
 import logo from "../../images/techFEST '23.webp";
 import { baseUrl } from "../../API/api";
 import { Link, useNavigate } from "react-router-dom";
 import ErrorModel from "../../components/ErrorPopup/ErrorModel";
-import Loader from "../../components/Loader/Loader.js";
+import Loader from '../../components/Loader/Loader.js';
+import {useGoogleReCaptcha} from 'react-google-recaptcha-v3';
 
 const Signup = () => {
+
+  const { executeRecaptcha } = useGoogleReCaptcha();
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [cPassword, setCPassword] = useState("");
   const [phone, setPhone] = useState("");
-  const [collegeName, setCollegeName] = useState();
+  const [collegeName, setCollegeName] = useState("");
   const [dob, setDob] = useState();
   const [branch, setBranch] = useState("0");
   const [confirm_err, setConfirmErr] = useState(null);
@@ -84,7 +87,14 @@ const Signup = () => {
     setDivTwo(false);
   };
 
-  const PostData = async (e) => {
+  const PostData = useCallback(async (e) => {
+  
+    if (!executeRecaptcha) {
+      console.log('Execute recaptcha not yet available');
+      return;
+    }
+
+    const token = await executeRecaptcha('signUp');
     e.preventDefault();
     if (
       email.trim().length === 0 ||
@@ -99,7 +109,7 @@ const Signup = () => {
       setTimeout(() => {
         setFieldErr(null);
       }, 3000);
-      return;
+    //  return;
     }
     if (!email.trim().includes("@")) {
       setMailErr("Invalid mail!");
@@ -139,6 +149,7 @@ const Signup = () => {
       branch: branch,
       collegeName: collegeName,
       dob: dob,
+      reCaptchaToken: token
     };
     setIsLoading(true);
     await axios
@@ -169,7 +180,7 @@ const Signup = () => {
         console.log(err);
         return;
       });
-  };
+  }, [executeRecaptcha]);
 
   return (
     <>
@@ -307,7 +318,7 @@ const Signup = () => {
                 name="collegeName"
                 placeholder="Enter your college name"
                 value={collegeName}
-                onChange={(e) => setCollegeName(e.target.value)}
+                onChange={(e) => setCollegeName(e.value)}
                 required
                 autoComplete="off"
               />
