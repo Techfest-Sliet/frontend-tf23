@@ -16,7 +16,7 @@ const Signup = () => {
   const [password, setPassword] = useState("");
   const [cPassword, setCPassword] = useState("");
   const [phone, setPhone] = useState("");
-  const [collegeName, setCollegeName] = useState();
+  const [collegeName, setCollegeName] = useState("");
   const [dob, setDob] = useState();
   const [referral, setReferral] = useState("");
   const [branch, setBranch] = useState("0");
@@ -94,7 +94,7 @@ const Signup = () => {
       return;
     }
 
-    const token = await executeRecaptcha('yourAction');
+    const token = await executeRecaptcha('signUp');
     e.preventDefault();
     if (
       email.trim().length === 0 ||
@@ -109,7 +109,7 @@ const Signup = () => {
       setTimeout(() => {
         setFieldErr(null);
       }, 3000);
-      return;
+    //  return;
     }
     if (!email.trim().includes("@")) {
       setMailErr("Invalid mail!");
@@ -318,7 +318,7 @@ const Signup = () => {
                 name="collegeName"
                 placeholder="Enter your college name"
                 value={collegeName}
-                onChange={(e) => setCollegeName(e.target.value)}
+                onChange={(e) => setCollegeName(e.value)}
                 required
                 autoComplete='off'
               /> 
