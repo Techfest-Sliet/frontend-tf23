@@ -16,9 +16,8 @@ const Signup = () => {
   const [password, setPassword] = useState("");
   const [cPassword, setCPassword] = useState("");
   const [phone, setPhone] = useState("");
-  const [collegeName, setCollegeName] = useState();
+  const [collegeName, setCollegeName] = useState("");
   const [dob, setDob] = useState();
-  const [referral, setReferral] = useState("");
   const [branch, setBranch] = useState("0");
   const [confirm_err, setConfirmErr] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
@@ -31,6 +30,7 @@ const Signup = () => {
   const [divOne, setDivOne] = useState(true);
   const [divTwo, setDivTwo] = useState(false);
   const [errorMade, setErrorMade] = useState();
+
 
   const onErrorMadeHandle = () => {
     setErrorMade(null);
@@ -87,29 +87,30 @@ const Signup = () => {
     setDivTwo(false);
   };
 
-  const PostData = useCallback(async (e) => {
-  
+  const PostData = async (e) => {
+    console.log("col", collegeName);
+    
     if (!executeRecaptcha) {
-      console.log('Execute recaptcha not yet available');
+      // console.log('Execute recaptcha not yet available');
       return;
     }
 
-    const token = await executeRecaptcha('yourAction');
+    const token = await executeRecaptcha('signUp');
     e.preventDefault();
     if (
       email.trim().length === 0 ||
       password.trim().length === 0 ||
       name.trim().length === 0 ||
       cPassword.trim().length === 0 ||
-      phone.trim().length === 0 || 
-      collegeName.trim().length === 0 || 
+      phone.trim().length === 0 ||
+      collegeName.trim().length === 0 ||
       branch.valueOf === 0
     ) {
       setFieldErr("Field should not be empty");
       setTimeout(() => {
         setFieldErr(null);
       }, 3000);
-      return;
+     return;
     }
     if (!email.trim().includes("@")) {
       setMailErr("Invalid mail!");
@@ -145,12 +146,12 @@ const Signup = () => {
       email: email,
       password: password,
       phone: Number(phone),
-      // referral: referral,
       branch: branch,
       collegeName: collegeName,
       dob: dob,
       reCaptchaToken: token
     };
+    console.log("efdgs",user);
     setIsLoading(true);
     await axios
       .post(`${baseUrl}/auth/sign-up`, user)
@@ -177,14 +178,14 @@ const Signup = () => {
       })
       .catch((err) => {
         setIsLoading(false);
-        console.log(err);
+        console.log(err.response.data);
         return;
       });
-  }, [executeRecaptcha]);
+  };
 
   return (
     <>
-      {isLoading && <Loader/>}
+      {isLoading && <Loader />}
       {errorMade && (
         <ErrorModel
           title={errorMade.title}
@@ -205,7 +206,7 @@ const Signup = () => {
               <h1 className={styles.signup__title}>Hi {stringArray[0]}!</h1>
               {{ fieldErr } && <p style={{ color: "red" }}>{fieldErr}</p>}
               <label htmlFor="phone" className={styles.signup__label}>
-                Phone
+                Whatsapp Number
               </label>
               {phoneErr && <p style={{ color: "red" }}>{phoneErr}</p>}
               <input
@@ -221,7 +222,7 @@ const Signup = () => {
               {branchErr && <p style={{ color: "red" }}>{branchErr}</p>}
               <select
                 className={styles.signup__select}
-                sx={{height:"10px"}}
+                sx={{ height: "10px" }}
                 onChange={(e) => setBranch(e.target.value)}
                 id="branch"
                 name="branch"
@@ -309,7 +310,7 @@ const Signup = () => {
                   Transportation Engineering
                 </option>
               </select>
-               <label htmlFor="collegeName" className={styles.signup__label}>
+              <label htmlFor="collegeName" className={styles.signup__label}>
                 College Name
               </label>
               <input
@@ -320,8 +321,8 @@ const Signup = () => {
                 value={collegeName}
                 onChange={(e) => setCollegeName(e.target.value)}
                 required
-                autoComplete='off'
-              /> 
+                autoComplete="off"
+              />
               <label htmlFor="dob" className={styles.signup__label}>
                 Date of Birth
               </label>
@@ -333,7 +334,7 @@ const Signup = () => {
                 value={dob}
                 onChange={(e) => setDob(e.target.value)}
                 required
-                autoComplete='off'
+                autoComplete="off"
               />
 
               <button
@@ -369,7 +370,7 @@ const Signup = () => {
                 value={name}
                 onChange={(e) => setName(e.target.value)}
                 required
-                autoComplete='off'
+                autoComplete="off"
               />
               <label htmlFor="email" className={styles.signup__label}>
                 E-mail
@@ -383,7 +384,7 @@ const Signup = () => {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 required
-                autoComplete='off'
+                autoComplete="off"
               />
               <label htmlFor="password" className={styles.signup__label}>
                 Password
@@ -395,7 +396,7 @@ const Signup = () => {
                 onChange={(e) => setPassword(e.target.value)}
                 type="password"
                 required
-                autoComplete='off'
+                autoComplete="off"
               />
               <label htmlFor="cpassword" className={styles.signup__label}>
                 Confirm Password
@@ -407,7 +408,7 @@ const Signup = () => {
                 variant="standard"
                 onChange={(e) => handleConfirm(e.target.value)}
                 type="password"
-                autoComplete='off'
+                autoComplete="off"
               />
               <button
                 className={styles.signup__button}
@@ -415,7 +416,7 @@ const Signup = () => {
                 type="button"
                 onClick={showDivTwo}
                 disabled={isLoading}
-                autoComplete='off'
+                autoComplete="off"
               >
                 Next
               </button>

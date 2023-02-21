@@ -33,11 +33,10 @@ import Verify from './components/verify/verify';
 import Popup from './components/Popup/Popup.js';
 import Events from './components/domain/OneCard.jsx';
 import ErrorModel from './components/ErrorPopup/ErrorModel';
-import Visitor from './components/visitors/visitors.js';
 import Feedback from "./components/Feedback/feedback";
 import Date from "./components/Date/Date"
 import Datehorizontal from "./components/Datehorizontal/Datehorizontal"
-// import Confirmedmail from "./components/cofirmedmail/confirmedmail";
+
 
 function App() {
   const authContext = useContext(AuthContext);
