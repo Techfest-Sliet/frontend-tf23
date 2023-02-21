@@ -6,7 +6,6 @@ import { baseUrl } from "../../API/api";
 import { Link, useNavigate } from "react-router-dom";
 import ErrorModel from "../../components/ErrorPopup/ErrorModel";
 import Loader from "../../components/Loader/Loader.js";
-import ReCAPTCHA from "react-google-recaptcha";
 
 const Signup = () => {
   const [name, setName] = useState("");
@@ -16,7 +15,6 @@ const Signup = () => {
   const [phone, setPhone] = useState("");
   const [collegeName, setCollegeName] = useState();
   const [dob, setDob] = useState();
-  const [referral, setReferral] = useState("");
   const [branch, setBranch] = useState("0");
   const [confirm_err, setConfirmErr] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
