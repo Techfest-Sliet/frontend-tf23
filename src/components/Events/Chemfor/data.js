@@ -69,7 +69,7 @@ export const datasOfEvent = [
         }]
     },
     {
-        nameOfEvent: "Chem-Fothon",
+        nameOfEvent: "ChemFo-Thon",
         desc: "When Technology covers in it all, the AI-ML for accessing all information, the bots for traverse and transport, then why not use it for spark in agriculture. Bring it in to the event your revolutionary ideas and win worth cash prizes.",
         register: (<Link to={"/underConstruction"} rel='noopener noreferrer' href='https://www.wikipedia.com/' style={{ textDecoration: "none", color: "white", fontFamily: "productSans" }}>Register Now</Link>),
         schedule: (<a rel='noopener noreferrer' target='_blank' href='https://drive.google.com/file/d/1jgkkm9NGlSnMgv-m8BANytuuwxGmm24k/view?usp=sharing' style={{ textDecoration: "none", color: "white", fontFamily: "productSans" }}>Problem Statement</a>),
@@ -93,7 +93,7 @@ export const datasOfEvent = [
         ]
     },
     {
-        nameOfEvent: "Techno-Mind",
+        nameOfEvent: "Techno Food Mind",
         desc: "All day hectic and running life is what everybody's experiencing today. Isn't it? Design a machine that can ease up a basic yet important daily process-Cooking. Do brainstorming, participate in our event and win worthy cash prizes.",
         register: (<Link to={"/underConstruction"} rel='noopener noreferrer's href='https://www.wikipedia.com/' style={{ textDecoration: "none", color: "white", fontFamily: "productSans" }}>Register Now</Link>),
         schedule: (<a rel='noopener noreferrer's target='_blank' href='https://drive.google.com/file/d/1qqwYO9H-lPb_CBCH0jb-7Bd4fz3_ntfa/view?usp=sharing' style={{ textDecoration: "none", color: "white", fontFamily: "productSans" }}>Problem Statement</a>),
