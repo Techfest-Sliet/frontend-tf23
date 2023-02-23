@@ -1,12 +1,16 @@
+ import React from "react";
+import {useState} from "react";
 import "./merchandise.css";
-// import "./merchandise12"
-// import ScriptTag form "react-script-tag";
-// import ScriptTag from "react-script-tag";
 import logo from "../images/techFEST23.webp";
 import Icon from "../images/iconizer-cart.svg";
-import tshirt from "../images/imgdemo.png";
-import smalltshirt from "../images/imgonline-com-ua-ReplaceColor-qTiQtg5rZvbnZEiJ-removebg-preview.png";
-export default function merchandise() {
+ import { data } from "./data";
+//import smalltshirt from "../images/imgonline-com-ua-ReplaceColor-qTiQtg5rZvbnZEiJ-removebg-preview.png";
+ function Merchandise() {
+  const  [product,setProduct ]= useState(data);
+   const [value,setValue]=useState(0);
+    console.log(product[value]);
+    const { mainImage } = product[value];
+
   return (
     <>
       <div className="merch_background">
@@ -24,24 +28,20 @@ export default function merchandise() {
             </div>
           </div>
           <div className="merch_mid">
+   
             <div className="mid_left">
+          
               <div className="image_container">
-                {" "}
-                <img src={tshirt} alt="" className="merch_tshirt" />
+          
+                <img src={mainImage} alt="" className="merch_tshirt" />
               </div>
               <div className="four_merch_box">
-                <div className="small_image_container">
-                  <img src={tshirt} className="bigmerchimg" alt="" />
+              {product.map((item,index)=>(
+                <div className="small_image_container" key={item.id}    onClick={() => setValue(index)}>
+                  <img src={item.thumbnail} className="bigmerchimg" alt="" />
                 </div>
-                <div className="small_image_container">
-                  <img src={smalltshirt} className="bigmerchimg" alt="" />
-                </div>
-                <div className="small_image_container">
-                  <img src={tshirt} className="bigmerchimg" alt="" />
-                </div>
-                <div className="small_image_container">
-                  <img src={smalltshirt} className="bigmerchimg" alt="" />
-                </div>
+  
+                   ))}
               </div>
             </div>
             <div className="mid_mid">
@@ -136,3 +136,4 @@ export default function merchandise() {
     </>
   );
 }
+export default Merchandise;
