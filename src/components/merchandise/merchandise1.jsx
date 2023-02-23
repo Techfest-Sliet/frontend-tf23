@@ -6,9 +6,9 @@ import Icon from "../images/iconizer-cart.svg";
  import { data } from "./data";
 //import smalltshirt from "../images/imgonline-com-ua-ReplaceColor-qTiQtg5rZvbnZEiJ-removebg-preview.png";
  function Merchandise() {
-  const  [product,setProduct ]= useState(data);
+  const  [product]= useState(data);
+  
    const [value,setValue]=useState(0);
-    console.log(product[value]);
     const { mainImage } = product[value];
 
   return (
