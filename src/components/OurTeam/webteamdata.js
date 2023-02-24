@@ -30,14 +30,14 @@ const WebDetails = [
     }
     
     ,
-    {
-      id: 4,
-      name:"Suhani",
-      image:process.env.PUBLIC_URL + "core-team-images/11.jpg",
-      position:"Frontend",
-      linkedin:"https://www.linkedin.com/in/suhani-kapasiya-5248441aa/"
-    }
-    ,
+    // {
+    //   id: 4,
+    //   name:"Suhani",
+    //   image:process.env.PUBLIC_URL + "core-team-images/11.jpg",
+    //   position:"Frontend",
+    //   linkedin:"https://www.linkedin.com/in/suhani-kapasiya-5248441aa/"
+    // }
+    // ,
     
     {
       id: 5,

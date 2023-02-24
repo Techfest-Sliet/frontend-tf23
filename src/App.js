@@ -36,7 +36,8 @@ import Events from './components/domain/OneCard.jsx';
 import ErrorModel from './components/ErrorPopup/ErrorModel';
 import Feedback from "./components/Feedback/feedback";
 import Date from "./components/Date/Date"
-import Datehorizontal from "./components/Datehorizontal/Datehorizontal"
+import Datehorizontal from "./components/Datehorizontal/Datehorizontal";
+import Merch from './components/merchandise/merchandise1.jsx';
 
 
 function App() {
@@ -133,6 +134,7 @@ function App() {
             <Route path="/popup" element={<Popup />} />
             <Route path="/verify" element={<Verify />} />
             <Route path="/events/:title" element={<Events />} />
+            <Route path="/merchandise" element={<Merch />} />
             {authContext.isUserLoggedIn && <Route path="/user-dashboard" element={<UserDashboard />} />}
 
             <Route path="/feedback" element={<Feedback />} />
