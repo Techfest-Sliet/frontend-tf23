@@ -8,7 +8,7 @@ export const datasOfEvent = [
         schedule: (<a target='_blank' href='https://drive.google.com/file/d/1mXFmR90roGkS82HGJxCWfVnKx4QpaegK/view?usp=sharing' rel='noopener noreferrer' to={"/underConstruction"}
         style={{ textDecoration: "none", color: "white", fontFamily: "productSans" }}>Problem Statement</a>),
         prizeMoney: "₹ 10,000",
-        dateBefore: "11/03",
+        dateBefore: "22/03",
         coor: [
             {
                 img: require('../../dummy.jpg'),
@@ -30,7 +30,7 @@ export const datasOfEvent = [
         register: (<Link to={"/underConstruction"} rel='noopener noreferrer' href='https://www.wikipedia.com/' style={{ textDecoration: "none", color: "white", fontFamily: "productSans" }}>Register Now</Link>),
         schedule: (<a  rel='noopener noreferrer' target='_blank' href='https://drive.google.com/file/d/1HWJ-2kvqGYgwnxt4K4ukXvJafv_7mb1r/view?usp=sharing' style={{ textDecoration: "none", color: "white", fontFamily: "productSans" }}>Problem Statement</a>),
         prizeMoney: "₹ 8,000",
-        dateBefore: "15/03",
+        dateBefore: "22/03",
         coor: [{
             img: require('../../dummy.jpg'),
             nameOfEventCoordinator: "Mayank Kumar",
@@ -52,7 +52,7 @@ export const datasOfEvent = [
         register: (<Link to={"/underConstruction"} rel='noopener noreferrer' href='https://www.wikipedia.com/' style={{ textDecoration: "none", color: "white", fontFamily: "productSans" }}>Register Now</Link>),
         schedule: (<a  rel='noopener noreferrer' target='_blank' href='https://drive.google.com/file/d/15gp21DLb5mp34AThNr-JB9U58SY454nV/view?usp=sharing' style={{ textDecoration: "none", color: "white", fontFamily: "productSans" }}>Problem Statement</a>),
         prizeMoney: "₹ 8,000",
-        dateBefore: "15/03",
+        dateBefore: "22/03",
         coor: [{
             img: require('../../dummy.jpg'),
             nameOfEventCoordinator: "Mayank Kumar",
@@ -74,7 +74,7 @@ export const datasOfEvent = [
         register: (<Link to={"/underConstruction"} rel='noopener noreferrer' href='https://www.wikipedia.com/' style={{ textDecoration: "none", color: "white", fontFamily: "productSans" }}>Register Now</Link>),
         schedule: (<a rel='noopener noreferrer' target='_blank' href='https://drive.google.com/file/d/1jgkkm9NGlSnMgv-m8BANytuuwxGmm24k/view?usp=sharing' style={{ textDecoration: "none", color: "white", fontFamily: "productSans" }}>Problem Statement</a>),
         prizeMoney: "₹ 8,000",
-        dateBefore: "15/03",
+        dateBefore: "22/03",
         coor: [
             {
                 img: require('../../dummy.jpg'),
@@ -98,7 +98,7 @@ export const datasOfEvent = [
         register: (<Link to={"/underConstruction"} rel='noopener noreferrer's href='https://www.wikipedia.com/' style={{ textDecoration: "none", color: "white", fontFamily: "productSans" }}>Register Now</Link>),
         schedule: (<a rel='noopener noreferrer's target='_blank' href='https://drive.google.com/file/d/1qqwYO9H-lPb_CBCH0jb-7Bd4fz3_ntfa/view?usp=sharing' style={{ textDecoration: "none", color: "white", fontFamily: "productSans" }}>Problem Statement</a>),
         prizeMoney: "₹ 14,000",
-        dateBefore: "15/03",
+        dateBefore: "22/03",
         coor: [{
             img: require('../../dummy.jpg'),
             nameOfEventCoordinator: "Aditya Kumar",
@@ -120,7 +120,7 @@ export const datasOfEvent = [
         register: (<Link to={"/underConstruction"} rel='noopener noreferrer's href='https://www.wikipedia.com/' style={{ textDecoration: "none", color: "white", fontFamily: "productSans" }}>Register Now</Link>),
         schedule: (<a rel='noopener noreferrer's target='_blank' href='https://drive.google.com/file/d/1mbIl2uO3M6XZd7RMM9kfvzylzhJeLnVo/view?usp=sharing' style={{ textDecoration: "none", color: "white", fontFamily: "productSans" }}>Problem Statement</a>),
         prizeMoney: "₹ 15,000",
-        dateBefore: "15/03",
+        dateBefore: "22/03",
         coor: [{
             img: require('../../dummy.jpg'),
             nameOfEventCoordinator: "Anmol Kumar",

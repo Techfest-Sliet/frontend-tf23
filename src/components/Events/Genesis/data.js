@@ -7,7 +7,7 @@ export const datasOfEvent = [
         register: (<Link to={"/underConstruction"} rel='noopener noreferrer' href='https://www.google.com/' style={{ textDecoration: "none", color: "white" }}>Register Now</Link>),
         schedule: (<a rel='noopener noreferrer' target='_blank' href='https://drive.google.com/file/d/1ixCo9NoY17-jEZ6LnoMfU5s3Levw4rO7/view?usp=sharing' style={{ textDecoration: "none", color: "white" }}>Problem Statement</a>),
         prizeMoney: "₹ 8,000",
-        dateBefore: "11/03",
+        dateBefore: "22/03",
         coor: [{
             img: require('../../dummy.jpg'),
             nameOfEventCoordinator: "Shubham Paliwal",
@@ -22,7 +22,7 @@ export const datasOfEvent = [
         register: (<Link to={"/underConstruction"} rel='noopener noreferrer' style={{ textDecoration: "none", color: "white" }}>Register Now</Link>),
         schedule: (<a rel='noopener noreferrer' target='_blank' href='https://drive.google.com/file/d/1t2YjsGJCfLb7ayiNE1DDNCPaWNuSBW8Y/view?usp=share_link ' style={{ textDecoration: "none", color: "white" }}>Problem Statement</a>),
         prizeMoney: "₹ 15,000",
-        dateBefore: "15/03",
+        dateBefore: "22/03",
         coor: [{
             img: require('../../dummy.jpg'),
             nameOfEventCoordinator: "Nishchay Sharma",
@@ -36,7 +36,7 @@ export const datasOfEvent = [
         register: (<Link to={"/underConstruction"} rel='noopener noreferrer' href='https://www.google.com/' style={{ textDecoration: "none", color: "white" }}>Register Now</Link>),
         schedule: (<a rel='noopener noreferrer' target='_blank' href='https://drive.google.com/file/d/1Ac38GvKaTFvgvcmH8DEBSl2PTUX7a1ih/view?usp=sharing' style={{ textDecoration: "none", color: "white" }}>Problem Statement</a>),
         prizeMoney: "₹ 8,000",
-        dateBefore: "1/03",
+        dateBefore: "22/03",
         coor: [{
             img: require('../../dummy.jpg'),
             nameOfEventCoordinator: "Aditya Kumar",
