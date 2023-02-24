@@ -4,7 +4,6 @@
     background: radial-gradient(60% 42% at 50% 115%, #01590F -0.99%, #01590F -1.98%, rgb(0 0 0 / 0%) 100%), radial-gradient(51% 27% at 50% -4%, #01590F -0.99%, #01590F -0.98%, rgb(0 0 0 / 0%) 100%), radial-gradient(74% 42% at 116% 52%, #01590F -0.99%, #01590F -1.98%, rgb(0 0 0 / 0%) 75%), radial-gradient(81% 27% at -16% 47%, #01590F -0.99%, #01590F -0.98%, rgb(0 0 0) 75%);
     width: 100vw;
     height: 100vh;
-
 }
 
 select[name="size"] {
@@ -43,8 +42,10 @@ p.merchcolrrr {
 }
 
 img.merch_tshirt {
-    width: 66%;
-    height: 42vh;
+    /* width: 66%; */
+    /* height: 42vh; */
+    object-fit: contain;
+    overflow: hidden;
 }
 
 .image_container {
@@ -58,6 +59,7 @@ img.merch_tshirt {
     flex-direction: column;
     flex-wrap: nowrap;
     justify-content: center;
+    height: 100vh;
 }
 
 .cartvalue {
@@ -199,6 +201,8 @@ label.lable_merch {
     margin-right: 7%;
     justify-content: space-around;
     flex-direction: row;
+    object-fit: contain;
+    overflow: hidden;
 }
 
 p.pick {
@@ -293,7 +297,10 @@ input.inpmai {
     text-align: left;
 }
 
-
+.merch_buynow > a {
+    color: white;
+    text-decoration: none;
+}
 
 .swiper-button-next {
     color: #fff;

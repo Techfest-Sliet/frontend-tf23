@@ -19,13 +19,13 @@ import Icon from "../images/iconizer-cart.svg";
         </div>
         <div className="tf_content">
           <div className="merch_top">
-            <div className="merch_text">
+            {/* <div className="merch_text"> */}
               <h2 className="be_a_prt">be a part !</h2>
-            </div>
-            <div className="cart_icon">
+            {/* </div> */}
+            {/* <div className="cart_icon">
               <img src={Icon} alt="" className="merch_icon" />
               <p className="cartvalue">2</p>
-            </div>
+            </div> */}
           </div>
           <div className="merch_mid">
    
@@ -47,11 +47,11 @@ import Icon from "../images/iconizer-cart.svg";
             <div className="mid_mid">
               <div className=" merch_mimid_top">
                 <p className="name_of_tshirt">techFEST ‘23 official T-shirt</p>
-                <p className="merchprice">₹ 350</p>
-                <p className="hurry_itemleft">Hurry ! Only 2 left in Stock</p>
+                <p className="merchprice">₹ 349</p>
+                {/* <p className="hurry_itemleft">Hurry ! Only 2 left in Stock</p> */}
               </div>
-              <div className="merch_sizechart">
-                {/* <p class="pick">Select Size :</p>
+              {/* <div className="merch_sizechart">
+                <p class="pick">Select Size :</p>
                 <tr class="sizes">
                   <td class="size">
                     <button className="btn_size-mer">s</button>
@@ -69,7 +69,7 @@ import Icon from "../images/iconizer-cart.svg";
                     <button className="btn_size-mer">xxl</button>
                   </td>
                   
-                </tr> */}
+                </tr>
                 <label className="select_size_mer"> Select Size:</label>
                 <select name="size">
                   <option value="s">S</option>
@@ -78,15 +78,15 @@ import Icon from "../images/iconizer-cart.svg";
                   <option value="xl">XL</option>
                   <option value="xxl">XXL</option>
                 </select>
-              </div>
+              </div> */}
               <div className="mid_butt">
-                <button className="merch_buynow"> Buy Now</button>
+                <button className="merch_buynow"><a href="https://forms.gle/pfYjxu6zbz61QTqR8">Buy Now</a></button>
               </div>
-              <div className="mid_butt">
+              {/* <div className="mid_butt">
                 <button className="merch_add2crt"> Add to Cart</button>
-              </div>
+              </div> */}
             </div>
-            <div className="mid_right">
+            {/* <div className="mid_right">
               <div className="merchant_mid_table">
                 <form className="merch_box_form">
                   <div className="form-group">
@@ -124,13 +124,13 @@ import Icon from "../images/iconizer-cart.svg";
                   </div>
                 </form>
               </div>
-            </div>
+            </div> */}
           </div>
-          <div className="merch_bottom">
+          {/* <div className="merch_bottom">
             <a href="" className="btmlast">
               more items &gt;
             </a>
-          </div>
+          </div> */}
         </div>
       </div>
     </>
