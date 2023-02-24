@@ -79,7 +79,7 @@ import "./merchandise.css";
                 </select>
               </div> */}
               <div className="mid_butt">
-                <button className="merch_buynow"><a href="https://forms.gle/pfYjxu6zbz61QTqR8">Buy Now</a></button>
+                <button className="merch_buynow"><a target="_blank" rel="noreferrer" href="https://forms.gle/pfYjxu6zbz61QTqR8">Buy Now</a></button>
               </div>
               {/* <div className="mid_butt">
                 <button className="merch_add2crt"> Add to Cart</button>
