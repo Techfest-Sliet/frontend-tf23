@@ -51,7 +51,7 @@ const HomePage = () => {
               <Link
                 to={authContext.isUserLoggedIn ? "/user-dashboard" : "/sign-up"}
               >
-                {authContext.isUserLoggedIn ? "User Dashboard" : "Sign up Now"}
+                {authContext.isUserLoggedIn ? "Dashboard" : "Sign up Now"}
               </Link>
             </Button>
           </div>

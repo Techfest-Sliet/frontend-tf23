@@ -1,10 +1,17 @@
-import React from "react";
+import React, {useContext} from "react";
 import styled from "styled-components";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { FaBars } from "react-icons/fa";
 import Menu from "./Menu";
 import logo from "./logo.png";
+import AuthContext from '../../auth/authContext';
 const Navbar1 = ({ toggleDrawer, routes }) => {
+  const authContext = useContext(AuthContext);
+  const navigate = useNavigate();
+  const logOutHandler = async () => {
+    authContext.logout();
+    navigate("/");
+  };
   return (
     <SNavbar>
       <NavContainer>
@@ -21,11 +28,21 @@ const Navbar1 = ({ toggleDrawer, routes }) => {
               }
               return (
                 <NavRoute to={route.link} key={route.name}>
+                    
                   {route.name}
                 </NavRoute>
               );
             })}
-            <LoginButton>Login</LoginButton>
+            {!authContext.isUserLoggedIn && (
+              <Link to="/sign-in" className="signInButton">
+                <LoginButton>Login</LoginButton>
+              </Link>
+            )}
+            {authContext.isUserLoggedIn && (
+              <Link to="/" className="signInButton" onClick={logOutHandler}>
+                <LoginButton>Logout</LoginButton>
+              </Link>
+            )}
           </NavRoutes>
         </RightNav>
       </NavContainer>

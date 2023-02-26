@@ -12,6 +12,10 @@ export const routes = [
       link: "/about"
     },
     {
+      name: "Dashboard",
+      link: "/user-dashboard"
+    },
+    {
       name: "FAQ",
       link: "/faq"
     },
@@ -26,7 +30,7 @@ export const routes = [
       subRoutes: [
         {
           name: "Arambh",
-          link: "/events/plexus",
+          link: "/events/Aarambh",
         },
         {
           name: " Plexus",
