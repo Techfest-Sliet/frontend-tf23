@@ -7,6 +7,7 @@ import { Link, useNavigate } from "react-router-dom";
 import ErrorModel from "../../components/ErrorPopup/ErrorModel";
 import Loader from '../../components/Loader/Loader.js';
 import {useGoogleReCaptcha} from 'react-google-recaptcha-v3';
+import { color } from "@mui/system";
 
 const Signup = () => {
 
@@ -195,6 +196,13 @@ const Signup = () => {
       )}
 
       <div className={styles.signup__content}>
+      <div className={styles.signup_linkToHome}>
+          <button className={styles.signup_btnToHome}>
+            <Link to={"/"} style={{ color: "black" }}>
+              Home </Link>
+          </button>
+        </div>
+        
         <div>
           <img src={logo} alt="techFest'23" className={styles.signup__logo} />
         </div>

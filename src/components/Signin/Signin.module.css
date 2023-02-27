@@ -21,6 +21,23 @@ a {
   color: #fff;
 }
 
+.signin_linkToHome {
+  position: absolute;
+  width: 83%;
+  top: 3em;
+}
+
+.signin_btnToHome {
+  margin: 0.7em 0;
+  font-size: 1.2em;
+  padding: 0.4em 1.5em;
+  border-radius: 13px;
+  /* background: linear-gradient(to right, green, rgb(17, 39, 7)); */
+  border: none;
+  color: black;
+  cursor: pointer;
+}
+
 .signin__content {
   position: relative;
   width: 100vw;
@@ -336,6 +353,14 @@ select option:hover {
   body {
     font-size: 9px;
   }
+  .signin_linkToHome {
+    top: 5em;
+  }
+  .signin_btnToHome {
+    margin: 0.7em 0;
+    font-size: 1.7em;
+    /* padding: 0.6em 1.5em; */
+  }
   .signin__title {
     font-size: 2.5em;
   }
@@ -374,15 +399,24 @@ select option:hover {
   body {
     font-size: 13px;
   }
+  .signin_linkToHome {
+    width: 80%;
+    top: 0em;
+  }
+  .signin_btnToHome {
+    margin: 0.7em 0;
+    font-size: 1.5em;
+    /* padding: 0.6em 1.5em; */
+  }
   .signin__content {
     height: 100%;
-    padding-top: 10%;
-    padding-bottom: 15%;
+    padding-top: 20%;
+    padding-bottom: 35%;
     flex-direction: column;
   }
   .signin__logo {
     width: 85%;
-    margin: 0 auto;
+    margin: 2em auto;
   }
   .signin__page {
     margin-top: 2%;
@@ -399,6 +433,12 @@ select option:hover {
 @media (max-width: 445px) {
   body {
     font-size: 12px;
+  }
+  .signin_linkToHome {
+    top: 1em;
+  }
+  .signin__logo {
+    margin: 3em auto;
   }
   .signin__inputFields > input {
     font-size: 0.8rem;
