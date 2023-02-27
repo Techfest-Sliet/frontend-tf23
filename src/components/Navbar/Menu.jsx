@@ -18,7 +18,7 @@ const Menu = ({ route }) => {
 
 export default Menu;
 const SubRoutesContainer = styled.div`
-   background-color:black;
+  background-color:black;
   position: absolute;
   min-width: 10rem;
   display: flex;
@@ -45,7 +45,6 @@ const SMenu = styled.div`
 
 const MenuButton = styled.div`
   padding: 0.5rem;
-  // border: solid 0.1em #68fe04;
   &:hover {
     transition: 0.3s ease-in;
     color: black;

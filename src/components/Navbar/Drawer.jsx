@@ -1,14 +1,19 @@
-import React from "react";
+import React, {useContext} from "react";
 import styled from "styled-components";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import ExpandMenu from "./ExpandMenu";
-import AuthContext from '../../auth/authContext';
 const Drawer = ({ isOpen, toggleDrawer, routes }) => {
 
   const navRoutes = routes.filter((route) =>{
     return (route.name !== "Dashboard" && route.name !== "Domains");
   } );
 
+  const authContext = useContext(AuthContext);
+  const navigate = useNavigate();
+  const logOutHandler = async () => {
+    authContext.logout();
+    navigate("/");
+  };
   return (
     <>
       {isOpen && <Backdrop onClick={toggleDrawer} />}
@@ -49,7 +54,16 @@ const Drawer = ({ isOpen, toggleDrawer, routes }) => {
                 />;
               }})}
           </NavRoutes>
-          <LoginButton>Login</LoginButton>
+          {!authContext.isUserLoggedIn && (
+              <Link to="/sign-in" className="signInButton">
+                <LoginButton>Login</LoginButton>
+              </Link>
+            )}
+            {authContext.isUserLoggedIn && (
+              <Link to="/" className="signInButton" onClick={logOutHandler}>
+                <LoginButton>Logout</LoginButton>
+              </Link>
+            )}
         </RightNav>
       </SDrawer>
     </>
@@ -101,7 +115,6 @@ const NavRoute = styled(Link)`
   font-size: 1rem;
   padding: 0.5rem;
   &:hover {
-    // border-bottom: solid 0.1em #68fe04;
     color: #68fe04;
     transition: transform 250ms ease-in-out;
   }
