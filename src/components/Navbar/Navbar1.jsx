@@ -4,7 +4,13 @@ import { Link } from "react-router-dom";
 import { FaBars } from "react-icons/fa";
 import Menu from "./Menu";
 import logo from "./logo.png";
+import AuthContext from '../../auth/authContext';
+
 const Navbar1 = ({ toggleDrawer, routes }) => {
+
+  const navRoutes = routes.filter((route) =>{
+    return (route.name !== "Dashboard" && route.name !== "Domains");
+  } );
   return (
     <SNavbar>
       <NavContainer>
@@ -14,17 +20,37 @@ const Navbar1 = ({ toggleDrawer, routes }) => {
 
         <Image src={logo} alt="" />
         <RightNav>
+        
           <NavRoutes>
+            
+            
+              {routes.map((route) => {
+              if(AuthContext.isUserLoggedIn){
+                return (
+                  <NavRoute to={route.link} key={route.name}>
+                    {route.name}
+                  </NavRoute>
+                );
+              } 
+              }
+              
+            )}
+            {
+              navRoutes.map((rout) =>{
+                if(!AuthContext.isUserLoggedIn){
+                console.log(rout);
+                return(
+                <NavRoute to={rout.link} key={rout.name}>
+                      {rout.name}
+              </NavRoute>
+                )
+              }})
+            }
             {routes.map((route) => {
+              
               if (route.subRoutes) {
                 return <Menu route={route} key={route.name} />;
-              }
-              return (
-                <NavRoute to={route.link} key={route.name}>
-                  {route.name}
-                </NavRoute>
-              );
-            })}
+              }})}
             <LoginButton>Login</LoginButton>
           </NavRoutes>
         </RightNav>
@@ -88,9 +114,10 @@ const NavRoute = styled(Link)`
   padding: 0.5rem;
   transition: 0.5s ease;
   &:hover {
-    border-bottom: solid 0.1em #68fe04; 
-    /* transform: scaleX(0);   */
-    transition: transform 250ms ease-in-out;
+    transition: 0.3s ease-in;
+    color: black;
+    border-radius: 10px;
+    background-color: #68fe04;
   }
 `;
 

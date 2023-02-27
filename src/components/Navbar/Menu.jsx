@@ -28,6 +28,7 @@ const SubRoutesContainer = styled.div`
   left: -1rem;
   visibility: hidden;
   opacity: 0;
+  z-index: 1000;
   border-radius: 1rem;
   transition: visibility 0.3s ease-in-out, opacity 0.3s ease-in-out;
 `;
@@ -46,9 +47,9 @@ const MenuButton = styled.div`
   padding: 0.5rem;
   // border: solid 0.1em #68fe04;
   &:hover {
-    color: #68fe04;
-    transition: 0.5s ease;
-    box-shadow: 0px 0px 10px #68fe04;
+    transition: 0.3s ease-in;
+    color: black;
+    background-color: #68fe04;
   }
 `;
 

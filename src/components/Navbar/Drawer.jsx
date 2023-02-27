@@ -2,21 +2,21 @@ import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import ExpandMenu from "./ExpandMenu";
+import AuthContext from '../../auth/authContext';
 const Drawer = ({ isOpen, toggleDrawer, routes }) => {
+
+  const navRoutes = routes.filter((route) =>{
+    return (route.name !== "Dashboard" && route.name !== "Domains");
+  } );
+
   return (
     <>
       {isOpen && <Backdrop onClick={toggleDrawer} />}
       <SDrawer isOpen={isOpen}>
         <RightNav>
           <NavRoutes>
-            {routes.map((route) => {
-              if (route.subRoutes) {
-                return <ExpandMenu 
-                route={route}
-                key={route.name} 
-                onClick={toggleDrawer}
-                />;
-              }
+              {routes.map((route) => {
+                if(AuthContext.isUserLoggedIn){
               return (
                 <NavRoute
                   onClick={toggleDrawer}
@@ -25,8 +25,29 @@ const Drawer = ({ isOpen, toggleDrawer, routes }) => {
                 >
                   {route.name}
                 </NavRoute>
-              );
+              )}
             })}
+            { navRoutes.map((rout) =>{
+                if(!AuthContext.isUserLoggedIn){
+                console.log(rout);
+                return(
+                <NavRoute onClick={toggleDrawer}
+                to={rout.link} 
+                key={rout.name}
+                >
+                {rout.name}
+              </NavRoute>
+                )
+              }})
+            }
+            {routes.map((route) => {
+              if (route.subRoutes) {
+                return <ExpandMenu 
+                route={route}
+                key={route.name} 
+                onClick={toggleDrawer}
+                />;
+              }})}
           </NavRoutes>
           <LoginButton>Login</LoginButton>
         </RightNav>
@@ -70,14 +91,14 @@ const RightNav = styled.div`
 `;
 const NavRoutes = styled.div`
 color: white;
-font-size: 1.3rem;
+font-size: 1rem;
 padding: 0.5rem;
 `;
 const NavRoute = styled(Link)`
   display: flex;
   text-decoration: none;
   color: white;
-  font-size: 1.3rem;
+  font-size: 1rem;
   padding: 0.5rem;
   &:hover {
     // border-bottom: solid 0.1em #68fe04;

@@ -5,6 +5,7 @@ import { useLocation } from "react-router-dom";
 import { Route, Routes } from "react-router";
 // import { Navbar } from "./components/Navbar/Navbar";
 import {Navbar} from "./components/Navbar/Navbar.js"
+import Navigation from './components/Navbar/Navigation';
 import Footer from "./components/Footer/Footer";
 import axios from "axios";
 import SignUp from "./components/Signup/Signup";
@@ -93,11 +94,11 @@ function App() {
         }}
       >
         <div className="App">
-          {location.pathname !== "/sign-up" &&
+          {/* {location.pathname !== "/sign-up" &&
             location.pathname !== "/sign-in" && (
               <Navbar isAuth={isUserLoggedIn} onLogout={logOutHandler} />
-            )}
-            {/* <Navigation /> */}
+            )} */}
+            <Navigation />
           {location.pathname !== "/sign-up" &&
             location.pathname !== "/sign-in" &&
             location.pathname !== "/user-dashboard" && <Footer />}

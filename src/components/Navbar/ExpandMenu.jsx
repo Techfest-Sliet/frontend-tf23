@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { FaAngleDown, FaAngleRight } from "react-icons/fa";
+import AuthContext from '../../auth/authContext';
 
 const ExpandMenu = ({ route }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -33,7 +34,7 @@ const SubRoutesContainer = styled.div`
 const SMenu = styled.div``;
 
 const MenuButton = styled.div`
-  font-size: 1.5rem;
+  font-size: 1rem;
   padding: 0.5rem;
   display: flex;
   align-items: center;
@@ -47,11 +48,11 @@ const SubRoute = styled(Link)`
   text-decoration: none;
   color: white;
   padding: 0.5rem;
-  font-size: 1rem; 
+  font-size: 0.8rem; 
    &:hover {
-    color:  #68fe04;
-    border-bottom: solid 0.1em #68fe04; 
-    transition: transform 250ms ease-in-out;
+    transition: 0.3s ease-in;
+    color: black;
+    background-color: #68fe04;
   }
   
 `;
