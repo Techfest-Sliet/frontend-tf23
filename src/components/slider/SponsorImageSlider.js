@@ -18,10 +18,10 @@ import image17 from '../../assets/sponser_images/Group 33.jpg';
 
 const images = [
   {
-    pic: image1,
+    pic: image16,
   },
   {
-    pic: image2,
+    pic: image14,
   },
   {
     pic: image3,
@@ -57,13 +57,13 @@ const images = [
     pic: image13,
   },
   {
-    pic: image14,
+    pic: image2,
   },
   {
     pic: image15,
   },
   {
-    pic: image16,
+    pic: image1,
   },
   {
     pic: image17,
