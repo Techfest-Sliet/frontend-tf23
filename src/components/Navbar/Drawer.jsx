@@ -1,6 +1,7 @@
 import React, {useContext} from "react";
 import styled from "styled-components";
 import { Link, useNavigate } from "react-router-dom";
+import AuthContext from "../../auth/authContext";
 import ExpandMenu from "./ExpandMenu";
 const Drawer = ({ isOpen, toggleDrawer, routes }) => {
 

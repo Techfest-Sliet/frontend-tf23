@@ -11,6 +11,10 @@ import image10 from '../../assets/sponser_images/Group 26.png';
 import image11 from '../../assets/sponser_images/Group 28.png';
 import image12 from '../../assets/sponser_images/Group 19.png';
 import image13 from '../../assets/sponser_images/Group 29.png';
+import image14 from '../../assets/sponser_images/Group 30.png';
+import image15 from '../../assets/sponser_images/Group 31.jpg';
+import image16 from '../../assets/sponser_images/Group 32.png';
+import image17 from '../../assets/sponser_images/Group 33.jpg';
 
 const images = [
   {
@@ -51,7 +55,19 @@ const images = [
   },
   {
     pic: image13,
-  }
+  },
+  {
+    pic: image14,
+  },
+  {
+    pic: image15,
+  },
+  {
+    pic: image16,
+  },
+  {
+    pic: image17,
+  },
 ];
 
 export default images;

@@ -88,7 +88,6 @@ const Signup = () => {
   };
 
   const PostData = async (e) => {
-    console.log("col", collegeName);
     
     if (!executeRecaptcha) {
       // console.log('Execute recaptcha not yet available');
@@ -103,8 +102,7 @@ const Signup = () => {
       name.trim().length === 0 ||
       cPassword.trim().length === 0 ||
       phone.trim().length === 0 ||
-      collegeName.trim().length === 0 ||
-      branch.valueOf === 0
+      collegeName.trim().length === 0
     ) {
       setFieldErr("Field should not be empty");
       setTimeout(() => {
@@ -119,11 +117,12 @@ const Signup = () => {
       }, 3000);
       return;
     }
-    if (branch.valueOf === 0) {
+    if (branch === '0') {
       setBranchErr("Please choose your branch");
       setTimeout(() => {
         setBranchErr(null);
       }, 3000);
+      return;
     }
 
     if (password.length < 5) {
@@ -133,8 +132,15 @@ const Signup = () => {
       }, 3000);
       return;
     }
-    if (phone.length < 10 && phone.length > 10) {
-      setPhoneErr("Invalid phone number!");
+    if (phone.length < 10) {
+      setPhoneErr('Invalid phone number!');
+      setTimeout(() => {
+        setPhoneErr(null);
+      }, 3000);
+      return;
+    }
+    if (phone.length > 10) {
+      setPhoneErr('Invalid phone number!');
       setTimeout(() => {
         setPhoneErr(null);
       }, 3000);
@@ -151,7 +157,6 @@ const Signup = () => {
       dob: dob,
       reCaptchaToken: token
     };
-    console.log("efdgs",user);
     setIsLoading(true);
     await axios
       .post(`${baseUrl}/auth/sign-up`, user)
@@ -208,7 +213,7 @@ const Signup = () => {
               <label htmlFor="phone" className={styles.signup__label}>
                 Whatsapp Number
               </label>
-              {phoneErr && <p style={{ color: "red" }}>{phoneErr}</p>}
+              {phoneErr && <p style={{ color: "red", fontSize: '1rem' }}>{phoneErr}</p>}
               <input
                 type="number"
                 id="phone"
@@ -276,6 +281,9 @@ const Signup = () => {
                 </option>
                 <option value="Industrial Engineering">
                   Industrial Engineering
+                </option>
+                <option value="Instrumentation and Control Engineering">
+                  Instrumentation and Control Engineering
                 </option>
                 <option value="Marine Engineering">Marine Engineering</option>
                 <option value="Mechanical Engineering">

@@ -212,7 +212,7 @@ function AboutUs() {
             {" "}
             PAST
           </span>{" "}
-          SPONSORS
+          PARTNERS
         </h1>
         <SliderDiv arr={SponsorImageSlider} />
       </div>

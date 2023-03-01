@@ -5,22 +5,17 @@ import { FaBars } from "react-icons/fa";
 import Menu from "./Menu";
 import logo from "./logo.png";
 import AuthContext from '../../auth/authContext';
-<<<<<<< HEAD
 
 const Navbar1 = ({ toggleDrawer, routes }) => {
-
+  const authContext = useContext(AuthContext);
   const navRoutes = routes.filter((route) =>{
     return (route.name !== "Dashboard" && route.name !== "Domains");
   } );
-=======
-const Navbar1 = ({ toggleDrawer, routes }) => {
-  const authContext = useContext(AuthContext);
-  const navigate = useNavigate();
-  const logOutHandler = async () => {
-    authContext.logout();
-    navigate("/");
-  };
->>>>>>> 0fb77b97ccbdeedfdc2509fdd525c1ea552dadcf
+    const navigate = useNavigate();
+    const logOutHandler = async () => {
+      authContext.logout();
+      navigate("/");
+    };
   return (
     <SNavbar>
       <NavContainer>
@@ -45,7 +40,7 @@ const Navbar1 = ({ toggleDrawer, routes }) => {
               }
               
             )}
-            {
+            {/* {
               navRoutes.map((rout) =>{
                 if(!AuthContext.isUserLoggedIn){
                 console.log(rout);
@@ -55,15 +50,11 @@ const Navbar1 = ({ toggleDrawer, routes }) => {
               </NavRoute>
                 )
               }})
-            }
+            } */}
             {routes.map((route) => {
               
               if (route.subRoutes) {
                 return <Menu route={route} key={route.name} />;
-<<<<<<< HEAD
-              }})}
-            <LoginButton>Login</LoginButton>
-=======
               }
               return (
                 <NavRoute to={route.link} key={route.name}>
@@ -82,7 +73,6 @@ const Navbar1 = ({ toggleDrawer, routes }) => {
                 <LoginButton>Logout</LoginButton>
               </Link>
             )}
->>>>>>> 0fb77b97ccbdeedfdc2509fdd525c1ea552dadcf
           </NavRoutes>
         </RightNav>
       </NavContainer>

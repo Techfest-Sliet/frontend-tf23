@@ -301,6 +301,7 @@ input.inpmai {
 .merch_buynow > a {
     color: white;
     text-decoration: none;
+    cursor: pointer;
 }
 
 .swiper-button-next {
@@ -311,7 +312,9 @@ input.inpmai {
     position: relative;
     z-index: 2;
 }
-
+.bigmerchimg {
+    cursor: pointer;
+}
 .swiper-button-prev {
     color: #fff;
     opacity: 0.7;

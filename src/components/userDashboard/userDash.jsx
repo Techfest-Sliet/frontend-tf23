@@ -4,12 +4,15 @@ import { baseUrl } from "../../API/api";
 import AuthContext from "../../auth/authContext";
 import "./userDash.css";
 import { Link } from "react-router-dom";
+import Loader from "../Loader/Loader";
 
 const  User_dasbord = () => {
   const authContext = useContext(AuthContext);
   const [user, setUser] = useState(null);
+  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
+    setIsLoading(true);
     axios
       .get(`${baseUrl}/user/getUserById`, {
         headers: {
@@ -18,6 +21,7 @@ const  User_dasbord = () => {
       })
 
       .then((result) => {
+        setIsLoading(false);
         if (
           result.status !== 200 ||
           (result.status !== 201 && result.data.isError)
@@ -39,6 +43,7 @@ const  User_dasbord = () => {
   }, [authContext, authContext.login]);
   return (
     <div className="Dashboard__body">
+      {isLoading && <Loader />}
       <div className="row_justify-content-around" style={{height:"100vh"}}>
         <div className="userdashbord_body">
           <h2 className="user__header">Namaste! {user && user.name}</h2>

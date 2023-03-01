@@ -133,7 +133,7 @@ const HomePage = () => {
         {/* sponsor */}
         <div className="sponsor">
           <h1 id="sponsor" style={{ color: "#74EB76" }}>
-            <span style={{ color: "white", fontFamily: "monumentExtended"  }}>PAST</span> SPONSORS
+            <span style={{ color: "white", fontFamily: "monumentExtended"  }}>PAST</span> PARTNERS
           </h1>
           <SliderDiv arr={SponsorImageSlider} />
         </div>
