@@ -62,9 +62,9 @@ export const datasOfEvent = [
         },
         {
             img: require('../../dummy.jpg'),
-            nameOfEventCoordinator: "Anmol Kumar",
-            phoneNo: (<a href="tel:7462805133" style={{ textDecoration: "none", color: "white", fontFamily: "productSans" }}> 7462805133 </a>),
-            mail: (<a href='mailto: 2235051@sliet.ac.in' style={{ textDecoration: "none", color: "white", fontFamily: "productSans" }}> 2235051@sliet.ac.in
+            nameOfEventCoordinator: "Keshav Thakur",
+            phoneNo: (<a href="tel:6202903722" style={{ textDecoration: "none", color: "white", fontFamily: "productSans" }}> 6202903722 </a>),
+            mail: (<a href='mailto: 2130052@sliet.ac.in' style={{ textDecoration: "none", color: "white", fontFamily: "productSans" }}> 2130052@sliet.ac.in
             </a>)
         }]
     },
