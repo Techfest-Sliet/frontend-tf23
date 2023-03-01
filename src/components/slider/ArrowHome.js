@@ -3,7 +3,7 @@ import React from 'react'
 function ArrowPrev({prevSlide}) {
   return (
     <div className='arrows'>
-      <span className='prevHome' onClick={prevSlide} style={{paddingRight:"30px"}}>
+      <span className='prevHome' onClick={prevSlide}>
         &#10094;
       </span>
     </div>
@@ -12,7 +12,7 @@ function ArrowPrev({prevSlide}) {
 function ArrowNext({nextSlide}) {
     return (
       <div className='arrows'>
-        <span className='nextHome' onClick={nextSlide} style={{paddingLeft:"30px"}}>
+        <span className='nextHome' onClick={nextSlide} >
           &#10095;
         </span>
       </div>
