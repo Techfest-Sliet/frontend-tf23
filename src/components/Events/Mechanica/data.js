@@ -35,7 +35,7 @@ export const datasOfEvent = [
         nameOfEvent: "Fabriquer",
         desc: "The best way to test your knowledge is to implement it practically. Drill through your brains and weld your knowledge. This event demands from you to fabricate a machine making use of your workshop knowledge. Participate in our event and win worth cash prizes.",
         register: (<Link to={"/underConstruction"} rel='noopener noreferrer' href='https://www.google.com/' style={{ textDecoration: "none", color: "white", fontFamily: "productSans" }}>Register Now</Link>),
-        schedule: (<a rel='noopener noreferrer' target='_blank' href='https://drive.google.com/file/d/1E9BgX9IdhxCHiDvBfXUjQ9__5v1hq9a6/view?usp=sharing' style={{ textDecoration: "none", color: "white", fontFamily: "productSans" }}>Problem Statement</a>),
+        schedule: (<a rel='noopener noreferrer' target='_blank' href='https://drive.google.com/file/d/14Pt-FYSDHuaUd_xJWfkV7E2vLxhcd0my/view?usp=share_link' style={{ textDecoration: "none", color: "white", fontFamily: "productSans" }}>Problem Statement</a>),
         prizeMoney: "₹ 8,000",
         dateBefore: "22/03",
         coor: [{

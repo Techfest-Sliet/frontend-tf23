@@ -47,7 +47,7 @@ export const datasOfEvent = [
         nameOfEvent: "Robowar",
         desc: "Here's to the event that's second to none- ROBOWAR. The combat robotics technology that will make you familiar to the core of robotics, that will make you learn exclusively for it's not only about you, but the opponents' team as well. Participate in our event Robowar and win worth cash prizes.",
         register: (<Link to={"/underConstruction"} rel='noopener noreferrer' href='https://www.google.com/' style={{ textDecoration: "none", color: "white", fontFamily: "productSans" }}>Register Now</Link>),
-        schedule: (<a rel='noopener noreferrer' target='_blank' href='https://drive.google.com/file/d/1XVTypT-bK0DZkH9LADu38mclg0u0gidy/view?usp=sharing' style={{ textDecoration: "none", color: "white", fontFamily: "productSans" }}>Problem Statement</a>),
+        schedule: (<a rel='noopener noreferrer' target='_blank' href='https://drive.google.com/file/d/1ml1GyCCM3i_N9O2DBZGUyGwI9wgzyDK0/view?usp=share_link' style={{ textDecoration: "none", color: "white", fontFamily: "productSans" }}>Problem Statement</a>),
         prizeMoney: "₹ 45,000",
         dateBefore: "22/03",
         coor: [{
