@@ -16,7 +16,6 @@ import image15 from '../../assets/sponser_images/Group 31.jpg';
 import image16 from '../../assets/sponser_images/Group 32.png';
 import image17 from '../../assets/sponser_images/Group 33.jpg';
 import image18 from '../../assets/sponser_images/Group 34.jpeg';
-import image19 from '../../assets/sponser_images/Group 35.png';
 import image20 from '../../assets/sponser_images/Group 36.png';
 import image21 from '../../assets/sponser_images/Group 37.png';
 import image22 from '../../assets/sponser_images/Group 38.jpg';
@@ -40,9 +39,6 @@ const images = [
   },
   {
     pic: image18,
-  },
-  {
-    pic: image19,
   },
   {
     pic: image20,
