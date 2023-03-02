@@ -13,12 +13,12 @@ const leng = arr?.length - 1;
       setActiveIndex(activeIndex === leng ? 0 : activeIndex + 1);
       setActiveIndexPrev(activeIndex);
       setActiveIndexNext(activeIndexNext === leng ? 0 : activeIndexNext + 1);
-    }, 2000);
+    }, 3000);
     return () => clearInterval(interval);
   }, [activeIndex, activeIndexPrev, activeIndexNext,leng]);
 
   return (
-   <div style={{display:'flex',justifyContent:"center",alignItems:"center",width:"100%"}}>
+   <div style={{display:'flex',justifyContent:"center",alignItems:"center",width:"95%"}}>
           <ArrowPrev
         prevSlide={() => {
           setActiveIndex(activeIndex < 1 ? leng : activeIndex - 1);
