@@ -299,9 +299,9 @@
   .domainScreen {
     height: 75vh;
   }
-  .arrows {
+  /* .arrows {
     visibility: hidden;
-  }
+  } */
   .all-dots {
     visibility: visible;
   }

@@ -51,7 +51,7 @@ const HomePage = () => {
               <Link
                 to={authContext.isUserLoggedIn ? "/user-dashboard" : "/sign-up"}
               >
-                {authContext.isUserLoggedIn ? "User Dashboard" : "Sign up Now"}
+                {authContext.isUserLoggedIn ? "Dashboard" : "Sign up Now"}
               </Link>
             </Button>
           </div>
@@ -131,9 +131,9 @@ const HomePage = () => {
         </div>
 
         {/* sponsor */}
-        <div className="sponsor">
-          <h1 id="sponsor" style={{ color: "#74EB76" }}>
-            <span style={{ color: "white", fontFamily: "monumentExtended"  }}>PAST</span> SPONSORS
+        <div className="sponsor" style={{ marginTop: 14 }} >
+          <h1 id="sponsor" style={{ color: "#74EB76",marginBottom:"3rem" }}>
+            <span style={{ color: "white", fontFamily: "monumentExtended" }}>PAST</span> PARTNERS
           </h1>
           <SliderDiv arr={SponsorImageSlider} />
         </div>

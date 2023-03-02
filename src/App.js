@@ -4,6 +4,7 @@ import React, { useContext, useState } from "react";
 import { useLocation } from "react-router-dom";
 import { Route, Routes } from "react-router";
 import { Navbar } from "./components/Navbar/Navbar";
+// import Navigation from "./components/Navbar/Navigation.jsx"
 import Footer from "./components/Footer/Footer";
 import axios from "axios";
 import SignUp from "./components/Signup/Signup";
@@ -35,7 +36,8 @@ import Events from './components/domain/OneCard.jsx';
 import ErrorModel from './components/ErrorPopup/ErrorModel';
 import Feedback from "./components/Feedback/feedback";
 import Date from "./components/Date/Date"
-import Datehorizontal from "./components/Datehorizontal/Datehorizontal"
+import Datehorizontal from "./components/Datehorizontal/Datehorizontal";
+import Merch from './components/merchandise/merchandise1.jsx';
 
 
 function App() {
@@ -91,16 +93,23 @@ function App() {
         }}
       >
         <div className="App">
-          {location.pathname !== "/sign-up" &&
+           {location.pathname !== "/sign-up" &&
             location.pathname !== "/sign-in" && (
               <Navbar isAuth={isUserLoggedIn} onLogout={logOutHandler} />
             )}
+            {/* <Navigation /> */}
+            {/* <Navigation /> */}
           {location.pathname !== "/sign-up" &&
             location.pathname !== "/sign-in" &&
             location.pathname !== "/user-dashboard" && <Footer />}
 
-          <Date />
-          <Datehorizontal />
+          {location.pathname === '/' && 
+            <Date />
+          }
+          {location.pathname === '/' && 
+            <Datehorizontal />
+          }
+          
           <Routes>
             <Route path="/domains" element={<DomainScreen />} />
             <Route path="*" element={<Error404 />} />
@@ -131,6 +140,7 @@ function App() {
             <Route path="/popup" element={<Popup />} />
             <Route path="/verify" element={<Verify />} />
             <Route path="/events/:title" element={<Events />} />
+            <Route path="/merchandise" element={<Merch />} />
             {authContext.isUserLoggedIn && <Route path="/user-dashboard" element={<UserDashboard />} />}
 
             <Route path="/feedback" element={<Feedback />} />

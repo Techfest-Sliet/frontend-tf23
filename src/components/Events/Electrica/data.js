@@ -7,7 +7,7 @@ export const datasOfEvent = [
         register: (<Link to={"/underConstruction"} rel='noopener noreferrer' href='https://www.google.com/' style={{ textDecoration: "none", color: "white", fontFamily: "productSans" }}>Register Now</Link>),
         schedule: (<a rel='noopener noreferrer' target='_blank' href='https://drive.google.com/file/d/1wJu4BCTeEHJQhnnjQNB20RghJEuNiJ74/view?usp=share_link' style={{ textDecoration: "none", color: "white", fontFamily: "productSans" }}>Problem Statement</a>),
         prizeMoney: "₹ 15,000",
-        dateBefore: "11/03",
+        dateBefore: "22/03",
         coor: [
             {
                 img: require('../../dummy.jpg'),
@@ -24,7 +24,7 @@ export const datasOfEvent = [
         register: (<Link to={"/underConstruction"} rel='noopener noreferrer' href='https://www.wikipedia.com/' style={{ textDecoration: "none", color: "white", fontFamily: "productSans" }}>Register Now</Link>),
         schedule: (<a rel='noopener noreferrer' target='_blank' href='https://drive.google.com/file/d/1i-7cemF6lYrV2w9aIuAcWeC7wA6RyNeV/view?usp=share_link' style={{ textDecoration: "none", color: "white", fontFamily: "productSans" }}>Problem Statement</a>),
         prizeMoney: "₹ 14,000",
-        dateBefore: "15/03",
+        dateBefore: "22/03",
         coor: [
             {
                 img: require('../../dummy.jpg'),
@@ -40,7 +40,7 @@ export const datasOfEvent = [
         register: (<Link to={"/underConstruction"} rel='noopener noreferrer' href='https://www.google.com/' style={{ textDecoration: "none", color: "white",fontFamily: "productSans" }}>Register Now</Link>),
         schedule: (<a rel='noopener noreferrer' target='_blank' href='https://drive.google.com/file/d/1LXPX9ybiJ-wmh9rGFQ68vSIOK8wsoQWX/view?usp=share_link' style={{ textDecoration: "none", color: "white",fontFamily: "productSans" }}>Problem Statement</a>),
         prizeMoney: "₹ 15,000",
-        dateBefore: "1/03",
+        dateBefore: "22/03",
         coor: [
             {
                 img: require('../../dummy.jpg'),
@@ -57,7 +57,7 @@ export const datasOfEvent = [
         register: (<Link to={"/underConstruction"} rel='noopener noreferrer'  style={{ textDecoration: "none", color: "white", fontFamily: "productSans" }}>Register Now</Link>),
         schedule: (<a  rel='noopener noreferrer' target='_blank' href='https://drive.google.com/file/d/1i776Q3-AIRwPHACIUsczy6U9_bu-lpGp/view?usp=share_link' style={{ textDecoration: "none", color: "white", fontFamily: "productSans" }}>Problem Statement</a>),
         prizeMoney: "₹ 10,000",
-        dateBefore: "1/03",
+        dateBefore: "22/03",
         coor: [
             {
                 img: require('../../dummy.jpg'),
@@ -74,7 +74,7 @@ export const datasOfEvent = [
         register: (<Link to={"/underConstruction"} rel='noopener noreferrer' href='https://www.google.com/' style={{ textDecoration: "none", color: "white", fontFamily: "productSans" }}>Register Now</Link>),
         schedule: (<a  rel='noopener noreferrer' target='_blank' href='https://drive.google.com/file/d/11Av0YfXNjT_--TqwWEnyo4xfsvuXtjXk/view?usp=share_link' style={{ textDecoration: "none", color: "white", fontFamily: "productSans" }}>Problem Statement</a>),
         prizeMoney: "₹ 7,000",
-        dateBefore: "1/03",
+        dateBefore: "22/03",
         coor: [
             {
                 img: require('../../dummy.jpg'),

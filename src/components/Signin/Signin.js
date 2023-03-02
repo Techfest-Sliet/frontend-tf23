@@ -34,7 +34,9 @@ const Signin = () => {
           setPasswordErr(res.data.message);
           setTimeout(() => {
             setPasswordErr(null);
-            navigate('/sign-up')
+            if(res.data.message.includes('email')){
+;              navigate('/sign-up');
+            }
           }, 3000);
           return;
         } else if (res.status === 206) {

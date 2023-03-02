@@ -8,7 +8,7 @@ export const datasOfEvent = [
         schedule: (<a target='_blank' href='https://drive.google.com/file/d/1mXFmR90roGkS82HGJxCWfVnKx4QpaegK/view?usp=sharing' rel='noopener noreferrer' to={"/underConstruction"}
         style={{ textDecoration: "none", color: "white", fontFamily: "productSans" }}>Problem Statement</a>),
         prizeMoney: "₹ 10,000",
-        dateBefore: "11/03",
+        dateBefore: "22/03",
         coor: [
             {
                 img: require('../../dummy.jpg'),
@@ -30,7 +30,7 @@ export const datasOfEvent = [
         register: (<Link to={"/underConstruction"} rel='noopener noreferrer' href='https://www.wikipedia.com/' style={{ textDecoration: "none", color: "white", fontFamily: "productSans" }}>Register Now</Link>),
         schedule: (<a  rel='noopener noreferrer' target='_blank' href='https://drive.google.com/file/d/1HWJ-2kvqGYgwnxt4K4ukXvJafv_7mb1r/view?usp=sharing' style={{ textDecoration: "none", color: "white", fontFamily: "productSans" }}>Problem Statement</a>),
         prizeMoney: "₹ 8,000",
-        dateBefore: "15/03",
+        dateBefore: "22/03",
         coor: [{
             img: require('../../dummy.jpg'),
             nameOfEventCoordinator: "Mayank Kumar",
@@ -52,7 +52,7 @@ export const datasOfEvent = [
         register: (<Link to={"/underConstruction"} rel='noopener noreferrer' href='https://www.wikipedia.com/' style={{ textDecoration: "none", color: "white", fontFamily: "productSans" }}>Register Now</Link>),
         schedule: (<a  rel='noopener noreferrer' target='_blank' href='https://drive.google.com/file/d/15gp21DLb5mp34AThNr-JB9U58SY454nV/view?usp=sharing' style={{ textDecoration: "none", color: "white", fontFamily: "productSans" }}>Problem Statement</a>),
         prizeMoney: "₹ 8,000",
-        dateBefore: "15/03",
+        dateBefore: "22/03",
         coor: [{
             img: require('../../dummy.jpg'),
             nameOfEventCoordinator: "Mayank Kumar",
@@ -62,19 +62,19 @@ export const datasOfEvent = [
         },
         {
             img: require('../../dummy.jpg'),
-            nameOfEventCoordinator: "Anmol Kumar",
-            phoneNo: (<a href="tel:7462805133" style={{ textDecoration: "none", color: "white", fontFamily: "productSans" }}> 7462805133 </a>),
-            mail: (<a href='mailto: 2235051@sliet.ac.in' style={{ textDecoration: "none", color: "white", fontFamily: "productSans" }}> 2235051@sliet.ac.in
+            nameOfEventCoordinator: "Keshav Thakur",
+            phoneNo: (<a href="tel:6202903722" style={{ textDecoration: "none", color: "white", fontFamily: "productSans" }}> 6202903722 </a>),
+            mail: (<a href='mailto: 2130052@sliet.ac.in' style={{ textDecoration: "none", color: "white", fontFamily: "productSans" }}> 2130052@sliet.ac.in
             </a>)
         }]
     },
     {
-        nameOfEvent: "Chem-Fothon",
+        nameOfEvent: "ChemFo-Thon",
         desc: "When Technology covers in it all, the AI-ML for accessing all information, the bots for traverse and transport, then why not use it for spark in agriculture. Bring it in to the event your revolutionary ideas and win worth cash prizes.",
         register: (<Link to={"/underConstruction"} rel='noopener noreferrer' href='https://www.wikipedia.com/' style={{ textDecoration: "none", color: "white", fontFamily: "productSans" }}>Register Now</Link>),
         schedule: (<a rel='noopener noreferrer' target='_blank' href='https://drive.google.com/file/d/1jgkkm9NGlSnMgv-m8BANytuuwxGmm24k/view?usp=sharing' style={{ textDecoration: "none", color: "white", fontFamily: "productSans" }}>Problem Statement</a>),
         prizeMoney: "₹ 8,000",
-        dateBefore: "15/03",
+        dateBefore: "22/03",
         coor: [
             {
                 img: require('../../dummy.jpg'),
@@ -93,12 +93,12 @@ export const datasOfEvent = [
         ]
     },
     {
-        nameOfEvent: "Techno-Mind",
+        nameOfEvent: "Techno Food Mind",
         desc: "All day hectic and running life is what everybody's experiencing today. Isn't it? Design a machine that can ease up a basic yet important daily process-Cooking. Do brainstorming, participate in our event and win worthy cash prizes.",
         register: (<Link to={"/underConstruction"} rel='noopener noreferrer's href='https://www.wikipedia.com/' style={{ textDecoration: "none", color: "white", fontFamily: "productSans" }}>Register Now</Link>),
         schedule: (<a rel='noopener noreferrer's target='_blank' href='https://drive.google.com/file/d/1qqwYO9H-lPb_CBCH0jb-7Bd4fz3_ntfa/view?usp=sharing' style={{ textDecoration: "none", color: "white", fontFamily: "productSans" }}>Problem Statement</a>),
         prizeMoney: "₹ 14,000",
-        dateBefore: "15/03",
+        dateBefore: "22/03",
         coor: [{
             img: require('../../dummy.jpg'),
             nameOfEventCoordinator: "Aditya Kumar",
@@ -120,7 +120,7 @@ export const datasOfEvent = [
         register: (<Link to={"/underConstruction"} rel='noopener noreferrer's href='https://www.wikipedia.com/' style={{ textDecoration: "none", color: "white", fontFamily: "productSans" }}>Register Now</Link>),
         schedule: (<a rel='noopener noreferrer's target='_blank' href='https://drive.google.com/file/d/1mbIl2uO3M6XZd7RMM9kfvzylzhJeLnVo/view?usp=sharing' style={{ textDecoration: "none", color: "white", fontFamily: "productSans" }}>Problem Statement</a>),
         prizeMoney: "₹ 15,000",
-        dateBefore: "15/03",
+        dateBefore: "22/03",
         coor: [{
             img: require('../../dummy.jpg'),
             nameOfEventCoordinator: "Anmol Kumar",

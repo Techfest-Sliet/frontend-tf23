@@ -51,6 +51,11 @@ export const Navbar = (props) => {
                 FAQ
               </Link>
             </li>
+            <li>
+              <Link to="/merchandise" onClick={unCheck}>
+                Merchandise
+              </Link>
+            </li>
             
             {authContext.isUserLoggedIn && (
               <li>

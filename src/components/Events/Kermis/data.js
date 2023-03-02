@@ -7,7 +7,7 @@ export const datasOfEvent = [
         register: (<Link to={"/underConstruction"} rel='noopener noreferrer' href='https://www.google.com/' style={{ textDecoration: "none", color: "white", fontFamily: "productSans" }}>Register Now</Link>),
         schedule: (<a rel='noopener noreferrer' target='_blank' href='https://drive.google.com/file/d/1C3u7EwjQVfLrTbgG_2-BE-IRfXD8Gi9F/view?usp=sharing' style={{ textDecoration: "none", color: "white", fontFamily: "productSans" }}>Problem Statement</a>),
         prizeMoney: "₹ 10,000",
-        dateBefore: "11/03",
+        dateBefore: "22/03",
         coor: [
             {
                 img: require('../../dummy.jpg'),
@@ -24,7 +24,7 @@ export const datasOfEvent = [
         register: (<Link to={"/underConstruction"} rel='noopener noreferrer' href='https://www.wikipedia.com/' style={{ textDecoration: "none", color: "white", fontFamily: "productSans" }}>Register Now</Link>),
         schedule: (<a rel='noopener noreferrer' target='_blank' href='https://drive.google.com/file/d/1e5DKLu-jo-6J1NyREJgCj-RnuW65sdpX/view?usp=share_link' style={{ textDecoration: "none", color: "white", fontFamily: "productSans" }}>Problem Statement</a>),
         prizeMoney: "₹ 8,000",
-        dateBefore: "15/03",
+        dateBefore: "22/03",
         coor: [
             {
                 img: require('../../dummy.jpg'),
@@ -36,12 +36,12 @@ export const datasOfEvent = [
         ]
     },
     {
-        nameOfEvent: "Satranj",
+        nameOfEvent: "Checkmate",
         desc: "Amidst the black and white squares, get yourself some colourful fun by participating in our event Satranj ke Shershah and avail worthy prizes.",
         register: (<Link to={"/underConstruction"} rel='noopener noreferrer' href='https://www.google.com/' style={{ textDecoration: "none", color: "white", fontFamily: "productSans" }}>Register Now</Link>),
-        schedule: (<Link to={"/underConstruction"} rel='noopener noreferrer' target='_blank' href='https://www.google.com/' style={{ textDecoration: "none", color: "white", fontFamily: "productSans" }}>Problem Statement</Link>),
+        schedule: (<Link to={"/underConstruction"} rel='noopener noreferrer' target='_blank' href='https://drive.google.com/file/d/1RopH4C8oFCOQoR0Yfq9d5Yp6_F97NetW/view?usp=sharing' style={{ textDecoration: "none", color: "white", fontFamily: "productSans" }}>Problem Statement</Link>),
         prizeMoney: "₹ 8,000",
-        dateBefore: "1/03",
+        dateBefore: "22/03",
         coor: [
             {
                 img: require('../../dummy.jpg'),

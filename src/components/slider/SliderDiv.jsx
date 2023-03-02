@@ -13,54 +13,56 @@ const leng = arr?.length - 1;
       setActiveIndex(activeIndex === leng ? 0 : activeIndex + 1);
       setActiveIndexPrev(activeIndex);
       setActiveIndexNext(activeIndexNext === leng ? 0 : activeIndexNext + 1);
-    }, 2000);
+    }, 3000);
     return () => clearInterval(interval);
   }, [activeIndex, activeIndexPrev, activeIndexNext,leng]);
 
   return (
-    <div className="sponsorImages">
+   <div style={{display:'flex',justifyContent:"center",alignItems:"center",width:"95%"}}>
+          <ArrowPrev
+        prevSlide={() => {
+          setActiveIndex(activeIndex < 1 ? leng : activeIndex - 1);
+          setActiveIndexNext(activeIndex);
+          setActiveIndexPrev(
+            activeIndexPrev < 1 ? leng : activeIndexPrev - 1
+          );
+        }}
+       
+      />
+     <div className="sponsorImages">
           
-    <div className="prevSlide">
-    <ArrowPrev
-  prevSlide={() => {
-    setActiveIndex(activeIndex < 1 ? leng : activeIndex - 1);
-    setActiveIndexNext(activeIndex);
-    setActiveIndexPrev(
-      activeIndexPrev < 1 ? leng : activeIndexPrev - 1
-    );
-  }}
- 
-/>
-      <SliderContent
-        activeIndex={activeIndexPrev}
-        imageSlider={arr}
-      />
-    </div>
-
-    <div className="mainSlide">
-      <SliderContent
-        activeIndex={activeIndex}
-        imageSlider={arr}
-      />
-    </div>
-
-    <div className="nextSlide">
-      <SliderContent
-        activeIndex={activeIndexNext}
-        imageSlider={arr}
-      />
-      <ArrowNext
-     nextSlide={() => {
-      setActiveIndex(activeIndex === leng ? 0 : activeIndex + 1);
-      setActiveIndexPrev(activeIndex);
-      setActiveIndexNext(
-        activeIndexNext === leng ? 0 : activeIndexNext + 1
-      );
-    }}
-    />
-    </div>
-    
-  </div>
+          <div className="prevSlide">
+            <SliderContent
+              activeIndex={activeIndexPrev}
+              imageSlider={arr}
+            />
+          </div>
+      
+          <div className="mainSlide">
+            <SliderContent
+              activeIndex={activeIndex}
+              imageSlider={arr}
+            />
+          </div>
+      
+          <div className="nextSlide">
+            <SliderContent
+              activeIndex={activeIndexNext}
+              imageSlider={arr}
+            />
+          </div>
+          
+        </div>
+            <ArrowNext
+           nextSlide={() => {
+            setActiveIndex(activeIndex === leng ? 0 : activeIndex + 1);
+            setActiveIndexPrev(activeIndex);
+            setActiveIndexNext(
+              activeIndexNext === leng ? 0 : activeIndexNext + 1
+            );
+          }}
+          />
+   </div>
   )
 }
 

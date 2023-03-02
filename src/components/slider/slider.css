@@ -36,13 +36,13 @@
 }
 .prevHome, .nextHome{
     cursor: pointer;
-    z-index: 100;
+    /* z-index: 100; */
     user-select: none;
     /* position: absolute; */
     top: 100%;
     width: auto;
     height: auto;
-    padding: 1rem;
+    /* padding: 1rem; */
     margin-top:-3rem;
     font-size: 30px;
     color: azure;

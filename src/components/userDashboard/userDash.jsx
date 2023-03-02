@@ -5,6 +5,7 @@ import AuthContext from "../../auth/authContext";
 import "./userDash.css";
 import { Link } from "react-router-dom";
 import useRazorpay from "react-razorpay";
+import Loader from "../Loader/Loader";
 
 const User_dasbord = () => {
   const authContext = useContext(AuthContext);
@@ -62,8 +63,10 @@ const User_dasbord = () => {
       },
     );
   }
+  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
+    setIsLoading(true);
     axios
       .get(`${baseUrl}/user/getUserById`, {
         headers: {
@@ -71,6 +74,7 @@ const User_dasbord = () => {
         },
       })
       .then((result) => {
+        setIsLoading(false);
         if (
           result.status !== 200 ||
           (result.status !== 201 && result.data.isError)
@@ -92,7 +96,8 @@ const User_dasbord = () => {
   }, [authContext, authContext.login]);
   return (
     <div className="Dashboard__body">
-      <div className="row_justify-content-around" style={{ height: "100vh" }}>
+      {isLoading && <Loader />}
+      <div className="row_justify-content-around" style={{height:"100vh"}}>
         <div className="userdashbord_body">
           <h2 className="user__header">Namaste! {user && user.name}</h2>
           <p className="blockquote-footer">

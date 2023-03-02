@@ -7,7 +7,7 @@ export const datasOfEvent = [
         register: (<Link to={"/underConstruction"} rel='noopener noreferrer' href='https://www.google.com/' style={{ textDecoration: "none", color: "white", fontFamily: "productSans" }}>Register Now</Link>),
         schedule: (<a rel='noopener noreferrer' target='_blank' href='https://drive.google.com/file/d/1GeaQlOScA43g1NpPQQsRLTN0U6SlfjFr/view?usp=share_link' style={{ textDecoration: "none", color: "white", fontFamily: "productSans" }}>Problem Statement</a>),
         prizeMoney: "₹ 14,000",
-        dateBefore: "11/03",
+        dateBefore: "22/03",
         coor: [{
             img: require('../../dummy.jpg'),
             nameOfEventCoordinator: "Kishan Kashyap",
@@ -22,7 +22,7 @@ export const datasOfEvent = [
         register: (<Link to={"/underConstruction"} rel='noopener noreferrer' href='https://www.wikipedia.com/' style={{ textDecoration: "none", color: "white", fontFamily: "productSans" }}>Register Now</Link>),
         schedule: (<a rel='noopener noreferrer' target='_blank' href='https://drive.google.com/file/d/1XoAEhkNAr5ZfANSlbJj-rGf5tCcHQWxK/view?usp=sharing' style={{ textDecoration: "none", color: "white", fontFamily: "productSans" }}>Problem Statement</a>),
         prizeMoney: "₹ 14,000",
-        dateBefore: "15/03",
+        dateBefore: "22/03",
         coor: [{
             img: require('../../dummy.jpg'),
             nameOfEventCoordinator: "Utkarsh Kumar Mishra",
@@ -35,9 +35,9 @@ export const datasOfEvent = [
         nameOfEvent: "Fabriquer",
         desc: "The best way to test your knowledge is to implement it practically. Drill through your brains and weld your knowledge. This event demands from you to fabricate a machine making use of your workshop knowledge. Participate in our event and win worth cash prizes.",
         register: (<Link to={"/underConstruction"} rel='noopener noreferrer' href='https://www.google.com/' style={{ textDecoration: "none", color: "white", fontFamily: "productSans" }}>Register Now</Link>),
-        schedule: (<a rel='noopener noreferrer' target='_blank' href='https://drive.google.com/file/d/1E9BgX9IdhxCHiDvBfXUjQ9__5v1hq9a6/view?usp=sharing' style={{ textDecoration: "none", color: "white", fontFamily: "productSans" }}>Problem Statement</a>),
+        schedule: (<a rel='noopener noreferrer' target='_blank' href='https://drive.google.com/file/d/14Pt-FYSDHuaUd_xJWfkV7E2vLxhcd0my/view?usp=share_link' style={{ textDecoration: "none", color: "white", fontFamily: "productSans" }}>Problem Statement</a>),
         prizeMoney: "₹ 8,000",
-        dateBefore: "1/03",
+        dateBefore: "22/03",
         coor: [{
             img: require('../../dummy.jpg'),
             nameOfEventCoordinator: "Sazid Ahmad",
@@ -52,7 +52,7 @@ export const datasOfEvent = [
         register: (<Link to={"/underConstruction"} rel='noopener noreferrer' href='https://www.google.com/' style={{ textDecoration: "none", color: "white", fontFamily: "productSans" }}>Register Now</Link>),
         schedule: (<a rel='noopener noreferrer' target='_blank' href='https://drive.google.com/file/d/1I11xKR8hZ_TtgRxdjRyjoWrtcwLksM0j/view?usp=sharing' style={{ textDecoration: "none", color: "white", fontFamily: "productSans" }}>Problem Statement</a>),
         prizeMoney: "₹ 9,000",
-        dateBefore: "1/03",
+        dateBefore: "22/03",
         coor: [{
             img: require('../../dummy.jpg'),
             nameOfEventCoordinator: "Ram kumar",
@@ -74,7 +74,7 @@ export const datasOfEvent = [
         register: (<Link to={"/underConstruction"} rel='noopener noreferrer' href='https://www.google.com/' style={{ textDecoration: "none", color: "white", fontFamily: "productSans" }}>Register Now</Link>),
         schedule: (<a rel='noopener noreferrer' target='_blank' href='https://drive.google.com/file/d/1A14CTU1VuUcmJlmPakga5mBHe8BUPihf/view?usp=share_link ' style={{ textDecoration: "none", color: "white", fontFamily: "productSans" }}>Problem Statement</a>),
         prizeMoney: "₹ 8,000",
-        dateBefore: "15/03",
+        dateBefore: "22/03",
         coor: [{
             img: require('../../dummy.jpg'),
             nameOfEventCoordinator: "Mohd Sameer Alam",
