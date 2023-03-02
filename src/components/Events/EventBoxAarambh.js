@@ -41,6 +41,7 @@ setErrorMade(null);
                                 </div>
                                 <div style={{ float: "left" }}>
                                     <h2 style={{ marginTop: "6px", textAlign: "left" }}>Prizes Worth <br></br> {props?.prizeMoney} </h2>
+                                    <p style={{margin:"0.5rem 0"}}>Event Mode : {props?.eventMode} </p>
                                     <p style={{ fontSize: "14px", textAlign: "left" }}>
                                         <FaRegCalendar /> Register Before {props?.dateBefore}<br></br>
                                         <FaRegClock /> 11:59 P.M.

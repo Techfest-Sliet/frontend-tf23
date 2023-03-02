@@ -7,6 +7,7 @@ export const datasOfEvent = [
         register: (<Link to={"/underConstruction"} rel='noopener noreferrer' href='https://www.google.com/' style={{ textDecoration: "none", color: "white", fontFamily: "productSans" }}>Register Now</Link>),
         schedule: (<a rel='noopener noreferrer' target='_blank' href='https://drive.google.com/file/d/1C3u7EwjQVfLrTbgG_2-BE-IRfXD8Gi9F/view?usp=sharing' style={{ textDecoration: "none", color: "white", fontFamily: "productSans" }}>Problem Statement</a>),
         prizeMoney: "₹ 10,000",
+        eventMode: "hybrid",
         dateBefore: "11/03",
         coor: [
             {
@@ -24,6 +25,7 @@ export const datasOfEvent = [
         register: (<Link to={"/underConstruction"} rel='noopener noreferrer' href='https://www.wikipedia.com/' style={{ textDecoration: "none", color: "white", fontFamily: "productSans" }}>Register Now</Link>),
         schedule: (<a rel='noopener noreferrer' target='_blank' href='https://drive.google.com/file/d/1e5DKLu-jo-6J1NyREJgCj-RnuW65sdpX/view?usp=share_link' style={{ textDecoration: "none", color: "white", fontFamily: "productSans" }}>Problem Statement</a>),
         prizeMoney: "₹ 8,000",
+        eventMode: "hybrid",
         dateBefore: "15/03",
         coor: [
             {
@@ -41,6 +43,7 @@ export const datasOfEvent = [
         register: (<Link to={"/underConstruction"} rel='noopener noreferrer' href='https://www.google.com/' style={{ textDecoration: "none", color: "white", fontFamily: "productSans" }}>Register Now</Link>),
         schedule: (<Link to={"/underConstruction"} rel='noopener noreferrer' target='_blank' href='https://www.google.com/' style={{ textDecoration: "none", color: "white", fontFamily: "productSans" }}>Problem Statement</Link>),
         prizeMoney: "₹ 8,000",
+        eventMode: "hybrid",
         dateBefore: "1/03",
         coor: [
             {

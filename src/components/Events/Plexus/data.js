@@ -7,6 +7,7 @@ export const datasOfEvent = [
         register: (<Link to={"/underConstruction"} rel='noopener noreferrer' href='https://www.wikipedia.com/' style={{ textDecoration: "none", color: "white" }}>Register Now</Link>),
         schedule: (<a rel='noopener noreferrer' target='_blank' href='https://drive.google.com/file/d/1_B2_ivxzfKa-p--xK3EN9y6e0GIUjyV3/view?usp=share_link' style={{ textDecoration: "none", color: "white" }}>Problem Statement</a>),
         prizeMoney: "₹ 12,000",
+        eventMode: "hybrid",
         dateBefore: "15/03",
         coor: [{
             img: require('../../dummy.jpg'),
@@ -29,6 +30,7 @@ export const datasOfEvent = [
         register: (<Link to={"/underConstruction"} rel='noopener noreferrer' href='https://www.wikipedia.com/' style={{ textDecoration: "none", color: "white" }}>Register Now</Link>),
         schedule: (<a rel='noopener noreferrer' target='_blank' href='https://drive.google.com/file/d/15xSbDOWM_0wyfwyw1Fup4D36vfj6XAtP/view?usp=share_link' style={{ textDecoration: "none", color: "white" }}>Problem Statement</a>),
         prizeMoney: "₹ 12,000",
+        eventMode: "hybrid",
         dateBefore: "15/03",
         coor: [
             {
@@ -52,6 +54,7 @@ export const datasOfEvent = [
         register: (<Link to={"/underConstruction"} rel='noopener noreferrer' href='https://www.wikipedia.com/' style={{ textDecoration: "none", color: "white" }}>Register Now</Link>),
         schedule: (<a rel='noopener noreferrer' target='_blank' href='https://drive.google.com/file/d/1pMTzeWZhvCkfqH4WIfg4eqyDIP5xLhSl/view?usp=share_link' style={{ textDecoration: "none", color: "white" }}>Problem Statement</a>),
         prizeMoney: "₹ 9,000",
+        eventMode: "hybrid",
         dateBefore: "15/03",
         coor: [{
             img: require('../../dummy.jpg'),
@@ -74,6 +77,7 @@ export const datasOfEvent = [
         register: (<Link to={"/underConstruction"} rel='noopener noreferrer' href='https://www.wikipedia.com/' style={{ textDecoration: "none", color: "white" }}>Register Now</Link>),
         schedule: (<a rel='noopener noreferrer' target='_blank' href='https://drive.google.com/file/d/1aQMvlwIrgeRVPD5hUNA0J6V7NRlylW0F/view?usp=share_link ' style={{ textDecoration: "none", color: "white" }}>Problem Statement</a>),
         prizeMoney: "₹ 14,000",
+        eventMode: "hybrid",
         dateBefore: "15/03",
         coor: [{
             img: require('../../dummy.jpg'),
