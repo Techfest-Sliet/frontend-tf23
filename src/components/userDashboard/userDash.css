@@ -227,7 +227,7 @@ p.blockquote-footer {
 
 }
 
-.button {
+.button, .userDash__button {
     --width: 100px;
     --height: 35px;
     --tooltip-height: 35px;
@@ -243,6 +243,7 @@ p.blockquote-footer {
     text-align: center;
     /* font-family: "Arial"; */
     transition: background 0.3s;
+    color: #fff;
 }
 
 

@@ -1,13 +1,67 @@
-import React, { useState, useContext, useEffect } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import axios from "axios";
 import { baseUrl } from "../../API/api";
 import AuthContext from "../../auth/authContext";
 import "./userDash.css";
 import { Link } from "react-router-dom";
+import useRazorpay from "react-razorpay";
 
-const  User_dasbord = () => {
+const User_dasbord = () => {
   const authContext = useContext(AuthContext);
   const [user, setUser] = useState(null);
+  const Razorpay = useRazorpay();
+  function InitiateUserPayment() {
+    axios.post(`${baseUrl}/payment/userPaymentLink`, { userId: user._id }, {
+      headers: { "content-type": "multipart/form-data" },
+    }).then(
+      (order) => {
+        const options = {
+          key: "rzp_test_Th21vVpHqDNa1v", // Enter the Key ID generated from the Dashboard
+          currency: "INR",
+          name: "techFEST SLIET",
+          description: "Fee for registeration for techFEST",
+          image: "https://www.techfestsliet.org/tf23.webp",
+          order_id: order.data.orderId,
+          handler: function (response) {
+            console.log(response);
+            axios.post(`${baseUrl}/payment/userPaymentVerify`, {
+              razorpay_payment_id: response.razorpay_payment_id,
+              razorpay_order_id: response.razorpay_order_id,
+              razorpay_signature: response.razorpay_signature,
+              userId: user._id,
+            }, { headers: { "content-type": "multipart/form-data" } }).then((
+              resp,
+            ) => console.log(resp));
+          },
+          prefill: {
+            name: user.name,
+            email: user.email,
+            contact: user.phone,
+          },
+          //          notes: {
+          //            address: "Razorpay Corporate Office",
+          //          },
+          theme: {
+            color: "#3399cc",
+          },
+        };
+
+        const rzp1 = new Razorpay(options);
+
+        rzp1.on("payment.failed", function (response) {
+          alert(response.error.code);
+          alert(response.error.description);
+          alert(response.error.source);
+          alert(response.error.step);
+          alert(response.error.reason);
+          alert(response.error.metadata.order_id);
+          alert(response.error.metadata.payment_id);
+        });
+
+        rzp1.open();
+      },
+    );
+  }
 
   useEffect(() => {
     axios
@@ -16,7 +70,6 @@ const  User_dasbord = () => {
           Authorization: "Bearer " + authContext.token,
         },
       })
-
       .then((result) => {
         if (
           result.status !== 200 ||
@@ -28,7 +81,7 @@ const  User_dasbord = () => {
             message: "Wrong user auth!",
           });
         }
-        setUser((result.data.user));
+        setUser(result.data.user);
       })
       .catch((err) => {
         return err.status(208).json({
@@ -39,12 +92,15 @@ const  User_dasbord = () => {
   }, [authContext, authContext.login]);
   return (
     <div className="Dashboard__body">
-      <div className="row_justify-content-around" style={{height:"100vh"}}>
+      <div className="row_justify-content-around" style={{ height: "100vh" }}>
         <div className="userdashbord_body">
           <h2 className="user__header">Namaste! {user && user.name}</h2>
-          <p className="blockquote-footer">Your Unique tF ID is {user && user.userId}</p>
+          <p className="blockquote-footer">
+            Your Unique tF ID is {user && user.userId}
+          </p>
         </div>
-        {/* <div className="flex_topbox">
+        {
+          /* <div className="flex_topbox">
           <div className="card-bodytop">
             <h3 className="card-title text-light text-center">
               <img
@@ -153,7 +209,8 @@ const  User_dasbord = () => {
               </div>
             </div>
           </div>
-        </div> */}
+        </div> */
+        }
 
         <div className="card-bodymid">
           <div className="dashboard_profile_container">
@@ -185,14 +242,18 @@ const  User_dasbord = () => {
               </tr>
 
               <tr className="TableRow"></tr>
-              {/* <tr className="TableRow ">
+              {
+                /* <tr className="TableRow ">
                 <td>Year Of Study</td>
                 <td className="TableRow__res">3</td>
-              </tr> */}
+              </tr> */
+              }
               <tr className="TableRow  ">
                 <td>Date of Birth</td>
 
-                <td className="TableRow__res">{user && user.dob.slice(0, 10)}</td>
+                <td className="TableRow__res">
+                  {user && user.dob.slice(0, 10)}
+                </td>
               </tr>
 
               {/* <!-------------------Contact Information-------------> */}
@@ -203,22 +264,40 @@ const  User_dasbord = () => {
                 </td>
               </tr>
               <tr className="TableRow">
-                <td className="">E-mail </td>
+                <td className="">E-mail</td>
                 <td className="TableRow__res">{user && user.email}</td>
               </tr>
-              {/* <tr className="TableRow">
+              {
+                /* <tr className="TableRow">
                 <td>Phone Number</td>
                 <td className="TableRow__res">{user && user.phone}</td>
-              </tr> */}
+              </tr> */
+              }
               <tr className="TableRow">
                 <td>Whatsapp Number</td>
                 <td className="TableRow__res">{user && user.phone}</td>
+              </tr>
+              <tr className="TableRow">
+                <td>Payment Status</td>
+                <td className="TableRow__res">
+                  {user && user.isPaid ? "Paid" : (
+                    <button
+                      type="button"
+                      onClick={InitiateUserPayment}
+                      value="Pay"
+                      className="userDash__button"
+                    >
+                      Pay
+                    </button>
+                  )}
+                </td>
               </tr>
             </table>
           </div>
         </div>
         <div>
-          {/* <div className="flex_bottombox">
+          {
+            /* <div className="flex_bottombox">
             <div className="card-bodybottom">
               <h3 className="CertificatesRewards">Certificates & Rewards</h3>
               <div className="certificate_colleps">
@@ -744,11 +823,12 @@ const  User_dasbord = () => {
                 </div>
               </div>
             </div>
-          </div> */}
+          </div> */
+          }
         </div>
       </div>
     </div>
   );
-}
+};
 
 export default User_dasbord;
