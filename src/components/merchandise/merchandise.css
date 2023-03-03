@@ -42,9 +42,9 @@ p.merchcolrrr {
 }
 
 img.merch_tshirt {
-    /* width: 66%; */
-    /* height: 42vh; */
-    object-fit: contain;
+    width: 100%;
+    height: auto;
+    /* object-fit: cover; */
     overflow: hidden;
 }
 
@@ -52,6 +52,7 @@ img.merch_tshirt {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    width: 80%;
 }
 
 .tf_content {
@@ -349,7 +350,8 @@ input.inpmai {
 
 @media(max-width:1370px) {
     img.merch_tshirt {
-        width: 66%;
+        width: 100%;
+        height: auto;
     }
 
     .mid_left {
@@ -361,7 +363,8 @@ input.inpmai {
     img.merch_tshirt {
         left: 8%;
         top: 20%;
-        height: 37vh;
+        width: 100%;
+        height: auto;
     }
 
     img.merch_icon {
@@ -454,7 +457,8 @@ input.inpmai {
     }
 
     img.merch_tshirt {
-        height: 40vh;
+        width: 100%;
+        height: auto;
     }
 
     .swiper-button-prev {
@@ -554,7 +558,8 @@ input.inpmai {
     }
 
     img.merch_tshirt {
-        height: 39vh;
+        width: 100%;
+        height: auto;
     }
 }
 
@@ -616,7 +621,8 @@ input.inpmai {
     }
 
     img.merch_tshirt {
-        height: 46vh;
+        width: 100%;
+        height: auto;
     }
 
     .four_merch_box {
@@ -724,7 +730,8 @@ input.inpmai {
     }
 
     img.merch_tshirt {
-        height: 39vh;
+        width: 100%;
+        height: auto;
     }
 
     .merch_mid {
@@ -791,6 +798,4 @@ input.inpmai {
         left: 34%;
 
     }
-
-
 }

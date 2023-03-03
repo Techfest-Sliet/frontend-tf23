@@ -41,7 +41,7 @@ export const datasOfEvent = [
         nameOfEvent: "Checkmate",
         desc: "Amidst the black and white squares, get yourself some colourful fun by participating in our event Satranj ke Shershah and avail worthy prizes.",
         register: (<Link to={"/underConstruction"} rel='noopener noreferrer' href='https://www.google.com/' style={{ textDecoration: "none", color: "white", fontFamily: "productSans" }}>Register Now</Link>),
-        schedule: (<Link to={"/underConstruction"} rel='noopener noreferrer' target='_blank' href='https://drive.google.com/file/d/1RopH4C8oFCOQoR0Yfq9d5Yp6_F97NetW/view?usp=sharing' style={{ textDecoration: "none", color: "white", fontFamily: "productSans" }}>Problem Statement</Link>),
+        schedule: (<a rel='noopener noreferrer' target='_blank' href='https://drive.google.com/file/d/1RopH4C8oFCOQoR0Yfq9d5Yp6_F97NetW/view?usp=sharing' style={{ textDecoration: "none", color: "white", fontFamily: "productSans" }}>Problem Statement</a>),
         prizeMoney: "₹ 8,000",
         eventMode: "hybrid",
         dateBefore: "22/03",
