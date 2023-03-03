@@ -1,6 +1,6 @@
 import React,{useState} from 'react';
 import './EventBox.css';
-import { FaRegCalendar, FaRegClock } from "react-icons/fa";
+import { FaRegCalendar, FaRegClock, FaUnity } from "react-icons/fa";
 import ErrorModel from '../ErrorPopup/ErrorModel';
 import { Schedule } from '@mui/icons-material';
 
@@ -41,6 +41,8 @@ setErrorMade(null);
                                 </div>
                                 <div style={{ float: "left" }}>
                                     <h2 style={{ marginTop: "6px", textAlign: "left" }}>Prizes Worth <br></br> {props?.prizeMoney} </h2>
+                                    <p style={{margin:"0.5rem 0"}}>
+                                    <FaUnity />Event Mode : {props?.eventMode} </p>
                                     <p style={{ fontSize: "14px", textAlign: "left" }}>
                                         <FaRegCalendar /> Register Before {props?.dateBefore}<br></br>
                                         <FaRegClock /> 11:59 P.M.

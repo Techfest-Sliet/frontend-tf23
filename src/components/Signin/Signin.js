@@ -92,7 +92,13 @@ const Signin = () => {
   return (
     <>
       {isLoading && <Loader />}
-      <div className={styles.signin__content} style={{height: "100vh"}}>
+      <div className={styles.signin__content}>
+        <div className={styles.signin_linkToHome}>
+          <button className={styles.signin_btnToHome}>
+            <Link to={"/"} style={{ color: "black" }}>
+              Home </Link>
+          </button>
+        </div>
         <div>
           <img src={logo} alt="techFest'23" className={styles.signin__logo} />
         </div>
@@ -155,7 +161,7 @@ const Signin = () => {
           </p>
         </div>
       </div>
-      </>
+    </>
   );
 };
 export default Signin;

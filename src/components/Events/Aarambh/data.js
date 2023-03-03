@@ -30,6 +30,7 @@ export const datasOfEvent = [
       </span>
     ),
     prizeMoney: "₹ 5,000",
+    eventMode: "hybrid",
     dateBefore: "25/02",
     coor: [
       {
