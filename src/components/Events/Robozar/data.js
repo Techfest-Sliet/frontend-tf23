@@ -8,7 +8,7 @@ export const datasOfEvent = [
         schedule: (<a rel='noopener noreferrer' target='_blank' href='https://drive.google.com/file/d/1vPmrI1hoLYymEL9KRCisGI89saKA-RZE/view?usp=sharing' style={{ textDecoration: "none", color: "white", fontFamily: "productSans" }}>Problem Statement</a>),
         prizeMoney: "₹ 30,000",
         eventMode: "hybrid",
-        dateBefore: "11/03",
+        dateBefore: "22/03",
         coor: [{
             img: require('../../dummy.jpg'),
             nameOfEventCoordinator: "Satyam Sharma",
@@ -23,7 +23,7 @@ export const datasOfEvent = [
         schedule: (<a rel='noopener noreferrer' target='_blank' href='https://drive.google.com/file/d/1rs2b20oihSlnnOADkzqmLtBtXqEvFRg6/view?usp=sharing' style={{ textDecoration: "none", color: "white", fontFamily: "productSans" }}>Problem Statement</a>),
         prizeMoney: "₹ 21,000",
         eventMode: "hybrid",
-        dateBefore: "15/03",
+        dateBefore: "22/03",
         coor: [{
             img: require('../../dummy.jpg'),
             nameOfEventCoordinator: "Aarushi Jain",
@@ -38,7 +38,7 @@ export const datasOfEvent = [
         schedule: (<a rel='noopener noreferrer' target='_blank' href='https://drive.google.com/file/d/1HutIAQ539N62NMNNKZLH3_LDGNZWPWHN/view?usp=sharing' style={{ textDecoration: "none", color: "white", fontFamily: "productSans" }}>Problem Statement</a>),
         prizeMoney: "₹ 33,000",
         eventMode: "hybrid",
-        dateBefore: "1/03",
+        dateBefore: "22/03",
         coor: [{
             img: require('../../dummy.jpg'),
             nameOfEventCoordinator: "Rishav Ranjan",
@@ -53,7 +53,7 @@ export const datasOfEvent = [
         schedule: (<a rel='noopener noreferrer' target='_blank' href='https://drive.google.com/file/d/1ml1GyCCM3i_N9O2DBZGUyGwI9wgzyDK0/view?usp=share_link' style={{ textDecoration: "none", color: "white", fontFamily: "productSans" }}>Problem Statement</a>),
         prizeMoney: "₹ 45,000",
         eventMode: "hybrid",
-        dateBefore: "1/03",
+        dateBefore: "22/03",
         coor: [{
             img: require('../../dummy.jpg'),
             nameOfEventCoordinator: "Indra Kumar",
@@ -68,7 +68,7 @@ export const datasOfEvent = [
         schedule: (<a rel='noopener noreferrer' target='_blank' href='https://drive.google.com/file/d/1LbBzbZilt3oRFeDSmpUfthOikGWviV1_/view?usp=drivesdka' style={{ textDecoration: "none", color: "white", fontFamily: "productSans" }}>Problem Statement</a>),
         prizeMoney: "₹ 16,000",
         eventMode: "hybrid",
-        dateBefore: "15/03",
+        dateBefore: "22/03",
         coor: [{
             img: require('../../dummy.jpg'),
             nameOfEventCoordinator: "Satyam Sharma",
