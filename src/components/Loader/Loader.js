@@ -6,7 +6,7 @@ const Loader = () => {
       <div class={styles.loader}>
         <svg id="triangle" width="60px" height="60px" viewbox="-3 -4 39 39">
           <polygon
-            fill="currentcolor"
+            fill="black"
             stroke="rgb(30, 255, 0)"
             stroke-width="3"
             points="60,0 0,0 30,60"
