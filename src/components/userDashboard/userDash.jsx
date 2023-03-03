@@ -282,7 +282,7 @@ const User_dasbord = () => {
                 <td>Whatsapp Number</td>
                 <td className="TableRow__res">{user && user.phone}</td>
               </tr>
-              <tr className="TableRow">
+              {/* <tr className="TableRow">
                 <td>Payment Status</td>
                 <td className="TableRow__res">
                   {user && user.isPaid ? "Paid" : (
@@ -296,7 +296,7 @@ const User_dasbord = () => {
                     </button>
                   )}
                 </td>
-              </tr>
+              </tr> */}
             </table>
           </div>
         </div>
