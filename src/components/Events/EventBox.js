@@ -19,18 +19,19 @@ function EventBox({ props, index }) {
   function HandleRegister() {
 	  console.log(authContext);
 	  console.log(user);
-  if (authContext.isUserLoggedIn) {
-	  if (!user.isVerified) {
-        		setErrorMade({ title: "Register Now", message: "Please verify your email" })
-	  } else if (!user.isPaid) {
-        		setErrorMade({ title: "Register Now", message: "Please Pay your registeration fee" })
-	  } else {
-			InitiateUserPayment();
-	  }
-  } else {
+    setErrorMade({title: "Coming Soon", message: 'Coming Soon'});
+  // if (authContext.isUserLoggedIn) {
+	//   if (!user.isVerified) {
+  //       		setErrorMade({ title: "Register Now", message: "Please verify your email" })
+	//   } else if (!user.isPaid) {
+  //       		setErrorMade({ title: "Register Now", message: "Please Pay your registeration fee" })
+	//   } else {
+	// 		InitiateUserPayment();
+	//   }
+  // } else {
 
-        		setErrorMade({ title: "Register Now", message: "Please Login" })
-  }
+  //       		setErrorMade({ title: "Register Now", message: "Please Login" })
+  // }
   }
   function InitiateUserPayment() {
 	  console.log(props);
