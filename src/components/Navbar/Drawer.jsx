@@ -90,12 +90,15 @@ const SDrawer = styled.div`
   top: 0;
   color: white;
   height:100%;
-  width: 20%;
+  width: 21%;
   overflow:hidden;
   border: 1px solid #68fe04;
   background-color: black;
   transition: 0.3s ease;
   transform: translateX(${(props) => (props.isOpen ? "0" : "-100%")});
+  @media (max-width: 1200px){
+    width:35%;
+  }
   @media (max-width: 600px){
     width:60%;
   }
@@ -117,7 +120,7 @@ const NavRoute = styled(Link)`
   display: flex;
   text-decoration: none;
   color: white;
-  font-size: 1rem;
+  font-size: 1.5rem;
   padding: 0.5rem;
   &:hover {
     color: #68fe04;

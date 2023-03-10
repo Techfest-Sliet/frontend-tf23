@@ -15,50 +15,50 @@ const ExpandMenu = ({toggleDrawer}) => {
       </MenuButton>
       <SubRoutesContainer isOpen={isMenuOpen}>
           <SubRoute 
-          onClick={toggleDrawer}
+          onClick={function() {toggleDrawer();toggleMenu()}}
           to= "/events/Aarambh" 
           key="Arambh">
             Arambh
           </SubRoute>
           <SubRoute 
-          onClick={toggleDrawer}
-          // onClick={toggleMenu}
+          
+          
           to= "/events/plexus" 
           key="plexus">
             Plexus
           </SubRoute>
           <SubRoute 
-          onClick={toggleDrawer}
+          onClick={function() {toggleDrawer();toggleMenu()}}
           to= "/events/Chemfor" 
           key="chemfor">
             Chemfor
           </SubRoute>
           <SubRoute 
-          onClick={toggleDrawer}
+          onClick={function() {toggleDrawer();toggleMenu()}}
           to= "/events/electrica" 
           key="electrica">
            Electrica
           </SubRoute>
           <SubRoute 
-          onClick={toggleDrawer}
+          onClick={function() {toggleDrawer();toggleMenu()}}
           to= "/events/genesis" 
           key="genesis">
            Genesis
           </SubRoute>
           <SubRoute 
-          onClick={toggleDrawer}
+          onClick={function() {toggleDrawer();toggleMenu()}}
           to= "/events/kermis" 
           key="kermis">
            Kermis
           </SubRoute>
           <SubRoute 
-          onClick={toggleDrawer}
+          onClick={function() {toggleDrawer();toggleMenu()}}
           to= "/events/robozar" 
           key="robozar">
            Robozar
           </SubRoute>
           <SubRoute 
-          onClick={toggleDrawer}
+          onClick={function() {toggleDrawer();toggleMenu()}}
           to= "/events/karyarachna" 
           key="karyarachna">
            Karyarachna
@@ -77,7 +77,7 @@ const SubRoutesContainer = styled.div`
 const SMenu = styled.div``;
 
 const MenuButton = styled.div`
-  font-size: 1rem;
+  font-size: 1.5rem;
   padding: 0.5rem;
   display: flex;
   align-items: center;
@@ -91,7 +91,7 @@ const SubRoute = styled(Link)`
   text-decoration: none;
   color: white;
   padding: 0.5rem;
-  font-size: 0.8rem; 
+  font-size: 1.2rem; 
    &:hover {
     transition: 0.3s ease-in;
     color: black;

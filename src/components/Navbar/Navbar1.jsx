@@ -1,7 +1,7 @@
 import React,{useContext} from "react";
 import styled from "styled-components";
 import { Link,useNavigate } from "react-router-dom";
-import { GiDeliveryDrone} from "react-icons/gi";
+import { TbAlignLeft} from "react-icons/tb";
 // import Menu from "./Menu";
 import Button from "./Button";
 import logo from "./logo.png";
@@ -19,7 +19,7 @@ const Navbar1 = ({ toggleDrawer }) => {
     <SNavbar>
       <NavContainer>
         <DrawerButton onClick={toggleDrawer}>
-          <GiDeliveryDrone />
+          <TbAlignLeft />
         </DrawerButton>
 
         <Image src={logo} alt="" />
@@ -77,8 +77,6 @@ const Navbar1 = ({ toggleDrawer }) => {
               </Link>
             )} */}
           <Button/>
-          
-
         </RightNav>
       </NavContainer>
     </SNavbar>
@@ -89,13 +87,13 @@ export default Navbar1;
 
 const DrawerButton = styled.button`
   all: unset;
-  font-size: 2rem;
+  font-size: 3rem;
   display: grid;
   // color: #68fe04;
   z-index:1;
-  // @media (min-width: 780px) {
-  //   display: none;
-  // }
+  @media (max-width: 780px) {
+    font-size: 2rem;
+  }
 `;
 
 const SNavbar = styled.nav`
@@ -116,28 +114,26 @@ const NavContainer = styled.div`
   color: white;
 `;
 const Image = styled.img`
-@media (max-width: 900px){
-  width:140px;
-  // margin-left:-3.5rem;
-  
-  }
-    width: 200px;
+    width:20%;
+    @media (max-width: 600px) {
+      width: 50%;
+    }
 `;
 const RightNav = styled.div`
   display: flex;
   gap: 1rem;
 `;
-const NavRoutes = styled.div`
-  @media (max-width: 900px) {
-    display: none;
-  }
-  display: flex;
-  gap: 1rem;
-  font-size: 1rem;
-   z-index:1;
-  align-items: center;
+// const NavRoutes = styled.div`
+//   @media (max-width: 900px) {
+//     display: none;
+//   }
+//   display: flex;
+//   gap: 1rem;
+//   font-size: 1rem;
+//    z-index:1;
+//   align-items: center;
 
-`;
+// `;
 // const NavRoute = styled(Link)`
 //   text-decoration: none;
 //   color: white;
