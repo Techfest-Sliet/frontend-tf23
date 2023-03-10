@@ -53,7 +53,7 @@ export const Navbar = (props) => {
             </li>
             <li>
               <Link to="/merchandise" onClick={unCheck}>
-                Merchandise
+                Merch
               </Link>
             </li>
             
