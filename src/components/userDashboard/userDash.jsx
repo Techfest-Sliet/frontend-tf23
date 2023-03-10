@@ -3,13 +3,14 @@ import axios from "axios";
 import { baseUrl } from "../../API/api";
 import AuthContext from "../../auth/authContext";
 import "./userDash.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import useRazorpay from "react-razorpay";
 import Loader from "../Loader/Loader";
 
 const User_dasbord = () => {
   const authContext = useContext(AuthContext);
   const [user, setUser] = useState(null);
+  const navigate = useNavigate();
   const Razorpay = useRazorpay();
   function InitiateUserPayment() {
     axios.post(`${baseUrl}/payment/userPaymentLink`, { userId: user._id }, {
@@ -64,6 +65,10 @@ const User_dasbord = () => {
     );
   }
   const [isLoading, setIsLoading] = useState(false);
+
+  const handleClick = () => {
+    navigate('/updateuser');
+  }
 
   useEffect(() => {
     setIsLoading(true);
@@ -229,6 +234,7 @@ const User_dasbord = () => {
                     className="editlogo"
                     src="https://img.icons8.com/external-others-inmotus-design/1x/external-Edit-virtual-keyboard-others-inmotus-design-3.png"
                     alt=""
+                    onClick={handleClick}
                   />
                 </td>
               </tr>

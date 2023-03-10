@@ -28,6 +28,7 @@ import UnderConstruction from "./components/Construction/underConstruction.js";
 import ForgotPassword from "./components/forgotPassword/forgotPassword";
 import Aboutus from '../src/screens/About us/AboutUs.jsx';
 import UserDashboard from './components/userDashboard/userDash.jsx';
+import UserUpdate from "./components/userDashboard/update";
 import OurTeam from './components/OurTeam/team.jsx';
 import AuthContext from './auth/authContext';
 import Verify from './components/verify/verify';
@@ -142,6 +143,8 @@ function App() {
             <Route path="/events/:title" element={<Events />} />
             <Route path="/merchandise" element={<Merch />} />
             {authContext.isUserLoggedIn && <Route path="/user-dashboard" element={<UserDashboard />} />}
+            
+            {authContext.isUserLoggedIn && <Route path="/updateuser" element={<UserUpdate />} />}
 
             <Route path="/feedback" element={<Feedback />} />
             {/* <Route path="/confirmedmail" element={<Confirmedmail/>}/> */}
