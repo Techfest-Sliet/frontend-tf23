@@ -104,7 +104,7 @@ function UserUpdate() {
     };
     setIsLoading(true);
     await axios
-      .post(`http://localhost:4000/user/updateuser`, update_user)
+      .post(`${baseUrl}/user/updateuser`, update_user)
       .then((result) => {
         const res = result;
         setIsLoading(false);
