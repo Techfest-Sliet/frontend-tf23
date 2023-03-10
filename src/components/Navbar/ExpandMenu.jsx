@@ -2,9 +2,8 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { FaAngleDown, FaAngleRight } from "react-icons/fa";
-import AuthContext from '../../auth/authContext';
 
-const ExpandMenu = ({ route }) => {
+const ExpandMenu = ({toggleDrawer}) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -12,14 +11,58 @@ const ExpandMenu = ({ route }) => {
   return (
     <SMenu>
       <MenuButton onClick={toggleMenu}>
-        {route.name} {isMenuOpen ? <FaAngleDown /> : <FaAngleRight />}
+        Domains {isMenuOpen ? <FaAngleDown /> : <FaAngleRight />}
       </MenuButton>
       <SubRoutesContainer isOpen={isMenuOpen}>
-        {route.subRoutes.map((subRoute) => (
-          <SubRoute to={subRoute.link} key={subRoute.name}>
-            {subRoute.name}
+          <SubRoute 
+          onClick={toggleDrawer}
+          to= "/events/Aarambh" 
+          key="Arambh">
+            Arambh
           </SubRoute>
-        ))}
+          <SubRoute 
+          onClick={toggleDrawer}
+          // onClick={toggleMenu}
+          to= "/events/plexus" 
+          key="plexus">
+            Plexus
+          </SubRoute>
+          <SubRoute 
+          onClick={toggleDrawer}
+          to= "/events/Chemfor" 
+          key="chemfor">
+            Chemfor
+          </SubRoute>
+          <SubRoute 
+          onClick={toggleDrawer}
+          to= "/events/electrica" 
+          key="electrica">
+           Electrica
+          </SubRoute>
+          <SubRoute 
+          onClick={toggleDrawer}
+          to= "/events/genesis" 
+          key="genesis">
+           Genesis
+          </SubRoute>
+          <SubRoute 
+          onClick={toggleDrawer}
+          to= "/events/kermis" 
+          key="kermis">
+           Kermis
+          </SubRoute>
+          <SubRoute 
+          onClick={toggleDrawer}
+          to= "/events/robozar" 
+          key="robozar">
+           Robozar
+          </SubRoute>
+          <SubRoute 
+          onClick={toggleDrawer}
+          to= "/events/karyarachna" 
+          key="karyarachna">
+           Karyarachna
+          </SubRoute>
       </SubRoutesContainer>
     </SMenu>
   );
