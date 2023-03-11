@@ -246,20 +246,13 @@ const User_dasbord = () => {
           <div className="dashboard_profile_container">
             <table className="profiletable">
               <tr>
-                <td>
+                {/* <td>
                   <div className="personal ">Personal Information</div>
-                </td>
-                {/* <td  colspan="2">
-                  <b>Personal Information</b>
                 </td> */}
-                <td>
-                  <img
-                    className="editlogo"
-                    src="https://img.icons8.com/external-others-inmotus-design/1x/external-Edit-virtual-keyboard-others-inmotus-design-3.png"
-                    alt=""
-                    onClick={handleClick}
-                  />
+                <td   colspan="2">
+                  <b>Personal Information</b>
                 </td>
+                
               </tr>
               <tr className="TableRow">
                 <td>Name</td>
@@ -325,6 +318,20 @@ const User_dasbord = () => {
                       Pay
                     </button>
                   )}
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div>Edit </div>
+                </td>
+             
+                <td colspan="2">
+                  <img
+                    className="editlogo"
+                    src="https://img.icons8.com/external-others-inmotus-design/1x/external-Edit-virtual-keyboard-others-inmotus-design-3.png"
+                    alt=""
+                    onClick={handleClick}
+                  />
                 </td>
               </tr>
             </table>
