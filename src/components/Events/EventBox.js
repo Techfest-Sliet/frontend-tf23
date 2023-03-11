@@ -1,24 +1,34 @@
 import React, { useContext, useEffect, useState } from "react";
 import axios from "axios";
+import { Popover } from "@mui/material";
 import { baseUrl } from "../../API/api";
+import Register from '../Team/Main_Page';
 import './EventBox.css';
 import { FaRegCalendar, FaRegClock, FaUnity } from "react-icons/fa";
 import ErrorModel from '../ErrorPopup/ErrorModel';
-import { Schedule } from '@mui/icons-material';
 import Razorpay from 'react-razorpay';
 import AuthContext from '../../auth/authContext';
 
-
 function EventBox({ props, index }) {
-    const [errorMade, setErrorMade] = useState();
-    const onErrorMadeHandle = () => {
-        setErrorMade(null);
-    };
+  const [errorMade, setErrorMade] = useState();
   const authContext = useContext(AuthContext);
+  const onErrorMadeHandle = () => {
+      setErrorMade(null);
+  };
+  const [anchorEl, setAnchorEl] = useState(null);
+  const [eventName, setEventName] = useState(null)
   const [user, setUser] = useState(null);
-  function HandleRegister() {
-	  console.log(authContext);
-	  console.log(user);
+  const handleClick = (event) => {
+    setEventName(event.target.value);
+    setAnchorEl(event.currentTarget);
+  };
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
+  const open = Boolean(anchorEl);
+  const id = open ? "simple-popover" : undefined;
+  function HandleRegister(e) {
+    // alert(e.target.value)
     setErrorMade({title: "Coming Soon", message: 'Coming Soon'});
   // if (authContext.isUserLoggedIn) {
 	//   if (!user.isVerified) {
@@ -31,8 +41,8 @@ function EventBox({ props, index }) {
   // } else {
 
   //       		setErrorMade({ title: "Register Now", message: "Please Login" })
-  // }
   }
+
   function InitiateUserPayment() {
 	  console.log(props);
     axios.post(`${baseUrl}/payment/eventPaymentLink`, { userId: user._id }, {
@@ -138,7 +148,7 @@ function EventBox({ props, index }) {
                                 <h1 style={{ textAlign: "left" }}>{props?.nameOfEvent}</h1>
                                 <p className='eventDesc'>{props?.desc}</p>
                                 <div style={{ float: "left" }}>
-                                    <button className='registerNowEvent' onClick={HandleRegister}> Register Now </button>
+                                    <button className='registerNowEvent' onClick={HandleRegister} value={props.nameOfEvent}> Register Now </button>
                                     <button className='problemStat' > {props?.schedule} </button>
                                 </div>
                                 <div style={{ float: "left" }}>
@@ -184,7 +194,7 @@ function EventBox({ props, index }) {
                                 <h1 style={{ textAlign: "left" }}>{props?.nameOfEvent}</h1>
                                 <p className='eventDesc'>{props?.desc}</p>
                                 <div style={{ float: "left" }}>
-                                    <button className='registerNowEvent' onClick={HandleRegister}> Register Now </button>
+                                    <button className='registerNowEvent' onClick={HandleRegister} value={props.nameOfEvent}> Register Now </button>
                                     <button className='problemStat'> {props?.schedule} </button>
                                 </div>
                                 <div style={{ float: "left" }}>
@@ -224,10 +234,25 @@ function EventBox({ props, index }) {
                     </div>)
             }
 
-
+            <Popover
+              id={id}
+              open={open}
+              anchorEl={anchorEl}
+              onClose={handleClose}
+              anchorOrigin={{
+                vertical: 'center',
+                horizontal: 'center',
+              }}
+            >
+              <Register 
+                eventName={eventName}
+                user={user}
+                eventMode={props.eventMode}
+              />
+            </Popover>
         </>
 
-    )
+            )
 }
 
 export default EventBox;

@@ -41,6 +41,11 @@ export const Navbar = (props) => {
                 Workshops
               </Link>
             </li>
+            {authContext.isUserLoggedIn && (
+              <li>
+                <Link to="/user-dashboard">Dashboard</Link>
+              </li>
+            )}
             <li className="domains">
               <span
                 // to="/about"
@@ -82,14 +87,10 @@ export const Navbar = (props) => {
               <Link to="/merchandise" onClick={unCheck}>
                 Merch
               </Link>
-            </li>
+            </li> */}
             
 
-            {authContext.isUserLoggedIn && (
-              <li>
-                <Link to="/user-dashboard">Dashboard</Link>
-              </li>
-            )}
+            
             <li className="domains">
               <Link
                 to="/domains"

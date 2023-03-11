@@ -310,7 +310,7 @@ const User_dasbord = () => {
                   {user && user.isPaid ? "Paid" : (
                     <button
                       type="button"
-                      onClick={InitiateUserPayment}
+                      // onClick={InitiateUserPayment}
                       value="Pay"
                       className="userDash__button"
                       onClick={HandlePay}
