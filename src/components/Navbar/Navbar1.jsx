@@ -1,13 +1,18 @@
-import React,{useContext} from "react";
+import React,{useContext,useState} from "react";
 import styled from "styled-components";
 import { Link,useNavigate } from "react-router-dom";
 import { TbAlignLeft} from "react-icons/tb";
+import { VscAccount } from "react-icons/vsc";
 // import Menu from "./Menu";
 import Button from "./Button";
 import logo from "./logo.png";
 import AuthContext from '../../auth/authContext';
 
 const Navbar1 = ({ toggleDrawer }) => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
   const authContext = useContext(AuthContext);
   const navigate = useNavigate();
   const logOutHandler = async () => {
@@ -21,7 +26,6 @@ const Navbar1 = ({ toggleDrawer }) => {
         <DrawerButton onClick={toggleDrawer}>
           <TbAlignLeft />
         </DrawerButton>
-
         <Image src={logo} alt="" />
         <RightNav>     
           {/* <NavRoutes>
@@ -76,7 +80,29 @@ const Navbar1 = ({ toggleDrawer }) => {
                 <LoginButton>Logout</LoginButton>
               </Link>
             )} */}
+          {!authContext.isUserLoggedIn && 
           <Button/>
+          }
+          {authContext.isUserLoggedIn && 
+            <MenuButton onClick={toggleMenu}>
+            <VscAccount/>
+          </MenuButton>
+          
+          }
+          <SubRoutesContainer isOpen={isMenuOpen}>
+          <SubRoute 
+          onClick={function() {toggleDrawer();toggleMenu()}}
+          to= "/events/Aarambh" 
+          key="Arambh">
+            Arambh
+          </SubRoute>
+          <SubRoute 
+          to= "/events/plexus" 
+          key="plexus">
+            Plexus
+          </SubRoute>
+      </SubRoutesContainer>
+
         </RightNav>
       </NavContainer>
     </SNavbar>
@@ -94,6 +120,30 @@ const DrawerButton = styled.button`
   @media (max-width: 780px) {
     font-size: 2rem;
   }
+`;
+
+const MenuButton = styled.div`
+font-size: 1.5rem;
+padding: 0.5rem;
+display: flex;
+align-items: center;
+justify-content: space-between;
+
+`;
+const SubRoute = styled(Link)`
+text-decoration: none;
+  color: white;
+  padding: .5rem;
+  font-size: 1.2rem; 
+   &:hover {
+    transition: 0.3s ease-in;
+    color: black;
+    background-color: #68fe04;
+  }`
+const SubRoutesContainer = styled.div`
+display: ${(props) => (props.isOpen ? "flex" : "none")};
+flex-direction: column;
+padding: 0.3rem;
 `;
 
 const SNavbar = styled.nav`

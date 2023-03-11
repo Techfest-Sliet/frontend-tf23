@@ -143,20 +143,20 @@ const NavRoute = styled(Link)`
 //     box-shadow: 0px 0px 10px gray;
 //   }
 // `;
-const LoginButton = styled.button`
-  padding: 0.6rem 2.5rem;
-  margin-left: 0.6rem;
-  font-size: 18px;
-  background-color: #68fe04;
-  border: 1px solid black;
-  border-radius: 0.5rem;
-  transition: 0.3s ease;
-  align-self: flex-start;
+// const LoginButton = styled.button`
+//   padding: 0.6rem 2.5rem;
+//   margin-left: 0.6rem;
+//   font-size: 18px;
+//   background-color: #68fe04;
+//   border: 1px solid black;
+//   border-radius: 0.5rem;
+//   transition: 0.3s ease;
+//   align-self: flex-start;
   
-  &:hover {
-    transition: 0.3s ease;
-    color: #011E05;
-    border: 1px solid transparent;
-    box-shadow: 0px 0px 10px black;
-  }
-`;
+//   &:hover {
+//     transition: 0.3s ease;
+//     color: #011E05;
+//     border: 1px solid transparent;
+//     box-shadow: 0px 0px 10px black;
+//   }
+// `;
