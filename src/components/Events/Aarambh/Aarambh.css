@@ -100,7 +100,7 @@ img.event_Aarambh {
     margin-left: 10vw;
 }
 
-.eventsBackgroundBottom {
+.eventsBackgroundBottomAarambh {
     background: linear-gradient(to left, rgb(0, 45, 0), rgb(0, 20, 0), black);
     height: auto;
     width: 100%;
@@ -191,6 +191,13 @@ img.event_Aarambh {
 
 }
 
+@media screen and (max-width: 615px) {
+    .eventsBackgroundBottomAarambh{
+        padding-bottom: 5%;
+    }
+}
+
+
 @media screen and (max-width: 550px) {
     .insideCntiner p {
         width: 75vw;
@@ -218,6 +225,12 @@ img.event_Aarambh {
         height: 45vh;
     }
 
+}
+
+@media screen and (max-width: 500px) {
+    .eventsBackgroundBottomAarambh{
+        padding-bottom: 7%;
+    }
 }
 
 @media screen and (max-width: 386px) {

@@ -205,6 +205,7 @@
     rgba(5, 62, 15, 1) 93%
   ); */
 /* } */
+
 .main_container {
   padding-top: 160px;
   margin: 0px auto;
@@ -312,6 +313,7 @@
   align-items: center;
   height: 75vh;
   flex-direction: column;
+  padding-bottom: 10vh;
 }
 
 .sponsorImages {
@@ -563,6 +565,11 @@
     font-size: 75px;
   }
 
+  .extendedPage {
+    height: auto;
+    padding-bottom: 5%;
+  }
+
   .trailerBox {
     width: 85vw;
     height: 60vh;
@@ -658,7 +665,7 @@
 
   .sponsor {
     margin-top: 3rem;
-    padding-bottom: 20%;
+    /* padding-bottom: 25%; */
     height: 60vh;
   }
 }
@@ -695,6 +702,11 @@
     font-size: 45px;
     font-weight: 800;
     margin-bottom: 10px;
+  }
+
+  .extendedPage {
+    height: auto;
+    padding-bottom: 10%;
   }
 
   .landingText {

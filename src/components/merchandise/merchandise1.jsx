@@ -19,7 +19,7 @@ import "./merchandise.css";
         <div className="tf_content">
           <div className="merch_top">
             {/* <div className="merch_text"> */}
-              <h2 className="be_a_prt">be a part !</h2>
+              <h1 className="be_a_prt">be a part !</h1>
             {/* </div> */}
             {/* <div className="cart_icon">
               <img src={Icon} alt="" className="merch_icon" />

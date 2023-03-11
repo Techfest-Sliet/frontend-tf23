@@ -36,7 +36,7 @@ const Aarambh = () => {
         <h1 className="evnts">EVENTS</h1>
       </div>
       {datasOfEvent.map((item, index) => (
-        <div className="eventsBackgroundBottom" key={index}>
+        <div className="eventsBackgroundBottomAarambh" key={index}>
           <EventBoxAarambh props={item} index={index} />
         </div>
       ))}
