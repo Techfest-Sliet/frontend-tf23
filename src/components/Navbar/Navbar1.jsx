@@ -1,32 +1,56 @@
-import React,{useContext,useState} from "react";
+import React,{useContext,useState,useEffect} from "react";
 import styled from "styled-components";
-import { Link,useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { TbAlignLeft} from "react-icons/tb";
-import { VscAccount } from "react-icons/vsc";
+import { FaRegUser } from "react-icons/fa";
 // import Menu from "./Menu";
-import Button from "./Button";
+import { baseUrl } from "../../API/api";
+import axios from "axios";
 import logo from "./logo.png";
 import AuthContext from '../../auth/authContext';
 
+
 const Navbar1 = ({ toggleDrawer }) => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
+  const [user, setUser] = useState(false);
+  // const toggleMenu = () => {
+  //   setIsMenuOpen(!isMenuOpen);
+  // };
   const authContext = useContext(AuthContext);
   const navigate = useNavigate();
-  const logOutHandler = async () => {
-    authContext.logout();
-    navigate("/");
-  };
 
+
+  const navigateHandler = () => {
+    navigate("/sign-in")
+  }
+
+  const navigateHomeHandler = () => {
+    navigate("/")
+  }
+
+  useEffect(() => {
+    axios
+      .get(`${baseUrl}/user/getUserById`, {
+        headers: {
+          Authorization: "Bearer " + authContext.token,
+        },
+      })
+      .then((result) => {
+ 
+        setUser(result.data.user);
+      })
+      .catch((err) => {
+          console.log(err);
+      })
+      
+  }, [authContext.login])
+  
   return (
     <SNavbar>
       <NavContainer>
         <DrawerButton onClick={toggleDrawer}>
           <TbAlignLeft />
         </DrawerButton>
-        <Image src={logo} alt="" />
+        <Image src={logo} alt="" onClick={navigateHomeHandler}/>
         <RightNav>     
           {/* <NavRoutes>
           <NavRoute
@@ -80,34 +104,20 @@ const Navbar1 = ({ toggleDrawer }) => {
                 <LoginButton>Logout</LoginButton>
               </Link>
             )} */}
-          {!authContext.isUserLoggedIn && 
-          <Button/>
-          }
-          {authContext.isUserLoggedIn && 
-            <MenuButton onClick={toggleMenu}>
-            <VscAccount/>
-          </MenuButton>
-          
-          }
-          <SubRoutesContainer isOpen={isMenuOpen}>
-          <SubRoute 
-          onClick={function() {toggleDrawer();toggleMenu()}}
-          to= "/events/Aarambh" 
-          key="Arambh">
-            Arambh
-          </SubRoute>
-          <SubRoute 
-          to= "/events/plexus" 
-          key="plexus">
-            Plexus
-          </SubRoute>
-      </SubRoutesContainer>
+            {!authContext.isUserLoggedIn && 
+          <LoginButton onClick={navigateHandler}>Login</LoginButton>}
+            {authContext.isUserLoggedIn && 
+            <div style={{display: "flex", cursor: "pointer"}}>
+              <FaRegUser style={{fontSize: "23px", marginRight: "5px"}}/>
+              <Profile onClick="">Hi! {user.name}</Profile>              
+              </div>
+}
 
         </RightNav>
       </NavContainer>
     </SNavbar>
   );
-};
+}
 
 export default Navbar1;
 
@@ -122,29 +132,7 @@ const DrawerButton = styled.button`
   }
 `;
 
-const MenuButton = styled.div`
-font-size: 1.5rem;
-padding: 0.5rem;
-display: flex;
-align-items: center;
-justify-content: space-between;
 
-`;
-const SubRoute = styled(Link)`
-text-decoration: none;
-  color: white;
-  padding: .5rem;
-  font-size: 1.2rem; 
-   &:hover {
-    transition: 0.3s ease-in;
-    color: black;
-    background-color: #68fe04;
-  }`
-const SubRoutesContainer = styled.div`
-display: ${(props) => (props.isOpen ? "flex" : "none")};
-flex-direction: column;
-padding: 0.3rem;
-`;
 
 const SNavbar = styled.nav`
       background-color: black;
@@ -169,9 +157,40 @@ const Image = styled.img`
       width: 50%;
     }
 `;
+
+const Profile = styled.h2`
+@media (max-width: 900px){
+  display: none;
+}
+`
 const RightNav = styled.div`
   display: flex;
   gap: 1rem;
+`;
+const LoginButton = styled.button`
+  padding: 8px 25px;
+  margin-left: 0.6rem;
+  font-size: 20px;
+  color:#68fe04;
+  background-color: black;
+  border: 1px solid #68fe04;
+  border-radius: 2rem;
+  transition: 0.3s ease;
+  align-self: flex-start;
+  z-index:1;
+  cursor:pointer;
+  &:hover {
+    transition: 0.3s ease;
+    color: black;
+    background-color:#68fe04;
+    // border: 1px solid transparent;
+    // box-shadow: 0px 0px 10px black;
+
+  }
+  @media (max-width: 600px){
+    font-size: 12px;
+    padding: 5px 16px;
+  }
 `;
 // const NavRoutes = styled.div`
 //   @media (max-width: 900px) {

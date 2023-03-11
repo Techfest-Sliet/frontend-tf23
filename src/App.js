@@ -3,8 +3,8 @@ import { GoogleReCaptchaProvider } from 'react-google-recaptcha-v3';
 import React, { useContext, useState } from "react";
 import { useLocation } from "react-router-dom";
 import { Route, Routes } from "react-router";
-import {Navbar}  from "./components/Navbar/Navbar.js";
-// import Navigation from "./components/Navbar/Navigation.jsx"
+// import {Navbar}  from "./components/Navbar/Navbar.js";
+import Navigation from "./components/Navbar/Navigation.jsx"
 import Footer from "./components/Footer/Footer";
 import axios from "axios";
 import SignUp from "./components/Signup/Signup";
@@ -97,7 +97,7 @@ function App() {
         <div className="App">
           {location.pathname !== "/sign-up" &&
             location.pathname !== "/sign-in" && (
-              <Navbar isAuth={isUserLoggedIn} onLogout={logOutHandler} />
+              <Navigation isAuth={isUserLoggedIn} onLogout={logOutHandler} />
             )}
 
           {location.pathname !== "/sign-up" &&

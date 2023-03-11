@@ -1,29 +1,40 @@
-import React, {useContext} from "react";
+import React, {useContext,useState} from "react";
 import styled from "styled-components";
 import { Link, useNavigate } from "react-router-dom";
 import AuthContext from "../../auth/authContext";
 import ExpandMenu from "./ExpandMenu";
+import logo from "./logo.png";
 const Drawer = ({ isOpen, toggleDrawer }) => {
 
   const authContext = useContext(AuthContext);
   const navigate = useNavigate();
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
   const logOutHandler = async () => {
     authContext.logout();
     navigate("/");
   };
+  const navigateHomeHandler = () => {
+    navigate("/")
+  }
+
   return (
     <>
-      {isOpen && <Backdrop onClick={toggleDrawer} />}
+      {isOpen && <Backdrop onClick = {function() {toggleDrawer();toggleMenu()}}/>}
       <SDrawer isOpen={isOpen}>
+      
         <RightNav>
+        <Image src={logo} alt="" onClick = {function() {toggleDrawer();navigateHomeHandler()}}/>
           <NavRoutes>
-                <NavRoute
+                {/* <NavRoute
                   onClick={toggleDrawer}
                   to="/"
                   key="Home"
                 >
                   Home
-                </NavRoute>
+                </NavRoute> */}
                 <NavRoute
                   onClick={toggleDrawer}
                   to="/under-construction"
@@ -63,6 +74,25 @@ const Drawer = ({ isOpen, toggleDrawer }) => {
                   Dashboard
                 </NavRoute>
                 )}
+                {!authContext.isUserLoggedIn && (
+                <NavRoute
+                  onClick={toggleDrawer}
+                  to="/sign-in"
+                  key="sign-in"
+                >
+                  Login
+                </NavRoute>
+                )}
+                {authContext.isUserLoggedIn && (
+                <NavRoute
+                  onClick={logOutHandler}
+                  to="/sign-up"
+                  key="sign-up"
+                >
+                  Logout
+                </NavRoute>
+                )}
+                
           </NavRoutes>          
         </RightNav>
       </SDrawer>
@@ -74,6 +104,14 @@ export default Drawer;
 // const SNavbarBrand = styled.h2`
 //   font-size: 1.5rem;
 // `;
+const Image = styled.img`
+    padding: 1rem;
+    width:80%;
+    cursor: pointer;
+    @media (max-width: 600px) {
+      width: 90%;
+    }
+`;
 const Backdrop = styled.div`
   height: 100%;
   width: 100%;
@@ -92,7 +130,7 @@ const SDrawer = styled.div`
   height:100%;
   width: 21%;
   overflow:hidden;
-  border: 1px solid #68fe04;
+  // border: 1px solid #68fe04;
   background-color: black;
   transition: 0.3s ease;
   transform: translateX(${(props) => (props.isOpen ? "0" : "-100%")});
@@ -123,8 +161,10 @@ const NavRoute = styled(Link)`
   font-size: 1.5rem;
   padding: 0.5rem;
   &:hover {
-    color: #68fe04;
-    transition: transform 250ms ease-in-out;
+    transition: 0.3s ease-in;
+    color: black;
+    background-color: #68fe04;
+    border-radius: 5px;
   }
 `;
 

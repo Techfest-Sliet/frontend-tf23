@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import { Link } from "react-router-dom";
+import { Link,useNavigate } from "react-router-dom";
 import { FaAngleDown, FaAngleRight } from "react-icons/fa";
 
 const ExpandMenu = ({toggleDrawer}) => {
@@ -8,9 +8,14 @@ const ExpandMenu = ({toggleDrawer}) => {
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
+  const navigate = useNavigate();
+  const navigateHandler = () => {
+    navigate("/domains")
+  }
+
   return (
     <SMenu>
-      <MenuButton onClick={toggleMenu}>
+      <MenuButton onClick={function() {navigateHandler();toggleMenu()}}>
         Domains {isMenuOpen ? <FaAngleDown /> : <FaAngleRight />}
       </MenuButton>
       <SubRoutesContainer isOpen={isMenuOpen}>
@@ -21,6 +26,7 @@ const ExpandMenu = ({toggleDrawer}) => {
             Arambh
           </SubRoute>
           <SubRoute 
+          onClick={function() {toggleDrawer();toggleMenu()}}
           to= "/events/plexus" 
           key="plexus">
             Plexus
@@ -81,7 +87,10 @@ const MenuButton = styled.div`
   align-items: center;
   justify-content: space-between;
   &:hover {
-    color:#68fe04;
+    transition: 0.3s ease-in;
+    color: black;
+    background-color: #68fe04;
+    border-radius: 5px;
   }
 `;
 
@@ -94,6 +103,7 @@ const SubRoute = styled(Link)`
     transition: 0.3s ease-in;
     color: black;
     background-color: #68fe04;
+    border-radius: 5px;
   }
   
 `;
