@@ -12,7 +12,7 @@
     position: absolute;
     content: "";
     opacity: 0.8;
-    background-image: linear-gradient(to bottom right, rgb(0, 82, 0), rgb(0, 20, 0), black);
+    /* background-image: linear-gradient(to bottom right, rgb(0, 82, 0), rgb(0, 20, 0), black); */
     top: 0;
     right: 0;
     bottom: 0;

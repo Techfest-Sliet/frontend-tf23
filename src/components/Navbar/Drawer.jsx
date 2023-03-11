@@ -3,11 +3,7 @@ import styled from "styled-components";
 import { Link, useNavigate } from "react-router-dom";
 import AuthContext from "../../auth/authContext";
 import ExpandMenu from "./ExpandMenu";
-const Drawer = ({ isOpen, toggleDrawer, routes }) => {
-
-  const navRoutes = routes.filter((route) =>{
-    return (route.name !== "Dashboard" && route.name !== "Domains");
-  } );
+const Drawer = ({ isOpen, toggleDrawer }) => {
 
   const authContext = useContext(AuthContext);
   const navigate = useNavigate();
@@ -21,50 +17,53 @@ const Drawer = ({ isOpen, toggleDrawer, routes }) => {
       <SDrawer isOpen={isOpen}>
         <RightNav>
           <NavRoutes>
-              {routes.map((route) => {
-                if(AuthContext.isUserLoggedIn){
-              return (
                 <NavRoute
                   onClick={toggleDrawer}
-                  to={route.link}
-                  key={route.name}
+                  to="/"
+                  key="Home"
                 >
-                  {route.name}
+                  Home
                 </NavRoute>
-              )}
-            })}
-            { navRoutes.map((rout) =>{
-                if(!AuthContext.isUserLoggedIn){
-                console.log(rout);
-                return(
-                <NavRoute onClick={toggleDrawer}
-                to={rout.link} 
-                key={rout.name}
+                <NavRoute
+                  onClick={toggleDrawer}
+                  to="/under-construction"
+                  key="Workshops"
                 >
-                {rout.name}
-              </NavRoute>
-                )
-              }})
-            }
-            {routes.map((route) => {
-              if (route.subRoutes) {
-                return <ExpandMenu 
-                route={route}
-                key={route.name} 
-                onClick={toggleDrawer}
-                />;
-              }})}
-          </NavRoutes>
-          {!authContext.isUserLoggedIn && (
-              <Link to="/sign-in" className="signInButton">
-                <LoginButton>Login</LoginButton>
-              </Link>
-            )}
-            {authContext.isUserLoggedIn && (
-              <Link to="/" className="signInButton" onClick={logOutHandler}>
-                <LoginButton>Logout</LoginButton>
-              </Link>
-            )}
+                  Workshops
+                </NavRoute>
+                <NavRoute
+                  onClick={toggleDrawer}
+                  to="/about"
+                  key="About Us"
+                >
+                  About Us
+                </NavRoute>
+                <NavRoute
+                  onClick={toggleDrawer}
+                  to="/faq"
+                  key="faq"
+                >
+                  FAQ
+                </NavRoute>
+                <NavRoute
+                  onClick={toggleDrawer}
+                  to="/our-team"
+                  key="our-team"
+                >
+                  Our Team
+                </NavRoute>
+
+                <ExpandMenu toggleDrawer={toggleDrawer}/>
+                {authContext.isUserLoggedIn && (
+                <NavRoute
+                  onClick={toggleDrawer}
+                  to="/dashboard"
+                  key="dashboard"
+                >
+                  Dashboard
+                </NavRoute>
+                )}
+          </NavRoutes>          
         </RightNav>
       </SDrawer>
     </>
@@ -91,10 +90,18 @@ const SDrawer = styled.div`
   top: 0;
   color: white;
   height:100%;
-  width: 60%;
+  width: 21%;
+  overflow:hidden;
+  border: 1px solid #68fe04;
   background-color: black;
   transition: 0.3s ease;
   transform: translateX(${(props) => (props.isOpen ? "0" : "-100%")});
+  @media (max-width: 1200px){
+    width:35%;
+  }
+  @media (max-width: 600px){
+    width:60%;
+  }
 `;
 
 const RightNav = styled.div`
@@ -113,7 +120,7 @@ const NavRoute = styled(Link)`
   display: flex;
   text-decoration: none;
   color: white;
-  font-size: 1rem;
+  font-size: 1.5rem;
   padding: 0.5rem;
   &:hover {
     color: #68fe04;

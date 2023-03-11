@@ -4,7 +4,7 @@ import React, { useContext, useState } from "react";
 import { useLocation } from "react-router-dom";
 import { Route, Routes } from "react-router";
 import { Navbar } from "./components/Navbar/Navbar";
-// import Navigation from "./components/Navbar/Navigation.jsx"
+import Navigation from "./components/Navbar/Navigation.jsx"
 import Footer from "./components/Footer/Footer";
 import axios from "axios";
 import SignUp from "./components/Signup/Signup";
@@ -39,6 +39,7 @@ import Feedback from "./components/Feedback/feedback";
 import Date from "./components/Date/Date"
 import Datehorizontal from "./components/Datehorizontal/Datehorizontal";
 import Merch from './components/merchandise/merchandise1.jsx';
+
 
 
 function App() {
@@ -96,10 +97,9 @@ function App() {
         <div className="App">
            {location.pathname !== "/sign-up" &&
             location.pathname !== "/sign-in" && (
-              <Navbar isAuth={isUserLoggedIn} onLogout={logOutHandler} />
+              <Navigation isAuth={isUserLoggedIn} onLogout={logOutHandler} />
             )}
-            {/* <Navigation /> */}
-            {/* <Navigation /> */}
+
           {location.pathname !== "/sign-up" &&
             location.pathname !== "/sign-in" &&
             location.pathname !== "/user-dashboard" && <Footer />}
