@@ -3,7 +3,7 @@ import { GoogleReCaptchaProvider } from 'react-google-recaptcha-v3';
 import React, { useContext, useState } from "react";
 import { useLocation } from "react-router-dom";
 import { Route, Routes } from "react-router";
-import { Navbar } from "./components/Navbar/Navbar";
+import {Navbar}  from "./components/Navbar/Navbar.js";
 // import Navigation from "./components/Navbar/Navigation.jsx"
 import Footer from "./components/Footer/Footer";
 import axios from "axios";
@@ -28,6 +28,7 @@ import UnderConstruction from "./components/Construction/underConstruction.js";
 import ForgotPassword from "./components/forgotPassword/forgotPassword";
 import Aboutus from '../src/screens/About us/AboutUs.jsx';
 import UserDashboard from './components/userDashboard/userDash.jsx';
+import UserUpdate from "./components/userDashboard/update";
 import OurTeam from './components/OurTeam/team.jsx';
 import AuthContext from './auth/authContext';
 import Verify from './components/verify/verify';
@@ -38,6 +39,7 @@ import Feedback from "./components/Feedback/feedback";
 import Date from "./components/Date/Date"
 import Datehorizontal from "./components/Datehorizontal/Datehorizontal";
 import Merch from './components/merchandise/merchandise1.jsx';
+
 
 
 function App() {
@@ -97,7 +99,10 @@ function App() {
             location.pathname !== "/sign-in" && (
               <Navbar isAuth={isUserLoggedIn} onLogout={logOutHandler} />
             )}
-          {/* <Navigation /> */}
+
+          {location.pathname !== "/sign-up" &&
+            location.pathname !== "/sign-in" &&
+            location.pathname !== "/user-dashboard" && <Footer />}
 
           {location.pathname === '/' &&
             <Date />
@@ -137,7 +142,10 @@ function App() {
             <Route path="/verify" element={<Verify />} />
             <Route path="/events/:title" element={<Events />} />
             <Route path="/merchandise" element={<Merch />} />
+
             {authContext.isUserLoggedIn && <Route path="/user-dashboard" element={<UserDashboard />} />}
+            
+            {authContext.isUserLoggedIn && <Route path="/updateuser" element={<UserUpdate />} />}
 
             <Route path="/feedback" element={<Feedback />} />
             {/* <Route path="/confirmedmail" element={<Confirmedmail/>}/> */}

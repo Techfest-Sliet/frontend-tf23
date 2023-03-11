@@ -2,9 +2,8 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { FaAngleDown, FaAngleRight } from "react-icons/fa";
-import AuthContext from '../../auth/authContext';
 
-const ExpandMenu = ({ route }) => {
+const ExpandMenu = ({toggleDrawer}) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -12,14 +11,58 @@ const ExpandMenu = ({ route }) => {
   return (
     <SMenu>
       <MenuButton onClick={toggleMenu}>
-        {route.name} {isMenuOpen ? <FaAngleDown /> : <FaAngleRight />}
+        Domains {isMenuOpen ? <FaAngleDown /> : <FaAngleRight />}
       </MenuButton>
       <SubRoutesContainer isOpen={isMenuOpen}>
-        {route.subRoutes.map((subRoute) => (
-          <SubRoute to={subRoute.link} key={subRoute.name}>
-            {subRoute.name}
+          <SubRoute 
+          onClick={function() {toggleDrawer();toggleMenu()}}
+          to= "/events/Aarambh" 
+          key="Arambh">
+            Arambh
           </SubRoute>
-        ))}
+          <SubRoute 
+          
+          
+          to= "/events/plexus" 
+          key="plexus">
+            Plexus
+          </SubRoute>
+          <SubRoute 
+          onClick={function() {toggleDrawer();toggleMenu()}}
+          to= "/events/Chemfor" 
+          key="chemfor">
+            Chemfor
+          </SubRoute>
+          <SubRoute 
+          onClick={function() {toggleDrawer();toggleMenu()}}
+          to= "/events/electrica" 
+          key="electrica">
+           Electrica
+          </SubRoute>
+          <SubRoute 
+          onClick={function() {toggleDrawer();toggleMenu()}}
+          to= "/events/genesis" 
+          key="genesis">
+           Genesis
+          </SubRoute>
+          <SubRoute 
+          onClick={function() {toggleDrawer();toggleMenu()}}
+          to= "/events/kermis" 
+          key="kermis">
+           Kermis
+          </SubRoute>
+          <SubRoute 
+          onClick={function() {toggleDrawer();toggleMenu()}}
+          to= "/events/robozar" 
+          key="robozar">
+           Robozar
+          </SubRoute>
+          <SubRoute 
+          onClick={function() {toggleDrawer();toggleMenu()}}
+          to= "/events/karyarachna" 
+          key="karyarachna">
+           Karyarachna
+          </SubRoute>
       </SubRoutesContainer>
     </SMenu>
   );
@@ -34,7 +77,7 @@ const SubRoutesContainer = styled.div`
 const SMenu = styled.div``;
 
 const MenuButton = styled.div`
-  font-size: 1rem;
+  font-size: 1.5rem;
   padding: 0.5rem;
   display: flex;
   align-items: center;
@@ -48,7 +91,7 @@ const SubRoute = styled(Link)`
   text-decoration: none;
   color: white;
   padding: 0.5rem;
-  font-size: 0.8rem; 
+  font-size: 1.2rem; 
    &:hover {
     transition: 0.3s ease-in;
     color: black;

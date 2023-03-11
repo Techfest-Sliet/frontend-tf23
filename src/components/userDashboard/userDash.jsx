@@ -3,13 +3,23 @@ import axios from "axios";
 import { baseUrl } from "../../API/api";
 import AuthContext from "../../auth/authContext";
 import "./userDash.css";
-import { Link } from "react-router-dom";
+import ErrorModel from '../ErrorPopup/ErrorModel';
+import { Link, useNavigate } from "react-router-dom";
 import useRazorpay from "react-razorpay";
 import Loader from "../Loader/Loader";
 
 const User_dasbord = () => {
   const authContext = useContext(AuthContext);
+  const [errorMade, setErrorMade] = useState();
+    const onErrorMadeHandle = () => {
+        setErrorMade(null);
+    };
   const [user, setUser] = useState(null);
+  function HandlePay() {
+	  console.log(authContext);
+	  console.log(user);
+    setErrorMade({title: "Coming Soon", message: 'Coming Soon'});}
+  const navigate = useNavigate();
   const Razorpay = useRazorpay();
   function InitiateUserPayment() {
     axios.post(`${baseUrl}/payment/userPaymentLink`, { userId: user._id }, {
@@ -65,6 +75,10 @@ const User_dasbord = () => {
   }
   const [isLoading, setIsLoading] = useState(false);
 
+  const handleClick = () => {
+    navigate('/updateuser');
+  }
+
   useEffect(() => {
     setIsLoading(true);
     axios
@@ -95,17 +109,27 @@ const User_dasbord = () => {
       });
   }, [authContext, authContext.login]);
   return (
+    <>
+    
     <div className="Dashboard__body">
       {isLoading && <Loader />}
+      {errorMade &&
+        <ErrorModel
+            title={errorMade.title}
+            message={errorMade.message}
+            onErrorClick={onErrorMadeHandle}
+        />
+    }
       <div className="row_justify-content-around" style={{height:"100vh"}}>
         <div className="userdashbord_body">
-          <h2 className="user__header">Namaste! {user && user.name}</h2>
+          <div className="user__header">Namaste! {user && user.name}</div>
           <p className="blockquote-footer">
-            Your Unique tF ID is {user && user.userId}
+            {/* Your Unique tF ID is {user && user.userId} */}
           </p>
         </div>
         {
-          /* <div className="flex_topbox">
+          
+            <div className="flex_topbox">
           <div className="card-bodytop">
             <h3 className="card-title text-light text-center">
               <img
@@ -115,11 +139,12 @@ const User_dasbord = () => {
               />
               Events Registered
             </h3>
+            
             <div className="collapse1 p-4 mt-4 mb-2">
               <div class="scrollbar" id="scrollbar-custom">
                 <table className="table_text-light">
                   <tbody>
-                    <tr>
+                    {/* <tr>
                       <td>Name of Event</td>
                       <td>Date</td>
                     </tr>
@@ -150,7 +175,7 @@ const User_dasbord = () => {
                     <tr>
                       <td>Name of Event</td>
                       <td>Date</td>
-                    </tr>
+                    </tr> */}
                   </tbody>
                 </table>
               </div>
@@ -169,7 +194,7 @@ const User_dasbord = () => {
               <div class="scrollbar" id="scrollbar-custom">
                 <table className="table_text-light">
                   <tbody>
-                    <tr>
+                    {/* <tr>
                       <td>Name of Worshop</td>
                       <td></td>
                       <td>Date</td>
@@ -208,36 +233,33 @@ const User_dasbord = () => {
                       <td>Name of Worshop</td>
                       <td></td>
                       <td>Date</td>
-                    </tr>
+                    </tr> */}
                   </tbody>
                 </table>
               </div>
             </div>
           </div>
-        </div> */
+        </div>
         }
 
         <div className="card-bodymid">
           <div className="dashboard_profile_container">
             <table className="profiletable">
               <tr>
-                <td>
-                  <h3 className="personal ">Personal Information</h3>
+                {/* <td>
+                  <div className="personal ">Personal Information</div>
+                </td> */}
+                <td   colspan="2">
+                  <b>Personal Information</b>
                 </td>
-                <td>
-                  <img
-                    className="editlogo"
-                    src="https://img.icons8.com/external-others-inmotus-design/1x/external-Edit-virtual-keyboard-others-inmotus-design-3.png"
-                    alt=""
-                  />
-                </td>
+                
               </tr>
               <tr className="TableRow">
                 <td>Name</td>
                 <td className="TableRow__res ">{user && user.name}</td>
               </tr>
               <tr className="TableRow">
-                <td>Organisation/College Name</td>
+                <td>College Name</td>
 
                 <td className="TableRow__res">{user && user.collegeName}</td>
               </tr>
@@ -282,7 +304,7 @@ const User_dasbord = () => {
                 <td>Whatsapp Number</td>
                 <td className="TableRow__res">{user && user.phone}</td>
               </tr>
-              {/* <tr className="TableRow">
+              <tr className="TableRow">
                 <td>Payment Status</td>
                 <td className="TableRow__res">
                   {user && user.isPaid ? "Paid" : (
@@ -291,12 +313,27 @@ const User_dasbord = () => {
                       onClick={InitiateUserPayment}
                       value="Pay"
                       className="userDash__button"
+                      onClick={HandlePay}
                     >
                       Pay
                     </button>
                   )}
                 </td>
-              </tr> */}
+              </tr>
+              <tr>
+                <td>
+                  <div>Edit </div>
+                </td>
+             
+                <td colspan="2">
+                  <img
+                    className="editlogo"
+                    src="https://img.icons8.com/external-others-inmotus-design/1x/external-Edit-virtual-keyboard-others-inmotus-design-3.png"
+                    alt=""
+                    onClick={handleClick}
+                  />
+                </td>
+              </tr>
             </table>
           </div>
         </div>
@@ -833,7 +870,9 @@ const User_dasbord = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
+
 
 export default User_dasbord;

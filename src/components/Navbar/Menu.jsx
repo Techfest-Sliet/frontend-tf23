@@ -1,16 +1,43 @@
 import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-const Menu = ({ route }) => {
+const Menu = () => {
   return (
     <SMenu>
-      <MenuButton>{route.name}</MenuButton>
+      <MenuButton>Domain</MenuButton>
       <SubRoutesContainer>
-        {route.subRoutes.map((subRoute) => (
-          <SubRoute to={subRoute.link} key={subRoute.name}>
-            {subRoute.name}
+      <SubRoute to= "/events/Aarambh" 
+          key="Arambh">
+            Arambh
           </SubRoute>
-        ))}
+          <SubRoute to= "/events/plexus" 
+          key="plexus">
+            Plexus
+          </SubRoute>
+          <SubRoute to= "/events/Chemfor" 
+          key="chemfor">
+            Chemfor
+          </SubRoute>
+          <SubRoute to= "/events/electrica" 
+          key="electrica">
+           Electrica
+          </SubRoute>
+          <SubRoute to= "/events/genesis" 
+          key="genesis">
+           Genesis
+          </SubRoute>
+          <SubRoute to= "/events/kermis" 
+          key="kermis">
+           Kermis
+          </SubRoute>
+          <SubRoute to= "/events/robozar" 
+          key="robozar">
+           Robozar
+          </SubRoute>
+          <SubRoute to= "/events/karyarachna" 
+          key="karyarachna">
+           Karyarachna
+          </SubRoute>
       </SubRoutesContainer>
     </SMenu>
   );
