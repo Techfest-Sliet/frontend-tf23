@@ -121,7 +121,7 @@ const HomePage = () => {
           <div className="trailerBox" style={{ marginTop: 4 }}>
             <iframe
               className="trailerVid"
-              src="https://www.youtube.com/embed/fHY-RI6Y5sg"
+              src="https://www.youtube.com/embed/XDHiAhdgGcU"
               title="YouTube video player"
               frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -131,9 +131,12 @@ const HomePage = () => {
         </div>
 
         {/* sponsor */}
-        <div className="sponsor" style={{ marginTop: 14 }} >
-          <h1 id="sponsor" style={{ color: "#74EB76",marginBottom:"3rem" }}>
-            <span style={{ color: "white", fontFamily: "monumentExtended" }}>PAST</span> PARTNERS
+        <div className="sponsor" style={{ marginTop: 14 }}>
+          <h1 id="sponsor" style={{ color: "#74EB76", marginBottom: "3rem" }}>
+            <span style={{ color: "white", fontFamily: "monumentExtended" }}>
+              PAST
+            </span>{" "}
+            PARTNERS
           </h1>
           <SliderDiv arr={SponsorImageSlider} />
         </div>
