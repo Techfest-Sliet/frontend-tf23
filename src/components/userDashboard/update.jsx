@@ -125,6 +125,7 @@ function UserUpdate() {
   };
 
   return (
+    
       <div className="Dashboard__body">
       {isLoading && <Loader />}
       {errorMade &&
@@ -136,17 +137,17 @@ function UserUpdate() {
             }
       <div className="row_justify-content-around">
         <div className="userdashbord_body">
-          <h2 style={{textDecoration:"underline",textAlign:"center",marginBottom:"10px"}}>Namaste!</h2>
-          <p className="blockquote-footer">Your Unique tF ID is {user?.userId}</p>
-          <p className="blockquote-footer">Your Verified mail is {user?.email}</p>
+          <div style={{textDecoration:"underline",textAlign:"center",marginBottom:"10px"}}>Namaste!</div>
+          {/* <p className="blockquote-footer">Your Unique tF ID is {user?.userId}</p>
+          <p className="blockquote-footer">Your Verified mail is {user?.email}</p> */}
         </div>
 
         <div className="card-bodymid">
           <div className="dashboard_profile_container">
             <table className="profiletable">
               <tr>
-                <td>
-                  <h3 className="personal ">Personal Information</h3>
+                <td  colspan="2">
+                  <b>Personal Information</b>
                 </td>
                 {/* <td>
                   <img
@@ -161,10 +162,8 @@ function UserUpdate() {
                 <td >Student</td>
               </tr> */}
               <tr className="TableRow">
-              {{ fieldErr } && <p style={{ color: "red" }}>{fieldErr}</p>}
-                <td>Name</td>
-
-                <td>
+              <td>Name</td>
+              <td>
                   <input
                     type="text"
                     value={name}
@@ -174,6 +173,10 @@ function UserUpdate() {
                     className="TableRow__res "
                     name="name"
                   />
+              {{ fieldErr } && <p style={{ color: "red" }}>{fieldErr}</p>}
+                {/* <td>Name</td> */}
+
+           
                 </td>
               </tr>
               <tr className="TableRow">
