@@ -21,8 +21,6 @@ const ExpandMenu = ({toggleDrawer}) => {
             Arambh
           </SubRoute>
           <SubRoute 
-          
-          
           to= "/events/plexus" 
           key="plexus">
             Plexus
