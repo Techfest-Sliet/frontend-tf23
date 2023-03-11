@@ -27,6 +27,35 @@
     color: #ffffff;
 }
 
+.card-heading {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+    margin-top: 20px;
+}
+
+.card-details {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 40px;
+    font-size: 1.4rem;
+}
+
+.card-paybtn {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.card-payment {
+    border: 2px solid #FFFFFF;
+    border-radius: 20px;
+    width: 34vw;
+    height: auto;
+    margin-bottom: 40px;
+}
+
 .table_text-light {
 
     width: 27vw;
