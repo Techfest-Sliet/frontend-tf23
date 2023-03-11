@@ -33,19 +33,18 @@ const Main_Page = (props) => {
     setMembersList(members);
   }, [membersList]);
 
-  useEffect(() => {
-     axios
+
+  const PostData = async () => {
+    await axios
       .post(`${baseUrl}/event/geteventbyname`, { eventName: props.eventName })
       .then((result) => {
         const res = result;
         eventId = res.data.id;
+        alert(JSON.stringify(eventId))
       });
-  }, [])
-
-  const PostData = async () => {
     await axios
       .post(`${baseUrl}/user/addevent`, {
-        user,
+        user: user,
         eventId: eventId,
         type: type,
       })
