@@ -95,7 +95,7 @@ function App() {
         }}
       >
         <div className="App">
-           {location.pathname !== "/sign-up" &&
+          {location.pathname !== "/sign-up" &&
             location.pathname !== "/sign-in" && (
               <Navbar isAuth={isUserLoggedIn} onLogout={logOutHandler} />
             )}
@@ -104,13 +104,13 @@ function App() {
             location.pathname !== "/sign-in" &&
             location.pathname !== "/user-dashboard" && <Footer />}
 
-          {location.pathname === '/' && 
+          {location.pathname === '/' &&
             <Date />
           }
-          {location.pathname === '/' && 
+          {location.pathname === '/' &&
             <Datehorizontal />
           }
-          
+
           <Routes>
             <Route path="/domains" element={<DomainScreen />} />
             <Route path="*" element={<Error404 />} />
@@ -151,6 +151,12 @@ function App() {
             {/* <Route path="/confirmedmail" element={<Confirmedmail/>}/> */}
 
           </Routes>
+
+          {/* <Navigation /> */}
+          {location.pathname !== "/sign-up" &&
+            location.pathname !== "/sign-in" &&
+            location.pathname !== "/user-dashboard" && <Footer />}
+
         </div>
         {errorMade && (
           <ErrorModel

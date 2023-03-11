@@ -40,6 +40,7 @@
 }
 
 .card__collection {
+  padding-bottom: 3%;
   background-color: transparent;
   position: relative;
   display: flex;
@@ -239,4 +240,17 @@ li p img {
   text-align: center;
   margin: 0px;
   padding: 14px;
+}
+
+
+@media screen and (max-width: 778px) {
+  .card__collection {
+    padding-bottom: 5%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .card__collection {
+    padding-bottom: 7%;
+  }
 }

@@ -41,7 +41,34 @@ export const Navbar = (props) => {
                 Workshops
               </Link>
             </li>
-            <li>
+            <li className="domains">
+              <span
+                // to="/about"
+                className="dropdown__animation abut"
+                onClick={unCheck}
+              >
+                About<i className="arrow down">&#32;</i>
+              </span>
+              {/*-- DROPDOWN MENU */}
+              <ul className="dropdown">
+                <li>
+                  <Link to="/about" onClick={unCheck}>
+                    About Us
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/faq" onClick={unCheck}>
+                    FAQ
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/our-team" onClick={unCheck}>
+                    Our Team
+                  </Link>
+                </li>
+              </ul>
+            </li>
+            {/* <li>
               <Link to="/about" onClick={unCheck}>
                 About Us
               </Link>
@@ -57,6 +84,7 @@ export const Navbar = (props) => {
               </Link>
             </li>
             
+
             {authContext.isUserLoggedIn && (
               <li>
                 <Link to="/user-dashboard">Dashboard</Link>
@@ -120,11 +148,16 @@ export const Navbar = (props) => {
               </ul>
             </li>
             <li>
+              <Link to="/merchandise" onClick={unCheck}>
+                Merchandise
+              </Link>
+            </li>
+            {/* <li>
               <Link to="/our-team" onClick={unCheck}>
                 Our Team
               </Link>
               
-            </li> 
+            </li>  */}
             {!authContext.isUserLoggedIn && (
               <Link to="/sign-in" className="signInButton">
                 Sign In

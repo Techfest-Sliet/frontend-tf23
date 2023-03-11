@@ -163,6 +163,7 @@
   );
   height: auto;
   width: 100vw;
+  padding-bottom: 5vh;
 }
 
 .contactUsImg {

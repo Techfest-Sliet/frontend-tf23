@@ -5,6 +5,7 @@ export const datasOfWorkshop = [
         register: (<a href='https://www.google.com/' style={{ textDecoration: "none", color: "white" }}>Register Now</a>),
         schedule: (<a href='https://www.google.com/' style={{ textDecoration: "none", color: "white" }}>View Schedule</a>),
         prizeMoney: "₹ 50,000",
+        eventMode: "hybrid",
         dateBefore: "11/03",
         coor: [{
             img: require('../components/dummy.jpg'),
@@ -26,6 +27,7 @@ export const datasOfWorkshop = [
         register: (<a href='https://www.wikipedia.com/' style={{ textDecoration: "none", color: "white" }}>Register Now</a>),
         schedule: (<a href='https://www.google.com/' style={{ textDecoration: "none", color: "white" }}>View Schedule</a>),
         prizeMoney: "₹ 40,000",
+        eventMode: "hybrid",
         dateBefore: "15/03",
         coor: [{
             img: require('../components/dummy.jpg'),
@@ -46,6 +48,7 @@ export const datasOfWorkshop = [
         register: (<a href='https://www.google.com/' style={{ textDecoration: "none", color: "white" }}>Register Now</a>),
         schedule: (<a href='https://www.google.com/' style={{ textDecoration: "none", color: "white" }}>View Schedule</a>),
         prizeMoney: "₹ 80,000",
+        eventMode: "hybrid",
         dateBefore: "1/03",
         coor: [{
             img: require('../components/dummy.jpg'),
