@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-// import "./Navbar.css";
+import "./Navbar.css";
 import logo from "./logo.png";
 import { Link, useNavigate } from "react-router-dom";
 import AuthContext from "../../auth/authContext";
