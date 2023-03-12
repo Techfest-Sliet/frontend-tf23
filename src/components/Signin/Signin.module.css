@@ -25,18 +25,18 @@ body{
 }
 .signin_linkToHome {
   position: absolute;
-  width: 83%;
-  top: 3em;
+  /* width: 83%; */
+  top: 10px;
+  left: 15px;
 }
 
 .signin_btnToHome {
-  margin: 0.7em 0;
-  font-size: 1.2em;
-  padding: 0.4em 1.5em;
-  border-radius: 13px;
-  /* background: linear-gradient(to right, green, rgb(17, 39, 7)); */
+
+  font-size: 1rem;
+  padding-left: 0.3em;
+  background: none;
   border: none;
-  /* color: white; */
+  color: white;
   cursor: pointer;
 }
 
@@ -84,15 +84,16 @@ body{
 
 .signin__label {
   /* font-family: "productSans"; */
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   margin-bottom: 0.4em;
 }
 
 .signin__div {
   display: flex;
-  flex-direction: row;
+  /* flex-direction: row; */
   align-items: center;
-  gap: 1em;
+  justify-content: space-between;
+  /* gap: 1em; */
 }
 
 /* select option {
@@ -288,8 +289,8 @@ select option:hover {
 }
 
 .signin__text {
-  font-size: 1.3em;
-  margin: 0 0 1em 0;
+  font-size: 1rem;
+  margin: 0 0 10px 0;
 }
 
 .signin__link {
@@ -317,7 +318,7 @@ select option:hover {
   transform: scale(0.9);
 }
 
-@media (max-width: 900px) {
+@media (max-width: 768px) {
 
   .signin__logo {
     display: none;

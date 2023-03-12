@@ -6,6 +6,7 @@ import { baseUrl } from "../../API/api";
 import { Link, useNavigate } from "react-router-dom";
 import AuthContext from "../../auth/authContext";
 import Loader from '../Loader/Loader.js';
+import { AiOutlineLeft } from "react-icons/ai";
 
 const Signin = () => {
   const authContext = useContext(AuthContext);
@@ -89,14 +90,18 @@ const Signin = () => {
     userLoginHandle(user);
   };
 
+  const clickNavigateHandler = () => {
+    navigate("/");
+  }
+
   return (
     <>
       {isLoading && <Loader />}
       <div className={styles.signin__content}>
         <div className={styles.signin_linkToHome}>
-          <button className={styles.signin_btnToHome}>
-            <Link to={"/"} style={{ color: "black" }}>
-              Home </Link>
+        <AiOutlineLeft style={{fontSize: "1.8rem",paddingTop:"15px"}}/>
+          <button className={styles.signin_btnToHome} onClick= {clickNavigateHandler}>
+              back to home 
           </button>
         </div>
         <div>
@@ -105,7 +110,7 @@ const Signin = () => {
         <div className={styles.login}>
         <div>
         <h1 className={styles.signin__title}>Welcome Back!</h1>
-            <p className={styles.signin__text}>Sign in to continue</p>
+            <p className={styles.signin__text} style={{marginLeft: "10px"}}>Sign in to continue</p>
         </div>
         <div className={styles.signin__page}>
           {errorsMade && <p style={{ color: "red" }}>{errorsMade}</p>}          
@@ -144,6 +149,7 @@ const Signin = () => {
               autoComplete='off'
             />
             <div className={styles.signin__div}>
+            <Link to="/forgot-password">Forgot Password?</Link>
               <button
                 className={styles.signin__button}
                 value="signIn"
@@ -153,7 +159,7 @@ const Signin = () => {
               >
                 Sign In
               </button>
-              <Link to="/forgot-password">Forgot Password?</Link>
+              
             </div>
             {/* </div> */}
           </form>
