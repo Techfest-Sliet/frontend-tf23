@@ -12,9 +12,8 @@ import AuthContext from '../../auth/authContext';
 
 const Navbar1 = ({ toggleDrawer }) => {
   const [user, setUser] = useState(false);
-  // const toggleMenu = () => {
-  //   setIsMenuOpen(!isMenuOpen);
-  // };
+
+
   const authContext = useContext(AuthContext);
   const navigate = useNavigate();
 
@@ -25,6 +24,9 @@ const Navbar1 = ({ toggleDrawer }) => {
 
   const navigateHomeHandler = () => {
     navigate("/")
+  }
+  const clickDashboardHandler = () => {
+    navigate("user-dashboard")
   }
 
   useEffect(() => {
@@ -47,7 +49,7 @@ const Navbar1 = ({ toggleDrawer }) => {
   return (
     <SNavbar>
       <NavContainer>
-        <DrawerButton onClick={toggleDrawer}>
+        <DrawerButton onClick={toggleDrawer} style ={{cursor:"pointer"}}>
           <TbAlignLeft />
         </DrawerButton>
         <Image src={logo} alt="" onClick={navigateHomeHandler}/>
@@ -108,8 +110,8 @@ const Navbar1 = ({ toggleDrawer }) => {
           <LoginButton onClick={navigateHandler}>Login</LoginButton>}
             {authContext.isUserLoggedIn && 
             <div style={{display: "flex", cursor: "pointer"}}>
-              <FaRegUser style={{fontSize: "23px", marginRight: "5px"}}/>
-              <Profile onClick="">Hi! {user.name}</Profile>              
+              <FaRegUser onClick={clickDashboardHandler} style={{fontSize: "23px", marginRight: "5px",zIndex:"1"}}/>
+              <Profile onClick={clickDashboardHandler}>Hi! {user.name.split(' ').slice(0, -1).join(' ')}</Profile>              
               </div>
 }
 
@@ -135,8 +137,8 @@ const DrawerButton = styled.button`
 
 
 const SNavbar = styled.nav`
-      background-color: black;
-
+      // background-color: black;
+      z-index:1;
   @media (max-width: 780px){
       opacity:100%;
     }
@@ -150,15 +152,20 @@ const NavContainer = styled.div`
   justify-content: space-between;
   align-items: center;
   color: white;
+  z-index:1;
 `;
 const Image = styled.img`
+    cursor:pointer;
     width:20%;
+    z-index:1;
     @media (max-width: 600px) {
       width: 50%;
     }
 `;
 
 const Profile = styled.h2`
+z-index:1;
+cursor:pointer;
 @media (max-width: 900px){
   display: none;
 }

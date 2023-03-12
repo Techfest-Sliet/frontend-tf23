@@ -47,13 +47,15 @@ const HomePage = () => {
             className="landingButtons"
             style={{ marginTop: 10, color: "white", marginBottom: 1 }}
           >
+            {!authContext.isUserLoggedIn &&
             <Button variant="contained" id="signUpButton" sx={{ mr: 2, mt: 3 }}>
+
               <Link
-                to={authContext.isUserLoggedIn ? "/user-dashboard" : "/sign-up"}
-              >
-                {authContext.isUserLoggedIn ? "Dashboard" : "Sign up Now"}
+                to="/sign-up">
+                  Sign up
               </Link>
             </Button>
+}
           </div>
           <div className="subthemeCont">
             <h1

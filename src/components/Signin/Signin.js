@@ -102,21 +102,25 @@ const Signin = () => {
         <div>
           <img src={logo} alt="techFest'23" className={styles.signin__logo} />
         </div>
+        <div className={styles.login}>
+        <div>
+        <h1 className={styles.signin__title}>Welcome Back!</h1>
+            <p className={styles.signin__text}>Sign in to continue</p>
+        </div>
         <div className={styles.signin__page}>
-          {errorsMade && <p style={{ color: "red" }}>{errorsMade}</p>}
+          {errorsMade && <p style={{ color: "red" }}>{errorsMade}</p>}          
           <form
             method="post"
             onSubmit="return myFormValidation()"
             className={styles.signin__inputFields}
             action=""
           >
-            <h1 className={styles.signin__title}>Welcome Back!</h1>
-            <p className={styles.signin__text}>Sign in to continue</p>
+            
             {fieldErr && <p style={{ color: "red" }}>{fieldErr}</p>}
             {password && <p style={{ color: "red" }}>{passwordErr}</p>}
             <label htmlFor="email" className={styles.signin__label}>
               {mailErr && <p style={{ color: "red" }}>{mailErr}</p>}
-              E-mail
+              EMAIL*
             </label>
             <input
               type="email"
@@ -129,7 +133,7 @@ const Signin = () => {
               autoComplete='off'
             />
             <label htmlFor="password" className={styles.signin__label}>
-              Password
+              PASSWORD*
             </label>
             <input
               placeholder="Enter your Password"
@@ -159,6 +163,7 @@ const Signin = () => {
               <span className={styles.signin__link}>Sign Up</span>
             </Link>
           </p>
+        </div>
         </div>
       </div>
     </>
