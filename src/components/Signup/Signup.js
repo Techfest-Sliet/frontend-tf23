@@ -217,12 +217,13 @@ const Signup = () => {
         <div>
           <img src={logo} alt="techFest'23" className={styles.signup__logo} />
         </div>
-
+        
         <form method="post" className={styles.signup__inputFields} action="">
+        <h1 className={styles.signup__title}>Hi {stringArray[0]}!</h1>
           {divTwo && (
             <div className={styles.signup__page2}>
               {errorsMade && <p style={{ color: "red" }}>{errorsMade}</p>}
-              <h1 className={styles.signup__title}>Hi {stringArray[0]}!</h1>
+              
               {{ fieldErr } && <p style={{ color: "red" }}>{fieldErr}</p>}
               <label htmlFor="phone" className={styles.signup__label}>
                 Whatsapp Number
@@ -241,7 +242,7 @@ const Signup = () => {
               {branchErr && <p style={{ color: "red" }}>{branchErr}</p>}
               <select
                 className={styles.signup__select}
-                sx={{ height: "10px" }}
+                sx={{ height: "20px" }}
                 onChange={(e) => setBranch(e.target.value)}
                 id="branch"
                 name="branch"
@@ -434,7 +435,7 @@ const Signup = () => {
                 type="password"
                 autoComplete="off"
               />
-              {/* <button
+              <button
                 className={styles.signup__button}
                 value="next"
                 type="button"
@@ -443,17 +444,16 @@ const Signup = () => {
                 autoComplete="off"
               >
                 Next
-              </button> */}
-              <AiFillCaretRight onClick={showDivTwo} style={{fontSize: "30px"}}/>
+              </button>
+              
               <p className={styles.signup__text}>
                 Already have an account?{" "}
                 <Link to="/sign-in">
                   <span className={styles.signin__link}>Sign In</span>
                 </Link> 
               </p>
-              
+
             </div>
-            
             </div>
           )}
         </form>

@@ -66,6 +66,10 @@ a {
   border: 1px solid #054611;
   padding: 2rem;
 }
+.signup__page2{
+  border: 1px solid #054611;
+  padding: 2rem;
+}
 .signup__page1 > input, .signup__page2 > input {
   /* font-family: "productSans"; */
   margin-bottom: 1.4em;
@@ -92,7 +96,7 @@ a {
   /* font-family: "productSans"; */
   font-size: 1.2rem;
 }
-/* .signup__select {
+.signup__select {
   background-color: transparent;
   color: #fff;
   border: 0;
@@ -104,15 +108,15 @@ a {
   font-size: 1.2rem;
   display: flex;
   flex-direction: column;
-} */
-/* 
+}
+
 select option {
-  background-color: #054611;
+  background-color: black;
 }
 
 select option:hover {
   background-color: #000;
-} */
+}
 
 .signup__logo {
   margin-top: 5rem;
@@ -294,7 +298,7 @@ select option:hover {
   margin: 0.7em 0;
   font-size: 1.3em;
   width: 30%;
-  padding: 0.4em 1.5em;
+  padding: 0.4em 1em;
   margin-right: 12px;
   border-radius: 7px;
   background: linear-gradient(to right, green, rgb(17, 39, 7));

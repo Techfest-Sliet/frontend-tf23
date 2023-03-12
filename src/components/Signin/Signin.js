@@ -104,6 +104,7 @@ const Signin = () => {
               back to home 
           </button>
         </div>
+        
         <div>
           <img src={logo} alt="techFest'23" className={styles.signin__logo} />
         </div>

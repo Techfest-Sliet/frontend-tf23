@@ -106,14 +106,14 @@ const Navbar1 = ({ toggleDrawer }) => {
                 <LoginButton>Logout</LoginButton>
               </Link>
             )} */}
-            {/* {!authContext.isUserLoggedIn && 
+            {!authContext.isUserLoggedIn && 
           <LoginButton onClick={navigateHandler}>Login</LoginButton>}
             {authContext.isUserLoggedIn && 
             <div style={{display: "flex", cursor: "pointer"}}>
               <FaRegUser onClick={clickDashboardHandler} style={{fontSize: "23px", marginRight: "5px",zIndex:"1"}}/>
-              <Profile onClick={clickDashboardHandler}>Hi! {user.name.split(' ').slice(0, -1).join(' ')}</Profile>              
+              <Profile onClick={clickDashboardHandler}>Hi! {(`${user.name}`).split(' ').slice(0, -1).join(' ')}</Profile>              
               </div>
-} */}
+}
 
         </RightNav>
       </NavContainer>
