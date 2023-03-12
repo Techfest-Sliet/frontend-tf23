@@ -40,7 +40,7 @@ const Footer = () => {
           <a target="_blank" href='https://www.linkedin.com/company/techfest-sliet/'>
             <Button variant="rounded"><LinkedInIcon style={{ color: "white" }} /></Button>
           </a>
-          <a target="_blank" href='https://www.youtube.com/channel/UCTSrKfF90hZq7reWgd2oyZg'>
+          <a target="_blank" href='https://www.youtube.com/@techfestslietofficial'>
             <Button variant="rounded"><YouTubeIcon style={{ color: "white" }} /></Button>
           </a>
         </div>
