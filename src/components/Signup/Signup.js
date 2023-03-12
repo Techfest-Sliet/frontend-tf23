@@ -7,7 +7,7 @@ import { Link, useNavigate } from "react-router-dom";
 import ErrorModel from "../../components/ErrorPopup/ErrorModel";
 import Loader from '../../components/Loader/Loader.js';
 import {useGoogleReCaptcha} from 'react-google-recaptcha-v3';
-import { color } from "@mui/system";
+import { AiOutlineLeft } from "react-icons/ai";
 
 const Signup = () => {
 
@@ -189,6 +189,10 @@ const Signup = () => {
       });
   };
 
+  const clickNavigateHandler = () => {
+    navigate("/");
+  }
+
   return (
     <>
       {isLoading && <Loader />}
@@ -201,10 +205,10 @@ const Signup = () => {
       )}
 
       <div className={styles.signup__content}>
-      <div className={styles.signup_linkToHome}>
-          <button className={styles.signup_btnToHome}>
-            <Link to={"/"} style={{ color: "black" }}>
-              Home </Link>
+      <div className={styles.signin_linkToHome}>
+        <AiOutlineLeft style={{fontSize: "1.8rem",paddingTop:"15px"}}/>
+          <button className={styles.signin_btnToHome} onClick= {clickNavigateHandler}>
+              back to home 
           </button>
         </div>
         
