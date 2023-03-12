@@ -130,7 +130,7 @@ const User_dasbord = () => {
         )}
         <div className="row_justify-content-around" style={{ height: "100vh" }}>
           <div className="userdashbord_body">
-            <div className="user__header">Namaste! {user && user.name}</div>
+            <h3 className="user__header">Namaste! {user && user.name}</h3>
             <p className="blockquote-footer">
               {/* Your Unique tF ID is {user && user.userId} */}
             </p>

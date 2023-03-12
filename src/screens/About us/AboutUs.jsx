@@ -81,7 +81,7 @@ function AboutUs() {
           <div className="Participants">
             <img src="/about-us/Group 881.svg" height={"50px"} alt="" />
             <h1>35+</h1>
-            <h4 style={{ fontFamily: "productSans" }}>
+            <h4>
               Institutes Participate every year
             </h4>
             <img
@@ -95,7 +95,7 @@ function AboutUs() {
           <div className="Participants">
             <img src="/about-us/Group 878.svg" height={"50px"} alt="" />
             <h1>10K+</h1>
-            <h4 style={{ fontFamily: "productSans" }}>
+            <h4>
               Footfall during techFEST 21
             </h4>
             <img
@@ -109,7 +109,7 @@ function AboutUs() {
           <div className="Participants last">
             <img src="/about-us/Group 879.svg" height={"50px"} alt="" />
             <h1>5L+</h1>
-            <h4 style={{ fontFamily: "productSans" }}>
+            <h4>
               Worth of Goodies and Prize Money
             </h4>
           </div>
@@ -121,7 +121,7 @@ function AboutUs() {
         <div className="Participants1">
           <img src="/about-us/Group 881.svg" height={"50px"} alt="" />
           <h1>30 +</h1>
-          <h4 style={{ fontFamily: "productSans" }}>
+          <h4>
             Institutes Participate every year
           </h4>
         </div>
@@ -129,7 +129,7 @@ function AboutUs() {
         <div className="Participants1">
           <img src="/about-us/Group 878.svg" height={"50px"} alt="" />
           <h1>10K +</h1>
-          <h4 style={{ fontFamily: "productSans" }}>
+          <h4>
             Footfall during techFEST 21
           </h4>
         </div>
@@ -137,7 +137,7 @@ function AboutUs() {
         <div className="Participants1 last1">
           <img src="/about-us/Group 879.svg" height={"50px"} alt="" />
           <h1>5L +</h1>
-          <h4 style={{ fontFamily: "productSans" }}>
+          <h4>
             Worth of Goodies and Prize Money
           </h4>
         </div>

@@ -59,7 +59,6 @@ const HomePage = () => {
             <h1
               style={{
                 color: " rgb(22, 188, 22)",
-                fontFamily: "monumentExtended",
               }}
             >
               Sub-Theme

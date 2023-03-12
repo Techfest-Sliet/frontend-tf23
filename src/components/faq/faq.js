@@ -22,7 +22,7 @@ const ContactUs = () => {
                 <div className='background-of-contactUsPage'>
 
                     <div style={{ position: "relative" }}>
-                        <h1 style={{ fontFamily: "productSansBold" }} className='faqs'>Frequently Asked Questions </h1>
+                        <h1 className='faqs'>Frequently Asked Questions </h1>
                     </div>
 
 
@@ -49,7 +49,7 @@ const ContactUs = () => {
 
                     <div className='faqs_container'>
                         <div>
-                            <h1 style={{ fontFamily: "productSansBold" }} className='Dial_In'>Don't Think Twice, Simply Dial In </h1>
+                            <h1 className='Dial_In'>Don't Think Twice, Simply Dial In </h1>
 
                             <div className='faqs_coordinators'>
 
@@ -89,7 +89,7 @@ const ContactUs = () => {
                             </div>
 
 
-                            <p className='faqs_support'>or write us at  <a href="mailto:web.techfest@sliet.ac.in" style={{ textDecoration: "none", color: "DodgerBlue", fontFamily: "productSans" }}>web.techfest@sliet.ac.in</a></p>
+                            <p className='faqs_support'>or write us at  <a href="mailto:web.techfest@sliet.ac.in" style={{ textDecoration: "none", color: "DodgerBlue" }}>web.techfest@sliet.ac.in</a></p>
                             <p className='faqs_footer'> Stay Updated Here !</p>
 
                         </div>
@@ -110,7 +110,7 @@ const data = [
     {
         id: 1,
         question: "How to register on the website?",
-        answer: (<p>You can enter your details and sign up at <a href='https://www.techfestsliet.org/' style={{ textDecoration: "none", color: "DodgerBlue", fontFamily: "productSans" }}> https://www.techfestsliet.org/</a></p>)
+        answer: (<p>You can enter your details and sign up at <a href='https://www.techfestsliet.org/' style={{ textDecoration: "none", color: "DodgerBlue"}}> https://www.techfestsliet.org/</a></p>)
 
     },
     {
@@ -121,7 +121,7 @@ const data = [
     {
         id: 3,
         question: "Do I need to pay any fee for registration?",
-        answer: (<p>There is no registration fee for candidates enrolled in SLIET. For participants from other institutes the registration fee is: <li style={{fontFamily: "productSans"}}>Rs 299 for online events</li> <li style={{fontFamily: "productSans"}}>Rs 599 for offline events</li> </p>)
+        answer: (<p>There is no registration fee for candidates enrolled in SLIET. For participants from other institutes the registration fee is: <li style={{fontFamily: "adventPro"}}>Rs 299 for online events</li> <li style={{fontFamily: "productSans"}}>Rs 599 for offline events</li> </p>)
     },
     {
         id: 4,

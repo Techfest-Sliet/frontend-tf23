@@ -1,5 +1,5 @@
 * {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  /* font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; */
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -25,7 +25,7 @@ footer{
   border-top-left-radius: 45px;
   border-top-right-radius: 45px;
   margin-top: 1em;
-  backdrop-filter: blur(6px);
+  /* backdrop-filter: blur(6px); */
   background-color: #ffffff11;
 }
 

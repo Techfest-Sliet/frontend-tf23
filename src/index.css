@@ -4,6 +4,21 @@
 }
 
 @font-face {
+  font-family: spaceGrotesk;
+  src: url("./../public/fonts/Space\ Grotesk/SpaceGrotesk-Bold.ttf");
+}
+
+@font-face {
+  font-family: adventPro;
+  src: url("./../public/fonts/advent-pro/AdventPro-Medium.ttf");
+}
+
+@font-face {
+  font-family: adventProBold;
+  src: url("./../public/fonts/advent-pro/AdventPro-Black.ttf");
+}
+
+@font-face {
   font-family: productSans;
   src: url("./../public/fonts/product-sans/Product\ Sans\ Regular.ttf");
 }
@@ -34,19 +49,24 @@
 }
 
 p{
-  font-family: "productSans";
+  font-family: "adventPro";
 }
 
 button{
-  font-family: "productSansBold";
+  font-family: "adventPro";
 }
 
 a{
-  font-family: "productSans";
+  font-family: "adventPro";
 }
 
 h1{
-  font-family: "monumentExtended";
+  font-family: "spaceGrotesk";
+}
+
+
+h4{
+  font-family: "adventPro";
 }
 
 ::-webkit-scrollbar {
