@@ -39,6 +39,7 @@ import Feedback from "./components/Feedback/feedback";
 import Date from "./components/Date/Date"
 import Datehorizontal from "./components/Datehorizontal/Datehorizontal";
 import Merch from './components/merchandise/merchandise1.jsx';
+import AddTeam from "./components/addTeam/AddTeam";
 
 
 
@@ -142,6 +143,7 @@ function App() {
             <Route path="/verify" element={<Verify />} />
             <Route path="/events/:title" element={<Events />} />
             <Route path="/merchandise" element={<Merch />} />
+            <Route path="/add-team" element={<AddTeam />} />
 
             {authContext.isUserLoggedIn && <Route path="/user-dashboard" element={<UserDashboard />} />}
             

@@ -380,6 +380,9 @@ const User_dasbord = () => {
             </div>
           </div>
           <div>
+            
+          </div>
+          <div>
             {/* <div className="flex_bottombox">
             <div className="card-bodybottom">
               <h3 className="CertificatesRewards">Certificates & Rewards</h3>
