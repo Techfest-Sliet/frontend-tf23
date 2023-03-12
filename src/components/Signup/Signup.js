@@ -7,7 +7,9 @@ import { Link, useNavigate } from "react-router-dom";
 import ErrorModel from "../../components/ErrorPopup/ErrorModel";
 import Loader from '../../components/Loader/Loader.js';
 import {useGoogleReCaptcha} from 'react-google-recaptcha-v3';
-import { AiOutlineLeft } from "react-icons/ai";
+import { AiOutlineLeft,AiFillCaretRight } from "react-icons/ai";
+import { textAlign } from "@mui/system";
+
 
 const Signup = () => {
 
@@ -376,11 +378,13 @@ const Signup = () => {
           )}
 
           {divOne && (
+            <div>
+            <h1 className={styles.signup__title}>Welcome!</h1>
             <div className={styles.signup__page1}>
-              <h1 className={styles.signup__title}>Welcome!</h1>
+              
               {{ fieldErr } && <p style={{ color: "red" }}>{fieldErr}</p>}
               <label htmlFor="name" className={styles.signup__label}>
-                Name
+                NAME*
               </label>
               <input
                 type="text"
@@ -393,7 +397,7 @@ const Signup = () => {
                 autoComplete="off"
               />
               <label htmlFor="email" className={styles.signup__label}>
-                E-mail
+                EMAIL*
               </label>
               {mailErr && <p style={{ color: "red" }}>{mailErr}</p>}
               <input
@@ -407,7 +411,7 @@ const Signup = () => {
                 autoComplete="off"
               />
               <label htmlFor="password" className={styles.signup__label}>
-                Password
+                PASSWORD*
               </label>
               {{ passwordErr } && <p style={{ color: "red" }}>{passwordErr}</p>}
               <input
@@ -419,7 +423,7 @@ const Signup = () => {
                 autoComplete="off"
               />
               <label htmlFor="cpassword" className={styles.signup__label}>
-                Confirm Password
+                CONFIRM PASSWORD*
               </label>
               {{ confirm_err } && <p style={{ color: "red" }}>{confirm_err}</p>}
               <input
@@ -430,7 +434,7 @@ const Signup = () => {
                 type="password"
                 autoComplete="off"
               />
-              <button
+              {/* <button
                 className={styles.signup__button}
                 value="next"
                 type="button"
@@ -439,13 +443,17 @@ const Signup = () => {
                 autoComplete="off"
               >
                 Next
-              </button>
+              </button> */}
+              <AiFillCaretRight onClick={showDivTwo} style={{fontSize: "30px"}}/>
               <p className={styles.signup__text}>
                 Already have an account?{" "}
-                <Link to={"/sign-in"}>
+                <Link to="/sign-in">
                   <span className={styles.signin__link}>Sign In</span>
-                </Link>
+                </Link> 
               </p>
+              
+            </div>
+            
             </div>
           )}
         </form>

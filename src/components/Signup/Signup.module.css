@@ -58,14 +58,14 @@ a {
 
 .signup__inputFields {
   width: 35%;
-  padding: 1em;
+  padding: 1rem;
   overflow: overlay;
-  border-radius: 1rem;
-  box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.47);
-  -webkit-animation: bounce-in-top 1.1s both;
-	        animation: bounce-in-top 1.1s both;
+  border-radius: 2px;
 }
-
+.signup__page1{
+  border: 1px solid #054611;
+  padding: 2rem;
+}
 .signup__page1 > input, .signup__page2 > input {
   /* font-family: "productSans"; */
   margin-bottom: 1.4em;
@@ -74,6 +74,7 @@ a {
   font-size: 1.3rem;
   padding: 10px;
   background: #0d1c10;
+  
   /* border-bottom: 1.5px solid #fff; */
   border: 20px solid green;
   border-bottom: none;
@@ -89,8 +90,7 @@ a {
 
 .signup__label {
   /* font-family: "productSans"; */
-  font-size: 1.1rem;
-  margin-bottom: 0.4em;
+  font-size: 1.2rem;
 }
 /* .signup__select {
   background-color: transparent;
@@ -105,14 +105,14 @@ a {
   display: flex;
   flex-direction: column;
 } */
-
+/* 
 select option {
   background-color: #054611;
 }
 
 select option:hover {
   background-color: #000;
-}
+} */
 
 .signup__logo {
   margin-top: 5rem;
@@ -306,6 +306,21 @@ select option:hover {
 
 .signup__button:active {
   transform: scale(0.9);
+}
+@media (max-width: 900px) {
+  .signup__logo {
+    display: none;
+  }
+
+  .signup__page {
+
+    padding: 1rem;
+    width: 100%;
+  }
+  .signup__inputFields {
+    width: 100%;
+    padding: 1rem;
+  }
 }
 
 /* @media (max-width: 1089px) {
