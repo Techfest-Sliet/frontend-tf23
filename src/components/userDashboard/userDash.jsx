@@ -8,8 +8,34 @@ import { Link, useNavigate } from "react-router-dom";
 import useRazorpay from "react-razorpay";
 import Loader from "../Loader/Loader";
 //  import { MdDelete } from "react-icons/fa";
-import {MdDelete } from "react-icons/md";
-import {BsWhatsapp } from "react-icons/bs";
+import { MdDelete } from "react-icons/md";
+import { BsWhatsapp } from "react-icons/bs";
+import TeamTable from "./TeamTable";
+
+// DUMMY DATA FOR TEAM MEMBERS
+const teamMembers = [
+  {
+    id: 1,
+    teamName: "Team A",
+    memberName: "xya",
+    memberEmail: "abcd@gmail.com",
+    isVerified: true,
+  },
+  {
+    id: 2,
+    teamName: "Team B",
+    memberName: "kuch v",
+    memberEmail: "kuchv@gmail.com",
+    isVerified: false,
+  },
+  {
+    id: 3,
+    teamName: "Team B",
+    memberName: "kuchkdskches",
+    memberEmail: "kuchv@gmcjushckail.com",
+    isVerified: false,
+  }
+];
 
 
 const User_dasbord = () => {
@@ -30,7 +56,7 @@ const User_dasbord = () => {
     axios
       .post(
         `${baseUrl}/payment/userPaymentLink`,
-        { userId: user._id, amount: amount * 100, isOnline: isOnline},
+        { userId: user._id, amount: amount * 100, isOnline: isOnline },
         {
           headers: { "content-type": "multipart/form-data" },
         }
@@ -132,7 +158,7 @@ const User_dasbord = () => {
             onErrorClick={onErrorMadeHandle}
           />
         )}
-        <div className="row_justify-content-around" style={{ height: "100vh" }}>
+        <div className="row_justify-content-around">
           <div className="userdashbord_body">
             <div className="user__header">Namaste! {user && user.name}</div>
             <p className="blockquote-footer">
@@ -149,72 +175,87 @@ const User_dasbord = () => {
                     alt=""
                   />
 
-                 <span className="userEvents">Events Registered</span> 
+                  <span className="userEvents">Events Registered</span>
                 </div>
 
                 <div className="collapse1 p-4 mt-4 mb-2">
                   <div class="scrollbar" id="scrollbar-custom">
                     <table className="table_text-light">
                       <tbody>
-                     
                         <tr>
-                      <td>Name </td>
-                      <td>Date</td>
-                      <td>Type</td>
-                 
-                      <td>Action</td>
-                    </tr>
-                    <tr>
-                      <td>cp </td>
-                      <td>15/3</td>
-                      <td>team</td>
-                      <td>
-                    <span className="mdphone"><BsWhatsapp /></span> 
-                 
-                    <span className="mdphone"><MdDelete /></span>
-                    </td>
-                    </tr>
-                    <tr>
-                    <td>Name </td>
-                      <td>Date</td>
-                      <td>Type</td>
-                      {/* <td><button className="userAction">Action</button></td> */}
-                      <span className="mdphone"><BsWhatsapp /></span> 
-                 
-                 <span className="mdphone"><MdDelete /></span>
-                    </tr>
-                    <tr>
-                    <td>Name </td>
-                      <td>Date</td>
-                      <td>Type</td>
-                      {/* <td><button className="userAction">Action</button></td> */}
-                      <span className="mdphone"><BsWhatsapp /></span> 
-                 
-                 <span className="mdphone"><MdDelete /></span>
-                    </tr>
-                    <tr>
-                    <td>Name </td>
-                      <td>Date</td>
-                      <td>Type</td>
-                      {/* <td><button className="userAction">Action</button></td> */}
-                      <span className="mdphone"><BsWhatsapp /></span> 
-                 
-                    <span className="mdphone"><MdDelete /></span>
-                    </tr>
-                    <tr>
-                    <td>Name </td>
-                      <td>Date</td>
-                      <td>Type</td>
-                      {/* <td><button className="userAction">Action</button></td> */}
-                      <MdDelete />
-                    </tr>
-                    <tr>
-                    <td>Name </td>
-                      <td>Date</td>
-                      <td>Type</td>
-                      {/* <td><button className="userAction">Action</button></td> */}
-                      <td>Action</td>
-                    </tr>
+                          <td>Name </td>
+                          <td>Date</td>
+                          <td>Type</td>
+
+                          <td>Action</td>
+                        </tr>
+                        <tr>
+                          <td>cp </td>
+                          <td>15/3</td>
+                          <td>team</td>
+                          <td>
+                            <span className="mdphone">
+                              <BsWhatsapp />
+                            </span>
+
+                            <span className="mdphone">
+                              <MdDelete />
+                            </span>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>Name </td>
+                          <td>Date</td>
+                          <td>Type</td>
+                          {/* <td><button className="userAction">Action</button></td> */}
+                          <span className="mdphone">
+                            <BsWhatsapp />
+                          </span>
+
+                          <span className="mdphone">
+                            <MdDelete />
+                          </span>
+                        </tr>
+                        <tr>
+                          <td>Name </td>
+                          <td>Date</td>
+                          <td>Type</td>
+                          {/* <td><button className="userAction">Action</button></td> */}
+                          <span className="mdphone">
+                            <BsWhatsapp />
+                          </span>
+
+                          <span className="mdphone">
+                            <MdDelete />
+                          </span>
+                        </tr>
+                        <tr>
+                          <td>Name </td>
+                          <td>Date</td>
+                          <td>Type</td>
+                          {/* <td><button className="userAction">Action</button></td> */}
+                          <span className="mdphone">
+                            <BsWhatsapp />
+                          </span>
+
+                          <span className="mdphone">
+                            <MdDelete />
+                          </span>
+                        </tr>
+                        <tr>
+                          <td>Name </td>
+                          <td>Date</td>
+                          <td>Type</td>
+                          {/* <td><button className="userAction">Action</button></td> */}
+                          <MdDelete />
+                        </tr>
+                        <tr>
+                          <td>Name </td>
+                          <td>Date</td>
+                          <td>Type</td>
+                          {/* <td><button className="userAction">Action</button></td> */}
+                          <td>Action</td>
+                        </tr>
                       </tbody>
                     </table>
                   </div>
@@ -227,70 +268,82 @@ const User_dasbord = () => {
                     src="https://img.icons8.com/ios/50/000000/maintenance.png"
                     alt=""
                   />
-                  
-                 <span className="userEvents">Workshops Registered</span>
+
+                  <span className="userEvents">Workshops Registered</span>
                 </div>
                 <div className="collapse1 p-4 mt-4 mb-2">
                   <div class="scrollbar" id="scrollbar-custom">
                     <table className="table_text-light">
                       <tbody>
-                      <tr>
-                      <td>Name </td>
-                      <td>Date</td>
-                      <td>Type</td>
-                 
-                      <td>Action</td>
-                    </tr>
-                    <tr>
-                      <td>cp </td>
-                      <td>15/3</td>
-                      <td>team</td>
-                  
-                      <td>
-                    <span className="mdphone"><BsWhatsapp /></span> 
-                 
-                    <span className="mdphone"><MdDelete /></span>
-                    </td>
-                    </tr>
-                    <tr>
-                    <td>Name </td>
-                      <td>Date</td>
-                      <td>Type</td>
-                      {/* <td><button className="userAction">Action</button></td> */}
-                      <span className="mdphone"><BsWhatsapp /></span> 
-                 
-                 <span className="mdphone"><MdDelete /></span>
-                    </tr>
-                    <tr>
-                    <td>Name </td>
-                      <td>Date</td>
-                      <td>Type</td>
-                      {/* <td><button className="userAction">Action</button></td> */}
-                      <span className="mdphone"><BsWhatsapp /></span> 
-                 
-                 <span className="mdphone"><MdDelete /></span>
-                    </tr>
-                    <tr>
-                    <td>Name </td>
-                      <td>Date</td>
-                      <td>Type</td>
-                      {/* <td><button className="userAction">Action</button></td> */}
-                      <td>Action</td>
-                    </tr>
-                    <tr>
-                    <td>Name </td>
-                      <td>Date</td>
-                      <td>Type</td>
-                      {/* <td><button className="userAction">Action</button></td> */}
-                      <td>Action</td>
-                    </tr>
-                    <tr>
-                    <td>Name </td>
-                      <td>Date</td>
-                      <td>Type</td>
-                      {/* <td><button className="userAction">Action</button></td> */}
-                      <td>Action</td>
-                    </tr>
+                        <tr>
+                          <td>Name </td>
+                          <td>Date</td>
+                          <td>Type</td>
+
+                          <td>Action</td>
+                        </tr>
+                        <tr>
+                          <td>cp </td>
+                          <td>15/3</td>
+                          <td>team</td>
+
+                          <td>
+                            <span className="mdphone">
+                              <BsWhatsapp />
+                            </span>
+
+                            <span className="mdphone">
+                              <MdDelete />
+                            </span>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>Name </td>
+                          <td>Date</td>
+                          <td>Type</td>
+                          {/* <td><button className="userAction">Action</button></td> */}
+                          <span className="mdphone">
+                            <BsWhatsapp />
+                          </span>
+
+                          <span className="mdphone">
+                            <MdDelete />
+                          </span>
+                        </tr>
+                        <tr>
+                          <td>Name </td>
+                          <td>Date</td>
+                          <td>Type</td>
+                          {/* <td><button className="userAction">Action</button></td> */}
+                          <span className="mdphone">
+                            <BsWhatsapp />
+                          </span>
+
+                          <span className="mdphone">
+                            <MdDelete />
+                          </span>
+                        </tr>
+                        <tr>
+                          <td>Name </td>
+                          <td>Date</td>
+                          <td>Type</td>
+                          {/* <td><button className="userAction">Action</button></td> */}
+                          <td>Action</td>
+                        </tr>
+                        <tr>
+                          <td>Name </td>
+                          <td>Date</td>
+                          <td>Type</td>
+                          {/* <td><button className="userAction">Action</button></td> */}
+                          <td>Action</td>
+                        </tr>
+                        <tr>
+                          <td>Name </td>
+                          <td>Date</td>
+                          <td>Type</td>
+                          {/* <td><button className="userAction">Action</button></td> */}
+                          <td>Action</td>
+                        </tr>
                       </tbody>
                     </table>
                   </div>
@@ -430,6 +483,11 @@ const User_dasbord = () => {
               </table>
             </div>
           </div>
+
+
+          <TeamTable  teamMembers={teamMembers}  />
+
+
           <div>
             {/* <div className="flex_bottombox">
             <div className="card-bodybottom">

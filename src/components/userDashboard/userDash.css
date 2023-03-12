@@ -86,8 +86,8 @@
     /* height: auto; */
     width: 100%;
     font-style: normal;
-    overflow: scroll;
-    height: 100vh;
+    /* overflow: scroll; */
+    /* height: 100vh; */
 }
 
 table.profiletable {
@@ -151,7 +151,7 @@ p.blockquote-footer {
 }
 
 td {
-    text-align: left;
+    /* text-align: left; */
     padding: 10px 17px 10px;
 }
 
@@ -600,6 +600,12 @@ p.blockquote-footer {
 
     .table_text-light_event {
         width: 81vw;
+    }
+}
+
+@media(max-width:888px) {
+    .TableRow {
+        font-size: 1rem;
     }
 }
 
