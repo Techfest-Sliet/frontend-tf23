@@ -36,16 +36,6 @@ export const Navbar = (props) => {
                 Home
               </Link>
             </li>
-            <li>
-              <Link to="/under-construction" onClick={unCheck}>
-                Workshops
-              </Link>
-            </li>
-            {authContext.isUserLoggedIn && (
-              <li>
-                <Link to="/user-dashboard">Dashboard</Link>
-              </li>
-            )}
             <li className="domains">
               <span
                 // to="/about"
@@ -148,17 +138,27 @@ export const Navbar = (props) => {
                 </li>
               </ul>
             </li>
-            <li>
+            {/* <li>
               <Link to="/merchandise" onClick={unCheck}>
                 Merchandise
               </Link>
-            </li>
+            </li> */}
             {/* <li>
               <Link to="/our-team" onClick={unCheck}>
                 Our Team
               </Link>
               
             </li>  */}
+            <li>
+              <Link to="/under-construction" onClick={unCheck}>
+                Workshops
+              </Link>
+            </li>
+            {authContext.isUserLoggedIn && (
+              <li>
+                <Link to="/user-dashboard">Dashboard</Link>
+              </li>
+            )}
             {!authContext.isUserLoggedIn && (
               <Link to="/sign-in" className="signInButton">
                 Sign In

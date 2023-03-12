@@ -22,11 +22,11 @@ const User_dasbord = () => {
   }
   const navigate = useNavigate();
   const Razorpay = useRazorpay();
-  function InitiateUserPayment() {
+  function InitiateUserPayment(amount, isOnline) {
     axios
       .post(
         `${baseUrl}/payment/userPaymentLink`,
-        { userId: user._id },
+        { userId: user._id, amount: amount * 100, isOnline: isOnline},
         {
           headers: { "content-type": "multipart/form-data" },
         }
@@ -70,13 +70,13 @@ const User_dasbord = () => {
         const rzp1 = new Razorpay(options);
 
         rzp1.on("payment.failed", function (response) {
-          alert(response.error.code);
-          alert(response.error.description);
-          alert(response.error.source);
-          alert(response.error.step);
-          alert(response.error.reason);
-          alert(response.error.metadata.order_id);
-          alert(response.error.metadata.payment_id);
+          console.error(response.error.code);
+          console.error(response.error.description);
+          console.error(response.error.source);
+          console.error(response.error.step);
+          console.error(response.error.reason);
+          console.error(response.error.metadata.order_id);
+          console.error(response.error.metadata.payment_id);
         });
 
         rzp1.open();
@@ -266,7 +266,7 @@ const User_dasbord = () => {
                   // onClick={InitiateUserPayment}
                   value="Pay"
                   className="userDash__button"
-                  onClick={HandlePay}
+                  onClick={() => InitiateUserPayment(299, true)}
                 >
                   Online Mode
                 </button>
@@ -279,7 +279,7 @@ const User_dasbord = () => {
                   // onClick={InitiateUserPayment}
                   value="Pay"
                   className="userDash__button"
-                  onClick={HandlePay}
+                  onClick={() => InitiateUserPayment(599, false).call}
                 >
                   Offline Mode
                 </button>

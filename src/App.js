@@ -38,8 +38,8 @@ import ErrorModel from './components/ErrorPopup/ErrorModel';
 import Feedback from "./components/Feedback/feedback";
 import Date from "./components/Date/Date"
 import Datehorizontal from "./components/Datehorizontal/Datehorizontal";
-import Merch from './components/merchandise/merchandise1.jsx';
-
+// import Merch from './components/merchandise/merchandise1.jsx';
+import AddTeam from "./components/addTeam/AddTeam";
 
 
 function App() {
@@ -141,7 +141,8 @@ function App() {
             <Route path="/popup" element={<Popup />} />
             <Route path="/verify" element={<Verify />} />
             <Route path="/events/:title" element={<Events />} />
-            <Route path="/merchandise" element={<Merch />} />
+            {/* <Route path="/merchandise" element={<Merch />} /> */}
+            <Route path="/addteam" element={<AddTeam />} />
 
             {authContext.isUserLoggedIn && <Route path="/user-dashboard" element={<UserDashboard />} />}
             
