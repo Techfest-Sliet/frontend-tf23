@@ -40,7 +40,6 @@ const Main_Page = (props) => {
       .then((result) => {
         const res = result;
         eventId = res.data.id;
-        alert(JSON.stringify(eventId))
       });
     await axios
       .post(`${baseUrl}/user/addevent`, {
@@ -87,7 +86,11 @@ const Main_Page = (props) => {
               >
                 <option value="0">Choose Participation Type</option>
                 <option value="Individual">Individual</option>
-                <option value="Team">Team</option>
+                <option value="Individual">Team - Furious</option>
+                <option value="Individual">Team - 404</option>
+                {/* To fetch team list */}
+                {/* <option value="Team">Team</option> */}
+                <option value="Team">Add Team</option>
               </select>
             </div>
           </span>
