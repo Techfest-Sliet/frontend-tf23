@@ -68,7 +68,7 @@ const Drawer = ({ isOpen, toggleDrawer }) => {
                 {authContext.isUserLoggedIn && (
                 <NavRoute
                   onClick={toggleDrawer}
-                  to="/dashboard"
+                  to="/user-dashboard"
                   key="dashboard"
                 >
                   Dashboard
