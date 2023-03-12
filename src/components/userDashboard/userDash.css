@@ -64,6 +64,18 @@
     color: #ffffff;
 
 }
+.userEvents{
+    text-align: center;
+    font-size: 2.5rem;
+}
+.userpay{
+    padding: 10px;
+    padding-left: 60px;
+    padding-right: 60px;
+    font-size: 2rem;
+    font-weight:bolder ;
+    border-radius: 20px;
+}
 
 .Dashboard__body {
     /* font-family: 'Product Sans' !important; */
@@ -205,7 +217,8 @@ p.blockquote-footer {
     -webkit-filter: invert(1) !important;
     filter: invert(1) !important;
     margin-right: 25px !important;
-    width: 50px;
+    width: 60px;
+    padding: 10px;
 }
 
 .editlogo {
@@ -239,7 +252,17 @@ p.blockquote-footer {
     height: auto;
     margin-bottom: 40px;
 }
-
+.userAction{
+    padding: 5px;
+    background-color: transparent;
+    color: white;
+    font-size: 1rem;
+    font-weight:bolder;
+}
+.mdphone{
+    font-size: 1.5rem;
+    margin: 4px;
+}
 
 .row_justify-content-around {
     display: flex;
