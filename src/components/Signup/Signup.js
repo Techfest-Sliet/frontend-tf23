@@ -380,7 +380,7 @@ const Signup = () => {
 
           {divOne && (
             <div>
-            <h1 className={styles.signup__title}>Welcome!</h1>
+            {/* <h1 className={styles.signup__title}>Welcome!</h1> */}
             <div className={styles.signup__page1}>
               
               {{ fieldErr } && <p style={{ color: "red" }}>{fieldErr}</p>}

@@ -321,7 +321,7 @@ const User_dasbord = () => {
                   <td>Date of Birth</td>
 
                   <td className="TableRow__res">
-                    {user && user.dob.slice(0, 10)}
+                    {user && user.dob}
                   </td>
                 </tr>
 
