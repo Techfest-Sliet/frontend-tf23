@@ -1,7 +1,8 @@
 import React from 'react';
 import './workshop.css';
 import wrkshop from "./Workshop.png";
-import EventBox from '../components/Events/EventBox';
+// import EventBox from '../components/Events/EventBox';
+import WorkshopBox from './WorkshopBox';
 import { datasOfWorkshop } from "./DataOfWorkshop";
 
 const workshops = () => {
@@ -26,7 +27,7 @@ const workshops = () => {
       {/* Name of the Workshop */}
       <div className='wrkshopsBackgroundBottoms'>
         {datasOfWorkshop.map((item, index) => (
-          <EventBox index={index} props={item} />
+          <WorkshopBox index={index} props={item} />
         ))}
       </div>
     </>
