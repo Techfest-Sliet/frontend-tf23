@@ -17,23 +17,71 @@ const teamMembers = [
   {
     id: 1,
     teamName: "Team A",
-    memberName: "xya",
-    memberEmail: "abcd@gmail.com",
-    isVerified: true,
+    leaderName: "xyz",
+    membersName : [
+      {
+        idd: 1,
+        memberName: "xya",
+        isVerified: true
+      },
+      {
+        idd: 2,
+        memberName: "cba",
+        isVerified: true
+      },
+      {
+        idd: 3,
+        memberName: "eya",
+        isVerified: true
+      }
+    ],
+    eventName: "Data dynamics"
   },
   {
     id: 2,
     teamName: "Team B",
-    memberName: "kuch v",
-    memberEmail: "kuchv@gmail.com",
-    isVerified: false,
+    leaderName: "xyz",
+    membersName : [
+      {
+        idd: 1,
+        memberName: "xya",
+        isVerified: false
+      },
+      {
+        idd: 2,
+        memberName: "cba",
+        isVerified: true
+      },
+      {
+        idd: 3,
+        memberName: "eya",
+        isVerified: false
+      }
+    ],
+    eventName: "Margdarshak"
   },
   {
     id: 3,
-    teamName: "Team B",
-    memberName: "kuchkdskches",
-    memberEmail: "kuchv@gmcjushckail.com",
-    isVerified: false,
+    teamName: "Team C",
+    leaderName: "xyz",
+    membersName : [
+      {
+        idd: 1,
+        memberName: "xyz",
+        isVerified: false
+      },
+      {
+        idd: 2,
+        memberName: "cza",
+        isVerified: false
+      },
+      {
+        idd: 3,
+        memberName: "edya",
+        isVerified: true
+      }
+    ],
+    eventName: "Clean the Sun"
   }
 ];
 

@@ -1,10 +1,10 @@
-* {
+/* * { */
   /* margin: 0 !important;
   padding: 0 !important; */
   /* box-sizing: border-box !important; */
-  font-family: 'Product Sans' !important;
+  /* font-family: 'Product Sans' !important; */
   /* text-align: center !important; */
-}
+/* } */
 
 .asdfghjkl {
   text-align: left;
@@ -93,7 +93,7 @@ p.blockquote-footer {
 
 td {
   /* text-align: left; */
-  padding: 10px 17px 10px;
+  padding: 10px 0px 10px;
 }
 
 h3.CertificatesRewards {
