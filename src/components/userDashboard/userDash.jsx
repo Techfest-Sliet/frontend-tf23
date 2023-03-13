@@ -532,7 +532,7 @@ const User_dasbord = () => {
               </table>
             </div>
           </div>
-          <TeamTable  teamMembers={teamMembers} leaderId={user._id} />
+          <TeamTable teamMembers={teamMembers} leaderId={user&&user._id}/>
         </div>
       </div>
     </>
