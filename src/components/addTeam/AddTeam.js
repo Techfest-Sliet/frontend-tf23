@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { FaTimes } from "react-icons/fa";
 import "./AddTeam.css";
+import axios from "axios";
+import { baseUrl } from "../../API/api";
 
 const AddTeam = () => {
   const [teamName, setTeamName] = useState("");
@@ -30,6 +32,33 @@ const AddTeam = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
     // Handle form submission here
+    var form = new FormData(document.querySelector('form'))
+    let formData = {teamName: form.teamName, members: []};
+    let member = {};
+    for (const e of form) {
+        console.log(e);
+        switch (e[0]) {
+            case "id":
+                member.memberId = e[1];
+		break;
+            case "email":
+                member.email = e[1];
+		break;
+	    case "teamName":
+		formData.teamName = e[1];
+	        break;
+            default:
+		continue;
+        }
+        if (Object.keys(member).length == 2) {
+	    formData.members.push(member);
+	    member = {};
+        }
+    }
+    console.log(formData);
+    axios
+      .post(`${baseUrl}/team/create`, formData)
+      .then(console.log);
   };
 
   return (
