@@ -12,11 +12,11 @@
 
 .teamaddBtn {
   padding: 5px 25px;
-    background: green;
-    border: none;
-    border-radius: 5px;
-    color: white;
-    cursor: pointer;
+  background: green;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
 }
 
 .TableRow {
@@ -25,7 +25,6 @@
 
 .removeMembBttn {
   padding: 10px 0px 10px 30px;
-
 }
 
 .AddBttn {
@@ -38,16 +37,16 @@
 
 .memberLi {
   display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 4px;
+  flex-direction: column;
+  align-items: center;
+  padding: 4px;
 }
 
 .verifiedTxt {
   color: green;
 }
 
-.notVerifiedTxt{
+.notVerifiedTxt {
   color: red;
 }
 
@@ -77,5 +76,13 @@
   .teamcont {
     width: 90vw;
     overflow: scroll;
+  }
+
+  .removeMembBttn {
+    padding: 10px 0px 10px 15px;
+  }
+
+  .isVeriTxt {
+    padding-left: 0;
   }
 }

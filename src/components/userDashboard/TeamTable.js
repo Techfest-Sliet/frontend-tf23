@@ -3,13 +3,47 @@ import "./TeamTable.css";
 import { MdDelete, MdAdd } from "react-icons/md";
 import { FaTimes } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import { toast, ToastContainer } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 
 const TeamTable = (props) => {
-  const [teamMembers, setTeamMembers] = useState(props.teamMembers);
-  const handleDelete = (id) => {
-    const updatedTeamMembers = teamMembers.filter((member) => member.id !== id);
-    setTeamMembers(updatedTeamMembers);
+
+  const [teamMembers, setTeamMembers] = useState(props.teamMembers);  
+
+  const handleDeleteTeam = (id) => {
+
+    const deleteTeam = (id) => {
+      // Delete the team
+      const updatedTeamMembers = teamMembers.filter((member) => member.id !== id);
+      setTeamMembers(updatedTeamMembers);
+      toast.success('Team deleted successfully!');
+    };
+
+    toast.warn(
+      <div>
+        <p>Are you sure you want to delete this team?</p>
+        <label>
+          <input type="checkbox" />
+          <span>Yes, I'm sure</span>
+        </label>
+        <button onClick={() => toast.dismiss()}>Cancel</button>
+        <button onClick={deleteTeam(id)}>Delete</button>
+      </div>,
+      {
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      }
+    );
+
   };
+  
+
+  // DELETE A MEMBER
 
   // const [membersName, setMembersName] = useState(props.teamMembers.membersName);
   // const handleDeleteMember = (idd) => {
@@ -56,15 +90,15 @@ const TeamTable = (props) => {
                       }
                     >
                       <td>{eachMember.memberName} - </td>
-                      <td>
+                      <td className="isVeriTxt">
                         {eachMember.isVerified ? "Verified" : "Not Verified"}
                       </td>
                       <td className="removeMembBttn">
                         <button
                           className="membDelIcon"
-                          // onClick={() => handleDeleteMember(eachMember.idd)}
+                        // onClick={() => handleDeleteMember(eachMember.idd)}
                         >
-                          <FaTimes />
+                          <FaTimes title="delete member"/>
                         </button>
                       </td>
                     </tr>
@@ -73,11 +107,12 @@ const TeamTable = (props) => {
                 <td>{member.eventName}</td>
                 <td>
                   <button
-                    onClick={() => handleDelete(member.id)}
+                    onClick={() => handleDeleteTeam(member.id)}
                     className="teamDelIcon"
                   >
-                    <MdDelete />
+                    <MdDelete title="delete team"/>
                   </button>
+                  <ToastContainer />
                 </td>
               </tr>
             ))}

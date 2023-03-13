@@ -7,7 +7,7 @@ import ErrorModel from "../ErrorPopup/ErrorModel";
 import { Link, useNavigate } from "react-router-dom";
 import useRazorpay from "react-razorpay";
 import Loader from "../Loader/Loader";
-//  import { MdDelete } from "react-icons/fa";
+//  import { MdDelete title="rollback event" } from "react-icons/fa";
 import { MdDelete } from "react-icons/md";
 import { BsWhatsapp } from "react-icons/bs";
 import TeamTable from "./TeamTable";
@@ -18,73 +18,72 @@ const teamMembers = [
     id: 1,
     teamName: "Team A",
     leaderName: "xyz",
-    membersName : [
+    membersName: [
       {
         idd: 1,
         memberName: "xya",
-        isVerified: true
+        isVerified: true,
       },
       {
         idd: 2,
         memberName: "cba",
-        isVerified: true
+        isVerified: true,
       },
       {
         idd: 3,
         memberName: "eya",
-        isVerified: true
-      }
+        isVerified: true,
+      },
     ],
-    eventName: "Data dynamics"
+    eventName: "Data dynamics",
   },
   {
     id: 2,
     teamName: "Team B",
     leaderName: "xyz",
-    membersName : [
+    membersName: [
       {
         idd: 1,
         memberName: "xya",
-        isVerified: false
+        isVerified: false,
       },
       {
         idd: 2,
         memberName: "cba",
-        isVerified: true
+        isVerified: true,
       },
       {
         idd: 3,
         memberName: "eya",
-        isVerified: false
-      }
+        isVerified: false,
+      },
     ],
-    eventName: "Margdarshak"
+    eventName: "Margdarshak",
   },
   {
     id: 3,
     teamName: "Team C",
     leaderName: "xyz",
-    membersName : [
+    membersName: [
       {
         idd: 1,
         memberName: "xyz",
-        isVerified: false
+        isVerified: false,
       },
       {
         idd: 2,
         memberName: "cza",
-        isVerified: false
+        isVerified: false,
       },
       {
         idd: 3,
         memberName: "edya",
-        isVerified: true
-      }
+        isVerified: true,
+      },
     ],
-    eventName: "Clean the Sun"
-  }
+    eventName: "Clean the Sun",
+  },
 ];
-
 
 const User_dasbord = () => {
   const authContext = useContext(AuthContext);
@@ -243,11 +242,11 @@ const User_dasbord = () => {
                           <td>team</td>
                           <td>
                             <span className="mdphone">
-                              <BsWhatsapp />
+                              <BsWhatsapp title="join whatsapp group" />
                             </span>
 
                             <span className="mdphone">
-                              <MdDelete />
+                              <MdDelete title="rollback event" />
                             </span>
                           </td>
                         </tr>
@@ -257,11 +256,11 @@ const User_dasbord = () => {
                           <td>Type</td>
                           {/* <td><button className="userAction">Action</button></td> */}
                           <span className="mdphone">
-                            <BsWhatsapp />
+                            <BsWhatsapp title="join whatsapp group" />
                           </span>
 
                           <span className="mdphone">
-                            <MdDelete />
+                            <MdDelete title="rollback event" />
                           </span>
                         </tr>
                         <tr>
@@ -270,11 +269,11 @@ const User_dasbord = () => {
                           <td>Type</td>
                           {/* <td><button className="userAction">Action</button></td> */}
                           <span className="mdphone">
-                            <BsWhatsapp />
+                            <BsWhatsapp title="join whatsapp group" />
                           </span>
 
                           <span className="mdphone">
-                            <MdDelete />
+                            <MdDelete title="rollback event" />
                           </span>
                         </tr>
                         <tr>
@@ -283,11 +282,11 @@ const User_dasbord = () => {
                           <td>Type</td>
                           {/* <td><button className="userAction">Action</button></td> */}
                           <span className="mdphone">
-                            <BsWhatsapp />
+                            <BsWhatsapp title="join whatsapp group" />
                           </span>
 
                           <span className="mdphone">
-                            <MdDelete />
+                            <MdDelete title="rollback event" />
                           </span>
                         </tr>
                         <tr>
@@ -295,7 +294,7 @@ const User_dasbord = () => {
                           <td>Date</td>
                           <td>Type</td>
                           {/* <td><button className="userAction">Action</button></td> */}
-                          <MdDelete />
+                          <MdDelete title="rollback event" />
                         </tr>
                         <tr>
                           <td>Name </td>
@@ -337,11 +336,11 @@ const User_dasbord = () => {
 
                           <td>
                             <span className="mdphone">
-                              <BsWhatsapp />
+                              <BsWhatsapp title="join whatsapp group" />
                             </span>
 
                             <span className="mdphone">
-                              <MdDelete />
+                              <MdDelete title="rollback workshop" />
                             </span>
                           </td>
                         </tr>
@@ -351,11 +350,11 @@ const User_dasbord = () => {
                           <td>Type</td>
                           {/* <td><button className="userAction">Action</button></td> */}
                           <span className="mdphone">
-                            <BsWhatsapp />
+                            <BsWhatsapp title="join whatsapp group" />
                           </span>
 
                           <span className="mdphone">
-                            <MdDelete />
+                            <MdDelete title="rollback workshop" />
                           </span>
                         </tr>
                         <tr>
@@ -364,11 +363,11 @@ const User_dasbord = () => {
                           <td>Type</td>
                           {/* <td><button className="userAction">Action</button></td> */}
                           <span className="mdphone">
-                            <BsWhatsapp />
+                            <BsWhatsapp title="join whatsapp group" />
                           </span>
 
                           <span className="mdphone">
-                            <MdDelete />
+                            <MdDelete title="rollback workshop" />
                           </span>
                         </tr>
                         <tr>
@@ -437,15 +436,17 @@ const User_dasbord = () => {
               )}
             </div>
           </div> */}
-          <button className="userpay">PAY</button>
+          <div className="PayForReg">
+            <h2 className="PayForRegTxt">Pay for event registration</h2>
+            <button className="userpay">
+              <Link to="../payOnlineOffine" className="PayButton">PAY</Link>
+            </button>
+          </div>
 
           <div className="card-bodymid">
             <div className="dashboard_profile_container">
               <table className="profiletable">
                 <tr>
-                  {/* <td>
-                  <div className="personal ">Personal Information</div>
-                </td> */}
                   <td colspan="2">
                     <b>Personal Information</b>
                   </td>
@@ -532,9 +533,7 @@ const User_dasbord = () => {
             </div>
           </div>
 
-
-          <TeamTable  teamMembers={teamMembers}  />
-
+          <TeamTable teamMembers={teamMembers} />
 
           <div>
             {/* <div className="flex_bottombox">

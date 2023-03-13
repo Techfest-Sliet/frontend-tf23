@@ -610,7 +610,7 @@ p.blockquote-footer {
   }
 
   td {
-      text-align: left;
+      /* text-align: left; */
       padding: 10px 9px 10px;
   }
 

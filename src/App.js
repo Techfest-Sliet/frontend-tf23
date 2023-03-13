@@ -39,7 +39,7 @@ import Feedback from "./components/Feedback/feedback";
 import Date from "./components/Date/Date"
 import Datehorizontal from "./components/Datehorizontal/Datehorizontal";
 import Merch from './components/merchandise/merchandise1.jsx';
-
+import PayOnlineOffline from './components/userDashboard/Pay'
 
 
 function App() {
@@ -149,6 +149,8 @@ function App() {
 
             <Route path="/feedback" element={<Feedback />} />
             {/* <Route path="/confirmedmail" element={<Confirmedmail/>}/> */}
+            <Route path="/payOnlineOffine" element={<PayOnlineOffline />} />
+
 
           </Routes>
 
