@@ -7,11 +7,23 @@ import { baseUrl } from "../../API/api";
 const AddTeam = () => {
   const [teamName, setTeamName] = useState("");
   const [members, setMembers] = useState([{ id: "", name: "", email: "" }]);
+  const [memberResults, setMemberResults] = useState();
 
   const handleTeamNameChange = (event) => {
     setTeamName(event.target.value);
   };
+  const searchUsers = async (data) => {
+    await axios.post(`${baseUrl}/user/searchByName`, {name: data}).then((e) => {setMemberResults(e.data)});
+  }
 
+  const SetFields = (event, index) => {
+    const { name, value } = event.target;
+    const list = [...members];
+    list[index]["id"] = memberResults[0]["_id"];
+    list[index]["email"] = memberResults[0]["email"];
+    console.log(list[index]);
+    setMembers(list);
+  };
   const handleMemberChange = (event, index) => {
     const { name, value } = event.target;
     const list = [...members];
@@ -80,7 +92,7 @@ const AddTeam = () => {
               </div>
               <div>
                 <label className="addTeamlabel">Members:</label>
-                {members.map((member, index) => (
+                {members?.map((member, index) => (
                   <div key={index}  className="memberDetails">
                     <input
                       type="text"
@@ -93,11 +105,15 @@ const AddTeam = () => {
                     <input
                       type="text"
                       name="name"
-                      value={member.name}
-                      onChange={(event) => handleMemberChange(event, index)}
+                      onChange={(e) => searchUsers(e.target.value)}
                       placeholder="Member Name"
+                      onBlur={(e) => SetFields(e, index)}
+                      list="members"
                   className="addTeamInput"
                     />
+		    <datalist id="members">
+		    {memberResults?.map((m) => {return <option value={m.name} />})}
+		    </datalist>
                     <input
                       type="email"
                       name="email"
