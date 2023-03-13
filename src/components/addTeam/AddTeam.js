@@ -8,16 +8,62 @@ import { baseUrl } from "../../API/api";
 const AddTeam = (props) => {
   const [teamName, setTeamName] = useState("");
   const [leaderId, setLeaderId] = useState(useLocation().state.leaderId);
+  const [eventType, setEventType] = useState();
   const [members, setMembers] = useState([{ id: "", name: "", email: "" }]);
   const [memberResults, setMemberResults] = useState();
+  const [mailErr, setMailErr] = useState([]);
 
   const handleTeamNameChange = (event) => {
     setTeamName(event.target.value);
   };
+  const handleEventTypeChange = (event) => {
+    setEventType(event.target.value);
+  };
+  const checkEmail = async (email, idx) => {
+    if (email) {
+    	const result = (await axios.post(`${baseUrl}/user/checkVericationByMail`, {email})).data[0];
+	console.log(result);
+	if (!result.isVerified) {
+          const list = mailErr;
+	  while (list.length < idx+1) {
+            list.push("");
+	    console.log(list);
+	  }
+          list[idx] = "Email is not verified";
+	  console.log(list);
+    	  setMembers(list);
+	  return;
+      }
+	if (!result.payment) {
+          const list = mailErr;
+	  while (list.length < idx+1) {
+            list.push("");
+	  }
+          list[idx] = "Registeration fee has not been paid";
+    	  setMembers(list);
+	  return;
+
+	} else if (!result.payment.paymentStatus) {
+          const list = mailErr;
+	  while (list.length < idx+1) {
+            list.push("");
+	  }
+          list[idx] = "Registeration fee has not been paid";
+    	  setMembers(list);
+	  return;
+
+	} else {
+
+          const list = mailErr;
+          list[idx] = "";
+    	  setMembers(list);
+	}
+    }
+  }
   const searchUsers = async (data) => {
     await axios.post(`${baseUrl}/user/searchByName`, {name: data}).then((e) => {setMemberResults(e.data)});
-  }
-
+  };
+/*
   const SetFields = (event, index) => {
     const { name, value } = event.target;
     const list = [...members];
@@ -25,7 +71,7 @@ const AddTeam = (props) => {
     list[index]["email"] = memberResults[0]["email"];
     console.log(list[index]);
     setMembers(list);
-  };
+  };*/
   const handleMemberChange = (event, index) => {
     const { name, value } = event.target;
     const list = [...members];
@@ -45,6 +91,11 @@ const AddTeam = (props) => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
+    for (const err of mailErr) {
+      if (err.length > 0) {
+        return;
+      }
+    }
     // Handle form submission here
     var form = new FormData(document.querySelector('form'))
     let formData = {teamName: form.teamName, leaderId: leaderId, members: []};
@@ -52,22 +103,20 @@ const AddTeam = (props) => {
     for (const e of form) {
         console.log(e);
         switch (e[0]) {
-            case "id":
-                member.memberId = e[1];
-		break;
             case "email":
                 member.email = e[1];
+		formData.members.push(member);
+		member = {};
 		break;
 	    case "teamName":
 		formData.teamName = e[1];
 	        break;
+            case "eventType":
+                formData.eventType = e[1];
+		break;
             default:
 		continue;
-        }
-        if (Object.keys(member).length == 2) {
-	    formData.members.push(member);
-	    member = {};
-        }
+        }        
     }
     console.log(formData);
     axios
@@ -93,33 +142,47 @@ const AddTeam = (props) => {
                 />
               </div>
               <div>
+                <label htmlFor="eventType" className="eventTypelabel">Event Type:</label> <br></br>
+                <select
+                  type="dropdown"
+                  id="eventType"
+                  name="eventType"
+                  value={eventType}
+                  onChange={handleEventTypeChange}
+                  className="eventTypeInput"
+                >
+		    <option value="online">Online</option>
+		    <option value="offline">Offline</option>
+		</select>
+              </div>
+              <div>
                 <label className="addTeamlabel">Members:</label>
                 {members?.map((member, index) => (
                   <div key={index}  className="memberDetails">
-                    <input
-                      type="text"
+		   {/* <input
+                     type="text"
                       name="id"
                       value={member.id}
                       onChange={(event) => handleMemberChange(event, index)}
                       placeholder="Member ID"
                   className="addTeamInput"
-                    />
+                    /> 
                     <input
                       type="text"
                       name="name"
                       onChange={(e) => searchUsers(e.target.value)}
                       placeholder="Member Name"
-                      onBlur={(e) => SetFields(e, index)}
                       list="members"
                   className="addTeamInput"
                     />
 		    <datalist id="members">
 		    {memberResults?.map((m) => {return <option value={m.name} />})}
-		    </datalist>
+		    </datalist>*/}
                     <input
                       type="email"
                       name="email"
                       value={member.email}
+                      onBlur={(e) => checkEmail(e.target.value, index)}
                       onChange={(event) => handleMemberChange(event, index)}
                       placeholder="Member Email"
                   className="addTeamInput"
@@ -132,6 +195,7 @@ const AddTeam = (props) => {
                     >
                       <FaTimes/>
                     </button>
+                  {mailErr[index] && <p style={{ color: "red" }}>{mailErr[index]}</p>}
                   </div>
                 ))}
                 <button type="button" onClick={handleAddMember} className="addTeamBttn">
