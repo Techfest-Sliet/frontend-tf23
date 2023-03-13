@@ -1,11 +1,13 @@
 import React, { useState } from "react";
 import { FaTimes } from "react-icons/fa";
+import {useLocation} from 'react-router-dom';
 import "./AddTeam.css";
 import axios from "axios";
 import { baseUrl } from "../../API/api";
 
-const AddTeam = () => {
+const AddTeam = (props) => {
   const [teamName, setTeamName] = useState("");
+  const [leaderId, setLeaderId] = useState(useLocation().state.leaderId);
   const [members, setMembers] = useState([{ id: "", name: "", email: "" }]);
   const [memberResults, setMemberResults] = useState();
 
@@ -45,7 +47,7 @@ const AddTeam = () => {
     event.preventDefault();
     // Handle form submission here
     var form = new FormData(document.querySelector('form'))
-    let formData = {teamName: form.teamName, members: []};
+    let formData = {teamName: form.teamName, leaderId: leaderId, members: []};
     let member = {};
     for (const e of form) {
         console.log(e);

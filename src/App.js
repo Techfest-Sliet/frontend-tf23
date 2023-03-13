@@ -30,6 +30,7 @@ import Aboutus from '../src/screens/About us/AboutUs.jsx';
 import UserDashboard from './components/userDashboard/userDash.jsx';
 import UserUpdate from "./components/userDashboard/update";
 import OurTeam from './components/OurTeam/team.jsx';
+import Team from './components/Team/Main_Page.jsx'
 import AuthContext from './auth/authContext';
 import Verify from './components/verify/verify';
 import Popup from './components/Popup/Popup.js';
@@ -143,6 +144,7 @@ function App() {
             <Route path="/events/:title" element={<Events />} />
             {/* <Route path="/merchandise" element={<Merch />} /> */}
             <Route path="/addteam" element={<AddTeam />} />
+	    <Route path="/team" element={<Team />} />
 
             {authContext.isUserLoggedIn && <Route path="/user-dashboard" element={<UserDashboard />} />}
             

@@ -28,7 +28,7 @@ const TeamTable = (props) => {
               <th className="teamHeader">Add Team</th>
               <th className="teamHeader">
                 <button className="teamaddBtn">
-                  <Link to="/addteam">
+                  <Link to="/addteam" state={{leaderId: props?.leaderId}}>
                     <MdAdd className="AddBttn" />
                   </Link>
                 </button>

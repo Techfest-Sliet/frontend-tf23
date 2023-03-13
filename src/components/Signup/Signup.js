@@ -452,7 +452,12 @@ const Signup = () => {
                   <span className={styles.signin__link}>Sign In</span>
                 </Link> 
               </p>
-
+              <p className={styles.signup__text}>
+        	Want to create a team?{" "}
+                <Link to="/addteam">
+                  <span className={styles.signin__link}>Create Team</span>
+                </Link> 
+              </p>
             </div>
             </div>
           )}
