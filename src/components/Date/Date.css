@@ -11,7 +11,6 @@
   top: 5rem;
   /* text-align: center; */
   align-items: center;
-  font-family: "productSansBold";
   padding: 5px;
   border: 2px solid rgb(129, 127, 127);
   animation: animatedgradient 3s ease alternate infinite;
@@ -49,7 +48,6 @@
 }
 
 .span1 {
-  font-family: "productSansBold";
   background: none;
 }
 .sign {

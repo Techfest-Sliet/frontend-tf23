@@ -71,7 +71,7 @@ a {
 }
 
 .signup__page1 > input, .signup__page2 > input {
-  font-family: "productSans";
+  font-family: 'adventPro';
   margin-bottom: 1.5em;
   width: 70%;
   border: 0;
@@ -91,11 +91,11 @@ a {
 }
 
 .signup__label {
-  font-family: "productSans";
   font-size: 1.6em;
   margin-bottom: 0.4em;
 }
 .signup__select {
+  font-family: 'adventPro';
   background-color: transparent;
   color: #fff;
   border: 0;

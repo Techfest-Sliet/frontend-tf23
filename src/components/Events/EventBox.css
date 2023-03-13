@@ -33,12 +33,11 @@
 }
 
 .LeftOfEventBox h1 {
-    font-family: "productSansBold";
     margin-bottom: 10px;
 }
 
 .evntDesc h2{
-    font-family: "productSansBold";
+    font-family: 'spaceGrotesk';
     margin: 6px 0;
 }
 
@@ -79,7 +78,7 @@
 }
 
 .event__coordinator span{
-    font-family: "productSansBold";
+    font-family: 'adventPro';
 }
 
 .registerNowEvent {

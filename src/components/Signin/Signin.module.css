@@ -60,7 +60,7 @@
 }
 
 .signin__inputFields > input {
-  font-family: "productSans";
+  font-family: 'adventPro';
   margin-bottom: 1.5em;
   width: 70%;
   height: 1.3em;
@@ -73,7 +73,7 @@
 }
 
 .signin__label {
-  font-family: "productSans";
+  font-family: 'adventPro';
   font-size: 1.5rem;
   margin-bottom: 0.4em;
 }

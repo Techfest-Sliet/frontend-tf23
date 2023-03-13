@@ -56,7 +56,23 @@ button{
   font-family: "adventPro";
 }
 
-a{
+a {
+  font-family: "adventPro";
+}
+
+table {
+  font-family: "adventPro";
+}
+
+input{
+  font-family: "adventPro";
+}
+
+label{
+  font-family: "adventPro";
+}
+
+span{
   font-family: "adventPro";
 }
 
