@@ -37,7 +37,7 @@ const Drawer = ({ isOpen, toggleDrawer }) => {
                 </NavRoute> */}
                 <NavRoute
                   onClick={toggleDrawer}
-                  to="/under-construction"
+                  to="/workshops"
                   key="Workshops"
                 >
                   Workshops
