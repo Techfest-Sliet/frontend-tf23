@@ -1,10 +1,10 @@
-* {
+/* * { */
   /* margin: 0 !important;
   padding: 0 !important; */
   /* box-sizing: border-box !important; */
-  font-family: 'Product Sans' !important;
+  /* font-family: 'Product Sans' !important; */
   /* text-align: center !important; */
-}
+/* } */
 
 .asdfghjkl {
   text-align: left;
@@ -42,9 +42,11 @@
   background-position: bottom !important;
   background: radial-gradient(72% 16% at 50% 107%, #01590F -0.99%, #01590F -1.98%, rgb(0 0 0 / 0%) 100%), radial-gradient(72% 16% at 50% -4%, #01590F -0.99%, #01590F -0.98%, rgb(0 0 0 / 0%) 100%), radial-gradient(37% 45% at 116% 52%, #01590F -0.99%, #01590F -1.98%, rgb(0 0 0 / 0%) 100%), radial-gradient(41% 45% at -16% 47%, #01590F -0.99%, #01590F -0.98%, rgb(0 0 0) 100%);
   background-repeat: no-repeat !important;
-  height: calc(100vh -4em);
-  width: 100vw;
+  /* height: calc(100vh -4em); */
+  height: auto;
+  width: 100%;
   font-style: normal;
+  padding-bottom: 5vh;
 }
 
 table.profiletable {
@@ -90,8 +92,8 @@ p.blockquote-footer {
 }
 
 td {
-  text-align: left;
-  padding: 10px 17px 10px;
+  /* text-align: left; */
+  padding: 10px 0px 10px;
 }
 
 h3.CertificatesRewards {
@@ -295,7 +297,7 @@ p.blockquote-footer {
   overflow-y: scroll;
 }
 .TableRow__res{
-  background: linear-gradient(to right, black, rgb(0, 29, 14), black);
+  /* background: linear-gradient(to right, black, rgb(0, 29, 14), black); */
   /* background:linear-gradient(to right,rgb(1, 53, 26)); */
 
   color: rgb(255, 255, 255);

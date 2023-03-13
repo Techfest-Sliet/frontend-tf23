@@ -7,6 +7,84 @@ import ErrorModel from "../ErrorPopup/ErrorModel";
 import { Link, useNavigate } from "react-router-dom";
 import useRazorpay from "react-razorpay";
 import Loader from "../Loader/Loader";
+//  import { MdDelete } from "react-icons/fa";
+import { MdDelete } from "react-icons/md";
+import { BsWhatsapp } from "react-icons/bs";
+import TeamTable from "./TeamTable";
+
+// DUMMY DATA FOR TEAM MEMBERS
+const teamMembers = [
+  {
+    id: 1,
+    teamName: "Team A",
+    leaderName: "xyz",
+    membersName : [
+      {
+        idd: 1,
+        memberName: "xya",
+        isVerified: true
+      },
+      {
+        idd: 2,
+        memberName: "cba",
+        isVerified: true
+      },
+      {
+        idd: 3,
+        memberName: "eya",
+        isVerified: true
+      }
+    ],
+    eventName: "Data dynamics"
+  },
+  {
+    id: 2,
+    teamName: "Team B",
+    leaderName: "xyz",
+    membersName : [
+      {
+        idd: 1,
+        memberName: "xya",
+        isVerified: false
+      },
+      {
+        idd: 2,
+        memberName: "cba",
+        isVerified: true
+      },
+      {
+        idd: 3,
+        memberName: "eya",
+        isVerified: false
+      }
+    ],
+    eventName: "Margdarshak"
+  },
+  {
+    id: 3,
+    teamName: "Team C",
+    leaderName: "xyz",
+    membersName : [
+      {
+        idd: 1,
+        memberName: "xyz",
+        isVerified: false
+      },
+      {
+        idd: 2,
+        memberName: "cza",
+        isVerified: false
+      },
+      {
+        idd: 3,
+        memberName: "edya",
+        isVerified: true
+      }
+    ],
+    eventName: "Clean the Sun"
+  }
+];
+
 
 const User_dasbord = () => {
   const authContext = useContext(AuthContext);
@@ -26,7 +104,7 @@ const User_dasbord = () => {
     axios
       .post(
         `${baseUrl}/payment/userPaymentLink`,
-        { userId: user._id, amount: amount * 100, isOnline: isOnline},
+        { userId: user._id, amount: amount * 100, isOnline: isOnline },
         {
           headers: { "content-type": "multipart/form-data" },
         }
@@ -128,7 +206,7 @@ const User_dasbord = () => {
             onErrorClick={onErrorMadeHandle}
           />
         )}
-        <div className="row_justify-content-around" style={{ height: "100vh" }}>
+        <div className="row_justify-content-around">
           <div className="userdashbord_body">
             <div className="user__header">Namaste! {user && user.name}</div>
             <p className="blockquote-footer">
@@ -138,109 +216,182 @@ const User_dasbord = () => {
           {
             <div className="flex_topbox">
               <div className="card-bodytop">
-                <h3 className="card-title text-light text-center">
+                <div className="card-title text-light text-center">
                   <img
                     className="idea"
                     src="https://img.icons8.com/fluency-systems-regular/48/000000/idea.png"
                     alt=""
                   />
-                  Events Registered
-                </h3>
+
+                  <span className="userEvents">Events Registered</span>
+                </div>
 
                 <div className="collapse1 p-4 mt-4 mb-2">
                   <div class="scrollbar" id="scrollbar-custom">
                     <table className="table_text-light">
                       <tbody>
                         <tr>
-                          <td>{user && user.events}</td>
-                          {/* <td>Date</td> */}
+                          <td>Name </td>
+                          <td>Date</td>
+                          <td>Type</td>
+
+                          <td>Action</td>
                         </tr>
-                        {/*<tr>
-                      <td>Name of Event</td>
-                      <td>Date</td>
-                    </tr>
-                    <tr>
-                      <td>Name of Event</td>
-                      <td>Date</td>
-                    </tr>
-                    <tr>
-                      <td>Name of Event</td>
-                      <td>Date</td>
-                    </tr>
-                    <tr>
-                      <td>Name of Event</td>
-                      <td>Date</td>
-                    </tr>
-                    <tr>
-                      <td>Name of Event</td>
-                      <td>Date</td>
-                    </tr>
-                    <tr>
-                      <td>Name of Event</td>
-                      <td>Date</td>
-                    </tr>
-                    <tr>
-                      <td>Name of Event</td>
-                      <td>Date</td>
-                    </tr> */}
+                        <tr>
+                          <td>cp </td>
+                          <td>15/3</td>
+                          <td>team</td>
+                          <td>
+                            <span className="mdphone">
+                              <BsWhatsapp />
+                            </span>
+
+                            <span className="mdphone">
+                              <MdDelete />
+                            </span>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>Name </td>
+                          <td>Date</td>
+                          <td>Type</td>
+                          {/* <td><button className="userAction">Action</button></td> */}
+                          <span className="mdphone">
+                            <BsWhatsapp />
+                          </span>
+
+                          <span className="mdphone">
+                            <MdDelete />
+                          </span>
+                        </tr>
+                        <tr>
+                          <td>Name </td>
+                          <td>Date</td>
+                          <td>Type</td>
+                          {/* <td><button className="userAction">Action</button></td> */}
+                          <span className="mdphone">
+                            <BsWhatsapp />
+                          </span>
+
+                          <span className="mdphone">
+                            <MdDelete />
+                          </span>
+                        </tr>
+                        <tr>
+                          <td>Name </td>
+                          <td>Date</td>
+                          <td>Type</td>
+                          {/* <td><button className="userAction">Action</button></td> */}
+                          <span className="mdphone">
+                            <BsWhatsapp />
+                          </span>
+
+                          <span className="mdphone">
+                            <MdDelete />
+                          </span>
+                        </tr>
+                        <tr>
+                          <td>Name </td>
+                          <td>Date</td>
+                          <td>Type</td>
+                          {/* <td><button className="userAction">Action</button></td> */}
+                          <MdDelete />
+                        </tr>
+                        <tr>
+                          <td>Name </td>
+                          <td>Date</td>
+                          <td>Type</td>
+                          {/* <td><button className="userAction">Action</button></td> */}
+                          <td>Action</td>
+                        </tr>
                       </tbody>
                     </table>
                   </div>
                 </div>
               </div>
               <div className="card-bodytop">
-                <h3 className="card-title text-light text-center">
+                <div className="card-title text-light text-center">
                   <img
                     className="maintenance"
                     src="https://img.icons8.com/ios/50/000000/maintenance.png"
                     alt=""
                   />
-                  Workshops Registered
-                </h3>
+
+                  <span className="userEvents">Workshops Registered</span>
+                </div>
                 <div className="collapse1 p-4 mt-4 mb-2">
                   <div class="scrollbar" id="scrollbar-custom">
                     <table className="table_text-light">
                       <tbody>
-                        {/* <tr>
-                      <td>Name of Worshop</td>
-                      <td></td>
-                      <td>Date</td>
-                    </tr>
-                    <tr>
-                      <td>Name of Worshop</td>
-                      <td></td>
-                      <td>Date</td>
-                    </tr>
-                    <tr>
-                      <td>Name of Worshop</td>
-                      <td></td>
-                      <td>Date</td>
-                    </tr>
-                    <tr>
-                      <td>Name of Worshop</td>
-                      <td></td>
-                      <td>Date</td>
-                    </tr>
-                    <tr>
-                      <td>Name of Worshop</td>
-                      <td></td>
-                      <td>Date</td>
-                    </tr>
-                    <tr>
-                      <td>Name of Worshop</td>
-                      <td></td>
-                      <td>Date</td>
-                    </tr>
-                    <tr>
-                      <td>Name of Worshop</td>
-                      <td></td>
-                      <td>Date</td>
-                    </tr>
-                    <tr>
-                      <td>Name of Worshop</td>
-                      <td></td>
-                      <td>Date</td>
-                    </tr> */}
+                        <tr>
+                          <td>Name </td>
+                          <td>Date</td>
+                          <td>Type</td>
+
+                          <td>Action</td>
+                        </tr>
+                        <tr>
+                          <td>cp </td>
+                          <td>15/3</td>
+                          <td>team</td>
+
+                          <td>
+                            <span className="mdphone">
+                              <BsWhatsapp />
+                            </span>
+
+                            <span className="mdphone">
+                              <MdDelete />
+                            </span>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>Name </td>
+                          <td>Date</td>
+                          <td>Type</td>
+                          {/* <td><button className="userAction">Action</button></td> */}
+                          <span className="mdphone">
+                            <BsWhatsapp />
+                          </span>
+
+                          <span className="mdphone">
+                            <MdDelete />
+                          </span>
+                        </tr>
+                        <tr>
+                          <td>Name </td>
+                          <td>Date</td>
+                          <td>Type</td>
+                          {/* <td><button className="userAction">Action</button></td> */}
+                          <span className="mdphone">
+                            <BsWhatsapp />
+                          </span>
+
+                          <span className="mdphone">
+                            <MdDelete />
+                          </span>
+                        </tr>
+                        <tr>
+                          <td>Name </td>
+                          <td>Date</td>
+                          <td>Type</td>
+                          {/* <td><button className="userAction">Action</button></td> */}
+                          <td>Action</td>
+                        </tr>
+                        <tr>
+                          <td>Name </td>
+                          <td>Date</td>
+                          <td>Type</td>
+                          {/* <td><button className="userAction">Action</button></td> */}
+                          <td>Action</td>
+                        </tr>
+                        <tr>
+                          <td>Name </td>
+                          <td>Date</td>
+                          <td>Type</td>
+                          {/* <td><button className="userAction">Action</button></td> */}
+                          <td>Action</td>
+                        </tr>
                       </tbody>
                     </table>
                   </div>
@@ -249,7 +400,7 @@ const User_dasbord = () => {
             </div>
           }
 
-          <div className="card-payment">
+          {/* <div className="card-payment">
             <div className="card-heading">
               <h1>Pay for event mode</h1>
             </div>
@@ -285,7 +436,8 @@ const User_dasbord = () => {
                 </button>
               )}
             </div>
-          </div>
+          </div> */}
+          <button className="userpay">PAY</button>
 
           <div className="card-bodymid">
             <div className="dashboard_profile_container">
@@ -379,6 +531,11 @@ const User_dasbord = () => {
               </table>
             </div>
           </div>
+
+
+          <TeamTable  teamMembers={teamMembers}  />
+
+
           <div>
             {/* <div className="flex_bottombox">
             <div className="card-bodybottom">
