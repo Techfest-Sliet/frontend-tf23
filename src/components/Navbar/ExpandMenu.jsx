@@ -51,6 +51,12 @@ const ExpandMenu = ({toggleDrawer}) => {
           </SubRoute>
           <SubRoute 
           onClick={function() {toggleDrawer();toggleMenu()}}
+          to= "/events/mechanica" 
+          key="mechanica">
+           Mechanica
+          </SubRoute>
+          <SubRoute 
+          onClick={function() {toggleDrawer();toggleMenu()}}
           to= "/events/kermis" 
           key="kermis">
            Kermis

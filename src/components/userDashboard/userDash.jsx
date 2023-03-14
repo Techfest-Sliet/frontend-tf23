@@ -175,6 +175,7 @@ const User_dasbord = () => {
 
   useEffect(() => {
     setIsLoading(true);
+    alert(JSON.stringify(user));
     axios
       .get(`${baseUrl}/user/getUserById`, {
         headers: {
@@ -239,11 +240,10 @@ const User_dasbord = () => {
                   <div class="scrollbar" id="scrollbar-custom">
                     <table className="table_text-light">
                       <tbody>
-                        <tr>
+                        {/* <tr>
                           <td>Name </td>
                           <td>Date</td>
                           <td>Type</td>
-
                           <td>Action</td>
                         </tr>
                         <tr>
@@ -259,60 +259,8 @@ const User_dasbord = () => {
                               <MdDelete />
                             </span>
                           </td>
-                        </tr>
-                        <tr>
-                          <td>Name </td>
-                          <td>Date</td>
-                          <td>Type</td>
-                          {/* <td><button className="userAction">Action</button></td> */}
-                          <span className="mdphone">
-                            <BsWhatsapp />
-                          </span>
-
-                          <span className="mdphone">
-                            <MdDelete />
-                          </span>
-                        </tr>
-                        <tr>
-                          <td>Name </td>
-                          <td>Date</td>
-                          <td>Type</td>
-                          {/* <td><button className="userAction">Action</button></td> */}
-                          <span className="mdphone">
-                            <BsWhatsapp />
-                          </span>
-
-                          <span className="mdphone">
-                            <MdDelete />
-                          </span>
-                        </tr>
-                        <tr>
-                          <td>Name </td>
-                          <td>Date</td>
-                          <td>Type</td>
-                          {/* <td><button className="userAction">Action</button></td> */}
-                          <span className="mdphone">
-                            <BsWhatsapp />
-                          </span>
-
-                          <span className="mdphone">
-                            <MdDelete />
-                          </span>
-                        </tr>
-                        <tr>
-                          <td>Name </td>
-                          <td>Date</td>
-                          <td>Type</td>
-                          {/* <td><button className="userAction">Action</button></td> */}
-                          <MdDelete />
-                        </tr>
-                        <tr>
-                          <td>Name </td>
-                          <td>Date</td>
-                          <td>Type</td>
-                          {/* <td><button className="userAction">Action</button></td> */}
-                          <td>Action</td>
-                        </tr>
+                        </tr> */}
+                        <tr>Not yet registered!</tr>
                       </tbody>
                     </table>
                   </div>
@@ -401,7 +349,7 @@ const User_dasbord = () => {
               )}
             </div>
           </div> */}
-          <button className="userpay">PAY</button>
+          {user && user.role == 1 && <button className="userpay">PAY</button>}
 
           <div className="card-bodymid">
             <div className="dashboard_profile_container">
@@ -463,19 +411,9 @@ const User_dasbord = () => {
                 <tr className="TableRow">
                   <td>Payment Status</td>
                   <td className="TableRow__res">
-                    {user && user.isPaid ? (
+                    {user && user.role == 2 ? (
                       "Paid"
-                    ) : (
-                      <button
-                        type="button"
-                        // onClick={InitiateUserPayment}
-                        value="Pay"
-                        className="userDash__button"
-                        onClick={HandlePay}
-                      >
-                        Pay
-                      </button>
-                    )}
+                    ) : 'Not Paid'}
                   </td>
                 </tr>
                 <tr>
@@ -495,7 +433,7 @@ const User_dasbord = () => {
               </table>
             </div>
           </div>
-          <TeamTable teamMembers={teamMembers} leaderId={user&&user._id}/>
+          {/* <TeamTable teamMembers={teamMembers} leaderId={user&&user._id}/> */}
         </div>
       </div>
     </>
