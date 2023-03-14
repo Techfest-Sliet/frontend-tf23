@@ -175,6 +175,7 @@ const User_dasbord = () => {
 
   useEffect(() => {
     setIsLoading(true);
+    alert(JSON.stringify(user));
     axios
       .get(`${baseUrl}/user/getUserById`, {
         headers: {
