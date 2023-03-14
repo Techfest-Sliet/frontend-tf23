@@ -1,9 +1,9 @@
 import React from "react";
 import "./Aarambh.css";
 import EventBoxAarambh from "../EventBoxAarambh";
-// import EventBottom from "../EventBottom";
+import EventBottom from "../EventBottom";
 import { datasOfEvent } from "./data";
-// import { datasOfEventCoordinator } from "./data";
+import { datasOfEventCoordinator } from "./data";
 import TechFestT from "../techFEST23kaT.webp";
 import Aarambhevent from "../AARAMBH_11zon.png";
 
@@ -40,9 +40,9 @@ const Aarambh = () => {
           <EventBoxAarambh props={item} index={index} />
         </div>
       ))}
-      {/* {datasOfEventCoordinator.map((item) => (
+      {datasOfEventCoordinator.map((item) => (
         <EventBottom props={item} />
-      ))} */}
+      ))}
     </>
   );
 };

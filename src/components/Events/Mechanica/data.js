@@ -94,7 +94,7 @@ export const datasOfEvent = [
 export const datasOfEventCoordinator = [
     {
         photoOfFaculty: require('../../dummy.jpg'),
-        nameOfFaculty: "Name of Faculty",
+        nameOfFaculty: "Dr. J.S. Gill, ME",
         facultyAdvisor: "Faculty Advisor",
         domainCoordinator: [
             {
