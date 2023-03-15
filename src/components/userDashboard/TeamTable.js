@@ -1,14 +1,33 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import "./TeamTable.css";
 import { MdDelete, MdAdd } from "react-icons/md";
 import { FaTimes } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import axios from "axios";
+import { baseUrl } from "../../API/api";
+import AuthContext from "../../auth/authContext";
 
 const TeamTable = (props) => {
+  const authContext = useContext(AuthContext);
   const [teamMembers, setTeamMembers] = useState(props.teamMembers);
   const handleDelete = (id) => {
-    const updatedTeamMembers = teamMembers.filter((member) => member.id !== id);
-    setTeamMembers(updatedTeamMembers);
+    axios
+      .post(`${baseUrl}/team/delete`, {id}, {
+        headers: {
+          Authorization: "Bearer " + authContext.token,
+        },
+      })
+      .then((result) => {
+        if (result.data.isError) {
+          alert(result.data.title);
+          return;
+        } else {
+          const updatedTeamMembers = teamMembers.filter(
+            (member) => member._id !== id
+          );
+          setTeamMembers(updatedTeamMembers);
+        }
+      })
   };
 
   // const [membersName, setMembersName] = useState(props.teamMembers.membersName);
@@ -42,22 +61,22 @@ const TeamTable = (props) => {
               <th className="teamHeader">Action</th>
             </tr>
           </thead>
-          <tbody>
-            {teamMembers.map((member) => (
-              <tr key={member.id} className="TableRow">
-                <td>{member.teamName}</td>
-                <td>{member.leaderName}</td>
+          {props.teamMembers && props.teamMembers.length > 0 &&<tbody>
+            {teamMembers.map((team) => (
+              <tr key={team._id} className="TableRow">
+                <td>{team.teamName}</td>
+                <td>{team.leaderName}</td>
                 <td className="memberLi">
-                  {member.membersName.map((eachMember) => (
+                  {team.members.map((eachMember) => (
                     <tr
-                      key={eachMember.idd}
+                      key={eachMember.memberId}
                       className={
-                        eachMember.isVerified ? "verifiedTxt" : "notVerifiedTxt"
+                        eachMember.status ? "verifiedTxt" : "notVerifiedTxt"
                       }
                     >
-                      <td>{eachMember.memberName} - </td>
+                      <td>{eachMember.email} - </td>
                       <td>
-                        {eachMember.isVerified ? "Verified" : "Not Verified"}
+                        {eachMember.status ? "Verified" : "Not Verified"}
                       </td>
                       <td className="removeMembBttn">
                         <button
@@ -70,10 +89,16 @@ const TeamTable = (props) => {
                     </tr>
                   ))}
                 </td>
-                <td>{member.eventName}</td>
+                <td>{team.eventName}</td>
+                {team.events && team.events.length === 0 && <td>Not yet registered</td>}
+                {team.events && team.events.map((event) => {
+                  return (
+                    <td>{event.eventName}</td>
+                  )
+                })}
                 <td>
                   <button
-                    onClick={() => handleDelete(member.id)}
+                    onClick={() => handleDelete(team._id)}
                     className="teamDelIcon"
                   >
                     <MdDelete />
@@ -81,7 +106,8 @@ const TeamTable = (props) => {
                 </td>
               </tr>
             ))}
-          </tbody>
+          </tbody>}
+          {props.teamMembers.length === 0 && <tbody>No Team Created</tbody>}
         </table>
       </div>
     </>

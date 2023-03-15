@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./Karyarachna.css";
 import EventBox from "../EventBox";
 import EventBottom from "../EventBottom";
@@ -6,8 +6,22 @@ import { datasOfEvent } from "./data";
 import { datasOfEventCoordinator } from "./data";
 import TechFestT from "../techFEST23kaT.webp";
 import Karyarachnaevent from "../KARYARACHNA1_11zon.png";
+import axios from "axios";
+import { baseUrl } from "../../../API/api";
 
 const Karyarachna = () => {
+  const [karyarachna, setKaryarachna] = useState(null);
+  useEffect(() => {
+    getKaryarachna();
+  }, [])
+
+  const getKaryarachna = async() => {
+    await axios.post(`${baseUrl}/event/getEventByDomain`, {
+      domainName: "Karyarachna"
+    }).then((result) => {
+      setKaryarachna(result.data.event);
+    })
+  }
   return (
     <>
       <div className="background-of-EventsPage">

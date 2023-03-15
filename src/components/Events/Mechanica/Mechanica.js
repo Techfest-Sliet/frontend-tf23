@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./Mechanica.css";
 import EventBox from "../EventBox";
 import EventBottom from "../EventBottom";
@@ -6,8 +6,22 @@ import { datasOfEvent } from "./data";
 import { datasOfEventCoordinator } from "./data";
 import TechFestT from "../techFEST23kaT.webp";
 import Mechanicaevent from "../MECHANICA1_11zon.png";
+import { baseUrl } from "../../../API/api";
+import axios from "axios";
 
 const Mechanica = () => {
+  const [mechanica, setMechanica] = useState(null);
+  useEffect(() => {
+    getMechanica();
+  }, [])
+
+  const getMechanica = async() => {
+    await axios.post(`${baseUrl}/event/getEventByDomain`, {
+      domainName: "Mechanica"
+    }).then((result) => {
+      setMechanica(result.data.event);
+    })
+  }
   return (
     <>
       <div className="background-of-EventsPage">

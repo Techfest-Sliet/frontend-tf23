@@ -21,7 +21,7 @@ const ExpandMenu = ({toggleDrawer}) => {
       <SubRoutesContainer isOpen={isMenuOpen}>
           <SubRoute 
           onClick={function() {toggleDrawer();toggleMenu()}}
-          to= "/events/Aarambh" 
+          to= "/events/aarambh" 
           key="Arambh">
             Arambh
           </SubRoute>
