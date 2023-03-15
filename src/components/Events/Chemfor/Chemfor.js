@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./Chemfor.css";
 import EventBox from "../EventBox";
 import EventBottom from "../EventBottom";
@@ -6,8 +6,22 @@ import { datasOfEvent } from "./data";
 import { datasOfEventCoordinator } from "./data";
 import TechFestT from "../techFEST23kaT.webp";
 import Chemforevent from "../CHEMFOR1_11zon.png";
+import axios from "axios";
+import { baseUrl } from "../../../API/api";
 
 const Chemfor = () => {
+  const [Chemfor, setChemfor] = useState(null);
+  useEffect(() => {
+    getChemfor();
+  }, [])
+
+  const getChemfor = async() => {
+    await axios.post(`${baseUrl}/event/getEventByDomain`, {
+      domainName: "Chemfor"
+    }).then((result) => {
+      setChemfor(result.data.event);
+    })
+  }
   return (
     <>
       <div className="background-of-EventsPage">

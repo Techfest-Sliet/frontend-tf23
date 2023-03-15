@@ -13,77 +13,7 @@ import { BsWhatsapp } from "react-icons/bs";
 import TeamTable from "./TeamTable";
 
 // DUMMY DATA FOR TEAM MEMBERS
-const teamMembers = [
-  {
-    id: 1,
-    teamName: "Team A",
-    leaderName: "xyz",
-    membersName : [
-      {
-        idd: 1,
-        memberName: "xya",
-        isVerified: true
-      },
-      {
-        idd: 2,
-        memberName: "cba",
-        isVerified: true
-      },
-      {
-        idd: 3,
-        memberName: "eya",
-        isVerified: true
-      }
-    ],
-    eventName: "Data dynamics"
-  },
-  {
-    id: 2,
-    teamName: "Team B",
-    leaderName: "xyz",
-    membersName : [
-      {
-        idd: 1,
-        memberName: "xya",
-        isVerified: false
-      },
-      {
-        idd: 2,
-        memberName: "cba",
-        isVerified: true
-      },
-      {
-        idd: 3,
-        memberName: "eya",
-        isVerified: false
-      }
-    ],
-    eventName: "Margdarshak"
-  },
-  {
-    id: 3,
-    teamName: "Team C",
-    leaderName: "xyz",
-    membersName : [
-      {
-        idd: 1,
-        memberName: "xyz",
-        isVerified: false
-      },
-      {
-        idd: 2,
-        memberName: "cza",
-        isVerified: false
-      },
-      {
-        idd: 3,
-        memberName: "edya",
-        isVerified: true
-      }
-    ],
-    eventName: "Clean the Sun"
-  }
-];
+const teamMembers = [];
 
 
 const User_dasbord = () => {
@@ -172,10 +102,12 @@ const User_dasbord = () => {
   const handleClick = () => {
     navigate("/updateuser");
   };
+  const commingSoon = () => {
+    setErrorMade({ title: "Coming Soon", message: "Coming Soon" });
+  }
 
   useEffect(() => {
     setIsLoading(true);
-    alert(JSON.stringify(user));
     axios
       .get(`${baseUrl}/user/getUserById`, {
         headers: {
@@ -197,6 +129,7 @@ const User_dasbord = () => {
         }
         setUser(result.data.user);
         setWorkshops(result.data.user.workshops);
+        teamMembers.push(result.data.user.teamMembers)
       })
       .catch((err) => {
         return err.status(208).json({
@@ -312,7 +245,7 @@ const User_dasbord = () => {
             </div>
           }
 
-          {/* <div className="card-payment">
+          { user && (user.role == 1) && <div className="card-payment">
             <div className="card-heading">
               <h1>Pay for event mode</h1>
             </div>
@@ -329,7 +262,8 @@ const User_dasbord = () => {
                   // onClick={InitiateUserPayment}
                   value="Pay"
                   className="userDash__button"
-                  onClick={() => InitiateUserPayment(299, true)}
+                  // onClick={() => InitiateUserPayment(299, true)}
+                  onClick={commingSoon}
                 >
                   Online Mode
                 </button>
@@ -339,17 +273,17 @@ const User_dasbord = () => {
               ) : (
                 <button
                   type="button"
-                  // onClick={InitiateUserPayment}
+                  onClick={commingSoon}
                   value="Pay"
                   className="userDash__button"
-                  onClick={() => InitiateUserPayment(599, false).call}
+                  // onClick={() => InitiateUserPayment(599, false).call}
                 >
                   Offline Mode
                 </button>
               )}
             </div>
-          </div> */}
-          {user && user.role == 1 && <button className="userpay">PAY</button>}
+          </div>}
+          {/* {user && user.role == 1 && <button className="userpay">PAY</button>} */}
 
           <div className="card-bodymid">
             <div className="dashboard_profile_container">
@@ -433,7 +367,7 @@ const User_dasbord = () => {
               </table>
             </div>
           </div>
-          {/* <TeamTable teamMembers={teamMembers} leaderId={user&&user._id}/> */}
+          <TeamTable teamMembers={teamMembers} leaderId={user&&user._id}/>
         </div>
       </div>
     </>

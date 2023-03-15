@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./Genesis.css";
 import EventBox from "../EventBox";
 import EventBottom from "../EventBottom";
@@ -6,8 +6,22 @@ import { datasOfEvent } from "./data";
 import { datasOfEventCoordinator } from "./data";
 import TechFestT from "../techFEST23kaT.webp";
 import Genesisevent from "../GENESIS1_11zon.png";
+import { baseUrl } from "../../../API/api";
+import axios from "axios";
 
 const Genesis = () => {
+  const [genesis, setGenesis] = useState(null);
+  useEffect(() => {
+    getGenesis();
+  }, [])
+
+  const getGenesis = async() => {
+    await axios.post(`${baseUrl}/event/getEventByDomain`, {
+      domainName: "Genesis"
+    }).then((result) => {
+      setGenesis(result.data.event);
+    })
+  }
   return (
     <>
       <div className="background-of-EventsPage">

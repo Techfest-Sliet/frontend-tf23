@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./Aarambh.css";
 import EventBoxAarambh from "../EventBoxAarambh";
 import EventBottom from "../EventBottom";
@@ -6,8 +6,22 @@ import { datasOfEvent } from "./data";
 import { datasOfEventCoordinator } from "./data";
 import TechFestT from "../techFEST23kaT.webp";
 import Aarambhevent from "../AARAMBH_11zon.png";
+import axios from "axios";
+import { baseUrl } from "../../../API/api";
 
 const Aarambh = () => {
+  const [aarambh, setAarambh] = useState(null);
+  useEffect(() => {
+    getAarambh();
+  }, [])
+
+  const getAarambh = async() => {
+    await axios.post(`${baseUrl}/event/getEventByDomain`, {
+      domainName: "Aarambh"
+    }).then((result) => {
+      setAarambh(result.data.event);
+    })
+  }
   return (
     <>
       <div className="background-of-EventsPage">

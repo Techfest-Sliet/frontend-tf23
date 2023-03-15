@@ -9,7 +9,7 @@ import ErrorModel from '../ErrorPopup/ErrorModel';
 import Razorpay from 'react-razorpay';
 import AuthContext from '../../auth/authContext';
 
-function EventBox({ props, index }) {
+function EventBox({ props }) {
   const [errorMade, setErrorMade] = useState();
   const authContext = useContext(AuthContext);
   const onErrorMadeHandle = () => {
@@ -44,7 +44,6 @@ function EventBox({ props, index }) {
   }
 
   function InitiateUserPayment() {
-	  console.log(props);
     axios.post(`${baseUrl}/payment/eventPaymentLink`, { userId: user._id }, {
       headers: { "content-type": "multipart/form-data" },
     }).then(
@@ -125,7 +124,7 @@ function EventBox({ props, index }) {
         });
       });
   }, [authContext, authContext.login]);
-    const coor_len = (props?.coor).length;
+    const coor_len = (props?.studentCoordinator).length;
     const onErrorHappen = () => {
         setErrorMade({ title: "Register Now", message: "Coming Soon" })
     }
@@ -141,22 +140,22 @@ function EventBox({ props, index }) {
             }
             {
                 (coor_len === 1) ? (
-                    <div className='eventBoxSingle' key={index}>
+                    <div className='eventBoxSingle' key={props._id}>
                         <div className='LeftOfEventBox'>
                             <div className='evntDesc' style={{ float: "left" }}>
 
-                                <h1 style={{ textAlign: "left" }}>{props?.nameOfEvent}</h1>
-                                <p className='eventDesc'>{props?.desc}</p>
+                                <h1 style={{ textAlign: "left" }}>{props?.eventName}</h1>
+                                <p className='eventDesc'>{props?.eventDescription}</p>
                                 <div style={{ float: "left" }}>
-                                    <button className='registerNowEvent' onClick={HandleRegister} value={props.nameOfEvent}> Register Now </button>
-                                    <button className='problemStat' > {props?.schedule} </button>
+                                    <button className='registerNowEvent' onClick={HandleRegister}> Register Now </button>
+                                    <a target='_blank' rel="noreferrer" href={`${props?.driveLink}`}><button className='problemStat'>Problem Statement</button></a>
                                 </div>
                                 <div style={{ float: "left" }}>
-                                    <h2 style={{ textAlign: "left" }}>Prizes Worth <br></br> {props?.prizeMoney} </h2>
+                                    <h2 style={{ textAlign: "left" }}>Prizes Worth <br></br> {props?.ePrizeWorth} </h2>
                                     <p style={{ fontSize: "14px", margin: "0.5rem 0" }}>
                                         <FaUnity /> Event Mode : {props?.eventMode} </p>
                                     <p style={{ fontSize: "14px", textAlign: "left" }}>
-                                        <FaRegCalendar /> Register Before {props?.dateBefore}<br></br>
+                                        <FaRegCalendar /> Register Before 22 March<br></br>
                                         <FaRegClock /> 11:59 P.M.
                                     </p>
                                 </div>
@@ -167,17 +166,17 @@ function EventBox({ props, index }) {
                             <div className='objOfEventBox'>
 
                                 {
-                                    (coor_len === 1) ? (props?.coor)?.map((cor) => {
+                                    (coor_len === 1) ? (props?.studentCoordinator)?.map((cor) => {
                                         return <div className='boxImage'>
-                                            <img src={cor.img} className='boxImgSingle' alt='.' />
-                                            <div className='event__coordinator'> <span> {cor.nameOfEventCoordinator} </span><br></br> <span> {cor.phoneNo} </span><br></br> <span> {cor.mail} </span></div>
+                                            <img src='/dummy.jpg' className='boxImgSingle' alt='.' />
+                                            <div className='event__coordinator'> <span> {cor.coordinatorName} </span><br></br> <span> {cor.coordinatorPhone} </span><br></br> <span> {cor.coordinatorEmail} </span></div>
                                         </div>
                                     }
                                     ) :
-                                        (props?.coor)?.map((cor) => {
+                                        (props?.studentCoordinator)?.map((cor) => {
                                             return <div className='boxImage'>
-                                                <img src={cor.img} className='boxImgDouble' alt='.' />
-                                                <div className='event__coordinator'> <span> {cor.nameOfEventCoordinator} </span><br></br> <span> {cor.phoneNo} </span><br></br> <span> {cor.mail} </span></div>
+                                                {/* <img src={cor.img} className='boxImgDouble' alt='.' /> */}
+                                                <div className='event__coordinator'> <span> {cor.coordinatorName} </span><br></br> <span> {cor.coordinatorPhone} </span><br></br> <span> {cor.coordinatorEmail} </span></div>
                                             </div>
                                         })
                                 }
@@ -187,22 +186,22 @@ function EventBox({ props, index }) {
 
                     </div>
                 ) : (
-                    <div className='eventBox' key={index}>
+                    <div className='eventBox' key={props._id}>
                         <div className='LeftOfEventBox'>
                             <div className='evntDesc' style={{ float: "left" }}>
 
-                                <h1 style={{ textAlign: "left" }}>{props?.nameOfEvent}</h1>
-                                <p className='eventDesc'>{props?.desc}</p>
+                                <h1 style={{ textAlign: "left" }}>{props?.eventName}</h1>
+                                <p className='eventDesc'>{props?.eventDescription}</p>
                                 <div style={{ float: "left" }}>
-                                    <button className='registerNowEvent' onClick={HandleRegister} value={props.nameOfEvent}> Register Now </button>
-                                    <button className='problemStat'> {props?.schedule} </button>
+                                    <button className='registerNowEvent' onClick={HandleRegister}> Register Now </button>
+                                    <a target='_blank' rel="noreferrer" href={`${props?.driveLink}`}><button className='problemStat'>Problem Statement</button></a>
                                 </div>
                                 <div style={{ float: "left" }}>
-                                    <h2 style={{ marginTop: "6px", textAlign: "left" }}>Prizes Worth <br></br> {props?.prizeMoney} </h2>
+                                    <h2 style={{ marginTop: "6px", textAlign: "left" }}>Prizes Worth <br></br> {props?.ePrizeWorth} </h2>
                                     <p style={{ fontSize: "14px", margin: "0.5rem 0" }}>
                                         <FaUnity />Event Mode : {props?.eventMode} </p>
                                     <p style={{ fontSize: "14px", textAlign: "left" }}>
-                                        <FaRegCalendar /> Register Before {props?.dateBefore}<br></br>
+                                        <FaRegCalendar /> Register Before 22 March<br></br>
                                         <FaRegClock /> 11:59 P.M.
                                     </p>
                                 </div>
@@ -213,17 +212,17 @@ function EventBox({ props, index }) {
                             <div className='objOfEventBox'>
 
                                 {
-                                    (coor_len === 1) ? (props?.coor)?.map((cor) => {
+                                    (coor_len === 1) ? (props?.studentCoordinator)?.map((cor) => {
                                         return <div className='boxImage'>
-                                            <img src={cor.img} className='boxImgSingle' alt='.' />
-                                            <div style={{ marginLeft: "10px", textAlign: "center", fontSize: "14px" }}> <span> {cor.nameOfEventCoordinator} </span><br></br> <span> {cor.phoneNo} </span><br></br> <span> {cor.mail} </span></div>
+                                        <img src='/dummy.jpg' className='boxImgSingle' alt='.' />
+                                            <div style={{ marginLeft: "10px", textAlign: "center", fontSize: "14px" }}> <span> {cor.coordinatorName} </span><br></br> <span> {cor.coordinatorPhone} </span><br></br> <span> {cor.coordinatorEmail} </span></div>
                                         </div>
                                     }
                                     ) :
-                                        (props?.coor)?.map((cor) => {
+                                        (props?.studentCoordinator)?.map((cor) => {
                                             return <div className='boxImage'>
-                                                <img src={cor.img} className='boxImgDouble' alt='.' />
-                                                <div className='event__coordinator' style={{ marginLeft: "10px", fontSize: "14px" }}> <span> {cor.nameOfEventCoordinator} </span><br></br> <span> {cor.phoneNo} </span><br></br> <span> {cor.mail} </span></div>
+                                            <img src='/dummy.jpg' className='boxImgSingle' alt='.' />
+                                                <div className='event__coordinator' style={{ marginLeft: "10px", fontSize: "14px" }}> <span> {cor.coordinatorName} </span><br></br> <span> {cor.coordinatorPhone} </span><br></br> <span> {cor.coordinatorEmail} </span></div>
                                             </div>
                                         })
                                 }
@@ -234,7 +233,7 @@ function EventBox({ props, index }) {
                     </div>)
             }
 
-            <Popover
+            {/* <Popover
               id={id}
               open={open}
               anchorEl={anchorEl}
@@ -249,7 +248,7 @@ function EventBox({ props, index }) {
                 user={user}
                 eventMode={props.eventMode}
               />
-            </Popover>
+            </Popover> */}
         </>
 
             )
