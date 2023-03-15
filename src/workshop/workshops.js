@@ -33,8 +33,8 @@ const Workshops = () => {
           </div>
           <div className='explore_wrkshop'>
             <h2>WORKSHOPS</h2>
-            <p style={{ marginTop: "-4px", fontSize: "small" }}>Explore Workshops</p>
-            <p style={{ marginTop: "10px" }}>
+            <p style={{ marginTop: "-4px", fontSize: "small", textAlign: "center" }}>Explore Workshops</p>
+            <p>
             Welcome to our engineering workshops! Our workshops are designed to provide engineering students and professionals with practical knowledge and skills that they can apply in their work or studies. We offer a wide range of workshops on topics such as software development, electrical engineering, mechanical engineering, civil engineering, and more. Our workshops are led by expert engineers and trainers who guide you through the learning process and provide you with feedback and support. 
             </p>
           </div>
