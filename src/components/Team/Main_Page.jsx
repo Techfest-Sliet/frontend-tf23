@@ -1,18 +1,27 @@
 import { Popover } from "@mui/material";
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import AddMember from "./AddMember";
 import "./mainPage.css";
 import img from "./user.png";
 import { members } from "./members.js";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import ErrorModel from "../ErrorPopup/ErrorModel";
+
 import { baseUrl } from "../../API/api.js";
+import AuthContext from "../../auth/authContext.js";
 const Main_Page = (props) => {
+  const [errorMade, setErrorMade] = useState();
+  const onErrorMadeHandle = () => {
+    setErrorMade(null);
+  };
+  const authContext = useContext(AuthContext);
   const navigate = useNavigate();
   const [anchorEl, setAnchorEl] = useState(null);
   const [type, setType] = useState("");
   const [toggle, setToggle] = useState(false);
   const [teamName, setTeamName] = useState("");
+  const [teams, setTeams] = useState();
   const user = props.user;
   const leaderId = user._id;
   const leaderName = user.leaderName;
@@ -33,49 +42,59 @@ const Main_Page = (props) => {
     setMembersList(members);
   }, [membersList]);
 
+  useEffect(() => {
+    getProperTeam();
+  }, []);
+
+  const getProperTeam = async () => {
+    await axios
+      .get(`${baseUrl}/team/properteam`, {
+        headers: {
+          Authorization: "Bearer " + authContext.token,
+        },
+      })
+      .then((result) => {
+        setTeams(result.data.teams);
+        return;
+      });
+  };
 
   const PostData = async () => {
     await axios
-      .post(`${baseUrl}/event/geteventbyname`, { eventName: props.eventName })
+      .post(
+        `${baseUrl}/user/addevent`,
+        {
+          eventId: props.eventId,
+          type: type,
+        },
+        {
+          headers: {
+            Authorization: "Bearer " + authContext.token,
+          },
+        }
+      )
       .then((result) => {
-        const res = result;
-        eventId = res.data.id;
-      });
-    await axios
-      .post(`${baseUrl}/user/addevent`, {
-        user: user,
-        eventId: eventId,
-        type: type,
-      })
-      .then((result) => {
-        const res = result;
-        navigate("/user-dashboard");
+        // setErrorMade({
+        //   title: result.data.title,
+        //   message: result.data.message,
+        // });
+        alert(JSON.stringify(result.data.title,result.data.message))
+        return;
       });
   };
 
   return (
     <div>
+      {errorMade && (
+        <ErrorModel
+          title={errorMade.title}
+          message={errorMade.message}
+          onErrorClick={onErrorMadeHandle}
+        />
+      )}
       <div className="Mainlist-father">
         <div className="Mainlist-son">
-          {/* <span className="Mainlist-content">
-            <div className="Mainlist-top2"></div>
-            <div className="Mainlist-topheding">
-              <p className="Mainlist-contentheading">Domain Name</p>
-              <input className="Mainlist-forminput" type="text" />
-              <div className="Mainlist-line"></div>
-              <br />
-            </div>
-
-            <div className="Mainlist-topheding">
-              <p className="Mainlist-contentheading">Competition Name</p>
-              <input className="Mainlist-forminput" type="text" />
-              <div className="Mainlist-line"></div>
-              <br />
-            </div>
-          </span> */}
           <span className="Mainlist-content">
-            {/* <input type="radio" id="individual" name="individual" value="Individual" />
-            <label for="individual">Individual</label> */}
             <div className="Mainlist-top2">
               <select
                 className="Mainlist_select"
@@ -86,10 +105,9 @@ const Main_Page = (props) => {
               >
                 <option value="0">Choose Participation Type</option>
                 <option value="Individual">Individual</option>
-                <option value="Individual">Team - Furious</option>
-                <option value="Individual">Team - 404</option>
-                {/* To fetch team list */}
-                {/* <option value="Team">Team</option> */}
+                {teams?.map((team) => {
+                  return <option value={team._id}>{team.teamName}</option>;
+                })}
                 <option value="Team">Add Team</option>
               </select>
             </div>
@@ -120,7 +138,7 @@ const Main_Page = (props) => {
                     horizontal: "left",
                   }}
                 >
-                  <AddMember 
+                  <AddMember
                     teamName={teamName}
                     eventType={props.eventMode}
                     leaderId={leaderId}

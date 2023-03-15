@@ -30,14 +30,6 @@ const TeamTable = (props) => {
       })
   };
 
-  // const [membersName, setMembersName] = useState(props.teamMembers.membersName);
-  // const handleDeleteMember = (idd) => {
-  //   const updatedMembers = membersName.filter(
-  //     (eachMember) => eachMember.idd !== idd
-  //   );
-  //   setMembersName(updatedMembers);
-  // };
-
   return (
     <>
       <div className="teamcont">
@@ -56,7 +48,7 @@ const TeamTable = (props) => {
             <tr className="TableRow">
               <th className="teamHeader">Team Name</th>
               <th className="teamHeader">Leader Name</th>
-              <th className="teamHeader">Member Name - Status</th>
+              <th className="teamHeader">Member Email - Status</th>
               <th className="teamHeader">Event</th>
               <th className="teamHeader">Action</th>
             </tr>

@@ -16,10 +16,8 @@ function EventBox({ props }) {
       setErrorMade(null);
   };
   const [anchorEl, setAnchorEl] = useState(null);
-  const [eventName, setEventName] = useState(null)
   const [user, setUser] = useState(null);
   const handleClick = (event) => {
-    setEventName(event.target.value);
     setAnchorEl(event.currentTarget);
   };
   const handleClose = () => {
@@ -27,21 +25,7 @@ function EventBox({ props }) {
   };
   const open = Boolean(anchorEl);
   const id = open ? "simple-popover" : undefined;
-  function HandleRegister(e) {
-    // alert(e.target.value)
-    setErrorMade({title: "Coming Soon", message: 'Coming Soon'});
-  // if (authContext.isUserLoggedIn) {
-	//   if (!user.isVerified) {
-  //       		setErrorMade({ title: "Register Now", message: "Please verify your email" })
-	//   } else if (!user.isPaid) {
-  //       		setErrorMade({ title: "Register Now", message: "Please Pay your registeration fee" })
-	//   } else {
-	// 		InitiateUserPayment();
-	//   }
-  // } else {
 
-  //       		setErrorMade({ title: "Register Now", message: "Please Login" })
-  }
 
   function InitiateUserPayment() {
     axios.post(`${baseUrl}/payment/eventPaymentLink`, { userId: user._id }, {
@@ -147,7 +131,7 @@ function EventBox({ props }) {
                                 <h1 style={{ textAlign: "left" }}>{props?.eventName}</h1>
                                 <p className='eventDesc'>{props?.eventDescription}</p>
                                 <div style={{ float: "left" }}>
-                                    <button className='registerNowEvent' onClick={HandleRegister}> Register Now </button>
+                                    <button className='registerNowEvent' onClick={handleClick}> Register Now </button>
                                     <a target='_blank' rel="noreferrer" href={`${props?.driveLink}`}><button className='problemStat'>Problem Statement</button></a>
                                 </div>
                                 <div style={{ float: "left" }}>
@@ -193,7 +177,7 @@ function EventBox({ props }) {
                                 <h1 style={{ textAlign: "left" }}>{props?.eventName}</h1>
                                 <p className='eventDesc'>{props?.eventDescription}</p>
                                 <div style={{ float: "left" }}>
-                                    <button className='registerNowEvent' onClick={HandleRegister}> Register Now </button>
+                                    <button className='registerNowEvent' onClick={handleClick}> Register Now </button>
                                     <a target='_blank' rel="noreferrer" href={`${props?.driveLink}`}><button className='problemStat'>Problem Statement</button></a>
                                 </div>
                                 <div style={{ float: "left" }}>
@@ -233,7 +217,7 @@ function EventBox({ props }) {
                     </div>)
             }
 
-            {/* <Popover
+            <Popover
               id={id}
               open={open}
               anchorEl={anchorEl}
@@ -244,11 +228,11 @@ function EventBox({ props }) {
               }}
             >
               <Register 
-                eventName={eventName}
                 user={user}
                 eventMode={props.eventMode}
+                eventId={props._id}
               />
-            </Popover> */}
+            </Popover>
         </>
 
             )

@@ -17,6 +17,7 @@ const User_dasbord = () => {
   const authContext = useContext(AuthContext);
   const [errorMade, setErrorMade] = useState();
   const [workshops, setWorkshops] = useState(null);
+  const [events, setEvents] = useState(null);
   const [teamMembers, setTeamMembers] = useState(null);
   const onErrorMadeHandle = () => {
     setErrorMade(null);
@@ -127,6 +128,7 @@ const User_dasbord = () => {
         setUser(result.data.user);
         setWorkshops(result.data.user.workshops);
         setTeamMembers(result.data.user.teamMembers)
+        setEvents(result.data.user.events)
       })
       .catch((err) => {
         return err.status(208).json({
@@ -153,7 +155,6 @@ const User_dasbord = () => {
               {/* Your Unique tF ID is {user && user.userId} */}
             </p>
           </div>
-          {
             <div className="flex_topbox">
               <div className="card-bodytop">
                 <div className="card-title text-light text-center">
@@ -170,27 +171,33 @@ const User_dasbord = () => {
                   <div class="scrollbar" id="scrollbar-custom">
                     <table className="table_text-light">
                       <tbody>
-                        {/* <tr>
+                        <tr>
                           <td>Name </td>
                           <td>Date</td>
                           <td>Type</td>
+                          {/* <td>Participation Type</td> */}
                           <td>Action</td>
                         </tr>
-                        <tr>
-                          <td>cp </td>
-                          <td>15/3</td>
-                          <td>team</td>
-                          <td>
-                            <span className="mdphone">
-                              <BsWhatsapp />
-                            </span>
-
-                            <span className="mdphone">
-                              <MdDelete />
-                            </span>
-                          </td>
-                        </tr> */}
-                        <tr>Not yet registered!</tr>
+                        {events && events.length === 0 &&  'Not registered Yet' } 
+                        {events && events.length > 0 &&
+                            events.map((event) => {
+                              return (<tr key={event._id}>
+                                <td>{event.eventName }</td>
+                                <td>{event.startDate.slice(0, 10)}</td>
+                                <td>{event.eventMode }</td>
+                                {/* <td>{event.eventParticipationType }</td> */}
+                                <td>
+                                  <a target='_blank' rel="noreferrer" href={`${event.whatsappLink}`}><span className="mdphone" title="Join Workshop Whatsapp Group">
+                                    <BsWhatsapp />
+                                  </span>
+                                  </a>
+                                  <span className="mdphone">
+                                    <MdDelete />
+                                  </span>
+                                </td>
+                              </tr>)
+                            })
+                        }
                       </tbody>
                     </table>
                   </div>
@@ -240,7 +247,6 @@ const User_dasbord = () => {
                 </div>
               </div>
             </div>
-          }
 
           { user && (user.role == 1) && <div className="card-payment">
             <div className="card-heading">
