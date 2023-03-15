@@ -90,9 +90,10 @@ function WorkshopBox({ props }) {
       )}
 
       <div className="eventBoxSingle" key={props._id}>
-        <div className="LeftOfEventBox">
+      <h1 style={{ textAlign: "left", color:"white" ,marginBottom:"10px"}}>{props && props.workshopName}</h1>
+      <div className="lt">
+      <div className="LeftOfEventBox">
           <div className="evntDesc" style={{ float: "left" }}>
-            <h1 style={{ textAlign: "left" }}>{props && props.workshopName}</h1>
             <p className="eventDesc">{props && props.workshopDescription}</p>
             <div style={{ float: "left" }}>
               <button className="registerNowEvent" onClick={HandleRegister}>
@@ -111,9 +112,21 @@ function WorkshopBox({ props }) {
               <p style={{ fontSize: "14px", textAlign: "left" }}>
                 Time: {props && props.workshopTime}
               </p>
+              <p style={{ fontSize: "14px", textAlign: "left" }}>
+              Perkes:E-certificate
+              </p>
             </div>
           </div>
         </div>
+        <div className='RightOfEventBox'>
+          <div  className="workshop_image">
+         <img   src="https://img.freepik.com/free-vector/business-team-discussing-ideas-startup_74855-4380.jpg?w=1060&t=st=1678873596~exp=1678874196~hmac=4796605744a4156cc934fe705c03cef6173434f3316e733c7e50c4b1f80eddab " className='boxImgSingle' style={{borderRadius:"0px"}}  alt='.' />
+
+          </div>
+
+        </div>
+      </div>
+      
       </div>
     </>
   );
