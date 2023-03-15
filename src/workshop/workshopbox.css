@@ -1,4 +1,4 @@
-.eventBox {
+.workshopBox {
     margin: 2rem 1rem 7rem 1rem;
     height: auto;
     width: 80vw;
@@ -9,7 +9,7 @@
     position: relative;
 }
 
-.eventBoxSingle {
+.workshopBoxSingle {
     margin: 2rem 1rem 7rem 1rem;
     height: auto;
     width: 80vw;
@@ -20,36 +20,36 @@
     position: relative;
 }
 
-.LeftOfEventBox {
+.LeftOfworkshopBox {
     width: 45%;
     float: left;
     color: white;
 }
 
-.evntDesc {
+.workshopDesc {
     display: flex;
     flex-direction: column;
     margin-bottom: 10px;
 }
 
-.LeftOfEventBox h1 {
+.LeftOfworkshopBox h1 {
     font-family: "productSansBold";
     margin-bottom: 10px;
 }
 
-.evntDesc h2{
+.workshopDesc h2{
     font-family: "productSansBold";
     margin: 6px 0;
 }
 
-.RightOfEventBox {
-    width: 50%;
+.RightOfworkshopBox {
+    width: 40%;
     float: right;
     bottom: 0px;
     color: white;
 }
 
-.objOfEventBox {
+.objOfworkshopBox {
     position: absolute;
     bottom: 50px;
     display: flex;
@@ -63,26 +63,22 @@
     align-items: center;
 }
 
-.boxImgSingle {
+.workshopboxImgSingle {
     height: 100%;
     width: 100%;
-    
+
 }
 
-.boxImgDouble {
-    height: 40%;
-    width: 40%;
-    
-}
-.event__coordinator {
+
+.workshop__coordinator {
     text-align: center;
 }
 
-.event__coordinator span{
+.workshop__coordinator span{
     font-family: "productSansBold";
 }
 
-.registerNowEvent {
+.registerNowworkshop {
     padding: 8px 20px;
     background: linear-gradient(to right, rgb(47, 226, 47), rgb(8, 81, 8));
     border-radius: 10px;
@@ -107,14 +103,15 @@
 .workshop_image{
      margin-bottom: 20px;
 }
+
 @media screen and (max-width: 1055px) {
-    .eventBox{
+    .workshopBox{
         width: 85vw !important;
     }
-    .eventBoxSingle {
+    .workshopBoxSingle {
         width: 85vw;
     }
-    .boxImgSingle {
+    .workshopboxImgSingle {
         width: 100%;
     }
     .boxImgDouble {
@@ -133,23 +130,24 @@
         width: 50%;
     }
 
-    .eventDesc{
+    .workshopDesc{
         font-size: 0.7rem;
+        line-height: 18px;
     }
 
     .problemStat{
         margin: 5px 25px 7px 0;
     }
 
-    .RightOfEventBox {
+    .RightOfworkshopBox {
         width: 45%;
         float: left;
     }
 
-    .objOfEventBox {
+    .objOfworkshopBox {
         font-size: 2vw;
     }
-    .boxImgSingle {
+    .workshopboxImgSingle {
         width: 100%;
     }
     .boxImgDouble {
@@ -158,23 +156,25 @@
 }
 
 @media screen and (max-width: 650px) {
-    .lt{
-        display: flex;
-    flex-direction: column-reverse;
-    }
-    .eventBox {
+  
+        .lt{
+            display: flex;
+        flex-direction: column-reverse;
+        }
+
+    .workshopBox {
         margin: 2rem 1rem 2vh 1rem;
         padding: 25px 25px 45vw 25px;
         width: 85%;
         height: auto;
     }
-    .eventBoxSingle {
+    .workshopBoxSingle {
         margin: 2rem 1rem 7vh 1rem;
         padding: 25px 25px 23vw 25px;
         width: 85%;
         height: auto;
     }
-    .RightOfEventBox {
+    .RightOfworkshopBox {
         width: 100%;
         float: none;
     }
@@ -183,12 +183,12 @@
         font-size: 14px;
     }
 
-    .LeftOfEventBox {
+    .LeftOfworkshopBox {
         width: 100%;
         float: none;
     }
 
-    .objOfEventBox {
+    .objOfworkshopBox {
         font-size: 2.6vw;
         text-align: center;
         bottom: 10px;
@@ -205,7 +205,7 @@
         margin: 3vw;
         gap: 1em;
     }
-    .boxImgSingle {
+    .workshopboxImgSingle {
         height: auto;
         width: 100%;
     }
@@ -213,29 +213,29 @@
         height: 20%;
         width: 20%;
     }
-    .event__coordinator {
+    .workshop__coordinator {
         text-align: left;
         font-size: 14px;
     }
 }
 
 @media screen and (max-width: 550px) {
+    
     .lt{
         display: flex;
     flex-direction: column-reverse;
     }
-    .eventBox {
+    .workshopBox {
         padding: 25px 25px 48vw 25px;
     }
-    .eventBoxSingle {
+    .workshopBoxSingle {
         padding: 25px 25px 29vw 25px;
     }
-    .objOfEventBox {
+    .objOfworkshopBox {
         font-size: 2.7vw;
     }
-    .boxImgSingle {
-        
-        width:100%;
+    .workshopboxImgSingle {
+        width: 100%;
     }
     .boxImgDouble {
         width: 22%;
@@ -243,17 +243,18 @@
 }
 
 @media screen and (max-width: 456px) {
+    
     .lt{
         display: flex;
     flex-direction: column-reverse;
     }
-    .eventBox {
+    .workshopBox {
         padding: 25px 25px 50vw 25px;
     }
     .problemStat {
         margin-top: 8px;
     }
-    .boxImgSingle {
+    .workshopboxImgSingle {
         width: 100%;
     }
     .boxImgDouble {
@@ -262,6 +263,7 @@
 }
 
 @media screen and (max-width: 445px) {
+    
     .lt{
         display: flex;
     flex-direction: column-reverse;
@@ -272,11 +274,12 @@
 }
 
 @media screen and (max-width: 386px) {
+    
     .lt{
         display: flex;
     flex-direction: column-reverse;
     }
-    .registerNowEvent {
+    .registerNowworkshop {
         margin: 7px 25px 0 0;
     }
 }
