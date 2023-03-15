@@ -13,11 +13,11 @@ function WorkshopBox({ props }) {
     setErrorMade(null);
   };
   const [anchorEl, setAnchorEl] = useState(null);
-  const [eventName, setEventName] = useState(null);
+  const [workshopName, setworkshopName] = useState(null);
   const [user, setUser] = useState(null);
-  const handleClick = (event) => {
-    setEventName(event.target.value);
-    setAnchorEl(event.currentTarget);
+  const handleClick = (workshop) => {
+    setworkshopName(workshop.target.value);
+    setAnchorEl(workshop.currentTarget);
   };
   const handleClose = () => {
     setAnchorEl(null);
@@ -28,7 +28,7 @@ function WorkshopBox({ props }) {
     if (!authContext.isUserLoggedIn) {
       setErrorMade({
         title: "Login Error",
-        message: "Please login to register for the event",
+        message: "Please login to register for the workshop",
       });
       return;
     }
@@ -89,13 +89,14 @@ function WorkshopBox({ props }) {
         />
       )}
 
-      <div className="eventBoxSingle" key={props._id}>
-        <div className="LeftOfEventBox">
-          <div className="evntDesc" style={{ float: "left" }}>
-            <h1 style={{ textAlign: "left" }}>{props && props.workshopName}</h1>
-            <p className="eventDesc">{props && props.workshopDescription}</p>
+      <div className="workshopBoxSingle" key={props._id}>
+      <h1 style={{ textAlign: "left" ,color:"white" ,marginBottom:"20px" }}>{props && props.workshopName}</h1>
+      <div className="lt">
+      <div className="LeftOfworkshopBox">
+          <div className="workshopDesc" style={{ float: "left" }}>
+            <p className="workshopDesc">{props && props.workshopDescription}</p>
             <div style={{ float: "left" }}>
-              <button className="registerNowEvent" onClick={HandleRegister}>
+              <button className="registerNowworkshop" onClick={HandleRegister}>
                 Register Now
               </button>
               {/* <button className='problemStat' > {props?.schedule} </button> */}
@@ -111,9 +112,21 @@ function WorkshopBox({ props }) {
               <p style={{ fontSize: "14px", textAlign: "left" }}>
                 Time: {props && props.workshopTime}
               </p>
+              <p style={{ fontSize: "14px", textAlign: "left" }}>
+              Perkes:E-certificate
+              </p>
             </div>
           </div>
         </div>
+        <div className='RightOfworkshopBox'>
+          <div  className="workshop_image">
+         <img src="https://img.freepik.com/free-vector/business-team-discussing-ideas-startup_74855-4380.jpg?w=1060&t=st=1678873596~exp=1678874196~hmac=4796605744a4156cc934fe705c03cef6173434f3316e733c7e50c4b1f80eddab " className='workshopboxImgSingle' style={{borderRadius:"0px"}}  alt='.' />
+
+          </div>
+
+        </div>
+      </div>
+      
       </div>
     </>
   );
