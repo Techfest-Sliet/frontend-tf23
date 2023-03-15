@@ -43,21 +43,21 @@ const TeamTable = (props) => {
             </tr>
           </thead>
           <tbody>
-            {teamMembers.map((member) => (
-              <tr key={member.id} className="TableRow">
-                <td>{member.teamName}</td>
-                <td>{member.leaderName}</td>
+            {teamMembers.map((team) => (
+              <tr key={team._id} className="TableRow">
+                <td>{team.teamName}</td>
+                <td>{team.leaderName}</td>
                 <td className="memberLi">
-                  {member.membersName.map((eachMember) => (
+                  {team.members.map((eachMember) => (
                     <tr
-                      key={eachMember.idd}
+                      key={eachMember.memberId}
                       className={
-                        eachMember.isVerified ? "verifiedTxt" : "notVerifiedTxt"
+                        eachMember.status ? "verifiedTxt" : "notVerifiedTxt"
                       }
                     >
-                      <td>{eachMember.memberName} - </td>
+                      <td>{eachMember.email} - </td>
                       <td>
-                        {eachMember.isVerified ? "Verified" : "Not Verified"}
+                        {eachMember.status ? "Verified" : "Not Verified"}
                       </td>
                       <td className="removeMembBttn">
                         <button
@@ -70,10 +70,16 @@ const TeamTable = (props) => {
                     </tr>
                   ))}
                 </td>
-                <td>{member.eventName}</td>
+                <td>{team.eventName}</td>
+                {team.events && team.events.length === 0 && <td>Not yet registered</td>}
+                {team.events && team.events.map((event) => {
+                  return (
+                    <td>{event.eventName}</td>
+                  )
+                })}
                 <td>
                   <button
-                    onClick={() => handleDelete(member.id)}
+                    onClick={() => handleDelete(team.memberId)}
                     className="teamDelIcon"
                   >
                     <MdDelete />

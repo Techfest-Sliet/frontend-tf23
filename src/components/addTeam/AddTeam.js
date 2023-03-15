@@ -8,7 +8,6 @@ import AuthContext from "../../auth/authContext";
 
 const AddTeam = (props) => {
   const [teamName, setTeamName] = useState("");
-  const [leaderId, setLeaderId] = useState(useLocation().state.leaderId);
   const [eventType, setEventType] = useState();
   const [members, setMembers] = useState([{ id: "", name: "", email: "" }]);
   const [memberResults, setMemberResults] = useState();
@@ -130,7 +129,7 @@ const AddTeam = (props) => {
     }
     // Handle form submission here
     var form = new FormData(document.querySelector("form"));
-    let formData = { teamName: form.teamName, leaderId: leaderId, members: [] };
+    let formData = { teamName: form.teamName, members: [] };
     let member = {};
     for (const e of form) {
       console.log(e);
@@ -151,10 +150,13 @@ const AddTeam = (props) => {
       }
     }
     console.log(formData);
-    axios.post(`${baseUrl}/team/create`, formData).then((result) => {
+    axios.post(`${baseUrl}/team/create`, formData,{
+      headers: {
+        Authorization: "Bearer " + authContext.token,
+      },
+    }).then((result) => {
       console.log(result);
       if (result.data.isError) {
-        alert((result.data.title));
       } else {
         navigate("/user-dashboard");
       }

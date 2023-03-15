@@ -13,13 +13,11 @@ import { BsWhatsapp } from "react-icons/bs";
 import TeamTable from "./TeamTable";
 
 // DUMMY DATA FOR TEAM MEMBERS
-const teamMembers = [];
-
-
 const User_dasbord = () => {
   const authContext = useContext(AuthContext);
   const [errorMade, setErrorMade] = useState();
-  const [workshops, setWorkshops] = useState(null)
+  const [workshops, setWorkshops] = useState(null);
+  const [teamMembers, setTeamMembers] = useState(null);
   const onErrorMadeHandle = () => {
     setErrorMade(null);
   };
@@ -115,7 +113,6 @@ const User_dasbord = () => {
         },
       })
       .then((result) => {
-        // alert(JSON.stringify(result.data.user.workshops))
         setIsLoading(false);
         if (
           result.status !== 200 ||
@@ -129,7 +126,7 @@ const User_dasbord = () => {
         }
         setUser(result.data.user);
         setWorkshops(result.data.user.workshops);
-        teamMembers.push(result.data.user.teamMembers)
+        setTeamMembers(result.data.user.teamMembers)
       })
       .catch((err) => {
         return err.status(208).json({
@@ -367,7 +364,8 @@ const User_dasbord = () => {
               </table>
             </div>
           </div>
-          <TeamTable teamMembers={teamMembers} leaderId={user&&user._id}/>
+          {teamMembers && teamMembers.length === 0 &&  'Not registered Yet' } 
+          {teamMembers && teamMembers.length > 0 && <TeamTable teamMembers={teamMembers} leaderId={user&&user._id}/>}
         </div>
       </div>
     </>
