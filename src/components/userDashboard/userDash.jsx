@@ -364,8 +364,7 @@ const User_dasbord = () => {
               </table>
             </div>
           </div>
-          {teamMembers && teamMembers.length === 0 &&  'Not registered Yet' } 
-          {teamMembers && teamMembers.length > 0 && <TeamTable teamMembers={teamMembers} leaderId={user&&user._id}/>}
+          {teamMembers  && <TeamTable teamMembers={teamMembers} leaderId={user&&user._id}/>}
         </div>
       </div>
     </>

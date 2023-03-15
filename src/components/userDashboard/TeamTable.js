@@ -1,14 +1,33 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import "./TeamTable.css";
 import { MdDelete, MdAdd } from "react-icons/md";
 import { FaTimes } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import axios from "axios";
+import { baseUrl } from "../../API/api";
+import AuthContext from "../../auth/authContext";
 
 const TeamTable = (props) => {
+  const authContext = useContext(AuthContext);
   const [teamMembers, setTeamMembers] = useState(props.teamMembers);
   const handleDelete = (id) => {
-    const updatedTeamMembers = teamMembers.filter((member) => member.id !== id);
-    setTeamMembers(updatedTeamMembers);
+    axios
+      .post(`${baseUrl}/team/delete`, {id}, {
+        headers: {
+          Authorization: "Bearer " + authContext.token,
+        },
+      })
+      .then((result) => {
+        if (result.data.isError) {
+          alert(result.data.title);
+          return;
+        } else {
+          const updatedTeamMembers = teamMembers.filter(
+            (member) => member._id !== id
+          );
+          setTeamMembers(updatedTeamMembers);
+        }
+      })
   };
 
   // const [membersName, setMembersName] = useState(props.teamMembers.membersName);
@@ -42,7 +61,7 @@ const TeamTable = (props) => {
               <th className="teamHeader">Action</th>
             </tr>
           </thead>
-          <tbody>
+          {props.teamMembers && props.teamMembers.length > 0 &&<tbody>
             {teamMembers.map((team) => (
               <tr key={team._id} className="TableRow">
                 <td>{team.teamName}</td>
@@ -79,7 +98,7 @@ const TeamTable = (props) => {
                 })}
                 <td>
                   <button
-                    onClick={() => handleDelete(team.memberId)}
+                    onClick={() => handleDelete(team._id)}
                     className="teamDelIcon"
                   >
                     <MdDelete />
@@ -87,7 +106,8 @@ const TeamTable = (props) => {
                 </td>
               </tr>
             ))}
-          </tbody>
+          </tbody>}
+          {props.teamMembers.length === 0 && <tbody>No Team Created</tbody>}
         </table>
       </div>
     </>
