@@ -23,7 +23,7 @@ const ExpandMenu = ({toggleDrawer}) => {
           onClick={function() {toggleDrawer();toggleMenu()}}
           to= "/events/aarambh" 
           key="Arambh">
-            Arambh
+            Aarambh
           </SubRoute>
           <SubRoute 
           onClick={function() {toggleDrawer();toggleMenu()}}

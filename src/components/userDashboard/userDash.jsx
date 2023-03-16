@@ -181,9 +181,10 @@ const User_dasbord = () => {
                         {events && events.length === 0 &&  'Not registered Yet' } 
                         {events && events.length > 0 &&
                             events.map((event) => {
+                              const e = event.startDate.slice(0, 10);
                               return (<tr key={event._id}>
                                 <td>{event.eventName }</td>
-                                <td>{event.startDate.slice(0, 10)}</td>
+                                <td>{e}</td>
                                 <td>{event.eventMode }</td>
                                 {/* <td>{event.eventParticipationType }</td> */}
                                 <td>
