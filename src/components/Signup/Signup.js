@@ -452,7 +452,6 @@ const Signup = () => {
                   <span className={styles.signin__link}>Sign In</span>
                 </Link> 
               </p>
-
             </div>
             </div>
           )}

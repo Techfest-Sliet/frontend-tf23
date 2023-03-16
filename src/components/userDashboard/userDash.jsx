@@ -7,14 +7,27 @@ import ErrorModel from "../ErrorPopup/ErrorModel";
 import { Link, useNavigate } from "react-router-dom";
 import useRazorpay from "react-razorpay";
 import Loader from "../Loader/Loader";
+//  import { MdDelete } from "react-icons/fa";
+import { MdDelete } from "react-icons/md";
+import { BsWhatsapp } from "react-icons/bs";
+import TeamTable from "./TeamTable";
 
+// DUMMY DATA FOR TEAM MEMBERS
 const User_dasbord = () => {
   const authContext = useContext(AuthContext);
   const [errorMade, setErrorMade] = useState();
+  const [workshops, setWorkshops] = useState(null);
+  const [events, setEvents] = useState(null);
+  const [teamMembers, setTeamMembers] = useState(null);
   const onErrorMadeHandle = () => {
     setErrorMade(null);
   };
+
+  const onWorkshopWhatsapp = (e) => {
+    // window.location.href(e)
+  }
   const [user, setUser] = useState(null);
+ // const [teamMembers, setTeamMembers] = useState();
   function HandlePay() {
     console.log(authContext);
     console.log(user);
@@ -26,7 +39,7 @@ const User_dasbord = () => {
     axios
       .post(
         `${baseUrl}/payment/userPaymentLink`,
-        { userId: user._id, amount: amount * 100, isOnline: isOnline},
+        { userId: user._id, amount: amount * 100, isOnline: isOnline },
         {
           headers: { "content-type": "multipart/form-data" },
         }
@@ -84,9 +97,13 @@ const User_dasbord = () => {
   }
   const [isLoading, setIsLoading] = useState(false);
 
+
   const handleClick = () => {
     navigate("/updateuser");
   };
+  const commingSoon = () => {
+    setErrorMade({ title: "Coming Soon", message: "Coming Soon" });
+  }
 
   useEffect(() => {
     setIsLoading(true);
@@ -109,6 +126,9 @@ const User_dasbord = () => {
           });
         }
         setUser(result.data.user);
+        setWorkshops(result.data.user.workshops);
+        setTeamMembers(result.data.user.teamMembers)
+        setEvents(result.data.user.events)
       })
       .catch((err) => {
         return err.status(208).json({
@@ -128,128 +148,108 @@ const User_dasbord = () => {
             onErrorClick={onErrorMadeHandle}
           />
         )}
-        <div className="row_justify-content-around" style={{ height: "100vh" }}>
+        <div className="row_justify-content-around">
           <div className="userdashbord_body">
             <div className="user__header">Namaste! {user && user.name}</div>
             <p className="blockquote-footer">
               {/* Your Unique tF ID is {user && user.userId} */}
             </p>
           </div>
-          {
             <div className="flex_topbox">
               <div className="card-bodytop">
-                <h3 className="card-title text-light text-center">
+                <div className="card-title text-light text-center">
                   <img
                     className="idea"
                     src="https://img.icons8.com/fluency-systems-regular/48/000000/idea.png"
                     alt=""
                   />
-                  Events Registered
-                </h3>
+
+                  <span className="userEvents">Events Registered</span>
+                </div>
 
                 <div className="collapse1 p-4 mt-4 mb-2">
                   <div class="scrollbar" id="scrollbar-custom">
                     <table className="table_text-light">
                       <tbody>
                         <tr>
-                          <td>{user && user.events}</td>
-                          {/* <td>Date</td> */}
+                          <td>Name </td>
+                          <td>Date</td>
+                          <td>Type</td>
+                          {/* <td>Participation Type</td> */}
+                          <td>Action</td>
                         </tr>
-                        {/*<tr>
-                      <td>Name of Event</td>
-                      <td>Date</td>
-                    </tr>
-                    <tr>
-                      <td>Name of Event</td>
-                      <td>Date</td>
-                    </tr>
-                    <tr>
-                      <td>Name of Event</td>
-                      <td>Date</td>
-                    </tr>
-                    <tr>
-                      <td>Name of Event</td>
-                      <td>Date</td>
-                    </tr>
-                    <tr>
-                      <td>Name of Event</td>
-                      <td>Date</td>
-                    </tr>
-                    <tr>
-                      <td>Name of Event</td>
-                      <td>Date</td>
-                    </tr>
-                    <tr>
-                      <td>Name of Event</td>
-                      <td>Date</td>
-                    </tr> */}
+                        {events && events.length === 0 &&  'Not registered Yet' } 
+                        {events && events.length > 0 &&
+                            events.map((event) => {
+                              const e = event.startDate.slice(0, 10);
+                              return (<tr key={event._id}>
+                                <td>{event.eventName }</td>
+                                <td>{e}</td>
+                                <td>{event.eventMode }</td>
+                                {/* <td>{event.eventParticipationType }</td> */}
+                                <td>
+                                  <a target='_blank' rel="noreferrer" href={`${event.whatsappLink}`}><span className="mdphone" title="Join Workshop Whatsapp Group">
+                                    <BsWhatsapp />
+                                  </span>
+                                  </a>
+                                  <span className="mdphone">
+                                    <MdDelete />
+                                  </span>
+                                </td>
+                              </tr>)
+                            })
+                        }
                       </tbody>
                     </table>
                   </div>
                 </div>
               </div>
               <div className="card-bodytop">
-                <h3 className="card-title text-light text-center">
+                <div className="card-title text-light text-center">
                   <img
                     className="maintenance"
                     src="https://img.icons8.com/ios/50/000000/maintenance.png"
                     alt=""
                   />
-                  Workshops Registered
-                </h3>
+
+                  <span className="userEvents">Workshops Registered</span>
+                </div>
                 <div className="collapse1 p-4 mt-4 mb-2">
                   <div class="scrollbar" id="scrollbar-custom">
                     <table className="table_text-light">
                       <tbody>
-                        {/* <tr>
-                      <td>Name of Worshop</td>
-                      <td></td>
-                      <td>Date</td>
-                    </tr>
-                    <tr>
-                      <td>Name of Worshop</td>
-                      <td></td>
-                      <td>Date</td>
-                    </tr>
-                    <tr>
-                      <td>Name of Worshop</td>
-                      <td></td>
-                      <td>Date</td>
-                    </tr>
-                    <tr>
-                      <td>Name of Worshop</td>
-                      <td></td>
-                      <td>Date</td>
-                    </tr>
-                    <tr>
-                      <td>Name of Worshop</td>
-                      <td></td>
-                      <td>Date</td>
-                    </tr>
-                    <tr>
-                      <td>Name of Worshop</td>
-                      <td></td>
-                      <td>Date</td>
-                    </tr>
-                    <tr>
-                      <td>Name of Worshop</td>
-                      <td></td>
-                      <td>Date</td>
-                    </tr>
-                    <tr>
-                      <td>Name of Worshop</td>
-                      <td></td>
-                      <td>Date</td>
-                    </tr> */}
+                        <tr>
+                          <td>Name </td>
+                          <td>Date</td>
+                          <td>Action</td>
+                        </tr>
+                        {workshops && workshops.length === 0 &&  'Not registered Yet' } 
+                        {workshops && workshops.length > 0 &&
+                            workshops.map((workshop) => {
+                              return (<tr key={workshop._id}>
+                                <td>{workshop.workshopName }</td>
+                                <td>{workshop.workshopDate}</td>
+                                <td>
+                                  <a target='_blank' rel="noreferrer" href={`${workshop.whatsappLink}`}><span className="mdphone" title="Join Workshop Whatsapp Group">
+                                    <BsWhatsapp />
+                                  </span>
+                                  </a>
+                                  <span className="mdphone">
+                                    <MdDelete />
+                                  </span>
+                                </td>
+                              </tr>)
+                            })
+                        }
+                        
                       </tbody>
                     </table>
                   </div>
                 </div>
               </div>
             </div>
-          }
 
-          <div className="card-payment">
+          { user && (user.role == 1) && <div className="card-payment">
             <div className="card-heading">
               <h1>Pay for event mode</h1>
             </div>
@@ -266,7 +266,8 @@ const User_dasbord = () => {
                   // onClick={InitiateUserPayment}
                   value="Pay"
                   className="userDash__button"
-                  onClick={() => InitiateUserPayment(299, true)}
+                  // onClick={() => InitiateUserPayment(299, true)}
+                  onClick={commingSoon}
                 >
                   Online Mode
                 </button>
@@ -276,16 +277,17 @@ const User_dasbord = () => {
               ) : (
                 <button
                   type="button"
-                  // onClick={InitiateUserPayment}
+                  onClick={commingSoon}
                   value="Pay"
                   className="userDash__button"
-                  onClick={() => InitiateUserPayment(599, false).call}
+                  // onClick={() => InitiateUserPayment(599, false).call}
                 >
                   Offline Mode
                 </button>
               )}
             </div>
-          </div>
+          </div>}
+          {/* {user && user.role == 1 && <button className="userpay">PAY</button>} */}
 
           <div className="card-bodymid">
             <div className="dashboard_profile_container">
@@ -321,7 +323,7 @@ const User_dasbord = () => {
                   <td>Date of Birth</td>
 
                   <td className="TableRow__res">
-                    {user && user.dob}
+                    {user && user.dob.slice(0, 10)}
                   </td>
                 </tr>
 
@@ -347,19 +349,9 @@ const User_dasbord = () => {
                 <tr className="TableRow">
                   <td>Payment Status</td>
                   <td className="TableRow__res">
-                    {user && user.isPaid ? (
+                    {user && user.role == 2 ? (
                       "Paid"
-                    ) : (
-                      <button
-                        type="button"
-                        // onClick={InitiateUserPayment}
-                        value="Pay"
-                        className="userDash__button"
-                        onClick={HandlePay}
-                      >
-                        Pay
-                      </button>
-                    )}
+                    ) : 'Not Paid'}
                   </td>
                 </tr>
                 <tr>
@@ -379,535 +371,7 @@ const User_dasbord = () => {
               </table>
             </div>
           </div>
-          <div>
-            {/* <div className="flex_bottombox">
-            <div className="card-bodybottom">
-              <h3 className="CertificatesRewards">Certificates & Rewards</h3>
-              <div className="certificate_colleps">
-                <div className="asdfghjkl">
-                  <b className="card-title text-light text-center">
-                    Events Certificates
-                  </b>
-                </div>
-                <div class="scrollbar_certificate" id="scrollbar-custom">
-                  <table className="table_text-light_event">
-                    <tbody>
-                      <tr className="workshoptablepad">
-                        <td>Name of Event</td>
-                        <td>Date</td>
-                        <td>
-                          <div data-tooltip="" class="button">
-                            <div class="button-wrapper">
-                              <div class="text">Download</div>
-                              <span class="icon">
-                                <svg
-                                  viewBox="0 0 24 24"
-                                  preserveAspectRatio="xMidYMid meet"
-                                  height="2em"
-                                  width="2em"
-                                  role="img"
-                                  aria-hidden="true"
-                                  xmlns="http://www.w3.org/2000/svg"
-                                >
-                                  <path
-                                    d="M12 15V3m0 12l-4-4m4 4l4-4M2 17l.621 2.485A2 2 0 0 0 4.561 21h14.878a2 2 0 0 0 1.94-1.515L22 17"
-                                    stroke-width="2"
-                                    stroke-linejoin="round"
-                                    stroke-linecap="round"
-                                    stroke="currentColor"
-                                    fill="none"
-                                  ></path>
-                                </svg>
-                              </span>
-                            </div>
-                          </div>
-                        </td>
-                      </tr>
-                      <tr className="workshoptablepad">
-                        <td>Name of Event</td>
-                        <td>Date</td>
-                        <td>
-                          <div data-tooltip="" class="button">
-                            <div class="button-wrapper">
-                              <div class="text">Download</div>
-                              <span class="icon">
-                                <svg
-                                  viewBox="0 0 24 24"
-                                  preserveAspectRatio="xMidYMid meet"
-                                  height="2em"
-                                  width="2em"
-                                  role="img"
-                                  aria-hidden="true"
-                                  xmlns="http://www.w3.org/2000/svg"
-                                >
-                                  <path
-                                    d="M12 15V3m0 12l-4-4m4 4l4-4M2 17l.621 2.485A2 2 0 0 0 4.561 21h14.878a2 2 0 0 0 1.94-1.515L22 17"
-                                    stroke-width="2"
-                                    stroke-linejoin="round"
-                                    stroke-linecap="round"
-                                    stroke="currentColor"
-                                    fill="none"
-                                  ></path>
-                                </svg>
-                              </span>
-                            </div>
-                          </div>
-                        </td>
-                      </tr>
-                      <tr className="workshoptablepad">
-                        <td>Name of Event</td>
-                        <td>Date</td>
-                        <td>
-                          <div data-tooltip="" class="button">
-                            <div class="button-wrapper">
-                              <div class="text">Download</div>
-                              <span class="icon">
-                                <svg
-                                  viewBox="0 0 24 24"
-                                  preserveAspectRatio="xMidYMid meet"
-                                  height="2em"
-                                  width="2em"
-                                  role="img"
-                                  aria-hidden="true"
-                                  xmlns="http://www.w3.org/2000/svg"
-                                >
-                                  <path
-                                    d="M12 15V3m0 12l-4-4m4 4l4-4M2 17l.621 2.485A2 2 0 0 0 4.561 21h14.878a2 2 0 0 0 1.94-1.515L22 17"
-                                    stroke-width="2"
-                                    stroke-linejoin="round"
-                                    stroke-linecap="round"
-                                    stroke="currentColor"
-                                    fill="none"
-                                  ></path>
-                                </svg>
-                              </span>
-                            </div>
-                          </div>
-                        </td>
-                      </tr>
-                      <tr className="workshoptablepad">
-                        <td>Name of Event</td>
-                        <td>Date</td>
-                        <td>
-                          <div data-tooltip="" class="button">
-                            <div class="button-wrapper">
-                              <div class="text">Download</div>
-                              <span class="icon">
-                                <svg
-                                  viewBox="0 0 24 24"
-                                  preserveAspectRatio="xMidYMid meet"
-                                  height="2em"
-                                  width="2em"
-                                  role="img"
-                                  aria-hidden="true"
-                                  xmlns="http://www.w3.org/2000/svg"
-                                >
-                                  <path
-                                    d="M12 15V3m0 12l-4-4m4 4l4-4M2 17l.621 2.485A2 2 0 0 0 4.561 21h14.878a2 2 0 0 0 1.94-1.515L22 17"
-                                    stroke-width="2"
-                                    stroke-linejoin="round"
-                                    stroke-linecap="round"
-                                    stroke="currentColor"
-                                    fill="none"
-                                  ></path>
-                                </svg>
-                              </span>
-                            </div>
-                          </div>
-                        </td>
-                      </tr>
-                      <tr className="workshoptablepad">
-                        <td>Name of Event</td>
-                        <td>Date</td>
-                        <td>
-                          <div data-tooltip="" class="button">
-                            <div class="button-wrapper">
-                              <div class="text">Download</div>
-                              <span class="icon">
-                                <svg
-                                  viewBox="0 0 24 24"
-                                  preserveAspectRatio="xMidYMid meet"
-                                  height="2em"
-                                  width="2em"
-                                  role="img"
-                                  aria-hidden="true"
-                                  xmlns="http://www.w3.org/2000/svg"
-                                >
-                                  <path
-                                    d="M12 15V3m0 12l-4-4m4 4l4-4M2 17l.621 2.485A2 2 0 0 0 4.561 21h14.878a2 2 0 0 0 1.94-1.515L22 17"
-                                    stroke-width="2"
-                                    stroke-linejoin="round"
-                                    stroke-linecap="round"
-                                    stroke="currentColor"
-                                    fill="none"
-                                  ></path>
-                                </svg>
-                              </span>
-                            </div>
-                          </div>
-                        </td>
-                      </tr>
-                      <tr className="workshoptablepad">
-                        <td>Name of Event</td>
-                        <td>Date</td>
-                        <td>
-                          <div data-tooltip="" class="button">
-                            <div class="button-wrapper">
-                              <div class="text">Download</div>
-                              <span class="icon">
-                                <svg
-                                  viewBox="0 0 24 24"
-                                  preserveAspectRatio="xMidYMid meet"
-                                  height="2em"
-                                  width="2em"
-                                  role="img"
-                                  aria-hidden="true"
-                                  xmlns="http://www.w3.org/2000/svg"
-                                >
-                                  <path
-                                    d="M12 15V3m0 12l-4-4m4 4l4-4M2 17l.621 2.485A2 2 0 0 0 4.561 21h14.878a2 2 0 0 0 1.94-1.515L22 17"
-                                    stroke-width="2"
-                                    stroke-linejoin="round"
-                                    stroke-linecap="round"
-                                    stroke="currentColor"
-                                    fill="none"
-                                  ></path>
-                                </svg>
-                              </span>
-                            </div>
-                          </div>
-                        </td>
-                      </tr>
-                      <tr className="workshoptablepad">
-                        <td>Name of Event</td>
-                        <td>Date</td>
-                        <td>
-                          <div data-tooltip="" class="button">
-                            <div class="button-wrapper">
-                              <div class="text">Download</div>
-                              <span class="icon">
-                                <svg
-                                  viewBox="0 0 24 24"
-                                  preserveAspectRatio="xMidYMid meet"
-                                  height="2em"
-                                  width="2em"
-                                  role="img"
-                                  aria-hidden="true"
-                                  xmlns="http://www.w3.org/2000/svg"
-                                >
-                                  <path
-                                    d="M12 15V3m0 12l-4-4m4 4l4-4M2 17l.621 2.485A2 2 0 0 0 4.561 21h14.878a2 2 0 0 0 1.94-1.515L22 17"
-                                    stroke-width="2"
-                                    stroke-linejoin="round"
-                                    stroke-linecap="round"
-                                    stroke="currentColor"
-                                    fill="none"
-                                  ></path>
-                                </svg>
-                              </span>
-                            </div>
-                          </div>
-                        </td>
-                      </tr>
-                      <tr className="workshoptablepad">
-                        <td>Name of Event</td>
-                        <td>Date</td>
-                        <td>
-                          <div data-tooltip="" class="button">
-                            <div class="button-wrapper">
-                              <div class="text">Download</div>
-                              <span class="icon">
-                                <svg
-                                  viewBox="0 0 24 24"
-                                  preserveAspectRatio="xMidYMid meet"
-                                  height="2em"
-                                  width="2em"
-                                  role="img"
-                                  aria-hidden="true"
-                                  xmlns="http://www.w3.org/2000/svg"
-                                >
-                                  <path
-                                    d="M12 15V3m0 12l-4-4m4 4l4-4M2 17l.621 2.485A2 2 0 0 0 4.561 21h14.878a2 2 0 0 0 1.94-1.515L22 17"
-                                    stroke-width="2"
-                                    stroke-linejoin="round"
-                                    stroke-linecap="round"
-                                    stroke="currentColor"
-                                    fill="none"
-                                  ></path>
-                                </svg>
-                              </span>
-                            </div>
-                          </div>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-              <div className="bottomboxcollaps">
-                <div className="asdfghjkl">
-                  <b className="card-title text-light text-center">
-                    Workshop Certificates
-                  </b>
-                </div>
-                <div class="scrollbar_certificate" id="scrollbar-custom">
-                  <table className="table_text-light_workshop">
-                    <tbody>
-                      <tr>
-                        <td>Name of Worshop</td>
-                        <td>Date</td>
-                        <td>
-                          <div data-tooltip="" class="button">
-                            <div class="button-wrapper">
-                              <div class="text">Download</div>
-                              <span class="icon">
-                                <svg
-                                  viewBox="0 0 24 24"
-                                  preserveAspectRatio="xMidYMid meet"
-                                  height="2em"
-                                  width="2em"
-                                  role="img"
-                                  aria-hidden="true"
-                                  xmlns="http://www.w3.org/2000/svg"
-                                >
-                                  <path
-                                    d="M12 15V3m0 12l-4-4m4 4l4-4M2 17l.621 2.485A2 2 0 0 0 4.561 21h14.878a2 2 0 0 0 1.94-1.515L22 17"
-                                    stroke-width="2"
-                                    stroke-linejoin="round"
-                                    stroke-linecap="round"
-                                    stroke="currentColor"
-                                    fill="none"
-                                  ></path>
-                                </svg>
-                              </span>
-                            </div>
-                          </div>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Name of Worshop</td>
-                        <td>Date</td>
-                        <td>
-                          <div data-tooltip="" class="button">
-                            <div class="button-wrapper">
-                              <div class="text">Download</div>
-                              <span class="icon">
-                                <svg
-                                  viewBox="0 0 24 24"
-                                  preserveAspectRatio="xMidYMid meet"
-                                  height="2em"
-                                  width="2em"
-                                  role="img"
-                                  aria-hidden="true"
-                                  xmlns="http://www.w3.org/2000/svg"
-                                >
-                                  <path
-                                    d="M12 15V3m0 12l-4-4m4 4l4-4M2 17l.621 2.485A2 2 0 0 0 4.561 21h14.878a2 2 0 0 0 1.94-1.515L22 17"
-                                    stroke-width="2"
-                                    stroke-linejoin="round"
-                                    stroke-linecap="round"
-                                    stroke="currentColor"
-                                    fill="none"
-                                  ></path>
-                                </svg>
-                              </span>
-                            </div>
-                          </div>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Name of Worshop</td>
-                        <td>Date</td>
-                        <td>
-                          <div data-tooltip="" class="button">
-                            <div class="button-wrapper">
-                              <div class="text">Download</div>
-                              <span class="icon">
-                                <svg
-                                  viewBox="0 0 24 24"
-                                  preserveAspectRatio="xMidYMid meet"
-                                  height="2em"
-                                  width="2em"
-                                  role="img"
-                                  aria-hidden="true"
-                                  xmlns="http://www.w3.org/2000/svg"
-                                >
-                                  <path
-                                    d="M12 15V3m0 12l-4-4m4 4l4-4M2 17l.621 2.485A2 2 0 0 0 4.561 21h14.878a2 2 0 0 0 1.94-1.515L22 17"
-                                    stroke-width="2"
-                                    stroke-linejoin="round"
-                                    stroke-linecap="round"
-                                    stroke="currentColor"
-                                    fill="none"
-                                  ></path>
-                                </svg>
-                              </span>
-                            </div>
-                          </div>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Name of Worshop</td>
-                        <td>Date</td>
-                        <td>
-                          <div data-tooltip="" class="button">
-                            <div class="button-wrapper">
-                              <div class="text">Download</div>
-                              <span class="icon">
-                                <svg
-                                  viewBox="0 0 24 24"
-                                  preserveAspectRatio="xMidYMid meet"
-                                  height="2em"
-                                  width="2em"
-                                  role="img"
-                                  aria-hidden="true"
-                                  xmlns="http://www.w3.org/2000/svg"
-                                >
-                                  <path
-                                    d="M12 15V3m0 12l-4-4m4 4l4-4M2 17l.621 2.485A2 2 0 0 0 4.561 21h14.878a2 2 0 0 0 1.94-1.515L22 17"
-                                    stroke-width="2"
-                                    stroke-linejoin="round"
-                                    stroke-linecap="round"
-                                    stroke="currentColor"
-                                    fill="none"
-                                  ></path>
-                                </svg>
-                              </span>
-                            </div>
-                          </div>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Name of Worshop</td>
-                        <td>Date</td>
-                        <td>
-                          <div data-tooltip="" class="button">
-                            <div class="button-wrapper">
-                              <div class="text">Download</div>
-                              <span class="icon">
-                                <svg
-                                  viewBox="0 0 24 24"
-                                  preserveAspectRatio="xMidYMid meet"
-                                  height="2em"
-                                  width="2em"
-                                  role="img"
-                                  aria-hidden="true"
-                                  xmlns="http://www.w3.org/2000/svg"
-                                >
-                                  <path
-                                    d="M12 15V3m0 12l-4-4m4 4l4-4M2 17l.621 2.485A2 2 0 0 0 4.561 21h14.878a2 2 0 0 0 1.94-1.515L22 17"
-                                    stroke-width="2"
-                                    stroke-linejoin="round"
-                                    stroke-linecap="round"
-                                    stroke="currentColor"
-                                    fill="none"
-                                  ></path>
-                                </svg>
-                              </span>
-                            </div>
-                          </div>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Name of Worshop</td>
-                        <td>Date</td>
-                        <td>
-                          <div data-tooltip="" class="button">
-                            <div class="button-wrapper">
-                              <div class="text">Download</div>
-                              <span class="icon">
-                                <svg
-                                  viewBox="0 0 24 24"
-                                  preserveAspectRatio="xMidYMid meet"
-                                  height="2em"
-                                  width="2em"
-                                  role="img"
-                                  aria-hidden="true"
-                                  xmlns="http://www.w3.org/2000/svg"
-                                >
-                                  <path
-                                    d="M12 15V3m0 12l-4-4m4 4l4-4M2 17l.621 2.485A2 2 0 0 0 4.561 21h14.878a2 2 0 0 0 1.94-1.515L22 17"
-                                    stroke-width="2"
-                                    stroke-linejoin="round"
-                                    stroke-linecap="round"
-                                    stroke="currentColor"
-                                    fill="none"
-                                  ></path>
-                                </svg>
-                              </span>
-                            </div>
-                          </div>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Name of Worshop</td>
-                        <td>Date</td>
-                        <td>
-                          <div data-tooltip="" class="button">
-                            <div class="button-wrapper">
-                              <div class="text">Download</div>
-                              <span class="icon">
-                                <svg
-                                  viewBox="0 0 24 24"
-                                  preserveAspectRatio="xMidYMid meet"
-                                  height="2em"
-                                  width="2em"
-                                  role="img"
-                                  aria-hidden="true"
-                                  xmlns="http://www.w3.org/2000/svg"
-                                >
-                                  <path
-                                    d="M12 15V3m0 12l-4-4m4 4l4-4M2 17l.621 2.485A2 2 0 0 0 4.561 21h14.878a2 2 0 0 0 1.94-1.515L22 17"
-                                    stroke-width="2"
-                                    stroke-linejoin="round"
-                                    stroke-linecap="round"
-                                    stroke="currentColor"
-                                    fill="none"
-                                  ></path>
-                                </svg>
-                              </span>
-                            </div>
-                          </div>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Name of Worshop</td>
-                        <td>Date</td>
-                        <td>
-                          <div data-tooltip="" class="button">
-                            <div class="button-wrapper">
-                              <div class="text">Download</div>
-                              <span class="icon">
-                                <svg
-                                  viewBox="0 0 24 24"
-                                  preserveAspectRatio="xMidYMid meet"
-                                  height="2em"
-                                  width="2em"
-                                  role="img"
-                                  aria-hidden="true"
-                                  xmlns="http://www.w3.org/2000/svg"
-                                >
-                                  <path
-                                    d="M12 15V3m0 12l-4-4m4 4l4-4M2 17l.621 2.485A2 2 0 0 0 4.561 21h14.878a2 2 0 0 0 1.94-1.515L22 17"
-                                    stroke-width="2"
-                                    stroke-linejoin="round"
-                                    stroke-linecap="round"
-                                    stroke="currentColor"
-                                    fill="none"
-                                  ></path>
-                                </svg>
-                              </span>
-                            </div>
-                          </div>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-            </div>
-          </div> */}
-          </div>
+          {teamMembers  && <TeamTable teamMembers={teamMembers} leaderId={user&&user._id}/>}
         </div>
       </div>
     </>

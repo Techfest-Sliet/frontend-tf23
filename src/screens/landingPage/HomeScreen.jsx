@@ -136,9 +136,9 @@ const HomePage = () => {
         <div className="sponsor" style={{ marginTop: 14 }}>
           <h1 id="sponsor" style={{ color: "#74EB76", marginBottom: "3rem" }}>
             <span style={{ color: "white", fontFamily: "monumentExtended" }}>
-              PAST
+              Our
             </span>{" "}
-            PARTNERS
+            Sponsors
           </h1>
           <SliderDiv arr={SponsorImageSlider} />
         </div>

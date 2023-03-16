@@ -1,12 +1,28 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./Robozar.css";
 import EventBox from "../EventBox";
 import EventBottom from "../EventBottom";
 import { datasOfEvent, datasOfEventCoordinator } from "./data";
 import TechFestT from "../techFEST23kaT.webp";
 import Robozarevent from "../ROBOZAR1_11zon.png";
+import axios from "axios";
+import { baseUrl } from "../../../API/api";
 
 const Robozar = () => {
+
+  const [robozars, setRobozars] = useState(null);
+  useEffect(() => {
+    getRobozar();
+  }, [])
+
+  const getRobozar = async() => {
+    await axios.post(`${baseUrl}/event/geteventbydomainname`, {
+      domainName: "Robozar"
+    }).then((result) => {
+      setRobozars(result.data.event);
+    })
+  }
+  
   return (
     <>
       <div className="background-of-EventsPage">
@@ -33,9 +49,9 @@ const Robozar = () => {
       </div>
 
       {/* EVENTS */}
-      {datasOfEvent.map((item, index) => (
-        <div className="eventsBackgroundBottom" key={index}>
-          <EventBox props={item} index={index} />
+      {robozars && robozars.map((robozar) => (
+        <div className="eventsBackgroundBottom" key={robozar._id}>
+          <EventBox props={robozar} />
         </div>
       ))}
 

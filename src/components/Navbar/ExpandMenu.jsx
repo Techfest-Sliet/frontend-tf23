@@ -21,9 +21,9 @@ const ExpandMenu = ({toggleDrawer}) => {
       <SubRoutesContainer isOpen={isMenuOpen}>
           <SubRoute 
           onClick={function() {toggleDrawer();toggleMenu()}}
-          to= "/events/Aarambh" 
+          to= "/events/aarambh" 
           key="Arambh">
-            Arambh
+            Aarambh
           </SubRoute>
           <SubRoute 
           onClick={function() {toggleDrawer();toggleMenu()}}
@@ -48,6 +48,12 @@ const ExpandMenu = ({toggleDrawer}) => {
           to= "/events/genesis" 
           key="genesis">
            Genesis
+          </SubRoute>
+          <SubRoute 
+          onClick={function() {toggleDrawer();toggleMenu()}}
+          to= "/events/mechanica" 
+          key="mechanica">
+           Mechanica
           </SubRoute>
           <SubRoute 
           onClick={function() {toggleDrawer();toggleMenu()}}

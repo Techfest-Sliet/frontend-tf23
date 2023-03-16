@@ -63,52 +63,24 @@ export const datasOfEvent = [
   },
 ];
 
-// export const datasOfEventCoordinator = [
-//   {
-//     photoOfFaculty: require("../../dummy.jpg"),
-//     nameOfFaculty: "Name of Faculty",
-//     facultyAdvisor: "Faculty Advisor",
-//     domainCoordinator: [
-//       {
-//         photoOfdomainCoordinator: require("../../dummy.jpg"),
-//         nameOfDomainCoordinator: "Name of student",
-//         phoneNoOfDomainCoordinator: (
-//           <span>
-//             <a
-//               href="tel:98***3822"
-//               style={{ textDecoration: "none", color: "white" }}
-//             >
-//               {" "}
-//               98***3822{" "}
-//             </a>
-//           </span>
-//         ),
-//         mailOfDomainCoordinator: (
-//           <span>
-//             <a href="mailto: *****@sliet.ac.in"> *****@sliet.ac.in</a>
-//           </span>
-//         ),
-//       },
-//       {
-//         photoOfdomainCoordinator: require("../../dummy.jpg"),
-//         nameOfDomainCoordinator: "Name of student",
-//         phoneNoOfDomainCoordinator: (
-//           <span>
-//             <a
-//               href="tel:700**947"
-//               style={{ textDecoration: "none", color: "white" }}
-//             >
-//               {" "}
-//               700**947{" "}
-//             </a>
-//           </span>
-//         ),
-//         mailOfDomainCoordinator: (
-//           <span>
-//             <a href="mailto: *****@sliet.ac.in"> *****@sliet.ac.in</a>
-//           </span>
-//         ),
-//       },
-//     ],
-//   },
-// ];
+export const datasOfEventCoordinator = [
+  {
+    photoOfFaculty: require('../../dummy.jpg'),
+    nameOfFaculty: "Faculty",
+    facultyAdvisor: "Faculty Advisor",
+    domainCoordinator: [
+        {
+            photoOfdomainCoordinator: require('../../dummy.jpg'),
+            nameOfDomainCoordinator: "Tanu Shakya",
+            phoneNoOfDomainCoordinator: (<a href="tel:8859892385" style={{ textDecoration: "none", color: "white", fontFamily: "productSans" }}> 8859892385 </a>),
+            mailOfDomainCoordinator: (<a href='mailto: 2040007@sliet.ac.in' style={{fontFamily: "productSans" }}> 2040007@sliet.ac.in</a>)
+        },
+        {
+            photoOfdomainCoordinator: require('../../dummy.jpg'),
+            nameOfDomainCoordinator: "Shubham",
+            phoneNoOfDomainCoordinator: (<a href="tel:7632954311" style={{ textDecoration: "none", color: "white", fontFamily: "productSans" }}> 7632954311 </a>),
+            mailOfDomainCoordinator: (<a href='mailto: 2130420@sliet.ac.in' style={{fontFamily: "productSans" }}> 2130420@sliet.ac.in</a>)
+        }
+    ]
+}
+];

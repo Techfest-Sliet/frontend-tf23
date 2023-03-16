@@ -1,10 +1,28 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './workshop.css';
 import wrkshop from "./Workshop.png";
-import EventBox from '../components/Events/EventBox';
-import { datasOfWorkshop } from "./DataOfWorkshop";
+import WorkshopBox from './workshopbox';
+// import { datasOfWorkshop } from "./DataOfWorkshop";
+import { baseUrl } from '../API/api';
+import axios from 'axios';
 
-const workshops = () => {
+const Workshops = () => {
+
+  const [workshops, setWorkshops] = useState(null);
+
+  useEffect( () => {
+    getWorkshops();
+  }, []);
+
+  const getWorkshops = async() => {
+    try {
+      const response = await axios.get(`${baseUrl}/workshop/workshops`);
+      setWorkshops(response.data.workshops);
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
   return (
     <>
 
@@ -15,8 +33,9 @@ const workshops = () => {
           </div>
           <div className='explore_wrkshop'>
             <h2>WORKSHOPS</h2>
-            <p style={{ marginTop: "-4px", fontSize: "small" }}>Explore Workshops</p>
-            <p style={{ marginTop: "10px" }}>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+            <p style={{ marginTop: "-4px", fontSize: "small", textAlign: "center" }}>Explore Workshops</p>
+            <p>
+            Welcome to our engineering workshops! Our workshops are designed to provide engineering students and professionals with practical knowledge and skills that they can apply in their work or studies. We offer a wide range of workshops on topics such as software development, electrical engineering, mechanical engineering, civil engineering, and more. Our workshops are led by expert engineers and trainers who guide you through the learning process and provide you with feedback and support. 
             </p>
           </div>
         </div>
@@ -24,13 +43,13 @@ const workshops = () => {
 
 
       {/* Name of the Workshop */}
-      <div className='wrkshopsBackgroundBottoms'>
-        {datasOfWorkshop.map((item, index) => (
-          <EventBox index={index} props={item} />
+      {workshops && <div className='wrkshopsBackgroundBottoms'>
+        {workshops.map((workshop) => (
+          <WorkshopBox index={workshop._id} props={workshop} />
         ))}
-      </div>
+      </div>}
     </>
   )
 }
 
-export default workshops;
+export default Workshops;

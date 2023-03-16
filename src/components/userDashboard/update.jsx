@@ -170,7 +170,7 @@ function UserUpdate() {
                     autoComplete="off"
                     placeholder="Enter your name"
                     onChange={(e) => setName(e.target.value)}
-                    className="TableRow__res "
+                    className="TableRow__res_up "
                     name="name"
                   />
               {{ fieldErr } && <p style={{ color: "red" }}>{fieldErr}</p>}
@@ -189,7 +189,7 @@ function UserUpdate() {
                     autoComplete="off"
                     placeholder="Enter your college name"
                     onChange={(e) => setColName(e.target.value)}
-                    className="TableRow__res "
+                    className="TableRow__res_up "
                     name="name"
                   />
                 </td>
@@ -200,7 +200,7 @@ function UserUpdate() {
                 <td>
                   <select
                     // className={styles.signup__select}
-                    className="TableRow__res "
+                    className="TableRow__res_up "
                     sx={{ height: "10px" }}
                     onChange={(e) => setBranch(e.target.value)}
                     id="branch"
@@ -361,7 +361,7 @@ function UserUpdate() {
                     type="number"
                     autoComplete="off"
                     required
-                    className="TableRow__res "
+                    className="TableRow__res_up "
                     name="phone"
                   />
                 </td>
@@ -375,7 +375,7 @@ function UserUpdate() {
                   onChange={(e) => setWphone(e.target.value)}
                     type="text"
                     autoComplete="off"
-                    className="TableRow__res "
+                    className="TableRow__res_up "
                     name="name"
                   />
                 </td>

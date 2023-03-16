@@ -208,6 +208,7 @@ function AboutUs() {
       {/* previos sponsr */}
       <div className="sponsor" style={{ width: "100%" }}>
         <h1 id="sponsor" style={{ color: "#74EB76", marginBottom: "3rem" }}>
+          OUR
           <span style={{ color: "white", fontFamily: "monumentExtended" }}>
             {" "}
             PAST

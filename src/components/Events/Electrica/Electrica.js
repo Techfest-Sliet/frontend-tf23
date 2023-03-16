@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./Electrica.css";
 import EventBox from "../EventBox";
 import EventBottom from "../EventBottom";
@@ -6,8 +6,22 @@ import { datasOfEvent } from "./data";
 import { datasOfEventCoordinator } from "./data";
 import TechFestT from "../techFEST23kaT.webp";
 import Electicaevent from "../ELECTRICA1_11zon.png";
+import axios from "axios";
+import { baseUrl } from "../../../API/api";
 
 const Electrica = () => {
+  const [electrica, setElectrica] = useState(null);
+  useEffect(() => {
+    getElectrica();
+  }, [])
+
+  const getElectrica = async() => {
+    await axios.post(`${baseUrl}/event/getEventByDomain`, {
+      domainName: "Electrica"
+    }).then((result) => {
+      setElectrica(result.data.event);
+    })
+  }
   return (
     <>
       <div className="background-of-EventsPage">
@@ -33,9 +47,9 @@ const Electrica = () => {
       </div>
 
       {/* EVENTS */}
-      {datasOfEvent.map((item, index) => (
-        <div className="eventsBackgroundBottom" key={index}>
-          <EventBox props={item} index={index} />
+      {electrica && electrica.map((electrica) => (
+        <div className="eventsBackgroundBottom" key={electrica._id}>
+          <EventBox props={electrica} />
         </div>
       ))}
 

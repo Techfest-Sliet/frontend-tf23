@@ -1,12 +1,26 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./Plexus.css";
 import EventBox from "../EventBox";
 import { datasOfEvent, datasOfEventCoordinator } from "./data";
 import EventBottom from "../EventBottom";
 import TechFestT from "../techFEST23kaT.webp";
 import Plexusevent from "../PLEXUS1_11zon.png";
+import axios from "axios";
+import { baseUrl } from "../../../API/api";
 
 const Plexus = () => {
+  const [plexus, setPlexus] = useState(null);
+  useEffect(() => {
+    getPlexus();
+  }, []);
+
+  const getPlexus = async() => {
+    await axios.post(`${baseUrl}/event/getEventByDomain`, {
+      domainName: "Plexus"
+    }).then((result) => {
+      setPlexus(result.data.event);
+    })
+  }
   return (
     <>
       <div className="background-of-EventsPage">
@@ -31,9 +45,9 @@ const Plexus = () => {
       </div>
 
       {/* EVENTS */}
-      {datasOfEvent.map((item, index) => (
-        <div className="eventsBackgroundBottom" key={index}>
-          <EventBox props={item} index={index} />
+      {plexus && plexus.map((plexus) => (
+        <div className="eventsBackgroundBottom" key={plexus._id}>
+          <EventBox props={plexus} />
         </div>
       ))}
 

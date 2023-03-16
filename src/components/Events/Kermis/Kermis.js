@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./Kermis.css";
 import EventBox from "../EventBox";
 import EventBottom from "../EventBottom";
@@ -6,8 +6,22 @@ import { datasOfEvent } from "./data";
 import { datasOfEventCoordinator } from "./data";
 import TechFestT from "../techFEST23kaT.webp";
 import Kermisevent from "../KERMIS1_11zon.png";
+import { baseUrl } from "../../../API/api";
+import axios from "axios";
 
 const Kermis = () => {
+  const [kermis, setKermis] = useState(null);
+  useEffect(() => {
+    getKermis();
+  }, [])
+
+  const getKermis = async() => {
+    await axios.post(`${baseUrl}/event/getEventByDomain`, {
+      domainName: "Kermis"
+    }).then((result) => {
+      setKermis(result.data.event);
+    })
+  }
   return (
     <>
       <div className="background-of-EventsPage">
@@ -32,9 +46,9 @@ const Kermis = () => {
       </div>
 
       {/* EVENTS */}
-      {datasOfEvent.map((item, index) => (
-        <div className="eventsBackgroundBottom" key={index}>
-          <EventBox props={item} index={index} />
+      {kermis && kermis.map((kermis) => (
+        <div className="eventsBackgroundBottom" key={kermis._id}>
+          <EventBox props={kermis} />
         </div>
       ))}
 
