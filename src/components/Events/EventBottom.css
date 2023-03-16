@@ -53,7 +53,7 @@
 @media screen and (max-width: 1055px) {
     .dummyImg {
         height: 20%;
-        width: 20%;
+        width: 15%;
     }
     .dummyImgSingle {
         height: 25%;
@@ -61,7 +61,7 @@
     }
     .dummyImgDouble {
         height: 40%;
-        width: 45%;
+        width: 37%;
     }
     .dmnCordintor {
         width: 70vw !important;
