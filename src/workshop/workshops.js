@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import './workshop.css';
 import wrkshop from "./Workshop.png";
 import WorkshopBox from './workshopbox';
-// import { datasOfWorkshop } from "./DataOfWorkshop";
 import { baseUrl } from '../API/api';
 import axios from 'axios';
 

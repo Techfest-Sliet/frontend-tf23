@@ -111,6 +111,9 @@ function WorkshopBox({ props }) {
                 Venue: {props && props.workshopVenue}
               </p>
               <p style={{ fontSize: "14px", margin: "0.5rem 0" }}>
+                Date: {props && props.workshopDate}
+              </p>
+              <p style={{ fontSize: "14px", margin: "0.5rem 0" }}>
                 Time: {props && props.workshopTime}
               </p>
               <p style={{ fontSize: "14px", margin: "0.5rem 0" }}>
