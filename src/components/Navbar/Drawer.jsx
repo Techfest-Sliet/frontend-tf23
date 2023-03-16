@@ -35,6 +35,15 @@ const Drawer = ({ isOpen, toggleDrawer }) => {
                 >
                   Home
                 </NavRoute> */}
+                {authContext.isUserLoggedIn && (
+                <NavRoute
+                  onClick={toggleDrawer}
+                  to="/user-dashboard"
+                  key="dashboard"
+                >
+                  Dashboard
+                </NavRoute>
+                )}
                 <NavRoute
                   onClick={toggleDrawer}
                   to="/under-construction"
@@ -65,15 +74,7 @@ const Drawer = ({ isOpen, toggleDrawer }) => {
                 </NavRoute>
 
                 <ExpandMenu toggleDrawer={toggleDrawer}/>
-                {authContext.isUserLoggedIn && (
-                <NavRoute
-                  onClick={toggleDrawer}
-                  to="/user-dashboard"
-                  key="dashboard"
-                >
-                  Dashboard
-                </NavRoute>
-                )}
+                
                 {!authContext.isUserLoggedIn && (
                 <NavRoute
                   onClick={toggleDrawer}
@@ -162,7 +163,7 @@ const NavRoute = styled(Link)`
   color: white;
   font-size: 1.5rem;
   padding: 0.5rem;
-  overflow: scroll;
+
   &:hover {
     transition: 0.3s ease-in;
     color: black;
