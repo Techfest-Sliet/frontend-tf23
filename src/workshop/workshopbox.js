@@ -120,7 +120,7 @@ function WorkshopBox({ props }) {
         </div>
         <div className='RightOfworkshopBox'>
           <div  className="workshop_image">
-         <img src={props.workshopPhoto} className='workshopboxImgSingle' style={{borderRadius:"50%"}}  alt='.' />
+         <img src={`${baseUrl}/${props.workshopPhoto}`} className='workshopboxImgSingle' style={{borderRadius:"50%"}}  alt='.' />
 
           </div>
 
