@@ -7,11 +7,25 @@ import { members } from "./members.js";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import ErrorModel from "../ErrorPopup/ErrorModel";
+import Loader from "../Loader/Loader.js";
 import { Link } from "react-router-dom";
-
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import { baseUrl } from "../../API/api.js";
 import AuthContext from "../../auth/authContext.js";
+
 const Main_Page = (props) => {
+  const notify = (msg) =>
+  toast.success(msg, {
+    position: "top-center",
+    autoClose: 3000,
+    hideProgressBar: false,
+    closeOnClick: true,
+    pauseOnHover: true,
+    draggable: true,
+    progress: undefined,
+    theme: "light",
+  });
   const [errorMade, setErrorMade] = useState();
   const onErrorMadeHandle = () => {
     setErrorMade(null);
@@ -21,9 +35,9 @@ const Main_Page = (props) => {
   const [anchorEl, setAnchorEl] = useState(null);
   const [type, setType] = useState("");
   const [toggle, setToggle] = useState(false);
-  const [teamName, setTeamName] = useState("");
+  const [isLoading, setIsLoading] = useState(null);
   const [teams, setTeams] = useState();
-  let eventId = "";
+  const [modeErr, setModeErr] = useState(null);
   const [membersList, setMembersList] = useState([]);
   const handleClick = () => {
     navigate('/user-dashboard')
@@ -58,6 +72,14 @@ const Main_Page = (props) => {
   };
 
   const PostData = async () => {
+    if (type === ''  || type === '0') {
+      setModeErr("Please choose participation type");
+      setTimeout(() => {
+        setModeErr(null);
+      }, 3000);
+      return;
+    }
+    setIsLoading(true);
     await axios
       .post(
         `${baseUrl}/user/addevent`,
@@ -72,17 +94,27 @@ const Main_Page = (props) => {
         }
       )
       .then((result) => {
-        // setErrorMade({
-        //   title: result.data.title,
-        //   message: result.data.message,
-        // });
-        alert(JSON.stringify(result.data.title, result.data.message));
+        setIsLoading(false);
+        notify(result.data.title)
         return;
       });
   };
 
   return (
     <div>
+      {isLoading && <Loader />}
+      <ToastContainer
+        position="top-center"
+        autoClose={3000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="light"
+      />
       {errorMade && (
         <ErrorModel
           title={errorMade.title}
@@ -95,6 +127,7 @@ const Main_Page = (props) => {
           {/* <span className="crossButton">X</span> */}
           <span className="Mainlist-content">
             <div className="Mainlist-top2">
+            {{ modeErr } && <p style={{ color: "red" }}>{modeErr}</p>}
               <select
                 className="Mainlist_select"
                 onChange={(e) => {

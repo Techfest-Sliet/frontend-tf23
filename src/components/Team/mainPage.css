@@ -1,8 +1,8 @@
 .Mainlist-father {
   backdrop-filter: blur(21px);
-  background: rgba(0, 0, 0, 0.75);
+  background: #16540f;
   position: relative;
-  height: 37vh;
+  height: 32vh;
   width: 30vw;
 }
 

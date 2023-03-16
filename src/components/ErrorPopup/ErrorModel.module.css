@@ -9,6 +9,7 @@
 }
 .modal {
   position: fixed;
+  z-index: 10000;
   top: 30vh;
   left: 10%;
   width: 80%;

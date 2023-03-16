@@ -72,12 +72,6 @@ function WorkshopBox({ props }) {
         }
         setUser(result.data.user);
       });
-    //   .catch((err) => {
-    //     return res.status(208).json({
-    //       title: "Auth Error",
-    //       message: "Wrong user auth!",
-    //     });
-    //   });
   }, [authContext, authContext.login]);
 
   return (
@@ -100,7 +94,6 @@ function WorkshopBox({ props }) {
               <button className="registerNowworkshop" onClick={HandleRegister}>
                 Register Now
               </button>
-              {/* <button className='problemStat' > {props?.schedule} </button> */}
             </div>
             <div style={{ float: "left" }}>
               <p style={{ fontSize: "14px", margin: "0.5rem 0" }}>
