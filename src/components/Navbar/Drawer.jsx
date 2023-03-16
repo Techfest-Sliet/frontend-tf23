@@ -132,6 +132,7 @@ const SDrawer = styled.div`
   overflow:hidden;
   background-color: black;
   transition: 0.3s ease;
+  overflow: scroll;
   transform: translateX(${(props) => (props.isOpen ? "0" : "-100%")});
   @media (max-width: 1200px){
     width:35%;
