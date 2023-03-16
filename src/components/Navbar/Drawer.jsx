@@ -132,7 +132,7 @@ const SDrawer = styled.div`
   overflow:hidden;
   background-color: black;
   transition: 0.3s ease;
-  overflow: scroll;
+
   transform: translateX(${(props) => (props.isOpen ? "0" : "-100%")});
   @media (max-width: 1200px){
     width:35%;
@@ -146,6 +146,7 @@ const RightNav = styled.div`
   display: flex;
   flex-direction: column;
   gap: 0.5rem; 
+  
   font-size: 1rem;
   padding: 1rem;
 `;
@@ -153,6 +154,7 @@ const NavRoutes = styled.div`
 color: white;
 font-size: 1rem;
 padding: 0.5rem;
+
 `;
 const NavRoute = styled(Link)`
   display: flex;
@@ -160,6 +162,7 @@ const NavRoute = styled(Link)`
   color: white;
   font-size: 1.5rem;
   padding: 0.5rem;
+  overflow: scroll;
   &:hover {
     transition: 0.3s ease-in;
     color: black;
