@@ -83,6 +83,7 @@ const SubRoutesContainer = styled.div`
   display: ${(props) => (props.isOpen ? "flex" : "none")};
   flex-direction: column;
   padding: 0.3rem;
+  overflow: scroll;
 `;
 const SMenu = styled.div``;
 

@@ -139,6 +139,7 @@ const DrawerButton = styled.button`
 const SNavbar = styled.nav`
       // background-color: black;
       z-index:1;
+      
   @media (max-width: 780px){
       opacity:100%;
     }
@@ -153,6 +154,7 @@ const NavContainer = styled.div`
   align-items: center;
   color: white;
   z-index:1;
+
 `;
 const Image = styled.img`
     cursor:pointer;
