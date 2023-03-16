@@ -46,9 +46,9 @@ const Mechanica = () => {
       </div>
 
       {/* EVENTS */}
-      {datasOfEvent.map((item, index) => (
-        <div className="eventsBackgroundBottom" key={index}>
-          <EventBox props={item} index={index} />
+      {mechanica && mechanica.map((mechanica) => (
+        <div className="eventsBackgroundBottom" key={mechanica._id}>
+          <EventBox props={mechanica} />
         </div>
       ))}
 

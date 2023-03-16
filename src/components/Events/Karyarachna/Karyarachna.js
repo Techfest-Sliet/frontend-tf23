@@ -53,9 +53,9 @@ const Karyarachna = () => {
       </div>
 
       {/* EVENTS */}
-      {datasOfEvent.map((item, index) => (
-        <div className="eventsBackgroundBottom" key={index}>
-          <EventBox props={item} index={index} />
+      {karyarachna && karyarachna.map((karyarachna) => (
+        <div className="eventsBackgroundBottom" key={karyarachna._id}>
+          <EventBox props={karyarachna} />
         </div>
       ))}
 

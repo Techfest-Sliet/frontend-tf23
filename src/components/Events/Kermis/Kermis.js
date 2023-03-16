@@ -46,9 +46,9 @@ const Kermis = () => {
       </div>
 
       {/* EVENTS */}
-      {datasOfEvent.map((item, index) => (
-        <div className="eventsBackgroundBottom" key={index}>
-          <EventBox props={item} index={index} />
+      {kermis && kermis.map((kermis) => (
+        <div className="eventsBackgroundBottom" key={kermis._id}>
+          <EventBox props={kermis} />
         </div>
       ))}
 

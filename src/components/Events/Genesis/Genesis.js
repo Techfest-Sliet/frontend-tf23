@@ -47,9 +47,9 @@ const Genesis = () => {
       </div>
 
       {/* EVENTS */}
-      {datasOfEvent.map((item, index) => (
-        <div className="eventsBackgroundBottom" key={index}>
-          <EventBox props={item} index={index} />
+      {genesis && genesis.map((genesis) => (
+        <div className="eventsBackgroundBottom" key={genesis._id}>
+          <EventBox props={genesis} />
         </div>
       ))}
 

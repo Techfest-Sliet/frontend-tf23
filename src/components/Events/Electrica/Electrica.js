@@ -47,9 +47,9 @@ const Electrica = () => {
       </div>
 
       {/* EVENTS */}
-      {datasOfEvent.map((item, index) => (
-        <div className="eventsBackgroundBottom" key={index}>
-          <EventBox props={item} index={index} />
+      {electrica && electrica.map((electrica) => (
+        <div className="eventsBackgroundBottom" key={electrica._id}>
+          <EventBox props={electrica} />
         </div>
       ))}
 
