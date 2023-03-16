@@ -55,14 +55,14 @@ const ContactUs = () => {
 
                                 <div className='responsive_div'>
                                     <div className='faqs_domain_coordinator'>
-                                        <img src={dummy} className="dummy_img" alt='...' />
+                                        <img src='/core-team-images/2.jpg' className="dummy_img" alt='...' />
                                         <p>Sudhanshu Kumar </p>
                                         <a className='faqs_number' href="tel:7488078452">
                                             7488078452
                                         </a>
                                     </div>
                                     <div className='faqs_domain_coordinator'>
-                                        <img src={dummy} className="dummy_img" alt='...' />
+                                        <img src='/core-team-images/7.jpg' className="dummy_img" alt='...' />
                                         <p>Prashant Shahi</p>
                                         <a className='faqs_number' href="tel:8877515552">
                                         8877515552
@@ -72,19 +72,12 @@ const ContactUs = () => {
 
                                 <div className='responsive_div'>
                                     <div className='faqs_domain_coordinator'>
-                                        <img src={dummy} className="dummy_img" alt='...' />
+                                        <img src='/core-team-images/1.jpg' className="dummy_img" alt='...' />
                                         <p>Aniket Mihir </p>
                                         <a className='faqs_number' href="tel:8873013224">
                                         8873013224
                                         </a>
                                     </div>
-                                    {/* <div className='faqs_domain_coordinator'>
-                                        <img src={dummy} className="dummy_img" alt='...' />
-                                        <p>Lavanya</p>
-                                        <a className='faqs_number' href="tel:9878990772">
-                                        9878990772
-                                        </a>
-                                    </div> */}
                                 </div>
                             </div>
 
