@@ -168,7 +168,8 @@ const AddTeam = (props) => {
       <div className="addTeamBg">
         <div className="addTeamCont">
           <div className="addTeamBox">
-            <form onSubmit={handleSubmit}>
+            <h1 style={{textAlign: "center", marginBottom: "1rem"}}>Add Team</h1>
+            <form onSubmit={handleSubmit} style={{textAlign: "center"}}>
               <div>
                 <label htmlFor="teamName" className="addTeamlabel">
                   Team Name:
@@ -184,10 +185,9 @@ const AddTeam = (props) => {
                 />
               </div>
               <div>
-                <label htmlFor="eventType" className="eventTypelabel">
+                <label htmlFor="eventType" className="addTeamlabel">
                   Event Type:
                 </label>{" "}
-                <br></br>
                 <select
                   type="dropdown"
                   id="eventType"

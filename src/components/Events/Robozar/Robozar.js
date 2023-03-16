@@ -16,7 +16,7 @@ const Robozar = () => {
   }, [])
 
   const getRobozar = async() => {
-    await axios.post(`${baseUrl}/event/getEventByDomain`, {
+    await axios.post(`${baseUrl}/event/geteventbydomainname`, {
       domainName: "Robozar"
     }).then((result) => {
       setRobozars(result.data.event);

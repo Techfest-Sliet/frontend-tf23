@@ -36,6 +36,7 @@ import Verify from './components/verify/verify';
 import Popup from './components/Popup/Popup.js';
 import Events from './components/domain/OneCard.jsx';
 import ErrorModel from './components/ErrorPopup/ErrorModel';
+import RegisterEvent from './components/Team/Main_Page';
 import Feedback from "./components/Feedback/feedback";
 import Date from "./components/Date/Date"
 import Datehorizontal from "./components/Datehorizontal/Datehorizontal";
@@ -137,6 +138,9 @@ function App() {
             )}
             {!authContext.isUserLoggedIn && (
               <Route path="/sign-up" element={<SignUp />} />
+            )}
+            {!authContext.isUserLoggedIn && (
+              <Route path="/register" element={<RegisterEvent />} />
             )}
             <Route path="/reset-password" element={<Reset />} />
             <Route path="/forgot-password" element={<ForgotPassword />} />

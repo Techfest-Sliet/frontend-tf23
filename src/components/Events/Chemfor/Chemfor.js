@@ -49,9 +49,9 @@ const Chemfor = () => {
       <div className="events">
         <h1 className="evnts">EVENTS</h1>
       </div>
-      {datasOfEvent.map((item, index) => (
-        <div className="eventsBackgroundBottom" key={index}>
-          <EventBox props={item} index={index} />
+      {Chemfor && Chemfor.map((Chemfor) => (
+        <div className="eventsBackgroundBottom" key={Chemfor._id}>
+          <EventBox props={Chemfor} />
         </div>
       ))}
       {datasOfEventCoordinator.map((item) => (

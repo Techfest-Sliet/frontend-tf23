@@ -45,9 +45,9 @@ const Plexus = () => {
       </div>
 
       {/* EVENTS */}
-      {datasOfEvent.map((item, index) => (
-        <div className="eventsBackgroundBottom" key={index}>
-          <EventBox props={item} index={index} />
+      {plexus && plexus.map((plexus) => (
+        <div className="eventsBackgroundBottom" key={plexus._id}>
+          <EventBox props={plexus} />
         </div>
       ))}
 

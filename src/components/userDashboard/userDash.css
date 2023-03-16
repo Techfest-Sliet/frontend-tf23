@@ -233,7 +233,7 @@ p.blockquote-footer {
 .card-bodytop {
     border: 2px solid #FFFFFF;
     border-radius: 20px;
-    width: 34vw;
+    width: 80vw;
     height: auto;
     margin-bottom: 40px;
 }
@@ -536,7 +536,7 @@ p.blockquote-footer {
     }
 
     .table_text-light {
-        width: 31vw;
+        width: 100%;
         height: auto;
         border-width: 0px;
         color: #ffffff;
