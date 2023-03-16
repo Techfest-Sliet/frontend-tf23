@@ -22,13 +22,10 @@ const Main_Page = (props) => {
   const [toggle, setToggle] = useState(false);
   const [teamName, setTeamName] = useState("");
   const [teams, setTeams] = useState();
-  const user = props.user;
-  const leaderId = user._id;
-  const leaderName = user.leaderName;
   let eventId = "";
   const [membersList, setMembersList] = useState([]);
-  const handleClick = (event) => {
-    setAnchorEl(event.currentTarget);
+  const handleClick = () => {
+    navigate('/user-dashboard')
   };
   const handleClose = () => {
     setAnchorEl(null);
@@ -78,7 +75,7 @@ const Main_Page = (props) => {
         //   title: result.data.title,
         //   message: result.data.message,
         // });
-        alert(JSON.stringify(result.data.title,result.data.message))
+        alert(JSON.stringify(result.data.title, result.data.message));
         return;
       });
   };
@@ -104,75 +101,36 @@ const Main_Page = (props) => {
                 }}
               >
                 <option value="0">Choose Participation Type</option>
-                <option value="Individual">Individual</option>
-                {teams?.map((team) => {
-                  return <option value={team._id}>{team.teamName}</option>;
-                })}
-                <option value="Team">Add Team</option>
+
+                {props &&
+                  (props.eventParticipationType === "Individual" ||
+                    props.eventParticipationType === "Hybrid") && (
+                    <option value="Individual">Individual</option>
+                  )}
+                {props &&
+                  (props.eventParticipationType === "Hybrid" ||
+                    props.eventParticipationType === "Team") &&
+                  teams &&
+                  teams?.map((team) => {
+                    return <option value={team._id}>{team.teamName}</option>;
+                  })}
               </select>
             </div>
           </span>
+          <div>
+          <span>Add Team</span>
 
-          {toggle === "Team" && (
-            <div className="Mainlist-memberlist">
-              <p className="Mainlist-contentheading">My Team</p>
-              <div className="Mainlist-myteamline"></div>
-              <div className="Mainlist-buttoncircle">
-                {/* <img src=""></img> */}
-                <img
-                  className="Mainlist-addmemberimg"
-                  src={img}
-                  alt=""
-                  width="500"
-                  height="600"
-                  onClick={handleClick}
-                ></img>
-                <br />
-                <Popover
-                  id={id}
-                  open={open}
-                  anchorEl={anchorEl}
-                  onClose={handleClose}
-                  anchorOrigin={{
-                    vertical: "center",
-                    horizontal: "left",
-                  }}
-                >
-                  <AddMember
-                    teamName={teamName}
-                    eventType={props.eventMode}
-                    leaderId={leaderId}
-                    leaderName={leaderName}
-                    events={eventId}
-                  />
-                </Popover>
-              </div>
-            </div>
-          )}
-          {toggle === "Team" &&
-            membersList?.map((item) => (
-              <div className="Mainlist-listelements">
-                <input
-                  className="Mainlist-teamName"
-                  placeholder="Enter team name"
-                  style={{
-                    width: "80%",
-                    padding: "0.6rem",
-                    "margin-left": "10%",
-                    background: "transparent",
-                    "margin-top": "1em",
-                    color: "white",
-                    "font-size": "1rem",
-                  }}
-                  onChange={(e) => setTeamName(e.target.value)}
-                />
-                <span className="Mainlist-list">
-                  <p className="Mainlist-listname">{item?.name}</p>
-                  <p className="Mainlist-listid">{item.tfId}</p>
-                </span>
-                <div className="Mainlist-lstline"></div>
-              </div>
-            ))}
+          <img
+            className="Mainlist-addmemberimg"
+            src={img}
+            alt=""
+            width="50"
+            height="50"
+            cursor="pointer"
+            onClick={handleClick}
+          ></img>
+          </div>
+
           <button type="button" className="Mainlist-button" onClick={PostData}>
             Register
           </button>

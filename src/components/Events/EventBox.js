@@ -18,6 +18,10 @@ function EventBox({ props }) {
   const [anchorEl, setAnchorEl] = useState(null);
   const [user, setUser] = useState(null);
   const handleClick = (event) => {
+    if(!authContext.isUserLoggedIn) {
+      setErrorMade({title: "Login Error!", message:"Please login to register for the event"});
+      return;
+    }
     setAnchorEl(event.currentTarget);
   };
   const handleClose = () => {
@@ -101,12 +105,6 @@ function EventBox({ props }) {
         }
         setUser(result.data.user);
       })
-      .catch((err) => {
-        return err.status(208).json({
-          title: "Auth Error",
-          message: "Wrong user auth!",
-        });
-      });
   }, [authContext, authContext.login]);
     const coor_len = (props?.studentCoordinator).length;
     const onErrorHappen = () => {
@@ -231,6 +229,7 @@ function EventBox({ props }) {
                 user={user}
                 eventMode={props.eventMode}
                 eventId={props._id}
+                eventParticipationType={props.eventParticipationType}
               />
             </Popover>
         </>
