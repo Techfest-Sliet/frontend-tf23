@@ -3,7 +3,7 @@
   background: rgba(0, 0, 0, 0.75);
   position: relative;
   height: 37vh;
-  width: 28vw;
+  width: 30vw;
 }
 
 .Mainlist-son {
@@ -201,13 +201,32 @@
 }
 
 /* midea query for mobile view  */
-@media only screen and (max-width: 780px) {
+@media only screen and (max-width: 1025px) {
+  .Mainlist-father {
+    width: 35vw;
+  }
+}
+
+@media only screen and (max-width: 880px) {
+  .Mainlist-father {
+    width: 45vw;
+  }
   .Mainlist-son {
     min-width: 90%;
     min-height: 60%;
   }
 }
+
+@media only screen and (max-width: 625px) {
+  .Mainlist-father {
+    width: 55vw;
+  }
+}
+
 @media only screen and (max-width: 500px) {
+  .Mainlist-father {
+    width: 65vw;
+  }
   .Mainlist-son {
     min-width: 90%;
     min-height: 60%;
@@ -225,5 +244,23 @@
     line-height: 2rem;
     font-size: 130%;
     font-weight: bolder;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .Mainlist-father {
+    width: 70vw;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .Mainlist-father {
+    width: 80vw;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  .Mainlist-father {
+    width: 85vw;
   }
 }

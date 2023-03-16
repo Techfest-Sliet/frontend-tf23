@@ -123,7 +123,7 @@ const Main_Page = (props) => {
           </div>
 
           <div className="addTEamDiv">
-            <span style={{ padding: "10px" }}>Add Team</span>
+            <span style={{ padding: "10px", fontSize: "16px" }}>Add Team</span>
             <Link to="/addteam">
               <img
                 className="Mainlist-addmemberimg"

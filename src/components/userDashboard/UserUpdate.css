@@ -296,14 +296,19 @@ p.blockquote-footer {
   margin: 1px;
   overflow-y: scroll;
 }
-.TableRow__res{
+.TableRow__res_up{
   /* background: linear-gradient(to right, black, rgb(0, 29, 14), black); */
   /* background:linear-gradient(to right,rgb(1, 53, 26)); */
 
-  color: rgb(255, 255, 255);
+  color: white;
+  padding: 10px;
+  background: #0d1c10;
   font-size: 1rem;
   border: 0;
-  width: 80%;;
+  width: 80%;
+  border: 20px solid green;
+  border-bottom: none;
+  border-top: none;
 } 
 .update_btn {
   margin-left: 45%;
@@ -313,6 +318,9 @@ p.blockquote-footer {
   font-weight: bolder;
   border-radius: 20px;
   padding: 10px;
+  background: green;
+  color: white;
+  border: none;
 }
 
 .update_btn:hover {

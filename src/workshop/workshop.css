@@ -105,6 +105,7 @@
   align-items: center;
   flex-direction: column;
   justify-content: center;
+  padding-bottom: 10vh;
 }
 
 .workshopBox {
