@@ -1,248 +1,139 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-.container {
-      
-      
-    /* height: 100vh; */
-    /* background: linear-gradient(135deg, rgba(5, 79, 17, 0.99) 9%, rgba(0, 0, 0, 1) 50%, rgb(5, 62, 15) 93%); */
-    height: 100vh;
-    z-index: 0;
-  }
-   .tl{
-	position: absolute;
-    top: 40%;
-    left: 47%;
-	 background-color: transparent;
-	  outline: none;
-	border-bottom: 1px solid white;
+.transactionwrapper {
+  width: 99.7vw;
+  height: 90.5vh;
+  background-color: black;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
 
-	 
-   }
-    .tf{
-		background-color: transparent;
-		outline: none;
-	  border-bottom: 1px solid white;
-  
-		position: absolute;
-		top: 45%;
-    left: 58%;
-	}
-
-  .feedbacktfimage{
-    top: -2rem;
-    background-size: cover;
-      background-position: center;
-    background-repeat: no-repeat;
-    background-size: 64%;
-    /* opacity: 100%; */
-      /* opacity: 40%; */
-    position: relative;
-    z-index: 1;
-    height: 100vh;
-    /* background-image: url(./feedback-page-images/aaan.png); */
-  }
-  .paymentForm{
-	 margin-top: 5rem;
-	 display: flex;
-	  justify-content: center;
-  }
-
-  .feedbackp{
-    font-size: 3rem;
-	 margin-bottom: 1rem;
-  }
-
-  .feedbackform{
-    position: relative;
-    z-index: 2;
-    height: 100vh;
-    opacity: 1;
-    top: 2rem;
-    font-weight: bolder;
+.transaction-heading{
+    font-weight:800;
+    font-size: 2.5rem;
+    margin-bottom: 25px;
     color: white;
-    text-align: center;
-    font-size: 5rem;
-    position: relative;
-    height: 100vh;
+}
+
+.transactioncontainer {
+  font-size: 1.5rem;
+  width: 45vw;
+  height: 60vh;
+  border: 1px solid white;
+  border-radius: 10px;
+  background: linear-gradient(
+    147deg,
+    rgba(5, 79, 17, 0.99) 1%,
+    rgba(0, 0, 0, 1) 50%,
+    rgba(5, 62, 15, 1) 117%
+  );
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  padding: 0 50px;
+  color: white;
+  filter: drop-shadow(0 0 7px green);
+  /* background-color: white; */
+  /* border-color: white; */
+}
+
+.transaction-ammount {
+  display: flex;
+  flex-direction: row;
+  /* justify-content: start; */
+  justify-content: center;
+  align-items: center;
+}
+
+.transaction-ammount-input {
+  width: 6rem;
+  font-size: 1.3rem;
+  background-color: transparent;
+  border: none;
+  color: white;
+  outline: none;
+  border-bottom: 1px solid white;
+}
+
+.transaction-data-ammount {
+  padding-right: 16px;
+}
+
+.screenshot-input {
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.inputelements {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.transaction-btn {
+  width: 30%;
+  display: flex;
+  height: 33px;
+  font-size: 1rem;
+  /* border: 1px solid white; */
+  border-radius: 5px;
+  position: relative;
+  justify-content: center;
+  color: white;
+  align-items: center;
+  cursor: pointer;
+  background: linear-gradient(to right, green, rgb(41, 92, 17));
+}
+
+@media only screen and (max-width: 700px) {
+  /* Styles for mobile devices */
+
+  .transaction-btn {
+    width: 45%;
   }
 
-  .feedbackinput1{
-    
-    background-color: transparent;
-    border: none;
-    outline:none;
-    color: white;
-    top:-2rem;
-    left: -1rem;
-    position: relative;
-    font-size: 1.2rem;
-     margin-bottom: 20px;
+  .transaction-data {
+    padding: 10px 0px;
+  }
+  .transactionwrapper {
+    height: 90vh;
+    padding: 50px 0;
   }
 
-  .feedbackinput2{
-    width: 15rem;
-    background-color: transparent;
-    border: none;
-    outline:none;
-    color: white;
-    top:-2rem;
-    
-    position: relative;
-    font-size: 1.2rem;
+  .transactioncontainer {
+    width: 90vw;
+    height: auto;
+    padding: 10px 20px;
+  }
+
+  .transaction-ammount {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .transaction-ammount-input {
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 20px;
     border-bottom: 1px solid white;
   }
+}
 
-  .feedbackinput3{
-    width: 15rem;
-    background-color: transparent;
-    border: none;
-    outline:none;
-    color: white;
-    top: -6rem;
-    left: -8rem;
-    position: relative;
-    font-size: 1.2rem;
-    border-bottom: 1px solid white;
-  }
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  /* Styles for medium screen devices */
+  /* .transactionwrapper {
+    height: 85vh;
+  } */
 
-  .frrdbackline1{
-    border-bottom: 1px solid white;
-    line-height: 0;
-    position: relative;
-    border: 38;
-    margin: 0;
-    width: 1rem;
-    width: 13rem;
-    top: -3.5rem;
-    left: 27rem;
-    padding: 0;
-  }
-
-  .frrdbackline2{
-    border-bottom: 1px solid white;
-    line-height: 0;
-    position: relative;
-    border: 38;
-    margin: 0;
-    width: 1rem;
-    width: 13rem;
-    top: -3.5rem;
-    /* left: 27rem; */
-    left: 41rem;
-    padding: 0;
-  }
-
-  .frrdbackline3{
-    border-bottom: 1px solid white;
-    line-height: 0;
-    position: relative;
-    width: 1rem;
-    /* border: 0; */
-    margin: 0;
-    top: 0;
-    padding: 0;
-  }
-
-  .feedbacktextarea{
-    padding:0 5px;
-    position: relative;
-    border-radius: 2px;
-    color: white;
-    font-size: 17px;
-    top: -5rem;
-    opacity: 50%;
-    background-color: black;
-    border: 1px solid white;
-  }
-
-  .feedbacksubmitbtn{
-    /* background-color: royalblue; */
-    background: linear-gradient(90deg, #00FF17 35%,#2A5400 
-    );
-    
-    cursor: pointer;
-    border-radius: 3px;
-    position: relative;
-    top: 0rem;
-    left: 61.6%;
-    width: 9rem;
-    font-size: 15px;
-    text-align: center;
-    align-items: center;
-    height: 1.5rem;
-  }
-
-  @media (min-width: 465px) and (max-width: 800px) {
-    .feedbacktfimage{
-      background-size: 100%;
-    }
-
-    .feedbacktextarea{
-      top: -3rem;
-      height: 12rem;
-    width: 27rem;
-    }
-
-    .feedbacksubmitbtn{
-      top: -4rem;
-      right:18rem;
-    }
-
-    .feedbackinput1{
-      top: -4rem;
-    left: 8rem;
-    }
-
-    .feedbackinput2{
-      top: -1rem;
-      left: -6rem;
-    }
-
-    .feedbackinput3{
-      top: -5rem;
-      left: 1rem;
-    }
-
-  }
-
-  @media (max-width: 464px) {
-
-    .container{
-      height: 100%;
-      margin: 0;
-      padding: 0;
-      overflow-x: hidden;
-    }
-
-    .feedbacktfimage{
-      background-size: 100%;
-      
-    }
-
-    .feedbackinput2{
-      top:-5rem;
-      left: -1rem;
-    }
-
-    .feedbackinput1{
-      top:-1rem;
-      left: -1rem;
-    }
-
-    .feedbackinput3{
-      top:-9rem;
-      left: -1rem;
-    }
-
-    .feedbacktextarea{
-      margin: 0 1rem;
-      top: -8rem;
-      width: 20rem;
-    }
-
-    .feedbacksubmitbtn{
-      top: -8rem;
-      left: 56%;
-    }
-  }
-  
-  
+  /* .transactioncontainer {
+    width: 60vw;
+    height: 50vh;
+  } */
+}
