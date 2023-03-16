@@ -14,7 +14,7 @@ export const AuthContextProvider = props => {
     const localtoken = localStorage.getItem('jwtToken');
     const localExpiryDate = localStorage.getItem('expiryDate');
     const localUserRole = localStorage.getItem('userRole');
-    // const userId = localStorage.getItem('userId');
+     //const userId = localStorage.getItem('userId');
     const [token, setToken] = useState(localtoken);
     const [userRole, setUserRole] = useState(localUserRole);
     // const [expiryDate, setExpiryDate] = useState(localExpiryDate);

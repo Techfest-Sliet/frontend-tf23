@@ -43,6 +43,7 @@ import Datehorizontal from "./components/Datehorizontal/Datehorizontal";
 import Pay from './components/Pay/Pay';
 // import Merch from './components/merchandise/merchandise1.jsx';
 import AddTeam from "./components/addTeam/AddTeam";
+ import  PaymentPage  from "./components/PaymentPage/paymentPage";
 
 
 function App() {
@@ -147,6 +148,7 @@ function App() {
             <Route path="/about" element={<Aboutus />} />
             <Route path="/popup" element={<Popup />} />
             <Route path="/verify" element={<Verify />} />
+            <Route path="/paymentPage" element={<PaymentPage />} />
             {/* <Route path="/events/:title" element={<Events />} /> */}
             {/* <Route path="/merchandise" element={<Merch />} /> */}
             <Route path="/addteam" element={<AddTeam />} />

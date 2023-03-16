@@ -56,13 +56,6 @@ const ForgotPassword = () => {
     <>
     {isLoading && <Loader />}
     <div className="forgotPassword forgotPassword__body">
-      {/* <div>
-        <img
-          src={logo}
-          alt="techFestSLIET'23 logo"
-          className="forgotPassword__bg"
-        />
-      </div> */}
       <div className="forgotPassword__content">
         <img
           src={reset}
