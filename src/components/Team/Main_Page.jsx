@@ -7,6 +7,7 @@ import { members } from "./members.js";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import ErrorModel from "../ErrorPopup/ErrorModel";
+import { Link } from "react-router-dom";
 
 import { baseUrl } from "../../API/api.js";
 import AuthContext from "../../auth/authContext.js";
@@ -78,7 +79,7 @@ const Main_Page = (props) => {
         //   title: result.data.title,
         //   message: result.data.message,
         // });
-        alert(JSON.stringify(result.data.title,result.data.message))
+        alert(JSON.stringify(result.data.title, result.data.message));
         return;
       });
   };
@@ -94,6 +95,7 @@ const Main_Page = (props) => {
       )}
       <div className="Mainlist-father">
         <div className="Mainlist-son">
+          {/* <span className="crossButton">X</span> */}
           <span className="Mainlist-content">
             <div className="Mainlist-top2">
               <select
@@ -112,6 +114,21 @@ const Main_Page = (props) => {
               </select>
             </div>
           </span>
+
+          <div className="addTEamDiv">
+            <span style={{ padding: "10px" }}>Add Team</span>
+            <Link to="/addteam">
+              <img
+                className="Mainlist-addmemberimg"
+                src={img}
+                alt=""
+                width="50"
+                height="50"
+                cursor="pointer"
+                onClick={handleClick}
+              ></img>
+            </Link>
+          </div>
 
           {toggle === "Team" && (
             <div className="Mainlist-memberlist">
