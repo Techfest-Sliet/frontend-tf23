@@ -17,10 +17,10 @@ function AddMember(props) {
       tfId: tfId,
       email: email,
     };
-    console.log(member);
     membersList.push(member);
   };
   return (
+
     <div className="Popup-son">
       {/* <p>Domain Name</p> */}
       <form className="Popup-formcss">

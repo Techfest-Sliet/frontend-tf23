@@ -5,8 +5,10 @@ import "./AddTeam.css";
 import axios from "axios";
 import { baseUrl } from "../../API/api";
 import AuthContext from "../../auth/authContext";
+import Loader from "../Loader/Loader";
 
 const AddTeam = (props) => {
+  const [isLoading, setIsLoading] = useState(false);
   const [teamName, setTeamName] = useState("");
   const [eventType, setEventType] = useState();
   const [members, setMembers] = useState([{ id: "", name: "", email: "" }]);
@@ -149,12 +151,13 @@ const AddTeam = (props) => {
           continue;
       }
     }
-    console.log(formData);
+    setIsLoading(true);
     axios.post(`${baseUrl}/team/create`, formData,{
       headers: {
         Authorization: "Bearer " + authContext.token,
       },
     }).then((result) => {
+      setIsLoading(false);
       console.log(result);
       if (result.data.isError) {
       } else {
@@ -166,6 +169,7 @@ const AddTeam = (props) => {
   return (
     <>
       <div className="addTeamBg">
+      {isLoading && <Loader />}
         <div className="addTeamCont">
           <div className="addTeamBox">
             <h1 style={{textAlign: "center", marginBottom: "1rem"}}>Add Team</h1>

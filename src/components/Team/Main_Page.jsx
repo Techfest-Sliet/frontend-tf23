@@ -16,16 +16,16 @@ import AuthContext from "../../auth/authContext.js";
 
 const Main_Page = (props) => {
   const notify = (msg) =>
-  toast.success(msg, {
-    position: "top-center",
-    autoClose: 3000,
-    hideProgressBar: false,
-    closeOnClick: true,
-    pauseOnHover: true,
-    draggable: true,
-    progress: undefined,
-    theme: "light",
-  });
+    toast.success(msg, {
+      position: "top-center",
+      autoClose: 3000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+    });
   const [errorMade, setErrorMade] = useState();
   const onErrorMadeHandle = () => {
     setErrorMade(null);
@@ -40,7 +40,7 @@ const Main_Page = (props) => {
   const [modeErr, setModeErr] = useState(null);
   const [membersList, setMembersList] = useState([]);
   const handleClick = () => {
-    navigate('/user-dashboard')
+    navigate("/user-dashboard");
   };
   const handleClose = () => {
     setAnchorEl(null);
@@ -72,7 +72,7 @@ const Main_Page = (props) => {
   };
 
   const PostData = async () => {
-    if (type === ''  || type === '0') {
+    if (type === "" || type === "0") {
       setModeErr("Please choose participation type");
       setTimeout(() => {
         setModeErr(null);
@@ -95,7 +95,7 @@ const Main_Page = (props) => {
       )
       .then((result) => {
         setIsLoading(false);
-        notify(result.data.title)
+        notify(result.data.title);
         return;
       });
   };
@@ -127,7 +127,7 @@ const Main_Page = (props) => {
           {/* <span className="crossButton">X</span> */}
           <span className="Mainlist-content">
             <div className="Mainlist-top2">
-            {{ modeErr } && <p style={{ color: "red" }}>{modeErr}</p>}
+              {{ modeErr } && <p style={{ color: "red" }}>{modeErr}</p>}
               <select
                 className="Mainlist_select"
                 onChange={(e) => {
@@ -152,25 +152,29 @@ const Main_Page = (props) => {
               </select>
             </div>
           </span>
-          <div>
-          </div>
+          <div></div>
 
-          <div className="addTEamDiv">
-            <span style={{ padding: "10px", fontSize: "16px" }}>Add Team</span>
-            <Link to="/addteam">
-              <img
-                className="Mainlist-addmemberimg"
-                src={img}
-                alt=""
-                width="50"
-                height="50"
-                cursor="pointer"
-                onClick={handleClick}
-              ></img>
-            </Link>
-          </div>
+          {props &&
+            (props.eventParticipationType === "Hybrid" ||
+              props.eventParticipationType === "Team") && (
+              <div className="addTEamDiv">
+                <span style={{ padding: "10px", fontSize: "16px" }}>
+                  Add Team
+                </span>
+                <Link to="/addteam">
+                  <img
+                    className="Mainlist-addmemberimg"
+                    src={img}
+                    alt=""
+                    width="50"
+                    height="50"
+                    cursor="pointer"
+                    onClick={handleClick}
+                  ></img>
+                </Link>
+              </div>
+            )}
 
-          
           <button type="button" className="Mainlist-button" onClick={PostData}>
             Register
           </button>

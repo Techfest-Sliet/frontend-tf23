@@ -2,7 +2,12 @@ import React, { useContext, useEffect, useState } from "react";
 import axios from "axios";
 import { baseUrl } from "../API/api";
 import "./workshopbox.css";
-import { FaRegCalendar, FaRegClock, FaUnity, FaChalkboardTeacher} from "react-icons/fa";
+import {
+  FaRegCalendar,
+  FaRegClock,
+  FaUnity,
+  FaChalkboardTeacher,
+} from "react-icons/fa";
 import { MdHotelClass } from "react-icons/md";
 import ErrorModel from "../components/ErrorPopup/ErrorModel";
 import AuthContext from "../auth/authContext";
@@ -41,7 +46,7 @@ function WorkshopBox({ props }) {
           headers: {
             Authorization: "Bearer " + authContext.token,
           },
-        },
+        }
       )
       .then((result) => {
         setErrorMade({
@@ -52,11 +57,11 @@ function WorkshopBox({ props }) {
       });
   }
   const closedRegistration = () => {
-    setErrorMade({
+    setTimeout(() => setErrorMade({
       title: "Registration Closed",
       message: "Registration for this workshop is closed",
-    });
-  }
+    }), 1000);
+  };
 
   useEffect(() => {
     axios
@@ -91,59 +96,69 @@ function WorkshopBox({ props }) {
       )}
 
       <div className="workshopBoxSingle" key={props._id}>
-      <h1 style={{ textAlign: "left" ,color:"white" ,marginBottom:"20px" }}>{props && props.workshopName}</h1>
-      <div className="lt">
-      <div className="LeftOfworkshopBox">
-          <div className="workshopDesc" style={{ float: "left" }}>
-            <p className="workshopDesc">{props && props.workshopDescription}</p>
-            <div style={{ float: "left" }}>
-            {
-              (props._id === '64135172092b1d8057d4c08f') 
-              ? 
-              (<button className="registerNowworkshop" onClick={closedRegistration}>
-                Registration Closed
-              </button>) 
-              : 
-              (<button className="registerNowworkshop" onClick={HandleRegister}>
-                Register Now
-              </button>)
-            }
-        
+        <h1 style={{ textAlign: "left", color: "white", marginBottom: "20px" }}>
+          {props && props.workshopName}
+        </h1>
+        <div className="lt">
+          <div className="LeftOfworkshopBox">
+            <div className="workshopDesc" style={{ float: "left" }}>
+              <p className="workshopDesc">
+                {props && props.workshopDescription}
+              </p>
+              <div style={{ float: "left" }}>
+                {props._id === "64135172092b1d8057d4c08f" ? (
+                  <button
+                    className="registerNowworkshop"
+                    onClick={closedRegistration}
+                  >
+                    Registration Closed
+                  </button>
+                ) : (
+                  <button
+                    className="registerNowworkshop"
+                    onClick={HandleRegister}
+                  >
+                    Register Now
+                  </button>
+                )}
+              </div>
+              <div style={{ float: "left" }}>
+                <p style={{ fontSize: "14px", margin: "0.5rem 0" }}>
+                  <FaRegCalendar /> Register Before 17 March<br></br>
+                  <FaRegClock /> 11:59 P.M.
+                </p>
+                <p style={{ fontSize: "14px", margin: "0.5rem 0" }}>
+                  Venue: {props && props.workshopVenue}
+                </p>
+                <p style={{ fontSize: "14px", margin: "0.5rem 0" }}>
+                  Date: {props && props.workshopDate}
+                </p>
+                <p style={{ fontSize: "14px", margin: "0.5rem 0" }}>
+                  Time: {props && props.workshopTime}
+                </p>
+                <p style={{ fontSize: "14px", margin: "0.5rem 0" }}>
+                  Perkes:E-certificate
+                </p>
+              </div>
             </div>
-            <div style={{ float: "left" }}>
-              <p style={{ fontSize: "14px", margin: "0.5rem 0" }}>
-                <FaRegCalendar /> Register Before 17 March<br></br>
-                <FaRegClock /> 11:59 P.M.
+          </div>
+          <div className="RightOfworkshopBox">
+            <div className="workshop_image">
+              <img
+                src={`${baseUrl}/${props.workshopPhoto}`}
+                className="workshopboxImgSingle"
+                style={{ borderRadius: "20px" }}
+                alt="."
+              />
+              <p style={{ fontSize: "16px", margin: "0.5rem 0" }}>
+                <FaChalkboardTeacher /> Name: {props && props.profName}
               </p>
               <p style={{ fontSize: "14px", margin: "0.5rem 0" }}>
-                Venue: {props && props.workshopVenue}
-              </p>
-              <p style={{ fontSize: "14px", margin: "0.5rem 0" }}>
-                Date: {props && props.workshopDate}
-              </p>
-              <p style={{ fontSize: "14px", margin: "0.5rem 0" }}>
-                Time: {props && props.workshopTime}
-              </p>
-              <p style={{ fontSize: "14px", margin: "0.5rem 0" }}>
-              Perkes:E-certificate
+                <MdHotelClass /> Designation: {props && props.profDesignation}
               </p>
             </div>
           </div>
         </div>
-        <div className='RightOfworkshopBox'>
-          <div  className="workshop_image">
-         <img src={`${baseUrl}/${props.workshopPhoto}`} className='workshopboxImgSingle' style={{borderRadius:"20px"}}  alt='.' />
-         <p style={{ fontSize: "16px", margin: "0.5rem 0" }}>
-                <FaChalkboardTeacher />  Name: {props && props.profName}
-              </p>
-            <p style={{ fontSize: "14px", margin: "0.5rem 0" }}>
-                <MdHotelClass />  Designation: {props && props.profDesignation}
-              </p>
-          </div>
-
-        </div>
-      </div>
-      
       </div>
     </>
   );

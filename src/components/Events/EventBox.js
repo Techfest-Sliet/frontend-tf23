@@ -4,7 +4,7 @@ import { Popover } from "@mui/material";
 import { baseUrl } from "../../API/api";
 import Register from "../Team/Main_Page";
 import "./EventBox.css";
-import { FaRegCalendar, FaRegClock, FaUnity, FaBuilding } from "react-icons/fa";
+import { FaRegCalendar, FaRegClock, FaUnity, FaBuilding, FaPersonBooth} from "react-icons/fa";
 import ErrorModel from "../ErrorPopup/ErrorModel";
 import Razorpay from "react-razorpay";
 import AuthContext from "../../auth/authContext";
@@ -157,6 +157,9 @@ function EventBox({ props }) {
                   <FaUnity /> Event Mode : {props?.eventMode}{" "}
                 </p>
                 <p style={{ fontSize: "14px", margin: "0.5rem 0" }}>
+                  <FaPersonBooth /> Participation Type : {props?.eventParticipationType}{" "}
+                </p>
+                <p style={{ fontSize: "14px", margin: "0.5rem 0" }}>
                   <FaBuilding />  Event Venue : {props?.venue}{" "}
                 </p>
                 <p style={{ fontSize: "14px", margin: "0.5rem 0" }}>
@@ -231,6 +234,9 @@ function EventBox({ props }) {
                 <p style={{ fontSize: "14px", margin: "0.5rem 0" }}>
                   <FaUnity />
                   Event Mode : {props?.eventMode}
+                </p>
+                <p style={{ fontSize: "14px", margin: "0.5rem 0" }}>
+                  <FaPersonBooth /> Participation Type : {props?.eventParticipationType}{" "}
                 </p>
                 <p style={{ fontSize: "14px", margin: "0.5rem 0" }}>
                 <FaBuilding />
