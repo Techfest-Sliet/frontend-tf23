@@ -258,11 +258,20 @@ function EventBox({ props }) {
                 ? props?.studentCoordinator?.map((cor) => {
                     return (
                       <div className="boxImage">
+                      {!cor?.coordinatorPhoto ? (
                         <img
                           src="/dummy.jpg"
                           className="boxImgSingle"
                           alt="."
                         />
+                      ) : (
+                        <img
+                          src={`${baseUrl}/${cor?.coordinatorPhoto}`}
+                          className="boxImgSingle"
+                          alt="."
+                        />
+                      )
+                      }
                         <div
                           style={{
                             marginLeft: "10px",
@@ -281,11 +290,20 @@ function EventBox({ props }) {
                 : props?.studentCoordinator?.map((cor) => {
                     return (
                       <div className="boxImage">
+                      {!cor?.coordinatorPhoto ? (
                         <img
                           src="/dummy.jpg"
                           className="boxImgSingle"
                           alt="."
                         />
+                      ) : (
+                        <img
+                          src={`${baseUrl}/${cor?.coordinatorPhoto}`}
+                          className="boxImgSingle"
+                          alt="."
+                        />
+                      )
+                      }
                         <div
                           className="event__coordinator"
                           style={{ marginLeft: "10px", fontSize: "14px" }}
