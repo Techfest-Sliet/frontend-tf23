@@ -138,7 +138,7 @@ const HomePage = () => {
             <span style={{ color: "white", fontFamily: "monumentExtended" }}>
               Our
             </span>{" "}
-            Sponsors
+            Past Partners
           </h1>
           <SliderDiv arr={SponsorImageSlider} />
         </div>
