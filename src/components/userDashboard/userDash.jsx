@@ -261,20 +261,22 @@ const User_dasbord = () => {
               {user && user.isPaid ? (
                 "Paid"
               ) : (
+		<Link to="/paymentPage" state={{amount: 299}}>
                 <button
                   type="button"
                   // onClick={InitiateUserPayment}
                   value="Pay"
                   className="userDash__button"
                   // onClick={() => InitiateUserPayment(299, true)}
-                  onClick={commingSoon}
                 >
                   Online Mode
                 </button>
+		</Link>
               )}
               {user && user.isPaid ? (
                 "Paid"
               ) : (
+		<Link to="/paymentPage" state={{amount: 599}}>
                 <button
                   type="button"
                   onClick={commingSoon}
@@ -284,6 +286,7 @@ const User_dasbord = () => {
                 >
                   Offline Mode
                 </button>
+		</Link>
               )}
             </div>
           </div>}

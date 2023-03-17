@@ -4,15 +4,17 @@ import { useContext, useEffect, useState } from "react";
 import AuthContext from "../../auth/authContext";
 import { baseUrl } from "../../API/api";
 import axios from "axios";
+import { useLocation } from "react-router";
 
 const Transaction = () => {
   const authContext = useContext(AuthContext);
-  const [amount, setAmount] = useState("");
   const [paymentId, setPaymentId] = useState("");
   const [screenshot, setScreenshot] = useState(null);
   const [user, setUser] = useState(null);
+  const location = useLocation();
+  const amount = location.state.amount;
   const HandleSubmit = () => {
-    console.log(screenshot);
+    console.log(amount);
     const paymentData = new FormData();
     paymentData.append("userId", user._id);
     paymentData.append("paymentId", paymentId);
@@ -66,19 +68,7 @@ const Transaction = () => {
           </div>
           <div className=" inputelements transaction-data transaction-ammount">
             <div className="transaction-data transaction-data-ammount">
-              Amount Paid :
-            </div>
-            <div>
-              <input
-                type="number"
-                value={amount}
-                onChange={(e) => {
-                  setAmount(e.target.value);
-                }}
-                className="transaction-ammount-input"
-                name="amount"
-              >
-              </input>
+              Amount : ₹{amount}
             </div>
           </div>
           <div className=" inputelements transaction-data transaction-ammount">
