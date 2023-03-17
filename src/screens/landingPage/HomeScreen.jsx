@@ -111,7 +111,7 @@ const HomePage = () => {
             <Button
               sx={{ color: "#fff", mt: 3, borderRadius: 6, width: 150, mb: 5 }}
               className="learnMoreButton"
-              onClick={() => navigate("/under-construction")}
+              onClick={() => navigate("/workshops")}
             >
               Learn More
             </Button>
