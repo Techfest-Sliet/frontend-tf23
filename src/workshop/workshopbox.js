@@ -51,6 +51,12 @@ function WorkshopBox({ props }) {
         return;
       });
   }
+  const closedRegistration = () => {
+    setErrorMade({
+      title: "Registration Closed",
+      message: "Registration for this workshop is closed",
+    });
+  }
 
   useEffect(() => {
     axios
@@ -91,9 +97,18 @@ function WorkshopBox({ props }) {
           <div className="workshopDesc" style={{ float: "left" }}>
             <p className="workshopDesc">{props && props.workshopDescription}</p>
             <div style={{ float: "left" }}>
-              <button className="registerNowworkshop" onClick={HandleRegister}>
+            {
+              (props._id === '64135172092b1d8057d4c08f') 
+              ? 
+              (<button className="registerNowworkshop" onClick={closedRegistration}>
+                Registration Closed
+              </button>) 
+              : 
+              (<button className="registerNowworkshop" onClick={HandleRegister}>
                 Register Now
-              </button>
+              </button>)
+            }
+        
             </div>
             <div style={{ float: "left" }}>
               <p style={{ fontSize: "14px", margin: "0.5rem 0" }}>
