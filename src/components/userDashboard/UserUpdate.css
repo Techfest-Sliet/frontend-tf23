@@ -611,6 +611,13 @@ p.blockquote-footer {
     width: 85vw;
   }
 
+  .TableRow__res_up {
+    border: 15px solid green;
+    border-bottom: none;
+    border-top: none;
+    width: 95%;
+  }
+
   table.profiletable {
     width: 81vw;
     padding-bottom: 20px;
@@ -741,6 +748,12 @@ p.blockquote-footer {
   }
   .userEvents {
     font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .TableRow__res_up {
+    width: 100%;
   }
 }
 
