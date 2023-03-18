@@ -80,7 +80,6 @@ function App() {
         } else if (res.status === 208) {
           setVisitors(res.data.count);
         } else {
-          console.log(res);
           return;
         }
       })
@@ -96,6 +95,7 @@ function App() {
         scriptProps={{
           async: true, // optional, default to false,
         }}
+	container={{element: "body", parameters:{theme: "dark"}}}
       >
         <div className="App">
           {location.pathname !== "/sign-up" &&

@@ -258,12 +258,6 @@ function EventBox({ props }) {
                   <FaBuilding />
                   Event Venue: {props?.venue}
                 </p>
-                <p style={{ fontSize: "14px", margin: "0.5rem 0" }}>
-                  <FaRegCalendar /> Register Before 22 March<br></br>
-                </p>
-                <p style={{ fontSize: "14px", margin: "0.5rem 0" }}>
-                  <FaRegClock /> 11:59 P.M.
-                </p>
               </div>
             </div>
           </div>
