@@ -4,7 +4,13 @@ import { Popover } from "@mui/material";
 import { baseUrl } from "../../API/api";
 import Register from "../Team/Main_Page";
 import "./EventBox.css";
-import { FaRegCalendar, FaRegClock, FaUnity, FaBuilding, FaPersonBooth } from "react-icons/fa";
+import {
+  FaRegCalendar,
+  FaRegClock,
+  FaUnity,
+  FaBuilding,
+  FaPersonBooth,
+} from "react-icons/fa";
 import ErrorModel from "../ErrorPopup/ErrorModel";
 import Razorpay from "react-razorpay";
 import AuthContext from "../../auth/authContext";
@@ -150,17 +156,22 @@ function EventBox({ props }) {
                 </a>
               </div>
               <div style={{ float: "left" }}>
-                <h2 style={{ textAlign: "left" }}>
-                  Prizes Worth <br></br> &#8377;{props?.ePrizeWorth}/-
-                </h2>
+              {!props?.ePrizeWorth ? (
+                  <></>
+                ) : (
+                  <h2 style={{ marginTop: "6px", textAlign: "left" }}>
+                    Prizes Worth <br></br> &#8377;{props?.ePrizeWorth}/-{" "}
+                  </h2>
+                )}
                 <p style={{ fontSize: "14px", margin: "0.5rem 0" }}>
                   <FaUnity /> Event Mode : {props?.eventMode}{" "}
                 </p>
                 <p style={{ fontSize: "14px", margin: "0.5rem 0" }}>
-                  <FaPersonBooth /> Participation Type : {props?.eventParticipationType}{" "}
+                  <FaPersonBooth /> Participation Type :{" "}
+                  {props?.eventParticipationType}{" "}
                 </p>
                 <p style={{ fontSize: "14px", margin: "0.5rem 0" }}>
-                  <FaBuilding />  Event Venue : {props?.venue}{" "}
+                  <FaBuilding /> Event Venue : {props?.venue}{" "}
                 </p>
                 <p style={{ fontSize: "14px", margin: "0.5rem 0" }}>
                   <FaRegCalendar /> Register Before 22 March<br></br>
@@ -176,35 +187,35 @@ function EventBox({ props }) {
             <div className="objOfEventBox">
               {coor_len === 1
                 ? props?.studentCoordinator?.map((cor) => {
-                  return (
-                    <div className="boxImage">
-                      <img
-                        src="/dummy.jpg"
-                        className="boxImgSingle"
-                        alt="."
-                      />
-                      <div className="event__coordinator">
-                        {" "}
-                        <span> {cor.coordinatorName} </span>
-                        <br></br> <span> {cor.coordinatorPhone} </span>
-                        <br></br> <span> {cor.coordinatorEmail} </span>
+                    return (
+                      <div className="boxImage">
+                        <img
+                          src="/dummy.jpg"
+                          className="boxImgSingle"
+                          alt="."
+                        />
+                        <div className="event__coordinator">
+                          {" "}
+                          <span> {cor.coordinatorName} </span>
+                          <br></br> <span> {cor.coordinatorPhone} </span>
+                          <br></br> <span> {cor.coordinatorEmail} </span>
+                        </div>
                       </div>
-                    </div>
-                  );
-                })
+                    );
+                  })
                 : props?.studentCoordinator?.map((cor) => {
-                  return (
-                    <div className="boxImage">
-                      {/* <img src={cor.img} className='boxImgDouble' alt='.' /> */}
-                      <div className="event__coordinator">
-                        {" "}
-                        <span> {cor.coordinatorName} </span>
-                        <br></br> <span> {cor.coordinatorPhone} </span>
-                        <br></br> <span> {cor.coordinatorEmail} </span>
+                    return (
+                      <div className="boxImage">
+                        {/* <img src={cor.img} className='boxImgDouble' alt='.' /> */}
+                        <div className="event__coordinator">
+                          {" "}
+                          <span> {cor.coordinatorName} </span>
+                          <br></br> <span> {cor.coordinatorPhone} </span>
+                          <br></br> <span> {cor.coordinatorEmail} </span>
+                        </div>
                       </div>
-                    </div>
-                  );
-                })}
+                    );
+                  })}
             </div>
           </div>
         </div>
@@ -228,15 +239,20 @@ function EventBox({ props }) {
                 </a>
               </div>
               <div style={{ float: "left" }}>
-                <h2 style={{ marginTop: "6px", textAlign: "left" }}>
-                  Prizes Worth <br></br> &#8377;{props?.ePrizeWorth}/-{" "}
-                </h2>
+                {!props?.ePrizeWorth ? (
+                  <></>
+                ) : (
+                  <h2 style={{ marginTop: "6px", textAlign: "left" }}>
+                    Prizes Worth <br></br> &#8377;{props?.ePrizeWorth}/-{" "}
+                  </h2>
+                )}
                 <p style={{ fontSize: "14px", margin: "0.5rem 0" }}>
                   <FaUnity />
                   Event Mode : {props?.eventMode}
                 </p>
                 <p style={{ fontSize: "14px", margin: "0.5rem 0" }}>
-                  <FaPersonBooth /> Participation Type : {props?.eventParticipationType}{" "}
+                  <FaPersonBooth /> Participation Type :{" "}
+                  {props?.eventParticipationType}{" "}
                 </p>
                 <p style={{ fontSize: "14px", margin: "0.5rem 0" }}>
                   <FaBuilding />
@@ -256,66 +272,64 @@ function EventBox({ props }) {
             <div className="objOfEventBox">
               {coor_len === 1
                 ? props?.studentCoordinator?.map((cor) => {
-                  return (
-                    <div className="boxImage">
-                      {!cor?.coordinatorPhoto ? (
-                        <img
-                          src="/dummy.jpg"
-                          className="boxImgSingle"
-                          alt="."
-                        />
-                      ) : (
-                        <img
-                          src={`${baseUrl}/${cor?.coordinatorPhoto}`}
-                          className="boxImgSingle"
-                          alt="."
-                        />
-                      )
-                      }
-                      <div
-                        style={{
-                          marginLeft: "10px",
-                          textAlign: "center",
-                          fontSize: "14px",
-                        }}
-                      >
-                        {" "}
-                        <span> {cor?.coordinatorName} </span>
-                        <br></br> <span> {cor?.coordinatorPhone} </span>
-                        <br></br> <span> {cor?.coordinatorEmail} </span>
+                    return (
+                      <div className="boxImage">
+                        {!cor?.coordinatorPhoto ? (
+                          <img
+                            src="/dummy.jpg"
+                            className="boxImgSingle"
+                            alt="."
+                          />
+                        ) : (
+                          <img
+                            src={`${baseUrl}/${cor?.coordinatorPhoto}`}
+                            className="boxImgSingle"
+                            alt="."
+                          />
+                        )}
+                        <div
+                          style={{
+                            marginLeft: "10px",
+                            textAlign: "center",
+                            fontSize: "14px",
+                          }}
+                        >
+                          {" "}
+                          <span> {cor?.coordinatorName} </span>
+                          <br></br> <span> {cor?.coordinatorPhone} </span>
+                          <br></br> <span> {cor?.coordinatorEmail} </span>
+                        </div>
                       </div>
-                    </div>
-                  );
-                })
+                    );
+                  })
                 : props?.studentCoordinator?.map((cor) => {
-                  return (
-                    <div className="boxImage">
-                      {!cor?.coordinatorPhoto ? (
-                        <img
-                          src="/dummy.jpg"
-                          className="boxImgSingle"
-                          alt="."
-                        />
-                      ) : (
-                        <img
-                          src={`${baseUrl}/${cor?.coordinatorPhoto}`}
-                          className="boxImgSingle"
-                          alt="."
-                        />
-                      )
-                      }
-                      <div
-                        className="event__coordinator"
-                        style={{ marginLeft: "10px", fontSize: "14px" }}
-                      >
-                        {" "}
-                        <span> {cor?.coordinatorName} </span>
-                        <br></br> <span> {cor?.coordinatorPhone} </span>
-                        <br></br> <span> {cor?.coordinatorEmail} </span>
+                    return (
+                      <div className="boxImage">
+                        {!cor?.coordinatorPhoto ? (
+                          <img
+                            src="/dummy.jpg"
+                            className="boxImgSingle"
+                            alt="."
+                          />
+                        ) : (
+                          <img
+                            src={`${baseUrl}/${cor?.coordinatorPhoto}`}
+                            className="boxImgSingle"
+                            alt="."
+                          />
+                        )}
+                        <div
+                          className="event__coordinator"
+                          style={{ marginLeft: "10px", fontSize: "14px" }}
+                        >
+                          {" "}
+                          <span> {cor?.coordinatorName} </span>
+                          <br></br> <span> {cor?.coordinatorPhone} </span>
+                          <br></br> <span> {cor?.coordinatorEmail} </span>
+                        </div>
                       </div>
-                    </div>
-                  );
-                })}
+                    );
+                  })}
             </div>
           </div>
         </div>
