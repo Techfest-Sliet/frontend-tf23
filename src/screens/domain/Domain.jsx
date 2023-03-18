@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import OneCard from "../../components/domain/OneCard.jsx";
 import data, { domainSlider } from "./dummyData.js";
 import SliderContent from "../../components/slider/SliderContent";
-import Arrows from "../../components/slider/Arrows.js";
+import Arrows from "../../components/slider/Arrows";
 import Dots from "../../components/slider/Dots.js";
 import './Domain.css';
 const leng = domainSlider.length - 1;
@@ -19,6 +19,16 @@ function Domain() {
    <div className="domainPage">
      <div className="domainScreen">
       <div className="DomainScroll">
+      {/* <ArrowPrev
+        prevSlide={() => {
+          setActiveIndex(activeIndex < 1 ? leng : activeIndex - 1);
+          setActiveIndexNext(activeIndex);
+          setActiveIndexPrev(
+            activeIndexPrev < 1 ? leng : activeIndexPrev - 1
+          );
+        }}
+       
+      /> */}
       <div className="domainSlider">
         <SliderContent activeIndex={activeIndex} imageSlider={domainSlider} id='domainSlide' />
         <Arrows

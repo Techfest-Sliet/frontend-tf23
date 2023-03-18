@@ -7,7 +7,7 @@ import SliderDiv from "../../components/slider/SliderDiv";
 import RiImage from "../../components/aboutUs/Ri_image";
 function AboutUs() {
   return (
-    <div className="AboutUs">
+    <div className="AboutUs"> 
       <div className="AboutUsBg">
         <img src="/about-us/main.webp" width={"100%"} height={"100%"} alt="" />
       </div>

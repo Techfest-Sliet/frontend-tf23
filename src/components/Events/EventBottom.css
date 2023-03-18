@@ -111,4 +111,12 @@
     .bg_bottom{
         padding-bottom: 7%;
     }
+    .dummyImg {
+        height: 30%;
+        width: 30%;
+    }
+    .dummyImgDouble {
+        height: 55%;
+        width: 55%;
+    }
 }

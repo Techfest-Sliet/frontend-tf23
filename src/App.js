@@ -38,8 +38,8 @@ import Events from './components/domain/OneCard.jsx';
 import ErrorModel from './components/ErrorPopup/ErrorModel';
 import RegisterEvent from './components/Team/Main_Page';
 import Feedback from "./components/Feedback/feedback";
-import Date from "./components/Date/Date"
-import Datehorizontal from "./components/Datehorizontal/Datehorizontal";
+// import Date from "./components/Date/Date"
+// import Datehorizontal from "./components/Datehorizontal/Datehorizontal";
 import Pay from './components/Pay/Pay';
 // import Merch from './components/merchandise/merchandise1.jsx';
 import AddTeam from "./components/addTeam/AddTeam";
@@ -107,12 +107,12 @@ function App() {
             location.pathname !== "/sign-in" &&
             location.pathname !== "/user-dashboard" && <Footer />}
 
-          {location.pathname === '/' &&
+          {/* {location.pathname === '/' &&
             <Date />
           }
           {location.pathname === '/' &&
             <Datehorizontal />
-          }
+          } */}
 
           <Routes>
             <Route path="/domains" element={<DomainScreen />} />
