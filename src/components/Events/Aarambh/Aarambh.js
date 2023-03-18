@@ -8,9 +8,10 @@ import TechFestT from "../techFEST23kaT.webp";
 import Aarambhevent from "../AARAMBH_11zon.png";
 import axios from "axios";
 import { baseUrl } from "../../../API/api";
+import EventBox from "../EventBox";
 
 const Aarambh = () => {
-  const [aarambh, setAarambh] = useState(null);
+  const [Aarambh, setAarambh] = useState(null);
   useEffect(() => {
     getAarambh();
   }, [])
@@ -52,6 +53,11 @@ const Aarambh = () => {
       {datasOfEvent.map((item, index) => (
         <div className="eventsBackgroundBottomAarambh" key={index}>
           <EventBoxAarambh props={item} index={index} />
+        </div>
+      ))}
+      {Aarambh && Aarambh.map((Aarambh) => (
+        <div className="eventsBackgroundBottom" key={Aarambh._id}>
+          <EventBox props={Aarambh} />
         </div>
       ))}
       {datasOfEventCoordinator.map((item) => (

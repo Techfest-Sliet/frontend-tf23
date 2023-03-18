@@ -280,9 +280,9 @@ function EventBox({ props }) {
                         }}
                       >
                         {" "}
-                        <span> {cor.coordinatorName} </span>
-                        <br></br> <span> {cor.coordinatorPhone} </span>
-                        <br></br> <span> {cor.coordinatorEmail} </span>
+                        <span> {cor?.coordinatorName} </span>
+                        <br></br> <span> {cor?.coordinatorPhone} </span>
+                        <br></br> <span> {cor?.coordinatorEmail} </span>
                       </div>
                     </div>
                   );
@@ -309,9 +309,9 @@ function EventBox({ props }) {
                         style={{ marginLeft: "10px", fontSize: "14px" }}
                       >
                         {" "}
-                        <span> {cor.coordinatorName} </span>
-                        <br></br> <span> {cor.coordinatorPhone} </span>
-                        <br></br> <span> {cor.coordinatorEmail} </span>
+                        <span> {cor?.coordinatorName} </span>
+                        <br></br> <span> {cor?.coordinatorPhone} </span>
+                        <br></br> <span> {cor?.coordinatorEmail} </span>
                       </div>
                     </div>
                   );

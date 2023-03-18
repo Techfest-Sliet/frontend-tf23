@@ -154,10 +154,7 @@ const Main_Page = (props) => {
           </span>
           <div></div>
 
-          {props &&
-            (props.eventParticipationType === "Hybrid" ||
-              props.eventParticipationType === "Team") && (
-              <div className="addTEamDiv">
+          <div className="addTEamDiv">
                 <span style={{ padding: "10px", fontSize: "16px" }}>
                   Add Team
                 </span>
@@ -173,7 +170,6 @@ const Main_Page = (props) => {
                   ></img>
                 </Link>
               </div>
-            )}
 
           <button type="button" className="Mainlist-button" onClick={PostData}>
             Register
