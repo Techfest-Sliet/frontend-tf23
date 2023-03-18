@@ -96,7 +96,7 @@ const Transaction = () => {
                 className="screenshot-input"
                 name="paymentScreenshot"
                 type="file"
-                accept="/Image/*"
+                accept="/image/*"
                 onChange={(e) => {
                   console.log(e.target.files[0]);
                   setScreenshot(e.target.files[0]);
