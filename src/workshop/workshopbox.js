@@ -124,10 +124,6 @@ function WorkshopBox({ props }) {
               </div>
               <div style={{ float: "left" }}>
                 <p style={{ fontSize: "14px", margin: "0.5rem 0" }}>
-                  <FaRegCalendar /> Register Before 17 March<br></br>
-                  <FaRegClock /> 11:59 P.M.
-                </p>
-                <p style={{ fontSize: "14px", margin: "0.5rem 0" }}>
                   Venue: {props && props.workshopVenue}
                 </p>
                 <p style={{ fontSize: "14px", margin: "0.5rem 0" }}>
