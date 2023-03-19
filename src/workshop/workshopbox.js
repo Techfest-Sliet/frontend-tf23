@@ -112,15 +112,18 @@ function WorkshopBox({ props }) {
               <div style={{ float: "left" }}>
               {props?.registrationLive === false ? (
                   <button
-                    className="registerNowEvent"
+                    className="registerNowworkshop_closed"
                     onClick={closedRegistration}
+                    style={{
+                      background:""
+                    }}
                   >
                     Registration Closed
                   </button>
                 ) : (
                   <button
-                    className="registerNowEvent"
-                    onClick={handleClick}
+                    className="registerNowworkshop"
+                    onClick={HandleRegister}
                   >
                     Register Now
                   </button>
