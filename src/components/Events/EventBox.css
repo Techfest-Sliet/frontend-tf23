@@ -102,6 +102,17 @@
     cursor: pointer;
     border: 1px solid rgb(47, 226, 47);
 }
+.registerNowEvent_closed {
+    padding: 8px 20px;
+    background: linear-gradient(to right, rgb(226, 47, 47), rgb(81, 8, 8));
+    border-radius: 10px;
+    color: white;
+    margin: 15px 20px 7px 0;
+    float: left;
+    text-align: left;
+    cursor: pointer;
+    border: 1px solid rgb(226, 47, 47);
+}
 
 .problemStat {
     padding: 8px 23px;
