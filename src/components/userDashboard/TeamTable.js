@@ -12,7 +12,7 @@ const TeamTable = (props) => {
   const [teamMembers, setTeamMembers] = useState(props.teamMembers);
   const handleDelete = (id) => {
     axios
-      .post(`${baseUrl}/team/delete`, {id}, {
+      .post(`${baseUrl}/team/delete`, { id }, {
         headers: {
           Authorization: "Bearer " + authContext.token,
         },
@@ -39,7 +39,7 @@ const TeamTable = (props) => {
               <th className="teamHeader">Add Team</th>
               <th className="teamHeader">
                 <button className="teamaddBtn">
-                  <Link to="/addteam" state={{leaderId: props?.leaderId}}>
+                  <Link to="/addteam" state={{ leaderId: props?.leaderId }}>
                     <MdAdd className="AddBttn" />
                   </Link>
                 </button>
@@ -53,7 +53,7 @@ const TeamTable = (props) => {
               <th className="teamHeader">Action</th>
             </tr>
           </thead>
-          {props.teamMembers && props.teamMembers.length > 0 &&<tbody>
+          {props.teamMembers && props.teamMembers.length > 0 && <tbody>
             {teamMembers.map((team) => (
               <tr key={team._id} className="TableRow">
                 <td>{team.teamName}</td>
@@ -73,7 +73,7 @@ const TeamTable = (props) => {
                       <td className="removeMembBttn">
                         <button
                           className="membDelIcon"
-                          // onClick={() => handleDeleteMember(eachMember.idd)}
+                        // onClick={() => handleDeleteMember(eachMember.idd)}
                         >
                           <FaTimes />
                         </button>
@@ -81,7 +81,7 @@ const TeamTable = (props) => {
                     </tr>
                   ))}
                 </td>
-                <td>{team.eventName}</td>
+                {/* <td>{team.eventName}</td> */}
                 {team.events && team.events.length === 0 && <td>Not yet registered</td>}
                 {team.events && team.events.map((event) => {
                   return (

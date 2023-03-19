@@ -7,23 +7,23 @@ const Details = [
       linkedin:"https://www.linkedin.com/in/aniketmihir"
     },
   
-    {
-      id: 2,
-      name:"Kumari Pallavi",
-      image:process.env.PUBLIC_URL + "core-team-images/5.jpg",
-      position:"Core Member",
-      linkedin:"https://www.linkedin.com/in/kumari-pallavi-89b308203"
-    }
+    // {
+    //   id: 2,
+    //   name:"Kumari Pallavi",
+    //   image:process.env.PUBLIC_URL + "core-team-images/5.jpg",
+    //   position:"Core Member",
+    //   linkedin:"https://www.linkedin.com/in/kumari-pallavi-89b308203"
+    // }
     
-    ,
-    {
-      id: 3,
-      name:"Lavanya Mishra",
-      image:process.env.PUBLIC_URL + "core-team-images/3.jpg",
-      position:"Core Member",
-      linkedin:"https://www.linkedin.com/in/lavanya-mishra-909a89184"
-    }
-    ,
+    // ,
+    // {
+    //   id: 3,
+    //   name:"Lavanya Mishra",
+    //   image:process.env.PUBLIC_URL + "core-team-images/3.jpg",
+    //   position:"Core Member",
+    //   linkedin:"https://www.linkedin.com/in/lavanya-mishra-909a89184"
+    // }
+    // ,
     
     {
       id: 4,
