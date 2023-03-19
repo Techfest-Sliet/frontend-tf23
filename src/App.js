@@ -92,10 +92,6 @@ function App() {
       <GoogleReCaptchaProvider
         reCaptchaKey="6Ldug5YkAAAAAI6e4FMGtjuymWLsLXq3vQ7-HBJ4"
         useEnterprise="true"
-        scriptProps={{
-          async: true, // optional, default to false,
-        }}
-	container={{element: "body", parameters:{theme: "dark"}}}
       >
         <div className="App">
           {location.pathname !== "/sign-up" &&
