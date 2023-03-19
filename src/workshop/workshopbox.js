@@ -133,7 +133,7 @@ function WorkshopBox({ props }) {
                   Time: {props && props.workshopTime}
                 </p>
                 <p style={{ fontSize: "14px", margin: "0.5rem 0" }}>
-                  Perkes:E-certificate
+                  Perks: E-certificate
                 </p>
               </div>
             </div>
