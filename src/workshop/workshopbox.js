@@ -57,10 +57,14 @@ function WorkshopBox({ props }) {
       });
   }
   const closedRegistration = () => {
-    setTimeout(() => setErrorMade({
-      title: "Registration Closed",
-      message: "Registration for this workshop is closed",
-    }), 1000);
+    setTimeout(
+      () =>
+        setErrorMade({
+          title: "Registration Closed",
+          message: "Registration for this workshop is closed",
+        }),
+      1000
+    );
   };
 
   useEffect(() => {

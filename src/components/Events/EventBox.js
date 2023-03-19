@@ -21,6 +21,12 @@ function EventBox({ props }) {
   const onErrorMadeHandle = () => {
     setErrorMade(null);
   };
+  const closedRegistration = () => {
+    setTimeout(() => setErrorMade({
+      title: "Registration Closed",
+      message: "Registration for this event is closed",
+    }), 200);
+  };
   const [anchorEl, setAnchorEl] = useState(null);
   const [user, setUser] = useState(null);
   const handleClick = (event) => {
@@ -143,10 +149,21 @@ function EventBox({ props }) {
               <h1 style={{ textAlign: "left" }}>{props?.eventName}</h1>
               <p className="eventDesc">{props?.eventDescription}</p>
               <div style={{ float: "left" }}>
-                <button className="registerNowEvent" onClick={handleClick}>
-                  {" "}
-                  Register Now{" "}
-                </button>
+              {props?.registrationLive === false ? (
+                  <button
+                    className="registerNowEvent"
+                    onClick={closedRegistration}
+                  >
+                    Registration Closed
+                  </button>
+                ) : (
+                  <button
+                    className="registerNowEvent"
+                    onClick={handleClick}
+                  >
+                    Register Now
+                  </button>
+                )}
                 <a
                   target="_blank"
                   rel="noreferrer"
@@ -170,6 +187,7 @@ function EventBox({ props }) {
                   <FaPersonBooth /> Participation Type :{" "}
                   {props?.eventParticipationType}{" "}
                 </p>
+
                 <p style={{ fontSize: "14px", margin: "0.5rem 0" }}>
                   <FaBuilding /> Event Venue : {props?.venue}{" "}
                 </p>
@@ -234,10 +252,21 @@ function EventBox({ props }) {
               <h1 style={{ textAlign: "left" }}>{props?.eventName}</h1>
               <p className="eventDesc">{props?.eventDescription}</p>
               <div style={{ float: "left" }}>
-                <button className="registerNowEvent" onClick={handleClick}>
-                  {" "}
-                  Register Now{" "}
-                </button>
+              {props?.registrationLive === false ? (
+                  <button
+                    className="registerNowworkshop"
+                    onClick={closedRegistration}
+                  >
+                    Registration Closed
+                  </button>
+                ) : (
+                  <button
+                    className="registerNowworkshop"
+                    onClick={handleClick}
+                  >
+                    Register Now
+                  </button>
+                )}
                 <a
                   target="_blank"
                   rel="noreferrer"
