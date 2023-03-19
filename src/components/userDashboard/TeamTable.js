@@ -70,14 +70,14 @@ const TeamTable = (props) => {
                       <td>
                         {eachMember.status ? "Verified" : "Not Verified"}
                       </td>
-                      <td className="removeMembBttn">
+                      {/* <td className="removeMembBttn">
                         <button
                           className="membDelIcon"
                         // onClick={() => handleDeleteMember(eachMember.idd)}
                         >
                           <FaTimes />
                         </button>
-                      </td>
+                      </td> */}
                     </tr>
                   ))}
                 </td>
