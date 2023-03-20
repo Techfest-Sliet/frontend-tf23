@@ -93,7 +93,7 @@ export const datasOfEvent = [
 
 export const datasOfEventCoordinator = [
     {
-        photoOfFaculty: require('../../dummy.jpg'),
+        photoOfFaculty: ('http://sliet.ac.in/wp-content/uploads/avatars/120/4053487b2ba8683e965d15c3500e4e60-bpfull.jpg'),
         nameOfFaculty: "Dr. J.S. Gill, ME",
         facultyAdvisor: "Faculty Advisor",
         domainCoordinator: [

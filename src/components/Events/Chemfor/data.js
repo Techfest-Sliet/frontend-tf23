@@ -147,7 +147,7 @@ export const datasOfEvent = [
 
 export const datasOfEventCoordinator = [
     {
-        photoOfFaculty: require('../../dummy.jpg'),
+        photoOfFaculty: ('http://sliet.ac.in/wp-content/uploads/avatars/64/1f436a846b4d5b489ffd13ecd785ec2f-bpfull.jpg'),
         nameOfFaculty: "Prof. Kamlesh Kumari, CE",
         facultyAdvisor: "Faculty Advisor",
         domainCoordinator: [
