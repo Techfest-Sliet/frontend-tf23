@@ -15,7 +15,7 @@ function team() {
           image={detail.image}
           name={detail.name}
           position={detail.position}
-          // linkedin={detail.linkedin}
+          linkedin={detail.linkedin}
         />
       ))}
 

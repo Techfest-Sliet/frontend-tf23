@@ -94,7 +94,7 @@ export const datasOfEvent = [
 
 export const datasOfEventCoordinator = [
     {
-        photoOfFaculty: require('../../dummy.jpg'),
+        photoOfFaculty: ('http://sliet.ac.in/wp-content/uploads/avatars/25/6f5fbb5e2bc9e012a16c1d2a4a23a472-bpfull.jpg'),
         nameOfFaculty: "Dr. Asim Ali Khan, EIE",
         facultyAdvisor: "Faculty Advisor",
         domainCoordinator: [
