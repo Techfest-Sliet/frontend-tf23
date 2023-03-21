@@ -147,7 +147,7 @@ export const datasOfEvent = [
 
 export const datasOfEventCoordinator = [
     {
-        photoOfFaculty: ('http://sliet.ac.in/wp-content/uploads/avatars/64/1f436a846b4d5b489ffd13ecd785ec2f-bpfull.jpg'),
+        photoOfFaculty: require('./../../../facultyCordinatorImages/kamlesh kumari.jpg'),
         nameOfFaculty: "Prof. Kamlesh Kumari, CE",
         facultyAdvisor: "Faculty Advisor",
         domainCoordinator: [
@@ -158,7 +158,7 @@ export const datasOfEventCoordinator = [
                 mailOfDomainCoordinator: (<a href='mailto: 2040007@sliet.ac.in' style={{fontFamily: "productSans" }}> 2040007@sliet.ac.in</a>)
             },
             {
-                photoOfdomainCoordinator: require('../../dummy.jpg'),
+                photoOfdomainCoordinator: require('./../../../facultyCordinatorImages/SHUBHAM.jpg'),
                 nameOfDomainCoordinator: "Shubham",
                 phoneNoOfDomainCoordinator: (<a href="tel:7632954311" style={{ textDecoration: "none", color: "white", fontFamily: "productSans" }}> 7632954311 </a>),
                 mailOfDomainCoordinator: (<a href='mailto: 2130420@sliet.ac.in' style={{fontFamily: "productSans" }}> 2130420@sliet.ac.in</a>)

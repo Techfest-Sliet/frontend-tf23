@@ -66,19 +66,19 @@ export const datasOfEvent = [
 
 export const datasOfEventCoordinator = [
     {
-        photoOfFaculty: ('http://sliet.ac.in/wp-content/uploads/avatars/52/76ccd153944856fc72bf22974adb46a3-bpfull.jpg'),
+        photoOfFaculty: require('./../../../facultyCordinatorImages/manmohan singh.jpg'),
         nameOfFaculty: "Dr. Manmohan Singh, EIE",
         facultyAdvisor: "Faculty Advisor",
         domainCoordinator: [
             {
-                photoOfdomainCoordinator: require('../../dummy.jpg'),
+                photoOfdomainCoordinator: require('./../../../facultyCordinatorImages/ADARSH KUMAR.jpg'),
                 nameOfDomainCoordinator: "Adarsh Kumar",
                 phoneNoOfDomainCoordinator: (<a href="tel:9927588504" style={{ textDecoration: "none", color: "white", fontFamily: "productSans" }}> 9927588504
                 </a>),
                 mailOfDomainCoordinator: (<a href='mailto: at37057@gmail.com' style={{fontFamily: "productSans"}} > at37057@gmail.com</a>)
             },
             {
-                photoOfdomainCoordinator: require('../../dummy.jpg'),
+                photoOfdomainCoordinator: require('./../../../facultyCordinatorImages/aditee.jpg'),
                 nameOfDomainCoordinator: " Aditee Pankaj",
                 phoneNoOfDomainCoordinator: (<a href="tel:8968342101" style={{ textDecoration: "none", color: "white", fontFamily: "productSans" }}> 8968342101 </a>),
                 mailOfDomainCoordinator: (<a href='mailto: 2130555@sliet.ac.in' style={{fontFamily: "productSans"}} > 2130555@sliet.ac.in</a>)

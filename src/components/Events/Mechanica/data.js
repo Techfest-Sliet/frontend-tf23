@@ -93,12 +93,12 @@ export const datasOfEvent = [
 
 export const datasOfEventCoordinator = [
     {
-        photoOfFaculty: ('http://sliet.ac.in/wp-content/uploads/avatars/120/4053487b2ba8683e965d15c3500e4e60-bpfull.jpg'),
+        photoOfFaculty: require('./../../../facultyCordinatorImages/JS GILL.jpg'),
         nameOfFaculty: "Dr. J.S. Gill, ME",
         facultyAdvisor: "Faculty Advisor",
         domainCoordinator: [
             {
-                photoOfdomainCoordinator: require('../../dummy.jpg'),
+                photoOfdomainCoordinator: require('./../../../facultyCordinatorImages/SHAHAB MAHFOOZ.jpg'),
                 nameOfDomainCoordinator: "Shahab Mahfooz",
                 phoneNoOfDomainCoordinator: (<a href="tel:9536043431" style={{ textDecoration: "none", color: "white", fontFamily: "productSans" }}> 9536043431 </a>),
                 mailOfDomainCoordinator: (<a href='mailto: 2130311@sliet.ac.in' style={{ fontFamily: "productSans" }} > 2130311@sliet.ac.in</a>)

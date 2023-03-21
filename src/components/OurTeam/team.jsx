@@ -19,14 +19,14 @@ function team() {
         />
       ))}
 
-      {/* <h1 className="team-names">Vice Chairman</h1>
+      <h1 className="team-names">Vice Chairman</h1>
       {ViceChairmanData.map((detail) => (
         <Card
           image={detail.image}
           name={detail.name}
           position={detail.position}
         />
-      ))} */}
+      ))}
 
       <h1 className="team-names">Core Team</h1>
       {Details.map((detail) => (

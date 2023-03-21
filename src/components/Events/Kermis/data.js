@@ -64,7 +64,7 @@ export const datasOfEventCoordinator = [
         facultyAdvisor: "Faculty Advisor",
         domainCoordinator: [
             {
-                photoOfdomainCoordinator: require('../../dummy.jpg'),
+                photoOfdomainCoordinator: require('./../../../facultyCordinatorImages/ADITYA MALL.jpeg'),
                 nameOfDomainCoordinator: "Aditya Mall",
                 phoneNoOfDomainCoordinator: (<a href="tel:8840961497" style={{ textDecoration: "none", color: "white", fontFamily: "productSans" }}> 8840961497 </a>),
                 mailOfDomainCoordinator: (<a href='mailto: 2130725@sliet.ac.in' style={{fontFamily: "productSans"}} > 2130725@sliet.ac.in</a>)
