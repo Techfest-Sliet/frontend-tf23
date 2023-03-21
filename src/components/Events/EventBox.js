@@ -10,6 +10,7 @@ import {
   FaUnity,
   FaBuilding,
   FaPersonBooth,
+  FaRegCalendarTimes,
 } from "react-icons/fa";
 import ErrorModel from "../ErrorPopup/ErrorModel";
 import Razorpay from "react-razorpay";
@@ -17,15 +18,20 @@ import AuthContext from "../../auth/authContext";
 
 function EventBox({ props }) {
   const [errorMade, setErrorMade] = useState();
+  const date = props?.startDate;
   const authContext = useContext(AuthContext);
   const onErrorMadeHandle = () => {
     setErrorMade(null);
   };
   const closedRegistration = () => {
-    setTimeout(() => setErrorMade({
-      title: "Registration Closed",
-      message: "Registration for this event is closed",
-    }), 200);
+    setTimeout(
+      () =>
+        setErrorMade({
+          title: "Registration Closed",
+          message: "Registration for this event is closed",
+        }),
+      200
+    );
   };
   const [anchorEl, setAnchorEl] = useState(null);
   const [user, setUser] = useState(null);
@@ -149,7 +155,7 @@ function EventBox({ props }) {
               <h1 style={{ textAlign: "left" }}>{props?.eventName}</h1>
               <p className="eventDesc">{props?.eventDescription}</p>
               <div style={{ float: "left" }}>
-              {props?.registrationLive === false ? (
+                {props?.registrationLive === false ? (
                   <button
                     className="registerNowEvent"
                     onClick={closedRegistration}
@@ -157,10 +163,7 @@ function EventBox({ props }) {
                     Registration Closed
                   </button>
                 ) : (
-                  <button
-                    className="registerNowEvent"
-                    onClick={handleClick}
-                  >
+                  <button className="registerNowEvent" onClick={handleClick}>
                     Register Now
                   </button>
                 )}
@@ -173,7 +176,7 @@ function EventBox({ props }) {
                 </a>
               </div>
               <div style={{ float: "left" }}>
-              {!props?.ePrizeWorth ? (
+                {!props?.ePrizeWorth ? (
                   <></>
                 ) : (
                   <h2 style={{ marginTop: "6px", textAlign: "left" }}>
@@ -184,10 +187,13 @@ function EventBox({ props }) {
                   <FaUnity /> Event Mode : {props?.eventMode}{" "}
                 </p>
                 <p style={{ fontSize: "14px", margin: "0.5rem 0" }}>
+                  <FaRegCalendarTimes />
+                  Date: {props && date.slice(0, 10)}
+                </p>
+                <p style={{ fontSize: "14px", margin: "0.5rem 0" }}>
                   <FaPersonBooth /> Participation Type :{" "}
                   {props?.eventParticipationType}{" "}
                 </p>
-
                 <p style={{ fontSize: "14px", margin: "0.5rem 0" }}>
                   <FaBuilding /> Event Venue : {props?.venue}{" "}
                 </p>
@@ -207,7 +213,7 @@ function EventBox({ props }) {
                 ? props?.studentCoordinator?.map((cor) => {
                     return (
                       <div className="boxImage">
-                      {!cor?.coordinatorPhoto ? (
+                        {!cor?.coordinatorPhoto ? (
                           <img
                             src="/dummy.jpg"
                             className="boxImgSingle"
@@ -252,7 +258,7 @@ function EventBox({ props }) {
               <h1 style={{ textAlign: "left" }}>{props?.eventName}</h1>
               <p className="eventDesc">{props?.eventDescription}</p>
               <div style={{ float: "left" }}>
-              {props?.registrationLive === false ? (
+                {props?.registrationLive === false ? (
                   <button
                     className="registerNowworkshop"
                     onClick={closedRegistration}
@@ -260,10 +266,7 @@ function EventBox({ props }) {
                     Registration Closed
                   </button>
                 ) : (
-                  <button
-                    className="registerNowworkshop"
-                    onClick={handleClick}
-                  >
+                  <button className="registerNowworkshop" onClick={handleClick}>
                     Register Now
                   </button>
                 )}
@@ -286,6 +289,10 @@ function EventBox({ props }) {
                 <p style={{ fontSize: "14px", margin: "0.5rem 0" }}>
                   <FaUnity />
                   Event Mode : {props?.eventMode}
+                </p>
+                <p style={{ fontSize: "14px", margin: "0.5rem 0" }}>
+                  <FaRegCalendarTimes />
+                  Date: {props && date.slice(0, 10)}
                 </p>
                 <p style={{ fontSize: "14px", margin: "0.5rem 0" }}>
                   <FaPersonBooth /> Participation Type :{" "}

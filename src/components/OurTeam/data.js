@@ -18,7 +18,7 @@ const Details = [
   {
     id: 3,
     name: "Lavanya Mishra",
-    image: process.env.PUBLIC_URL + "core-team-images/3.jpg",
+    image: process.env.PUBLIC_URL + "core-team-images/lavanya.jpeg",
     position: "Core Member",
     linkedin: "https://www.linkedin.com/in/lavanya-mishra-909a89184",
   },
