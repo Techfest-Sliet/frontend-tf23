@@ -10,7 +10,7 @@ const Details = [
   {
     id: 2,
     name: "Kumari Pallavi",
-    image: process.env.PUBLIC_URL + "core-team-images/5.jpg",
+    image: process.env.PUBLIC_URL + "core-team-images/pallavi.png",
     position: "Core Member",
     linkedin: "https://www.linkedin.com/in/kumari-pallavi-89b308203",
   },
