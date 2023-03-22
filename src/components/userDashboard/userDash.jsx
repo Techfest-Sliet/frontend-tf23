@@ -249,7 +249,7 @@ const User_dasbord = () => {
               </div>
             </div>
 
-          { user && (user.role == 1) && <div className="card-payment">
+          { user && (user.role == 1 && !user.payment.paymentStatus) && <div className="card-payment">
             <div className="card-heading">
               <h1>Pay for event mode</h1>
             </div>
@@ -352,7 +352,7 @@ const User_dasbord = () => {
                 <tr className="TableRow">
                   <td>Payment Status</td>
                   <td className="TableRow__res">
-                    {user && user.role == 2 ? (
+                    {user && (user.role == 2 || (user.role == 1 && user.payment.paymentStatus)) ? (
                       "Paid"
                     ) : 'Not Paid'}
                   </td>

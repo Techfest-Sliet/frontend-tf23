@@ -26,7 +26,6 @@ const AddTeam = (props) => {
   const checkEmail = async (email, idx) => {
     const memberDomain = email.split("@")[1];
     const userDomain = authContext.userRole;
-
     //1 gmail
     if (
       (userDomain == 2 && memberDomain != "sliet.ac.in") ||
@@ -42,14 +41,13 @@ const AddTeam = (props) => {
             Authorization: "Bearer " + authContext.token,
           }})
         .then((result) => {
+          alert(JSON.stringify(result.data.payment))
           if (result.data.isError) {
             const list = mailErr;
             while (list.length < idx + 1) {
               list.push("");
-              console.log(list);
             }
             list[idx] = result.data.title;
-            console.log(list);
             setMembers(list);
             return;
           } else {
@@ -57,10 +55,8 @@ const AddTeam = (props) => {
               const list = mailErr;
               while (list.length < idx + 1) {
                 list.push("");
-                console.log(list);
               }
               list[idx] = "Email is not verified";
-              console.log(list);
               setMembers(list);
               return;
             }
