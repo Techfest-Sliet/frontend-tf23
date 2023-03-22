@@ -3,7 +3,6 @@ import "./Aarambh.css";
 import EventBoxAarambh from "../EventBoxAarambh";
 import EventBottom from "../EventBottom";
 import { datasOfEvent } from "./data";
-import { datasOfEventCoordinator } from "./data";
 import TechFestT from "../techFEST23kaT.webp";
 import Aarambhevent from "../AARAMBH_11zon.png";
 import axios from "axios";
@@ -60,9 +59,9 @@ const Aarambh = () => {
           <EventBox props={Aarambh} />
         </div>
       ))}
-      {datasOfEventCoordinator.map((item) => (
+      {/* {datasOfEventCoordinator.map((item) => (
         <EventBottom props={item} />
-      ))}
+      ))} */}
     </>
   );
 };
