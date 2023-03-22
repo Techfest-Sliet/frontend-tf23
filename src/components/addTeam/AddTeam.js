@@ -41,7 +41,6 @@ const AddTeam = (props) => {
             Authorization: "Bearer " + authContext.token,
           }})
         .then((result) => {
-          alert(JSON.stringify(result.data.payment))
           if (result.data.isError) {
             const list = mailErr;
             while (list.length < idx + 1) {
@@ -60,15 +59,7 @@ const AddTeam = (props) => {
               setMembers(list);
               return;
             }
-            if (!result.data.payment) {
-              const list = mailErr;
-              while (list.length < idx + 1) {
-                list.push("");
-              }
-              list[idx] = "Registeration fee has not been paid";
-              setMembers(list);
-              return;
-            } else if (!result.data.payment.paymentStatus) {
+             if (!result.data.payment.paymentStatus) {
               const list = mailErr;
               while (list.length < idx + 1) {
                 list.push("");
@@ -130,7 +121,6 @@ const AddTeam = (props) => {
     let formData = { teamName: form.teamName, members: [] };
     let member = {};
     for (const e of form) {
-      console.log(e);
       switch (e[0]) {
         case "email":
           member.email = e[1];
@@ -154,9 +144,11 @@ const AddTeam = (props) => {
       },
     }).then((result) => {
       setIsLoading(false);
-      console.log(result);
       if (result.data.isError) {
+        alert(result.data.title);
+        return;
       } else {
+        // alert("Team added successfully");
         navigate("/user-dashboard");
       }
     });
