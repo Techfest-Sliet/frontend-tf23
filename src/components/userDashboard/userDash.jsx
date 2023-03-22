@@ -25,14 +25,37 @@ const User_dasbord = () => {
 
   const onWorkshopWhatsapp = (e) => {
     // window.location.href(e)
-  }
+  };
   const [user, setUser] = useState(null);
- // const [teamMembers, setTeamMembers] = useState();
+  // const [teamMembers, setTeamMembers] = useState();
   function HandlePay() {
-    console.log(authContext);
-    console.log(user);
     setErrorMade({ title: "Coming Soon", message: "Coming Soon" });
   }
+
+  const deleteEvent = (id) => {
+    setIsLoading(true);
+    axios
+      .post(
+        `${baseUrl}/user/pullevent`,
+        { id: id },
+        {
+          headers: {
+            Authorization: "Bearer " + authContext.token,
+          },
+        }
+      )
+      .then((result) => {
+        setErrorMade({ title: "Success", message: result.data.message });
+        setIsLoading(false);
+        if (result.data.isError) {
+          setErrorMade({ title: "Error", message: result.data.message });
+          return;
+        } else {
+          const updatedEvents = events.filter((event) => event._id !== id);
+          setEvents(updatedEvents);
+        }
+      });
+  };
   const navigate = useNavigate();
   const Razorpay = useRazorpay();
   function InitiateUserPayment(amount, isOnline) {
@@ -97,13 +120,12 @@ const User_dasbord = () => {
   }
   const [isLoading, setIsLoading] = useState(false);
 
-
   const handleClick = () => {
     navigate("/updateuser");
   };
   const commingSoon = () => {
     setErrorMade({ title: "Coming Soon", message: "Coming Soon" });
-  }
+  };
 
   useEffect(() => {
     setIsLoading(true);
@@ -127,8 +149,8 @@ const User_dasbord = () => {
         }
         setUser(result.data.user);
         setWorkshops(result.data.user.workshops);
-        setTeamMembers(result.data.user.teamMembers)
-        setEvents(result.data.user.events)
+        setTeamMembers(result.data.user.teamMembers);
+        setEvents(result.data.user.events);
       })
       .catch((err) => {
         return err.status(208).json({
@@ -155,141 +177,168 @@ const User_dasbord = () => {
               {/* Your Unique tF ID is {user && user.userId} */}
             </p>
           </div>
-            <div className="flex_topbox">
-              <div className="card-bodytop">
-                <div className="card-title text-light text-center">
-                  <img
-                    className="idea"
-                    src="https://img.icons8.com/fluency-systems-regular/48/000000/idea.png"
-                    alt=""
-                  />
+          <div className="flex_topbox">
+            <div className="card-bodytop">
+              <div className="card-title text-light text-center">
+                <img
+                  className="idea"
+                  src="https://img.icons8.com/fluency-systems-regular/48/000000/idea.png"
+                  alt=""
+                />
 
-                  <span className="userEvents">Events Registered</span>
-                </div>
-
-                <div className="collapse1 p-4 mt-4 mb-2">
-                  <div class="scrollbar" id="scrollbar-custom">
-                    <table className="table_text-light">
-                      <tbody>
-                        <tr>
-                          <td>Name </td>
-                          <td>Date</td>
-                          <td>Type</td>
-                          {/* <td>Participation Type</td> */}
-                          <td>Action</td>
-                        </tr>
-                        {events && events.length === 0 &&  'Not registered Yet' } 
-                        {events && events.length > 0 &&
-                            events.map((event) => {
-                              const e = event.startDate.slice(0, 10);
-                              return (<tr key={event._id}>
-                                <td>{event.eventName }</td>
-                                <td>{e}</td>
-                                <td>{event.eventMode }</td>
-                                {/* <td>{event.eventParticipationType }</td> */}
-                                <td>
-                                  <a target='_blank' rel="noreferrer" href={`${event.whatsappLink}`}><span className="mdphone" title="Join Workshop Whatsapp Group">
-                                    <BsWhatsapp />
-                                  </span>
-                                  </a>
-                                  <span className="mdphone">
-                                    <MdDelete />
-                                  </span>
-                                </td>
-                              </tr>)
-                            })
-                        }
-                      </tbody>
-                    </table>
-                  </div>
-                </div>
+                <span className="userEvents">Events Registered</span>
               </div>
-              <div className="card-bodytop">
-                <div className="card-title text-light text-center">
-                  <img
-                    className="maintenance"
-                    src="https://img.icons8.com/ios/50/000000/maintenance.png"
-                    alt=""
-                  />
 
-                  <span className="userEvents">Workshops Registered</span>
-                </div>
-                <div className="collapse1 p-4 mt-4 mb-2">
-                  <div class="scrollbar" id="scrollbar-custom">
-                    <table className="table_text-light">
-                      <tbody>
-                        <tr>
-                          <td>Name </td>
-                          <td>Date</td>
-                          <td>Action</td>
-                        </tr>
-                        {workshops && workshops.length === 0 &&  'Not registered Yet' } 
-                        {workshops && workshops.length > 0 &&
-                            workshops.map((workshop) => {
-                              return (<tr key={workshop._id}>
-                                <td>{workshop.workshopName }</td>
-                                <td>{workshop.workshopDate}</td>
-                                <td>
-                                  <a target='_blank' rel="noreferrer" href={`${workshop.whatsappLink}`}><span className="mdphone" title="Join Workshop Whatsapp Group">
+              <div className="collapse1 p-4 mt-4 mb-2">
+                <div class="scrollbar" id="scrollbar-custom">
+                  <table className="table_text-light">
+                    <tbody>
+                      <tr>
+                        <td>Name </td>
+                        <td>Date</td>
+                        <td>Type</td>
+                        <td>Whatsapp Link</td>
+                        <td>Delete Event</td>
+                      </tr>
+                      {events && events.length === 0 && "Not registered Yet"}
+                      {events &&
+                        events.length > 0 &&
+                        events.map((event) => {
+                          const e = event.startDate.slice(0, 10);
+                          return (
+                            <tr key={event._id}>
+                              <td>{event.eventName}</td>
+                              <td>{e}</td>
+                              <td>{event.eventMode}</td>
+                              <td>
+                                <a
+                                  target="_blank"
+                                  rel="noreferrer"
+                                  href={`${event.whatsappLink}`}
+                                >
+                                  <span
+                                    className="mdphone"
+                                    title="Join Workshop Whatsapp Group"
+                                  >
                                     <BsWhatsapp />
                                   </span>
-                                  </a>
-                                  <span className="mdphone">
-                                    <MdDelete />
-                                  </span>
-                                </td>
-                              </tr>)
-                            })
-                        }
-                        
-                      </tbody>
-                    </table>
-                  </div>
+                                </a>
+                              </td>
+                              <td>
+                                <button
+                                  onClick={() => deleteEvent(event._id)}
+                                  className="teamDelIcon"
+                                >
+                                  <MdDelete />
+                                </button>
+                              </td>
+                            </tr>
+                          );
+                        })}
+                    </tbody>
+                  </table>
                 </div>
               </div>
             </div>
+            <div className="card-bodytop">
+              <div className="card-title text-light text-center">
+                <img
+                  className="maintenance"
+                  src="https://img.icons8.com/ios/50/000000/maintenance.png"
+                  alt=""
+                />
 
-          { user && (user.role == 1 && !user.payment.paymentStatus) && <div className="card-payment">
-            <div className="card-heading">
-              <h1>Pay for event mode</h1>
+                <span className="userEvents">Workshops Registered</span>
+              </div>
+              <div className="collapse1 p-4 mt-4 mb-2">
+                <div class="scrollbar" id="scrollbar-custom">
+                  <table className="table_text-light">
+                    <tbody>
+                      <tr>
+                        <td>Name </td>
+                        <td>Date</td>
+                        <td>Action</td>
+                      </tr>
+                      {workshops &&
+                        workshops.length === 0 &&
+                        "Not registered Yet"}
+                      {workshops &&
+                        workshops.length > 0 &&
+                        workshops.map((workshop) => {
+                          return (
+                            <tr key={workshop._id}>
+                              <td>{workshop.workshopName}</td>
+                              <td>{workshop.workshopDate}</td>
+                              <td>
+                                <a
+                                  target="_blank"
+                                  rel="noreferrer"
+                                  href={`${workshop.whatsappLink}`}
+                                >
+                                  <span
+                                    className="mdphone"
+                                    title="Join Workshop Whatsapp Group"
+                                  >
+                                    <BsWhatsapp />
+                                  </span>
+                                </a>
+                                <span className="mdphone">
+                                  <MdDelete />
+                                </span>
+                              </td>
+                            </tr>
+                          );
+                        })}
+                    </tbody>
+                  </table>
+                </div>
+              </div>
             </div>
-            <div className="card-details">
-              <p>For online mode: 299</p>
-              <p>For offline mode: 599</p>
+          </div>
+
+          {user && user.role == 1 && !user.payment.paymentStatus && (
+            <div className="card-payment">
+              <div className="card-heading">
+                <h1>Pay for event mode</h1>
+              </div>
+              <div className="card-details">
+                <p>For online mode: 299</p>
+                <p>For offline mode: 599</p>
+              </div>
+              <div className="card-paybtn">
+                {user && user.isPaid ? (
+                  "Paid"
+                ) : (
+                  <Link to="/paymentPage" state={{ amount: 299 }}>
+                    <button
+                      type="button"
+                      // onClick={InitiateUserPayment}
+                      value="Pay"
+                      className="userDash__button"
+                      // onClick={() => InitiateUserPayment(299, true)}
+                    >
+                      Online Mode
+                    </button>
+                  </Link>
+                )}
+                {user && user.isPaid ? (
+                  "Paid"
+                ) : (
+                  <Link to="/paymentPage" state={{ amount: 599 }}>
+                    <button
+                      type="button"
+                      onClick={commingSoon}
+                      value="Pay"
+                      className="userDash__button"
+                      // onClick={() => InitiateUserPayment(599, false).call}
+                    >
+                      Offline Mode
+                    </button>
+                  </Link>
+                )}
+              </div>
             </div>
-            <div className="card-paybtn">
-              {user && user.isPaid ? (
-                "Paid"
-              ) : (
-		<Link to="/paymentPage" state={{amount: 299}}>
-                <button
-                  type="button"
-                  // onClick={InitiateUserPayment}
-                  value="Pay"
-                  className="userDash__button"
-                  // onClick={() => InitiateUserPayment(299, true)}
-                >
-                  Online Mode
-                </button>
-		</Link>
-              )}
-              {user && user.isPaid ? (
-                "Paid"
-              ) : (
-		<Link to="/paymentPage" state={{amount: 599}}>
-                <button
-                  type="button"
-                  onClick={commingSoon}
-                  value="Pay"
-                  className="userDash__button"
-                  // onClick={() => InitiateUserPayment(599, false).call}
-                >
-                  Offline Mode
-                </button>
-		</Link>
-              )}
-            </div>
-          </div>}
+          )}
           {/* {user && user.role == 1 && <button className="userpay">PAY</button>} */}
 
           <div className="card-bodymid">
@@ -352,9 +401,11 @@ const User_dasbord = () => {
                 <tr className="TableRow">
                   <td>Payment Status</td>
                   <td className="TableRow__res">
-                    {user && (user.role == 2 || (user.role == 1 && user.payment.paymentStatus)) ? (
-                      "Paid"
-                    ) : 'Not Paid'}
+                    {user &&
+                    (user.role == 2 ||
+                      (user.role == 1 && user.payment.paymentStatus))
+                      ? "Paid"
+                      : "Not Paid"}
                   </td>
                 </tr>
                 <tr>
@@ -374,7 +425,9 @@ const User_dasbord = () => {
               </table>
             </div>
           </div>
-          {teamMembers  && <TeamTable teamMembers={teamMembers} leaderId={user&&user._id}/>}
+          {teamMembers && (
+            <TeamTable teamMembers={teamMembers} leaderId={user && user._id} />
+          )}
         </div>
       </div>
     </>

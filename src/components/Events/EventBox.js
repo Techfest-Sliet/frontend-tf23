@@ -157,7 +157,7 @@ function EventBox({ props }) {
               <div style={{ float: "left" }}>
                 {props?.registrationLive === false ? (
                   <button
-                    className="registerNowEvent"
+                    className="registerNowEvent_closed"
                     onClick={closedRegistration}
                   >
                     Registration Closed
@@ -260,13 +260,13 @@ function EventBox({ props }) {
               <div style={{ float: "left" }}>
                 {props?.registrationLive === false ? (
                   <button
-                    className="registerNowworkshop"
+                    className="registerNowEvent_closed"
                     onClick={closedRegistration}
                   >
                     Registration Closed
                   </button>
                 ) : (
-                  <button className="registerNowworkshop" onClick={handleClick}>
+                  <button className="registerNowEvent" onClick={handleClick}>
                     Register Now
                   </button>
                 )}

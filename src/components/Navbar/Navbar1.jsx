@@ -127,7 +127,6 @@ const DrawerButton = styled.button`
   all: unset;
   font-size: 3rem;
   display: grid;
-  // color: #68fe04;
   z-index:1;
   @media (max-width: 780px) {
     font-size: 2rem;
@@ -137,7 +136,6 @@ const DrawerButton = styled.button`
 
 
 const SNavbar = styled.nav`
-      // background-color: black;
       z-index:1;
       
   @media (max-width: 780px){
@@ -192,9 +190,6 @@ const LoginButton = styled.button`
     transition: 0.3s ease;
     color: black;
     background-color:#68fe04;
-    // border: 1px solid transparent;
-    // box-shadow: 0px 0px 10px black;
-
   }
   @media (max-width: 600px){
     font-size: 12px;
