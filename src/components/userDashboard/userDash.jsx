@@ -197,8 +197,7 @@ const User_dasbord = () => {
                         <td>Name </td>
                         <td>Date</td>
                         <td>Type</td>
-                        <td>Whatsapp Link</td>
-                        <td>Delete Event</td>
+                        <td>Action</td>
                       </tr>
                       {events && events.length === 0 && "Not registered Yet"}
                       {events &&
@@ -222,15 +221,13 @@ const User_dasbord = () => {
                                   >
                                     <BsWhatsapp />
                                   </span>
-                                </a>
-                              </td>
-                              <td>
-                                <button
+                                  <button
                                   onClick={() => deleteEvent(event._id)}
                                   className="teamDelIcon"
                                 >
                                   <MdDelete />
                                 </button>
+                                </a>
                               </td>
                             </tr>
                           );
