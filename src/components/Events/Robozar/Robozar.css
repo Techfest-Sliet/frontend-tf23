@@ -106,6 +106,18 @@ img.event_robozar {
     text-align: left;
     margin-left: 10vw;
 }
+.evnts_detail {
+    font-size: 2vw;
+    text-align: left;
+    margin-left: 10vw;
+    border: none;
+}
+
+.evnts_detail a {
+    color: white;
+    background-color: black;
+    text-decoration: none;
+}
 
 .eventsBackgroundBottom {
     background: linear-gradient(to left, rgb(0, 45, 0), rgb(0, 20, 0), black);
@@ -138,6 +150,9 @@ img.event_robozar {
 
     .evnts {
         font-size: 7vw;
+    }
+    .evnts_detail {
+        font-size: 3vw;
     }
 }
 
@@ -214,6 +229,9 @@ img.event_robozar {
 
     .evnts {
         font-size: 8vw;
+    }
+    .evnts_detail {
+        font-size: 4vw;
     }
 
     .background-of-EventsPage {

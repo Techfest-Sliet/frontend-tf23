@@ -48,6 +48,7 @@ const Chemfor = () => {
       </div>
       <div className="events">
         <h1 className="evnts">EVENTS</h1>
+        <button className="evnts_detail"><a href="https://drive.google.com/file/d/19mpychbXd9eMevtkgVOM5KJyasahBXun/view?usp=share_link" rel="noreferrer" target='_blank'>Event Details</a></button>
       </div>
       {Chemfor && Chemfor.map((Chemfor) => (
         <div className="eventsBackgroundBottom" key={Chemfor._id}>
