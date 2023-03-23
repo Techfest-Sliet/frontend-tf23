@@ -601,7 +601,7 @@ p.blockquote-footer {
 
   .scrollbar {
     /* width: 40vw; */
-    overflow-x: clip;
+    overflow-x: scroll;
   }
 }
 
@@ -653,7 +653,7 @@ p.blockquote-footer {
 
   .card-bodytop {
     width: 90vw;
-    padding: 10px;
+    padding: 5px;
   }
 
 .card-title{

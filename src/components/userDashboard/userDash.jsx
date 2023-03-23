@@ -197,7 +197,8 @@ const User_dasbord = () => {
                         <td>Name </td>
                         <td>Date</td>
                         <td>Type</td>
-                        <td>Action</td>
+                        <td>Whatsapp</td>
+                        <td>Delete</td>
                       </tr>
                       {events && events.length === 0 && "Not registered Yet"}
                       {events &&
@@ -221,13 +222,15 @@ const User_dasbord = () => {
                                   >
                                     <BsWhatsapp />
                                   </span>
-                                  <button
+                                </a>
+                              </td>
+                              <td>
+                                <button
                                   onClick={() => deleteEvent(event._id)}
                                   className="teamDelIcon"
                                 >
                                   <MdDelete />
                                 </button>
-                                </a>
                               </td>
                             </tr>
                           );
@@ -254,7 +257,8 @@ const User_dasbord = () => {
                       <tr>
                         <td>Name </td>
                         <td>Date</td>
-                        <td>Action</td>
+                        <td>Whatsapp</td>
+                        <td>Delete</td>
                       </tr>
                       {workshops &&
                         workshops.length === 0 &&
@@ -279,6 +283,8 @@ const User_dasbord = () => {
                                     <BsWhatsapp />
                                   </span>
                                 </a>
+                              </td>
+                              <td>
                                 <span className="mdphone">
                                   <MdDelete />
                                 </span>
