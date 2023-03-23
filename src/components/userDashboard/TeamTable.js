@@ -8,6 +8,7 @@ import { baseUrl } from "../../API/api";
 import AuthContext from "../../auth/authContext";
 
 const TeamTable = (props) => {
+  console.log(props.teamMembers);
   const authContext = useContext(AuthContext);
   const [teamMembers, setTeamMembers] = useState(props.teamMembers);
   const handleDelete = (id) => {
@@ -45,7 +46,7 @@ const TeamTable = (props) => {
                 </button>
               </th>
             </tr>
-            <tr className="TableRow">
+            <tr className="TableRow tableBorder">
               <th className="teamHeader">Team Name</th>
               <th className="teamHeader">Leader Name</th>
               <th className="teamHeader">Member Email - Status</th>
@@ -83,11 +84,12 @@ const TeamTable = (props) => {
                 </td>
                 {/* <td>{team.eventName}</td> */}
                 {team.events && team.events.length === 0 && <td>Not yet registered</td>}
-                {team.events && team.events.map((event) => {
+                {team.events && team.events.length !== 0 && <td>Registered</td>}
+                {/* {team.events && team.events.map((event) => {
                   return (
                     <td>{event.eventName}</td>
                   )
-                })}
+                })} */}
                 <td>
                   <button
                     onClick={() => handleDelete(team._id)}

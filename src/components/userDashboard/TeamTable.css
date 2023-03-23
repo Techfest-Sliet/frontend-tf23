@@ -8,19 +8,27 @@
 .teamTable {
   width: 100%;
   text-align: center;
+  border-collapse: collapse;
 }
 
 .teamaddBtn {
   padding: 5px 25px;
-    background: green;
-    border: none;
-    border-radius: 5px;
-    color: white;
-    cursor: pointer;
+  background: green;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
 }
 
 .TableRow {
-  border-bottom: 5px solid green;
+  border-bottom: 1pt solid white;
+}
+.TableRow:last-child {
+  border-bottom: none;
+}
+
+.tableBorder:last-child {
+  border-bottom: 1pt solid white;
 }
 
 .removeMembBttn {
