@@ -20,10 +20,10 @@ function Card(props) {
         <li>{props.position}</li>
         <li>
           <p>
-            <a href={props.linkedin} target="_blank" rel="noreferrer">
-              <img className="Team-lnkedin-img" alt="" src={linkedin} />
-            </a>
-          </p>
+            {/* <a href={props.linkedin} target="_blank" rel="noreferrer"> */}
+              {/* <img className="Team-lnkedin-img" alt="" src={linkedin} /> */}
+            {/* </a> */}
+          {/* </p> */}
         </li>
       </ul>
     </div>

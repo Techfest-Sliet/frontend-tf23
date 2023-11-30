@@ -1,10 +1,10 @@
 export const ChairmanData = [
   {
     id: 0,
-    name: "Prof. Shankar Singh",
-    image: process.env.PUBLIC_URL + "core-team-images/chairman.jpg",
-    position: "Chairman, TechFEST'23",
-    linkedin: "https://www.linkedin.com/in/dr-shankar-singh-40613b15/",
+    name: "Dr. Manikant Paswan",
+    image: process.env.PUBLIC_URL + "./director.jpeg",
+    position: "Patron In-Chief, TechFEST'23",
+    // linkedin: "https://www.linkedin.com/in/dr-shankar-singh-40613b15/",
   }
 ];
 
