@@ -107,13 +107,13 @@ const HomePage = () => {
               Unleash your skills and test yourselves on National Battlegrounds
               with 10 Domains
             </p>
-            <Button
+            {/* <Button
               sx={{ color: "#fff", mt: 3, borderRadius: 6, width: 150, mb: 5 }}
               className="learnMoreButton"
               onClick={() => navigate("/domains")}
             >
               Learn More
-            </Button>
+            </Button> */}
           </div>
           <div className="containerWorkshops">
             <img src={workshop} height={250} width={250} alt="" />
@@ -123,13 +123,13 @@ const HomePage = () => {
             <p className="containerText" style={{ color: "#fff" }}>
               In Workshops learning is something to be enjoyed, not endured.
             </p>
-            <Button
+            {/* <Button
               sx={{ color: "#fff", mt: 3, borderRadius: 6, width: 150, mb: 5 }}
               className="learnMoreButton"
               onClick={() => navigate("/workshops")}
             >
               Learn More
-            </Button>
+            </Button> */}
           </div>
         </div>
         {/* trailer*/}
