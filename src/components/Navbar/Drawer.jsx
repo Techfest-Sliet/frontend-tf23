@@ -77,7 +77,7 @@ const Drawer = ({ isOpen, toggleDrawer }) => {
 
                 <ExpandMenu toggleDrawer={toggleDrawer}/>
                 
-                {!authContext.isUserLoggedIn && (
+                {/* {!authContext.isUserLoggedIn && (
                 <NavRoute
                   onClick={toggleDrawer}
                   to="/sign-in"
@@ -85,8 +85,8 @@ const Drawer = ({ isOpen, toggleDrawer }) => {
                 >
                   Login
                 </NavRoute>
-                )}
-                {authContext.isUserLoggedIn && (
+                )} */}
+                {/* {authContext.isUserLoggedIn && (
                 <NavRoute
                   onClick={logOutHandler}
                   to="/sign-up"
@@ -94,7 +94,7 @@ const Drawer = ({ isOpen, toggleDrawer }) => {
                 >
                   Logout
                 </NavRoute>
-                )}
+                )} */}
                 
           </NavRoutes>          
         </RightNav>
