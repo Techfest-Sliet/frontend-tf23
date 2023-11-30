@@ -15,15 +15,15 @@ function Card(props) {
       />
       <span class="cards--two__rect"></span>
       <span class="cards--two__tri"></span>
-      <p>{props.name}</p>
+      <p className="name">{props.name}</p>
       <ul class="cards__list">
         <li>{props.position}</li>
         <li>
-          {/* <p> */}
+          <p>
             {/* <a href={props.linkedin} target="_blank" rel="noreferrer"> */}
               {/* <img className="Team-lnkedin-img" alt="" src={linkedin} /> */}
             {/* </a> */}
-          {/* </p> */}
+          </p>
         </li>
       </ul>
     </div>
