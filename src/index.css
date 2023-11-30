@@ -54,7 +54,7 @@ h1{
   height: 5px;
 }
 ::-webkit-scrollbar-thumb {
-  background: #10620c;
+  background: #00B4D8;
   border-radius: 25px;
   transition: all 0.15s ease-in-out;
 }

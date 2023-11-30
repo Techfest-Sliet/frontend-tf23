@@ -4,6 +4,8 @@ import { Link, useNavigate } from "react-router-dom";
 import AuthContext from "../../auth/authContext";
 import ExpandMenu from "./ExpandMenu";
 import logo from "./logo.png";
+import techfestLogo from "./techfest24 logo 2.png";
+
 const Drawer = ({ isOpen, toggleDrawer }) => {
 
   const authContext = useContext(AuthContext);
@@ -26,7 +28,7 @@ const Drawer = ({ isOpen, toggleDrawer }) => {
       <SDrawer isOpen={isOpen}>
       
         <RightNav>
-        <Image src={logo} alt="" onClick = {function() {toggleDrawer();navigateHomeHandler()}}/>
+        <Image src={techfestLogo} alt="" onClick = {function() {toggleDrawer();navigateHomeHandler()}}/>
           <NavRoutes>
                 {/* <NavRoute
                   onClick={toggleDrawer}
@@ -167,7 +169,7 @@ const NavRoute = styled(Link)`
   &:hover {
     transition: 0.3s ease-in;
     color: black;
-    background-color: #68fe04;
+    background-color: #00b4d8;
     border-radius: 5px;
   }
 `;

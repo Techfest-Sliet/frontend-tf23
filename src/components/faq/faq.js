@@ -51,7 +51,7 @@ const ContactUs = () => {
                         <div>
                             <h1 style={{ fontFamily: "productSansBold" }} className='Dial_In'>Don't Think Twice, Simply Dial In </h1>
 
-                            <div className='faqs_coordinators'>
+                            {/* <div className='faqs_coordinators'>
 
                                 <div className='responsive_div'>
                                     <div className='faqs_domain_coordinator'>
@@ -79,7 +79,7 @@ const ContactUs = () => {
                                         </a>
                                     </div>
                                 </div>
-                            </div>
+                            </div> */}
 
 
                             <p className='faqs_support'>or write us at  <a href="mailto:web.techfest@sliet.ac.in" style={{ textDecoration: "none", color: "DodgerBlue", fontFamily: "productSans" }}>web.techfest@sliet.ac.in</a></p>

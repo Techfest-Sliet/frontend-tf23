@@ -3,27 +3,27 @@
   font-family: sans-serif;
   background: radial-gradient(
       72% 16% at 50% 107%,
-      #01590f -0.99%,
-      #01590f -1.98%,
-      rgb(0 0 0 / 0%) 100%
+      #00b4b8 -0.99%,
+      #03045e -1.98%,
+      rgb(0 0 0 / 0%) 130%
     ),
     radial-gradient(
       72% 16% at 50% -4%,
-      #01590f -0.99%,
-      #01590f -0.98%,
-      rgb(0 0 0 / 0%) 100%
+      #00b4b8 -0.99%,
+      #03045e -0.98%,
+      rgb(0 0 0 / 0%) 130%
     ),
     radial-gradient(
       37% 45% at 116% 52%,
-      #01590f -0.99%,
-      #01590f -1.98%,
-      rgb(0 0 0 / 0%) 100%
+      #00b4b8 -0.99%,
+      #03045e -1.98%,
+      rgb(0 0 0 / 0%) 130%
     ),
     radial-gradient(
       41% 45% at -16% 47%,
-      #01590f -0.99%,
-      #01590f -0.98%,
-      rgb(0 0 0) 100%
+      #00b4b8 -0.99%,
+      #03045e -0.98%,
+      rgb(0 0 0) 130%
     );
 }
 
@@ -44,7 +44,7 @@
   height: auto;
 }
 
-.landingPage {
+.landingPage {  
   width: 80%;
   height: auto;
   display: flex;
@@ -73,7 +73,7 @@
   font-family: monumentExtended;
 }
 
-.innovation {
+.tagline {
   display: flex;
   font-size: 44px;
   background: linear-gradient(to right, #ffffff, #b7b4b2, #ccd0d4, #4d4c47);
@@ -82,6 +82,14 @@
   background-clip: text; 
   align-items: center;
 }
+#F{
+  font-size: 14rem;
+}
+.orges{
+  display: flex;
+  font-family: monumentExtended;
+}
+
 
 #inn {
   font-family: monumentExtended;
@@ -89,14 +97,17 @@
 
 .O {
   font-family: monumentExtended;
-  width: 271px;
-  border: 10px solid #d9d9d9;
-  border-bottom-left-radius: 23px;
-  border-bottom-right-radius: 23px;
-  border-top-right-radius: 23px;
-  border-top-left-radius: 23px;
-  height: 60%;
+  width: 100px;
+  border: 8px solid ;
+  border-image: linear-gradient(to right, #ffffff, #b7b4b2, #ccd0d4, #4d4c47) 1;
+  border-bottom-left-radius: 15rem;
+  border-bottom-right-radius: 15px;
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+  height: 3.25rem;
   margin: 0.2em;
+  margin-top: 1.5rem;
+  margin-left: -3rem;
 }
 
 #vation {
@@ -135,7 +146,7 @@
 }
 
 #signUpButton {
-  background: linear-gradient(89.89deg, #003805 0.06%, #467814 102.53%);
+  background: linear-gradient(89.89deg, #03045E 0.06%, #00B4D8 102.53%);
   border-radius: 13px;
   font-family: "productSans";
 }
@@ -266,7 +277,7 @@
 #trailer {
   font-family: monumentExtended;
   font-size: 72px;
-  color: #74eb76;
+  color: #90E0EF;
   margin: 30px 0px;
 }
 

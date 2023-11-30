@@ -4,7 +4,7 @@
   align-content: space-around;
   flex-flow: wrap;
   justify-content: space-around;
-  margin: 50px auto 0px auto;
+  margin: 120px auto 0px auto;
   padding-bottom: 30px;
   font-size: 50px;
   text-align: center;
@@ -24,8 +24,8 @@
   margin: auto;
   background: linear-gradient(
     360deg,
-    #0b9e19 15.45%,
-    rgba(5, 89, 13, 0.57) 48.72%,
+    #2226f8 15.45%,
+    rgba(20, 3, 128, 0.57) 48.72%,
     rgba(0, 30, 5, 0) 87.53%
   );
   border-radius: 50%;
@@ -77,7 +77,7 @@
   border-color: black;
   padding: 10px;
   border-radius: 10px;
-  border: 1px solid #0b9e19;
+  border: 1px solid #00B4D8;
   cursor: pointer;
   /* background: linear-gradient( 360deg, #0b9e19 10.45%, rgba(5, 89, 13, 0.57) 48.72%, rgba(0, 30, 5, 0) 87.53% ); */
 }
@@ -98,19 +98,30 @@
 }
 .domainPage {
   height: 100%;
-  background: rgb(5, 79, 17);
+  background: radial-gradient(
+    60% 50% at 50% 110%,
+    #1317fc -0.99%,
+    #03045e -1.98%,
+    rgb(0 0 0 / 0%) 100%
+  ),
+  radial-gradient(
+    60% 50% at 50% -10%,
+    #1317fc -0.99%,
+    #03045e -0.98%,
+    rgb(0 0 0) 100%
+  );
   background: linear-gradient(
     135deg,
-    rgba(5, 79, 17, 0.99) 9%,
+    rgba(15, 5, 79, 0.99) 9%,
     rgba(0, 0, 0, 1) 50%,
-    rgba(5, 62, 15, 1) 93%
+    rgb(15, 5, 62) 93%
   );
   box-shadow: 0px 4px 60px -1px rgba(0, 0, 0, 0.2),
     inset 0px 4px 50px rgba(0, 0, 0, 0.25);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
   padding-bottom: 3%;
 }
-.domainScreen {
+/* .domainScreen {
   background-image: url("../../assets/domain/Background.webp");
   background-repeat: no-repeat;
   background-size: cover;
@@ -118,7 +129,7 @@
   height: 100vh;
   overflow: hidden;
   width: auto;
-}
+} */
 .DomainScroll {
   height: 100%;
   /* overflow-y: scroll; */
@@ -218,7 +229,8 @@
   text-align: center;
 }
 .domainheading h2 {
-  color: #74eb76;
+  color: #00B4D8;
+  margin-top: 5rem;
   font-weight: 400;
   font-size: 4.5vw;
   line-height: 15px;
