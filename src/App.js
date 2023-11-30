@@ -115,17 +115,17 @@ function App() {
             {/* <Route path="*" element={<Error404 />} /> */}
             {/* <Route path="/visitors" element={<Visitor />} /> */}
             <Route path="/faq" element={<Faq />} />
-            <Route path="/events/aarambh" element={<Aarambh />} />  
-            <Route path="/events/chemfor" element={<Chemfor />} />
+            {/* <Route path="/events/aarambh" element={<Aarambh />} />  
+            <Route path="/events/chemfor" element={<Chemfor />} /> */}
             <Route path="/pay" element={<Pay />} />
             
-            <Route path="/events/electrica" element={<Electrica />} />
+            {/* <Route path="/events/electrica" element={<Electrica />} />
             <Route path="/events/genesis" element={<Genesis />} />
             <Route path="/events/Karyarachna" element={<Karyarachna />} />
             <Route path="/events/kermis" element={<Kermis />} />
             <Route path="/events/mechanica" element={<Mechanica />} />
             <Route path="/events/plexus" element={<Plexus />} />
-            <Route path="/events/robozar" element={<Robozar />} />
+            <Route path="/events/robozar" element={<Robozar />} /> */}
             <Route path="/workshops" element={<Workshop />} />
             <Route path="/under-construction" element={<UnderConstruction />} />
             <Route path="/" element={<HomeScreen />} />
