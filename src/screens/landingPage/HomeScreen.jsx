@@ -1,4 +1,4 @@
-  import { Button } from "@mui/material";
+import { Button } from "@mui/material";
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import "./HomeScreen.css";
@@ -8,10 +8,10 @@ import SliderDiv from "../../components/slider/SliderDiv";
 import AuthContext from "../../auth/authContext";
 import SubthemeBox from "./SubthemeBox";
 import hexagonImg from "./hexagon.png";
-import domain from './domain.png';
-import workshop from './workshop.png';
-import designLogo from './../../images/Group 9@2x (1).png';
-import F from './F.png';
+import domain from "./domain.png";
+import workshop from "./workshop.png";
+import designLogo from "./../../images/Group 9@2x (1).png";
+import F from "./F.png";
 
 const HomePage = () => {
   const navigate = useNavigate();
@@ -40,23 +40,23 @@ const HomePage = () => {
           </div>
           {/* <h2 id="agriculture">AGRICULTURE</h2> */}
           <div className="tagline">
-            <img src={F} alt="" id="F"/>
+            <img src={F} alt="" id="F" />
             <div className="others">
               <h2>uture</h2>
               <div className="orges">
-              <h2 className="O"></h2>
-              <h2>rges</h2>
+                <h2 className="O"></h2>
+                <h2>rges</h2>
               </div>
             </div>
             <h2 id></h2>
           </div>
           <p className="landingText">
-            techFEST'24 is on the mission to revolutionize Agro-Technology.
-            Explore with us how new advancements in technologies ranging from
-            robotics and drones to computer vision software transform
-            traditional methods of agriculture. With the young innovative minds
-            competing to bring a change and supporting the backbone of our
-            nation.
+            Embrace the Future of Sustainable Development through techFEST'24.
+            Step into a world where technology and innovation redefine the
+            boundaries of sustainability. Together, let us sculpt a future where
+            sustainability is a tangible reality. Immerse yourself in the
+            transformative power of technology as we reshape the foundations of
+            innovation.
           </p>
           <div
             className="landingButtons"

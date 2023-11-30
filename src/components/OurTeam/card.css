@@ -160,7 +160,7 @@
   width: 100%;
   position: relative;
   height: 100%;
-  background: #01590f;
+  background: #00B4D8;
   transform: translateY(200px);
   z-index: 2;
   transition: all 0.3s ease-in-out;
@@ -203,7 +203,7 @@
   left: -20px;
   width: 1.7rem;
   position: absolute;
-  background-color: #037316;
+  /* background-color: #037316; */
   top: 8px;
 }
 

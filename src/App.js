@@ -115,7 +115,7 @@ function App() {
             <Route path="*" element={<Error404 />} />
             {/* <Route path="/visitors" element={<Visitor />} /> */}
             <Route path="/faq" element={<Faq />} />
-            <Route path="/events/aarambh" element={<Aarambh />} />
+            <Route path="/events/aarambh" element={<Aarambh />} />  
             <Route path="/events/chemfor" element={<Chemfor />} />
             <Route path="/pay" element={<Pay />} />
             
