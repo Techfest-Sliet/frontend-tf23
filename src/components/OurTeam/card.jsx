@@ -19,7 +19,7 @@ function Card(props) {
       <ul class="cards__list">
         <li>{props.position}</li>
         <li>
-          <p>
+          {/* <p> */}
             {/* <a href={props.linkedin} target="_blank" rel="noreferrer"> */}
               {/* <img className="Team-lnkedin-img" alt="" src={linkedin} /> */}
             {/* </a> */}
