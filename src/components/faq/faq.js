@@ -52,7 +52,7 @@ const ContactUs = () => {
                             <h1 style={{ fontFamily: "productSansBold" }} className='Dial_In'>Don't Think Twice, Simply Dial In </h1>
 
                             {/* <div className='faqs_coordinators'>
-
+    
                                 <div className='responsive_div'>
                                     <div className='faqs_domain_coordinator'>
                                         <img src='/core-team-images/2.jpg' className="dummy_img" alt='...' />

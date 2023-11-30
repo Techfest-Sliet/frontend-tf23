@@ -5,7 +5,7 @@ import { gallery } from "../../dummydata/AboutGallery.js";
 import SponsorImageSlider from "../../components/slider/SponsorImageSlider.js";
 import SliderDiv from "../../components/slider/SliderDiv";
 import RiImage from "../../components/aboutUs/Ri_image";
-import designLogo from "./../../images/logo@4x.png"
+import designLogo from "./../../images/Group 9@2x (1).png"
 import techfest19Logo from "./../../images/techfest19.png"
 import techfest20Logo from "./../../images/techfest20.png"
 import techfest21Logo from "./../../images/techfest21.png"
@@ -79,9 +79,8 @@ function AboutUs() {
               students. At the academic level the institute offers various
               Undergraduate and PostGraduate programmes. Apart from academics,
               SLIET is home to various co-curricular activities and communities
-              such as National Cadet Corps - SLIET, Endeavour, Mavericks, SSDC,
-              Juggernauts, Green rangers, Institute Innovation cell, SRAS,
-              National Service Scheme, etc.
+              such as National Cadet Corps - SLIET, National Service Scheme-SLIET, Institute Innovation Cell, Endeavour, Mavericks, SSDC,
+              Juggernauts, Green rangers, SRAS, etc.
             </p>
           </div>
         </div>
@@ -105,7 +104,7 @@ function AboutUs() {
             <img src={Group878} height={"50px"} alt="" />
             <h1>10K+</h1>
             <h4 style={{ fontFamily: "productSans" }}>
-              Footfall during techFEST 21
+              Footfall during techFEST'23
             </h4>
             <img
               src="/about-us/stats-sec.svg"

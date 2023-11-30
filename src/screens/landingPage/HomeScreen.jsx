@@ -10,7 +10,7 @@ import SubthemeBox from "./SubthemeBox";
 import hexagonImg from "./hexagon.png";
 import domain from './domain.png';
 import workshop from './workshop.png';
-import designLogo from './../../images/logo@4x.png';
+import designLogo from './../../images/Group 9@2x (1).png';
 import F from './F.png';
 
 const HomePage = () => {
@@ -51,7 +51,7 @@ const HomePage = () => {
             <h2 id></h2>
           </div>
           <p className="landingText">
-            techFEST'23 is on the mission to revolutionize Agro-Technology.
+            techFEST'24 is on the mission to revolutionize Agro-Technology.
             Explore with us how new advancements in technologies ranging from
             robotics and drones to computer vision software transform
             traditional methods of agriculture. With the young innovative minds
@@ -62,7 +62,7 @@ const HomePage = () => {
             className="landingButtons"
             style={{ marginTop: 10, color: "white", marginBottom: 1 }}
           >
-            {!authContext.isUserLoggedIn &&
+            {/* {!authContext.isUserLoggedIn &&
             <Button variant="contained" id="signUpButton" sx={{ mr: 2, mt: 3 }}>
 
               <Link
@@ -70,7 +70,7 @@ const HomePage = () => {
                   Sign up
               </Link>
             </Button>
-}
+} */}
           </div>
           {/* <div className="subthemeCont">
             <h1
@@ -105,7 +105,7 @@ const HomePage = () => {
             </h1>
             <p className="containerText" style={{ color: "#fff" }}>
               Unleash your skills and test yourselves on National Battlegrounds
-              with 8 Domains
+              with 10 Domains
             </p>
             <Button
               sx={{ color: "#fff", mt: 3, borderRadius: 6, width: 150, mb: 5 }}
