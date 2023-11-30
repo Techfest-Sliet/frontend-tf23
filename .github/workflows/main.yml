@@ -5,7 +5,9 @@ on:
     branches: [ "master" ]
   pull_request:
     branches: [ "master" ]
-
+env: 
+  CI: false
+  
 jobs:
   release:
     permissions: write-all
