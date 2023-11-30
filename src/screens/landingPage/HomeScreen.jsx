@@ -1,4 +1,4 @@
-import { Button } from "@mui/material";
+  import { Button } from "@mui/material";
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import "./HomeScreen.css";
@@ -8,6 +8,10 @@ import SliderDiv from "../../components/slider/SliderDiv";
 import AuthContext from "../../auth/authContext";
 import SubthemeBox from "./SubthemeBox";
 import hexagonImg from "./hexagon.png";
+import domain from './domain.png';
+import workshop from './workshop.png';
+import designLogo from './../../images/logo@4x.png';
+import F from './F.png';
 
 const HomePage = () => {
   const navigate = useNavigate();
@@ -24,17 +28,28 @@ const HomePage = () => {
         </div>
         <div className="landingPage">
           <div className="logoContainer">
-            <img src="/tf23.webp" alt="" className="main_img" />
+            <img src={designLogo} alt="" className="main_img" />
           </div>
           <div className="innovationIn">
-            <div className="innovation">
+            {/* <div className="innovation">
               <h1 id="inn">INN</h1>
               <div className="O"></div>
               <h1 id="vation">VATION</h1>
-            </div>
-            <h1 id="in">in</h1>
+            </div> */}
+            {/* <h1 id="in">in</h1> */}
           </div>
-          <h2 id="agriculture">AGRICULTURE</h2>
+          {/* <h2 id="agriculture">AGRICULTURE</h2> */}
+          <div className="tagline">
+            <img src={F} alt="" id="F"/>
+            <div className="others">
+              <h2>uture</h2>
+              <div className="orges">
+              <h2 className="O"></h2>
+              <h2>rges</h2>
+              </div>
+            </div>
+            <h2 id></h2>
+          </div>
           <p className="landingText">
             techFEST'23 is on the mission to revolutionize Agro-Technology.
             Explore with us how new advancements in technologies ranging from
@@ -57,7 +72,7 @@ const HomePage = () => {
             </Button>
 }
           </div>
-          <div className="subthemeCont">
+          {/* <div className="subthemeCont">
             <h1
               style={{
                 color: " rgb(22, 188, 22)",
@@ -75,7 +90,7 @@ const HomePage = () => {
               <SubthemeBox index={2} />
               <img src={hexagonImg} className="hexagonImg" alt=".." />
             </div>
-          </div>
+          </div> */}
         </div>
         <div></div>
       </div>
@@ -84,7 +99,7 @@ const HomePage = () => {
       <div className="extendedPage">
         <div className="main_container">
           <div className="containerDomain">
-            <img src="domain.svg" height={250} width={250} alt="" />
+            <img src={domain} height={250} width={250} alt="" />
             <h1 style={{ color: "#fff" }} className="containerHeading">
               Domains
             </h1>
@@ -101,7 +116,7 @@ const HomePage = () => {
             </Button>
           </div>
           <div className="containerWorkshops">
-            <img src="/workshop.webp" height={250} width={250} alt="" />
+            <img src={workshop} height={250} width={250} alt="" />
             <h1 style={{ color: "#fff" }} className="containerHeading">
               Workshops
             </h1>
@@ -118,7 +133,7 @@ const HomePage = () => {
           </div>
         </div>
         {/* trailer*/}
-        <div style={{ marginTop: 14 }} className="trailer">
+        {/* <div style={{ marginTop: 14 }} className="trailer">
           <h1 id="trailer">TRAILER</h1>
           <div className="trailerBox" style={{ marginTop: 4 }}>
             <iframe
@@ -130,11 +145,11 @@ const HomePage = () => {
               allowfullscreen
             ></iframe>
           </div>
-        </div>
+        </div> */}
 
         {/* sponsor */}
         <div className="sponsor" style={{ marginTop: 14 }}>
-          <h1 id="sponsor" style={{ color: "#74EB76", marginBottom: "3rem" }}>
+          <h1 id="sponsor" style={{ color: "#90E0EF", marginBottom: "3rem" }}>
             <span style={{ color: "white", fontFamily: "monumentExtended" }}>
               Our
             </span>{" "}

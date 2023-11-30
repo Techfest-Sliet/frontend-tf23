@@ -78,7 +78,7 @@ navbar {
 .navbar-items li:after {
   display: block;
   content: "";
-  border-bottom: solid 0.1em #68fe04;
+  border-bottom: solid 0.1em #00b4d8;
   transform: scaleX(0);
   transition: transform 250ms ease-in-out;
 }

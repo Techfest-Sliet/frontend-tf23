@@ -3,6 +3,7 @@ import "./Navbar.css";
 import logo from "./logo.png";
 import { Link, useNavigate } from "react-router-dom";
 import AuthContext from "../../auth/authContext";
+import techfestLogo from "./techfest24 logo 2.png";
 
 export const Navbar = (props) => {
   const navigate = useNavigate();
@@ -22,7 +23,7 @@ export const Navbar = (props) => {
       <header className="header">
         <div className="logo">
           <Link to="/">
-            <img src={logo} alt="techFEST'23" />
+            <img src={techfestLogo} alt="techFEST'24" />
           </Link>
         </div>
 

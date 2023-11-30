@@ -10,7 +10,7 @@ const ExpandMenu = ({toggleDrawer}) => {
   };
   const navigate = useNavigate();
   const navigateHandler = () => {
-    navigate("/domains")
+    //navigate("/domains")
   }
 
   return (
@@ -19,7 +19,10 @@ const ExpandMenu = ({toggleDrawer}) => {
         Domains {isMenuOpen ? <FaAngleDown /> : <FaAngleRight />}
       </MenuButton>
       <SubRoutesContainer isOpen={isMenuOpen}>
-          <SubRoute 
+        <SubRoute>
+          Coming Soon...
+        </SubRoute>
+          {/* <SubRoute 
           onClick={function() {toggleDrawer();toggleMenu()}}
           to= "/events/aarambh" 
           key="Arambh">
@@ -72,7 +75,7 @@ const ExpandMenu = ({toggleDrawer}) => {
           to= "/events/karyarachna" 
           key="karyarachna">
            Karyarachna
-          </SubRoute>
+          </SubRoute> */}
       </SubRoutesContainer>
     </SMenu>
   );
@@ -96,7 +99,7 @@ const MenuButton = styled.div`
   &:hover {
     transition: 0.3s ease-in;
     color: black;
-    background-color: #68fe04;
+    background-color: #00b4d8;
     border-radius: 5px;
   }
 `;
@@ -109,7 +112,7 @@ const SubRoute = styled(Link)`
    &:hover {
     transition: 0.3s ease-in;
     color: black;
-    background-color: #68fe04;
+    background-color: #00b4d8;
     border-radius: 5px;
   }
   

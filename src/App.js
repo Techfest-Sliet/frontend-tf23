@@ -111,7 +111,7 @@ function App() {
           } */}
 
           <Routes>
-            <Route path="/domains" element={<DomainScreen />} />
+            {/* <Route path="/domains" element={<DomainScreen />} /> */}
             <Route path="*" element={<Error404 />} />
             {/* <Route path="/visitors" element={<Visitor />} /> */}
             <Route path="/faq" element={<Faq />} />

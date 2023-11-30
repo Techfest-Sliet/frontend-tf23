@@ -42,11 +42,11 @@ const Workshops = () => {
 
 
       {/* Name of the Workshop */}
-      {workshops && <div className='wrkshopsBackgroundBottoms'>
+      {/* {workshops && <div className='wrkshopsBackgroundBottoms'>
         {workshops.map((workshop) => (
           <WorkshopBox index={workshop._id} props={workshop} />
         ))}
-      </div>}
+      </div>} */}
     </>
   )
 }

@@ -1,4 +1,5 @@
 import React from "react";
+import './OneCard.css';
 import { useNavigate } from "react-router";
 function OneCard({ pic, des,title }) {
   const navigate = useNavigate();

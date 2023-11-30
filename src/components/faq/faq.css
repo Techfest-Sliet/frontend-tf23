@@ -22,8 +22,8 @@
   opacity: 0.8;
   background-image: linear-gradient(
     to bottom right,
-    rgb(0, 82, 0),
-    rgb(0, 20, 0),
+    #1317fc,
+    #03045e,
     black
   );
   top: 0;
@@ -158,8 +158,8 @@
 .imgDiv {
   background-image: linear-gradient(
     to top right,
-    rgb(0, 72, 0),
-    rgb(0, 20, 0),
+    #1317fc,
+    #03045e,
     black
   );
   height: auto;

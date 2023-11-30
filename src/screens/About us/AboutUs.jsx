@@ -5,6 +5,15 @@ import { gallery } from "../../dummydata/AboutGallery.js";
 import SponsorImageSlider from "../../components/slider/SponsorImageSlider.js";
 import SliderDiv from "../../components/slider/SliderDiv";
 import RiImage from "../../components/aboutUs/Ri_image";
+import designLogo from "./../../images/logo@4x.png"
+import techfest19Logo from "./../../images/techfest19.png"
+import techfest20Logo from "./../../images/techfest20.png"
+import techfest21Logo from "./../../images/techfest21.png"
+import techfest22Logo from "./../../images/techfest22.png"
+import techfest23Logo from "./../../images/techfest23.png"
+import Group881 from "./../../images/Group 881.svg"
+import Group878 from "./../../images/Group 878.svg"
+import Group879 from "./../../images/Group 879.svg"
 function AboutUs() {
   return (
     <div className="AboutUs"> 
@@ -14,7 +23,7 @@ function AboutUs() {
       <div className="container_AboutUs_Upperpart">
         <div className="About_Us_part1">
           <div className="About_Uspart1techfest_logo">
-            <img src="/tf23.webp" alt="" />
+            <img src={designLogo} alt="" />
           </div>
           <div className="About_Uspart1SLIET_logo">
             <img src="/about-us/white-sliet-1@2x.png" alt="" />
@@ -53,7 +62,7 @@ function AboutUs() {
             <h1>
               About{" "}
               <span
-                style={{ color: "#74eb76", fontFamily: "monumentExtended" }}
+                style={{ color: "#00b4d8", fontFamily: "monumentExtended" }}
               >
                 SLIET
               </span>
@@ -79,7 +88,7 @@ function AboutUs() {
 
         <div className="AboutInfo">
           <div className="Participants">
-            <img src="/about-us/Group 881.svg" height={"50px"} alt="" />
+            <img src={Group881} height={"50px"} alt="" />
             <h1>35+</h1>
             <h4 style={{ fontFamily: "productSans" }}>
               Institutes Participate every year
@@ -93,7 +102,7 @@ function AboutUs() {
           </div>
 
           <div className="Participants">
-            <img src="/about-us/Group 878.svg" height={"50px"} alt="" />
+            <img src={Group878} height={"50px"} alt="" />
             <h1>10K+</h1>
             <h4 style={{ fontFamily: "productSans" }}>
               Footfall during techFEST 21
@@ -107,7 +116,7 @@ function AboutUs() {
           </div>
 
           <div className="Participants last">
-            <img src="/about-us/Group 879.svg" height={"50px"} alt="" />
+            <img src={Group879} height={"50px"} alt="" />
             <h1>5L+</h1>
             <h4 style={{ fontFamily: "productSans" }}>
               Worth of Goodies and Prize Money
@@ -148,7 +157,7 @@ function AboutUs() {
         {/* //eslint-disable-next-line */}
 
         <LiImage
-          img={"/about-us/Group 767.webp"}
+          img={techfest23Logo}
           heading={"techFEST’23"}
           tagline={"Innovation in Agriculture"}
           detail={
@@ -158,7 +167,7 @@ function AboutUs() {
 
         {/* //eslint-disable-next-line */}
         <RiImage
-          img={"/about-us/Group 767.png"}
+          img={techfest22Logo}
           heading={"techFEST’22"}
           tagline={"The Ultimate Leap to Agri-Tech"}
           detail={
@@ -169,7 +178,7 @@ function AboutUs() {
         {/* //eslint-disable-next-line */}
 
         <LiImage
-          img={"/about-us/Group 768.png"}
+          img={techfest21Logo}
           heading={"techFEST’21"}
           tagline={"Revitalizing India"}
           detail={
@@ -178,7 +187,7 @@ function AboutUs() {
         />
         {/* //eslint-disable-next-line */}
         <RiImage
-          img={"/about-us/Group 769.png"}
+          img={techfest20Logo}
           heading={"techFEST’20"}
           tagline={"Pedalling towards Cosmic Yantra"}
           detail={
@@ -188,7 +197,7 @@ function AboutUs() {
 
         {/* //eslint-disable-next-line */}
         <LiImage
-          img={"/about-us/Group 770.png"}
+          img={techfest19Logo}
           heading={"techFEST’19"}
           tagline={"Innovation in Cycle Design"}
           detail={
@@ -199,7 +208,7 @@ function AboutUs() {
 
       {/* gallery */}
       <div className="sponsor">
-        <h1 id="sponsor" style={{ color: "#74EB76", marginBottom: "3rem" }}>
+        <h1 id="sponsor" style={{ color: "#00b4d8", marginBottom: "3rem" }}>
           GALLERY
         </h1>
         <SliderDiv arr={gallery} />
@@ -207,7 +216,7 @@ function AboutUs() {
 
       {/* previos sponsr */}
       <div className="sponsor" style={{ width: "100%" }}>
-        <h1 id="sponsor" style={{ color: "#74EB76", marginBottom: "3rem" }}>
+        <h1 id="sponsor" style={{ color: "#00b4d8", marginBottom: "3rem" }}>
           OUR
           <span style={{ color: "white", fontFamily: "monumentExtended" }}>
             {" "}

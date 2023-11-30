@@ -8,7 +8,7 @@ import { baseUrl } from "../../API/api";
 import axios from "axios";
 import logo from "./logo.png";
 import AuthContext from '../../auth/authContext';
-
+import techFestLogo from './techfest24 logo 2.png'
 
 const Navbar1 = ({ toggleDrawer }) => {
   const [user, setUser] = useState(false);
@@ -52,7 +52,7 @@ const Navbar1 = ({ toggleDrawer }) => {
         <DrawerButton onClick={toggleDrawer} style ={{cursor:"pointer"}}>
           <TbAlignLeft />
         </DrawerButton>
-        <Image src={logo} alt="" onClick={navigateHomeHandler}/>
+        <Image src={techFestLogo} alt="" onClick={navigateHomeHandler}/>
         <RightNav>     
           {/* <NavRoutes>
           <NavRoute
@@ -106,8 +106,8 @@ const Navbar1 = ({ toggleDrawer }) => {
                 <LoginButton>Logout</LoginButton>
               </Link>
             )} */}
-            {!authContext.isUserLoggedIn && 
-          <LoginButton onClick={navigateHandler}>Login</LoginButton>}
+            {/* {!authContext.isUserLoggedIn && 
+          <LoginButton onClick={navigateHandler}>Login</LoginButton>} */}
             {authContext.isUserLoggedIn && 
             <div style={{display: "flex", cursor: "pointer"}}>
               <FaRegUser onClick={clickDashboardHandler} style={{fontSize: "23px", marginRight: "5px",zIndex:"1"}}/>
@@ -178,9 +178,9 @@ const LoginButton = styled.button`
   padding: 8px 25px;
   margin-left: 0.6rem;
   font-size: 20px;
-  color:#68fe04;
+  color:#90E0EF;
   background-color: black;
-  border: 1px solid #68fe04;
+  border: 1px solid #90E0EF;
   border-radius: 2rem;
   transition: 0.3s ease;
   align-self: flex-start;
