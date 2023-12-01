@@ -24,7 +24,7 @@ const Aarambh = () => {
   }
   return (
     <>
-      <div className="background-of-EventsPage">
+      {/* <div className="background-of-EventsPage">
         <div className="eventContainer">
           <div className="insideCntiner">
             <div className="techFestTCont">
@@ -62,7 +62,7 @@ const Aarambh = () => {
       ))}
       {/* {datasOfEventCoordinator.map((item) => (
         <EventBottom props={item} />
-      ))} */}
+      ))} */} 
     </>
   );
 };
